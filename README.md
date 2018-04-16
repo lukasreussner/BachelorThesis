@@ -9,6 +9,8 @@ This digital appendix contains the following files.
 
 The current version of the R&S&copy; FSW WebHelp can be accessed [here](https://www.rohde-schwarz.com/webhelp/fsw_html_usermanuals_en_1/FSW_HTML_UserManuals_en.htm).
 
+The thesis referencing this repository is available on [Researchgate](https://www.researchgate.net/publication/324532367_Classification_of_Technical_Documentation). Just follow this [ink/rabbit](https://www.researchgate.net/publication/324532367_Classification_of_Technical_Documentation). :rabbit: :v:
+
 # ROC Curves
 
 The Receiver Operating Characteristic (ROC) curves, including a confusion matrix, are shown below.

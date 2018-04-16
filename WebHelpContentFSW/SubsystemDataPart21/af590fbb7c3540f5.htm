@@ -1,0 +1,94 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Input, Output, and Frontend Settings|Frequency Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Frequency Offset
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eTaSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="ePMSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eWigigSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eGSMSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eOfdmVsaSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-id" value="400">
+</meta>
+        <meta name="topic-id" value="401">
+</meta>
+        <meta name="topic-id" value="402">
+</meta>
+        <meta name="topic-id" value="403">
+</meta>
+        <meta name="topic-id" value="404">
+</meta>
+        <meta name="topic-id" value="405">
+</meta>
+        <meta name="topic-id" value="406">
+</meta>
+        <meta name="topic-id" value="407">
+</meta>
+        <meta name="topic-id" value="408">
+</meta>
+        <meta name="topic-id" value="409">
+</meta>
+        <meta name="topic-id" value="410">
+</meta>
+        <meta name="topic-id" value="411">
+</meta>
+        <meta name="topic-id" value="412">
+</meta>
+        <meta name="topic-id" value="413">
+</meta>
+        <meta name="topic-id" value="414">
+</meta>
+        <meta name="topic-id" value="415">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1bbc8992b701578f0a00206a0090e5cd-409d9625b701578f0a00206a00df242e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="aede1128a4d04b47.htm">Input, Output, and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="6982319749204461.htm">Frequency Settings</a> &gt; <span class="chm-breadcrumb">Frequency Offset</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor170">
+</a><a name="kanchor171">
+</a><div class="function_heading"><a name="ID_1bbc8992b701578f0a00206a0090e5cd-409d9625b701578f0a00206a00df242e-en-US">
+</a>Frequency Offset</div><p>Shifts the displayed frequency range along the x-axis by the defined offset.</p><p>This parameter has no effect on the instrument's hardware, or on the captured data or on data processing. It is simply a manipulation of the final results in which absolute frequency values are displayed. Thus, the x-axis of a spectrum display is shifted by a constant offset if it shows absolute frequencies, but not if it shows frequencies relative to the signal's center frequency.</p><p>A frequency offset can be used to correct the display of a signal that is slightly distorted by the measurement setup, for example.</p><p>The allowed values range from -100 GHz to 100 GHz. The default setting is 0 Hz.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="bd56e3db49834c65.htm#ID_df5e37c32e3fdc640a00206a0138f1bc-5d452033302f13ab0a00206a00badfef-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FREQuency:</nobr>​<nobr>OFFSet</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

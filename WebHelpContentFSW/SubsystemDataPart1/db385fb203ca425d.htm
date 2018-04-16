@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Configuration|Data Acquisition and Bandwidth Settings|Data Acquisition" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Analysis Bandwidth
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdIqDataAquisitionAnalysisBW">
+</meta>
+        <meta name="topic-id" value="974">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_77c43431858393170a00206a01d5c858-defe0982858393170a00206a005420ea-en-US;ID_6d6d246a5fff2d420a710ade007ec0c4-defe0982858393170a00206a005420ea-en-US;ID_109aa92cfe281dd80a710a3100faf26b-defe0982858393170a00206a005420ea-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c29ac284be8f4c1b.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="ef2a54395e21418d.htm">Data Acquisition and Bandwidth Settings</a> &gt; <a class="chm-breadcrumb" href="a52e1f41da374f62.htm">Data Acquisition</a> &gt; <span class="chm-breadcrumb">Analysis Bandwidth</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor658">
+</a><a name="kanchor659">
+</a><a name="kanchor660">
+</a><div class="function_heading"><a name="ID_77c43431858393170a00206a01d5c858-defe0982858393170a00206a005420ea-en-US">
+</a><span style="font-weight: bold">Analysis Bandwidth</span></div><p>Defines the flat, usable bandwidth of the final I/Q data. This value is dependent on the defined <a class="xref" href="6481f4cbfc684f95.htm#ID_45c7daac858267d70a00206a003589e3-2b45a259858267d70a00206a00efaecf-en-US">"Sample Rate"</a> and the defined signal source.</p><p>Up to the <a class="xref" href="b6e3f0af55904625.htm#ID_dd04af84858417880a00206a017068bc-e9790ae8858417880a00206a00ec41a4-en-US">"Maximum Bandwidth"</a>, the following rule applies:</p><p><span class="input">analysis bandwidth = 0.8 * sample rate</span></p><p><b><a name="ID_6d6d246a5fff2d420a710ade007ec0c4-defe0982858393170a00206a005420ea-en-US">
+</a>Note:</b> Bandwidths up to 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz are only available if the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000/B5000) is installed <em>and active</em> (see <a class="xref" href="d08a6cf52051416e.htm#ID_f990a387232248200a00206a01e3088e-50ff22c651b2becd0a001ae7440557f6-en-US">"B2000/B5000 State"</a>). The option is not activated automatically by defining a larger bandwidth.<br/></p><p>For details on the dependencies see <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a>.</p><p>In particular, note the irregularities mentioned in <a class="xref" href="a18be6753f5a41c6.htm#ID_8f5ae8133a2411e395f1f246b1625ba5-8e04a654c18363970a00206a018bc2d1-en-US">"R&amp;S FSW with Activated I/Q Bandwidth Extension Option -B512"</a> and <a class="xref" href="d5922cff1960400f.htm#ID_2ba79323e39a11e6bb3fc74dcc2bcb08-8e04a654c18363970a00206a018bc2d1-en-US">"Irregular behavior in bandwidths between 480 MHz and 512 MHz with R&amp;S FSW-B1200 option"</a>.</p><p><b><a name="ID_109aa92cfe281dd80a710a3100faf26b-defe0982858393170a00206a005420ea-en-US">
+</a>Note:</b> For input from the optional <b>Analog Baseband interface</b>: If the frequency range defined by the analysis bandwidth and the center frequency exceeds the minimum frequency (0<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz for low IF evaluation) or the maximum frequency (for I+jQ evaluation), an error is displayed. In this case, adjust the center frequency or the analysis bandwidth to exclude possible unwanted signal components.<br/>(See <a class="xref" href="e521a84310d64cd7.htm#ID_fe78d22096dc4d830a710a3100e2d65f-151386b896dc85830a0020190181c0c2-en-US">"Center Frequency"</a>)<br/>For details on frequency ranges and the analysis bandwidth see <a class="xref" href="e991833b0aad4467.htm#ID_a363faeb9f08f6a20a00206a01be3459-047f705f96372d670a0020190131cbaa-en-US">"Processing Data from the Analog Baseband Interface"</a>.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="ad2973b09c29453b.htm#ID_aae516bc83dfdda50a00206a019f0fad-ddbf693657d3a56a0a00206a0185fab1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>BWIDth</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

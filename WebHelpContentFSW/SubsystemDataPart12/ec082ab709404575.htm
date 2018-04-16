@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Annex|Formulae" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Trace-based  Evaluations</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_92280a7dd849f9010a710a31005ecab0-5a86f95489fa87f80a00206a0173ee7e-en-US;ID_f85901b1d849f8c20a710a31012e4ff9-5a86f95489fa87f80a00206a0173ee7e-en-US;ID_c1bf06d249109e980a00206a0078a7a3-5a86f95489fa87f80a00206a0173ee7e-en-US;ID_d674ee4829ded4420a710a31004b1503-5a86f95489fa87f80a00206a0173ee7e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="d1017492e81377.htm">Annex</a> &gt; <a class="chm-breadcrumb" href="d3956add4ccb4b18.htm">Formulae</a> &gt; <span class="chm-breadcrumb">Trace-based Evaluations</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1214">
+</a><div class="chm-chaptertitle">Trace-based Evaluations</div><p>The trace-based evaluations all take place at the sample rate defined by the "Display Points Per Symbol" parameter (see <a class="xref" href="441712004bf74f9b.htm#ID_4df69d1f0cdc6f870a00206a00c5fd56-3c55dba5410ce08e0a00206a010226ec-en-US">"Display Points/Sym"</a>). The sampling instants at this rate are referred to as "t" here, i.e.</p><p>t=n*T<sub>D</sub></p><p>Where T<sub>D</sub> equals the duration of one sampling period at the sample rate defined by the "Display Points Per Symbol" parameter.</p><div class="block"><a name="ID_f85901b1d849f8c20a710a31012e4ff9-5a86f95489fa87f80a00206a0173ee7e-en-US">
+</a><a name="kanchor1215">
+</a><a name="kanchor1216">
+</a><a name="kanchor1217">
+</a><a name="kanchor1218">
+</a><a name="kanchor1219">
+</a><a name="kanchor1220">
+</a><a name="kanchor1221">
+</a><a name="kanchor1222">
+</a><a name="kanchor1223">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Test parameter</p></th><th valign="top"><p>Formula</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Error vector</p></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/imgcc982c2f1ee0e8580a00206a00f57dff_1_--_--_PNG96.png" alt="" title=""/></div></td></tr><tr class="evenrow"><td valign="top"><p>Error Vector Magnitude (EVM)</p></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img2416b4c5855b5b850a00206a0084a48c_2_--_--_PNG96.png" alt="" title=""/></div><p>with the normalization constant C depends on your setting. By default C² is the mean power of the reference signal.</p><div class="graphic"><img border="0" src="Resources/Images/imgebb96441855b381f0a00206a018529b7_1_--_--_PNG96.png" alt="" title=""/></div><div class="graphic"><img border="0" src="Resources/Images/imgda8073f9855ba7530a00206a001536aa_1_--_--_PNG96.png" alt="" title=""/></div></td></tr><tr class="oddrow"><td valign="top"><p>Magnitude</p></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/imgafdc6dfd1ee4fb490a00206a0061d6f0_1_--_--_PNG96.png" alt="" title=""/></div><div class="graphic"><img border="0" src="Resources/Images/imge39cd7dd1ee525560a00206a00c059a9_1_--_--_PNG96.png" alt="" title=""/></div></td></tr><tr class="evenrow"><td valign="top"><p>Phase</p></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img7e8ccd821ee6aec20a00206a0144ccd5_1_--_--_PNG96.png" alt="" title=""/></div><div class="graphic"><img border="0" src="Resources/Images/img222823291ee6d1ea0a00206a0157f0e1_1_--_--_PNG96.png" alt="" title=""/></div></td></tr><tr class="oddrow"><td valign="top"><p>Frequency</p></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img35ad61041f0881f60a00206a011f7397_1_--_--_PNG96.png" alt="" title=""/></div><div class="graphic"><img border="0" src="Resources/Images/imge455a4d91f08a79f0a00206a01846d88_1_--_--_PNG96.png" alt="" title=""/></div></td></tr><tr class="evenrow"><td valign="top"><p>Magnitude error</p></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img04c0fa521f1703eb0a00206a00b7bc7d_1_--_--_PNG96.png" alt="" title=""/></div></td></tr><tr class="oddrow"><td valign="top"><p>Phase error</p></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img4274bd4d1f1820550a00206a001b1a6d_1_--_--_PNG96.png" alt="" title=""/></div></td></tr><tr class="evenrow"><td valign="top"><p>Frequency error</p></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img2e4b328f1f1941c10a00206a00e04502_1_--_--_PNG96.png" alt="" title=""/></div></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_c1bf06d249109e980a00206a0078a7a3-5a86f95489fa87f80a00206a0173ee7e-en-US">
+</a>FSK Modulation</div></div><a name="kanchor1224">
+</a><a name="kanchor1225">
+</a><p>The trace-based results for FSK signals are the same as those available for linear modulation types. However, as the signal processing for FSK signals is performed on the magnitude and instantaneous frequency, the I/Q based results first require a reconstruction of the reference and measured I/Q waveforms, as illustrated in <a class="xref" href="#ID_d674ee4829ded4420a710a31004b1503-5a86f95489fa87f80a00206a0173ee7e-en-US">Figure "Reconstruction of the reference and measured I/Q waveforms for FSK modulation"</a>.</p><p>The dashed outline of the "compensate" blocks indicate that these operations are optionally (de-)activated depending on the corresponding user settings. With respect to FSK measurements, the optional compensation parameters are:</p><div class="block"><ul class="list"><li value="1"><a href="http://FSK Reference deviation" class="link" target="_new">FSK Reference deviation</a></li><li value="2"><a href="http://Carrier frequency drift" class="link" target="_new">Carrier frequency drift</a></li></ul></div><div class="block" id="ID_d674ee4829ded4420a710a31004b1503-5a86f95489fa87f80a00206a0173ee7e-en-US"><div class="graphic"><img border="0" src="Resources/Images/img2dee713c29ddb8c90a00206a005aa0a5_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Reconstruction of the reference and measured I/Q waveforms for FSK modulation</div></div><p>Note that a reference deviation error is corrected in the reference frequency trace. This ensures that the frequency deviation in the measured frequency trace corresponds to that of the originally measured signal. With respect to the I/Q reconstruction, the measured magnitude is timing compensated using the timing offset estimated from the measured instantaneous frequency. This ensures that the measured magnitude and frequency remain synchronized in the reconstructed I/Q waveform.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

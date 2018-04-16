@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Trigger and Gate Configuration|Triggering|Trigger Settings|Trigger Source" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		IF Power
+	/
+		BB Power
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTriggerSourceIFPower">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodTriggerSourceIFPower">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdTriggerSourceIFPower">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerSourcePVTIFPower">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdIqTriggerSourceIFPower">
+</meta>
+        <meta name="topic-id" value="1941">
+</meta>
+        <meta name="topic-id" value="1942">
+</meta>
+        <meta name="topic-id" value="1943">
+</meta>
+        <meta name="topic-id" value="1944">
+</meta>
+        <meta name="topic-id" value="1945">
+</meta>
+        <meta name="topic-id" value="1946">
+</meta>
+        <meta name="topic-id" value="1947">
+</meta>
+        <meta name="topic-id" value="1948">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9aae69920fd872d10a00206a00f5a9a7-b99e304c0605c3970a00206a0197202e-en-US;ID_8a66e09c0fdbae630a00206a01aef876-b99e304c0605c3970a00206a0197202e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="17dd587d33cf488f.htm">Trigger and Gate Configuration</a> &gt; <a class="chm-breadcrumb" href="909a428670bd4bdd.htm">Triggering</a> &gt; <a class="chm-breadcrumb" href="724624c0821c4492.htm">Trigger Settings</a> &gt; <a class="chm-breadcrumb" href="1604ead4768b4e89.htm">Trigger Source</a> &gt; <span class="chm-breadcrumb">IF Power/BB Power</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1845">
+</a><a name="kanchor1846">
+</a><a name="kanchor1847">
+</a><div class="function_heading"><a name="ID_9aae69920fd872d10a00206a00f5a9a7-b99e304c0605c3970a00206a0197202e-en-US">
+</a>IF Power/BB Power</div><p>Depending on the input source type, this softkey defines triggering of the measurement using:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">The baseband power (for <b>baseband input</b> via the optional Digital Baseband Interface or the optional Analog Baseband interface)</li><li style="margin-bottom:0; padding-bottom:0;" value="2">The third intermediate frequency <b>(RF input)</b><br/>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is triggered as soon as the trigger threshold is exceeded around the selected frequency (= start frequency in the frequency sweep). The trigger threshold depends on the defined trigger level, as well as on the RF attenuation and preamplification. A reference level offset, if defined, is also considered. The trigger bandwidth at the intermediate frequency depends on the RBW and sweep type. For details on available trigger levels and trigger bandwidths see the data sheet.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">The "robust width" of a pulse on the oscilloscope's input channel, when using the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000/B5000)</li></ul></div><p><b><a name="ID_8a66e09c0fdbae630a00206a01aef876-b99e304c0605c3970a00206a0197202e-en-US">
+</a>Note:</b> Be aware that in auto sweep type mode, due to a possible change in sweep types, the trigger bandwidth may vary considerably for the same RBW setting.<br/></p>Remote command: <div class="rcclist_right"><p><span class="command">TRIG:SOUR IFP</span>, see <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SOURce</nobr></a></p><p><span class="command">SWE:EGAT:SOUR IFP</span> for gated triggering, see <a class="xref" href="c4f36c0156a743e7.htm#ID_798eb5e22e45c7fd0a00206a007c95a3-f64f8b19e2c7c3f10a00206a0199715c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>EGATe:</nobr>​<nobr>SOURce</nobr></a></p><p><span class="command">TRIG:SOUR BBP</span>, see <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SOURce</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

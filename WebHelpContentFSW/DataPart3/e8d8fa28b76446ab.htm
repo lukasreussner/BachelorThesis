@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Automating Tasks with Remote Command Scripts" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example for a Recorded SCPI Script</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1a683ed6dda863550a001ae7194f7c2d-9b8758e6d84481250a001ae76d72c586-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="34ce008b52034f5a.htm">Automating Tasks with Remote Command Scripts</a> &gt; <span class="chm-breadcrumb">Example for a Recorded SCPI Script</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Example for a Recorded SCPI Script</div><p>The following example shows a recorded SCPI script in python format. The script configures the ACLR measurement example described in <a class="xref" href="b06c51b90c8346d8.htm#shiv_2_measurement_examples_0538-afab76cfd7349b540a00206a00bfaa09-en-US">"Measurement Example 1 – ACPR Measurement on a CDMA2000 Signal"</a>.</p><div class="verbatim"><pre class="verbatim_text"># python script created by FSW: 29:11:2017 09:08:53
+
+import visa
+
+# connect to instrument (MU717225)
+VisaResourceManager = visa.ResourceManager()
+FSW = VisaResourceManager.open_resource("TCPIP::10.124.0.195::INSTR")
+
+# Display update ON
+FSW.write("SYST:DISP:UPD ON")
+
+FSW.write("*RST")
+FSW.write("INIT:CONT OFF")
+FSW.write("SENS:FREQ:CENT 850000000")
+FSW.write("SENS:FREQ:SPAN 4000000")
+FSW.write("DISP:WIND:SUBW:TRAC:Y:SCAL:RLEV 10")
+FSW.write("CALC:MARK:FUNC:POW:SEL ACP")
+FSW.write("CALC:MARK:FUNC:POW:PRES S2CD")
+FSW.write("SENS:ADJ:LEV;*WAI")
+FSW.write("SENS:POW:HSP ON")
+FSW.write("TRAC1:DATA? TRACE1")
+FSW.query("CALC1:MARK:Y?")
+FSW.write("CALC1:MARK:FUNC:POW:RES? CPOW")
+
+# Back to local mode
+FSW.write("@LOC")</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

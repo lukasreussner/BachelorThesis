@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="802.11ad measurements application (R&amp;S FSW-K95)|Remote Commands for IEEE 802.11ad Measurements|Retrieving Results|Numeric Modulation Accuracy Results|Error Parameter Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k95.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>FETCh:BURSt:ALL?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_776200743a915e1f0a001ae7398bab84-69c2b71b3a915c3b0a001ae714fcd4dc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">802.11ad measurements application (R&amp;S FSW-K95)</a> &gt; <a class="chm-breadcrumb" href="1853bfe4be9647e3.htm">Remote Commands for IEEE 802.11ad Measurements</a> &gt; <a class="chm-breadcrumb" href="751bf660f1444491.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="753a0a3ff3c24f02.htm">Numeric Modulation Accuracy Results</a> &gt; <a class="chm-breadcrumb" href="80325eff25534e9a.htm">Error Parameter Results</a> &gt; <span class="chm-breadcrumb">FETCh:BURSt:ALL?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_776200743a915e1f0a001ae7398bab84-69c2b71b3a915c3b0a001ae714fcd4dc-en-US">
+</a><span class="bold">FETCh:BURSt:ALL? </span></div><div class="rcdescription"><p>This command returns all results from the default IEEE 802.11ad I/Q measurement (see <a class="xref" href="c360d8d1f3f3446c.htm#ID_e70c525d7857e6870a002019016e9030-9570455f90f60e500a001ae77dcf32e8-en-US">"Result Summary"</a>).</p><p>For details on individual parameters see <a class="xref" href="e5f48679143d4ca3.htm#ID_b8017c09a6f811e0bd7d9ca521cdb013-9570455f90f60e500a001ae77dcf32e8-en-US">"Modulation Accuracy Parameters"</a>.</p><p>The results are output as a list of result strings separated by commas in ASCII format. The results are output in the following order:</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Result&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>&lt;char_data&gt;</nobr><br/><p>&lt;min_EVM_All&gt;,&lt;avg_EVM_All&gt;,&lt;max_EVM_All&gt;,</p><p>&lt;min_EVM_Data&gt;,&lt;avg_EVM_Data&gt;,&lt;max_EVM_Data&gt;,</p><p>&lt;min_EVM_Pilots&gt;,&lt;avg_EVM_Pilots&gt;,&lt;max_EVM_Pilots&gt;,</p><p>&lt;min_IQ_Offset&gt;, &lt;avg_IQ_Offset&gt;,&lt;max_IQ_Offset&gt;,</p><p>&lt;min_Gain_Imb&gt;,&lt;avg_Gain_Imb&gt;,&lt;max_Gain_Imb&gt;,</p><p>&lt;min_Quad_Error&gt;,&lt;avg_Quad_Error&gt;,&lt;max_Quad_Error&gt;,</p><p>&lt;min_CFreqErr&gt;,&lt;avg_CFreqErr&gt;,&lt;max_CFreqErr&gt;,</p><p>&lt;min_SymClockErr&gt;,&lt;avg_SymClockErr&gt;,&lt;max_SymClockErr&gt;,</p><p>&lt;min_RiseTime&gt;,&lt;avg_RiseTime&gt;,&lt;max_RiseTime&gt;,</p><p>&lt;min_FallTime&gt;,&lt;avg_FallTime&gt;,&lt;max_FallTime&gt;,</p><p>&lt;min_TimeSkew&gt;,&lt;avg_TimeSkew&gt;,&lt;max_TimeSkew&gt;,</p><p>&lt;min_TDPow&gt;,&lt;avg_TDPow&gt;,&lt;max_TDPow&gt;,</p><p>&lt;min_CrestFactor&gt;,&lt;avg_CrestFactor&gt;,&lt;max_CrestFactor&gt;</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">FETC:BURS:ALL?</span><br/><span class="commandline">//Result:</span><br/><pre class="verbatim" xml:space="preserve">-24.259804,3.6840858,16.140923,
+-24.202038,3.8634479,16.32444,
+-25.87265,-25.131031,-24.265713,
+-50.468945,-40.341217,-37.684074,
+-0.00034274373,-0.00020165637,7.5068659e-005,
+0.02957472,0.0350154,0.0439591,
+40.021568,-6955.4434,-29974.053,
+0.076774932,0.020238044,-0.19806632,
+NAN,NAN,NAN,
+NAN,NAN,NAN,
+NAN,NAN,NAN,
+-8.2310677,-8.2265606,-8.2229691,
+5.7754779,6.0745926,6.3284931</pre></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="c360d8d1f3f3446c.htm#ID_e70c525d7857e6870a002019016e9030-9570455f90f60e500a001ae77dcf32e8-en-US">"Result Summary"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

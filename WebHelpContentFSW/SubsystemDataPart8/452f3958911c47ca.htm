@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Configuration|Configuring the Analyzer" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Ref Level</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eNoiseSkIdMeasSettings_RefLevelControl">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdMeasSettings_RefLevel">
+</meta>
+        <meta name="topic-id" value="187">
+</meta>
+        <meta name="topic-id" value="189">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a3a0d89cfc7ad7ea0a710a92005f177b-3272b8d9fb94e2c40a00206a01b10d3a-en-US;ID_e3c47943aac6f6470a710a920174353a-3272b8d9fb94e2c40a00206a01b10d3a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="6f413a5358b94877.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="9cf83144e9e342da.htm">Configuring the Analyzer</a> &gt; <span class="chm-breadcrumb">Ref Level</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor80">
+</a><div class="function_heading"><a name="ID_a3a0d89cfc7ad7ea0a710a92005f177b-3272b8d9fb94e2c40a00206a01b10d3a-en-US">
+</a><span style="font-weight: bold">Ref Level</span></div><p>Turns automatic determination of the reference level on and off.</p><p>The reference level is the power level the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW expects at the RF input. Keep in mind that the noise signal has a high crest factor. To avoid an instrument overload, set the reference level to the peak envelope power of the noise signal, not to the mean power.</p><p>Set the reference level to approximately 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB to 15<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB above the noise display that occurs with the DUT connected and the noise source activated.</p><p>To get the best dynamic range, set the reference level as low as possible. At the same time, make sure that the maximum signal level does not exceed the reference level. If it does, it can overload the RF and IF stages of the analyzer, regardless of the signal power. Measurement results can deteriorate.</p><p>Note that the signal level at the A/D converter can be stronger than the level the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW displays because the resolution bandwidths are implemented digitally after the A/D converter.</p><p>If automatic detection of the reference level is on, the application performs a measurement to determine the ideal reference level. The time of this measurement depends on the state of the "2nd Stage Correction".</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">"2nd Stage Correction" is enabled<br/>The application determines the reference level before the calibration starts. The reference level is based on several test measurements on the start frequency.<br/>For more information, see <a class="xref" href="92b37f0130dc445d.htm#ID_bf98ebaffc7ad79c0a710a920052732e-3272b8d9fb94e2c40a00206a01b10d3a-en-US">"Auto Level Range"</a>.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">"2nd Stage Correction" is disabled<br/>The application determines the reference level before the measurement begins. The reference level is based on the measurement of the first frequency that is measured. After this measurement is done, the application resumes the measurement.</li></ul></div><p>If manual selection of the reference level is on, you can define the reference level in the corresponding input field.</p><p><b><a name="ID_e3c47943aac6f6470a710a920174353a-3272b8d9fb94e2c40a00206a01b10d3a-en-US">
+</a>Note:</b> Reference level. Even for DUTs with a high-ripple frequency response it can be useful to define the reference level manually. Determining the reference level automatically does not always result in optimal settings.<br/></p>Remote command: <div class="rcclist_right"><p>Manual reference level:</p><p><a class="xref" href="754e07854e5b45ce.htm#ID_90193f202dd1e0fd0a00206a00cb4bbe-f1315535e2dfd3f10a00206a016dd87a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>RLEVel</nobr></a></p><p>Automatic reference level:</p><p><a class="xref" href="8e888849e3d14cbe.htm#shiv_FSV_K30_1602-29a76006a58444500a00206a00394aa1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>RLEVel:</nobr>​<nobr>AUTO</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

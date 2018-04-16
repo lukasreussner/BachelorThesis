@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Configuration|Data Input and Output Settings|Input Source Settings|External Generator Control Settings|Measurement Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>(Automatic) Source Frequency (Numerator/Denominator/Offset)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTrackingNumerator">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTrackingDenominator">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTrackingSourceFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eRECSkIdTrackingNumerator">
+</meta>
+        <meta name="topic-keyword" value="eRECSkIdTrackingDenominator">
+</meta>
+        <meta name="topic-keyword" value="eRECSkIdTrackingSourceFreqOffset">
+</meta>
+        <meta name="topic-id" value="417">
+</meta>
+        <meta name="topic-id" value="419">
+</meta>
+        <meta name="topic-id" value="421">
+</meta>
+        <meta name="topic-id" value="423">
+</meta>
+        <meta name="topic-id" value="425">
+</meta>
+        <meta name="topic-id" value="427">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_4a_instrument_functions_09126-c00cf4553be48ed90a00201900ba981e-en-US;shiv_4a_instrument_functions_09131-c00cf4553be48ed90a00201900ba981e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c29ac284be8f4c1b.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="208b979a57b8495d.htm">Data Input and Output Settings</a> &gt; <a class="chm-breadcrumb" href="2a84fad068b747b6.htm">Input Source Settings</a> &gt; <a class="chm-breadcrumb" href="1c17a71c05b4434e.htm">External Generator Control Settings</a> &gt; <a class="chm-breadcrumb" href="642ca6badb2e4e8f.htm">Measurement Settings</a> &gt; <span class="chm-breadcrumb">(Automatic) Source Frequency (Numerator/Denominator/Offset)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor475">
+</a><a name="kanchor476">
+</a><a name="kanchor477">
+</a><a name="kanchor478">
+</a><a name="kanchor479">
+</a><a name="kanchor480">
+</a><a name="kanchor481">
+</a><div class="function_heading"><a name="shiv_4a_instrument_functions_09126-c00cf4553be48ed90a00201900ba981e-en-US">
+</a><span style="font-weight: bold">(Automatic) Source Frequency (Numerator/Denominator/Offset)</span></div><p>With automatic frequency coupling, a series of frequencies is defined (one for each sweep point), based on the current frequency at the RF input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>However, the frequency used by the generator may differ from the input from the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. The RF frequency can be multiplied by a specified factor, or a frequency offset can be added, or both.</p><p><b><a name="shiv_4a_instrument_functions_09131-c00cf4553be48ed90a00201900ba981e-en-US">
+</a>Note:</b> The input for the generator frequency is not validated, i.e. you can enter any values. However, if the allowed frequency ranges of the generator are exceeded, an error message is displayed on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. The values for <a class="xref" href="5e49d74315bd4cdb.htm#ID_67e0dbb813f492690a00206a00e8b7ee-c00cf4553be48ed90a00201900ba981e-en-US">"Result Frequency Start"</a> and <a class="xref" href="9dfe69da97eb4ca9.htm#ID_67400a8b13f5015f0a00206a017ae025-c00cf4553be48ed90a00201900ba981e-en-US">"Result Frequency Stop"</a> are corrected to comply with the range limits.<br/></p><p>The value range for the offset depends on the selected generator. The default setting is 0<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz. Offsets &lt;&gt; 0<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz are indicated by the "FRQ" label in the channel bar. Negative offsets can be used to define reverse sweeps.</p><p>For more information on coupling frequencies and reverse sweeps, see <a class="xref" href="37ec39c705ac4d49.htm#ID_3479e386386d11e29f06e7e0fcec513e-460fc0b33bf3b3540a0020190086cf8b-en-US">"Coupling the Frequencies"</a>. For more information on error messages and the channel bar, see <a class="xref" href="998ab96b262c47ef.htm#shiv_4a_instrument_functions_09438-460fc0b33bf3b3540a0020190086cf8b-en-US">"Displayed Information and Errors"</a>.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="bfabade7bd2c4911.htm#ID_c897183b133b81160a00206a01331e14-259416103ca71d1c0a002019002905ff-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SOURce:</nobr>​<nobr>EXTernal:</nobr>​<nobr>FREQuency[:</nobr>​<nobr>FACTor]:</nobr>​<nobr>DENominator</nobr></a></p><p><a class="xref" href="bf48d27d3fc442de.htm#ID_5c11e206133dc6320a00206a00ac0c47-13cd76f03ca78a100a00201900cf913f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SOURce:</nobr>​<nobr>EXTernal:</nobr>​<nobr>FREQuency[:</nobr>​<nobr>FACTor]:</nobr>​<nobr>NUMerator</nobr></a></p><p><a class="xref" href="b18970ee1bf645b5.htm#ID_9c4bb4ee133f4e770a00206a00f05456-2b261c653ca7e5500a00201901317e3c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SOURce:</nobr>​<nobr>EXTernal:</nobr>​<nobr>FREQuency:</nobr>​<nobr>OFFSet</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

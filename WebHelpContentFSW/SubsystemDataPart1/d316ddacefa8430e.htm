@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Configuration|Data Input and Output Settings|Input Source Settings|External Mixer Settings|Mixer Settings|Mixer Settings (Harmonics Configuration)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Conversion Loss
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdExtMixerConvLossAverage">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdExtMixerConvLossAvgTable">
+</meta>
+        <meta name="topic-id" value="266">
+</meta>
+        <meta name="topic-id" value="268">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f09080463af011e2b686c012b274642d-93eed85caf56a1e80a001ae777a0b48c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c29ac284be8f4c1b.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="208b979a57b8495d.htm">Data Input and Output Settings</a> &gt; <a class="chm-breadcrumb" href="2a84fad068b747b6.htm">Input Source Settings</a> &gt; <a class="chm-breadcrumb" href="97c163348063429f.htm">External Mixer Settings</a> &gt; <a class="chm-breadcrumb" href="3fa0a30b50534974.htm">Mixer Settings</a> &gt; <a class="chm-breadcrumb" href="2c342b3b82804ddf.htm">Mixer Settings (Harmonics Configuration)</a> &gt; <span class="chm-breadcrumb">Conversion Loss</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor382">
+</a><a name="kanchor383">
+</a><div class="function_heading"><a name="ID_f09080463af011e2b686c012b274642d-93eed85caf56a1e80a001ae777a0b48c-en-US">
+</a><span style="font-weight: bold">Conversion Loss</span></div><p>Defines how the conversion loss is handled. The following methods are available:</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Average"</p></td><td class="function_col_right"><p>Defines the average conversion loss for the entire frequency range in dB.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Table"</p></td><td class="function_col_right"><p>Defines the conversion loss via the table selected from the list. Predefined conversion loss tables are often provided with the external mixer and can be imported to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Alternatively, you can define your own conversion loss tables. Imported tables are checked for compatibility with the current settings before being assigned.</p><p>For details on conversion loss tables, see <a class="xref" href="../../../Content/aaf5e1690d244dc5.htm">Conversion Loss Tables</a>.</p><p>For details on importing tables, see <a class="xref" href="6b4714e7c4ce4c31.htm#ID_d9efb899f2a411e1a6e1e5b328ace09b-042c72a7af6690180a001ae71c1d6a89-en-US">"Import Table"</a>.</p></td></tr></table>Remote command: <div class="rcclist_right"><p>Average for range 1:</p><p><a class="xref" href="4e93f269d1d941ce.htm#ID_5d0c75955264a7e80a00201901e242af-325dadfc5264a6900a0020190141bb4a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]MIXer&lt;x&gt;:</nobr>​<nobr>LOSS[:</nobr>​<nobr>LOW]</nobr></a></p><p>Table for range 1:</p><p><a class="xref" href="6919a2ac62544410.htm#ID_3ac378d85264abe00a0020190039a9aa-9291f1b15264aa590a0020190141bb4a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]MIXer&lt;x&gt;:</nobr>​<nobr>LOSS:</nobr>​<nobr>TABLe[:</nobr>​<nobr>LOW]</nobr></a></p><p>Average for range 2:</p><p><a class="xref" href="36069a9b009e43d5.htm#ID_6da757fe5264a6040a00201900c643d9-50721a515264a48d0a0020190141bb4a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]MIXer&lt;x&gt;:</nobr>​<nobr>LOSS:</nobr>​<nobr>HIGH</nobr></a></p><p>Table for range 2:</p><p><a class="xref" href="b5b276ff7d7e4234.htm#ID_2b96090f5264a9ec0a00201900ca70cd-627f9fd95264a8750a0020190141bb4a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]MIXer&lt;x&gt;:</nobr>​<nobr>LOSS:</nobr>​<nobr>TABLe:</nobr>​<nobr>HIGH</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

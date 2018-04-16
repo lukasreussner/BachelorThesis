@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Measurements and Result Display|Code Domain Analysis|Evaluation Methods for Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Phase Error vs Chip</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWCDMASkIdSmartGridPhaseErrorvsChip">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdSmartGridPhaseErrorvsChip">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdSmartGridPhaseErrorvsChip">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSmartGridPhaseErrorvsChip">
+</meta>
+        <meta name="topic-id" value="45">
+</meta>
+        <meta name="topic-id" value="46">
+</meta>
+        <meta name="topic-id" value="47">
+</meta>
+        <meta name="topic-id" value="48">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_91215c57b6f10f930a00206a01884cb0-d5687b08970e88f90a001ae727e03e26-en-US;ID_444e10e603fe8dd00a710a3100111fce-d5687b08970e88f90a001ae727e03e26-en-US;ID_ab3c76e60d5de4310a00206a016c91f2-d5687b08970e88f90a001ae727e03e26-en-US;shiv_FSV_K72_1727-d5687b08970e88f90a001ae727e03e26-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="b393a5dcefed4a8f.htm">Measurements and Result Display</a> &gt; <a class="chm-breadcrumb" href="f45f82e563d440e5.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="ab3a345fb0634b6d.htm">Evaluation Methods for Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Phase Error vs Chip</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor85">
+</a><div class="function_heading"><a name="ID_91215c57b6f10f930a00206a01884cb0-d5687b08970e88f90a001ae727e03e26-en-US">
+</a><span style="font-weight: bold">Phase Error vs Chip</span></div><p>Phase Error vs Chip activates the phase error versus chip display. The phase error is displayed for all chips of the selected slot.</p><p>The phase error is calculated by the difference of the phase of received signal and phase of reference signal. The reference signal is estimated from the channel configuration of all active channels. The phase error is given in degrees in a range of +180<span style="font-family: arial; font-size: 10.5pt">°</span> to -180<span style="font-family: arial; font-size: 10.5pt">°</span>.</p><div class="block" id="ID_444e10e603fe8dd00a710a3100111fce-d5687b08970e88f90a001ae727e03e26-en-US"><div class="graphic"><img border="0" src="Resources/Images/img658bee2203f821530a00206a01146dca_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Calculating the magnitude, phase and vector error per chip</div></div><div class="block" id="ID_ab3c76e60d5de4310a00206a016c91f2-d5687b08970e88f90a001ae727e03e26-en-US"><div class="graphic"><img border="0" src="Resources/Images/img1b80b1730d5cf82c0a00206a0000a049_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><p>Where:</p><div class="block"><a name="shiv_FSV_K72_1727-d5687b08970e88f90a001ae727e03e26-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>PHI<sub>k</sub></p></td><td valign="top"><p>Phase error of chip number k</p></td></tr><tr class="evenrow"><td valign="top"><p>s<sub>k</sub></p></td><td valign="top"><p>Complex chip value of received signal</p></td></tr><tr class="oddrow"><td valign="top"><p>x<sub>k</sub></p></td><td valign="top"><p>Complex chip value of reference signal</p></td></tr><tr class="evenrow"><td valign="top"><p>k</p></td><td valign="top"><p>Index number of the evaluated chip</p></td></tr><tr class="oddrow"><td valign="top"><p>N</p></td><td valign="top"><p>Number of chips at each CPICH slot</p></td></tr><tr class="evenrow"><td valign="top"><p><span style="font-family: arial; font-size: 10.5pt">φ</span>(x)</p></td><td valign="top"><p>Phase calculation of a complex value</p></td></tr></tbody></table></div>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, PECHip</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p><a class="xref" href="69ac6a0ca1c4404e.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-60bfa4ffc39a38550a00201901c7b965-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? TRACE&lt;1...4&gt;</a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

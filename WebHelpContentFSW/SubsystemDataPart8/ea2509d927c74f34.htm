@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Measurement Basics|DUT Types" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurements on Frequency Converting DUTs</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5ba45ffdf785407c0a00206a004aab5b-20d16fe1f720ae840a00206a0134b122-en-US;ID_2a710f4e0be70dc30a00206a016badff-20d16fe1f720ae840a00206a0134b122-en-US;ID_d5b03ba00be70dc30a00206a01e0aa11-20d16fe1f720ae840a00206a0134b122-en-US;ID_77383410f133f76b0a00206a00b882e5-20d16fe1f720ae840a00206a0134b122-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="e9747c023c3740e3.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="bd6d15b02b5d45ae.htm">DUT Types</a> &gt; <span class="chm-breadcrumb">Measurements on Frequency Converting DUTs</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor11">
+</a><div class="chm-chaptertitle">Measurements on Frequency Converting DUTs</div><p>A frequency converting DUT converts the RF frequency to an intermediate frequency (IF) using the local oscillator (LO). A frequency-converting DUT either converts the RF frequency to a lower IF (down-conversion) or a higher IF (up-conversion).</p><div class="block"><div class="listintro">The conversion process requires a local oscillator in the test setup. You can generate the LO signal in two ways.</div><ul class="list"><li value="1">An external generator controlled by the analyzer via IEC bus.</li><li value="2">A VCO controlled by a voltage source.</li></ul></div><p>If you have selected a frequency-converting DUT measurement mode, the layout of the "Overview" dialog box adds the local oscillator to the test setup.</p><div class="block" id="ID_2a710f4e0be70dc30a00206a016badff-20d16fe1f720ae840a00206a0134b122-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8fcef1fb0b80ae030a00206a00870513_1_--_--_PNG96Small.png" alt="" title=""/></div></div><p>The local oscillator can have a fixed or a variable frequency. If the LO frequency is fixed, the intermediate frequency (IF) resulting from the conversion process is variable (depending on the input signal). If the LO frequency is variable, the IF has to be fixed.</p><p>The R&amp;S FSW Noise measurements application provides measurement for both measurement scenarios.</p><div class="block"><div class="subtitle"><a name="ID_d5b03ba00be70dc30a00206a01e0aa11-20d16fe1f720ae840a00206a0134b122-en-US">
+</a>Fixed intermediate frequency</div></div><p>If you select one of the fixed IF measurement modes, the IF is the same for all entries in the frequency list. The LO frequency for each entry is variable and is the result of the equation the selected mode is based on.</p><div class="block"><ul class="list"><li value="1">f<sub>RF</sub> - f<sub>IF</sub> for up-converters</li><li value="2">f<sub>RF</sub> + f<sub>IF</sub> for down-converters</li></ul></div><p>The fixed IF measurement modes are, for example, useful for measurements on mixers.</p><p>Note that fixed IF measurements are only possible if the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is equipped with the optional External Generator Control hardware. For more information, see <a class="xref" href="7eb7fed9c01d4011.htm#ID_34a9a18f5ce8bd8f0a710b9a014d1807-20d16fe1f720ae840a00206a0134b122-en-US">"External Generator Control"</a>.</p><div class="block"><div class="subtitle"><a name="ID_77383410f133f76b0a00206a00b882e5-20d16fe1f720ae840a00206a0134b122-en-US">
+</a>Fixed LO frequency</div></div><p>If you select one of the fixed LO measurement modes, the LO frequency is the same for all entries in the frequency list. The IF frequency for each entry is variable and is the result of the equation the selected mode is based on.</p><div class="block"><ul class="list"><li value="1">f<sub>RF</sub> + f<sub>LO</sub> for up-converters</li><li value="2">f<sub>RF</sub> - f<sub>LO</sub> for down-converters</li></ul></div><p>The fixed LO measurement modes are, for example, required for measurements on satellite converters.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

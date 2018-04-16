@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Status Reporting System</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K10_4934-1bb9e6897d45852e0a00201901d7352d-en-US;ID_76fb401c22aa11050a00206a00e0b5bc-1bb9e6897d45852e0a00201901d7352d-en-US;shiv_FSV_K10_4941-1bb9e6897d45852e0a00201901d7352d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <span class="chm-breadcrumb">Status Reporting System</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor990">
+</a><div class="chm-chaptertitle">Status Reporting System</div><p>The status reporting system stores all information on the current operating state of the instrument, e.g. information on errors or limit violations which have occurred. This information is stored in the status registers and in the error queue. The status registers and the error queue can be queried via IEC bus.</p><p>The GSM application uses the standard status registers of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. However, some registers are used differently. Only those differences are described in the following sections.</p><p>For details and a description of the common R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW status registers see <a class="xref" href="../../../Content/abd8c6112e0c47e5.htm">Status Reporting System</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>*RST does not influence the status registers.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="shiv_FSV_K10_4941-1bb9e6897d45852e0a00201901d7352d-en-US">
+</a>Description of the Status Registers</div></div><a name="kanchor991">
+</a><p>All the status registers are the same as those provided by the base system, with the exception of the following registers, which are provided by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and are not available from the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW GSM application command tree:</p><div class="block"><ul class="list"><li value="1"><span class="command">STATus:QUESTionable:ACPLimit</span></li><li value="2"><span class="command">STATus:QUESTionable:LMARgin&lt;1|2&gt;</span></li></ul></div><p>The commands to query the contents of the following status registers are described in <a class="xref" href="ddd5be2eb854454e.htm#ID_0be52dbb7d790edb0a00201901751e4e-1bb9e6897d45852e0a00201901d7352d-en-US">"Querying the Status Registers"</a>.</p><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="c7a28188bab74dcc.htm" class="chapter_title_toc">STATus:QUEStionable:SYNC Register</a></li><li value="2"><a href="034702c0913545ea.htm" class="chapter_title_toc">STATus:QUEStionable:LIMit Register</a></li><li value="3"><a href="116662546c25465d.htm" class="chapter_title_toc">STATus:QUEStionable:DIQ Register</a></li><li value="4"><a href="ddd5be2eb854454e.htm" class="chapter_title_toc">Querying the Status Registers</a></li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

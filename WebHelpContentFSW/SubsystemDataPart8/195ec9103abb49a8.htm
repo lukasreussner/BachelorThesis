@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Remote Control Commands for Noise Figure Measurements|Configuring the Inputs and Outputs|External Generator" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>SOURce:EXTernal:FREQuency[:FACTor]:DENominator</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_67de62c143e19ab70a002019013c42bf-550d1e680278e8060a002019005a2ace-en-US;ID_e96b348043e19ab70a00201900660551-550d1e680278e8060a002019005a2ace-en-US;ID_e6f2a0563f49ace90a00201900c07e91-073769883f49ace90a00201901b580c0-en-US;ID_0f629aa13dc794470a001ae70d0a3ad7-073769883f49ace90a00201901b580c0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="8df071f8ae8c45f0.htm">Remote Control Commands for Noise Figure Measurements</a> &gt; <a class="chm-breadcrumb" href="1eb4d1ca79594860.htm">Configuring the Inputs and Outputs</a> &gt; <a class="chm-breadcrumb" href="f3e72a0d014b41b8.htm">External Generator</a> &gt; <span class="chm-breadcrumb">SOURce:EXTernal:FREQuency[:FACTor]:DENominator</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr" style="margin-bottom : 0pt;"><a name="ID_67de62c143e19ab70a002019013c42bf-550d1e680278e8060a002019005a2ace-en-US">
+</a><span class="bold">SOURce:EXTernal:FREQuency[:FACTor]:DENominator </span>&lt;Denominator&gt;<br/></div><div class="rc_syntax_descr" style="margin-bottom : 0pt;"><a name="ID_e96b348043e19ab70a00201900660551-550d1e680278e8060a002019005a2ace-en-US">
+</a><span class="bold">SOURce:EXTernal:FREQuency[:FACTor]:NUMerator </span>&lt;Numerator&gt;<br/></div><div class="rc_syntax_descr"><a name="ID_e6f2a0563f49ace90a00201900c07e91-073769883f49ace90a00201901b580c0-en-US">
+</a><span class="bold">SOURce:EXTernal:FREQuency:OFFSet&lt;offset&gt; </span>&lt;Offset&gt;<br/></div><div class="rcdescription"><p>These commands define the frequency correction characteristics for the generator.</p><p>The commands are available with option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B10.</p><p>Frequency correction is calculated according to the following equation:</p><div class="block" id="ID_0f629aa13dc794470a001ae70d0a3ad7-073769883f49ace90a00201901b580c0-en-US"><div class="graphic"><img border="0" src="Resources/Images/img423e33cb3db05a4b0a001ae7631fc177_1_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><div class="listintro">with:</div><ul class="list"><li value="1">f<sub>Generator</sub>= generator frequency</li><li value="2">f<sub>LO</sub>= frequency of the analyzer's LO</li><li value="3">f<sub>offset&lt;1&gt;</sub>= offset frequency of the analyzer</li><li value="4">f<sub>offset&lt;2&gt;</sub>= offset frequency of other components</li></ul></div></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;offset&gt;<br/></td><td class="rc_col_content_left" colspan="2">1 | 2<br/><p>offset frequencies as described above</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Denominator&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Correction factor without a unit.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">1</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Numerator&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Correction factor without a unit.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">1</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Offset&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Frequency offset.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">0</td></tr><tr valign="top"><td class="rc_col_content_left_100"><span>Default unit: </span></td><td class="rc_col_content_right">Hz</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SOUR:EXT:FREQ:FACT:NOM 2</span><br/><span class="commandline">SOUR:EXT:FREQ:FACT:DEN 2.5</span><br/><p>Defines a frequency correction factor of 2/2.5.</p><span class="commandline">SOUR:EXT:FREQ:OFFS2 100HZ</span><br/><p>Defines 100 Hz as the second frequency offset.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="9613ef05e741495c.htm#ID_17182b0e3ef838cc0a710b9a01e586c0-65d95af9fe3583a40a002019013ce19f-en-US">"Frequency Coupling"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

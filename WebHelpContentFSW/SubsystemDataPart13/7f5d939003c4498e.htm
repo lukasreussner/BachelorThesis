@@ -1,0 +1,99 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Programming Examples (R&amp;S FSW-k72)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 3: Measuring the Relative Code Domain Power</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0167-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_4b6f75f9664602e90a00206a0109a415-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_4e9a859ab83211e0b10fe4c3e6c9de55-3cd1b6d764fb0df60a00206a0057a628-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="c71e56adbc0d48d8.htm">Programming Examples (R&amp;S FSW-k72)</a> &gt; <span class="chm-breadcrumb">Measurement 3: Measuring the Relative Code Domain Power</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor849">
+</a><a name="kanchor850">
+</a><a name="kanchor851">
+</a><a name="kanchor852">
+</a><a name="kanchor853">
+</a><a name="kanchor854">
+</a><div class="chm-chaptertitle">Measurement 3: Measuring the Relative Code Domain Power</div><pre class="verbatim" xml:space="preserve">*RST
+//Reset the instrument
+INST:CRE:NEW BWCD,'BTSMeasurement'
+//Activate a 3GPP FDD BTS measurement channel named "BTSMeasurement"
+DISP:TRAC:Y:SCAL:RLEV 10
+//Set the reference level to 10 dBm
+FREQ:CENT 2.1175 GHz
+//Set the center Frequency to 2.1175 GHz
+DISP:TRAC:Y:SCAL:AUTO ONCE
+//Optimize the scaling of the y-axis for the current measurement
+INIT:CONT OFF
+//Stops continuous sweep
+SWE:COUN 100
+//Set the number of sweeps to be performed to 100
+INIT;*WAI
+//Start a new measurement with 100 sweeps and wait for the end
+CALC:MARK:FUNC:WCDP:BTS:RES? CDPR
+//Retrieve the relative code domain power
+//Result: 0 [dB]
+TRAC:DATA? TRACE1
+//Retrieve the trace data of the code domain power measurement
+//Result: +8.000000000,+0.000000000,-4.319848537,-3.011176586,+0.000000000,
+//+2.000000000,+1.000000000,-4.318360806,-3.009688854,+1.000000000,
+//+8.000000000,+0.000000000,-7.348078156E+001,-7.217211151E+001,+1.000000000,
+// [...]
+----------Synchronizing the Reference Frequencies-------------------------
+
+ROSC:SOUR EXT10
+//Select the external Frequency from the REF INPUT 1..20 MHZ connector as a reference
+
+CALC:MARK:FUNC:WCDP:BTS:RES? FERR
+//Query the carrier Frequency error
+//Result: 0.1 [Hz]
+
+---------Behaviour with Incorrect Scrambling Code------------------------
+
+CDP:LCOD:DVAL 0001
+//Change the scrambling code on the analyzer to 0001 (default is 0000)
+TRAC:DATA? TRACE1
+//Retrieve the trace data of the code domain power measurement
+//Result: 1.000000000,+8.000000000,+7.700000000E+001,-2.991873932E+001,-2.861357307E+001,
+//+0.000000000,+8.000000000,+7.800000000E+001,-2.892916107E+001,-2.762399483E+001,
+//+1.000000000,+8.000000000,+7.800000000E+001,-2.856664085E+001,-2.726147461E+001,
+// [...]
+</pre><div class="block"><a name="ID_4b6f75f9664602e90a00206a0109a415-3cd1b6d764fb0df60a00206a0057a628-en-US">
+</a><span class="table-caption">Trace results for Relative Code Domain Power measurement (correct scrambling code)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Code class</p></th><th valign="top"><p>Channel no.</p></th><th valign="top"><p>Abs. power level [dBm]</p></th><th valign="top"><p>Rel. power level [%]</p></th><th valign="top"><p>Timing offset [chips]</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>+8.000000000</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>-4.319848537</p></td><td valign="top"><p>-3.011176586</p></td><td valign="top"><p>+0.000000000</p></td></tr><tr class="evenrow"><td valign="top"><p>+2.000000000</p></td><td valign="top"><p>+1.000000000</p></td><td valign="top"><p>-4.318360806</p></td><td valign="top"><p>-3.009688854</p></td><td valign="top"><p>+1.000000000</p></td></tr><tr class="oddrow"><td valign="top"><p>+8.000000000</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>-7.348078156E+001</p></td><td valign="top"><p>-7.217211151E+001</p></td><td valign="top"><p>+1.000000000</p></td></tr><tr class="evenrow"><td valign="top"><p>...</p></td><td valign="top"><p>...</p></td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td></tr></tbody></table></div><div class="block"><a name="ID_4e9a859ab83211e0b10fe4c3e6c9de55-3cd1b6d764fb0df60a00206a0057a628-en-US">
+</a><span class="table-caption">Trace results for Relative Code Domain Power measurement (incorrect scrambling code)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Code class</p></th><th valign="top"><p>Channel no.</p></th><th valign="top"><p>Abs. power level [dBm]</p></th><th valign="top"><p>Rel. power level [%]</p></th><th valign="top"><p>Timing offset [chips]</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1.000000000</p></td><td valign="top"><p>+8.000000000</p></td><td valign="top"><p>+7.700000000E+001</p></td><td valign="top"><p>-2.991873932E+001</p></td><td valign="top"><p>-2.861357307E+001</p></td></tr><tr class="evenrow"><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+8.000000000</p></td><td valign="top"><p>+7.800000000E+001</p></td><td valign="top"><p>-2.892916107E+001</p></td><td valign="top"><p>-2.762399483E+001</p></td></tr><tr class="oddrow"><td valign="top"><p>+1.000000000</p></td><td valign="top"><p>+8.000000000</p></td><td valign="top"><p>+7.800000000E+001</p></td><td valign="top"><p>-2.856664085E+001</p></td><td valign="top"><p>-2.726147461E+001</p></td></tr><tr class="evenrow"><td valign="top"><p>...</p></td><td valign="top"><p>...</p></td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Electromagnetic Interference (EMI) Measurement|EMI Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frequency Resolution - Sweep Points and Scaling</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_cb6c38215d817e5b0a00206a012344de-e2264ba9ad4233020a00201901671d4f-en-US;ID_2953fdb625e0497d0a00206a01296df3-e2264ba9ad4233020a00201901671d4f-en-US;ID_14df4c5b25e0497d0a00206a003edf7b-e2264ba9ad4233020a00201901671d4f-en-US;ID_38f1633625e0497d0a00206a013f67fa-e2264ba9ad4233020a00201901671d4f-en-US;ID_1e4eab5225e0497d0a00206a017bd93f-e2264ba9ad4233020a00201901671d4f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8df9e9da41784f85.htm">Electromagnetic Interference (EMI) Measurement</a> &gt; <a class="chm-breadcrumb" href="da8dd7ba043a494a.htm"> EMI Measurement Basics</a> &gt; <span class="chm-breadcrumb">Frequency Resolution - Sweep Points and Scaling</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1226">
+</a><div class="chm-chaptertitle">Frequency Resolution - Sweep Points and Scaling</div><p>The number of sweep points defines the number of measurement values collected during one sweep. Thus, increasing the sweep points also increases the accuracy of the results regarding the frequency resolution.</p><p>Because EMI measurements often cover a large frequency range you should define an adequate number of sweep points, especially when performing the measurement on a logarithmic axis. As on a linear axis, the distance from one sweep point to the next is calculated graphically on a logarithmic axis, and is not based on the frequency itself. Thus, the frequency resolution between two sweep points deteriorates with higher frequencies.</p><div class="block" id="ID_2953fdb625e0497d0a00206a01296df3-e2264ba9ad4233020a00201901671d4f-en-US"><div class="graphic"><img border="0" src="Resources/Images/img62e724f325a9744d0a00206a01b28416_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><p>The resolution bandwidth should cover at least one sweep point (more is better). If this condition is not met, signals or interferences could be missed during refined measurement of narrowband interferers. If the distance between two sweep points is larger than RBW/3, a warning is displayed in the status bar ("Increase Sweep Points").</p><div class="block"><span class="bold"><a name="ID_14df4c5b25e0497d0a00206a003edf7b-e2264ba9ad4233020a00201901671d4f-en-US">
+</a>Example: </span><p>Linear axis:</p><div class="block" id="ID_38f1633625e0497d0a00206a013f67fa-e2264ba9ad4233020a00201901671d4f-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgc7b397f525dfed160a00206a009ebac9_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><p>With a linear axis, the distance between the sweep points is equal, e.g. 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz.</p><p>Logarithmic axis:</p><div class="block" id="ID_1e4eab5225e0497d0a00206a017bd93f-e2264ba9ad4233020a00201901671d4f-en-US"><div class="graphic"><img border="0" src="Resources/Images/img309b9efc25e010ea0a00206a01f19c2a_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><p>With a logarithmic axis, the distance between sweep points is variable. In the spectrum from 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz to 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz, the distance is a few Hz. Between 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz and 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, the distance is several MHz.</p></div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW EMI measurement supports a maximum of 200001 sweep points.</p><p>This number is based on typical bands measured with a single resolution bandwidth. There are sufficient sweep points to make sure that a signal is found during the refined measurement, even when covering 30<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz to 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz with logarithmic scaling and 120<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz RBW.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

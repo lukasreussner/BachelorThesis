@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Power Splitter Mode</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_76550ffd95c911e6874988ab3c8652fa-3e7f60c551b212130a001ae729483b02-en-US;ID_b4ce290fdbcf31c30a71003a01a7fa47-3e7f60c551b212130a001ae729483b02-en-US;ID_db92bf14dbfe3c9a0a001ae70565b9dc-3e7f60c551b212130a001ae729483b02-en-US;ID_80b226a8dbfe3c9a0a001ae73f7d8fe6-3e7f60c551b212130a001ae729483b02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="688f35c556f04d25.htm">Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)</a> &gt; <span class="chm-breadcrumb">Power Splitter Mode</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor283">
+</a><div class="chm-chaptertitle">Power Splitter Mode</div><p>In the default measurement setup using the B2000/B5000 option, the [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is connected to the [CH1] input of the oscilloscope (see <a class="xref" href="821551936c8640cd.htm#ID_d84d76315226b8640a001ae76b4ae62f-3e7f60c551b212130a001ae729483b02-en-US">Figure "Measurement setup using the R&amp;S FSW and an R&amp;S RTO"</a>). In some cases, splitting the output power of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and sending the input to two different channels of the oscilloscope simultaneously may improve the accuracy of EVM measurements. Thus, a new power splitter mode has been introduced.</p><p>A power splitter is provided with the B2000/B5000 option as of R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW firmware version 2.60. For power splitter mode, it is inserted between the [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and input channels <b>CH1</b> and <b>CH3</b> of the oscilloscope. In this case, both channels must be calibrated, which is done automatically during alignment. The alignment data is stored separately for common B2000/B5000 mode and power splitter mode. The indicated "Cal. Date" refers to the currently active mode. Thus, you need not re-align after you remove the power splitter again (unless that measurement setup was not yet aligned).</p><p>Power splitter mode is activated in the general B2000/B5000 settings (see <a class="xref" href="f8bf45199ade49a8.htm#ID_0ac43db051b212130a001ae74674f809-50ff22c651b2becd0a001ae7440557f6-en-US">"Settings for 2 GHz / 5 GHz Bandwidth Extension (R&amp;S FSW-B2000/B5000)"</a>). For the user, the subsequent measurement process is identical to the common B2000/B5000 mode, except for the prerequisites and restrictions mentioned below. Internally, the two signals are processed to provide a single measurement result with an improved EVM.</p><div class="block" id="ID_b4ce290fdbcf31c30a71003a01a7fa47-3e7f60c551b212130a001ae729483b02-en-US"><div class="graphic"><img border="0" src="Resources/Images/img0ae85919dbced1280a001ae7232b7ad9_1_--_--_PNG96Small.png" alt="" title=""/></div></div><div class="block"><div class="subtitle"><a name="ID_db92bf14dbfe3c9a0a001ae70565b9dc-3e7f60c551b212130a001ae729483b02-en-US">
+</a>External trigger</div></div><p>Since the <b>CH3</b> input of the oscilloscope is already in use in power splitter mode, an <b>external trigger</b> signal must be applied to the analog [EXT TRIGGER INPUT] connector on the rear panel of the oscilloscope. Use the "External Analog" trigger option in the trigger settings (see <a class="xref" href="1604ead4768b4e89.htm#ID_560d1d670f01bf380a00206a01bc391b-da953dae0f01bf380a00206a004923af-en-US">"Trigger Source"</a>).</p><div class="block"><div class="subtitle"><a name="ID_80b226a8dbfe3c9a0a001ae73f7d8fe6-3e7f60c551b212130a001ae729483b02-en-US">
+</a>(Additional) Prerequisites and measurement setup for power splitter mode</div></div><p>In addition to the prerequisites and measurement setup described for the common B2000/B5000 mode (see <a class="xref" href="821551936c8640cd.htm#ID_57de03574a3798c80a001ae72469c149-3e7f60c551b212130a001ae729483b02-en-US">"Prerequisites and Measurement Setup"</a>), the following applies when using the power splitter mode:</p><div class="block"><ul class="list"><li value="1">The [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is connected to the power splitter</li><li value="2">The power splitter is connected to the [CH1] and the [CH3] input of the oscilloscope</li><li value="3">Optionally, a trigger signal (for example from the [TRIG OUT] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW) can be connected to the [EXT TRIGGER INPUT] connector of the oscilloscope</li><li value="4">Since the power splitter mode uses two channels on the oscilloscope, the maximum memory size, and thus record length, available for a single input channel may be reduced by half. For details see the oscilloscope's data sheet and documentation.</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

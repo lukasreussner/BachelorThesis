@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Overview of the Demodulation Process" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Burst Search</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K70_0919-184c8906411153460a00206a01532735-en-US;ID_85de8d97d7c12f280a00206a01a2396f-184c8906411153460a00206a01532735-en-US;ID_b930e624c9e477110a710a3100a0b138-184c8906411153460a00206a01532735-en-US;ID_c697c3dfc9607cf30a710a31011d0cf3-184c8906411153460a00206a01532735-en-US;ID_19986458d7c12f280a00206a0168c919-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="a9433bb736a54dfb.htm">Overview of the Demodulation Process</a> &gt; <span class="chm-breadcrumb">Burst Search</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Burst Search</div><a name="kanchor269">
+</a><a name="kanchor270">
+</a><p>The burst search is performed only if it is switched on. Otherwise, this stage is skipped. If the signal is bursted, it is recommended that you switch the burst search on. This ensures that all internal estimators are operated in time ranges where the burst power ramping is up.</p><p>To eliminate amplitude variations caused by noise or the modulation itself, the instantaneous power of the whole capture buffer is calculated. Then a moving average filter is applied. The length of this filter is automatically determined with the help of the user settings.</p><p>The filtered power of the capture buffer is then compared to an automatically chosen threshold and the rising and falling edges of bursts are identified. With the help of the detected edges and some further processing, it is possible to decide whether the burst "candidates" comply with the user settings.</p><p>All bursts must have a length between ("Min Burst Length" – "Search Tolerance") and ("Max Burst Length" + "Search Tolerance") to be accepted. See <a class="xref" href="f99d87147e364cfc.htm#ID_4ebc491b55d4160f0a720a2b0184de18-98ce8ff6410963710a00206a00a7855c-en-US">"Burst Settings"</a> and <a class="xref" href="472a6b9589414ae9.htm#ID_0e1235e6472f3d180a00206a00f43047-98ce8ff6410963710a00206a00a7855c-en-US">"Burst Search"</a> for a more detailed description of these parameters.</p><div class="block" id="ID_85de8d97d7c12f280a00206a01a2396f-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img92ba0ee6d7bd0faf0a00206a012a22aa_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Burst Search parameters</div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><a name="kanchor271">
+</a><p>You can influence the robustness of the burst search directly by entering the correct minimum gap length, minimum burst length and maximum burst length (see <a class="xref" href="f99d87147e364cfc.htm#ID_4ebc491b55d4160f0a720a2b0184de18-98ce8ff6410963710a00206a00a7855c-en-US">"Burst Settings"</a> and <a class="xref" href="86a76145c3944017.htm#ID_245ba8aa07c9017c0a710a3101062bb6-98ce8ff6410963710a00206a00a7855c-en-US">"Min Gap Length"</a>). Refer to <a class="xref" href="#ID_85de8d97d7c12f280a00206a01a2396f-184c8906411153460a00206a01532735-en-US">Figure "Burst Search parameters"</a> for an illustration of the three parameters.</p><p>The detected bursts in the capture buffer for the current burst search settings are indicated by blue lines in the preview area of the "Burst Search" configuration dialog box (see <a class="xref" href="472a6b9589414ae9.htm#ID_0e1235e6472f3d180a00206a00f43047-98ce8ff6410963710a00206a00a7855c-en-US">"Burst Search"</a>).</p><div class="block" id="ID_c697c3dfc9607cf30a710a31011d0cf3-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge8461705c92558c60a002019000a5423_1_--_--_PNG96Small.png" alt="" title=""/></div></div></td></tr></table></div></div><a name="kanchor272">
+</a><div class="block" id="ID_19986458d7c12f280a00206a0168c919-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img599652c3c9e210bf0a00206a01353d8a_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Burst search algorithm</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

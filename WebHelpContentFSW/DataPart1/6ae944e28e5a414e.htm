@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Contents of the Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>STATus:OPERation Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d4123fadecd3f71d0a00206a00310598-11e9ec2ee3f24b7d0a00206a00b472bc-en-US;ID_9ee5642e2f3111de847b9d8bd5a95c88-11e9ec2ee3f24b7d0a00206a00b472bc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="20b40c28f6194536.htm">Contents of the Status Registers</a> &gt; <span class="chm-breadcrumb">STATus:OPERation Register</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">STATus:OPERation Register</div><a name="kanchor2791">
+</a><a name="kanchor2792">
+</a><a name="kanchor2793">
+</a><a name="kanchor2794">
+</a><a name="kanchor2795">
+</a><p>The <span class="command">STATus:OPERation</span> register contains information on current activities of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. It also contains information on activities that have been executed since the last read out.</p><p>You can read out the register with <a class="xref" href="22bc98dab3d54390.htm#ID_04d638cfd1a344d30a00206a01e6da46-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>OPERation:</nobr>​<nobr>CONDition?</nobr></a> or <a class="xref" href="7db3e9e591d9410d.htm#ID_93fba617d1a344d30a00206a01d64411-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>OPERation[:</nobr>​<nobr>EVENt]?</nobr></a>.</p><div class="block"><a name="ID_9ee5642e2f3111de847b9d8bd5a95c88-11e9ec2ee3f24b7d0a00206a00b472bc-en-US">
+</a><span class="table-caption">Meaning of the bits used in the STATus:OPERation register</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p><span class="command">CALibrating</span></p><p>This bit is set as long as the instrument is performing a self-alignment.</p></td></tr><tr class="evenrow"><td valign="top"><p>1-2</p></td><td valign="top"><p>Not used</p></td></tr><tr class="oddrow"><td valign="top"><p>3</p></td><td valign="top"><p><span class="command">SWEeping</span></p><p>Sweep is being performed in base unit (applications are not considered); identical to bit 4</p><p>In applications, this bit is not used.</p></td></tr><tr class="evenrow"><td valign="top"><p>4</p></td><td valign="top"><p><span class="command">MEASuring</span></p><p>Measurement is being performed in base unit (applications are not considered); identical to bit 3</p><p>In applications, this bit is not used.</p></td></tr><tr class="oddrow"><td valign="top"><p>5</p></td><td valign="top"><p><span class="command">Waiting for TRIgger</span></p><p>Instrument is ready to trigger and waiting for trigger signal.</p></td></tr><tr class="evenrow"><td valign="top"><p>6-7</p></td><td valign="top"><p>Not used</p></td></tr><tr class="oddrow"><td valign="top"><p>8</p></td><td valign="top"><p><span class="command">HardCOPy</span> in progress</p><p>This bit is set while the instrument is printing a hardcopy.</p></td></tr><tr class="evenrow"><td valign="top"><p>9</p></td><td valign="top"><p>For data acquisition in MSRA/MSRT mode only:</p><p><span class="command">Multi-Standard capture finish</span></p><p>This bit is set if a data acquisition measurement was completed successfully in MSRA/MSRT operating mode and data is available for evaluation.</p><p>For details on the MSRA operating mode see <a class="MCConceptLink" href="javascript:void(0);" onclick="FMCLinkControl( event, this, null ); return false;" onkeydown="this.MCKeydown = true;" MadCap:concepts="ID_7824fa2332feb6420a00206a00a05c03-78000cd532feb6420a00206a01f8ddcb-en-US" MadCap:topics=""><img src="SkinSupport/ConceptLink.gif" style="border: none;margin-right: 5px;">
+</img>See Also</a>. For details on the MSRT operating mode see <a class="MCConceptLink" href="javascript:void(0);" onclick="FMCLinkControl( event, this, null ); return false;" onkeydown="this.MCKeydown = true;" MadCap:concepts="ID_7824fa2332feb6420a00206a00a05c03-2fc7284a6914b95b0a002019004b2ff6-en-US" MadCap:topics=""><img src="SkinSupport/ConceptLink.gif" style="border: none;margin-right: 5px;">
+</img>See Also</a>.</p></td></tr><tr class="oddrow"><td valign="top"><p>10</p></td><td valign="top"><p><span class="command">Range completed</span></p><p>This bit is set when a range in the sweep list has been completed if "Stop after Range" has been activated.</p></td></tr><tr class="evenrow"><td valign="top"><p>11-14</p></td><td valign="top"><p>Not used</p></td></tr><tr class="oddrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always 0.</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

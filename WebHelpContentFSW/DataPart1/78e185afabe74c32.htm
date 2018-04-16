@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Bandwidth, Filter and Sweep Configuration|Bandwidth, Filter and Sweep Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Optimization
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdFftFilterMode">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTriggerSourceFM eSaSkIdTriggerSourceAM eSaSkIdTriggerSourcePM eSaSkIdTriggerSourceRF">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdFftFilterModeNarrow">
+</meta>
+        <meta name="topic-id" value="1797">
+</meta>
+        <meta name="topic-id" value="1798">
+</meta>
+        <meta name="topic-id" value="1799">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c5ab4572b75a4ac80a00206a015c02c6-a11320968fe2a24f0a001ae714255656-en-US;ID_63982a34900d3be60a001ae77602654d-a11320968fe2a24f0a001ae714255656-en-US;ID_d94ae111900d3be60a001ae74299172e-a11320968fe2a24f0a001ae714255656-en-US;ID_3965c891d126f4c60a710ade01812a3d-a11320968fe2a24f0a001ae714255656-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="409c8f6e27aa478c.htm">Bandwidth, Filter and Sweep Configuration</a> &gt; <a class="chm-breadcrumb" href="83c62bf2eec542d5.htm">Bandwidth, Filter and Sweep Settings</a> &gt; <span class="chm-breadcrumb">Optimization</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1786">
+</a><a name="kanchor1787">
+</a><div class="function_heading"><a name="ID_c5ab4572b75a4ac80a00206a015c02c6-a11320968fe2a24f0a001ae714255656-en-US">
+</a>Optimization</div><p>In FFT mode, several FFT analysis steps are required to cover the entire measurement span. The span which is covered by one FFT analysis step is called <em>partial span</em>. The partial span cannot be defined directly, but it can be optimized according to measurement requirements.</p><div class="block"><a name="ID_63982a34900d3be60a001ae77602654d-a11320968fe2a24f0a001ae714255656-en-US">
+</a><span class="table-caption">Optimization parameters in FFT mode</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Optimization mode</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Dynamic</p></td><td valign="top"><p>Optimizes the dynamic range by using the narrowest possible partial span (depending on the RBW).</p><p>The autorange function for the internal IF gain calculation is activated to obtain the best control range for the A/D converter.</p></td></tr><tr class="evenrow"><td valign="top"><p>Speed</p></td><td valign="top"><p>Optimizes the sweep rate by using the widest possible partial span (depending on the RBW).</p><p>The autorange function for the internal IF gain calculation is deactivated. (Note: set the reference level accordingly to optimize the control range for the A/D converter).</p><p>It is recommended that you set the <a class="xref" href="3a516d2f0efc4b75.htm#ID_13185b8f0eba7cb60a00206a01001c05-7d214b710eba7cb60a00206a002f9915-en-US">"Sweep Time"</a> to "Auto" to optimize the sweep rate.</p></td></tr><tr class="oddrow"><td valign="top"><p>Auto</p></td><td valign="top"><p>Uses a medium-sized partial span to obtain a compromise between a large dynamic range and a fast sweep rate.</p><p>The autorange function for the internal IF gain calculation is deactivated. (Note: set the reference level accordingly to optimize the control range for the A/D converter).</p></td></tr></tbody></table></div><p><b>Note: FFT mode and external mixers (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B21)</b></p><p>The partial span optimization modes "Dynamic" and "Auto" include automatic suppression of unwanted mixing products. Thus, when using external mixers (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B21), use the "Speed" mode to obtain similar results in FFT mode as in frequency sweep mode.</p><p><b>Zero span mode</b></p><p>For zero span measurements, the optimization mode defines the selection of the A/D converter prefilter.</p><div class="block"><a name="ID_d94ae111900d3be60a001ae74299172e-a11320968fe2a24f0a001ae714255656-en-US">
+</a><span class="table-caption">Optimization parameters in zero span mode</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Optimization mode</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Dynamic</p></td><td valign="top"><p>The narrowest filter possible (depending on the RBW) is used.</p></td></tr><tr class="evenrow"><td valign="top"><p>Speed</p></td><td valign="top"><p>The widest filter possible (depending on the RBW) is used.</p></td></tr><tr class="oddrow"><td valign="top"><p>Auto</p></td><td valign="top"><p>A medium-sized prefilter is used.</p></td></tr></tbody></table></div><p><b><a name="ID_3965c891d126f4c60a710ade01812a3d-a11320968fe2a24f0a001ae714255656-en-US">
+</a>Note:</b><b>EMI measurements</b><br/>For EMI measurements (using R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K54), "Dynamic" mode is not supported. "Auto" mode always uses "Speed" optimization.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="4cb7c202429a476d.htm#ID_1944c39bc3fcd0cc0a00206a002f0f5c-143e49fdc3fcd0cc0a00206a0024e6b9-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>OPTimize</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

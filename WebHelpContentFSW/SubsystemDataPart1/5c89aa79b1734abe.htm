@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Processing Analog I/Q Data from RF Input|Sample Rate and Maximum Usable I/Q Bandwidth for RF Input" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>R&amp;S FSW with Activated I/Q Bandwidth Extension Option B160 or U160</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_64b52e7189c171f40a710ade0194f705-8e04a654c18363970a00206a018bc2d1-en-US;ID_845247b744cc11e5a1faaa9abe1c4715-8e04a654c18363970a00206a018bc2d1-en-US;ID_5a1799f036d6f88e0a002019003c0d4b-8e04a654c18363970a00206a018bc2d1-en-US;ID_efb670f01f7a89bc0a710ade009bb60b-8e04a654c18363970a00206a018bc2d1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="471eea7681f04dd8.htm">Processing Analog I/Q Data from RF Input</a> &gt; <a class="chm-breadcrumb" href="ff6b1e95dc884c8e.htm">Sample Rate and Maximum Usable I/Q Bandwidth for RF Input</a> &gt; <span class="chm-breadcrumb">R&amp;S FSW with Activated I/Q Bandwidth Extension Option B160 or U160</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW with Activated I/Q Bandwidth Extension Option B160 or U160</div><p>Sample rate: 100 Hz - 10 GHz</p><p>Maximum bandwidth: 160 MHz</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_845247b744cc11e5a1faaa9abe1c4715-8e04a654c18363970a00206a018bc2d1-en-US">
+</a>MSRA operating mode</div><p>In MSRA operating mode, the MSRA Master is restricted to a sample rate of 600<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p></td></tr></table></div></div><div class="block"><a name="ID_5a1799f036d6f88e0a002019003c0d4b-8e04a654c18363970a00206a018bc2d1-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Sample rate</p></th><th valign="top"><p>Maximum I/Q bandwidth</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>100 Hz to 200 MHz</p></td><td valign="top"><p>Proportional up to maximum 160 MHz</p></td></tr><tr class="evenrow"><td valign="top"><p>200 MHz to 10 GHz</p><p>MSRA master:</p><p>200 MHz to 600 MHz</p></td><td valign="top"><p>160 MHz</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_efb670f01f7a89bc0a710ade009bb60b-8e04a654c18363970a00206a018bc2d1-en-US">
+</a>Restricting the maximum bandwidth manually</div></div><p>By default, all installed bandwidth extension options are activated, allowing for the maximum bandwidth for measurements on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. However, sometimes the maximum bandwidth is not necessary. For example, due to the correlation of both parameters, high sample rates automatically lead to an extended analysis bandwidth. However, while a high sample rate may be necessary (for example due to postprocessing in an OFDM system), the wide bandwidth is not really required.</p><p>On the other hand, low sample rates lead to small usable I/Q bandwidths. To ensure the availability of the required bandwidth, the minimum required bandwidth for the specified sample rate can be selected (via remote command only).</p><p>Thus, if one of the bandwidth extension options is installed, the maximum bandwidth can be restricted manually to a value that can improve the measurement (see <a class="xref" href="b6e3f0af55904625.htm#ID_dd04af84858417880a00206a017068bc-e9790ae8858417880a00206a00ec41a4-en-US">"Maximum Bandwidth"</a>). In this case, the hardware of the "regular" RF path is used, rather than the hardware required by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320/-B512/-B1200/-B2001 bandwidth extension options.</p><div class="block"><div class="listintro">The following improvements can be achieved:</div><ul class="list"><li value="1">Longer measurement time for sample rates under 300<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz</li><li value="2">I/Q Power trigger is available</li><li value="3">Data processing becomes up to ten times faster</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

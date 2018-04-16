@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurements and Result Display|Code Domain Analysis|Evaluation Methods for Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Composite EVM</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWCDMASkIdSmartGridCompositeEVM">
+</meta>
+        <meta name="topic-id" value="27">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_dc804f65b6f10f840a00206a00d67bef-14df114092791b800a00206a01fa83d8-en-US;ID_2b1dce1903fe93000a710a31006ae507-14df114092791b800a00206a01fa83d8-en-US;ID_4205dae303fe92920a710a310186ef84-14df114092791b800a00206a01fa83d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="a6ba98e833a74468.htm">Measurements and Result Display</a> &gt; <a class="chm-breadcrumb" href="6c18bcecabcf4624.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="1098fd20c8854cad.htm">Evaluation Methods for Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Composite EVM</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor82">
+</a><div class="function_heading"><a name="ID_dc804f65b6f10f840a00206a00d67bef-14df114092791b800a00206a01fa83d8-en-US">
+</a><span style="font-weight: bold">Composite EVM</span></div><p>The Composite EVM evaluation displays the root mean square composite EVM (modulation accuracy) according to the 3GPP specification. The square root is determined of the mean squared errors between the real and imaginary components of the received signal and an ideal reference signal (EVM referenced to the total signal). The error is averaged over all channels for individual slots. The Composite EVM evaluation covers the entire signal during the entire observation time.</p><div class="block" id="ID_2b1dce1903fe93000a710a31006ae507-14df114092791b800a00206a01fa83d8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img2a4f59d603e982a00a00206a000940e7_1_--_--_PNG96.png" alt="" title=""/></div></div><p>where:</p><div class="block"><a name="ID_4205dae303fe92920a710a310186ef84-14df114092791b800a00206a01fa83d8-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>EVM<sub>RMS</sub></p></td><td valign="top"><p>root mean square of the vector error of the composite signal</p></td></tr><tr class="evenrow"><td valign="top"><p>s<sub>n</sub></p></td><td valign="top"><p>complex chip value of received signal</p></td></tr><tr class="oddrow"><td valign="top"><p>x<sub>n</sub></p></td><td valign="top"><p>complex chip value of reference signal</p></td></tr><tr class="evenrow"><td valign="top"><p>n</p></td><td valign="top"><p>index number for mean power calculation of received and reference signal.</p></td></tr><tr class="oddrow"><td valign="top"><p>N</p></td><td valign="top"><p>number of chips at each CPICH slot</p></td></tr></tbody></table></div><p>The measurement result consists of one composite EVM measurement value per slot. In this case, the measurement interval is the slot spacing of the CPICH (timing offset of 0 chips referenced to the beginning of the frame). Only the channels recognized as active are used to generate the ideal reference signal. If an assigned channel is not recognized as active since pilot symbols are missing or incomplete, the difference between the measurement and reference signal and the composite EVM is very high.</p>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, CEVM</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p><a class="xref" href="9f94d085c3c34cd9.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-6dc20829fef82b150a00206a004893c1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? TRACE&lt;1...4&gt;</a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

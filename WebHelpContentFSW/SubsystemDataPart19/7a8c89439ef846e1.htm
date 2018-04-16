@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Demodulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CONFigure:WLAN:RUConfig:SEGMent&lt;seg&gt;:CHANnel&lt;ch&gt;:RULocation&lt;rui&gt;:USER&lt;mu&gt;:MCSindex</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0cd7f3e4827952250a001ae76d2e28fd-1508cb128279512b0a001ae74cda8b00-en-US;ID_5381f4ba9836554f0a001ae74c66c6e6-1508cb128279512b0a001ae74cda8b00-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="ecabe2eae6a345a6.htm">Demodulation</a> &gt; <span class="chm-breadcrumb">CONFigure:WLAN:RUConfig:SEGMent&lt;seg&gt;:CHANnel&lt;ch&gt;:RULocation&lt;rui&gt;:USER&lt;mu&gt;:MCSindex</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_0cd7f3e4827952250a001ae76d2e28fd-1508cb128279512b0a001ae74cda8b00-en-US">
+</a><span class="bold">CONFigure:WLAN:RUConfig:SEGMent&lt;seg&gt;:CHANnel&lt;ch&gt;:RULocation&lt;rui&gt;:USER&lt;mu&gt;:MCSindex </span>&lt;ModCodInd&gt;<br/></div><div class="rcdescription"><p>Modulation and Coding Scheme (MCS) index of the PPDU</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;seg&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>80-MHz-Segment to be configured</p><p>Segment 1: first 242 subcarriers of the channel</p><p>Segment 2: last 242 subcarriers of the channel (for <b>160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz</b> channels and <b>MU-PPDU (DL)</b> only)</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ch&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>20-MHz-subchannel that RU allocation applies to</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;rui&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>Index of the entry in the RU allocation table</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;mu&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>User index for RU in MIMO mode</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ModCodInd&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>integer</nobr><br/><p>Modulation and Coding Scheme (MCS) index of the PPDU</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Range: </span></td><td class="rc_col_content_right">0 to 11<br/></td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">:CONFigure:WLAN:RUConfig:SEGMent1:CHANnel1:RULocation1:USER1:MCSindex?</span><br/><span class="commandline">//Result: 0</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="c47ade9aca174bf0.htm#ID_376041e2cf42123e0a001ae749eecbb5-d8e006d37c4158750a00201901359a7d-en-US">"MCS Index"</a></td></tr></table><div class="block"><a name="ID_5381f4ba9836554f0a001ae74c66c6e6-1508cb128279512b0a001ae74cda8b00-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>MCS index</p></th><th valign="top"><p>Modulation and coding scheme</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>BPSK 1/2</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>QPSK 1/2</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>QPSK 3/4</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>16-QAM 1/2</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>16-QAM 3/4</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>64-QAM 2/3</p></td></tr><tr class="oddrow"><td valign="top"><p>6</p></td><td valign="top"><p>64-QAM 3/4</p></td></tr><tr class="evenrow"><td valign="top"><p>7</p></td><td valign="top"><p>64-QAM 5/6</p></td></tr><tr class="oddrow"><td valign="top"><p>8</p></td><td valign="top"><p>256-QAM 3/4</p></td></tr><tr class="evenrow"><td valign="top"><p>9</p></td><td valign="top"><p>256-QAM 5/6</p></td></tr><tr class="oddrow"><td valign="top"><p>10</p></td><td valign="top"><p>1024-QAM 3/4</p></td></tr><tr class="evenrow"><td valign="top"><p>11</p></td><td valign="top"><p>1024-QAM 5/6</p></td></tr></tbody></table></div></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

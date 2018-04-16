@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Measurement Results|Evaluation Methods for Transient Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Phase Deviation Time Domain</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eTaSkIdSmartGridPmDeviationTimeDomain">
+</meta>
+        <meta name="topic-id" value="104">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_312e5e19ac5411e49ab88ea9aafaeb55-69fb2d8431c805680a00201901ffe31f-en-US;ID_312f4880ac5411e49ab88ea9aafaeb55-69fb2d8431c805680a00201901ffe31f-en-US;ID_fed297eb0a6c26a40a001ae73719d1b8-69fb2d8431c805680a00201901ffe31f-en-US;ID_b782fe570a6c26a40a001ae721f4d394-69fb2d8431c805680a00201901ffe31f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="07fb867189574bd9.htm">Measurement Results</a> &gt; <a class="chm-breadcrumb" href="acea45e68c9e4a9e.htm">Evaluation Methods for Transient Analysis</a> &gt; <span class="chm-breadcrumb">Phase Deviation Time Domain</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor245">
+</a><a name="kanchor246">
+</a><div class="function_heading"><a name="ID_312e5e19ac5411e49ab88ea9aafaeb55-69fb2d8431c805680a00201901ffe31f-en-US">
+</a><span style="font-weight: bold">Phase Deviation Time Domain</span></div><p>Displays the phase error of the demodulated PM signal (in rad or °) versus time. </p><p>This display requires additional option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K60C/-K60H.</p><p><b><a name="ID_312f4880ac5411e49ab88ea9aafaeb55-69fb2d8431c805680a00201901ffe31f-en-US">
+</a>Note:</b> Similar to frequency deviation, the phase error is calculated for complete hops/chirps only. Thus, where no (complete) hops/chirps are available, gaps will occur in the error display.<br/></p><p>The phase deviation <b>in the hop model</b> is calculated as follows:</p><p>With hop state deviation compensation:</p><p><em><span style="font-family: Arial Unicode MS; font-size: 10.5pt">φ</span>dev(t) = PM(t) - <img border="0" src="Resources/Images/imgc73fa3300a40560e0a001ae7398f234f_1_--_--_PNG96.png" alt="" title=""/>t - <img border="0" src="Resources/Images/img8e10b7300a4059980a001ae75d48b5c8_1_--_--_PNG96.png" alt="" title=""/></em></p><p>Without hop state deviation compensation:</p><p><em><span style="font-family: Arial Unicode MS; font-size: 10.5pt">φ</span>dev(t) = PM(t) - f<sub>nom</sub>t - <img border="0" src="Resources/Images/img8e10b7300a4059980a001ae75d48b5c8_1_--_--_PNG96.png" alt="" title=""/></em></p><div class="block"><div class="listintro-in-compact-list">Where:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><img border="0" src="Resources/Images/imgc73fa3300a40560e0a001ae7398f234f_1_--_--_PNG96.png" alt="" title=""/>: Average frequency estimate obtained from the frequency meas range of a hop</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><em>f<sub>nom</sub></em>: Nominal hop frequency corresponding to detected hop state</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><img border="0" src="Resources/Images/img8e10b7300a4059980a001ae75d48b5c8_1_--_--_PNG96.png" alt="" title=""/>: Phase offset estimate obtained from the frequency meas range of a hop</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><em>t <span style="font-family: Arial Unicode MS; font-size: 10.5pt">∈</span> Result range</em> (for individual hop)<br/><em>hop start <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≤</span> t <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≤</span> hop start + dwell time</em> (for analysis range)</li></ul></div><p><b>In the chirp model</b> it is calculated as:</p><p>With chirp state deviation compensation:</p><div class="block" id="ID_fed297eb0a6c26a40a001ae73719d1b8-69fb2d8431c805680a00201901ffe31f-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgbde5ec640a4e1c100a001ae717cc9d98_1_--_--_PNG96.png" alt="" title=""/></div></div><p>Without chirp state deviation compensation:</p><div class="block" id="ID_b782fe570a6c26a40a001ae721f4d394-69fb2d8431c805680a00201901ffe31f-en-US"><div class="graphic"><img border="0" src="Resources/Images/img2221a6290a52a8450a001ae7552f5da2_1_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><div class="listintro-in-compact-list">Where:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><em>d<img border="0" src="Resources/Images/imgc73fa3300a40560e0a001ae7398f234f_1_--_--_PNG96.png" alt="" title=""/></em>: Average chirp rate estimate obtained from the frequency meas range of a chirp</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><em>df<sub>nom</sub></em>: Nominal chirp rate corresponding to detected chirp state</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><img border="0" src="Resources/Images/imgc73fa3300a40560e0a001ae7398f234f_1_--_--_PNG96.png" alt="" title=""/>: Average frequency estimate based on the chirp center obtained from the frequency meas range of a chirp</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><img border="0" src="Resources/Images/img8e10b7300a4059980a001ae75d48b5c8_1_--_--_PNG96.png" alt="" title=""/>: Phase offset estimate obtained from the frequency meas range of a chirp</li><li style="margin-bottom:0; padding-bottom:0;" value="5"><em>t <span style="font-family: Arial Unicode MS; font-size: 10.5pt">∈</span> Result range</em> (for individual chirp)<br/><em>chirp start <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≤</span> t <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≤</span> chirp start + chirp length</em> (for analysis range)</li></ul></div>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH,PDEV</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

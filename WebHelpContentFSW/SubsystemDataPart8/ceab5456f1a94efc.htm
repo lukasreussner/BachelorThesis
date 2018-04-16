@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Modes</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b9bad5eb264f300a0a001ae77f603245-20d16fe1f720ae840a00206a0134b122-en-US;ID_d43b29883aa014210a001ae703d6ae61-20d16fe1f720ae840a00206a0134b122-en-US;ID_6d8c12183aa014210a001ae70352643f-20d16fe1f720ae840a00206a0134b122-en-US;ID_33ace2ae3aa014210a001ae70860811e-20d16fe1f720ae840a00206a0134b122-en-US;ID_0192adc13aa014210a001ae77ff02aaf-20d16fe1f720ae840a00206a0134b122-en-US;ID_7f4b58f93aa014210a001ae74dcffdd2-20d16fe1f720ae840a00206a0134b122-en-US;ID_f68e56eb3aa014210a001ae71fc0e5d0-20d16fe1f720ae840a00206a0134b122-en-US;ID_9faf63ec3aa159940a001ae73df6ed42-20d16fe1f720ae840a00206a0134b122-en-US;ID_d66981773aa014210a001ae76498ca55-20d16fe1f720ae840a00206a0134b122-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="e9747c023c3740e3.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Measurement Modes</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Measurement Modes</div><p>In some cases, the Power (Hot) and Power (Cold) results require two different noise sources with different temperature characteristics (cold and hot). Measurements with a resistor noise source are such a case.</p><p>Usually, noise sources with diode characteristics are used for Noise Figure measurements. These noise sources have two states, on and off. When they are supplied with power (state = on), the application measures the hot power, when they are not supplied with power (state = off), it measures the cold power. Turning the noise source on and off is automatically done by the application, so that you can get the hot and cold power characteristics in a single step.</p><p>This <b>automatic measurement mode</b> is the default measurement mode of the R&amp;S FSW Noise measurements application.</p><p>A resistor noise source, however, requires two resistors, one hot and one cold. You have to substitute the hot resistor by the cold resistor to measure first the hot and then the cold power. For these cases, the application provides a <b>manual measurement mode</b>. This measurement mode is automatically selected when you select a <a class="xref" href="d8faa74ed08d44f3.htm#ID_5b361d611a7dd9d80a001ae73470f39f-26df8e04fae9ed6e0a00206a001eaa10-en-US">"Noise Source"</a> with resistor characteristics, but is not restricted to those cases.</p><p>The manual measurement mode is available for measurements and the calibration stage.</p><div class="block"><div class="subtitle"><a name="ID_d43b29883aa014210a001ae703d6ae61-20d16fe1f720ae840a00206a0134b122-en-US">
+</a>Performing a manual measurement</div></div><p>In manual measurement mode, you have to measure (or calibrate) the hot and cold power characteristics of the DUT separately. When you start the measurement, the application opens a dialog box that allows you to select the type of measurement to perform next.</p><div class="block" id="ID_6d8c12183aa014210a001ae70352643f-20d16fe1f720ae840a00206a0134b122-en-US"><div class="graphic"><img border="0" src="Resources/Images/img113db0153a53c97b0a001ae739ac9b32_1_--_--_PNG96Small.png" alt="" title=""/></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_33ace2ae3aa014210a001ae70860811e-20d16fe1f720ae840a00206a0134b122-en-US">
+</a>Recommended order of measurements</div><p>Note that it is recommended that you begin with the hot power measurement.</p><p>Furthermore, calibration always begins with the hot power measurement.</p><p>In case the hot power has to be measured first, the cold power measurement is unavailable:</p><div class="block" id="ID_0192adc13aa014210a001ae77ff02aaf-20d16fe1f720ae840a00206a0134b122-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgfb14892d3a540c420a001ae75f05fc09_1_--_--_PNG96Small.png" alt="" title=""/></div></div></td></tr></table></div></div><p>When the first measurement is done, you can change the test setup by connecting the other resistor. Then start the second measurement.</p><p>In the dialog box, the measurement stage that is already done is labeled green.</p><div class="block" id="ID_7f4b58f93aa014210a001ae74dcffdd2-20d16fe1f720ae840a00206a0134b122-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb76a9b8e3a53ee0b0a001ae716431cd5_1_--_--_PNG96Small.png" alt="" title=""/></div></div><p>In addition, the application shows the missing calibration and measurement steps in the channel bar.</p><div class="block" id="ID_f68e56eb3aa014210a001ae71fc0e5d0-20d16fe1f720ae840a00206a0134b122-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgf795b4283a43577b0a001ae70c1066e0_1_--_--_PNG96Small.png" alt="" title=""/></div></div><div class="block"><div class="subtitle"><a name="ID_9faf63ec3aa159940a001ae73df6ed42-20d16fe1f720ae840a00206a0134b122-en-US">
+</a>Clearing results</div></div><p>To replace the previous calibration or measurement results, clear the currently stored data using the "Clear Calibration Results" or "Clear Measurement Results" function.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_d66981773aa014210a001ae76498ca55-20d16fe1f720ae840a00206a0134b122-en-US">
+</a>Returning to automatic measurement mode</div><p>When you are in automatic measurement mode and select a noise source with resistor characteristics, the application automatically selects the manual measurement mode.</p><p>When you are in manual measurement mode and select a noise source with diode characteristics, you have to select the automatic measurement mode deliberately in the "Sweep" menu.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

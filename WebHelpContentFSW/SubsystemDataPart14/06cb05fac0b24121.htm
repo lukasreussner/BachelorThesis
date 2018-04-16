@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frames, Subframes and Slots</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a1e6879d44248e300a002019019cddc2-817e14ba6b7549660a0020190123ea90-en-US;ID_ad64abe6eabd11e1a921d6845d02f1b3-817e14ba6b7549660a0020190123ea90-en-US;ID_1d8f1f5fb551ac770a001ae74c8ad97f-817e14ba6b7549660a0020190123ea90-en-US;ID_5783198eb551ac770a001ae77f72a9a5-817e14ba6b7549660a0020190123ea90-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="416ea19448144801.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Frames, Subframes and Slots</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor130">
+</a><a name="kanchor131">
+</a><a name="kanchor132">
+</a><a name="kanchor133">
+</a><a name="kanchor134">
+</a><a name="kanchor135">
+</a><a name="kanchor136">
+</a><a name="kanchor137">
+</a><a name="kanchor138">
+</a><a name="kanchor139">
+</a><div class="chm-chaptertitle">Frames, Subframes and Slots</div><p>The structure of a typical TD-SCDMA signal is shown in <a class="xref" href="#ID_ad64abe6eabd11e1a921d6845d02f1b3-817e14ba6b7549660a0020190123ea90-en-US">Figure "TD-SCDMA signal structure"</a>.</p><p>A TD-SCDMA signal is divided into <em>frames</em> with a length of 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>ms each. The frames are further divided into two <em>subframes</em>, with a length of 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>ms each. For the physical communication layer, mostly the subframes are of interest.</p><p>Each subframe consists of seven <em>slots</em>, named TS0 to TS6. Furthermore, a "Downlink Pilot Time Slot" (DwPTS) and an "Uplink Pilot Time Slot" (UpPTS), which are required to transmit synchronization codes. Between the two synchronization areas, a guard period of 75<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>µs is inserted. Each slot has a length of 0.675<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>ms.</p><p>The first slot (TS0) of a subframe is always reserved for downlink, the second slot (TS1) is always reserved for uplink. The <em>switching point</em> indicates the time after which subsequent slots are available for downlink again. The system is informed about the current location of the switching point by higher layers.</p><div class="block" id="ID_ad64abe6eabd11e1a921d6845d02f1b3-817e14ba6b7549660a0020190123ea90-en-US"><div class="graphic"><img border="0" src="Resources/Images/img95d2cbb3d787f6d70a00201900bc6687_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">TD-SCDMA signal structure</div></div><div class="block"><div class="subtitle"><a name="ID_1d8f1f5fb551ac770a001ae74c8ad97f-817e14ba6b7549660a0020190123ea90-en-US">
+</a>Synchronization</div></div><p>The individual channels in the input signal must be synchronized to detect timing offsets in the slot spacings. To do so, either slot 0 (BTS mode) or slot 1 (UE mode), or the "Downlink Pilot Time Slot" (DwPTS) or "Uplink Pilot Time Slot" (UpPTS) can be used.</p><p>In UE mode, if the UpPTS is used for synchronization, you must define the SYNC-UL code to be used. This code depends on the used scrambling code as indicated in the following table.</p><div class="block"><a name="ID_5783198eb551ac770a001ae77f72a9a5-817e14ba6b7549660a0020190123ea90-en-US">
+</a><span class="table-caption">Possible SYNC-UL codes depending on scrambling code</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Code Group</p></th><th valign="top"><p>Scrambling Code</p></th><th valign="top"><p>Sync -UL Code</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Group 1</p></td><td valign="top"><p>0 to 3</p></td><td valign="top"><p>0 to 7</p></td></tr><tr class="evenrow"><td valign="top"><p>Group 2</p></td><td valign="top"><p>4 to 7</p></td><td valign="top"><p>8 to 15</p></td></tr><tr class="oddrow"><td valign="top"><p>...</p></td><td valign="top"><p>...</p></td><td valign="top"><p>...</p></td></tr><tr class="evenrow"><td valign="top"><p>Group 32</p></td><td valign="top"><p>124 to 127</p></td><td valign="top"><p>248 to 255</p></td></tr></tbody></table></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Annex" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reference: ASCII File Export Format</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_21729b5c288afcdb0a00206a01c35c96-a559cd6fc07357cc0a00201901cb2b09-en-US;ID_cfd75391509111e0b8be91347a8d73c4-a559cd6fc07357cc0a00201901cb2b09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="d480404e79185.htm">Annex</a> &gt; <span class="chm-breadcrumb">Reference: ASCII File Export Format</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Reference: ASCII File Export Format</div><a name="kanchor997">
+</a><a name="kanchor998">
+</a><a name="kanchor999">
+</a><p>Trace data can be exported to a file in ASCII format for further evaluation in other applications</p><p>The file consists of the header containing important scaling parameters and a data section containing the trace data.</p><p>Generally, the format of this ASCII file can be processed by spreadsheet calculation programs, e.g. MS-Excel. Different language versions of evaluation programs may require a different handling of the decimal point. Thus you can define the decimal separator to be used (decimal point or comma, see <a class="xref" href="e334501bc549408e.htm#ID_d7730bd92959615f0a00206a00e5c849-1e4bafc52959615f0a00206a01c048ac-en-US">"Decimal Separator"</a>).</p><p>The data of the file header consist of three columns, each separated by a semicolon: parameter name; numeric value; basic unit. The data section starts with the two lines containing the measured parameter names and units, followed by the measured data in multiple columns (depending on measurement) which are also separated by a semicolon.</p><div class="block"><a name="ID_cfd75391509111e0b8be91347a8d73c4-a559cd6fc07357cc0a00201901cb2b09-en-US">
+</a><span class="table-caption">ASCII file format for table export</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>File contents</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td colspan="2" valign="top"><p><b>Header data</b></p></td></tr><tr class="evenrow"><td valign="top"><p>Type;R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW;</p></td><td valign="top"><p>Instrument model</p></td></tr><tr class="oddrow"><td valign="top"><p>Version;5.00;</p></td><td valign="top"><p>Firmware version</p></td></tr><tr class="evenrow"><td valign="top"><p>Date;01.Oct 2006;</p></td><td valign="top"><p>Date of data set storage</p></td></tr><tr class="oddrow"><td valign="top"><p>Mode;PULSE;</p></td><td valign="top"><p>Application</p></td></tr><tr class="evenrow"><td valign="top"><p>Center Freq;55000;Hz</p></td><td valign="top"><p>Center frequency</p></td></tr><tr class="oddrow"><td valign="top"><p>Freq Offset;0;Hz</p></td><td valign="top"><p>Frequency offset</p></td></tr><tr class="evenrow"><td valign="top"><p>Meas BW;10000000,Hz</p></td><td valign="top"><p>Measurement Bandwidth</p></td></tr><tr class="oddrow"><td valign="top"><p>Filter Type;GAUS;</p></td><td valign="top"><p>Measurement filter type can be Gaussian (GAUS) or flat (FLAT)</p></td></tr><tr class="evenrow"><td valign="top"><p>Ref Level;-30;dBm</p></td><td valign="top"><p>Reference level</p></td></tr><tr class="oddrow"><td valign="top"><p>Level Offset;0;dB</p></td><td valign="top"><p>Level offset</p></td></tr><tr class="evenrow"><td valign="top"><p>Rf Att;20;dB</p></td><td valign="top"><p>Input attenuation</p></td></tr><tr class="oddrow"><td valign="top"><p>El Att;2.0;dB</p></td><td valign="top"><p>Electrical attenuation</p></td></tr><tr class="evenrow"><td valign="top"><p>SWT;0.005;s</p></td><td valign="top"><p>Sweep time (measurement time)</p></td></tr><tr class="oddrow"><td valign="top"><p>Sweep Count;20;</p></td><td valign="top"><p>Number of sweeps set</p></td></tr><tr class="evenrow"><td valign="top"><p>Preamplifier;OFF</p></td><td valign="top"><p>Preamplifier status</p></td></tr><tr class="oddrow"><td valign="top"><p>Top Pos.;CENT;</p></td><td valign="top"><p>Top (100%) level position can be Edge (EDGE) or Center (CENT)</p></td></tr><tr class="evenrow"><td valign="top"><p>Top Alg.;MEDI</p></td><td valign="top"><p>Top level measurement algorithm can be Median (MEDI) or Mean (MEAN)</p></td></tr><tr class="oddrow"><td valign="top"><p>Ripple Portion;50;%</p></td><td valign="top"><p>Portion of pulse top where ripple is measured</p></td></tr><tr class="evenrow"><td valign="top"><p>High Level;90;%V</p></td><td valign="top"><p>High (distal) threshold level</p></td></tr><tr class="oddrow"><td valign="top"><p>Mid Level;50;%V</p></td><td valign="top"><p>Mid (mesial) threshold level</p></td></tr><tr class="evenrow"><td valign="top"><p>Low Level;10;%V</p></td><td valign="top"><p>Low (proximal) threshold level</p></td></tr><tr class="oddrow"><td valign="top"><p>Boundary;3;%V</p></td><td valign="top"><p>The (top +/-) boundary level</p></td></tr><tr class="evenrow"><td valign="top"><p>Point Ref;CENT;</p></td><td valign="top"><p>Measurement point reference can be Rise (RISE), Center (CENT) or Fall (FALL)</p></td></tr><tr class="oddrow"><td valign="top"><p>Point Offset;0;s</p></td><td valign="top"><p>Measurement point offset</p></td></tr><tr class="evenrow"><td valign="top"><p>Range Ref;CENT;</p></td><td valign="top"><p>Measurement range reference can be Center (CENT) or Edge (EDGE)</p></td></tr><tr class="oddrow"><td valign="top"><p>Range Length;75;%</p></td><td valign="top"><p>Measurement range length (only valid for “Range Ref:;CENT”)</p></td></tr><tr class="evenrow"><td valign="top"><p>Range Offset Rise;0;s</p></td><td valign="top"><p>Measurement range offset from rising edge (only valid for “Range Ref:;EDGE”)</p></td></tr><tr class="oddrow"><td valign="top"><p>Range Offset Fall;0;s</p></td><td valign="top"><p>Measurement range offset from falling edge (only valid for “Range Ref:;EDGE”)</p></td></tr><tr class="evenrow"><td colspan="2" valign="top"><p><b>Data section</b></p></td></tr><tr class="oddrow"><td valign="top"><p>Values; 1001;</p></td><td valign="top"><p>Number of rows of measured values in the table</p></td></tr><tr class="evenrow"><td valign="top"><p>ID:;Pulse No.:;Rise Time:;…</p></td><td valign="top"><p>Pulse parameter names</p></td></tr><tr class="oddrow"><td valign="top"><p>Unit;;s;…</p></td><td valign="top"><p>Unit of pulse parameters</p></td></tr><tr class="evenrow"><td valign="top"><p>1;1;10.0e-9;…</p><p>2;2;10.1e-9;…</p><p>1;3;9.9e-9;…</p><p>…;…;…;…</p></td><td valign="top"><p>Measured values: &lt;ID&gt;, &lt;Pulse No.&gt;, &lt;Param 1&gt;, … , &lt;Param N&gt;</p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

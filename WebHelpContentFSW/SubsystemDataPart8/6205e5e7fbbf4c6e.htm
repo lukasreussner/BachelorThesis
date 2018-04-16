@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Annex" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reference: ENR Table File Format</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7da6fc4b32623e0e0a001ae7723e8750-bbb3dce532623e0e0a001ae76a6d47f7-en-US;ID_e0c0d0883276a39d0a001ae742856af4-bbb3dce532623e0e0a001ae76a6d47f7-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="d2184162e40818.htm">Annex</a> &gt; <span class="chm-breadcrumb">Reference: ENR Table File Format</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Reference: ENR Table File Format</div><p>ENR tables can be exported to a file in xml format for further evaluation in other applications. Transducer factors stored in the specified xml format can also be imported to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW for other measurements (see <a class="xref" href="04386be017d44e16.htm#ID_d2e4973f1a9ea5b30a710a9201e46100-1169e04500553cb10a00206a01dece2f-en-US">"Import / Export"</a>). This reference describes in detail the format of the export/import files for ENR tables.</p><pre class="verbatim" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;TableAttributes&gt;
+    &lt;Header comment=""/&gt;
+    &lt;Data freq="" value=""/&gt;
+    ...
+&lt;/TableAttributes&gt;</pre><div class="block"><span class="bold"><a name="ID_e0c0d0883276a39d0a001ae742856af4-bbb3dce532623e0e0a001ae76a6d47f7-en-US">
+</a>Example: Import file for an ENR table</span><pre class="verbatim" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;TableAttributes&gt;
+    &lt;Header comment="ENR values for NC364B (example)"/&gt;
+    &lt;Data freq="10000000" value="13.14"/&gt;
+    &lt;Data freq="100000000" value="13.21"/&gt;
+    &lt;Data freq="1000000000" value="13.22"/&gt;
+    &lt;Data freq="2000000000" value="13.17"/&gt;
+    &lt;Data freq="3000000000" value="13.26"/&gt;
+    &lt;Data freq="4000000000" value="13.38"/&gt;
+    &lt;Data freq="5000000000" value="13.53"/&gt;
+    &lt;Data freq="6000000000" value="13.63"/&gt;
+    &lt;Data freq="7000000000" value="13.81"/&gt;
+&lt;/TableAttributes&gt;</pre></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

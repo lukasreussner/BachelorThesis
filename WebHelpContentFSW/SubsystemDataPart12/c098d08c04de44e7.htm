@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurements and Result Displays" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Common Parameters in VSA</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b71b8af027cd11e18e51fd65539fbdcc-872c63c6410c614d0a00206a016aa6c2-en-US;ID_d72fdff346c4b8660a00206a0083c29c-872c63c6410c614d0a00206a016aa6c2-en-US;ID_1c3e231746c4b8660a00206a00ddb9b2-872c63c6410c614d0a00206a016aa6c2-en-US;ID_e223445784b28e660a00206a0110e9c4-872c63c6410c614d0a00206a016aa6c2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="430c648a605d4470.htm">Measurements and Result Displays</a> &gt; <span class="chm-breadcrumb">Common Parameters in VSA</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor134">
+</a><a name="kanchor135">
+</a><a name="kanchor136">
+</a><div class="chm-chaptertitle">Common Parameters in VSA</div><p>Depending on the modulation type you are using, different signal parameters are determined during vector signal analysis and displayed in the <a class="xref" href="ae225e66035143c2.htm#ID_2087c98f9767b4aa0a00206a003c62af-872c63c6410c614d0a00206a016aa6c2-en-US">"Result Summary"</a>.</p><p>Details concerning the calculation of individual parameters can be found in <a class="xref" href="a261ad0bf05c48c0.htm#ID_c3d3e3160ac9bc3f0a00206a00cb8949-184c8906411153460a00206a01532735-en-US">"Signal Model, Estimation and Modulation Errors"</a> and <a class="xref" href="d3956add4ccb4b18.htm#ID_d02399add83747470a00206a005cfaa3-5a86f95489fa87f80a00206a0173ee7e-en-US">"Formulae"</a>.</p><div class="block"><a name="ID_d72fdff346c4b8660a00206a0083c29c-872c63c6410c614d0a00206a016aa6c2-en-US">
+</a><span class="table-caption">Parameters for PSK, QAM and MSK modulation</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Description</p></th><th valign="top"><p>SCPI Parameter</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>EVM - RMS/Peak</p></td><td valign="top"><p>Error Vector Magnitude, normalized to mean reference power by default (see <a class="xref" href="301b18994cc8457e.htm#ID_3c3431f107f1fe0a0a710a3100b27cca-98ce8ff6410963710a00206a00a7855c-en-US">"Normalize EVM to"</a>)</p></td><td valign="top"><p>EVM</p></td></tr><tr class="evenrow"><td valign="top"><p>MER - RMS/Peak</p></td><td valign="top"><p><a class="xref" href="01d5ffada7b74bbe.htm#ID_9a4d5cc60b2db7280a710a92010f559e-184c8906411153460a00206a01532735-en-US">"Modulation Error Ratio (MER)"</a></p></td><td valign="top"><p>SNR</p></td></tr><tr class="oddrow"><td valign="top"><p>Phase Error - RMS/Peak</p></td><td valign="top"><p>The phase difference between the measurement vector and the reference vector</p></td><td valign="top"><p>PERR</p></td></tr><tr class="evenrow"><td valign="top"><p>Magnitude Error - RMS/Peak</p></td><td valign="top"><p>The average (RMS) and peak magnitude error in %. The magnitude error is the difference of the measured magnitude to the magnitude of the reference signal. The magnitude error is normalized to the mean magnitude of the reference signal.</p></td><td valign="top"><p>MERRor</p></td></tr><tr class="oddrow"><td valign="top"><p>Carrier Frequency Error</p></td><td valign="top"><p>The mean carrier frequency offset in Hz</p></td><td valign="top"><p>CFERror</p></td></tr><tr class="evenrow"><td valign="top"><p>Symbol Rate Error</p></td><td valign="top"><p>Difference between the currently measured symbol rate and the defined symbol rate in ppm.</p><p>(Only if compensation for SRE is activated, see <a class="xref" href="e7df23f27848458b.htm#ID_ae3adf13472f3d180a00206a01b6f462-98ce8ff6410963710a00206a00a7855c-en-US">"Demodulation - Compensation and Equalizer"</a>)</p></td><td valign="top"><p>SRER</p></td></tr><tr class="oddrow"><td valign="top"><p>Rho</p></td><td valign="top"> </td><td valign="top"><p>RHO</p></td></tr><tr class="evenrow"><td valign="top"><p>I/Q Offset</p></td><td valign="top"><p>Offset in the original input</p></td><td valign="top"><p>OOFFset</p></td></tr><tr class="oddrow"><td valign="top"><p>I/Q Imbalance</p></td><td valign="top"><p>Not for BPSK.</p></td><td valign="top"><p>IQIMbalance</p></td></tr><tr class="evenrow"><td valign="top"><p>Gain Imbalance</p></td><td valign="top"><p>Not for BPSK.</p></td><td valign="top"><p>GIMBalance</p></td></tr><tr class="oddrow"><td valign="top"><p>Quadrature Error</p></td><td valign="top"><p>Not for BPSK.</p></td><td valign="top"><p>QERRor</p></td></tr><tr class="evenrow"><td valign="top"><p>Amplitude Droop</p></td><td valign="top"><p>The decrease of the signal power over time in the transmitter</p></td><td valign="top"><p>ADRoop</p></td></tr><tr class="oddrow"><td valign="top"><p>Power</p></td><td valign="top"><p>The power of the measured signal</p></td><td valign="top"><p>MPOWer</p></td></tr></tbody></table></div><div class="block"><a name="ID_1c3e231746c4b8660a00206a00ddb9b2-872c63c6410c614d0a00206a016aa6c2-en-US">
+</a><a name="kanchor137">
+</a><a name="kanchor138">
+</a><a name="kanchor139">
+</a><span class="table-caption">Parameters for FSK modulation only</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Description</p></th><th valign="top"><p>SCPI parameter</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Frequency Error - RMS/Peak</p></td><td valign="top"><p>The average (RMS) and peak frequency error in %. The frequency error is the difference of the measured frequency and the reference frequency. The frequency error is normalized to the estimated FSK deviation.</p></td><td valign="top"><p>FSK:DERRor</p></td></tr><tr class="evenrow"><td valign="top"><p>FSK Deviation Error</p></td><td valign="top"><p>The deviation error of FSK modulated signals in Hz, i.e. the difference of the measured FSK deviation and the user-defined FSK reference deviation.</p></td><td valign="top"><p>FDERror</p></td></tr><tr class="oddrow"><td valign="top"><p>FSK Meas Deviation</p></td><td valign="top"><p>The estimated deviation of FSK modulated signals in Hz.</p></td><td valign="top"><p>FSK:MDEViation</p></td></tr><tr class="evenrow"><td valign="top"><p>FSK Ref Deviation</p></td><td valign="top"><p>The reference deviation you have set in Hz.</p></td><td valign="top"><p>FSK:RDEViation</p></td></tr><tr class="oddrow"><td valign="top"><p>Carrier Frequency Drift</p></td><td valign="top"><p>The mean carrier frequency drift in Hz per symbol.</p></td><td valign="top"><p>FSK:CFDRift</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_e223445784b28e660a00206a0110e9c4-872c63c6410c614d0a00206a016aa6c2-en-US">
+</a>Remote command:</div></div><p><span class="command">CALCulate&lt;n&gt;:MARKer&lt;m&gt;:FUNCtion:DDEMod:STATistic:&lt;Parameter&gt;?</span></p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

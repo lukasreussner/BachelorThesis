@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurements and Result Display|Code Domain Analysis|Evaluation Methods for Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Domain Power</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWCDMASkIdSmartGridCDP">
+</meta>
+        <meta name="topic-id" value="24">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_39016a45b68b8f510a00206a00e8598c-14df114092791b800a00206a01fa83d8-en-US;ID_b33ca3d3a6fc11e0bd7d9ca521cdb013-14df114092791b800a00206a01fa83d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="a6ba98e833a74468.htm">Measurements and Result Display</a> &gt; <a class="chm-breadcrumb" href="6c18bcecabcf4624.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="1098fd20c8854cad.htm">Evaluation Methods for Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Code Domain Power</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor78">
+</a><a name="kanchor79">
+</a><div class="function_heading"><a name="ID_39016a45b68b8f510a00206a00e8598c-14df114092791b800a00206a01fa83d8-en-US">
+</a><span style="font-weight: bold">Code Domain Power</span></div><p>The Code Domain Power evaluation shows the power of all possible code channels in the selected channel slot. The x-axis shows the possible code channels from 0 to the highest spreading factor. Due to the circumstance that the power is regulated from slot to slot, the result power may differ between different slots. Detected channels are displayed yellow. The selected code channel is highlighted red. The codes where no channel could be detected are displayed green.</p><p><b><a name="ID_b33ca3d3a6fc11e0bd7d9ca521cdb013-14df114092791b800a00206a01fa83d8-en-US">
+</a>Note:</b> Effects of missing or incomplete pilot symbols. In "Autosearch" channel detection mode, the application expects specific pilot symbols for DPCH channels. If these symbols are missing or incomplete, the channel power in the Code Domain Power evaluation is displayed green at the points of the diagram the channel should appear due to its spreading code, and a message ("INCORRECT PILOT") is displayed in the status bar. In this case, check the pilot symbols for those channels using the Power vs Slot or the Bitstream evaluations.<br/>Optionally, all QPSK-modulated channels can also be recognized without pilot symbols (see <a class="xref" href="d78502e23985.htm#ID_f684e3bc3c40978b0a00206a01a85321-2863920e3c40978b0a00206a01e9a288-en-US">"HSDPA/UPA"</a>).<br/></p>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, CDPower</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p><span class="command">CALC:MARK:FUNC:WCDP:RES? CDP</span>, see <a class="xref" href="958b6d95641c416c.htm#shiv_FSV_K72_2473-d45af8be2d00cba40a00206a00c1fa0f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>WCDPower[:</nobr>​<nobr>BTS]:</nobr>​<nobr>RESult?</nobr></a></p><p><span class="command">CALC:MARK:FUNC:WCDP:MS:RES? CDP</span>, see <a class="xref" href="d26ec37f2cc745e1.htm#shiv_FSV_K73_2443-a6bd2d612d4680600a00206a00046fab-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>WCDPower:</nobr>​<nobr>MS:</nobr>​<nobr>RESult?</nobr></a></p><p><a class="xref" href="5b5374be8ed54900.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-1a158fbffef807310a00206a017e8287-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? CTABle</a></p><p><a class="xref" href="26fee67ee9a648a5.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-a85a2c89fef81f0f0a00206a00473941-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? PWCDp</a></p><p><a class="xref" href="183cd311c21d4724.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-a6ae4896fef80d3c0a00206a019750b1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? CWCDp</a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

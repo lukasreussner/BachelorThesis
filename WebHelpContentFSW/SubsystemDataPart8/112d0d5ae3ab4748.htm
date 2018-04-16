@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Using the Uncertainty Calculator</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalcConfig">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_NoiseSourceGroup">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_DUTGroup">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_SAGroup">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_GuidelinesGroup">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ResultGroup">
+</meta>
+        <meta name="topic-id" value="194">
+</meta>
+        <meta name="topic-id" value="196">
+</meta>
+        <meta name="topic-id" value="198">
+</meta>
+        <meta name="topic-id" value="200">
+</meta>
+        <meta name="topic-id" value="202">
+</meta>
+        <meta name="topic-id" value="204">
+</meta>
+        <meta name="topic-id" value="206">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_448023a6001083b80a0020190176df63-0fca6040001083b80a0020190143e16f-en-US;ID_5db6e5ab82c83f830a7101ac002a58b4-0fca6040001083b80a0020190143e16f-en-US;ID_be57dde213b0ce8d0a710a9201c57fe0-0fca6040001083b80a0020190143e16f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="6f413a5358b94877.htm">Configuration</a> &gt; <span class="chm-breadcrumb">Using the Uncertainty Calculator</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Using the Uncertainty Calculator</div><p><b>Access</b>: [MEAS CONFIG] &gt; "Uncertainty Calculation"</p><p>Noise figure measurements are subject to uncertainty. This measurement uncertainty has to be considered when making a noise figure measurement. The noise figure measurement will be meaningless if the measurement uncertainty is too large. Knowing the uncertainty of the noise figure measurement adds value especially when comparing measurement results.</p><p>Note that the noise figure uncertainty ist not calculated for frequencies above 67<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz because input VSWR values are not specified.</p><div class="block" id="ID_5db6e5ab82c83f830a7101ac002a58b4-0fca6040001083b80a0020190143e16f-en-US"><div class="graphic"><img border="0" src="Resources/Images/img56bba27282c7f6300a001ae72eb40bca_1_--_--_PNG96Small.png" alt="" title=""/></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_be57dde213b0ce8d0a710a9201c57fe0-0fca6040001083b80a0020190143e16f-en-US">
+</a>Uncertainty values and systematic error recognition</div><p>Note that the uncertainty calculation only takes systematic measurement inaccuracies into account.</p><div class="block"><div class="listintro">The most significant inaccuracies are:</div><ul class="list"><li value="1">uncertainties of the noise source and the analyzer</li><li value="2">input and output matching</li><li value="3">noise figure and gain of the DUT</li><li value="4">noise figure of the analyzer</li></ul></div><p>The accuracy of the measurement may be additionally affected by insufficient repeatability during calibration or measurement.</p><div class="block"><div class="listintro">The repeatability is mainly affected by:</div><ul class="list"><li value="1">signal-to-noise ratio during calibration and measurement</li><li value="2">measurement time (if it is too short)</li><li value="3">environmental conditions (e.g. a change in the temperature between measurements)</li><li value="4">mechanical stability of the test setup</li></ul></div></td></tr></table></div></div><p>For more background information on noise figure measurement uncertainty refer to the application note "The Y-Factor Technique for Noise Figure Measurement" available for download on the Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz homepage (<a href="http://www.rohde-schwarz.com/en/applications/the-y-factor-technique-for-noise-figure-measurements-application-note_56280-15484.html" class="link" target="_new">http://www.rohde-schwarz.com/en/applications/the-y-factor-technique-for-noise-figure-measurements-application-note_56280-15484.html</a>).</p><div class="block"><div class="listintro">In addition to the parameters described here, the application also considers several parameters from the general measurement configuration when calculating the uncertainty.</div><ul class="list"><li value="1"><a class="xref" href="07cef14065704304.htm#ID_89b313e2f673ff4d0a710a92009291cf-c53b470df641614c0a00206a008d50be-en-US">Measurement mode</a></li><li value="2"><a class="xref" href="5464b33ab7024079.htm#ID_4dc3f701fc42c6f70a710a92005a2045-3272b8d9fb94e2c40a00206a01b10d3a-en-US">"2nd Stage Correction"</a><br/>If 2nd stage correction is on, but no calibration data is available, uncertainty is calculated without the 2nd stage correction data.</li><li value="3"><a class="xref" href="36d4bd8eb3784698.htm#ID_d9f8aca7fc8291540a00206a0079efd7-3272b8d9fb94e2c40a00206a01b10d3a-en-US">Internal preamplification</a></li><li value="4"><a class="xref" href="7123165de0174f5b.htm#ID_6c66f1a3fc8291540a00206a001cf071-3272b8d9fb94e2c40a00206a01b10d3a-en-US">"RF Attenuation"</a></li><li value="5"><a class="xref" href="0e492d604b9c4b5d.htm#ID_a28f4722fb2e55bd0a710a92019cefd6-26df8e04fae9ed6e0a00206a001eaa10-en-US">"Temperature"</a></li><li value="6"><a class="xref" href="c83494959a924b22.htm#ID_24685e66fb0c91610a710a9200bf7b3e-26df8e04fae9ed6e0a00206a001eaa10-en-US">ENR values</a></li></ul></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="8caa575f2fee4563.htm" class="chapter_title_toc">Configuring Noise Source Characteristics</a></li><li value="2"><a href="8e42f1e9b41c4975.htm" class="chapter_title_toc">Configuring DUT Characteristics</a></li><li value="3"><a href="17caa911fbe24df0.htm" class="chapter_title_toc">Configuring Analyzer Characteristics</a></li><li value="4"><a href="a7a0c71514fd4310.htm" class="chapter_title_toc">Guidelines and Results</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

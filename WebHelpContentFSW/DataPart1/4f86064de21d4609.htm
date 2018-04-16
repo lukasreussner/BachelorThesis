@@ -1,0 +1,25 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the Channel Power and ACLR|Configuring MSR ACLR Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>MSR Gap Channel Setup</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ce833766a897403a0a710ade00527ea1-ed48d8a3d735e2590a00206a01ef999f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="ab0bd475cb8e4d1f.htm">Measuring the Channel Power and ACLR</a> &gt; <a class="chm-breadcrumb" href="ed7848aa51314be2.htm">Configuring MSR ACLR Measurements</a> &gt; <span class="chm-breadcrumb">MSR Gap Channel Setup</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">MSR Gap Channel Setup</div><p>The functions for manual operation are described in <a class="xref" href="7a3cbcb579ed4b2d.htm#ID_19ee8c5ff2f511e3977a866294e8cb6f-afab76cfd7349b540a00206a00bfaa09-en-US">"MSR Gap Channel Setup"</a>.</p><div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="db7fdbdc17f442d8.htm#ID_8590c7d39f92ea200a00206a002bfc6d-8b4b86b01c5442d90a00201901a5c1cb-en-US" class="title_toc">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ACPower:GAP&lt;gap&gt;:ABSolute</a><br/><a href="778a2f9e31e74adf.htm#ID_9efbc5192f1e4a0c0a00206a013c337e-1b64902d1c5444210a00201900336416-en-US" class="title_toc">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ACPower:GAP&lt;gap&gt;:ABSolute:STATe</a><br/><a href="d08c8e7334ea4d96.htm#ID_d4dde1162f1aa7e40a00206a004d0a37-b5fa3a5aa4c665df0a001ae7615dd12e-en-US" class="title_toc">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ACPower:GAP&lt;gap&gt;:ACLR[:RELative]</a><br/><a href="0aa81f7600444988.htm#ID_c5666d4f9f78f9510a00206a005b8a9a-bdf5a915a4c666c90a001ae745e5d226-en-US" class="title_toc">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ACPower:GAP&lt;gap&gt;:ACLR[:RELative]:STATe</a><br/><a href="c77ed38b571e49f5.htm#ID_d4dde1162f1aa7e40a00206a004d0a37-2c7b74e6a4c513aa0a001ae7449e1bbe-en-US" class="title_toc">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ACPower:GAP&lt;gap&gt;[:CACLr][:RELative]</a><br/><a href="c971155eb1344799.htm#ID_c5666d4f9f78f9510a00206a005b8a9a-a16319afa4c514850a001ae73faccb2f-en-US" class="title_toc">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ACPower:GAP&lt;gap&gt;[:CACLr][:RELative]:STATe</a><br/><a href="07c91ec3ba594209.htm#ID_01f596cd2de2879a0a00206a013d221a-19aea4a0a4afdb3d0a001ae715d89df5-en-US" class="title_toc">[SENSe:]POWer:ACHannel:AGCHannels</a><br/><a href="d7605b0ec8d8490e.htm#ID_bce9a0f8434911e6b520c38422bd2f86-ed48d8a3d735e2590a00206a01ef999f-en-US" class="title_toc">[SENSe:]POWer:ACHannel:BWIDth:GAP&lt;gap&gt;</a><br/><a href="d7605b0ec8d8490e.htm#ID_01f596cd2de2879a0a00206a013d221a-81bba7791c47bf120a002019006f1eb8-en-US" class="title_toc">[SENSe:]POWer:ACHannel:BANDwidth:GAP&lt;gap&gt;</a><br/><a href="d36e135567.htm#ID_592222cc2deaf0f10a00206a00daeebe-d9fae1491c4c2a360a00201900253cbc-en-US" class="title_toc">[SENSe:]POWer:ACHannel:FILTer:ALPHa:GAP&lt;gap&gt;</a><br/><a href="035cddfb01da45af.htm#ID_c134c6b02dec43700a00206a00ff2db3-bf7383331c4bc9f50a00201900d3c073-en-US" class="title_toc">[SENSe:]POWer:ACHannel:FILTer[:STATe]:GAP&lt;gap&gt;</a><br/><a href="34b1b931c1e84a93.htm#ID_def935be2de5f8910a00206a000c0e34-29f103aea4b3452b0a001ae70a3a5bf2-en-US" class="title_toc">[SENSe:]POWer:ACHannel:GAP&lt;gap&gt;:MSIZe</a><br/><a href="4be16f0936c94375.htm#ID_def935be2de5f8910a00206a000c0e34-2322b0ff1c42f0bf0a00201900e645a6-en-US" class="title_toc">[SENSe:]POWer:ACHannel:SPACing:GAP&lt;gap&gt;</a><br/></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

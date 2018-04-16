@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Configuring Code Domain Analysis and Time Alignment Error Measurements|Signal Description|BTS Signal Description" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]CDPower:LCODe:SEARch:LIST?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9cdc27b3638e8ae70a00206a01278177-150947472d1b615b0a00206a01bde233-en-US;ID_9842ce8625dece7e0a00206a01348549-150947472d1b615b0a00206a01bde233-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="277aa63e44a84197.htm">Configuring Code Domain Analysis and Time Alignment Error Measurements</a> &gt; <a class="chm-breadcrumb" href="efda6065fcf94bd2.htm">Signal Description</a> &gt; <a class="chm-breadcrumb" href="fbe7326ad9f849d1.htm">BTS Signal Description</a> &gt; <span class="chm-breadcrumb">[SENSe:]CDPower:LCODe:SEARch:LIST?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_9cdc27b3638e8ae70a00206a01278177-150947472d1b615b0a00206a01bde233-en-US">
+</a><span class="bold">[SENSe:]CDPower:LCODe:SEARch:LIST? </span></div><div class="rcdescription"><p>This command returns the automatic search sequence (see <a class="xref" href="d1127011e42171.htm#ID_80c5fd1332c111730a00206a0062e9d0-f790f8142d1b36830a00206a00bed909-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CDPower:</nobr>​<nobr>LCODe:</nobr>​<nobr>SEARch[:</nobr>​<nobr>IMMediate]?</nobr></a>) as a comma-separated list of results for each detected scrambling code.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Code1&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Scrambling code in decimal format.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Range: </span></td><td class="rc_col_content_right">16 * n, with n = 0...511<br/></td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Code2&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Scrambling code in hexadecimal format.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Range: </span></td><td class="rc_col_content_right">0x0000h – 0x1FF0h, where the last digit is always 0<br/></td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;CPICHPower&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Highest power value for the corresponding scrambling code.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p><span class="command">SENS:CDP:LCOD:SEAR:LIST?</span></p><p>Result:</p><p><span class="command">16,0×10,-18.04,32,0×20,-22.87,48,0×30,-27.62,64,0×40,-29.46</span></p><p>(Explanation in table below)</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Mode: </span></td><td class="rc_col_content_left" colspan="2">BTS application only</td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="f27a37938202496a.htm#ID_b3b5273aea7bcc390a710a310108bddb-36dc93a6925af2ef0a00206a01773c49-en-US">"Scrambling Codes"</a></td></tr></table><div class="block"><a name="ID_9842ce8625dece7e0a00206a01348549-150947472d1b615b0a00206a01bde233-en-US">
+</a><span class="table-caption">Description of query results in example:</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Code (dec)</p></th><th valign="top"><p>Code(hex)</p></th><th valign="top"><p>CPICH power (dBm)</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>16</p></td><td valign="top"><p>0x10</p></td><td valign="top"><p>-18.04</p></td></tr><tr class="evenrow"><td valign="top"><p>32</p></td><td valign="top"><p>0x20</p></td><td valign="top"><p>-22.87</p></td></tr><tr class="oddrow"><td valign="top"><p>48</p></td><td valign="top"><p>0x30</p></td><td valign="top"><p>-27.62</p></td></tr><tr class="evenrow"><td valign="top"><p>64</p></td><td valign="top"><p>0x40</p></td><td valign="top"><p>-29.46</p></td></tr></tbody></table></div></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

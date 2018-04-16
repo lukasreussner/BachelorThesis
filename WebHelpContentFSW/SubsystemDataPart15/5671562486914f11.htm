@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Measurements and Result Displays|Code Domain Analysis|Evaluation Methods for Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Peak Code Domain Error</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eC2kSkIdSmartGridPeakCDEP">
+</meta>
+        <meta name="topic-id" value="32">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_52dd3e2eb6f10f840a00206a003ae45d-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_2d35ff427d8afc810a710a3101992030-19ac4e2868392f9f0a00206a00098ad6-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="21ffee03ea97435e.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="d0293aa9fc8844a2.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="9340017befff44d3.htm">Evaluation Methods for Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Peak Code Domain Error</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor118">
+</a><a name="kanchor119">
+</a><a name="kanchor120">
+</a><a name="kanchor121">
+</a><a name="kanchor122">
+</a><div class="function_heading"><a name="ID_52dd3e2eb6f10f840a00206a003ae45d-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a><span style="font-weight: bold">Peak Code Domain Error</span></div><p>The Peak Code Domain Error is defined as the maximum value for the <a class="xref" href="74ca29cfc0974670.htm#ID_c2435c2ab68b8f600a00206a00840a9f-19ac4e2868392f9f0a00206a00098ad6-en-US">"Code Domain Power / Code Domain Error Power"</a> for all codes. Thus, the error between the measurement signal and the ideal reference signal is projected onto the code domain at a specific base spreading factor. In the diagram, each bar of the x-axis represents one PCG. The y-axis represents the error power.</p><p>The measurement evaluates the total signal over the entire period of observation. The currently selected PCG is highlighted red.</p><p>You can select the <a class="xref" href="64083e6ee9be4040.htm#shiv_FSV_K82_0960-7acdb2adb16797600a00206a0033115d-en-US">"Base Spreading Factor"</a> and the number of evaluated PCGs in the Signal Capture settings (see <a class="xref" href="9d874e3aab3f4d10.htm#shiv_FSV_K82_0905-b71653034984aa290a00206a0052ec9d-en-US">"Number of PCGs"</a>).</p><p><b>MS application</b>: the error is calculated only for the selected branch (I or Q).</p><p><b><a name="ID_2d35ff427d8afc810a710a3101992030-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a>Note:</b> Only the channels detected as being active are used to generate the ideal reference signal. For example, a channel may not be detected as being active due to low power. In this case, the difference between the test signal and the reference signal is very large. The result display therefore shows a peak code domain error that is too high. Distortions also occur if unassigned codes are wrongly given the status of "active channel". To obtain reliable measurement results, select an adequate channel threshold via the <a class="xref" href="2fec93d7128148e1.htm#ID_df6eb623ea7bcad20a710a31005f4f03-b71653034984aa290a00206a0052ec9d-en-US">"Inactive Channel Threshold"</a> setting.<br/></p>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, PCDerror</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p><span class="command">CALC:MARK:FUNC:CDP:RES? PCDerror</span>; see <a class="xref" href="2d6321b695e44f8e.htm#shiv_FSV_K72_2473-87d64b328758bbf80a00206a01e6510a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>CDPower[:</nobr>​<nobr>BTS]:</nobr>​<nobr>RESult?</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

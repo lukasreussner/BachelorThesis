@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Configuring Amplifier Measurements|Configuring Inputs and Outputs|Controlling a Signal Generator" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Generator RMS Level</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eETSkId_GenCfgRmsLevel">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_GenCfgRmsLevelLed">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_GenCfgSMWLevelOffset">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_GenCfgSMWLvlOffsetLed">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdSMWLevelOffset">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdSMWLevel">
+</meta>
+        <meta name="topic-id" value="328">
+</meta>
+        <meta name="topic-id" value="330">
+</meta>
+        <meta name="topic-id" value="332">
+</meta>
+        <meta name="topic-id" value="334">
+</meta>
+        <meta name="topic-id" value="336">
+</meta>
+        <meta name="topic-id" value="338">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1e98714ccd9537370a001ae74ec714d6-e5b9bea0cd9537370a001ae770291601-en-US;ID_474cc3bb6e8965ea0a001ae75b957d47-e5b9bea0cd9537370a001ae770291601-en-US;ID_49b26ae7597c2c380a001ae770508181-e5b9bea0cd9537370a001ae770291601-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/9eed6cfab9eb4da2.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="514ce2c6787d4307.htm">Configuring Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="74ecbcb0a5444d2a.htm">Configuring Inputs and Outputs</a> &gt; <a class="chm-breadcrumb" href="530ea441597a46ed.htm">Controlling a Signal Generator</a> &gt; <span class="chm-breadcrumb">Generator RMS Level</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor208">
+</a><a name="kanchor209">
+</a><a name="kanchor210">
+</a><a name="kanchor211">
+</a><div class="function_heading"><a name="ID_1e98714ccd9537370a001ae74ec714d6-e5b9bea0cd9537370a001ae770291601-en-US">
+</a><span style="font-weight: bold">Generator RMS Level</span></div><p>Defines the RMS level of the signal that should be generated.</p><p>When you define the RMS level here, the signal generator is automatically configured to that level.</p><p>In addition, you can define a level offset (for example to take external attenuation into account). Note that the level offset is a purely mathematical value and does not change the actual level of the signal at the RF output.</p><p>The level offset takes level offsets into account that occur before the signal has passed through the DUT (usually an amplifier). For level offsets occurring after the DUT, define a <a class="xref" href="aa2bbda7bb3a42d8.htm#ID_216cdcf206c927ab0a00206a001ac4e6-ae4a67e705305f050a00206a01ab427c-en-US">level offset</a> in the "Amplitude" menu of the signal analyzer.</p><p>You can also define a <a class="xref" href="0ac72e21f4404d98.htm#ID_92e141ded4c0053f0a001ae7031c6c5e-dbf768d0d4c0053f0a001ae73f0e90ea-en-US">Digital Attenuation</a> that you can use for fast output level changes.</p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span></p><p><b><a name="ID_474cc3bb6e8965ea0a001ae75b957d47-e5b9bea0cd9537370a001ae770291601-en-US">
+</a>NOTICE!</b> Risk of damage to the DUT. <span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><br/>RMS levels that are too high may damage or detroy the DUT.<br/>Make sure to keep an eye on the RMS level, especially when defining a level offset, because a level offset changes the displayed value of the RMS level, but not the real RMS level (Displayed RMS Level = Real RMS Level + Level Offset). Thus, the actual RMS level may be higher than the displayed level.<br/></p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span></p><p><b><a name="ID_49b26ae7597c2c380a001ae770508181-e5b9bea0cd9537370a001ae770291601-en-US">
+</a>Note:</b> Make sure to always change the generator level from within the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K18 user interface and thus synchronize the level of both instruments.<br/>If you change the generator level on the signal generator, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K18 won't synchronize the levels and measurement results are going to be invalid.<br/></p>Remote command: <div class="rcclist_right"><p>RMS level: <a class="xref" href="1ac4d3c4ec534bfd.htm#ID_df14b27af5834fa80a001ae75ea5d0f0-4809baf6f5834df30a001ae77dfe1998-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>GENerator:</nobr>​<nobr>POWer:</nobr>​<nobr>LEVel</nobr></a></p><p><a class="xref" href="b65c5dca712541b7.htm#ID_e353bc26c920a88f0a001ae75cd7aa38-39fda5c9c920a7950a001ae77a485e0d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>GENerator:</nobr>​<nobr>POWer:</nobr>​<nobr>LEVel:</nobr>​<nobr>LEDState?</nobr></a></p><p>Level offset: <a class="xref" href="ca5fd31672c24c91.htm#ID_12aa8f6758635eea0a001ae74a459790-c545a20c58635b210a001ae735e62b8f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>GENerator:</nobr>​<nobr>POWer:</nobr>​<nobr>LEVel:</nobr>​<nobr>OFFSet</nobr></a></p><p><a class="xref" href="98434b68b4f1494d.htm#ID_7f4417c05863633f0a001ae74c10dbdd-000a3b00586360be0a001ae735e62b8f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>GENerator:</nobr>​<nobr>POWer:</nobr>​<nobr>LEVel:</nobr>​<nobr>OFFSet:</nobr>​<nobr>LEDState?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|MSRA Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurements in the Time and Frequency Domain</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f1b7477d0ec611e2839ab79820e44bcd-33d474f14414ad4a0a002019001331f5-en-US;ID_f1b7477f0ec611e2839ab79820e44bcd-33d474f14414ad4a0a002019001331f5-en-US;ID_f1b747840ec611e2839ab79820e44bcd-33d474f14414ad4a0a002019001331f5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="7980ab3c417d4f64.htm">MSRA Basics</a> &gt; <span class="chm-breadcrumb">Measurements in the Time and Frequency Domain</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor117">
+</a><div class="chm-chaptertitle">Measurements in the Time and Frequency Domain</div><p>The I/Q Analyzer slave application (<em>not Master</em>) <b>in multistandard mode</b> can also perform measurements on the captured I/Q data in the time and frequency domain. In order to do so, the I/Q Analyzer performs an FFT sweep on the captured I/Q data, providing power vs frequency results, or uses the RBW filter to obtain power vs time (zero span) results. This data is then used for the common frequency or time domain measurements provided by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Spectrum application, such as ACLR, SEM or CCDF.</p><div class="block"><div class="subtitle"><a name="ID_f1b7477f0ec611e2839ab79820e44bcd-33d474f14414ad4a0a002019001331f5-en-US">
+</a>Configuration</div></div><p>Apart from the data capturing process, the measurements are identical in the Spectrum and I/Q Analyzer slave applications. They are configured using the same settings and provide the same results. The "Magnitude" result display in the I/Q Analyzer, for instance, will principally show the same results as the zero span measurement for the same data. However, while the "Magnitude" evaluation is configured by the I/Q analysis bandwidth and the measurement time, the zero span measurement is configured by the center frequency, RBW and sweep time settings. Internally, these "time domain" settings are converted to the required I/Q settings by the I/Q Analyzer.</p><p>The time and frequency domain measurements and the required settings are described in detail in <a class="xref" href="../../../Content/e411382c530e4663.htm">Measurements and Results</a>.</p><div class="block"><div class="subtitle"><a name="ID_f1b747840ec611e2839ab79820e44bcd-33d474f14414ad4a0a002019001331f5-en-US">
+</a>Limitations</div></div><p>However, since the data in the I/Q Analyzer slave application is captured by the Master, independently of the specific time or frequency measurement requirements concerning the RBW, filter type and number of sweep points in the slave application, some restrictions may apply to these measurements in the I/Q Analyzer. If not enough samples are available in the captured and converted I/Q data, for example, an error message is displayed in the slave application.</p><p>The <b>maximum span</b> for a frequency sweep on I/Q-based data corresponds to the maximum I/Q bandwidth (see <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a> and <a class="xref" href="753b18e9b5734b3b.htm#ID_50cf23fdaede25e90a00206a012e28b3-c731609eaede25e90a00206a017235b7-en-US">"Sample Rates and  Bandwidths for Digital I/Q Data"</a>).</p><p>The <b>maximum resolution bandwidth (RBW)</b> is 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p><p>Furthermore, the following <b>functions</b> are not available for time and frequency domain measurements in multistandard mode:</p><div class="block"><ul class="list"><li value="1">Marker demodulation</li><li value="2">Frequency counter marker</li><li value="3">Gated measurement</li><li value="4">Video trigger</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Bitstream</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ca00afbdead25dd70a710a31000c20e9-9c73b9e8277ee5940a001ae73a0b8ecb-en-US;ID_18301643e493290d0a00206a00c3dc98-9c73b9e8277ee5940a001ae73a0b8ecb-en-US;ID_8a7a8b6ee493290d0a00206a01178a16-9c73b9e8277ee5940a001ae73a0b8ecb-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="e492fe40d86a471b.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="e89fd345bf5449b4.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Bitstream</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor780">
+</a><div class="chm-chaptertitle">Bitstream</div><p>When the trace data for this evaluation is queried, the bit stream of one slot is transferred. Each symbol contains two consecutive bits in the case of a QPSK modulated slot and 4 consecutive bits in the case of a 16QAM modulated slot. One value is transferred per bit (range 0, 1). The number of symbols is not constant and may vary for each sweep. Individual symbols in the bit stream may be invalid depending on the channel type and the bit rate (symbols without power). The assigned invalid bits are marked by one of the digits "6", "7" or "9".</p><p>The values and number of the bits are as follows (without HS-DPCCH channels, see <a class="xref" href="d1127011e42138.htm#shiv_FSV_K72_2960-7266417c2d1a35700a00206a015d7147-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CDPower:</nobr>​<nobr>HSDPamode</nobr></a>) :</p><div class="block"><a name="ID_18301643e493290d0a00206a00c3dc98-9c73b9e8277ee5940a001ae73a0b8ecb-en-US">
+</a><span class="table-caption">Bit values and numbers without HS-DPCCH channels</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>Unit</p></td><td valign="top"><p>[]</p></td></tr><tr class="evenrow"><td valign="top"><p>Value range</p></td><td valign="top"><p>{0, 1, 6, 9}</p><p>0 - Low state of a transmitted bit</p><p>1 - High state of a transmitted bit</p><p>6 - Bit of a symbol of a suppressed slot of a DPCH in Compressed Mode (DPCH-CPRSD)</p><p>9 - Bit of a suppressed symbol of a DPCH (e.g. TFCI off)</p></td></tr><tr class="oddrow"><td valign="top"><p>Bits per slot</p></td><td valign="top"><p>N<sub>BitPerSymb</sub> = 2</p></td></tr><tr class="evenrow"><td valign="top"><p>Number of symbols</p></td><td valign="top"><p>N<sub>Symb</sub> = 10*2<sup>(8-Code Class)</sup></p></td></tr><tr class="oddrow"><td valign="top"><p>Number of bits</p></td><td valign="top"><p>N<sub>Bit</sub> = N<sub>Symb</sub> * N<sub>BitPerSymb</sub></p></td></tr><tr class="evenrow"><td valign="top"><p>Format</p></td><td valign="top"><p>Bit<sub>00</sub>, Bit<sub>01</sub>, Bit<sub>10</sub>, Bit<sub>11</sub>, Bit<sub>20</sub>, Bit<sub>21</sub>,.... , Bit<sub>NSymb 0</sub>, Bit<sub>NSymb 1</sub></p></td></tr></tbody></table></div><p>The values and number of the bits including HS-DPCCH channels (see <a class="xref" href="d1127011e42138.htm#shiv_FSV_K72_2960-7266417c2d1a35700a00206a015d7147-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CDPower:</nobr>​<nobr>HSDPamode</nobr></a>) are as follows:</p><div class="block"><a name="ID_8a7a8b6ee493290d0a00206a01178a16-9c73b9e8277ee5940a001ae73a0b8ecb-en-US">
+</a><span class="table-caption">Bit values and numbers including HS-DPCCH channels</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>Unit</p></td><td valign="top"><p>[]</p></td></tr><tr class="evenrow"><td valign="top"><p>Value range</p></td><td valign="top"><p>{0, 1, 6, 7, 8, 9}</p><p>0 - Low state of a transmitted bit</p><p>1 - High state of a transmitted bit</p><p>6 - Bit of a symbol of a suppressed slot of a DPCH in Compressed Mode (DPCH-CPRSD)</p><p>7 - Bit of a switched-off symbol of an HS-PDSCH channel</p><p>8 - Fill value for unused bits of a lower order modulation symbol in a frame containing higher order modulation</p><p>9 - Bit of a suppressed symbol of a DPCH (e.g. TFCI off)</p></td></tr><tr class="oddrow"><td valign="top"><p>Bits per symbol</p></td><td valign="top"><p>N<sub>BitPerSymb</sub> = {2, 4, 6}</p></td></tr><tr class="evenrow"><td valign="top"><p>Symbols per slot</p></td><td valign="top"><p>N<sub>Symb_Slot</sub> = 10*2<sup>(8-Code Class)</sup></p></td></tr><tr class="oddrow"><td valign="top"><p>Symbols per frame</p></td><td valign="top"><p>N<sub>Symb_Frame</sub> = 15*N<sub>Symb_Slot</sub>= 150*2<sup>(8-Code Class)</sup></p></td></tr><tr class="evenrow"><td valign="top"><p>Number of bits</p></td><td valign="top"><p>N<sub>Bit</sub> = N<sub>Symb_Frame</sub> * N<sub>BitPerSymb_MAX</sub></p></td></tr><tr class="oddrow"><td valign="top"><p>Format (16QAM)</p></td><td valign="top"><p>Bit<sub>00</sub>,Bit<sub>01</sub>,Bit<sub>02</sub>,Bit<sub>03</sub>,Bit<sub>10</sub>,Bit<sub>11</sub>,Bit<sub>12</sub>,Bit<sub>13</sub>,.... ... ,</p><p>Bit<sub>NSymb_Frame 0</sub>,Bit<sub>NSymb_Frame 1</sub>,Bit<sub>NSymb_Frame 2</sub>,</p><p>Bit<sub>NSymb_Frame 3</sub></p></td></tr><tr class="evenrow"><td valign="top"><p>Format (64QAM)</p></td><td valign="top"><p>Bit<sub>00</sub>, Bit<sub>01</sub>, Bit<sub>02</sub>, Bit<sub>03</sub>, Bit<sub>04</sub>, Bit<sub>05</sub>, Bit<sub>10</sub>, Bit<sub>11</sub>, Bit<sub>12</sub>, Bit<sub>13</sub>, Bit<sub>14</sub>, Bit<sub>15</sub>, ...,</p><p>Bit<sub>NSymb_Frame 0</sub>,Bit<sub>NSymb_Frame 1</sub>,Bit<sub>NSymb_Frame 2</sub>,Bit<sub>NSymb_Frame 3</sub>,Bit<sub>NSymb_Frame 4</sub>,Bit<sub>NSymb_Frame 5</sub></p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

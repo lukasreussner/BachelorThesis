@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Remote Control Interfaces and Protocols</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d9c8a2bb806724ae0a00206a002a8cef-423f5dbe5750161c0a001ae76b741982-en-US;ID_997bf6c7808783720a710a31015ad0c6-423f5dbe5750161c0a001ae76b741982-en-US;ID_7c09e1408113d3810a00206a0076270f-423f5dbe5750161c0a001ae76b741982-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <span class="chm-breadcrumb">Remote Control Interfaces and Protocols</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Remote Control Interfaces and Protocols</div><a name="kanchor2636">
+</a><a name="kanchor2637">
+</a><a name="kanchor2638">
+</a><p>The instrument supports different interfaces and protocols for remote control. The following table gives an overview.</p><div class="block"><a name="ID_997bf6c7808783720a710a31015ad0c6-423f5dbe5750161c0a001ae76b741982-en-US">
+</a><span class="table-caption">Remote control interfaces and protocols</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Interface</p></th><th valign="top"><p>Protocols, VISA<sup>*)</sup> address string</p></th><th valign="top"><p>Remarks</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Local Area Network (LAN)</p></td><td valign="top"><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><b>HiSLIP</b> High-Speed LAN Instrument Protocol (IVI-6.1)<br/><span class="command">TCPIP::host address::hislip0[::INSTR]</span></li><li style="margin-bottom:0; padding-bottom:0;" value="2"><b>VXI-11</b><br/><span class="command">TCPIP::host address::inst0[::INSTR]</span><br/>Library: VISA</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><b>socket communication</b> (Raw Ethernet, simple Telnet)<br/><span class="command">TCPIP::host address[::LAN device name]::&lt;port&gt;::SOCKET</span><br/>Library: VISA or socket controller</li></ul></div></td><td valign="top"><p>A LAN connector is located on the rear panel of the instrument.</p><p>The interface is based on TCP/IP and supports various protocols.</p><p>For a description of the protocols refer to:</p><p><a class="xref" href="a7ab27fa83e746f3.htm#ID_0ccc75c1cc8fc2540a00206a011944e9-0df90d71cc8fc2540a00206a01fb5807-en-US">"VXI-11 Protocol"</a></p><p><a class="xref" href="ac442e1fd7e046a3.htm#ID_1571947ebdd1c8c50a00206a00e63b03-6ecbe5d6bdd1c8c50a00206a01868f4b-en-US">"HiSLIP Protocol"</a></p><p><a class="xref" href="294e88686147494c.htm#ID_b6e00719cc914c1f0a00206a010054f4-207dfdc7b018115f0a00206a00bc2df0-en-US">"Socket Communication"</a></p></td></tr><tr class="evenrow"><td valign="top"><p>GPIB (IEC/IEEE Bus Interface) </p></td><td valign="top"><p>VISA<sup>*)</sup> address string:</p><p><span class="command">GPIB::primary address[::INSTR]</span></p><p>(no secondary address)</p></td><td valign="top"><p>A GPIB bus interface according to the IEC 625.1/IEEE 488.1 standard is located on the rear panel of the instrument.</p><p>For a description of the interface refer to <a class="xref" href="1e9bacb61c6c4fdc.htm#ID_8ea45da18113d3900a00206a005c933d-423f5dbe5750161c0a001ae76b741982-en-US">"GPIB Interface (IEC 625/IEEE 418 Bus Interface)"</a>.</p></td></tr><tr class="oddrow"><td valign="top"><p>USB</p></td><td valign="top"><p>VISA<sup>*)</sup> address string:</p><p><span class="command">USB::&lt;vendor ID&gt;::&lt;product_ID&gt;::&lt;serial_number&gt;[::INSTR]</span></p></td><td valign="top"><p>USB connectors are located on the front and rear panel of the instrument.</p><p>For a description of the interface refer to <a class="xref" href="ec7142b9c18e423f.htm#ID_5aec0c812d7b11dead26cbcbe05ff0ea-423f5dbe5750161c0a001ae76b741982-en-US">"USB Interface"</a>.</p></td></tr><tr class="evenrow"><td colspan="3" valign="top"><p><sup>*</sup>) VISA is a standardized software interface library providing input and output functions to communicate with instruments. A VISA installation on the controller is a prerequisite for remote control using the indicated interfaces.</p><p>(See also <a class="xref" href="dd24fb99d84847d8.htm#ID_8d31e218c2d907830a00206a01b0d62b-2f484131576c8e6d0a001ae7585f034b-en-US">"VISA Libraries"</a>).</p></td></tr></tbody></table></div><a name="kanchor2639">
+</a><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><a name="kanchor2640">
+</a><a name="kanchor2641">
+</a><p>Within this interface description, the term GPIB is used as a synonym for the IEC/IEEE bus interface.</p></td></tr></table></div></div><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="afa437a9773942c5.htm" class="chapter_title_toc">LAN Interface</a></li><li value="2"><a href="1e9bacb61c6c4fdc.htm" class="chapter_title_toc">GPIB Interface (IEC 625/IEEE 418 Bus Interface)</a></li><li value="3"><a href="ec7142b9c18e423f.htm" class="chapter_title_toc">USB Interface</a></li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

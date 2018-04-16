@@ -1,0 +1,94 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Configuring Amplifier Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Estimating and Compensating Signal Errors</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eETSkIdSynchronisation">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstComp">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompIQImbalanceEst">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompIQImbalanceComp">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompIQOffsetEst">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompIQOffsetComp">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompFreqOffsetEst">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompFreqOffsetComp">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompAmpDroopEst">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompAmpDroopComp">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompSampleErrorRateEst">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdErrorEstCompSampleErrorRateComp">
+</meta>
+        <meta name="topic-id" value="397">
+</meta>
+        <meta name="topic-id" value="399">
+</meta>
+        <meta name="topic-id" value="401">
+</meta>
+        <meta name="topic-id" value="403">
+</meta>
+        <meta name="topic-id" value="405">
+</meta>
+        <meta name="topic-id" value="407">
+</meta>
+        <meta name="topic-id" value="409">
+</meta>
+        <meta name="topic-id" value="411">
+</meta>
+        <meta name="topic-id" value="413">
+</meta>
+        <meta name="topic-id" value="415">
+</meta>
+        <meta name="topic-id" value="417">
+</meta>
+        <meta name="topic-id" value="419">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0b2d3d5bd38b6a790a001ae7548646b0-23d9e828d38b6a790a001ae73b8af82a-en-US;ID_c7bc36f5d3f793d60a001ae72fb47d36-23d9e828d38b6a790a001ae73b8af82a-en-US;ID_ec060ca97e1f5cbb0a001ae7023ec8ce-23d9e828d38b6a790a001ae73b8af82a-en-US;ID_08442629d6cf38ff0a001ae75fe2a4a6-23d9e828d38b6a790a001ae73b8af82a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/4c1e3258c444439b.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="514ce2c6787d4307.htm">Configuring Amplifier Measurements</a> &gt; <span class="chm-breadcrumb">Estimating and Compensating Signal Errors</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Estimating and Compensating Signal Errors</div><a name="kanchor269">
+</a><a name="kanchor270">
+</a><a name="kanchor271">
+</a><a name="kanchor272">
+</a><p><b>Access</b>: "Overview" &gt; "Sync / Error Est / Comp" &gt; "Error Est / Compensation"</p><p>The application allows you to estimate possible undesired effects in the signal, and, if there are any, also compensate these effects.</p><div class="block" id="ID_c7bc36f5d3f793d60a001ae72fb47d36-23d9e828d38b6a790a001ae73b8af82a-en-US"><div class="graphic"><img border="0" src="Resources/Images/img1365e45bd3d194790a001ae70126483b_3_--_--_PNG96Small.png" alt="" title=""/></div></div><p>The remote commands required to configure error compensation and equalization are described in <a class="xref" href="dcf9b7eb27e94635.htm#ID_96dbafc4d3f4cee40a001ae766346cea-6b316710d3f4cee40a001ae77bdaab11-en-US">"Estimating and Compensating Signal Errors"</a>.</p><div class="block"><div class="subtitle"><a name="ID_ec060ca97e1f5cbb0a001ae7023ec8ce-23d9e828d38b6a790a001ae73b8af82a-en-US">
+</a>Estimation and compensation</div></div><p>When you turn on error estimation only, the results are not compensated for the corresponding errors.</p><p>When you turn on error compensation, the displayed results are also corrected by the estimated errors. Note that in that case, the signal might look better than it actually is.</p><p>Compensation without estimation is not possible.</p><a name="kanchor273">
+</a><a name="kanchor274">
+</a><a name="kanchor275">
+</a><div class="block"><div class="listintro">You can estimate and compensate the following effects</div><ul class="list"><li value="1"><b>I/Q Imbalance</b>: combined effect of amplitude and phase error.</li><li value="2"><b>Amplitude Droop</b>: decrease of the signal power over time in the transmitter.</li><li value="3"><b>Sample Error Rate</b>: difference between the sample rate of the reference signal and the measured signal.</li></ul></div><div class="block"><div class="subtitle"><a name="ID_08442629d6cf38ff0a001ae75fe2a4a6-23d9e828d38b6a790a001ae73b8af82a-en-US">
+</a>Equalizer</div></div><p>In addition, the amplifier application provides equalizer functionality. The equalizer corrects distortions in the frequency characteristics during the transmission of the signal. It can thus help to faithfully reproduce the input signal at the amplifier output.</p>
+						<div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="98a070c65d8e46c1.htm#ID_33fc62fbd0618d710a001ae7175a3e4d-f2ec7098d0618d710a001ae725b03d35-en-US" class="title_toc">Using the equalizer</a></div></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

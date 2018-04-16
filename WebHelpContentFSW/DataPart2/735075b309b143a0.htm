@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Application of the Status Reporting System" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Service Request</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9979ded96ab36bbf0a710a31011ca69d-89ebf481c0ad4d200a001ae71413c094-en-US;ID_530835eacddd96060a710a3100349826-89ebf481c0ad4d200a001ae71413c094-en-US;ID_a0e18cedcddd95a80a710a3100081371-89ebf481c0ad4d200a001ae71413c094-en-US;ID_3a7b2341cddd952b0a710a3101dae16a-89ebf481c0ad4d200a001ae71413c094-en-US;ID_993d025537e7abad0a710a3101d83d58-89ebf481c0ad4d200a001ae71413c094-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="700fcfbd775e4611.htm">Application of the Status Reporting System</a> &gt; <span class="chm-breadcrumb">Service Request</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Service Request</div><a name="kanchor2815">
+</a><a name="kanchor2816">
+</a><a name="kanchor2817">
+</a><p>Under certain circumstances, the instrument can send a service request (SRQ) to the controller. A service request is a request from an instrument for information, advice or treatment by the controller. Usually this service request initiates an interrupt at the controller, to which the control program can react appropriately. As evident from <a class="xref" href="3719176b66ca4e3b.htm#ID_25f2543c6ab36d850a710a3100b89bc5-89ebf481c0ad4d200a001ae71413c094-en-US">Figure "Graphical overview of the R&amp;S FSW status registers hierarchy"</a>, an SRQ is always initiated if one or several of bits 2, 3, 4, 5 or 7 of the status byte are set and enabled in the SRE. Each of these bits combines the information of a further register, the error queue or the output buffer. The <span class="command">ENABle</span> parts of the status registers can be set such that arbitrary bits in an arbitrary status register initiate an SRQ. In order to make use of the possibilities of the service request effectively, all bits should be set to "1" in enable registers SRE and ESE.</p><p>The service request is the only possibility for the instrument to become active on its own. Each controller program should cause the instrument to initiate a service request if errors occur. The program should react appropriately to the service request.</p><div class="block"><a name="ID_530835eacddd96060a710a3100349826-89ebf481c0ad4d200a001ae71413c094-en-US">
+</a><div class="procedure_title">Use of the command *OPC to generate an SRQ at the end of a sweep</div><div><ol class="procedure"><li id="ID_a0e18cedcddd95a80a710a3100081371-89ebf481c0ad4d200a001ae71413c094-en-US" value="1"><p><span class="command">CALL InstrWrite(analyzer, "*ESE 1")</span> 'Set bit 0 in the ESE (Operation Complete)</p></li><li id="ID_3a7b2341cddd952b0a710a3101dae16a-89ebf481c0ad4d200a001ae71413c094-en-US" value="2"><p><span class="command">CALL InstrWrite(analyzer, "*SRE 32")</span> 'Set bit 5 in the SRE (ESB)</p></li><li id="ID_993d025537e7abad0a710a3101d83d58-89ebf481c0ad4d200a001ae71413c094-en-US" value="3"><p><span class="command">CALL InstrWrite(analyzer, "*INIT;*OPC")</span> ' Generate an SRQ after operation complete</p><p>After its settings have been completed, the instrument generates an SRQ.</p></li></ol></div></div><p>A detailed example for a service request routine is provided in <a class="xref" href="08bab3c56ea044fc.htm#shiv_7_remote_examples_0011-8df4bde7a0017d250a00206a01899a59-en-US">"Service Request"</a>.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

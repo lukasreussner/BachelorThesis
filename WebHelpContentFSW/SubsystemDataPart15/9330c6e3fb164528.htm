@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Remote Commands for CDMA2000 Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;|Channel Table" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Results for CTABle Parameter</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1db1451da6ac9cc00a710a31011f4073-b629ba11a66108160a00206a00094b6d-en-US;ID_05ca85d74e0603ee0a00206a01a3ab70-b629ba11a66108160a00206a00094b6d-en-US;ID_45ce9ee7a798149b0a710a3101cfbdab-b629ba11a66108160a00206a00094b6d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="50c310d0c42e48e5.htm">Remote Commands for CDMA2000 Measurements</a> &gt; <a class="chm-breadcrumb" href="8b60b2cf2d954990.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="9e9c2748812e496b.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <a class="chm-breadcrumb" href="dcd611375d9e4761.htm">Channel Table</a> &gt; <span class="chm-breadcrumb">Results for CTABle Parameter</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Results for CTABle Parameter</div><p>The command returns 12 values for each channel in the following order:</p><p>&lt;max. time offset in s&gt;, &lt;code number for max. time&gt;, &lt;code class for max. time&gt;, &lt;max. phase offset in rad&gt;, &lt;code number for max. phase&gt;, &lt;code class for max. phase&gt;, &lt;reserved 1&gt;, …, &lt;reserved 6&gt;</p><div class="block"><a name="ID_05ca85d74e0603ee0a00206a01a3ab70-b629ba11a66108160a00206a00094b6d-en-US">
+</a><table border="1"><colgroup><col width="80.2305">
+</col><col>
+</col><col width="157.626">
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Value</p></th><th valign="top"><p>Description</p></th><th valign="top"><p>Range/ Unit</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>&lt;time offset&gt;</p></td><td valign="top"><p>maximum time offset</p></td><td valign="top"><p>s</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;code number&gt;</p></td><td valign="top"><p>code number of the channel with maximum time offset</p></td><td valign="top"><p>{0..127} (BTS)</p><p>{0..63}(MS)</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;code class&gt;</p></td><td valign="top"><p>code class of the channel with maximum time offset</p></td><td valign="top"><p>{2...7} (BTS)</p><p>{1..6} (MS)</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;phase offset&gt;</p></td><td valign="top"><p>maximum phase offset</p></td><td valign="top"><p>rad</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;code number&gt;</p></td><td valign="top"><p>code number of the channel with maximum phase offset</p></td><td valign="top"><p>{0..127} (BTS)</p><p>{0..63}(MS)</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;code class&gt;</p></td><td valign="top"><p>code class of the channel with maximum phase offset</p></td><td valign="top"><p>{2...7} (BTS)</p><p>{1..6} (MS)</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;reserved 1...6&gt;</p></td><td valign="top"><p>reserved for future use</p></td><td valign="top"><p>0</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_45ce9ee7a798149b0a710a3101cfbdab-b629ba11a66108160a00206a00094b6d-en-US">
+</a>Measurement example for TRAC:DATA? CTAB</div></div><div class="verbatim"><pre class="verbatim_text">
+INIT:CONT OFF 
+//Select single sweep
+INIT:CONT OFF 
+//Select single sweep
+LAY:REPL:WIND '1',CTAB
+//Replace CDP by Channel Table evaluation in window 1
+INIT;*WAI 
+//Start measurement with synchronization
+TRAC? CTAB 
+//Read out maximum timing and phase offsets
+//Result: 1.20E–009,2,2,–3.01E–003,15,4,0,0,0,0,0,0
+//where: 
+//1.20E–009,2,2, 
+//Max. time offset with code number and
+//code class of associated channel
+//–3.01E–003,15,4, 
+//Max. phase offset with code number
+//and code class of associated channel
+//0,0,0,0,0,0 
+//6 reserved values</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frequency Sweep Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_92419539e5985d4e0a00206a01f37b1b-fb8264167c41036f0a0020190176f717-en-US;ID_3a90fcf57e1c11e1ad2f80fd99402963-fb8264167c41036f0a0020190176f717-en-US;ID_a766bd371eb2b3570a00206a01b12e90-fb8264167c41036f0a0020190176f717-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3a844e7770fd4a7a.htm">Configuration</a> &gt; <span class="chm-breadcrumb">Frequency Sweep Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor641">
+</a><div class="chm-chaptertitle">Frequency Sweep Measurements</div><p>When you activate a measurement channel in WLAN mode, an IQ measurement of the input signal is started automatically (see <a class="xref" href="57cd9bda6ba64547.htm#ID_b6ce3ff5598d917a0a00206a01ba1866-742b73889d5e5f610a001ae77d4ca6d8-en-US">"WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)"</a>). However, some parameters specified in the WLAN 802.11 standard require a better signal-to-noise level or a smaller bandwidth filter than the default measurement on I/Q data provides and must be determined in separate measurements based on RF data (see <a class="xref" href="35763425976c46d4.htm#ID_7d2441af598d917a0a00206a0098009c-59111130783480590a00201900d20415-en-US">"Frequency Sweep Measurements"</a>). In these measurements, demodulation is not performed.</p><div class="block"><a name="ID_3a90fcf57e1c11e1ad2f80fd99402963-fb8264167c41036f0a0020190176f717-en-US">
+</a><div class="procedure_title">Selecting the measurement type</div><a name="kanchor642">
+</a><p>WLAN measurements require a special operating mode on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, which you activate using the [MODE] key.</p><p>For details see <a class="xref" href="../../../Content/af72ee10fce347e5.htm">Applications, Measurement Channels, and Operating Modes</a>.</p><div><table border="0"><tr><td align="left" valign="top" width="24px" class="procedure_table"><font face="Arial">►</font> </td><td class="procedure_table"><p>To select a frequency sweep measurement type, do one of the following:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Select the "Overview" softkey. In the "Overview", select the "Select Measurement" button. Select the required measurement.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Press the [MEAS] key. In the "Select Measurement" dialog box, select the required measurement.</li></ul></div></td></tr></table></div></div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW WLAN application uses the functionality of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW base system (Spectrum application) to perform the WLAN frequency sweep measurements. Some parameters are set automatically according to the WLAN 802.11 standard the first time a measurement is selected (since the last [PRESET] operation). These parameters can be changed, but are not reset automatically the next time you re-enter the measurement. Refer to the description of each measurement type for details.</p><p>The main measurement configuration menus for the WLAN frequency sweep measurements are identical to the Spectrum application.</p><p>For details refer to <a class="xref" href="../../../Content/39534ffa0ed94138.htm">Common Measurement Settings</a>.</p><p>The measurement-specific settings for the following measurements are available via the "Overview".</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="303a0d0fb38145d1.htm" class="chapter_title_toc">Channel Power (ACLR) Measurements</a></li><li value="2"><a href="e782c5d789f245a5.htm" class="chapter_title_toc">Spectrum Emission Mask</a></li><li value="3"><a href="3177430ad9e64d91.htm" class="chapter_title_toc">Occupied Bandwidth</a></li><li value="4"><a href="5d0325f572c049c1.htm" class="chapter_title_toc">CCDF</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,172 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Measuring the Wideband Noise for Multiple Carriers</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ef7a7961469e334e0a710a310023663b-019ce71694301df20a001ae716925a38-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="3e7805cc034747fd.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Programming Example: Measuring the Wideband Noise for Multiple Carriers</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1020">
+</a><a name="kanchor1021">
+</a><div class="chm-chaptertitle">Programming Example: Measuring the Wideband Noise for Multiple Carriers</div><p>This example demonstrates how to configure a GSM wideband noise measurement of a GMSK modulated signal with multiple carriers in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//------------ Preparing the application ------------
+// Preset the instrument
+*RST
+// Enter the GSM option K10
+INSTrument:SELect GSM
+//Select the multicarrier wideband noise measurement
+CONF:MEAS MCWN
+// Switch to single sweep mode and stop sweep
+INITiate:CONTinuous OFF;:ABORt
+
+//---------- Signal Description ------------
+// Configure a multicarrier base station wide area DUT without power classes
+CONFigure:MS:DEV:TYPE MCBW
+CONFigure:MS:NETWORK PGSM
+CONFigure:MS:NETWORK:FREQ:BAND 900
+CONFigure:MS:POW:CLAS NONE
+
+// Configure 2 subblocks of carriers with 3 carriers each and a gap of 5 MHz
+CONF:MS:MCAR:FALL NCON
+
+CONF:MS:MCAR:CARR1:FREQ 935 MHZ
+CONF:MS:MCAR:CARR2:FREQ 935.6 MHZ
+CONF:MS:MCAR:CARR3:FREQ 936.2 MHZ
+
+CONF:MS:MCAR:CARR4:FREQ 941.2 MHZ
+CONF:MS:MCAR:CARR5:FREQ 941.8 MHZ
+CONF:MS:MCAR:CARR6:FREQ 942.4 MHZ
+
+CONF:MS:MCAR:FALL:NCON:GSAC 3
+
+// Normal burst 8PSK modulation
+CONF:MS:MCAR:CARR1:MTYP N8PS
+CONF:MS:MCAR:CARR2:MTYP N8PS
+CONF:MS:MCAR:CARR3:MTYP N8PS
+CONF:MS:MCAR:CARR4:MTYP N8PS
+CONF:MS:MCAR:CARR5:MTYP N8PS
+CONF:MS:MCAR:CARR6:MTYP N8PS
+
+//---------- Span and Level ---------------------
+// Set Ref. Level to 30 dBm
+DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:RF 0 DBM
+// Set Ref. Level Offset to 38 dB
+DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:OFFSet 38 DB
+
+
+// Set frequency span to the Tx band +/- 10 MHz automatically
+SENS:FREQ:SPAN:MODE TXB
+SENS:FREQ:SPAN?
+SENS:FREQ:STAR?
+SENS:FREQ:STOP?
+// Result: span = 45.0 MHz (925 MHZ to 970 MHz)
+
+//---------- Configuring the reference measurement -----------
+// Configure the reference levels manually according to table 5-8
+// power level is 35 dBm
+CONF:SPEC:MOD:REF:MEAS OFF
+CONF:SPEC:MOD:REF:PLEV 35
+CONF:SPEC:MOD:REF:RPOW 30e3,27.3
+CONF:SPEC:MOD:REF:RPOW 100e3,31.2
+CONF:SPEC:MOD:REF:RPOW 300e3,33.3
+
+//----------- Configuring the noise measurement --------------
+// Define an average count of 200
+SENS:SWE:COUN 200
+
+// Determine wideband noise, narrowband noise, and intermodulation products of orders 3 and 5
+CONF:SPEC:NWID ON
+CONF:SPEC:NNAR ON
+CONF:SPEC:IMP 3,5
+// Apply exceptions to limit check
+CONF:SPEC:LIM:EXC ON
+
+//---------- Configuring the result display ------------
+
+// Activate the following result displays:
+// 1: Spectrum graph (default, top)
+// 2: Inner IM Table (replaces Carrier Power table)
+// 3: Outer IM Table (bottom)
+// 4: Outer narrow band table (bottom left)
+// 5: Outer wide band table, (bottom right)
+LAYout:REPL:WINDow '2',IIMP
+LAYout:ADD:WINDow? '2',BEL,OIMP
+LAYout:ADD:WINDow? '3',BEL,ONAR
+LAYout:ADD:WINDow? '4',RIGH,OWID
+
+//--------------Performing the Measurement-----
+// Initiate a new measurement and wait until the sweep has finished.
+INITiate:IMMediate;*WAI
+
+
+//---------------Retrieving Results-------------
+// Query trace data for Spectrum graph
+TRAC1:DATA? TRACE1
+// Query intermodulation results
+FETC:WSP:IMPR:INN?
+FETC:WSP:IMPR:OUT?
+// Query outer narrowband table results and outer wideband table results
+FETC:WSP:NARR:OUT?
+FETC:WSP:WID:OUT?
+
+// Query wideband noise limit line (including exceptions)
+// x-values:
+CALC1:LIM1:CONT:DATA?
+// y-values:
+CALC1:LIM1:UPP:DATA?
+
+// Query limit line trace values for intermodulation
+// measured with 100 kHZ RBW
+// x-values:
+CALC1:LIM2:CONT:DATA?
+// y-values:
+CALC1:LIM2:UPP:DATA?
+
+// Query limit line trace values for intermodulation
+// measured with 300 kHZ RBW
+// x-values:
+CALC1:LIM3:CONT:DATA?
+// y-values:
+CALC1:LIM3:UPP:DATA?
+
+// Query number of exceptions of range A:
+// Counted number of exceptions:
+CALC1:LIM5:EXC:COUN:CURR?
+// Maximum number of exceptions allowed to pass the exception check
+CALC1:LIM5:EXC:COUN:MAX?
+
+// Query number of exceptions of range B:
+// Counted number of exceptions:
+CALC1:LIM6:EXC:COUN:CURR?
+// Maximum number of exceptions allowed to pass the exception check
+CALC1:LIM6:EXC:COUN:MAX?
+
+// Query limit check results
+// Overall:
+FETC:SPEC:MOD:LIM:FAIL?
+// Wideband noise:
+CALC1:LIM1:FAIL?
+// Intermodulation (100 kHz RBW):
+CALC1:LIM2:FAIL?
+// Intermodulation (300 kHz RBW):
+CALC1:LIM3:FAIL?
+// Exception counting range A:
+CALC1:LIM5:FAIL?
+// Exception counting range B:
+CALC1:LIM6:FAIL?
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

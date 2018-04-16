@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Configuration|Using the Uncertainty Calculator|Configuring DUT Characteristics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Use Measurement Values</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_UseMeasSelection">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_DUTNF">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_DUTGain">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_Frequency">
+</meta>
+        <meta name="topic-id" value="221">
+</meta>
+        <meta name="topic-id" value="223">
+</meta>
+        <meta name="topic-id" value="225">
+</meta>
+        <meta name="topic-id" value="227">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_491e8e56002f08c20a002019008f3724-0fca6040001083b80a0020190143e16f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="6f413a5358b94877.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="112d0d5ae3ab4748.htm">Using the Uncertainty Calculator</a> &gt; <a class="chm-breadcrumb" href="8e42f1e9b41c4975.htm">Configuring DUT Characteristics</a> &gt; <span class="chm-breadcrumb">Use Measurement Values</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_491e8e56002f08c20a002019008f3724-0fca6040001083b80a0020190143e16f-en-US">
+</a><span style="font-weight: bold">Use Measurement Values</span></div><p>Turns automatic determination of the DUT characteristics used for the uncertainty calculation on and off.</p><p>If on, the application calculates the uncertainty with the DUT characteristics (noise figure, gain and frequency) resulting from the noise figure measurement. In case of this method, the application calculates the uncertainty for each measurement point (or frequency) based on the noise figure and gain results of the last measurement.</p><p>If you have selected automatic determination of the DUT characterictics, the application does not show a result in the "NF Uncertainty +/-" field in the dialog box. Instead, to view the uncertainty at all measurement points, use the "Result Table".</p><p>If off, define the gain, noise figure and frequency of the DUT manually for a single frequency. With this manual determination of the DUT characteristics, the application only calculates the uncertainty for that frequency and shows the result in the "NF Uncertainty +/-" field in the dialog box.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Noise Figure of the DUT</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Gain of the DUT</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Frequency of the DUT</li></ul></div>Remote command: <div class="rcclist_right"><p>Control automatic DUT characteristics determination:</p><p><a class="xref" href="a0f6dc9b25b1456f.htm#ID_f2c1b74a09ee71a30a0020190038178b-82c6af9109ee71a30a0020190091cab1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>DATA:</nobr>​<nobr>RESults</nobr></a></p><p>Manual definition of DUT characteristics:</p><p><a class="xref" href="d2184162e33886.htm#ID_6b7fc84509eebcf50a002019012d71d0-9f16a10109eebcf50a002019008b3331-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>DATA:</nobr>​<nobr>NOISe</nobr></a></p><p><a class="xref" href="d2184162e33857.htm#ID_5eccce4b09ef0f990a00201901f65626-67d1961009ef0f990a00201901921130-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>DATA:</nobr>​<nobr>GAIN</nobr></a></p><p><a class="xref" href="d2184162e33828.htm#ID_4c4677c609ef5ca00a00201901ac670b-9cbcb7d309ef5ca00a00201901a11993-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>DATA:</nobr>​<nobr>FREQuency</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

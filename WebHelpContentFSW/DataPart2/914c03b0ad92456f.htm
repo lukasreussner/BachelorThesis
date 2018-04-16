@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Working with Markers|Programming Examples for Using Markers and Marker Functions|Examples: Demodulating Marker Values and Providing Audio Output" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Demodulating and Providing Audio Output Continuously</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f672dbc042bd2fcf0a00201901834904-5ead00533d8b32370a00201901b8dc86-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="57a24637c8a048f0.htm">Working with Markers</a> &gt; <a class="chm-breadcrumb" href="806cef63805646a8.htm">Programming Examples for Using Markers and Marker Functions</a> &gt; <a class="chm-breadcrumb" href="fa069bf02d934816.htm">Examples: Demodulating Marker Values and Providing Audio Output</a> &gt; <span class="chm-breadcrumb">Example: Demodulating and Providing Audio Output Continuously</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3251">
+</a><a name="kanchor3252">
+</a><a name="kanchor3253">
+</a><div class="chm-chaptertitle">Example: Demodulating and Providing Audio Output Continuously</div><p>This example demonstrates how to demodulate markers and provide audio output in a basic spectrum measurement in a remote environment. It assumes that the basic frequency sweep described in <a class="xref" href="154b1387b81e4b54.htm#ID_1a60db9105d458720a710a3100121009-9feed69137344f0b0a00201900e8284f-en-US">"Programming Example: Performing a Basic Frequency Sweep"</a> has been performed and thus does not begin by presetting the instrument.</p><div class="verbatim"><pre class="verbatim_text">//------------- Configuring the marker demodulation -------------------
+CALC:MARK1 ON
+//Activates marker1 
+CALC:MARK1:FUNC:DEM:SEL FM
+//Selects FM demodulation
+DEM:SQU:LEV 10
+//Sets a squelch level for noise
+DEM:SQU ON
+//Activates squelching
+CALC:MARK1:FUNC:DEM:CONT ON
+//Activates continuous demodulation
+
+//------- Performing the measurement -------------------------
+INIT:CONT ON
+//Performs a measurement and provides continuous audio output
+
+//---------------Retrieving Results-------------
+//Results are only provided as audio output!</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

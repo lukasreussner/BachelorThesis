@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Retrieving Results|Numeric Modulation Accuracy, Flatness and Tolerance Results|Error Parameter Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>FETCh:SCDetailed:ALL?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f4f447d1f303c9e00a001ae72f529c8c-eebc4bd9f303c9150a001ae753c2e8ab-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="baf3eb2df3e54482.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="0aa349105e9d4678.htm">Numeric Modulation Accuracy, Flatness and Tolerance Results</a> &gt; <a class="chm-breadcrumb" href="fc4b3240aa7e4984.htm">Error Parameter Results</a> &gt; <span class="chm-breadcrumb">FETCh:SCDetailed:ALL?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_f4f447d1f303c9e00a001ae72f529c8c-eebc4bd9f303c9150a001ae753c2e8ab-en-US">
+</a><span class="bold">FETCh:SCDetailed:ALL? </span></div><div class="rcdescription"><p>Returns detailed signal information for each decoded RU and for each object. The result is a comma-separated list of values with 4 rows per RU, in the same order as the Signal Content Detailed result display (see <a class="xref" href="42c3262d9ba34e09.htm#ID_f1324baf5cc411e7b67cb2660dcd7f18-742b73889d5e5f610a001ae77d4ca6d8-en-US">"Signal Content Detailed (IEEE 802.11ax)"</a>).</p><div class="listintro">The information for each decoded RU is returned in the following object order:</div><ul class="list"><li value="1">Long training field (HE-LTF)</li><li value="2">Data + Pilot</li><li value="3">Data only</li><li value="4">Pilot only</li></ul></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;PPDU_index&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>integer</nobr><br/></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;RU_index&gt;<br/></td><td class="rc_col_content_left" colspan="2"><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Range: </span></td><td class="rc_col_content_right">1 to 9<br/></td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;RU_size&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>26 |</nobr> <nobr> 52 |</nobr> <nobr> 106 |</nobr> <nobr> 242 |</nobr> <nobr> 484 |</nobr> <nobr> 996</nobr><br/></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Object&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>HE-LTF |</nobr> <nobr> Data + Pilot |</nobr> <nobr> Data |</nobr> <nobr> Pilot</nobr><br/></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;EVM&gt;<br/></td><td class="rc_col_content_left" colspan="2"><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Default unit: </span></td><td class="rc_col_content_right">dB</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Power_per_SC&gt;<br/></td><td class="rc_col_content_left" colspan="2"><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Default unit: </span></td><td class="rc_col_content_right">dBm</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><pre class="verbatim" xml:space="preserve">FETC:SCD:ALL?
+//Result:
+//1,1,S996,HE-LTF,nan,-17.1766,
+//1,1,S996,Data + Pilot,-83.2953,-17.1632,
+//1,1,S996,Data,-83.2640,nan,
+//1,1,S996,Pilot,-85.8353,nan</pre><span class="commandline">
+</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="42c3262d9ba34e09.htm#ID_f1324baf5cc411e7b67cb2660dcd7f18-742b73889d5e5f610a001ae77d4ca6d8-en-US">"Signal Content Detailed (IEEE 802.11ax)"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

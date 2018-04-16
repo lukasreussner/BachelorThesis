@@ -1,0 +1,90 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)|Remote Commands to Perform VOR/ILS Measurements|Programming Examples: Performing VOR/ILS Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k15.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Performing  a VOR Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3ef03b2c202cbf800a001ae751f3375f-4f4d884489bde5740a001ae73dce63e5-en-US;ID_5fbb9a2724723a360a001ae7137f13a7-4f4d884489bde5740a001ae73dce63e5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k15/Content/4fa9eab10f914e01.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)</a> &gt; <a class="chm-breadcrumb" href="9b58c4770fd2437f.htm">Remote Commands to Perform VOR/ILS Measurements</a> &gt; <a class="chm-breadcrumb" href="d3aba6b04c67403a.htm">Programming Examples: Performing VOR/ILS Measurements</a> &gt; <span class="chm-breadcrumb">Programming Example: Performing a VOR Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor330">
+</a><a name="kanchor331">
+</a><div class="chm-chaptertitle">Programming Example: Performing a VOR Measurement</div><p>This example demonstrates how to perform a VOR measurement in a remote environment.</p><div class="block"><div class="listintro">The following prerequisites are assumed concerning the input signal:</div><ul class="list"><li value="1">VOR signal with a carrier frequency of 108.1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, level of -10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dBm</li><li value="2">The azimuth and individual modulation depths are irrelevant</li><li value="3">IDENT signal: On, morse coding on, repetition rate of 7<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>seconds or shorter, standard-conform timing</li></ul></div><div class="block" id="ID_5fbb9a2724723a360a001ae7137f13a7-4f4d884489bde5740a001ae73dce63e5-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge5c539ec246d73b50a001ae7674a197d_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Results of the remote VOR measurement</div></div><div class="verbatim"><pre class="verbatim_text">//-----------Preparing the instrument ------------
+//Reset the instrument
+*RST
+//Activate the Avionics measurement application
+INST:SEL AVI
+//Select the VOR measurement
+CALC:AVI:STAN VOR
+
+//-----------Configuring the measurement ------------
+//Configure the center frequency and reference level
+FREQ:CENT 108MHZ
+DISP:TRAC:Y:SCAL:RLEV -10DBM
+
+//Define a demod BW of 25 kHz and a meas time of 10 s.
+ADEM:BWID:DEM:AUTO OFF
+ADEM:BWID:DEM 25000
+SWE:TIME:AUTO OFF
+SWE:TIME 10S
+//Query the resulting RBW
+ADEM:SPEC:BWID?
+//Result: 1.0 Hz
+
+//Display the distortion summary in addition to the 3 default windows:
+//1: top left:    Signal Summary      2: top right:    Result Summary
+//3: bottom left: Modulation Spectrum 4: bottom right: Distortion Summary
+LAY:ADD:WIND? '3',RIGH,DSUM
+//Result: '4' (window name)
+
+//--------------Performing the Measurement-----
+//Select single sweep mode
+INIT:CONT OFF
+//Initiate a new measurement and wait until the sweep has finished
+INIT;*WAI
+
+//---------------Retrieving Results-------------
+
+//Query the morse code of the demodulated identifier
+CALC:AVI:AM:CODE?
+//Query the AM frequency of the identifier signal
+CALC:AVI:AM:FREQ? 'ID'
+//Query the amplitude mod. depth of 30 HZ AM component
+CALC:AVI:AM:DEPT? '30'
+//Query the phase angle between 30 HZ AM and 30 Hz FM signals (VOR phase)
+CALC:AVI:PHAS?
+
+// get the carrier frequency error
+CALC:AVI:FERR?
+// get the measured RF level
+CALC:AVI:CARR:RES?
+
+
+//---------------Exporting Trace Results-------------
+//Retrieve trace data for modulation spectrum (window 3)
+TRAC3:DATA? TRACe1
+TRAC3:DATA:X? TRACe1
+
+//Export entire distortion summary table (window 4) to an ASCII file
+MMEM:STOR:TABL ALL,'C:\R_S\Instr\user\AllResults.dat'
+
+//Store captured I/Q data to an iq-tar file
+MMEM:STOR:IQ:COMM 'I/Q data for VOR measurement'
+MMEM:STOR:IQ:STAT 1,'C:\R_S\Instr\user\VORTestdata.iq.tar'
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

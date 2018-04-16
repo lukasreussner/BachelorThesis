@@ -1,0 +1,124 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Example 1: User-defined Measurement of Continuous QPSK Signal</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a3ac549414b7a4ea0a720a2b014ab68b-cd97fd15ad6093a50a00206a01f17c35-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="586d3cb66ef64841.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Measurement Example 1: User-defined Measurement of Continuous QPSK Signal</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1194">
+</a><a name="kanchor1195">
+</a><a name="kanchor1196">
+</a><div class="chm-chaptertitle">Measurement Example 1: User-defined Measurement of Continuous QPSK Signal</div><p>The following example describes a scenario similar to the one for manual operation described in</p><p><a class="xref" href="c1ef7c4cdf114587.htm#ID_79e6c90ca54eee940a00206a00cdb5d4-7c60cc67410fd4a60a00206a01c84e65-en-US">"Measurement Example 1: Continuous QPSK Signal"</a>.</p><pre class="verbatim" xml:space="preserve">//-----------Configuring the measurement ------------
+//Reset the instrument
+*RST
+//Set the center frequency.
+FREQ:CENT 1GHz
+//Set the reference level
+DISP:TRAC:Y:RLEV 4dBm
+//Create new measurement channel for vector signal analysis named "MyVSA"
+INST:CRE:NEW DDEM,'MyVSA'</pre><pre class="verbatim" xml:space="preserve">//-----------Configuring the measurement ------------
+
+//Reset the instrument
+*RST
+//Set the center frequency.
+FREQ:CENT 1GHz
+//Set the reference level
+DISP:TRAC:Y:RLEV 4dBm
+//Create new measurement channel for vector signal analysis named "MyVSA"
+INST:CRE:NEW DDEM,'MyVSA'
+
+//--------- Configuring the expected input signal ---------------
+
+//Set the modulation type
+DDEM:FORM QPSK
+//Set the modulation order
+DDEM:QPSK:FORM NORM
+//Query the available symbol mappings for QPSK modulation
+DDEM:MAPP:CAT?
+//Set the symbol mapping to WCDMA
+DDEM:MAPP 'WCDMA'
+//Set the symbol rate
+DDEM:SRAT 1 MHz
+//Select the RRC transmit filter
+DDEM:TFIL:NAME 'RRC'
+DDEM:TFIL:ALPH 0.35
+
+//--------- Configuring an averaged EVM vs Time result display ---------
+
+//Create new window to the right of I/Q constellation (window 1) with
+//error vector as data type
+LAY:ADD? '1',RIGH,EVEC
+//Result: '5'
+//Set result type for window 5 to magnitude = EVM
+CALC5:FORM MAGN
+//Add a second trace in average mode
+DISPlay:WINDow5:TRACe2:MODE AVER
+//Add a third trace in max hold mode
+DISPlay:WINDow5:TRACe3:MODE MAXH
+//Calculate an average over 10 sweeps
+SWE:COUN 10
+
+//--------------Performing the measurement-----
+
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and wait until the 10 sweeps have finished.
+INIT;*WAI
+
+//-----Storing the Constellation I/Q diagram to a file ------
+
+//Display the I/Q Constellation result display (window 1) in full screen.
+DISP:WIND1:SIZE LARG
+//Define the destination of the screenshot as a file.
+HCOP:DEST 'MMEM'
+//Select bmp as the file format.
+HCOP:DEV:LANG BMP
+//Select the file name for the printout.
+MMEM:NAME 'C:\R_S\INST\USER\IQConstellation.bmp'
+//Print all screen elements
+HCOP:ITEM:ALL
+//Store the printout in a file called 'IQConstellation.bmp'.
+HCOP
+//Restore the I/Q Constellation result display to one subwindow.
+DISP:WIND5:SIZE SMAL
+</pre><pre class="verbatim" xml:space="preserve">//------------Storing the EVM trace data to a file---------------
+
+//Include a header in the trace export file
+FORM:DEXP:HEAD ON
+//Export the trace data, not raw I/Q data
+FORM:DEXP:MODE TRAC
+//Save the detected symbol values (x-values are not exported with trace data)
+MMEM:STOR4:TRAC 1,'AverageEVM'
+
+//Save the  EVM values (window 5) to an ascii file.
+MMEM:STOR5:TRAC 1,'AverageEVM'
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

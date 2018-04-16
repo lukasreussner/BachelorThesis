@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|I/Q Analysis|Configuring Standard Traces" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:MODE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5bcf4c2f2dd450a20a00206a00b13ae1-cd48b4ee0628b4540a00206a00d60dd1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="072da6b77b7f44e2.htm">I/Q Analysis</a> &gt; <a class="chm-breadcrumb" href="f0928db6daba4c5a.htm">Configuring Standard Traces</a> &gt; <span class="chm-breadcrumb">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:MODE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor1124">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_5bcf4c2f2dd450a20a00206a00b13ae1-cd48b4ee0628b4540a00206a00d60dd1-en-US">
+</a><span class="bold">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:MODE </span>&lt;Mode&gt;<br/></div><div class="rcdescription"><p>This command selects the trace mode.</p><p>In case of max hold, min hold or average trace mode, you can set the number of single measurements with <a class="xref" href="e919c6fee0444a28.htm#ID_d6f5caa22dde9ffd0a00206a01a137be-99851b6729fdd1040a00206a0039c2fb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>COUNt</nobr></a>. Note that synchronization to the end of the measurement is possible only in single sweep mode.</p><p>For more information see <a class="xref" href="../../../Content/ecec2f461f1a4ffb.htm">Analyzing Several Traces - Trace Mode</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;t&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Trace</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Mode&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">WRITe<br/></span><p>Overwrite mode: the trace is overwritten by each sweep. This is the default setting.</p><span class="bold">AVERage<br/></span><p>The average is formed over several sweeps. The "Sweep/Average Count" determines the number of averaging procedures.</p><span class="bold">MAXHold<br/></span><p>The maximum value is determined over several sweeps and displayed. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW saves the sweep result in the trace memory only if the new value is greater than the previous one.</p><span class="bold">MINHold<br/></span><p>The minimum value is determined from several measurements and displayed. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW saves the sweep result in the trace memory only if the new value is lower than the previous one.</p><span class="bold">VIEW<br/></span><p>The current contents of the trace memory are frozen and displayed.</p><span class="bold">BLANk<br/></span><p>Hides the selected trace.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">Trace 1: WRITe, Trace 2-6: BLANk</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">INIT:CONT OFF</span><br/><p>Switching to single sweep mode.</p><span class="commandline">SWE:COUN 16</span><br/><p>Sets the number of measurements to 16.</p><span class="commandline">DISP:TRAC3:MODE WRIT</span><br/><p>Selects clear/write mode for trace 3.</p><span class="commandline">INIT;*WAI</span><br/><p>Starts the measurement and waits for the end of the measurement.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../../Content/154b1387b81e4b54.htm">Programming Example: Performing a Basic Frequency Sweep</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="42ef4d9654de42e4.htm#ID_99691acf5b9491a60a00206a008be4e8-72c792125b9491a60a00206a0061608d-en-US">"Trace Mode"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

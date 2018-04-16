@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="NB-IoT Downlink (R&amp;S FSW-K106)|Measurements and Result Displays|Frequency Sweep Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_nbiot_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>ACLR</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridACLRDiagram_NBIOT_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridACLRResultSummary_NBIOT_DL">
+</meta>
+        <meta name="topic-id" value="362">
+</meta>
+        <meta name="topic-id" value="363">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3222a38301f83c540a00206a00fe787f-4433ec2227f72a910a00206a01bf447a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_nbiot_dl/Content/f7cd51a600a44621.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">NB-IoT Downlink (R&amp;S FSW-K106)</a> &gt; <a class="chm-breadcrumb" href="a51e000ab7e84b5e.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="1ce95775c17b427e.htm">Frequency Sweep Measurements</a> &gt; <span class="chm-breadcrumb">ACLR</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor63">
+</a><a name="kanchor64">
+</a><div class="function_heading"><a name="ID_3222a38301f83c540a00206a00fe787f-4433ec2227f72a910a00206a01bf447a-en-US">
+</a><span style="font-weight: bold">ACLR</span></div><p>Starts the Adjacent Channel Leakage Ratio (ACLR) measurement.</p><p>The ACLR measurement analyzes the power of the transmission (Tx) channel and the power of the two neighboring channels (adjacent channels) to the left and right of the Tx channel. Thus, the ACLR measurement provides information about the power in the adjacent channels as well as the leakage into these adjacent channels.</p><p>The x-axis represents the frequency with a frequency span that relates to the specified EUTRA/NB-IoT channel and adjacent channel bandwidths. On the y-axis, the power is plotted in dBm.</p><p>By default the ACLR settings are based on the selected NB-IoT channel bandwidth. You can change the assumed adjacent channel carrier type and, if necessary, customize the channel setup to your needs. For more information, see the documentation of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>The power for the Tx channel is an absolute value in dBm. The power of the adjacent channels is relative to the power of the Tx channel.</p><p>In addition, the ACLR measurement results are also tested against the limits defined by 3GPP. In the diagram, the limits are represented by horizontal red lines.</p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span></p><p><b>Result Summary</b></p><p>The result summary contains information about the measurement in numerical form:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><b>Channel</b><br/>Shows the channel type (Tx, adjacent or alternate channel).</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><b>Bandwidth</b><br/>Shows the bandwidth of the channel.</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><b>Offset</b><br/>Shows the channel spacing.</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><b>Power</b><br/>Shows the power of the transmission channel.</li><li style="margin-bottom:0; padding-bottom:0;" value="5"><b>Lower / Upper</b><br/>Shows the relative power of the lower and upper adjacent and alternate channels</li></ul></div>Remote command: <div class="rcclist_right"><p>Selecting the result display:</p><p><a class="xref" href="23560624fdfb49fd.htm#ID_6d705332c1c60ad50a002019006eab7a-8868d3a4c1c60ad50a00201901bbee66-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">CONF:MEAS ACLR</a></p><p>Querying results:</p><p><a class="xref" href="8373bc1e2afb422c.htm#ID_2b3dec0ae29ca8e60a00206a0117f0c7-35e003bce29ca8e60a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">CALCulate&lt;n&gt;:MARKer&lt;m&gt;:FUNCtion:POWer:RESult[:CURRent]?</a></p><p><a class="xref" href="28d0ca960ba84672.htm#ID_7f3210906aea50090a00206a00dfe8f5-e3575001edda64ff0a001ae76bfbba76-en-US">TRACe:DATA?</a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

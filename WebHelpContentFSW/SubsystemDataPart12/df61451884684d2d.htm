@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Configuration|Demodulation Settings|Advanced Demodulation (Synchronization)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Fine Synchronization</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdFineSyncAuto">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdFineSyncValue">
+</meta>
+        <meta name="topic-id" value="921">
+</meta>
+        <meta name="topic-id" value="923">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7b38c4b22ae911e1a72881c348451ffc-98ce8ff6410963710a00206a00a7855c-en-US;ID_346ab1a625c841810a00206a01ece2a3-98ce8ff6410963710a00206a00a7855c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1df8557b8c6a4078.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="7193e7b913224924.htm">Demodulation Settings</a> &gt; <a class="chm-breadcrumb" href="33d6346cac664079.htm">Advanced Demodulation (Synchronization)</a> &gt; <span class="chm-breadcrumb">Fine Synchronization</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor780">
+</a><a name="kanchor781">
+</a><a name="kanchor782">
+</a><a name="kanchor783">
+</a><a name="kanchor784">
+</a><a name="kanchor785">
+</a><a name="kanchor786">
+</a><div class="function_heading"><a name="ID_7b38c4b22ae911e1a72881c348451ffc-98ce8ff6410963710a00206a00a7855c-en-US">
+</a><span style="font-weight: bold">Fine Synchronization</span></div><p>In addition to the coarse synchronization used for symbol decisions, a fine synchronization is available to calculate various results from the reference signal, e.g. the EVM. However, when the signal is known to have a poor transmission quality or has a high noise level, false symbol decisions are more frequent, which may cause spikes in the EVM results. In this case, you can restrict the synchronization to a known symbol sequence or pattern, if available.</p><p>For details on synchronization see <a class="xref" href="95164fb87a134f22.htm#ID_8acdb4a931d511e591689627e3a667e1-184c8906411153460a00206a01532735-en-US">"Synchronization and the Reference Signal"</a>.</p><p>If "Auto" mode is selected and a Known Data file has been loaded and activated for use, the known data sequences are used. Otherwise, the detected data is used.</p><p><b><a name="ID_346ab1a625c841810a00206a01ece2a3-98ce8ff6410963710a00206a00a7855c-en-US">
+</a>Note:</b> You can define a maximum symbol error rate (SER) for the known data in reference to the evaluated data. If the SER of the known data exceeds this limit, the default synchronization using the detected data is performed (see <a class="xref" href="8c537119453d4d08.htm#ID_a15f656a2101f7630a710a310029052b-98ce8ff6410963710a00206a00a7855c-en-US">"If SER <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≤</span>"</a>).<br/></p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Detected Data"</p></td><td class="function_col_right"><p>(Default) The reference signal is estimated from the detected symbols.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Known Data"</p></td><td class="function_col_right"><p>The reference signal is defined as the data sequence from the loaded Known Data file that most closely matches the measured data.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Pattern"</p></td><td class="function_col_right"><p>The reference signal is estimated from the defined pattern.</p><p><b>Note</b>: <b>particularly (but not only) for shaped offset QPSK</b> modulated signals, it is not recommended that you use a pattern that is significantly shorter than the result range for fine synchronization, as this may lead to imprecise synchronization.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="74f1bb56704b4544.htm#ID_4e38758b096e56e10a00206a014e142a-92b2ac5e096e4f9e0a00206a002d9118-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>FSYNc:</nobr>​<nobr>AUTO</nobr></a></p><p><a class="xref" href="7a8464b0d94d4641.htm#ID_393f7a16096e60480a00206a004ced49-c04947c9096e59330a00206a002d9118-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>FSYNc[:</nobr>​<nobr>MODE]</nobr></a></p><p><a class="xref" href="d1017492e67531.htm#ID_f6819702096e73a10a00206a01e9c4c8-8f5c1835096e6c2e0a00206a002d9118-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>FSYNc:</nobr>​<nobr>RESult?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

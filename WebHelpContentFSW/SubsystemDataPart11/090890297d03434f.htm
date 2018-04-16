@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Measurement Basics|Trace Evaluation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Analyzing Several Traces - Trace Mode</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_db0ee9cd2894a12f0a710a310106173b-632e849991d308900a001ae746cdb30f-en-US;ID_4d3eb26a2d8519440a710a3101754daa-632e849991d308900a001ae746cdb30f-en-US;ID_b099f2882d953d800a710a3101c17a8c-632e849991d308900a001ae746cdb30f-en-US;ID_b4050f50af84ef9d0a00206a016dc4fd-632e849991d308900a001ae746cdb30f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="29b558e51ab84e3f.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="28e6a7e60ad34f52.htm">Trace Evaluation</a> &gt; <span class="chm-breadcrumb">Analyzing Several Traces - Trace Mode</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Analyzing Several Traces - Trace Mode</div><p>If several measurements are performed one after the other, or continuous measurements are performed, the trace mode determines how the data for subsequent traces is processed. After each measurement, the trace mode determines whether:</p><div class="block"><ul class="list"><li value="1">The data is frozen (View)</li><li value="2">The data is hidden (Blank)</li><li value="3">The data is replaced by new values (Clear Write)</li><li value="4">The data is replaced selectively (Max Hold, Min Hold, Average)</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>Each time the trace mode is changed, the selected trace memory is cleared.</p><p>The trace mode also determines the detector type if the detector is set automatically, see <a class="xref" href="46349ee74587403d.htm#ID_d0c00b8b2894a1eb0a710a310159407f-9a7c4d2c91d28cb70a001ae732a846af-en-US">"Mapping Samples to Measurement Points with the Trace Detector"</a>.</p></td></tr></table></div></div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW offers the following trace modes:</p><div class="block"><a name="ID_b099f2882d953d800a710a3101c17a8c-632e849991d308900a001ae746cdb30f-en-US">
+</a><span class="table-caption">Overview of available trace modes</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Trace Mode</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Blank</p></td><td valign="top"><p>Hides the selected trace.</p></td></tr><tr class="evenrow"><td valign="top"><p>Clear Write</p></td><td valign="top"><p>Overwrite mode: the trace is overwritten by each measurement. This is the default setting.</p><p>All available detectors can be selected.</p></td></tr><tr class="oddrow"><td valign="top"><p>Max Hold</p></td><td valign="top"><p>The maximum value is determined over several measurements and displayed. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW saves the measurement result in the trace memory only if the new value is greater than the previous one.</p><p>This mode is especially useful with modulated or pulsed signals. The signal spectrum is filled up upon each measurement until all signal components are detected in a kind of envelope.</p></td></tr><tr class="evenrow"><td valign="top"><p>Min Hold</p></td><td valign="top"><p>The minimum value is determined from several measurements and displayed. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW saves the measurement result in the trace memory only if the new value is lower than the previous one.</p><p>This mode is useful e.g. for making an unmodulated carrier in a composite signal visible. Noise, interference signals or modulated signals are suppressed, whereas a CW signal is recognized by its constant level.</p></td></tr><tr class="oddrow"><td valign="top"><p>Average</p></td><td valign="top"><p>The average is formed over several measurements and displayed. The <a class="xref" href="5158c5befbd24308.htm#ID_e8b935c20ebb0c060a00206a01dfb869-dc21614b0ebb0c060a00206a00c42bcc-en-US">"Sweep/Average Count"</a> determines the number of averaging procedures.</p><p>(See also <a class="xref" href="c53f5306e7d749c3.htm#ID_0a0a248eeb9f94d80a00206a00169a2b-439f176840f97bcf0a00201900c3608b-en-US">"Trace Statistics"</a>.)</p></td></tr><tr class="evenrow"><td valign="top"><p>View</p></td><td valign="top"><p>The current contents of the trace memory are frozen and displayed.</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>If a trace is frozen ("View" mode), the instrument settings, apart from level range and reference level (see below), can be changed without impact on the displayed trace. The fact that the displayed trace no longer matches the current instrument setting is indicated by the <img border="0" src="Resources/Images/imgbf259f5b9fdade8e0a00206a017586a1_1_--_--_PNG96.png" alt="" title=""/> icon on the tab label.</p></td></tr></table></div></div><p>If the level range or reference level is changed, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW automatically adapts the trace data to the changed display range. This allows an amplitude zoom to be made after the measurement in order to show details of the trace.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

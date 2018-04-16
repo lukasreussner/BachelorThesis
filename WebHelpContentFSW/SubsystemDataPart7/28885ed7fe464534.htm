@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Configuring Amplifier Measurements|Designing a Reference Signal" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Designing a reference signal within the R&amp;S FSW-K18</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eETSkIdGenRefSignal">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_ClockRate">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_SignalBW">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_SignalLen">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_CrestFactor">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_NotchWidth">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_DutyCycle">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_NotchPos">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_WvFormName">
+</meta>
+        <meta name="topic-keyword" value="eETSkId_RampLen">
+</meta>
+        <meta name="topic-id" value="148">
+</meta>
+        <meta name="topic-id" value="150">
+</meta>
+        <meta name="topic-id" value="152">
+</meta>
+        <meta name="topic-id" value="154">
+</meta>
+        <meta name="topic-id" value="156">
+</meta>
+        <meta name="topic-id" value="158">
+</meta>
+        <meta name="topic-id" value="160">
+</meta>
+        <meta name="topic-id" value="162">
+</meta>
+        <meta name="topic-id" value="164">
+</meta>
+        <meta name="topic-id" value="166">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1f45ad39c8ca7a100a001ae74c0c2343-420851b9c8ca7a100a001ae730df2ab6-en-US;ID_433bd5525efd214a0a001ae75365a131-420851b9c8ca7a100a001ae730df2ab6-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/28885ed7fe464534.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="514ce2c6787d4307.htm">Configuring Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="d823f9ca65f841c4.htm">Designing a Reference Signal</a> &gt; <span class="chm-breadcrumb">Designing a reference signal within the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K18</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_1f45ad39c8ca7a100a001ae74c0c2343-420851b9c8ca7a100a001ae730df2ab6-en-US">
+</a><span style="font-weight: bold">Designing a reference signal within the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K18</span></div><p>One way to design a reference signal is to design the signal within the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K18.</p><p>The application provides functionality to design a basic reference signal and saves the signal characteristics in a waveform file which you have to transfer to the signal generator with the "Send Signal to R&amp;S SMW" button.</p><p>When the data has been transferred, the signal generator (for example the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>SMW) generates the corresponding signal.</p><p>The generated signal is a multicarrier signal with OFDM characteristics, whose basic properties, like crest factor and bandwidth, you can specify as required.</p><div class="block" id="ID_433bd5525efd214a0a001ae75365a131-420851b9c8ca7a100a001ae730df2ab6-en-US"><div class="graphic"><img border="0" src="Resources/Images/img1417f44b5ef5a0670a001ae74b4e6e29_4_--_--_PNG96Small.png" alt="" title=""/></div></div><p>To generate a reference signal within the application, proceed as follows:</p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt">▶</span> In the "Generated Reference Signal" tab, design the reference signal as required.</p><p>The application stores the current signal properties as an ARB signal in a waveform file.</p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt">▶</span> Upload the data to the generator with the "Send Signal to R&amp;S SMW" button.</p><div class="block"><div class="listintro-in-compact-list">You can define the following signal characteristics.</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><a class="xref" href="aebbefe549194670.htm#ID_1e69306fc8f6c50f0a001ae757f0d284-ab4971b9c8f6c50f0a001ae7038d0537-en-US">"Clock Rate"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="2"><a class="xref" href="879678cd9243445a.htm#ID_2f25ecd7c8f6f45d0a001ae74857fb02-724e7210c8f6f45d0a001ae708206569-en-US">"Signal Bandwidth"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="3"><a class="xref" href="8fea400fd37f4a80.htm#ID_ae6d55edc8f71c770a001ae74331b02c-41f9aeeac8f71c770a001ae773253b2a-en-US">"Signal Length"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="4"><a class="xref" href="261d4a4ffae14cb4.htm#ID_a7f42405c8f786cb0a001ae7400ea9b0-21a03c91c8f786cb0a001ae702a682ab-en-US">"Crest Factor"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="5"><a class="xref" href="0630c101577d4968.htm#ID_3ac3e975c8f7bd4d0a001ae727dd7367-62059bdcc8f7bd4d0a001ae73bc383a3-en-US">"Notch Width"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="6"><a class="xref" href="f1b3afa9902b4a16.htm#ID_0858fdccc8f8eead0a001ae730e69b3d-4ba4598fc8f8eead0a001ae773d9dadf-en-US">"Notch Position"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="7"><a class="xref" href="50077a34d9804d72.htm#ID_7a861327c8f86e9e0a001ae77e724662-815d43a8c8f86e9e0a001ae7006b0cc9-en-US">"Pulse Duty Cycle"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="8"><a class="xref" href="de18754e05364aec.htm#ID_6866a74fc8f89a520a001ae71b52dbe3-30981527c8f89a520a001ae75ce22218-en-US">"Ramp Length"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="9"><a class="xref" href="e239beb801c44d0f.htm#ID_4293137cc8f8c1ef0a001ae72dcd5716-fdcf5182c8f8c1ef0a001ae704107cd8-en-US">"Waveform File Name"</a></li></ul></div>Remote command: <div class="rcclist_right"><p><a class="xref" href="a1c3304fb997499c.htm#ID_3d7795b349c068260a001ae7408306db-cb721b4c49c066af0a001ae7070d7041-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>REFSignal:</nobr>​<nobr>GOS:</nobr>​<nobr>WRITe</nobr></a></p><p><a class="xref" href="18a11c9e61ad4b36.htm#ID_d99672aa49c058290a001ae746f9e951-ffe29bda49c056920a001ae7070d7041-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>REFSignal:</nobr>​<nobr>GOS:</nobr>​<nobr>LEDState?</nobr></a></p></div><div style="clear:left;"> </div>
+						<div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="aebbefe549194670.htm#ID_1e69306fc8f6c50f0a001ae757f0d284-ab4971b9c8f6c50f0a001ae7038d0537-en-US" class="title_toc">Clock Rate</a></div><div class="function_block"><font face="Arial">└</font> <a href="879678cd9243445a.htm#ID_2f25ecd7c8f6f45d0a001ae74857fb02-724e7210c8f6f45d0a001ae708206569-en-US" class="title_toc">Signal Bandwidth</a></div><div class="function_block"><font face="Arial">└</font> <a href="8fea400fd37f4a80.htm#ID_ae6d55edc8f71c770a001ae74331b02c-41f9aeeac8f71c770a001ae773253b2a-en-US" class="title_toc">Signal Length</a></div><div class="function_block"><font face="Arial">└</font> <a href="261d4a4ffae14cb4.htm#ID_a7f42405c8f786cb0a001ae7400ea9b0-21a03c91c8f786cb0a001ae702a682ab-en-US" class="title_toc">Crest Factor</a></div><div class="function_block"><font face="Arial">└</font> <a href="0630c101577d4968.htm#ID_3ac3e975c8f7bd4d0a001ae727dd7367-62059bdcc8f7bd4d0a001ae73bc383a3-en-US" class="title_toc">Notch Width</a></div><div class="function_block"><font face="Arial">└</font> <a href="f1b3afa9902b4a16.htm#ID_0858fdccc8f8eead0a001ae730e69b3d-4ba4598fc8f8eead0a001ae773d9dadf-en-US" class="title_toc">Notch Position</a></div><div class="function_block"><font face="Arial">└</font> <a href="50077a34d9804d72.htm#ID_7a861327c8f86e9e0a001ae77e724662-815d43a8c8f86e9e0a001ae7006b0cc9-en-US" class="title_toc">Pulse Duty Cycle</a></div><div class="function_block"><font face="Arial">└</font> <a href="de18754e05364aec.htm#ID_6866a74fc8f89a520a001ae71b52dbe3-30981527c8f89a520a001ae75ce22218-en-US" class="title_toc">Ramp Length</a></div><div class="function_block"><font face="Arial">└</font> <a href="e239beb801c44d0f.htm#ID_4293137cc8f8c1ef0a001ae72dcd5716-fdcf5182c8f8c1ef0a001ae704107cd8-en-US" class="title_toc">Waveform File Name</a></div></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

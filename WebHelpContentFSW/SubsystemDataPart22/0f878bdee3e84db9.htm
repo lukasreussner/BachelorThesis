@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Configuration|Configuring I/Q Measurements|Configuring MIMO Setups" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Connecting multiple analyzers</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdMIMOSetupSimultaneousTable">
+</meta>
+        <meta name="topic-id" value="12836">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4609a3e875351d780a001ae73f79d495-8c7bd5764d954fb60a00206a004e3f41-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/0f878bdee3e84db9.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="815a65ace54b46f5.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="b9dea6be44534e0a.htm">Configuring I/Q Measurements</a> &gt; <a class="chm-breadcrumb" href="fd40d5d8788947ae.htm">Configuring MIMO Setups</a> &gt; <span class="chm-breadcrumb">Connecting multiple analyzers</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor116">
+</a><a name="kanchor117">
+</a><div class="function_heading"><a name="ID_4609a3e875351d780a001ae73f79d495-8c7bd5764d954fb60a00206a004e3f41-en-US">
+</a><span style="font-weight: bold">Connecting multiple analyzers</span></div><p>MIMO measurements require several R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSWs (<b>input sources</b>), depending on the number of antennas you have to measure. One of these analyzers (master) controls the other analyzers. The LTE measurement application must be installed on the master analyzer.</p><p>Before you can start the measurement, you have to configure the test setup. The functionality to do so is provided in the table in the "MIMO Setup" dialog box. The table is made up out of four rows, one for each possible analyzer. Note that configuration of input sources 2 to 4 is only possible if you have selected a corresponding number of antennas from the "MIMO Configuration" and "Tx Antenna Selection" dropdown menus.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><b>Input Source</b><br/>Shows the state of the analyzer or input source connection. When the LED turns green, the connection to the corresponding analyzer has been successful. Otherwise the LED turns red to indicate an unsuccessful connection.</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><b>State</b><br/>Includes or excludes the corresponding analyzer from the test setup. Note that the master analyzer (input source 1) is always active.</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><b>Analyzer IP Address</b><br/>Defines the IP address of the corresponding analyzer.</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><b>Assignment</b><br/>Selects the antenna that the corresponding analyzer measures. You can assign any antenna to any analyzer in the test setup, a consecutive order is not necessary.</li></ul></div>Remote command: <div class="rcclist_right"><p>State: <a class="xref" href="ba1ed14cf1f645fd.htm#ID_8936a1e07557207f0a001ae700018110-2007bbcc7557207f0a001ae762c04170-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>ANTMatrix:</nobr>​<nobr>STATe&lt;in&gt;</nobr></a></p><p>IP address: <a class="xref" href="0d7b6f592e7d4097.htm#ID_5f5075df755022140a001ae73920e750-8b84fe1a755022140a001ae71f32527d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>ANTMatrix:</nobr>​<nobr>ADDRess&lt;in&gt;</nobr></a></p><p>Instrument state: <a class="xref" href="76694b8a7623476f.htm#ID_8936a1e07557207f0a001ae700018110-89b02d5ea32fb6200a001ae771615e06-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>ANTMatrix:</nobr>​<nobr>LEDState&lt;in&gt;?</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Signal Capturing|Configuring Triggered Measurements|Configuring the Triggering Conditions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRIGger[:SEQuence]:LEVel:POWer:AUTO</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8557282fa0fddf390a00206a004bb68d-c07c6430f506978d0a0020190050defc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="7a0dc53bea234e7c.htm">Signal Capturing</a> &gt; <a class="chm-breadcrumb" href="7488e31920d14122.htm">Configuring Triggered Measurements</a> &gt; <a class="chm-breadcrumb" href="13a9a66fce0445d6.htm">Configuring the Triggering Conditions</a> &gt; <span class="chm-breadcrumb">TRIGger[:SEQuence]:LEVel:POWer:AUTO</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor768">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_8557282fa0fddf390a00206a004bb68d-c07c6430f506978d0a0020190050defc-en-US">
+</a><span class="bold">TRIGger[:SEQuence]:LEVel:POWer:AUTO </span>&lt;State&gt;<br/></div><div class="rcdescription"><p>By default, the optimum trigger level for power triggers is automatically measured and determined at the start of each sweep (for Modulation Accuracy, Flatness, Tolerance... measurements).</p><p>This function is only considered for <span class="command">TRIG:SEQ:SOUR IFP</span> and <span class="command">TRIG:SEQ:SOUR RFP</span>, see <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SOURce</nobr></a></p><p>In order to define the trigger level manually, switch this function off and define the level using <a class="xref" href="1975b13ccf5d489c.htm#ID_a7081f9d2e5897440a00206a01f29c78-b7554e1f30063b020a00206a006faeb2-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>LEVel:</nobr>​<nobr>IFPower</nobr></a> or <a class="xref" href="b608bb97a1ac460d.htm#ID_a7081f9d2e5897440a00206a01f29c78-4525dc1b3006b9e60a00206a01ddfe01-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>LEVel:</nobr>​<nobr>RFPower</nobr></a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters for setting and query: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">OFF | 0<br/></span><p>Switches the auto level detection function off</p><span class="bold">ON | 1<br/></span><p>Switches the auto level detection function on</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">1</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="86c6456306544add.htm#ID_4420cd10146c11e2bc318ed32780e12a-4083957f132725150a001ae735199c35-en-US">"Trigger Level Mode"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

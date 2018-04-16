@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Configuring the Trace Display and Retrieving Trace Data|Retrieving Trace Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe&lt;n&gt;[:DATA]:MEMory?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_613361ccd2bcb8540a00206a0037ac46-ca4603981110d2cd0a00206a0183b15f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="b0991ded4a214d00.htm">Configuring the Trace Display and Retrieving Trace Data</a> &gt; <a class="chm-breadcrumb" href="109ee39dce63450f.htm">Retrieving Trace Results</a> &gt; <span class="chm-breadcrumb">TRACe&lt;n&gt;[:DATA]:MEMory?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_613361ccd2bcb8540a00206a0037ac46-ca4603981110d2cd0a00206a0183b15f-en-US">
+</a><span class="bold">TRACe&lt;n&gt;[:DATA]:MEMory? </span>&lt;Trace&gt;,&lt;OffsSwPoint&gt;,&lt;NoOfSwPoints&gt;<br/></div><div class="rcdescription"><p>This command queries the previously captured trace data for the specified trace from the memory. As an offset and number of sweep points to be retrieved can be specified, the trace data can be retrieved in smaller portions, making the command faster than the <span class="command">TRAC:DATA?</span> command. This is useful if only specific parts of the trace data are of interest.</p><p>If no parameters are specified with the command, the entire trace data is retrieved; in this case, the command returns the same results as <span class="command">TRAC:DATA? TRACE1</span>.</p><p>For details on the returned values see the <a class="xref" href="ec30cb9122d5466b.htm#ID_a01c6d2f2f4ad9ee0a00206a016e96f1-a93672d2211b70620a00206a010caf3b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRAC:DATA? &lt;TRACE...&gt;</a> command.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Query parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Trace&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>TRACE1 |</nobr> <nobr> TRACE2 |</nobr> <nobr> TRACE3 |</nobr> <nobr> TRACE4 |</nobr> <nobr> TRACE5 |</nobr> <nobr> TRACE6</nobr><br/></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;OffsSwPoint&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>The offset in sweep points related to the start of the measurement at which data retrieval is to start.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;NoOfSwPoints&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Number of sweep points to be retrieved from the trace.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC:DATA:MEM? TRACE1,25,100</span><br/><p>Retrieves 100 sweep points from trace 1, starting at sweep point 25.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

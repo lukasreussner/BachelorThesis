@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Programming Examples|Service Request" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Evaluation of Event Status Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_7_remote_examples_0049-05b096349ff9039e0a00206a019f27ff-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9cd40c31930e4200.htm">Programming Examples</a> &gt; <a class="chm-breadcrumb" href="08bab3c56ea044fc.htm">Service Request</a> &gt; <span class="chm-breadcrumb">Evaluation of Event Status Register</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Evaluation of Event Status Register</div><div class="verbatim"><pre class="verbatim_text">REM ------ Subroutine for evaluating the Event Status Register ------------
+Public SUB Esrread()
+Esr$ = SPACE$(20) 'Preallocate blanks to text
+'variable
+CALL InstrWrite (analyzer, "*ESR?") 'Read ESR
+CALL InstrRead(analyzer, Esr$)
+IF (VAL(Esr$) AND 1) &gt; 0 THEN Debug.Print "Operation complete"
+IF (VAL(Esr$) AND 2) &gt; 0 THEN Debug.Print "Request Control"
+IF (VAL(Esr$) AND 4) &gt; 0 
+THEN Debug.Print "Query Error"
+IF (VAL(Esr$) AND 8) &gt; 0 
+THEN Debug.Print "Device dependent error"
+IF (VAL(Esr$) AND 16) &gt; 0 
+THEN Debug.Print "Execution Error; Program aborted"'Output error message
+STOP 'Stop software
+END IF
+IF (VAL(Esr$) AND 32) &gt; 0 
+THEN Debug.Print "Command Error; Program aborted"'Output error message
+STOP 'Stop software
+END IF
+IF (VAL(Esr$) AND 64) &gt; 0 THEN Debug.Print "User request"
+IF (VAL(Esr$) AND 128) &gt; 0 THEN Debug.Print "Power on"END SUB
+REM **********************************************************************</pre></div><div class="verbatim"><pre class="verbatim_text">REM ------ Subroutine for evaluating the Event Status Register ------------
+Public Sub Esrread()
+    Try
+        Dim myESR As Short = mbSession.Query("*ESR?") 'Read ESR
+        If (myESR And 1) &gt; 0 Then Console.WriteLine("Operation complete")
+        If (myESR And 2) &gt; 0 Then Console.WriteLine("Request Control")
+        If (myESR And 4) &gt; 0 Then Console.WriteLine("Query Error")
+        If (myESR And 8) &gt; 0 Then Console.WriteLine("Device dependent error")
+        If (myESR And 16) &gt; 0 Then
+            Console.WriteLine("Execution Error; Program aborted") 'Output error message
+            Stop 'Stop software
+        End If
+        If (myESR And 32) &gt; 0 Then
+            Console.WriteLine("Command Error; Program aborted") 'Output error message
+            Stop 'Stop software
+        End If
+        If (myESR And 64) &gt; 0 Then Console.WriteLine("User request")
+        If (myESR And 128) &gt; 0 Then Console.WriteLine("Power on")
+    Catch exp As Exception
+        Console.WriteLine(exp.Message)
+    End Try
+End Sub</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

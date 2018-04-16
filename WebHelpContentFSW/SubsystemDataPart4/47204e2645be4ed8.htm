@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Optimizing and Troubleshooting the Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Improving Performance</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4979d0db7b227d630a710a3100bdc8cc-c03dcfec7d455beb0a00201901c34e02-en-US;ID_47c617ac7b227d150a710a3100ab5687-c03dcfec7d455beb0a00201901c34e02-en-US;ID_75522f987b227ce60a710a3101a402ab-c03dcfec7d455beb0a00201901c34e02-en-US;ID_1a11be1a7b227c880a710a3101e18eb6-c03dcfec7d455beb0a00201901c34e02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="f85693c62f444661.htm">Optimizing and Troubleshooting the Measurement</a> &gt; <span class="chm-breadcrumb">Improving Performance</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor789">
+</a><div class="chm-chaptertitle">Improving Performance</div><p>If the GSM measurement seems to take a long time, try the following tips.</p><div class="block"><div class="subtitle"><a name="ID_47c617ac7b227d150a710a3100ab5687-c03dcfec7d455beb0a00201901c34e02-en-US">
+</a>Using external triggers to mark the frame start</div></div><p>The R&amp;S FSW GSM application needs the frame start as a time reference. It either searches for a frame start after every I/Q data acquisition, or relies on a trigger event that marks the frame start. An external trigger or a power trigger that mark the frame start can speed up measurements. See also <a class="xref" href="b23a1814fc8d418e.htm#ID_8ab1bb9f365c51100a00206a0080e497-b1f487377d4432d90a002019013b147f-en-US">"Trigger settings"</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>In MSRA mode, trigger events are not considered when determining the frame start in a GSM measurement, as the trigger is defined by the MSRA Master for all applications simultaneously and most likely does not coincide with the frame start for the GSM signal.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_1a11be1a7b227c880a710a3101e18eb6-c03dcfec7d455beb0a00201901c34e02-en-US">
+</a>Avoiding unnecessary high sample rates</div></div><a name="kanchor790">
+</a><a name="kanchor791">
+</a><p>According to the GSM standard, modulation spectrum results must be performed at frequencies up to 6<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz from the carrier in some cases. When the frequency list to be used is set to 6<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz in the "Measurement" settings (see <a class="xref" href="e39932e44c224577.htm#ID_b2ce851bfffb412e0a00201901757d90-6de3276a7d447f250a0020190132413b-en-US">"Modulation Spectrum Table: Frequency List"</a>), the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW GSM application uses a sample rate of 19.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, as opposed to the usual 6.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz sample rate. The higher sample rate extends the required measurement time. Only use the 6<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz frequency list setting if you actually require "Modulation Spectrum" results according to standard.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

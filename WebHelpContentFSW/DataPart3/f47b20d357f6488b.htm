@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Bandwidth, Filter and Sweep Configuration|Impact of the Bandwidth, Filter and Sweep Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>How Long the Data is Measured: 
+		Sweep Time
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_bb4ebc977fa3148e0a00206a016445b6-fc6e2f34ebd4ca590a00206a01d1fc31-en-US;ID_e48ccd85126f11e4b7b2cc9bc541c0ee-fc6e2f34ebd4ca590a00206a01d1fc31-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="409c8f6e27aa478c.htm">Bandwidth, Filter and Sweep Configuration</a> &gt; <a class="chm-breadcrumb" href="4282aff75bcb4b68.htm">Impact of the Bandwidth, Filter and Sweep Settings</a> &gt; <span class="chm-breadcrumb">How Long the Data is Measured: Sweep Time </span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1757">
+</a><div class="chm-chaptertitle">How Long the Data is Measured: Sweep Time</div><p>Each filter has a settling time that must be awaited in order to obtain correct results. Since the resolution bandwidth and video bandwidth define the filter, the smaller of the two determines the minimum "Sweep Time" required for the measurement. Allowed values depend on the ratio of span to RBW and RBW to VBW.</p><p>If the selected "Sweep Time" is too short for the selected bandwidth and span, level measurement errors will occur. In this case, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW displays the error message "Sweep time too low" and marks the indicated "Sweep Time" with a red bullet. Furthermore, a status bit indicates an error.</p><p>(For more information see <a class="xref" href="edc75f83bc5d48c4.htm#ID_3f694d22e932e8970a00206a0171f34a-08488a8fe3f276a30a00206a00bc759e-en-US">"STATus:QUEStionable:TIMe Register"</a>.)</p><p>The "Sweep Time" can be coupled to the span (not zero span), video bandwidth (VBW) and resolution bandwidth (RBW) automatically. If the span, resolution bandwidth or video bandwidth is changed, the "Sweep Time" is automatically adjusted.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Note that the "Sweep Time" only indicates how long data is captured; the time required to process the captured data may be considerably longer, in particular for FFT mode. For FFT mode, an estimated duration is indicated behind the "Sweep Time" in the channel bar (for RF measurements only).</p></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

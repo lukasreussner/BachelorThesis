@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Marker Usage|Marker (Measurement) Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Demodulating Marker Values and Providing Audio Output (Marker Demodulation)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMarkerDemod">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerDemodConfig">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdMarkerDemod">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdMarkerDemodConfig">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdMarkerDemod">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdMarkerDemodConfig">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdMarkerDemod">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdMarkerDemodConfig">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdMarkerDemod">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdMarkerDemodConfig">
+</meta>
+        <meta name="topic-id" value="2552">
+</meta>
+        <meta name="topic-id" value="2553">
+</meta>
+        <meta name="topic-id" value="2554">
+</meta>
+        <meta name="topic-id" value="2555">
+</meta>
+        <meta name="topic-id" value="2556">
+</meta>
+        <meta name="topic-id" value="2557">
+</meta>
+        <meta name="topic-id" value="2558">
+</meta>
+        <meta name="topic-id" value="2559">
+</meta>
+        <meta name="topic-id" value="2560">
+</meta>
+        <meta name="topic-id" value="2561">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_caa92ab72b85c3f00a00206a00c05b77-48a049302b85c3f00a00206a00b4ee52-en-US;ID_812c3d73303057750a002019008ac6be-48a049302b85c3f00a00206a00b4ee52-en-US;ID_c6fd5b434d6ec0340a710a3100d674a1-48a049302b85c3f00a00206a00b4ee52-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="40f2068ca727484b.htm">Marker Usage</a> &gt; <a class="chm-breadcrumb" href="f6177c1e3ac2436e.htm">Marker (Measurement) Functions</a> &gt; <span class="chm-breadcrumb">Demodulating Marker Values and Providing Audio Output (Marker Demodulation)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2047">
+</a><a name="kanchor2048">
+</a><a name="kanchor2049">
+</a><div class="chm-chaptertitle">Demodulating Marker Values and Providing Audio Output (Marker Demodulation)</div><p><b>Access</b>: "Overview" &gt; "Analysis" &gt; "Marker Functions" &gt; "Select Marker Function" &gt; "Marker Demodulation" &gt; "Marker Demod Config"</p><p><b>Or</b>: MKR FUNC &gt; "Select Marker Function" &gt; "Marker Demodulation" &gt; "Marker Demod Config"</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW provides demodulators for AM, FM and PM signals. The demodulation marker function sends the demodulated data at the current marker frequency to the audio output. Thus, a displayed signal can be identified acoustically with the help of the internal loudspeaker or with headphones.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>This function is not available for Spectrum Emission Mask measurements or measurements on I/Q-based data.</p></td></tr></table></div></div><p>The sweep stops at the frequency determined by marker 1 for the selected time and the RF signal is demodulated in a bandwidth that corresponds to the RBW. Alternatively, demodulation can be activated continuously, i.e. audio output occurs regardless of the marker position and the marker stop time. For measurements in the time domain (zero span), demodulation is always continuous.</p><p>Optionally, a minimum level ("Squelch Level") can be defined so that the signal is only demodulated when it exceeds the set level. This is useful during continuous demodulation to avoid listening to noise.</p><p>The squelch function activates the video trigger function (see <a class="xref" href="b84dcf17f9fb4c39.htm#ID_1f8baa0e0fda7c8b0a00206a01492a9e-129946a30fda7c8b0a00206a008d10a8-en-US">"Video"</a>) and deactivates any other trigger or gating settings. The squelch level and trigger level are set to the same value. The trigger source in the channel bar is indicated as "SQL" for squelch. The squelch level is indicated by a red line in the diagram.</p><div class="block" id="ID_c6fd5b434d6ec0340a710a3100d674a1-48a049302b85c3f00a00206a00b4ee52-en-US"><div class="graphic"><img border="0" src="Resources/Images/img0570f53d4d17c63d0a00206a00c19b6c_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="5a6a2eac394440e4.htm#ID_d217a35251ab6fa00a710a3101135607-48a049302b85c3f00a00206a00b4ee52-en-US" class="title_toc">Marker Demodulation State</a></div><div class="function_block"><font face="Arial">└</font> <a href="f1cf7ffbe0ef4ac0.htm#ID_a1af2b8251ab6ea60a710a31019896c7-48a049302b85c3f00a00206a00b4ee52-en-US" class="title_toc">Continuous Demodulation</a></div><div class="function_block"><font face="Arial">└</font> <a href="de47c0e920a84bbe.htm#ID_cdeb840951ab6d7d0a710a3101b7ff10-48a049302b85c3f00a00206a00b4ee52-en-US" class="title_toc">Marker Stop Time</a></div><div class="function_block"><font face="Arial">└</font> <a href="1f9afe6b3f314c23.htm#ID_9d9c284451ab6cb20a710a3101945bd5-48a049302b85c3f00a00206a00b4ee52-en-US" class="title_toc">Modulation</a></div><div class="function_block"><font face="Arial">└</font> <a href="2bc807cdcad74176.htm#ID_6fc84b2351ab6bc70a710a3101d70d74-48a049302b85c3f00a00206a00b4ee52-en-US" class="title_toc">Squelch</a></div><div class="function_block"><font face="Arial">└</font> <a href="86934a85b1264409.htm#ID_7f7d3f3d51ab6b3b0a710a3101d9d305-48a049302b85c3f00a00206a00b4ee52-en-US" class="title_toc">Squelch Level</a></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement|Channel Power Configuration|Channel Setup" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Limit Check
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerLimitCheck">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasACPLimitsRelCheck">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasACPLimitsRel">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasACPLimitsAbsCheck">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasACPLimitsAbs">
+</meta>
+        <meta name="topic-id" value="328">
+</meta>
+        <meta name="topic-id" value="329">
+</meta>
+        <meta name="topic-id" value="330">
+</meta>
+        <meta name="topic-id" value="331">
+</meta>
+        <meta name="topic-id" value="332">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_26f2f0e2cd7811e08d4cf32e0e8c8c57-afab76cfd7349b540a00206a00bfaa09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <a class="chm-breadcrumb" href="983910f48b5c4015.htm">Channel Power Configuration</a> &gt; <a class="chm-breadcrumb" href="93e82c1da1e74a6e.htm">Channel Setup</a> &gt; <span class="chm-breadcrumb">Limit Check</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor562">
+</a><a name="kanchor563">
+</a><div class="function_heading"><a name="ID_26f2f0e2cd7811e08d4cf32e0e8c8c57-afab76cfd7349b540a00206a00bfaa09-en-US">
+</a>Limit Check</div><p>During an ACLR measurement, the power values can be checked whether they exceed user-defined or standard-defined limits. A relative or absolute limit can be defined, or both. Both limit types are considered, regardless whether the measured levels are absolute or relative values. The check of both limit values can be activated independently. If any active limit value is exceeded, the measured value is displayed in red and marked by a preceding asterisk in the result table.</p><p>The results of the power limit checks are also indicated in the <span class="command">STAT:QUES:ACPL</span> status registry (see <a class="xref" href="b9757a20179c45c7.htm#ID_0d7b6e4be924f5550a00206a00c2dd4e-1a579609e3f25b7a0a00206a01e2492e-en-US">"STATus:QUEStionable:ACPLimit Register"</a>).</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="1522d76a0f9d4a78.htm#ID_3b1f6feb2f1994140a00206a00f1a47d-afb4c432210d58600a00206a0197bf85-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower[:</nobr>​<nobr>STATe]</nobr></a></p><p><a class="xref" href="a27d4f7207dc4a65.htm#ID_9efbc5192f1e4a0c0a00206a013c337e-3df4fac0210dc60e0a00206a01a77832-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ACHannel:</nobr>​<nobr>ABSolute:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="4034064751ba4dbe.htm#ID_8590c7d39f92ea200a00206a002bfc6d-bdf707c3210d979b0a00206a00493d28-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ACHannel:</nobr>​<nobr>ABSolute</nobr></a></p><p><a class="xref" href="e677a74f2ba24772.htm#ID_c5666d4f9f78f9510a00206a005b8a9a-42973174210e4c640a00206a0194628d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ACHannel[:</nobr>​<nobr>RELative]:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="0ea9116443ac4435.htm#ID_d4dde1162f1aa7e40a00206a004d0a37-f1c09dcd210df3b50a00206a00de93a3-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ACHannel[:</nobr>​<nobr>RELative]</nobr></a></p><p><a class="xref" href="d1859b172039466c.htm#ID_9efbc5192f1e4a0c0a00206a013c337e-12b897bb558a61b20a00206a018806de-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ALTernate&lt;ch&gt;:</nobr>​<nobr>ABSolute:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="f720a6228f934296.htm#ID_8590c7d39f92ea200a00206a002bfc6d-62fa769b5589e6c60a00206a00282e08-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ALTernate&lt;ch&gt;:</nobr>​<nobr>ABSolute</nobr></a></p><p><a class="xref" href="7607394628344017.htm#ID_7ba4458c9f8ad27d0a00206a0190034d-b64c1467210ea3fa0a00206a00e1ca2d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ALTernate&lt;ch&gt;[:</nobr>​<nobr>RELative]:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="fc01a1db3a7f4144.htm#ID_07dc23062f1c00ac0a00206a01cab990-2421c9fd210e76b00a00206a0083dab3-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ALTernate&lt;ch&gt;[:</nobr>​<nobr>RELative]</nobr></a></p><p><a class="xref" href="71a716d92a92468e.htm#ID_375dc2192f1b70e00a00206a0003cdfe-02a58709210e212e0a00206a017679ea-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ACPower:</nobr>​<nobr>ACHannel:</nobr>​<nobr>RESult?</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

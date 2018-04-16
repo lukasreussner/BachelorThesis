@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Filters and Bandwidths during  Signal Processing</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K70_0399-184c8906411153460a00206a01532735-en-US;shiv_FSV_K70_0401-184c8906411153460a00206a01532735-en-US;ID_4cf9d17efc4a46b00a710a310154728d-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Filters and Bandwidths during Signal Processing</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor140">
+</a><a name="kanchor141">
+</a><div class="chm-chaptertitle">Filters and Bandwidths during Signal Processing</div><p>This section describes the used filters in vector signal analysis with an R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, and the bandwidth after each filter.</p><p>The relevant filters for vector signal analysis are shown in <a class="xref" href="#shiv_FSV_K70_0401-184c8906411153460a00206a01532735-en-US">Figure "Block diagram of bandwidth-relevant filters for vector signal analysis"</a>.</p><div class="block" id="shiv_FSV_K70_0401-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb5bd481cfd15550f0a00206a0047455c_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Block diagram of bandwidth-relevant filters for vector signal analysis</div></div><a name="kanchor142">
+</a><a name="kanchor143">
+</a><div class="block"><ul class="list"><li value="1">After the IF Filter (only for RF input operation): bandwidth =<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, 17<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, 80<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, or 500<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, depending on the <a class="xref" href="16801214e46943de.htm#ID_f4b32c4b472f3d080a00206a016f5fcc-98ce8ff6410963710a00206a00a7855c-en-US">"Data Acquisition"</a> settings and the installed bandwidth options</li><li value="2">After the digital hardware section:<br/>The phase and amplitude distortions of the IF filter have been compensated for. Usually, the I/Q data has a usable bandwidth of about:<br/>0.8 * sample rate<br/>For details, refer to <a class="xref" href="366ac6a6722c4160.htm#ID_639e0078fc4575e00a710a3101abd8cb-184c8906411153460a00206a01532735-en-US">"I/Q Bandwidth"</a>.<br/>The I/Q data sample rate and bandwidth are automatically adjusted to the set symbol rate. For most modulated signals, even the smallest allowed value for the sample rate leads to a sufficient I/Q data bandwidth. The whole spectrum of the input signal is captured, but most adjacent channels and interferers are effectively suppressed. Only for very wide signals (FSK, no TX-filter used) it can be necessary to try higher values for the sample rate (see <a class="xref" href="a653b9be9dd94c76.htm#ID_7aba2997564717190a00206a01d25dda-184c8906411153460a00206a01532735-en-US">"Sample Rate, Symbol Rate and I/Q Bandwidth"</a>), increasing the I/Q bandwidth. The I/Q data delivered to the DSP section has no considerable amplitude or phase distortion and a suitable bandwidth.</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The "Signal Capture" dialog box ("Data Acquisition" tab) shows the sample rate and the usable I/Q bandwidth achieved for the current settings (see <a class="xref" href="994c899cd5d946fa.htm#ID_844f498299d508370a00206a00a7f279-98ce8ff6410963710a00206a00a7855c-en-US">"Usable I/Q Bandwidth"</a>).</p></td></tr></table></div></div><div class="block"><ul class="list"><li value="1">After the optional measurement filter:<br/>Various measurement filters which have different bandwidths can filter the measurement signal and the reference signal.</li></ul></div><p>The filters described above are the ones that directly affect the bandwidth of the captured I/Q data and the final measurement signal and reference signal. Note, however, that several other filters are also involved in the DSP section but are not mentioned above:</p><div class="block"><ul class="list"><li value="1">Receive filter to prevent ISI (intersymbol-interference)</li><li value="2">Filters necessary for various estimators</li><li value="3">Others</li></ul></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="366ac6a6722c4160.htm" class="chapter_title_toc">I/Q Bandwidth</a></li><li value="2"><a href="5f8553c7af6c4364.htm" class="chapter_title_toc">Demodulation Bandwidth (Measurement Bandwidth)</a></li><li value="3"><a href="ce8769fcc12d4274.htm" class="chapter_title_toc">Modulation and Demodulation Filters</a></li><li value="4"><a href="c432e1f4332d450b.htm" class="chapter_title_toc">Measurement Filters</a></li><li value="5"><a href="5b033170320c469c.htm" class="chapter_title_toc">Customized Filters</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

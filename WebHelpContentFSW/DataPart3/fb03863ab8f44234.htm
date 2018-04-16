@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Marker Usage|Marker Settings|Individual Marker Setup" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Final Test Detector
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMeasEMIFinalTest">
+</meta>
+        <meta name="topic-id" value="863">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e78d699b2b6b40710a00206a00b5a86f-c925116fb82c18680a002019008745db-en-US;ID_f737379fb8641d710a0020190067062f-c925116fb82c18680a002019008745db-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8df9e9da41784f85.htm">Electromagnetic Interference (EMI) Measurement</a> &gt; <a class="chm-breadcrumb" href="f912778f49d94e76.htm">EMI Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="222010c1acce4f5f.htm">EMI Marker Configuration</a> &gt; <span class="chm-breadcrumb">Final Test Detector</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1254">
+</a><a name="kanchor1255">
+</a><a name="kanchor1256">
+</a><div class="function_heading"><a name="ID_e78d699b2b6b40710a00206a00b5a86f-c925116fb82c18680a002019008745db-en-US">
+</a>Final Test Detector</div><p>Defines the detector to be used for the final EMI test at the marker frequency.</p><p>This setting is only available if the EMI (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K54) measurement option is installed.</p><p>For details, see <a class="xref" href="8f883fd0d18d4daa.htm#ID_3cc0c39f768556420a00206a01fb1a24-e2264ba9ad4233020a00201901671d4f-en-US">"Detectors and Dwell Time"</a>.</p><p><b><a name="ID_f737379fb8641d710a0020190067062f-c925116fb82c18680a002019008745db-en-US">
+</a>Note:</b> The trace detector configured in the trace settings is used for the initial peak search only, see <a class="xref" href="18e2809c4d044926.htm#ID_1eacf3552b54e3f10a00206a017a6004-52a995a72b54e3f10a00206a0135c831-en-US">"Trace Settings"</a>.<br/></p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Off"</p></td><td class="function_col_right"><p>No final test is performed.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"PositivePeak"</p></td><td class="function_col_right"><p>Determines the maximum signal level that was detected during the specified dwell time.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Average"</p></td><td class="function_col_right"><p>Determines the average signal level of the samples that were collected during the specified dwell time.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Quasi-Peak"</p></td><td class="function_col_right"><p>Determines the maximum signal level weighted to CISPR<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>16-1-1 that was detected during the dwell time.</p><p>The "Quasi-Peak" detector is only available for the CISPR filter, and not for an RBW of 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"CISPR Average"</p></td><td class="function_col_right"><p>Determines a weighted average signal level according to CISPR 16-1-1.</p><p>The average value according to CISPR 16-1-1 is the maximum value detected while calculating the linear average value during the specified dwell time.</p><p>The "CISPR Average" detector is only available for the CISPR filter.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"RMS Average"</p></td><td class="function_col_right"><p>A combination of the RMS detector (for pulse repetition frequencies above a corner frequency) and the Average detector (for pulse repetition frequencies below the corner frequency).</p><p>Lowpass filters of the second order determine the average value (simulation of a mechanical pointer instrument).</p><p>The "RMS Average" detector is only available for the CISPR filter.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="ed8dea9738554847.htm#ID_177d4c526bc6580c0a00206a018271a7-bd989b75a8f0ac340a0020190049544a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>FMEasurement:</nobr>​<nobr>DETector</nobr></a></p><p><a class="xref" href="e2e76247ccbc4a83.htm#ID_177d4c526bc6580c0a00206a018271a7-6c763550a8f0a84c0a00201901b793d9-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>DELTamarker&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>FMEasurement:</nobr>​<nobr>DETector</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

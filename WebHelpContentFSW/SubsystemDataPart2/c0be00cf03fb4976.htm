@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Remote Commands for Pulse Measurements|Input/Output Settings|Input from I/Q Data Files" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>INPut&lt;ip&gt;:FILE:PATH</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9492ca1d741254630a001ae7425b7d9c-f500c6e97412533a0a001ae72c300138-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="2a19c26881ae4bad.htm">Remote Commands for Pulse Measurements</a> &gt; <a class="chm-breadcrumb" href="3b9fee17b6c34dcb.htm">Input/Output Settings</a> &gt; <a class="chm-breadcrumb" href="8fbc691ae42b431e.htm">Input from I/Q Data Files</a> &gt; <span class="chm-breadcrumb">INPut&lt;ip&gt;:FILE:PATH</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_9492ca1d741254630a001ae7425b7d9c-f500c6e97412533a0a001ae72c300138-en-US">
+</a><span class="bold">INPut&lt;ip&gt;:FILE:PATH </span>&lt;FileName&gt;[, &lt;AnalysisBW&gt;]<br/></div><div class="rcdescription"><p>This command selects the I/Q data file to be used as input for further measurements.</p><p>The I/Q data must have a specific format as described in <a class="xref" href="093e11648f9c46e1.htm#ID_b8eed8e37ba899de0a00206a00e743a8-2e8d3b527ba899de0a00206a010acc15-en-US">"I/Q Data File Format (iq-tar)"</a>.</p><p>For details see <a class="xref" href="847371b6c0f14802.htm#ID_b3e65019496b664d0a710a3101a42822-69ef0491496b941f0a002019002ce375-en-US">"Basics on Input from I/Q Data Files"</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ip&gt;<br/></td><td class="rc_col_content_left" colspan="2">1 | 2<br/><p>irrelevant</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;FileName&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>String containing the path and name of the source file. The file extension is <span class="filename">*.iq.tar</span>.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;AnalysisBW&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Optionally: The analysis bandwidth to be used by the measurement. The bandwidth must be smaller than or equal to the bandwidth of the data that was stored in the file.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Default unit: </span></td><td class="rc_col_content_right">HZ</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p><span class="command">INP:FILE:PATH 'C:\R_S\Instr\user\data.iq.tar'</span></p><p>Uses I/Q data from the specified file as input.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">INP:FILE:PATH 'C:\R_S\Instr\user\data.iq.tar', 10MHz</span><br/><p>Uses an analysis bandwidth of 10 MHz of the data provided in the file.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="e30819cbda2d450f.htm#ID_26e3f6e27bca823d0a00206a00aefa1b-94eec3549a6173f80a001ae72f447a13-en-US">"Select I/Q data file"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

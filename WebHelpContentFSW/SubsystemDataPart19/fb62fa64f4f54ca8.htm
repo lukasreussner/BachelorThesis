@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurements and Result Displays|WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)|Modulation Accuracy, Flatness and Tolerance Parameters|EVM Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Peak Vector Error (IEEE Method)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f7bfa7dfa56811e1853598de31f784d5-742b73889d5e5f610a001ae77d4ca6d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3bafe63f00094742.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="57cd9bda6ba64547.htm">WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="bbca4974819a4f7c.htm">Modulation Accuracy, Flatness and Tolerance Parameters</a> &gt; <a class="chm-breadcrumb" href="b86e6d9084e34ce8.htm">EVM Measurement</a> &gt; <span class="chm-breadcrumb">Peak Vector Error (IEEE Method)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor95">
+</a><a name="kanchor96">
+</a><div class="chm-chaptertitle">Peak Vector Error (IEEE Method)</div><p>The peak vector error (Peak EVM) is defined in section 18.4.7.8 "Transmit modulation accuracy" of the IEEE 802.11b standard. The phase, timing and gain tracking errors of the measurement signal (center frequency error, common phase error, sampling frequency error) are compensated for before EVM calculation.</p><p>The standard does not specify a normalization factor for the error vector magnitude. To get an EVM value that is independent of the level, the R&amp;S FSW WLAN application normalizes the EVM values. Thus, an EVM of 100% indicates that the error power on the I- or Q-channels equals the mean power on the I- or Q-channels, respectively.</p><p>The peak vector error is the maximum EVM over all payload symbols and all active carriers for one PPDU. If more than one PPDU is analyzed the Min / Mean / Max columns show the minimum, mean or maximum Peak EVM of all analyzed PPDUs. This can be the case, for example, if several analyzed PPDUs are in the capture buffer or due to the <a class="xref" href="48edb0e3548e41c0.htm#ID_d65b2720aadc9a650a710a31000dadd3-979497de57b105550a001ae715a94b3f-en-US">"PPDU Statistic Count / No of PPDUs to Analyze"</a> setting.</p><p>The IEEE 802.11b or g (DSSS) standards allow a peak vector error of less than 35%. In contrary to the specification, the R&amp;S FSW WLAN application does not limit the measurement to 1000 chips length, but searches the maximum over the whole PPDU.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

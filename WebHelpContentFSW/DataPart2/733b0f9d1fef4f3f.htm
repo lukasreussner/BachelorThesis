@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Managing Settings and Results|Examples: Managing Data" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Loading Instrument Settings</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6c238372cc8811e0a0cadb74b1352b10-893708fa29701e230a00206a01343a01-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="0676e691243b42ba.htm">Managing Settings and Results</a> &gt; <a class="chm-breadcrumb" href="98a3111eaf4a465b.htm">Examples: Managing Data</a> &gt; <span class="chm-breadcrumb">Loading Instrument Settings</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Loading Instrument Settings</div><p>In this example we will load the hardware settings from the configuration file <span class="filename">Spectrum.dfl</span> to a new "Spectrum2" channel.</p><div class="verbatim"><pre class="verbatim_text">MEMM:LOAD:TYPE NEW
+//Specifies that settings will be loaded to a new channel besides the existing 
+//'Spectrum' channel.
+MMEM:SEL:CHAN:HWS ON
+//Selects only hardware settings to be loaded.
+MMEM:LOAD:STAT 1, 'C:\R_S\Instr\user\Spectrum'
+//Loads the channel-specific settings from the file 'C:\R_S\Instr\user\Spectrum.dfl'
+//to a new channel. The new channel is named 'Spectrum2' to avoid a naming conflict
+//with the existing 'Spectrum' channel.
+INST:REN 'Spectrum2','Spectrum3'
+//Renames the loaded channel to 'Spectrum3'.</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

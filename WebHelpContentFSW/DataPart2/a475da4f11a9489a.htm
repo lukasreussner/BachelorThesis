@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Trace Configuration|Standard Traces|Basics on Setting up Traces" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Trace Smoothing</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b3743b34e1c127330a00206a0139bee4-e7ae7ece909f5d7b0a001ae7267b8a29-en-US;ID_6a90d48b953148fb0a00206a0093add8-e7ae7ece909f5d7b0a001ae7267b8a29-en-US;ID_dbc0ab271f5763410a710ade00419c3e-e7ae7ece909f5d7b0a001ae7267b8a29-en-US;ID_8ba652bb9544add20a00206a01025707-e7ae7ece909f5d7b0a001ae7267b8a29-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="449dc0ce4ad74ae0.htm">Trace Configuration</a> &gt; <a class="chm-breadcrumb" href="d5a936460e4d4bf6.htm">Standard Traces</a> &gt; <a class="chm-breadcrumb" href="6c4dadf0708945cd.htm">Basics on Setting up Traces</a> &gt; <span class="chm-breadcrumb">Trace Smoothing</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2200">
+</a><a name="kanchor2201">
+</a><div class="chm-chaptertitle">Trace Smoothing</div><p>A Video Bandwidth Filter (VBW) is a hardware-based method of smoothing the trace (see also <a class="xref" href="1db35ba3fa2341dc.htm#ID_5edf0d777fa3148e0a00206a01838d25-fc6e2f34ebd4ca590a00206a01d1fc31-en-US">"Smoothing the Trace Using the Video Bandwidth"</a>). However, other sweep and bandwidth settings may be coupled to the VBW, and for some signals, a VBW may not be freely selectable to obtain the required smoothing effect. Therefore, a software-based trace smoothing function is also available.</p><p>(Software-based) <b>smoothing</b> is a way to visually remove anomalies in the trace that may distort the results. The smoothing process is based on a moving average over the complete measurement range. The number of samples included in the averaging process (the <em>aperture</em> size) is variable and is a percentage of all samples that the trace consists of.</p><div class="block" id="ID_6a90d48b953148fb0a00206a0093add8-e7ae7ece909f5d7b0a001ae7267b8a29-en-US"><div class="graphic"><img border="0" src="Resources/Images/img6cdede5095062dd70a00206a012e7064_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Sample size included in trace smoothing</div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_dbc0ab271f5763410a710ade00419c3e-e7ae7ece909f5d7b0a001ae7267b8a29-en-US">
+</a>Effects of smoothing on post-processing functions</div><p>Note that in Spectrum mode, all functions performed after the sweep, such as limit checks, markers, or channel power measurements, are based on the smoothed trace data. Thus, the results differ from results based on the original trace.</p></td></tr></table></div></div><p>You can turn trace smoothing on and off for all traces individually and compare, for example, the raw and the smooth trace.</p><p>Linear smoothing is based on the following algorithm:</p><div class="block" id="ID_8ba652bb9544add20a00206a01025707-e7ae7ece909f5d7b0a001ae7267b8a29-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgf23403669517a5770a00206a00f82875_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption">Linear trace smoothing</div></div><p>With:</p><p>s = sample number</p><p>x = sample offset from s</p><p>n = aperture size</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

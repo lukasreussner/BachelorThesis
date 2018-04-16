@@ -1,0 +1,87 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Analyzing Statistics (APD, CCDF)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Measuring Statistics</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3d6dd28804de5c790a710a3100d6147e-a2b89a0f3d00f4aa0a001ae74a5b5452-en-US;ID_0f9a829a052fec3c0a00206a01cd7435-a2b89a0f3d00f4aa0a001ae74a5b5452-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="d1decebdfdd64d6d.htm">Analyzing Statistics (APD, CCDF)</a> &gt; <span class="chm-breadcrumb">Programming Example: Measuring Statistics</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3030">
+</a><a name="kanchor3031">
+</a><div class="chm-chaptertitle">Programming Example: Measuring Statistics</div><p>This example demonstrates how to determine statistical values for a measurement in a remote environment using the gated statistics example described in <a class="xref" href="8d50906de3a84fb1.htm#shiv_4a_instrument_functions_07499-e64d30f50c2f0f890a00206a01ce826c-en-US">"APD and CCDF Basics - Gated Triggering"</a>.</p><div class="block" id="ID_0f9a829a052fec3c0a00206a01cd7435-a2b89a0f3d00f4aa0a001ae74a5b5452-en-US"><div class="graphic"><img border="0" src="Resources/Images/img65df4a13050027340a00206a00c1d61b_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="verbatim"><pre class="verbatim_text">//-----------Configuring the measurement ------------
+*RST
+//Reset the instrument
+TRIG:SOUR EXT
+//Defines the use of an external trigger.
+TRIG:HOLD 25us
+//Defines a trigger offset of 25 μs.
+CALC:STAT:APD ON
+//Activates APD measurement.
+CALC:STAT:NSAM 1000
+//Sets the number of samples to be included in the statistical evaluation to 1000.
+
+//-------------Defining Gate ranges -----------------
+
+SWE:EGAT:TRAC1:COMM 'GSM - useful part'
+//Defines a comment for the gate
+SWE:EGAT:TRAC1:PER 4.61536ms
+//Sets the gate period to 4.61536ms.
+SWE:EGAT:TRAC1:STAR1 15us
+//Sets the start of range 1 to 15 μs.
+SWE:EGAT:TRAC1:STOP1 557.8us
+//Sets the end of range 1 to 15 μs (start time) + 542.77 μs (useful part) = 557.8 μs.
+SWE:EGAT:TRAC1:STAT1 ON
+//Activates the use of range 1.
+
+//--------------Performing the Measurement-----
+INIT:CONT OFF
+//Selects single sweep mode.
+INIT;*WAI
+//Initiates a new measurement and waits until the sweep has finished.
+
+//---------------Retrieving Results-------------
+CALC:STAT:RES1? MEAN
+//Returns the mean average power for the useful part of the GSM signal.
+
+//------------- Determining the CCDF values-------------------
+
+CALC:STAT:CCDF ON
+//Activates CCDF measurement.
+CALC:MARK2:Y:PERC 95PCT
+//Sets marker 2 to the 95% probability value.
+INIT;*WAI
+//Initiates a new measurement and waits until the sweep has finished.
+CALC:STAT:CCDF:X? P1
+//Returns the level value for 10% probability for the CCDF.
+CALC:MARK2:X?
+//Returns the level for a probability of 95%.
+
+
+//----------- Scaling the diagram -------------------------
+CALC:STAT:SCAL:X:RLEV -70dBm
+//Sets the reference level to -70 dBm (x-axis!)
+CALC:STAT:SCAL:X:RANG 20dB
+//Defines a power level range of 20 dB for the x-axis
+CALC:STAT:SCAL:Y:LOW 0.0001
+//Sets the minimum of the y-axis to 0.01% probability
+CALC:STAT:SCAL:Y:UPP 1.0
+//Sets the maximum of the y-axis to 100% probability
+CALC:STAT:SCAL:Y:UNIT PCT
+//Displays percentage values on y-axis scale</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

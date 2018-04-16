@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Basics on GSM Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Delta to Sync Values</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_31368056b3bd4ea80a0020190121fb9c-b1f487377d4432d90a002019013b147f-en-US;ID_e937f598ed7095ba0a710a3101540de0-b1f487377d4432d90a002019013b147f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="639d9fcc151e43b9.htm">Basics on GSM Measurements</a> &gt; <span class="chm-breadcrumb">Delta to Sync Values</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor273">
+</a><div class="chm-chaptertitle">Delta to Sync Values</div><p>The "Delta to Sync" value is defined as the distance between the mid of the TSC and the TSC of the <a class="xref" href="d4e31521.htm#shiv_FSV_K10_1254-7bf83232e9afc5160a002019003c84da-en-US">"Slot to Measure"</a>.</p><p>The results are provided in the unit NSP, which stands for Normal Symbol Period, i.e. the duration of one symbol using a normal symbol rate (approx. 3.69<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s). The measured "Delta to Sync" values have a resolution of 0.02 NSP.</p><p>These values are either assumed to be constant (according to the 3GPP standard) or measured, depending on the setting of the <a class="xref" href="36e50062a8144e0e.htm#ID_820aea0bed8636730a00206a006a00f9-6de3276a7d447f250a0020190132413b-en-US">"Limit Line Time Alignment"</a> parameter ("Slot to measure" or "Per Slot").</p><p>According to the standard (see "Timeslot length" in 3GPP TS 45.010), there are either eight slots of equal length (156.25 NSP), or slot 0 and slot 4 have a length of 157 NSP while all other slots have a length of 156 NSP. For details see <a class="xref" href="d1422f17b24d4e13.htm#ID_8c7bd8f2c182653b0a00206a00096c7e-b1f487377d4432d90a002019013b147f-en-US">"Timeslot Alignment"</a>.</p><p>The timeslot length is defined as the distance between the centers of the TSCs in successive slots. By setting the "Limit Time Alignment" parameter to "Per Slot", the "Delta to Sync" values can be measured and used in order to verify the timeslot lengths.</p><p>Setting the <a class="xref" href="36e50062a8144e0e.htm#ID_820aea0bed8636730a00206a006a00f9-6de3276a7d447f250a0020190132413b-en-US">"Limit Line Time Alignment"</a> to "Slot to measure" displays the expected values (according to the standard and depending on the value of <a class="xref" href="7ca1a6fd534e4deb.htm#shiv_FSV_K10_1325-6de3276a7d447f250a0020190132413b-en-US">"Equal Timeslot Length"</a>). These values are summarized in <a class="xref" href="#ID_e937f598ed7095ba0a710a3101540de0-b1f487377d4432d90a002019013b147f-en-US">Table "Expected "Delta to Sync" values in normal symbol periods "</a> (Slot to measure = 0, No. of slots = 8 and First slot to measure = 0).</p><div class="block"><a name="ID_e937f598ed7095ba0a710a3101540de0-b1f487377d4432d90a002019013b147f-en-US">
+</a><span class="table-caption">Expected "Delta to Sync" values in normal symbol periods</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Slot Number</p></th><th valign="top"><p>0 = Slot to measure</p></th><th valign="top"><p>1</p></th><th valign="top"><p>2</p></th><th valign="top"><p>3</p></th><th valign="top"><p>4</p></th><th valign="top"><p>5</p></th><th valign="top"><p>6</p></th><th valign="top"><p>7</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Equal Timeslot Length = On</p></td><td valign="top"><p>0</p></td><td valign="top"><p>156.25</p></td><td valign="top"><p>312.50</p></td><td valign="top"><p>468.75</p></td><td valign="top"><p>625.00</p></td><td valign="top"><p>781.25</p></td><td valign="top"><p>937.50</p></td><td valign="top"><p>1093.75</p></td></tr><tr class="evenrow"><td valign="top"><p>Equal Timeslot Length = Off</p></td><td valign="top"><p>0</p></td><td valign="top"><p>157</p></td><td valign="top"><p>313</p></td><td valign="top"><p>469</p></td><td valign="top"><p>625</p></td><td valign="top"><p>782</p></td><td valign="top"><p>938</p></td><td valign="top"><p>1094</p></td></tr></tbody></table></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

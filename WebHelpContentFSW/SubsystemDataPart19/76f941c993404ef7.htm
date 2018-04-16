@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Optimizing and Troubleshooting the Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Error Messages and Warnings</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ff12c9502cc4c5210a00201900141b4d-8a1a0eeba64b98580a002019018ac917-en-US;ID_81c99aa581baf88e0a00206a00dd8ac7-8a1a0eeba64b98580a002019018ac917-en-US;ID_f0671ebf81baf88e0a00206a01e90bfc-8a1a0eeba64b98580a002019018ac917-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="dd6a1159c95742f1.htm">Optimizing and Troubleshooting the Measurement</a> &gt; <span class="chm-breadcrumb">Error Messages and Warnings</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor659">
+</a><a name="kanchor660">
+</a><div class="chm-chaptertitle">Error Messages and Warnings</div><p>The following messages are displayed in the status bar in case of errors.</p><a name="kanchor661">
+</a><div class="block"><div class="subtitle"><a name="ID_81c99aa581baf88e0a00206a00dd8ac7-8a1a0eeba64b98580a002019018ac917-en-US">
+</a>Results contribute to overall results despite inconsistencies:</div></div><p><b>"Info: Comparison between HT-SIG Payload Length and Estimated Payload Length not performed due to insufficient SNR"</b></p><p>The R&amp;S FSW WLAN application compares the HT-SIG length against the length estimated from the PPDU power profile. If the two values do not match, the corresponding entry is highlighted orange. If the signal quality is very bad, this comparison is suppressed and the message above is shown.</p><p><b>"Warning: HT-SIG of PPDU was not evaluated"</b></p><p>Decoding of the HT-SIG was not possible because there was to not enough data in the Capture Memory (potential PPDU truncation).</p><p><b>"Warning: Mismatch between HT-SIG and estimated (SNR+Power) PPDU length"</b></p><p>The HT-SIG length and the length estimated by the R&amp;S FSW WLAN application (from the PPDU power profile) are different.</p><p><b>"Warning: Physical Channel estimation impossible / Phy Chan results not available Possible reasons: channel matrix not square or singular to working precision"</b></p><p>The Physical Channel results could not be calculated for one or both of the following reasons:</p><div class="block"><ul class="list"><li value="1">The spatial mapping can not be applied due to a rectangular mapping matrix (the number of space time streams is not equal to the number of transmit antennas).</li><li value="2">The spatial mapping matrices are singular to working precision.</li></ul></div><div class="block"><div class="subtitle"><a name="ID_f0671ebf81baf88e0a00206a01e90bfc-8a1a0eeba64b98580a002019018ac917-en-US">
+</a>PPDUs are dismissed due to inconsistencies</div></div><p><b>"Hint: PPDU requires at least one payload symbol"</b></p><p>Currently at least one payload symbol is required in order to successfully analyze the PPDU. Null data packet (NDP) sounding PPDUs will generate this message.</p><p><b>"Hint: PPDU dismissed due to a mismatch with the PPDU format to be analyzed"</b></p><p>The properties causing the mismatches for this PPDU are highlighted.</p><p><b>"Hint: PPDU dismissed due to truncation"</b></p><p>The first or the last PPDU was truncated during the signal capture process,
+
+for example.
+
+</p><p><b>"Hint: PPDU dismissed due to HT-SIG inconsistencies"</b></p><p>One or more of the following HT-SIG decoding results are outside of specified range: MCS index, Number of additional STBC streams, Number of space time streams (derived from MCS and STBC), CRC Check failed, Non zero tail bits.</p><p><b>"Hint: PPDU dismissed because payload channel estimation was not possible"</b></p><p>The payload based channel estimation was not possible because the channel matrix is singular to working precision.</p><p><b>"Hint: Channel matrix singular to working precision"</b></p><p>Channel equalizing (for PPDU Length Detection, fully and user compensated measurement signal) is not possible because the estimated channel matrix is singular to working precision.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

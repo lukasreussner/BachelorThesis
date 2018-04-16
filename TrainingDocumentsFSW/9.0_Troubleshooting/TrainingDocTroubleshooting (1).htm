@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Troubleshooting|Miscellaneous Troubleshooting Hints" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Data capturing takes too long</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_84a1f16d6796edae0a710ade01641a19-f8151fc7240e4b6a0a00206a0067db39-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="9d910e570dd84690.htm">Troubleshooting</a> &gt; <a class="chm-breadcrumb" href="5d59c27a1c4a4fca.htm">Miscellaneous Troubleshooting Hints</a> &gt; <span class="chm-breadcrumb">Data capturing takes too long</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3340">
+</a><div class="function_heading"><a name="ID_84a1f16d6796edae0a710ade01641a19-f8151fc7240e4b6a0a00206a0067db39-en-US">
+</a>Data capturing takes too long</div><p>Particularly for FFT sweeps, the time required to process the data may be considerably longer than the time required to capture the data. Thus, if you only consider the defined sweep time, you may assume an error has occurred if the measurement takes longer than expected.</p><p>However, while the sweep time only defines the time in which data is actually captured, the total sweep <em>duration</em> includes the time required for capturing <em>and processing</em> the data. Thus, for FFT sweeps in the Spectrum application, the sweep duration is now also indicated in the channel bar, behind the sweep time. In remote operation, the estimated sweep duration can be queried for all sweep modes (also zero span and frequency sweeps).</p><p><b>Tip:</b> To determine the necessary timeout for data capturing in a remote control program, double the estimated time and add 1 second.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="99c62f044b9c4b92.htm#ID_7ca1f2a42e3a7e940a00206a01dfeab3-6269ddad6360ee170a001ae746dfcf68-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>DURation?</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

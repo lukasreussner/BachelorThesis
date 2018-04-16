@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|List Evaluations" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Performing List Evaluation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b6f183eeb81fb5c00a00206a0148d4b0-e158d07c3d1988d10a001ae728410eef-en-US;ID_dcec0214b81fb5c00a00206a015ae3ba-e158d07c3d1988d10a001ae728410eef-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="651513e8a2714321.htm">List Evaluations</a> &gt; <span class="chm-breadcrumb">Example: Performing List Evaluation</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Example: Performing List Evaluation</div><p>The following example shows a list evaluation with the following configuration.</p><div class="block"><a name="ID_dcec0214b81fb5c00a00206a015ae3ba-e158d07c3d1988d10a001ae728410eef-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>No</p></th><th valign="top"><p>Freq [MHz]</p></th><th valign="top"><p>Ref Level [dBm]</p></th><th valign="top"><p>RF Attenuation [dB]</p></th><th valign="top"><p>El Attenuation [dB]</p></th><th valign="top"><p>Filter</p></th><th valign="top"><p>RBW</p></th><th valign="top"><p>VBW</p></th><th valign="top"><p>Meas Time</p></th><th valign="top"><p>Trigger Level</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1</p></td><td valign="top"><p>935.2</p></td><td valign="top"><p>0</p></td><td valign="top"><p>10</p></td><td valign="top"><p>---</p></td><td valign="top"><p>Normal</p></td><td valign="top"><p>1 MHz</p></td><td valign="top"><p>3 MHz</p></td><td valign="top"><p>440 µs</p></td><td valign="top"><p>0</p></td></tr><tr class="evenrow"><td valign="top"><p>2</p></td><td valign="top"><p>935.4</p></td><td valign="top"><p>0</p></td><td valign="top"><p>10</p></td><td valign="top"><p>10</p></td><td valign="top"><p>Channel</p></td><td valign="top"><p>30 kHz</p></td><td valign="top"><p>100 kHz</p></td><td valign="top"><p>440 µs</p></td><td valign="top"><p>0</p></td></tr><tr class="oddrow"><td valign="top"><p>3</p></td><td valign="top"><p>935.6</p></td><td valign="top"><p>0</p></td><td valign="top"><p>10</p></td><td valign="top"><p>20</p></td><td valign="top"><p>Channel</p></td><td valign="top"><p>30 kHz</p></td><td valign="top"><p>100 kHz</p></td><td valign="top"><p>440 µs</p></td><td valign="top"><p>0</p></td></tr></tbody></table></div><div class="verbatim"><pre class="verbatim_text">
+-----Measurement with synchronization via service request-----
+*ESE 1
+*SRE 32
+// Configures the status reporting system to produce a service request.
+LIST:POW:SET ON,ON,OFF,EXT,POS,10us,434us
+//Turns on the list evaluation, configures the global list evaluation settings and
+//evaluates the peak and RMS power.
+LIST:POW
+935.2MHZ,0,10,OFF,NORM,1MHZ,3MHZ,440us,0,
+935.4MHZ,0,10,10,CFIL,30KHZ,100KHZ,440us,0,
+935.6MHZ,0,10,20,CFIL,30KHZ,100KHZ,440us,0;
+*OPC
+//Defines a list with 3 entries and initiates the measurement with synchronization to the end.
+//Analyzer produces a service request
+//On service request:
+SENS:LIST:POW:RES?
+//Returns the results of the measurements, two for each frequency (peak and RMS power).
+
+-----Initiliazing the measurement and querying results simultaneously-----
+LIST:POW?
+935.2MHZ,0,10,OFF,NORM,1MHZ,3MHZ,440us,0,
+935.4MHZ,0,10,10,CFIL,30KHZ,100KHZ,440us,0,
+935.6MHZ,0,10,20,CFIL,30KHZ,100KHZ,440us,0
+//Defines a list with 3 entries, initiates the measurement and queries the results.
+//Result example:
+-28.3,-30.6,-38.1</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

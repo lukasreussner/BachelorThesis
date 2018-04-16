@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Configuration|WLAN I/Q Measurement Configuration|Signal Capture (Data Acquisition)|MIMO Capture Settings|Simultaneous Signal Capture Setup" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Amplitude Settings Coupling</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWLANSkIdMIMOCap_SlaveAmplitudeSettingCoupling">
+</meta>
+        <meta name="topic-id" value="593">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3e4c0aab23e211e594fed4eb1136f257-831aa3c4132388510a001ae740425ea1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3a844e7770fd4a7a.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2e3336f147004a28.htm">WLAN I/Q Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="60babf977c264ddc.htm">Signal Capture (Data Acquisition)</a> &gt; <a class="chm-breadcrumb" href="11a7c139d5424d12.htm">MIMO Capture Settings</a> &gt; <a class="chm-breadcrumb" href="c04e310d634e4031.htm">Simultaneous Signal Capture Setup</a> &gt; <span class="chm-breadcrumb">Amplitude Settings Coupling</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_3e4c0aab23e211e594fed4eb1136f257-831aa3c4132388510a001ae740425ea1-en-US">
+</a><span style="font-weight: bold">Amplitude Settings Coupling</span></div><p>For simultaneous MIMO setups, you can set the amplitude settings for all slave devices to the same setting as the master device. Thus, for example, you can force the slave devices to auto-level in order to achieve better results. This feature requires that the WLAN 802.11 application R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K91 is installed on the slave device.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Slaves settings same as Master settings"</p></td><td class="function_col_right"><p>Both the master and all slaves use the same amplitude settings, according to the settings at the master. All settings on the slave are ignored (including "Reference Level Auto").</p><p>Note: if "Reference Level Auto" is set at the master, the master channel performs an auto-level measurement and the resulting amplitude settings are transferred to the slaves.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Slaves auto-level same as master"</p></td><td class="function_col_right"><p>The slave devices perform an auto-level at the same time as the master. The amplitude settings are then determined automatically by each device according to the measured values.</p><p>This feature requires that the WLAN 802.11 application R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K91 (version 1.31 or higher) is installed on the slave devices.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Off"</p></td><td class="function_col_right"><p>Both the master and slave devices use their own amplitude settings as defined prior to the measurement; the settings are not coupled.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="50b3bcce6c724140.htm#ID_5be1bdb82f52a4be0a00206a01a427b9-388d06cd639b7f420a001ae7386b3603-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>WLAN:</nobr>​<nobr>ANTMatrix:</nobr>​<nobr>SOURce:</nobr>​<nobr>AMPLitude:</nobr>​<nobr>SOURce</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

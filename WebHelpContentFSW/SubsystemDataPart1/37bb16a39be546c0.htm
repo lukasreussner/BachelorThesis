@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Basics on FFT" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Dependencies Between FFT Parameters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c588a71e8e6522400a00201901c634b3-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_3183a3768e3dd6fd0a710a310028b264-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_6914f4678e3dd5380a710a31015c6fab-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_b84b22258e3dd5f30a710a3101a74546-03e72dbd6b54d8ef0a001ae70832b793-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="80556469d0ef4efb.htm">Basics on FFT</a> &gt; <span class="chm-breadcrumb">Dependencies Between FFT Parameters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Dependencies Between FFT Parameters</div><p>FFT analysis in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is highly configurable. Several parameters, including the resolution bandwidth, record length, and FFT length, are user-definable. Note, however, that several parameters are correlated and not all can be configured independently of the others.</p><div class="block"><div class="subtitle"><a name="ID_3183a3768e3dd6fd0a710a310028b264-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a>Record Length</div></div><p>Defines the number of I/Q samples to capture. By default, the number of sweep points is used. The record length is calculated as the measurement time multiplied by the sample rate.</p><p>If you change the record length, the <a class="xref" href="543bac19107f462a.htm#ID_d404f35785852b770a00206a00d725df-3587554a85852b870a00206a00f78317-en-US">"Meas Time"</a> is automatically changed, as well.</p><p>For FFTs using only a single window ( "Single" mode), the record length (which is then identical to the FFT length) must not exceed 512k.</p><div class="block"><div class="subtitle"><a name="ID_6914f4678e3dd5380a710a31015c6fab-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a>FFT Length</div></div><p>Defines the number of frequency points determined by each FFT calculation. The more points are used, the higher the resolution in the spectrum becomes, but the longer the calculation takes.</p><p>In "Auto" or "Manual" mode, an FFT length of 4096 is used.</p><p>In advanced FFT mode, the FFT length is user-definable. If you use the arrow keys or the rotary knob to change the FFT length, the value is incremented or decremented by powers of 2. If you enter the value manually, any integer value from 3 to 524288 is available.</p><p>If the FFT length is longer than the <a class="xref" href="48ee9268e4334f6c.htm#ID_a8659b40842f47b60a00201901ba76ee-7e69703b81df97470a001ae76be34558-en-US">"Window Length"</a> the sample data is filled up with zeros up to the FFT length. The FFT is then performed using interpolated frequency points.</p><p>For an FFT length that is not a power of 2, a DFT (discrete Fourier transform) is performed, which requires more time for calculation, but avoids the effects of interpolation.</p><p>To display all calculated frequency points (defined by the FFT length), the number of sweep points is set to the FFT length automatically in advanced FFT mode.</p><div class="block"><div class="subtitle"><a name="ID_b84b22258e3dd5f30a710a3101a74546-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a>Window Length</div></div><p>Defines the number of samples to be included in a single window in averaging mode. (In single mode, the window length corresponds to the <a class="xref" href="76aaaf0ae5034118.htm#ID_c59eef7485860df60a00206a017c94c2-fe92235c85860df60a00206a000a7866-en-US">"Record Length"</a>.)</p><p>Values from 3 to 4096 are available in "Manual" mode; in "Advanced" FFT mode, values from 3 to 524288 are available. However, the window length must not be longer than the <a class="xref" href="ca96fb2e83714523.htm#ID_c78dbeda842f47b60a00201901a7bc9d-6731e0a781e124820a001ae7595eefa7-en-US">"FFT Length"</a>.</p><p>If the window length is shorter than the <a class="xref" href="ca96fb2e83714523.htm#ID_c78dbeda842f47b60a00201901a7bc9d-6731e0a781e124820a001ae7595eefa7-en-US">"FFT Length"</a>, the sample data is filled up with zeros up to the FFT length.</p><p>If the window length is longer than the <a class="xref" href="76aaaf0ae5034118.htm#ID_c59eef7485860df60a00206a017c94c2-fe92235c85860df60a00206a000a7866-en-US">"Record Length"</a> (that is, not enough samples are available), a window length the size of the <a class="xref" href="76aaaf0ae5034118.htm#ID_c59eef7485860df60a00206a017c94c2-fe92235c85860df60a00206a000a7866-en-US">"Record Length"</a> is used for calculation.</p><p>The window length and the <a class="xref" href="ee3dc24c44eb47ec.htm#ID_e160d79d842f47b60a002019003e8dc9-8a2ad0b681e0110c0a001ae75e2ce6d1-en-US">"Window Overlap"</a> determine how many FFT calculations must be performed for each record in averaging mode (see <a class="xref" href="0bf1b406e89f44d6.htm#ID_46bee4937f488c400a00201901e16f33-72d1921e81e1a1440a001ae7783118f0-en-US">"Transformation Algorithm"</a>).</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Measurements and Result Displays|Frequency Sweep Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Spectrum Mask</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkId_Spectrum_SEM_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridSEMDiagram">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridSEMResultSummary">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridMSEMDiagram">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridMSEMResultSummary">
+</meta>
+        <meta name="topic-id" value="12708">
+</meta>
+        <meta name="topic-id" value="12709">
+</meta>
+        <meta name="topic-id" value="12710">
+</meta>
+        <meta name="topic-id" value="12711">
+</meta>
+        <meta name="topic-id" value="12712">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e0660ce701e9915c0a00206a01a208df-561f7dc427f7b9e00a00206a01948ff2-en-US;ID_777fecfea8386be00a710a92008c323a-561f7dc427f7b9e00a00206a01948ff2-en-US;ID_cbb8c057a83989a30a710a9200a00027-561f7dc427f7b9e00a00206a01948ff2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/77f44e0d758a4150.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="f3aebef1a77345df.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="b0750db65d1e4303.htm">Frequency Sweep Measurements</a> &gt; <span class="chm-breadcrumb">Spectrum Mask</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor83">
+</a><a name="kanchor84">
+</a><div class="function_heading"><a name="ID_e0660ce701e9915c0a00206a01a208df-561f7dc427f7b9e00a00206a01948ff2-en-US">
+</a><span style="font-weight: bold">Spectrum Mask</span></div><p>Starts the Spectrum Emission Mask (SEM) result display.</p><p>(Note that the application also provides Multi-SEM measurements as a separate measurement. This measurement is basically the same as the SEM measurement, with the difference that it analyzes several sub blocks, each with its own power class definition. The Multi-SEM measurement also supports <a class="xref" href="ebbb0ad1db1840cd.htm#ID_b1dc68966fe64be00a001ae72d834bc9-ea7f42c56fe64be00a001ae706e49077-en-US">Carrier Aggregation</a>.)</p><p>The Spectrum Emission Mask measurement shows the quality of the measured signal by comparing the power values in the frequency range near the carrier against a spectral mask that is defined by the 3GPP specifications. In this way, you can test the performance of the DUT and identify the emissions and their distance to the limit.</p><p>In the diagram, the SEM is represented by a red line. If any measured power levels are above that limit line, the test fails. If all power levels are inside the specified limits, the test is passed. The application labels the limit line to indicate whether the limit check has passed or failed.</p><p>The x-axis represents the frequency with a frequency span that relates to the specified EUTRA/LTE channel bandwidths. On the y-axis, the power is plotted in dBm.</p><div class="block" id="ID_777fecfea8386be00a710a92008c323a-561f7dc427f7b9e00a00206a01948ff2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb5d9908aa83705640a00201901d1166a_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span></p><p><b>Result Summary</b></p><p>The result summary contains the numerical values for the limit check at each check point:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><b>Start / Stop Freq Rel</b><br/>Shows the start and stop frequency of each section of the Spectrum Mask relative to the center frequency.</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><b>RBW</b><br/>Shows the resolution bandwidth of each section of the Spectrum Mask</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><b>Freq at <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Δ</span> to Limit</b><br/>Shows the absolute frequency whose power measurement being closest to the limit line for the corresponding frequency segment.</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><b>Power Abs</b><br/>Shows the absolute measured power of the frequency whose power is closest to the limit. The application evaluates this value for each frequency segment.</li><li style="margin-bottom:0; padding-bottom:0;" value="5"><b>Power Rel</b><br/>Shows the distance from the measured power to the limit line at the frequency whose power is closest to the limit. The application evaluates this value for each frequency segment.</li><li style="margin-bottom:0; padding-bottom:0;" value="6"><b><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Δ</span> to Limit</b><br/>Shows the minimal distance of the tolerance limit to the SEM trace for the corresponding frequency segment. Negative distances indicate that the trace is below the tolerance limit, positive distances indicate that the trace is above the tolerance limit.</li></ul></div><p>Note that when you perform a Multi-SEM measurement, the table is expanded to show information about the subblocks.</p><div class="block" id="ID_cbb8c057a83989a30a710a9200a00027-561f7dc427f7b9e00a00206a01948ff2-en-US"><div class="graphic"><img border="0" src="Resources/Images/img9b4e4067a836e8b40a00201901ca6e84_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div>Remote command: <div class="rcclist_right"><p>Selecting the result display: <a class="xref" href="23560624fdfb49fd.htm#ID_6d705332c1c60ad50a002019006eab7a-8868d3a4c1c60ad50a00201901bbee66-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">CONF:MEAS ESP</a></p><p>Querying results: <a class="xref" href="369791e471b94c54.htm#ID_efd79d176aea50190a00206a00f16fa6-a5c9e00af7244d420a001ae71dc4c412-en-US">TRACe:DATA?</a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

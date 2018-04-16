@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Ranges</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_685b4a66c8f217600a710a31010ac317-184c8906411153460a00206a01532735-en-US;ID_55fadfb53abd11e18c5ba7de3c187abf-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Measurement Ranges</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Measurement Ranges</div><p>You must define three measurement ranges in the R&amp;S FSW VSA application:</p><a name="kanchor331">
+</a><a name="kanchor332">
+</a><a name="kanchor333">
+</a><div class="block"><ul class="list"><li value="1"><b>Capture Buffer Length</b><br/>The length of the capture buffer specifies how many data points are captured during a single VSA measurement.<br/>To measure a bursted signal, define the capture length long enough to ensure that each capture buffer includes at least one entire burst.<br/>The maximum capture buffer length is 50 Msymbols (for a sample rate of 4) or 200 million samples.<br/>If the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (B2000) is active, the capture buffer is restricted to 256,000 samples.</li><li value="2"><b>Result Range</b><br/>The result range defines the symbols from the capture buffer that are to be demodulated and analyzed together.<br/>For example, bursted signals have intervals between the bursts that are not of interest when analyzing peaks or overshoots. Thus, the result range usually coincides with the range of the capture buffer in which the burst is located.<br/>The maximum result range length is 64 000 symbols (for a sample rate of 4) or 256 000 samples.</li><li value="3"><b>Evaluation Range</b><br/>The evaluation range defines the symbols from the result range that are to be included in the evaluation of specific parameters, e.g. error vectors.<br/>For example, you want to display the ramps of a burst and thus include them in the result range. However, they do not contribute to the error vectors or power levels. Thus, you do not include them in the evaluation range.</li></ul></div><div class="block" id="ID_55fadfb53abd11e18c5ba7de3c187abf-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb23e19372ed866430a00206a01acbf2c_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Schematic overview of Capture Length, Result Range, and Evaluation Range</div></div><p>The determined result and evaluation ranges are included in the result displays (where useful) to visualize the basis of the displayed values and traces.</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="bd79fe99c4ec4493.htm" class="chapter_title_toc">Result Range</a></li><li value="2"><a href="551389b8cc864876.htm" class="chapter_title_toc">Evaluation Range</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

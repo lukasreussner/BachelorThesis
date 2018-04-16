@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Processing Oscilloscope Baseband Input" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Sample Rates and  Bandwidths for Oscilloscope Baseband Input</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4b5db741fec0eb580a00201900b2d1f8-7cba7964a0397a3b0a001ae76ace6327-en-US;ID_e2a899a8087a9faf0a710a3100497492-7cba7964a0397a3b0a001ae76ace6327-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="d12186b7258b4ad1.htm">Processing Oscilloscope Baseband Input</a> &gt; <span class="chm-breadcrumb">Sample Rates and Bandwidths for Oscilloscope Baseband Input</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Sample Rates and Bandwidths for Oscilloscope Baseband Input</div><a name="kanchor148">
+</a><a name="kanchor149">
+</a><p>For Oscilloscope Baseband Input, the I and Q data is input using 1, 2 or 4 channels of the oscilloscope. Thus, the usable I/Q bandwidth in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW depends on the bandwidth provided by the oscilloscope.</p><p><b>max. BW<sub>SA</sub></b> = max. BW<sub>osci</sub> (I-channel) + max. BW<sub>osci</sub> (Q-channel) = <b>2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>*<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>max. BW<sub>osci</sub></b></p><p>The usable I/Q bandwidth is the bandwidth range in which the signal remains undistorted in regard to amplitude characteristic and group delay. It is also the range that can be used for accurate analysis by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. The analysis bandwidth and the sample rate are interdependent and are adapted according to the following formula in the I/Q Analyzer:</p><p><span class="input">Sample rate = Analysis bandwidth / 0.8</span></p><p>(For I only: <span class="input">Sample rate = Analysis bandwidth / 0.4</span>)</p><p>However, the maximum user sample rate on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is restricted to 20<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz.</p><p>Furthermore, the actual sample rate required by the application can be lower, in which case the data is downsampled. Depending on the application used to process the data, the required sample rate is defined by the application itself or by the user.</p><div class="block"><div class="subtitle"><a name="ID_e2a899a8087a9faf0a710a3100497492-7cba7964a0397a3b0a001ae76ace6327-en-US">
+</a>Spectrum limits</div></div><p>The spectrum of the Oscilloscope Baseband Input to be analyzed depends both on the analysis bandwidth and on the center frequency, which defines the middle of the spectrum. Thus, always select the maximum analysis bandwidth and the position of the center frequency such that the spectrum remains within the available limits. You are not forced by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to do so, but a warning message is displayed if the limits are exceeded.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

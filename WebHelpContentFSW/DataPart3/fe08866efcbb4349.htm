@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the Pulse Power" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Performing a Pulse Power Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c6ef03f3c1ac7de70a00206a01d8e25f-2ad527833d1da7350a001ae726b844ec-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="e7d33f147d274246.htm">Measuring the Pulse Power</a> &gt; <span class="chm-breadcrumb">Example: Performing a Pulse Power Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Example: Performing a Pulse Power Measurement</div><p>The following example shows a pulse power measurement.</p><div class="verbatim"><pre class="verbatim_text">-----Measurement with synchronization via service request-----
+*ESE 1
+*SRE 32
+// Configures the status reporting system to produce a service request.
+MPOW:FTYP NORM
+//Selects a Gaussian filter for the measurement.
+MPOW 935.2MHZ,1MHZ,434us,VID,50,5us,MEAN,20;
+*OPC
+//Configures and initiates a measurement on 20 pulses with synchronization to the end.
+//Analyzer produces a service request
+//On service request:
+MPOW:RES?
+//Returns the results of the measurements (20 power levels).
+MPOW:RES:MIN?
+//Returns the lowest of the 20 power level that have been measured.
+
+-----Initiliazing the measurement and querying results simultaneously-----
+MPOW? 935.2MHZ,1MHZ,434us,VID,50,5us,MEAN,20
+//Configures, initiates and queries the results of the measurement.
+//Result example:
+-105.225059509,-105.656074524,-105.423065186,-104.374649048,-103.059822083,-101.29511261,
+-99.96534729,-99.7452468872,-99.6610794067,-100.327224731,-100.96686554,-101.450386047,
+-102.150642395,-103.240142822,-105.95476532,-110.583129883,-115.7760849,-126.279388428,
+-124.620399475,-116.97366333
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

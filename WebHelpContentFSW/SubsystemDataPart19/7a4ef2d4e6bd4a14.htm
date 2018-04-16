@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Demodulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]DEMod:FORMat:NSTSindex:MODE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_595a20152f5aacfb0a00206a00ecbe54-7b9243692f5aa4ec0a00206a00636f5b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="ecabe2eae6a345a6.htm">Demodulation</a> &gt; <span class="chm-breadcrumb">[SENSe:]DEMod:FORMat:NSTSindex:MODE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor836">
+</a><a name="kanchor837">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_595a20152f5aacfb0a00206a00ecbe54-7b9243692f5aa4ec0a00206a00636f5b-en-US">
+</a><span class="bold">[SENSe:]DEMod:FORMat:NSTSindex:MODE </span>&lt;Mode&gt;<br/></div><div class="rcdescription"><p>Defines the PPDUs taking part in the analysis depending on their Nsts.</p><p>This command is only available for the <b>IEEE 802.11 ac</b> standard.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Mode&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>FBURst |</nobr> <nobr> ALL |</nobr> <nobr> MEASure |</nobr> <nobr> DEMod</nobr><br/><span class="bold">FBURst<br/></span><p>The Nsts of the first PPDU is detected and subsequent PPDUs are analyzed only if they have the same Nsts (corresponds to "Auto, same type as first PPDU")</p><span class="bold">ALL<br/></span><p>All recognized PPDUs are analyzed according to their individual Nsts (corresponds to "Auto, individually for each PPDU")</p><span class="bold">MEASure<br/></span><p>Only PPDUs with the Nsts specified by <a class="xref" href="f8bd798b2e614c36.htm#ID_07c919132f5aa29a0a00206a00f5db46-3f0fa9e22f5a976f0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>NSTSindex</nobr></a> are analyzed</p><span class="bold">DEMod<br/></span><p>The "Nsts" index specified by <a class="xref" href="f8bd798b2e614c36.htm#ID_07c919132f5aa29a0a00206a00f5db46-3f0fa9e22f5a976f0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>NSTSindex</nobr></a>is used for all PPDUs.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">FBURst</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SENS:DEM:FORM:NSTS:MODE MEAS</span><br/><span class="commandline">SENS:DEM:FORM:NSTS 1</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="0a30ed88b84c49bd.htm#ID_5d9e500d34b411e2aa2aaab3cd47473f-d8e006d37c4158750a00201901359a7d-en-US">"Nsts to use"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

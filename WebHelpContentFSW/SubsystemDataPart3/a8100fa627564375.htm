@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Remote Commands for Analog Demodulation Measurements|Retrieving Results|Retrieving Result Summary Values" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]ADEMod&lt;n&gt;:FM:OFFSet?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b8bb9ccd40e28fd70a00206a015ee7c3-e829e57440e28fd70a00206a000d0cac-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="4777278d10bc498a.htm">Remote Commands for Analog Demodulation Measurements</a> &gt; <a class="chm-breadcrumb" href="9d032f2a9bbb42e3.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="980ed535edc948d7.htm">Retrieving Result Summary Values</a> &gt; <span class="chm-breadcrumb">[SENSe:]ADEMod&lt;n&gt;:FM:OFFSet?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_b8bb9ccd40e28fd70a00206a015ee7c3-e829e57440e28fd70a00206a000d0cac-en-US">
+</a><span class="bold">[SENSe:]ADEMod&lt;n&gt;:FM:OFFSet? </span>&lt;ResultType&gt;<br/></div><div class="rcdescription"><p>This command calculates the FM carrier offset from the currently available measurement data set.</p><p>If averaging has been activated before acquiring the data set (using <a class="xref" href="3d48f43a960b4291.htm#ID_2b4b2d4441160f5b0a710a310183bddb-9e6435fe16974e710a001ae70d3b0303-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]ADEMod&lt;n&gt;:</nobr>​<nobr>FM[:</nobr>​<nobr>TDOMain]:</nobr>​<nobr>RESult?</nobr></a>, the averaged FM offset over several measurements can also be obtained by setting &lt;ResultType&gt; = AVERage.</p><p>The offset thus determined differs from the one calculated by the <a class="xref" href="76ad1c30854e464a.htm#ID_da7e9f4d4b5853100a00206a006c0038-a8a5429b4b5853100a00206a00eec98f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>ADEMod:</nobr>​<nobr>FERRor[:</nobr>​<nobr>RESult&lt;t&gt;]?</nobr></a> command since, for determination of the frequency deviation, the modulation is removed by means of low pass filtering, producing results that are different from those obtained by averaging.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>irrelevant</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Query parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ResultType&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>IMMediate |</nobr> <nobr> AVERage</nobr><br/><span class="bold">IMMediate<br/></span><p>The current measurement results are used to calculate the FM offset</p><span class="bold">AVERage<br/></span><p>The measurement results that were averaged over the given number of measurements are used to calculate the FM offset</p><p>If no average measurement was active during the last measurement sequence only the <span class="command">[SENSe:]ADEMod&lt;n&gt;:FM:OFFSet? IMMediate</span> command will return a correct result (data to calculate the offset are taken from the last measured data set).</p><p><span class="command">[SENSe:]ADEMod&lt;n&gt;:FM:OFFSet? AVERage</span> will cause a query error in this case.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p><span class="command">ADEM:SET 8MHz,32000,EXT,POS,-500,30</span></p><p>Sets up demodulator parameters to execute 30 measurements</p><p><span class="command">ADEM:FM AVER,OFF,OFF</span></p><p>Selects FM results to perform averaging</p><p><span class="command">INIT; WAI</span></p><p>Starts measurement and waits for sync</p><p><span class="command">ADEM:FM:OFFS? IMM</span></p><p>Reads FM offset of last measurement of the sequence of 30</p><p><span class="command">ADEM:FM:OFFS? AVER</span></p><p>Reads FM offset averaged over 30 measurements</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="8f52dee8931b43ba.htm#ID_b3bef695eb380f0f0a00206a006e7f1e-2f8681ebeb380f0f0a00206a005ba262-en-US">"Programming Example"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

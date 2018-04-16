@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|MSRA Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuration</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_27bc2044580fe0640a00206a00850cbc-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_12ece4a6342bec1c0a00206a007d7475-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_ea4050505cf7717b0a00206a01957ecd-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_05efd8d86219c0370a00206a01b78b9e-b6bd877e3300619d0a00206a01ebf9ad-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="7980ab3c417d4f64.htm">MSRA Basics</a> &gt; <span class="chm-breadcrumb">Configuration</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Configuration</div><a name="kanchor93">
+</a><a name="kanchor94">
+</a><div class="block"><div class="subtitle"><a name="ID_12ece4a6342bec1c0a00206a007d7475-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Master parameters</div></div><p>In MSRA mode, only the MSRA Master performs a data acquisition. Thus, all parameters that determine how the I/Q data is captured from the I/Q channel can only be configured in the MSRA Master tab. In all slave application tabs, these settings are deactivated (or have a different meaning).</p><div class="block"><div class="listintro">Typical master parameters include:</div><ul class="list"><li value="1">Sample rate</li><li value="2">Record length</li><li value="3">Bandwidth</li><li value="4">Center frequency</li><li value="5">Reference level</li><li value="6">Trigger settings</li><li value="7">External reference</li><li value="8">Impedance, preamplification, attenuation</li></ul></div><div class="block"><div class="subtitle"><a name="ID_ea4050505cf7717b0a00206a01957ecd-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Channel-specific parameters</div></div><a name="kanchor95">
+</a><a name="kanchor96">
+</a><a name="kanchor97">
+</a><p>Each slave application, however, can define all parameters concerning analysis individually.</p><div class="block"><div class="listintro">Typical channel-specific parameters include:</div><ul class="list"><li value="1">Center frequency, duration and number of trace points for the slave application data extract</li><li value="2">Offset of the slave application data extract from the trigger event</li><li value="3">Evaluation methods</li><li value="4">Range and scaling</li><li value="5">Trace mode</li><li value="6">Marker positions</li></ul></div><div class="block"><div class="subtitle"><a name="ID_05efd8d86219c0370a00206a01b78b9e-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Conflicting parameters</div></div><a name="kanchor98">
+</a><p>Master and channel-specific parameters can be configured independantly of one another, in any order that is convenient to you. However, there are dependencies between the parameters, as the slave applications can only evaluate data that has been captured by the MSRA Master previously. Thus, configuring parameters is not restricted, but you are informed about the violation of possible restrictions by error messages in the status bar of the slave applications where necessary.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

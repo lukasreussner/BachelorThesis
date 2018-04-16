@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics|Signal Processing for MIMO Measurements (IEEE 802.11ac, n)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Calculating Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3a362cb42de47a4d0a001ae72862cb5b-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_3ad04310a089647e0a00206a00a665a0-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_8ca7bf162de47a4d0a001ae76e14d813-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_4c2306ae2de47a4d0a001ae738f0906f-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_29906b1a2de47a4d0a001ae72b5a6959-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_8bd0ed0832cef6c10a001ae730118b82-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_beb16e2232cef6c10a001ae77f1e6e49-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="6dff20d6bdc14ea6.htm">Signal Processing for MIMO Measurements (IEEE 802.11ac, n)</a> &gt; <span class="chm-breadcrumb">Calculating Results</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Calculating Results</div><p>When you analyze a WLAN signal in a MIMO setup, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW acts as the receiving device. Since most measurement results have to be calculated at a particular stage in the processing chain, the R&amp;S FSW WLAN application has to do the same decoding that the receive antenna does.</p><p>The following diagram takes a closer look at the processing chain and the results at its individual stages.</p><div class="block" id="ID_3ad04310a089647e0a00206a00a665a0-a152f5e2a64dafbf0a002019017fdb4d-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgfda08e9032e69c040a001ae754607ba9_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Results at individual processing stages</div></div><div class="block"><div class="subtitle"><a name="ID_8ca7bf162de47a4d0a001ae76e14d813-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a>Receive antenna results</div></div><div class="block"><div class="listintro">The R&amp;S FSW WLAN application can determine receive antenna results directly from the captured data at the receive antenna, namely:</div><ul class="list"><li value="1">PPDU Power</li><li value="2">Crest factor</li></ul></div><p>For all other results, the R&amp;S FSW WLAN application has to revert the processing steps to determine the signal characteristics at those stages.</p><div class="block"><div class="subtitle"><a name="ID_4c2306ae2de47a4d0a001ae738f0906f-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a>Transmit antenna results (based on the physical channel)</div></div><div class="block"><div class="listintro">If the R&amp;S FSW WLAN application can determine the physical channel (see <a class="xref" href="9e89f4420acd4901.htm#ID_7a6ee1f87e2b02db0a710a3100ec0576-a152f5e2a64dafbf0a002019017fdb4d-en-US">"Physical vs Effective Channels"</a>), it can evaluate the following results:</div><ul class="list"><li value="1">Channel Flatness (based on the physical channel)</li><li value="2">Group Delay (based on the physical channel)</li><li value="3">I/Q Offset</li><li value="4">Quadrature Offset</li><li value="5">Gain Imbalance</li></ul></div><div class="block"><div class="subtitle"><a name="ID_29906b1a2de47a4d0a001ae72b5a6959-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a>Space-time stream results (based on the effective channel)</div></div><div class="block"><div class="listintro">If the application knows the effective channel (see <a class="xref" href="9e89f4420acd4901.htm#ID_7a6ee1f87e2b02db0a710a3100ec0576-a152f5e2a64dafbf0a002019017fdb4d-en-US">"Physical vs Effective Channels"</a>), it can evaluate the following results:</div><ul class="list"><li value="1">Channel Flatness (based on the effective channel)</li><li value="2">Group Delay (based on the effective channel)</li><li value="3">EVM of pilot carriers</li><li value="4">Constellation of pilot carriers</li><li value="5">Bitstream of pilot carriers</li></ul></div><div class="block"><div class="subtitle"><a name="ID_8bd0ed0832cef6c10a001ae730118b82-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a>Spatial stream results</div></div><div class="block"><div class="listintro">If space-time encoding is implemented, the demodulated data must first be decoded to determine the following results:</div><ul class="list"><li value="1">EVM of data carriers</li><li value="2">Constellation diagram</li><li value="3">Bitstream</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The <em>pilot</em> carriers are inserted directly after the data carriers went through the STBC (see also <a class="xref" href="923edec80b604db1.htm#ID_1925e3002de47a4d0a001ae716190ba1-a152f5e2a64dafbf0a002019017fdb4d-en-US">"Space-Time Block Coding (STBC)"</a>). Thus, only the data carriers need to be decoded by the analyzer to determine characteristics of the demodulated data. Because of this approach to calculate the EVM, Constellation and Bitstream results, you might get results for a different number of streams for pilots and data carriers if STBC is applied.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

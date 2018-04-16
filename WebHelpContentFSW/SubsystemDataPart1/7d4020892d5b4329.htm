@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Configuring I/Q Analyzer Measurements|Configuring Data Acquisition" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe:IQ:WBANd:MBWidth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0ef74a2ec7a640660a00206a005380a0-8a9dbd3940052bb70a00201901628666-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="245b36a17e924f58.htm">Configuring I/Q Analyzer Measurements</a> &gt; <a class="chm-breadcrumb" href="5b7691ae43a34258.htm">Configuring Data Acquisition</a> &gt; <span class="chm-breadcrumb">TRACe:IQ:WBANd:MBWidth</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_0ef74a2ec7a640660a00206a005380a0-8a9dbd3940052bb70a00201901628666-en-US">
+</a><span class="bold">TRACe:IQ:WBANd:MBWidth </span>&lt;Limit&gt;<br/></div><div class="rcdescription"><p>Defines the maximum analysis bandwidth. Any value can be specified; the next higher fixed bandwidth is used.</p><p>Defining a value other than "MAX" is useful if you want to specify the sample rate directly and at the same time, ensure a minimum bandwidth is available.</p><p>(See <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a>).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Limit&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">80 MHz<br/></span><p>Restricts the analysis bandwidth to a maximum of 80<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p><p>The bandwidth extension option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320/-B512/-B1200/-B2001 is deactivated.</p><p><a class="xref" href="a46cdc224a6049bd.htm#ID_0ef74a2ec7a640660a00206a005380a0-1650ab67c7a640660a00206a004ed53d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>WBANd[:</nobr>​<nobr>STATe]</nobr></a> is set to OFF.</p><span class="bold">160 MHz<br/></span><p>Restricts the analysis bandwidth to a maximum of 160 MHz. The bandwidth extension option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B320 is deactivated.</p><p>(Not available or required if bandwidth extension option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B512 is installed.)</p><p><a class="xref" href="a46cdc224a6049bd.htm#ID_0ef74a2ec7a640660a00206a005380a0-1650ab67c7a640660a00206a004ed53d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>WBANd[:</nobr>​<nobr>STATe]</nobr></a> is set to ON.</p><span class="bold">1200 MHz | 500 MHz | 320 MHz | MAX<br/></span><p>All installed bandwidth extension options are activated. The currently available maximum bandwidth is allowed.</p><p>(See <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a>).</p><p><a class="xref" href="a46cdc224a6049bd.htm#ID_0ef74a2ec7a640660a00206a005380a0-1650ab67c7a640660a00206a004ed53d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>WBANd[:</nobr>​<nobr>STATe]</nobr></a> is set to ON.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">maximum available</td></tr><tr valign="top"><td class="rc_col_content_left_100"><span>Default unit: </span></td><td class="rc_col_content_right">Hz</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC:IQ:WBAN:MBW 82 MHZ</span><br/><span class="commandline">TRAC:IQ:WBAN:MBW?</span><br/><p>Result if R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320 is active:</p><span class="commandline">160000000</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC:IQ:WBAN:MBW 82 MHZ</span><br/><span class="commandline">TRAC:IQ:WBAN:MBW?</span><br/><p>Result if R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B512 is active:</p><span class="commandline">512000000</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="b6e3f0af55904625.htm#ID_dd04af84858417880a00206a017068bc-e9790ae8858417880a00206a00ec41a4-en-US">"Maximum Bandwidth"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

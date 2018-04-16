@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Examples|Measurement Example 1: Continuous QPSK Signal" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Navigating Through the Capture Buffer</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4441f1022ad553ec0a710a3100814c78-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_4eba11c52b1e08080a00206a0028499e-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_07430b0fa9ee0fbf0a00206a00725a3f-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_acf907932b1e08080a00206a00f92841-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_d1ccd87e270811e1878ebdc795396de1-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_e71df8ef2b1e08080a00206a01c1ca0e-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_fece8956a9ee0fbf0a00206a01c75081-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_b3cdd8b2a5bc579c0a00206a00781d2a-7c60cc67410fd4a60a00206a01c84e65-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ddfa726bcfd3409b.htm">Measurement Examples</a> &gt; <a class="chm-breadcrumb" href="c1ef7c4cdf114587.htm">Measurement Example 1: Continuous QPSK Signal</a> &gt; <span class="chm-breadcrumb">Navigating Through the Capture Buffer</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor986">
+</a><a name="kanchor987">
+</a><div class="chm-chaptertitle">Navigating Through the Capture Buffer</div><p>Using the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW VSA application you can navigate through the capture buffer, i.e. control which part of the capture buffer is currently analyzed. (Note: In the Spectrum application, this functionality is referred to as "gating".)</p><div class="block"><a name="ID_4eba11c52b1e08080a00206a0028499e-7c60cc67410fd4a60a00206a01c84e65-en-US">
+</a><div><ol class="procedure"><li id="ID_07430b0fa9ee0fbf0a00206a00725a3f-7c60cc67410fd4a60a00206a01c84e65-en-US" value="1"><p>In the measurement display, take a closer look at window 3 (magnitude of the capture buffer). The green bar shows how far the current measurement has already proceeded, i.e. how much of the signal has been evaluated.</p><div class="block" id="ID_acf907932b1e08080a00206a00f92841-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img88be1b4f2b010a730a00206a0037e5f0_1_--_--_PNG96Small.png" alt="" title=""/></div></div></li><li id="ID_d1ccd87e270811e1878ebdc795396de1-7c60cc67410fd4a60a00206a01c84e65-en-US" value="2"><p>Press the [Run Single] key.</p><p>Since the signal you are currently analyzing is continuous (as opposed to containing bursts), the entire capture buffer is analyzed, and hence will be marked with the green bar. The last evaluated result range (i.e. the currently evaluated result range at the time the measurement stopped) is highlighted in blue.</p><div class="block" id="ID_e71df8ef2b1e08080a00206a01c1ca0e-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img4c7f3cc62b0133670a00206a00527561_1_--_--_PNG96Small.png" alt="" title=""/></div></div></li><li id="ID_fece8956a9ee0fbf0a00206a01c75081-7c60cc67410fd4a60a00206a01c84e65-en-US" value="3"><p>To go back to a previously evaluated result range within the same capture buffer, press the [SWEEP] key and then the "Select Result Rng" softkey. By selecting different result ranges (for example using the rotary knob), you can move the highlighted blue area through the capture buffer and choose your currently demodulated result range.</p><div class="block" id="ID_b3cdd8b2a5bc579c0a00206a00781d2a-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img520566dea5a860db0a00206a009770f6_2_--_--_PNG96Small.png" alt="" title=""/></div></div><p>The results for this range are displayed in the "Current" column in the Result Summary, in the eye diagram and in the symbol table.</p><p>Note: Generally, all Clear/Write traces and the are affected by this selection.</p></li></ol></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Uplink (R&amp;S FSW-K10x)|Remote Control|Remote Commands to Read Trace Data|Using the TRACe[:DATA] Command" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_ul.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Allocation Summary</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6336ce646aea50090a00206a0037629d-a4cec43eedded1ab0a001ae75e30457d-en-US;ID_5ffbfc2c70e49c970a710a9200e119ec-a4cec43eedded1ab0a001ae75e30457d-en-US;ID_794c690870f61c010a00206a00913735-a4cec43eedded1ab0a001ae75e30457d-en-US;ID_dd419924c2d836480a001ae7230fce18-a4cec43eedded1ab0a001ae75e30457d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_ul/Content/c9592b7f976f4fd1.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Uplink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="bc0d94796c044974.htm">Remote Control</a> &gt; <a class="chm-breadcrumb" href="69d91f1935a94c03.htm">Remote Commands to Read Trace Data</a> &gt; <a class="chm-breadcrumb" href="a3be2c5d68224335.htm">Using the TRACe[:DATA] Command</a> &gt; <span class="chm-breadcrumb">Allocation Summary</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Allocation Summary</div><p>For the Allocation Summary, the command returns seven values for each line of the table.</p><p><span class="command">&lt;subframe&gt;, &lt;allocation ID&gt;, &lt;number of RB&gt;, &lt;offset RB&gt;, &lt;modulation&gt;, &lt;absolute power&gt;, &lt;EVM&gt;, ...</span></p><p>The unit for <span class="command">&lt;absolute power&gt;</span> is always dBm. The unit for <span class="command">&lt;EVM&gt;</span> depends on <a class="xref" href="5580ffc8ec8d4ed5.htm#ID_415c9b0ce2a352ef0a00206a013e7f53-241386f3e2a352ef0a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>UNIT:</nobr>​<nobr>EVM</nobr></a>. All other values have no unit.</p><p>The <span class="command">&lt;allocation ID&gt;</span> and <span class="command">&lt;modulation&gt;</span> are encoded. For the code assignment see <a class="xref" href="6fd26dc070af4021.htm#ID_5486ffd66aea50190a00206a00d91c99-677e2c660540a5b50a001ae74d4f4dcf-en-US">"Return Value Codes"</a>.</p><p>Note that the data format of the return values is always ASCII.</p><div class="block"><span class="bold"><a name="ID_5ffbfc2c70e49c970a710a9200e119ec-a4cec43eedded1ab0a001ae75e30457d-en-US">
+</a>Example: </span><div class="block" id="ID_794c690870f61c010a00206a00913735-a4cec43eedded1ab0a001ae75e30457d-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7c744d2970e19ab50a00206a01565779_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p><span class="command">TRAC:DATA? TRACE1</span> would return:</p><div class="verbatim"><pre class="verbatim_text">0, -40, 10, 2, 2, -84.7431947342849, 2.68723483754626E-06,
+0, -41, 0, 0, 6, -84.7431432845264, 2.37549449584568E-06,
+0, -42, 0, 0, 6, -80.9404231343884, 3.97834623871343E-06,
+...</pre></div></div><div class="block"><div class="subtitle"><a name="ID_dd419924c2d836480a001ae7230fce18-a4cec43eedded1ab0a001ae75e30457d-en-US">
+</a>Additional information "ALL"</div></div><p>The allocation summary contains additional lines "ALL" that summarize the number of RB analyzed in each subframe and the average EVM measured in that subframe. This information is added to the return values after all allocations of the subframe have been returned. The "ALL" information has the allocation ID code "-2".</p><p>In addition, there is a line at the end of the allocation summary that shows the average EVM over all analyzed subframes. This information is also added as the last return values. The "ALL" information has the subframe ID and allocation ID code "-2".</p><p>A query result would thus look like this, for example:</p><div class="verbatim"><pre class="verbatim_text">
+//For subframe 0:
+0, -40, 10, 2, 2, -84.7431947342849, 2.68723483754626E-06,
+0, -41, 0, 0, 6, -84.7431432845264, 2.37549449584568E-06,
+(...)
+//ALL for subframe 0:
+0,-2,20,,,,2.45581475911678E-06
+//For subframe 1:
+1, -40, 10, 2, 2, -84.7431947342849, 2.68723483754626E-06,
+1, -41, 0, 0, 6, -84.7431432845264, 2.37549449584568E-06,
+(...)
+//ALL for subframe 1:
+1,-2,20,,,,2.45581475911678E-06
+(...)
+//ALL for all subframes
+-2,-2,,,,,2.13196434228374E-06</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Configuration|Pulse Measurement Settings|Measurement Point" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reference for Pulse-Pulse Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="ePMSkIdMeasPoints_PP_me_RPM">
+</meta>
+        <meta name="topic-keyword" value="ePMSkIdMeasPoints_PP_me_RPP">
+</meta>
+        <meta name="topic-id" value="794">
+</meta>
+        <meta name="topic-id" value="796">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8d3d1468a92f7aaa0a710ade01ee7422-a24b39e56a7935640a00206a008708a7-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="097edb5d42b1424f.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="755f1a94c95e4e72.htm">Pulse Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="eaf71a4cb9a0439e.htm">Measurement Point</a> &gt; <span class="chm-breadcrumb">Reference for Pulse-Pulse Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor518">
+</a><a name="kanchor519">
+</a><a name="kanchor520">
+</a><div class="function_heading"><a name="ID_8d3d1468a92f7aaa0a710ade01ee7422-a24b39e56a7935640a00206a008708a7-en-US">
+</a><span style="font-weight: bold">Reference for Pulse-Pulse Measurements</span></div><p>Reference pulse on which relative pulse results are based (e.g. for traces normalized to reference pulse, see <a class="xref" href="2a8fa2932d954d9b.htm#ID_1151e116a88690930a001ae7265a924c-77f58b7b6bc89ad60a00206a008ec9e8-en-US">"Normalizing Traces"</a>).</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Fixed"</p></td><td class="function_col_right"><p>A fixed pulse number</p><p>Relative results for the specified pulse number itself are not valid and are indicated as "...".</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Selected"</p></td><td class="function_col_right"><p>The currently selected pulse (see <a class="xref" href="e69afb8dba054d43.htm#ID_c87b1386b84811e0b10fe4c3e6c9de55-ada6499374bc0a560a00206a01dc09f3-en-US">"Pulse Selection"</a>)</p><p>Relative results for the selected pulse itself are not valid and are indicated as "...".</p><p>If you change the value for the reference pulse here, the <a class="xref" href="e69afb8dba054d43.htm#ID_c87b1386b84811e0b10fe4c3e6c9de55-ada6499374bc0a560a00206a01dc09f3-en-US">"Pulse Selection"</a> value is adapted accordingly, and vice versa.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Before Pulse"</p></td><td class="function_col_right"><p>The nth pulse before the currently evaluated pulse, where n is the specified number</p><p>No values are available for the first n pulses, as no valid reference pulse is available. These results are indicated as "...".</p><p>For example, a value of 2 will use row 1 as the reference row for Pulse-Pulse results for pulse number 3. In this case, pulse numbers 1 and 2 will not have a valid reference row and the Pulse-Pulse results will be invalid for these rows.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"After Pulse"</p></td><td class="function_col_right"><p>The nth pulse after the currently evaluated pulse, where n is the specified number</p><p>No values are available for the last n pulses, as no valid reference pulse is available. These results are indicated as "...".</p><p>For example, a value of 2 will use row 5 as the reference row for Pulse-Pulse results for pulse number 3. In this case, the last two pulse rows will not have a valid reference row and the Pulse-Pulse results will be invalid for these rows.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="4bc1f069b4ac4869.htm#ID_b7193605b5f990c40a001ae77cff117a-c85b5f7fb5f98fe90a001ae71f12f61a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SENSe:</nobr>​<nobr>TRACe:</nobr>​<nobr>MEASurement:</nobr>​<nobr>DEFine:</nobr>​<nobr>PULSe:</nobr>​<nobr>REFerence:</nobr>​<nobr>POSition</nobr></a></p><p><a class="xref" href="b874df9f650c49c3.htm#ID_623cc751b5f9927a0a001ae733432b85-6b0c6c20b5f9918f0a001ae71f12f61a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SENSe:</nobr>​<nobr>TRACe:</nobr>​<nobr>MEASurement:</nobr>​<nobr>DEFine:</nobr>​<nobr>PULSe:</nobr>​<nobr>REFerence</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

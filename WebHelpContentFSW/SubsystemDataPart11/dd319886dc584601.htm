@@ -1,0 +1,81 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Remote Commands to Perform Transient Analysis|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Performing a Basic Transient Analysis Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_921f48e7fe3822240a001ae70acd8181-d6c21068fdef31600a001ae74316722d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="b3c74aa8fd9f42ae.htm">Remote Commands to Perform Transient Analysis</a> &gt; <a class="chm-breadcrumb" href="ee6c620ea0994dba.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Programming Example: Performing a Basic Transient Analysis Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor930">
+</a><a name="kanchor931">
+</a><div class="chm-chaptertitle">Programming Example: Performing a Basic Transient Analysis Measurement</div><p>This example demonstrates how to perform a basic transient analysis measurement for an unknown signal in a remote environment.</p><pre class="verbatim" xml:space="preserve">//----------- Preparing the measurement ------------
+//Reset the instrument
+*RST
+//Activate the transient analysis application
+INST:SEL 'TA'
+
+//-----------Configuring the measurement -----------
+//Set the center frequency
+FREQ:CENT 1GHz
+
+// Configure a power trigger to detect transient power effects
+TRIG:SEQ:SOUR IFP
+TRIG:SEQ:LEV:IFP -50dBm
+
+//Configure data acquisition for 5 ms in a 80 MHz bandwidth
+BAND:DEM 80MHz
+MTIM 5ms
+
+//----------- Configuring the results -------------------------------
+//Result displays (default):
+//upper row: (1)RF Spectrum (2)FM Time Domain
+//bottom row: (3)Spectrogram (4)RF Power Time Domain
+
+//Configure RF Power Time Domain: automatic scaling
+DISP:WIND4:TRAC:Y:SCAL:AUTO ON
+
+//Configure Spectrogram: MAX detector, GAUSS window function;
+// Query number of bins
+SENS:WIND3:SGR:DET:FUNC MAX
+SWE:FFT:WIND:TYPE GAUS
+SWE:FFT:WIND:LENG?
+
+//-----------Performing the Measurement-----
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and waits until the sweep has finished. 
+INIT;*WAI
+
+//-----------Retrieving Results-------------
+//Retrieve trace data for RF Power Time Domain
+TRAC1:DATA? TRACe1
+TRAC1:DATA:X? TRACe1
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

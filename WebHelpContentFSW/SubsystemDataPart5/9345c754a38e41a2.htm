@@ -1,0 +1,89 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)|Remote Commands to Perform VOR/ILS Measurements|Programming Examples: Performing VOR/ILS Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k15.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Performing  an ILS Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9c169a3e202cbf800a001ae762bb03a6-4f4d884489bde5740a001ae73dce63e5-en-US;ID_2d8ab37624723a360a001ae7760a2639-4f4d884489bde5740a001ae73dce63e5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k15/Content/9345c754a38e41a2.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)</a> &gt; <a class="chm-breadcrumb" href="9b58c4770fd2437f.htm">Remote Commands to Perform VOR/ILS Measurements</a> &gt; <a class="chm-breadcrumb" href="d3aba6b04c67403a.htm">Programming Examples: Performing VOR/ILS Measurements</a> &gt; <span class="chm-breadcrumb">Programming Example: Performing an ILS Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor328">
+</a><a name="kanchor329">
+</a><div class="chm-chaptertitle">Programming Example: Performing an ILS Measurement</div><p>This example demonstrates how to perform an ILS measurement in a remote environment.</p><div class="block"><div class="listintro">The following prerequisites are assumed concerning the input signal:</div><ul class="list"><li value="1">ILS localizer signal with a carrier frequency of 108.1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, level of -10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dBm</li><li value="2">DDM, SDM, phase between 90<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz and 150<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz signal irrelevant</li><li value="3">IDENT signal: On, morse coding on, repetition rate of 7<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>seconds or shorter, standard-conform timing</li></ul></div><div class="block" id="ID_2d8ab37624723a360a001ae7760a2639-4f4d884489bde5740a001ae73dce63e5-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb900b160246d70590a001ae77aab28fe_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Results of the remote ILS measurement</div></div><div class="verbatim"><pre class="verbatim_text">//-----------Preparing the instrument ------------
+//Reset the instrument
+*RST
+//Activate the Avionics measurement application
+INST:SEL AVI
+//Select the ILS measurement
+CALC:AVI:STAN ILS
+
+//-----------Configuring the measurement ------------
+//Configure the center frequency and reference level
+FREQ:CENT 108MHZ
+DISP:TRAC:Y:SCAL:RLEV -10DBM
+
+//Define a demod BW of 12.5 kHz and a meas time of 8 s.
+ADEM:BWID:DEM:AUTO OFF
+ADEM:BWID:DEM 12500
+SWE:TIME:AUTO OFF
+SWE:TIME 8S
+//Query the resulting RBW
+ADEM:SPEC:BWID?
+//Result: 1.0 Hz
+
+//Display the distortion summary in addition to the 3 default windows:
+//1: top left:    Signal Summary      2: top right:    Result Summary
+//3: bottom left: Modulation Spectrum 4: bottom right: Distortion Summary
+LAY:ADD:WIND? '3',RIGH,DSUM
+//Result: '4' (window name)
+
+
+//--------------Performing the Measurement-----
+//Select single sweep mode
+INIT:CONT OFF
+
+//Initiate a new measurement and wait until the sweep has finished
+INIT;*WAI
+
+//---------------Retrieving Results-------------
+
+//Query the morse code of the demodulated identifier
+CALC:AVI:AM:CODE?
+//Query the AM frequency of the identifier signal
+CALC:AVI:AM:FREQ? 'ID'
+//Query the amplitude mod. depth of 90 HZ AM component
+CALC:AVI:AM:DEPT? '90'
+//Query the phase angle between 90 HZ AM &amp; 150 Hz AM signals
+CALC:AVI:PHAS?
+//Query the difference in mod.depth between 90 HZ AM &amp; 150 Hz AM signals (ILS DDM)
+CALC:AVI:DDM?
+//Set the maximum frequency to be used for calculating THD results
+CALC:AVI:THD:FREQ:UPP 271
+//Query the total harmonic distortion of the 90 Hz AM component
+CALC:AVI:THD? '90'
+
+//Calculate the distortion for the fourth harmonic of the 90 Hz AM component
+//Note: It is recommended that you turn off the IDENT signal for accurate results
+//Set the marker H1 (harmonic frequency) to 4*90 = 360 Hz
+CALC:AVI:SHD:FREQ 360HZ
+//Set the fundamental frequency to 90 Hz
+CALC:AVI:THD:FREQ:FUND '90'
+//Query the distortion
+CALC:AVI:SHD:RES?
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

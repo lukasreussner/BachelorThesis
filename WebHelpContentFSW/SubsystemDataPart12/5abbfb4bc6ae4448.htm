@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Signal Model, Estimation and Modulation Errors|FSK Modulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Estimation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3ab1cc865defa47e0a710a3101c16bbe-184c8906411153460a00206a01532735-en-US;ID_547acc350b54e9dd0a710a92000dd75f-184c8906411153460a00206a01532735-en-US;ID_5d06e2181a7c209e0a00206a014580ca-184c8906411153460a00206a01532735-en-US;ID_33fee72e1a7c209e0a00206a000a7b8f-184c8906411153460a00206a01532735-en-US;ID_fc3c83790b5fa4530a710a920144e406-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="a261ad0bf05c48c0.htm">Signal Model, Estimation and Modulation Errors</a> &gt; <a class="chm-breadcrumb" href="7f676bef2de94124.htm">FSK Modulation</a> &gt; <span class="chm-breadcrumb">Estimation</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor326">
+</a><a name="kanchor327">
+</a><div class="chm-chaptertitle">Estimation</div><p>The estimation of the distortion parameters listed previously is performed separately for the magnitude and phase/frequency distortions, as illustrated in <a class="xref" href="#ID_547acc350b54e9dd0a710a92000dd75f-184c8906411153460a00206a01532735-en-US">Figure "FSK Estimation Strategy"</a>. Note that the estimation of the timing offset is performed only on the frequency of the signal, as the reference magnitude is assumed to be constant over the estimation range. For details on the estimation range, see <a class="xref" href="c9352f8e8b9c47d4.htm#ID_73ef54425dee7e4e0a00206a00145a4a-184c8906411153460a00206a01532735-en-US">"Estimation ranges"</a>.</p><div class="block" id="ID_547acc350b54e9dd0a710a92000dd75f-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img3d0b73be0b541dbd0a00206a0009ea10_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">FSK Estimation Strategy</div></div><p>In <a class="xref" href="#ID_547acc350b54e9dd0a710a92000dd75f-184c8906411153460a00206a01532735-en-US">Figure "FSK Estimation Strategy"</a>    <span class="input">MEAS(n)</span> denotes the sampled (complex baseband) measured signal waveform. The magnitude samples are denoted <span class="input">A<sub>MEAS</sub>(n)</span>, while the instantaneous frequency samples of the measured and reference signals are denoted by <span class="input">f<sub>MEAS</sub>(n)</span> and <span class="input">f<sub>REF</sub>(n)</span> respectively. The dashed outline of the "Meas Filter" block indicates that this operation is optionally (de-) activated based on the corresponding user settings (see <a class="xref" href="16d4ad71b3264713.htm#ID_ba53bc0b07f6f2a80a710a3101b6d37d-98ce8ff6410963710a00206a00a7855c-en-US">"Type"</a> ).</p><p>For the estimation of the magnitude parameters, the following least-squares criterion is minimized regarding the model parameters <span class="input">K</span> and <span class="input"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">⍺</span></span>:</p><div class="block" id="ID_5d06e2181a7c209e0a00206a014580ca-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7e1a6b841a7013010a00206a0060f27c_1_--_--_PNG96.png" alt="" title=""/></div></div><p>Where <span class="input">T<sub>E</sub></span> denotes the sampling period used for estimation (see <a class="xref" href="0a552613c9684c67.htm#ID_83ba2ac6819f13120a00206a002792b9-98ce8ff6410963710a00206a00a7855c-en-US">"Estimation Points/Sym"</a>)</p><p>For estimation of the frequency parameters, the following least-squares criterion is minimized regarding the model parameters <span class="input">B</span>, <span class="input">f<sub>0</sub></span>, <span class="input">f<sub>d</sub></span> and <span class="input"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">τ</span></span>:</p><div class="block" id="ID_33fee72e1a7c209e0a00206a000a7b8f-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgcf57de961a7384e10a00206a00665c28_1_--_--_PNG96.png" alt="" title=""/></div></div><p>The term denotes the reference instantaneous frequency with a (possibly fractional) delay of samples.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>For FSK modulation, the default sampling period used for estimation is the capture sampling period.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

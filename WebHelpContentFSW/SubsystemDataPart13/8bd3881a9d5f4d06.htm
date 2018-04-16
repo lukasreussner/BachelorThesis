@@ -1,0 +1,83 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Configuration|Code Domain Analysis|Trigger Settings|Trigger Source|Trigger Source" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		IF Power
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTriggerSourceIFPower">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerSourcePVTIFPower">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerSourcePVTIFPower">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerSourceCDAIFPower">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdIqTriggerSourceIFPower">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodTriggerSourceIFPower">
+</meta>
+        <meta name="topic-id" value="560">
+</meta>
+        <meta name="topic-id" value="562">
+</meta>
+        <meta name="topic-id" value="564">
+</meta>
+        <meta name="topic-id" value="566">
+</meta>
+        <meta name="topic-id" value="568">
+</meta>
+        <meta name="topic-id" value="570">
+</meta>
+        <meta name="topic-id" value="572">
+</meta>
+        <meta name="topic-id" value="574">
+</meta>
+        <meta name="topic-id" value="576">
+</meta>
+        <meta name="topic-id" value="578">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9aae69920fd872d10a00206a00f5a9a7-bf3a61f20fd872d10a00206a00554bda-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="65de425abc0545d9.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="d482b8f2bbfc4587.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="0c0ef7d22fe74a31.htm">Trigger Settings</a> &gt; <a class="chm-breadcrumb" href="51e861bc84fb4834.htm">Trigger Source</a> &gt; <a class="chm-breadcrumb" href="b80acb08b5c243bc.htm">Trigger Source</a> &gt; <span class="chm-breadcrumb">IF Power</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor365">
+</a><a name="kanchor366">
+</a><a name="kanchor367">
+</a><div class="function_heading"><a name="ID_9aae69920fd872d10a00206a00f5a9a7-bf3a61f20fd872d10a00206a00554bda-en-US">
+</a><span style="font-weight: bold">IF Power</span></div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW starts capturing data as soon as the trigger level is exceeded around the third intermediate frequency.</p><p>For frequency sweeps, the third IF represents the start frequency. The trigger bandwidth at the third IF depends on the RBW and sweep type.</p><p>For measurements on a fixed frequency (e.g. zero span or I/Q measurements), the third IF represents the center frequency.</p><p>This trigger source is only available for RF input.</p><p>This trigger source is available for frequency and time domain measurements only.</p><p>It is not available for input from the optional Digital Baseband Interface or the optional Analog Baseband Interface.</p><p>The available trigger levels depend on the RF attenuation and preamplification. A reference level offset, if defined, is also considered.</p><p>For details on available trigger levels and trigger bandwidths, see the data sheet.</p>Remote command: <div class="rcclist_right"><p><span class="command">TRIG:SOUR IFP</span>, see <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SOURce</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

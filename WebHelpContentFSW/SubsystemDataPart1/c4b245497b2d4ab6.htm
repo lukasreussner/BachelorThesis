@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Annex" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reference: Format Description for I/Q Data Files</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_89442dc37709f4830a00206a000823e3-57f63a0a7709f4830a00206a006c29d8-en-US;shiv_6a_remote_commands_8089-57f63a0a7709f4830a00206a006c29d8-en-US;shiv_6a_remote_commands_8091-57f63a0a7709f4830a00206a006c29d8-en-US;shiv_6a_remote_commands_8093-57f63a0a7709f4830a00206a006c29d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="d144963e79841.htm">Annex</a> &gt; <span class="chm-breadcrumb">Reference: Format Description for I/Q Data Files</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1215">
+</a><a name="kanchor1216">
+</a><a name="kanchor1217">
+</a><a name="kanchor1218">
+</a><div class="chm-chaptertitle">Reference: Format Description for I/Q Data Files</div><p>This section describes how I/Q data is transferred to the memory during remote control (see <a class="xref" href="e410001c611a4212.htm#shiv_6a_remote_commands_8077-8e1a5ccb57ddb4450a00206a00ba1dc2-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>DATA:</nobr>​<nobr>FORMat</nobr></a> command).</p><p>For details on the format of the individual values, see <a class="xref" href="e20ce7cc11cb4dfb.htm#ID_d3cb362553c02aa80a00206a009fa2e9-4bb2538753c02aa80a00206a008089fc-en-US">"Formats for Returned Values: ASCII Format and Binary Format"</a>.</p><p>For details on the format of I/Q export files (using the <a class="xref" href="54c1cada17ed40d1.htm#ID_a7bd0bab7bc9c6600a00206a01d95b28-60cb2e797bc9c6600a00206a00efdb8a-en-US">"I/Q Export"</a> function), see <a class="xref" href="093e11648f9c46e1.htm#ID_b8eed8e37ba899de0a00206a00e743a8-2e8d3b527ba899de0a00206a010acc15-en-US">"I/Q Data File Format (iq-tar)"</a>.</p><div class="block" id="shiv_6a_remote_commands_8089-57f63a0a7709f4830a00206a006c29d8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img19ad3cb29fdb1f400a00206a01e5214d_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">I/Q data formats</div></div><p><b>Note</b>: 512k corresponds to 524288 samples</p><p>For maximum performance, the formats "Compatible" or "IQPair" should be used. Furthermore, for large amounts of data, the data should be in binary format to improve performance.</p><p>In binary format, the number of I- and Q-data can be calculated as follows:</p><div class="block" id="shiv_6a_remote_commands_8091-57f63a0a7709f4830a00206a006c29d8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img9c5751c99fdb1ffb0a00206a01e5214d_1_--_--_PNG96Small.png" alt="" title=""/></div></div><p>For the format "QBLock", the offset of Q-data in the output buffer can be calculated as follows:</p><div class="block" id="shiv_6a_remote_commands_8093-57f63a0a7709f4830a00206a006c29d8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img9c0a57849fdb20a70a00206a01e5214d_1_--_--_PNG96Small.png" alt="" title=""/></div></div><p>with "LengthIndicatorDigits" being the number of digits of the length indicator including the #. In the example above (#41024…), this results in a value of 6 for "LengthIndicatorDigits" and the offset for the Q-data results in 512 + 6 = 518.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

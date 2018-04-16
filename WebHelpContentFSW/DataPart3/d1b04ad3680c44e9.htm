@@ -1,0 +1,126 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the Channel Power and ACLR|Programming Examples for Channel Power Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Configuring and Performing an MSR ACLR Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d8ac2134202d5ef00a0020190094513c-d12ec5e83c9e829e0a001ae72734025a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="ab0bd475cb8e4d1f.htm">Measuring the Channel Power and ACLR</a> &gt; <a class="chm-breadcrumb" href="2125ba26cd31492d.htm">Programming Examples for Channel Power Measurements</a> &gt; <span class="chm-breadcrumb">Example: Configuring and Performing an MSR ACLR Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2990">
+</a><a name="kanchor2991">
+</a><div class="chm-chaptertitle">Example: Configuring and Performing an MSR ACLR Measurement</div><p>This example demonstrates how to configure and perform an ACLR measurement on a multi-standard radio signal in a remote environment.</p><p>Note that this example assumes the instrument 'MyFSW' is configured as described in <a class="xref" href="189fff7aba8a4d83.htm#ID_870290ca0c5211e29583ef6a0e616f8f-d12ec5e83c9e829e0a001ae72734025a-en-US">"Example: Configuring and Performing an ACLR Measurement"</a>.</p><div class="verbatim"><pre class="verbatim_text">//-----------Preparing the measurement ------------
+//Reset the instrument
+*RST
+</pre></div><div class="verbatim"><pre class="verbatim_text">
+// Select ACLR measurement
+:CALCulate:MARKer:FUNCtion:POWer:SELect ACPower
+
+// Select MSR Standard :CALCulate:MARKer:FUNCtion:POWer:PRESet MSR
+
+//Configure general measurement settings
+:SENSe:FREQuency:CENTer 1.25GHz
+:SENSe:FREQuency:SPAN 62.0MHz
+:SENSe:POWer:ACHannel:SBCount 3 
+
+//----------------- Configuring Sub block A
+
+:SENSe:POWer:ACHannel:SBLock1:TXCHannel:COUNt 3
+:SENSe:POWer:ACHannel:SBLock1:FREQuency:CENTer 1.230GHZ
+:SENSe:POWer:ACHannel:SBLock1:RFBWidth 12MHZ
+
+:SENSe:POWer:ACHannel:SBLock1:CENTer:CHANnel1 1.226GHZ
+:SENSe:POWer:ACHannel:SBLock1:CENTer:CHANnel2 1.230GHZ
+:SENSe:POWer:ACHannel:SBLock1:CENTer:CHANnel3 1.234GHZ
+
+:SENSe:POWer:ACHannel:SBLock1:TECHnology:CHANnel1 WCDMA
+:SENSe:POWer:ACHannel:SBLock1:TECHnology:CHANnel2 WCDMA
+:SENSe:POWer:ACHannel:SBLock1:TECHnology:CHANnel3 GSM
+
+
+:SENSe:POWer:ACHannel:SBLock1:BANDwidth:CHANnel1 2.5MHZ
+:SENSe:POWer:ACHannel:SBLock1:BANDwidth:CHANnel2 2.5MHZ
+:SENSe:POWer:ACHannel:SBLock1:BANDwidth:CHANnel3 2.5MHZ
+
+//----------------- Configuring Sub block B
+
+:SENSe:POWer:ACHannel:SBLock2:TXCHannel:COUNt 1
+:SENSe:POWer:ACHannel:SBLock2:FREQuency:CENTer 1.255GHZ
+:SENSe:POWer:ACHannel:SBLock2:RFBWidth 4MHZ
+
+:SENSe:POWer:ACHannel:SBLock2:CENTer:CHANnel1 1.255GHZ
+
+:SENSe:POWer:ACHannel:SBLock2:TECHnology:CHANnel1 LTE_1_40
+
+:SENSe:POWer:ACHannel:SBLock2:BANDwidth:CHANnel1 3.25MHZ
+
+//----------------- Configuring Sub block C
+
+:SENSe:POWer:ACHannel:SBLock3:TXCHannel:COUNt 2
+:SENSe:POWer:ACHannel:SBLock3:FREQuency:CENTer 1.268GHZ
+:SENSe:POWer:ACHannel:SBLock3:RFBWidth 8MHZ
+
+:SENSe:POWer:ACHannel:SBLock3:CENTer:CHANnel1 1.266GHZ
+:SENSe:POWer:ACHannel:SBLock3:CENTer:CHANnel2 1.270GHZ
+
+
+:SENSe:POWer:ACHannel:SBLock3:BANDwidth:CHANnel1 2.75MHZ
+:SENSe:POWer:ACHannel:SBLock3:BANDwidth:CHANnel2 2.75MHZ
+
+//----------------- Configuring ADJ channels
+
+:SENSe:POWer:ACHannel:BANDwidth:ACHannel 1.60MHZ
+:SENSe:POWer:ACHannel:BANDwidth:ALTernate1 1.60MHZ
+
+:SENSe:POWer:ACHannel:SPACing:ACHannel 3MHZ
+:SENSe:POWer:ACHannel:SPACing:ALTernate1 5MHZ 
+
+//----------------- Configuring gap (CACLR) channels
+
+:SENSe:POWer:ACHannel:SPACing:GAP1 2.0MHZ
+:SENSe:POWer:ACHannel:SPACing:GAP2 5.0MHZ
+
+:SENSe:POWer:ACHannel:BANDwidth:GAP1 2.0MHZ
+:SENSe:POWer:ACHannel:BANDwidth:GAP2 2.0MHZ
+
+//--------------Performing the Measurement-----
+
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and wait until the sweep has finished.
+INIT;*WAI
+
+//---------------Retrieving Results-------------
+
+//Return the results for the ACLR measurement.
+CALC:MARK:FUNC:POW:RES? MCAC
+//Results:
+//Transmission channels in sub block A
+//-13.2346727385,-13.2346723793,-13.2390131759,
+//Transmission channels in sub block B
+//-17.0863336597,
+//Transmission channels in sub block C
+//-13.2390127767,-13.2390134744,
+//Totals for each sub block
+//-8.4649064021,-17.0863336597,-10.2287131689,
+//Adjacent channels
+//-67.9740721019,-67.9740728014,-0.00434041734,-0.00434041734,
+//CACLR channels
+//-0.52933512766,-64.9990115835,-64.5012521492,-0.33507330922,
+//-64.4924159646,-0.52932552499,-0.52932552495,-64.4934163414
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

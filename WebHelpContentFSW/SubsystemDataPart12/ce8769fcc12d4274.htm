@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Filters and Bandwidths during Signal Processing" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Modulation and Demodulation Filters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7bac55b7fc4575b10a710a31019297ab-184c8906411153460a00206a01532735-en-US;ID_53bfbbc35a5857ae0a001ae72f263c56-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="9dda88eec1c14dc7.htm">Filters and Bandwidths during Signal Processing</a> &gt; <span class="chm-breadcrumb">Modulation and Demodulation Filters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor149">
+</a><div class="chm-chaptertitle">Modulation and Demodulation Filters</div><a name="kanchor150">
+</a><a name="kanchor151">
+</a><a name="kanchor152">
+</a><a name="kanchor153">
+</a><a name="kanchor154">
+</a><a name="kanchor155">
+</a><a name="kanchor156">
+</a><a name="kanchor157">
+</a><p>For demodulation, the analyzer requires sample points at which only information of the current symbol and none of neighboring symbols is present (symbol points). These points are also called ISI-free points (ISI =<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>intersymbol interference). If the transmitter does not provide an ISI-free signal after the transmit filter (<b>TX filter</b>), the analyzer can filter the input signal using a <b>receive filter</b> or <b>Rx filter</b>. If the transmitter uses an RRC (root-raised cosine) filter, the analyzer must also use an RRC filter to obtain ISI-free points.</p><p>In many PSK systems, RRC filters are used as transmit, receive and measurement filters. To determine the I/Q modulation error, the measurement signal must be compared with the corresponding ideal signal. Therefore, the analyzer calculates a <b>reference filter</b> by convolving the coefficient of the transmit filter (<b>Tx filter</b>) and the <b>meas filter</b> (see <a class="xref" href="c432e1f4332d450b.htm#ID_5ec96dd33a14d2b70a710a31009b7336-184c8906411153460a00206a01532735-en-US">Figure "Measurement filter in the block diagram (MSK, PSK, QAM and UserQAM)"</a>).</p><p>When measuring unfiltered signals (e.g. to determine nonlinear signal distortions), no measurement filter is switched into the signal path and the <b>reference filter</b> is identical to the <b>transmit filter</b> (see <a class="xref" href="c432e1f4332d450b.htm#ID_5ec96dd33a14d2b70a710a31009b7336-184c8906411153460a00206a01532735-en-US">Figure "Measurement filter in the block diagram (MSK, PSK, QAM and UserQAM)"</a>).</p><p>In the baseband block diagrams (see <a class="xref" href="c432e1f4332d450b.htm#ID_5ec96dd33a14d2b70a710a31009b7336-184c8906411153460a00206a01532735-en-US">Figure "Measurement filter in the block diagram (MSK, PSK, QAM and UserQAM)"</a>), the system-theoretical transmitter and analyzer filters are shown for PSK and QAM demodulation. For the sake of clearness, RF stages, IF filters and the filter stages of the <b>digital hardware section</b> are not shown.</p><p>For a correct demodulation, the following filters have to be accurately specified for the analyzer:</p><a name="kanchor158">
+</a><a name="kanchor159">
+</a><a name="kanchor160">
+</a><a name="kanchor161">
+</a><a name="kanchor162">
+</a><div class="block"><ul class="list"><li value="1">Transmit filter: filter characteristic of transmitter</li><li value="2">Meas filter:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">PSK, QAM, UserQAM, MSK:<br/>The I and the Q part of the measurement and the reference signal are filtered with this filter.</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">FSK:<br/>The instantaneous frequency of the measurement reference signal is filtered.</td></tr></table><br/>In many applications, the measurement filter is identical to the receive filter.</li></ul></div><a name="kanchor163">
+</a><p>The receive filter (also referred to as an <em>ISI filter</em>) is configured internally depending on the transmit filter. The goal is to produce intersymbol-interference-free points for the demodulation.</p><p>The reference filter generates the ideal transmitted signal (after meas filtering). The analyzer calculates the reference filter from the above filters (convolution operation <b>transmit filter * meas filter</b>).</p><p>Typical combinations of Tx and Meas filters are shown in <a class="xref" href="b1f20be06052434e.htm#ID_867b06c25dd911dfa1569ce4fc1e8e30-1a3317aea2f40dec0a00206a019a82ca-en-US">Table "Typical combinations of Tx and Meas filters"</a>; they can be set in the R&amp;S FSW VSA application using "Meas filter =<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>AUTO" (see <a class="xref" href="ce7e40db6b48475a.htm#ID_732a560107f6f2e60a710a31015d2461-98ce8ff6410963710a00206a00a7855c-en-US">"Using the Transmit Filter as a Measurement Filter (Auto)"</a>). For some filters, a roll-off factor is required:</p><div class="block"><a name="ID_53bfbbc35a5857ae0a001ae72f263c56-184c8906411153460a00206a01532735-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Filter type</p></th><th valign="top"><p>Required parameters</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>RC (raised cosine)</p></td><td valign="top"><p>Alpha</p></td></tr><tr class="evenrow"><td valign="top"><p>RRC (root-raised cosine)</p></td><td valign="top"><p>Alpha</p></td></tr><tr class="oddrow"><td valign="top"><p>Gaussian</p></td><td valign="top"><p>BT</p></td></tr></tbody></table></div><p>Typically the Alpha/BT value of the measurement filter is the same as the value of the transmission filter.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

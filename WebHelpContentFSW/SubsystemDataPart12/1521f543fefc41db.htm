@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Configuring the Result Display|VSA Window Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CALCulate&lt;n&gt;:FORMat</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ff06f60045a7189f0a00206a01f4b460-91cc306f45a710ee0a00206a014baccb-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="d9be1e1f1437489d.htm">Configuring the Result Display</a> &gt; <a class="chm-breadcrumb" href="eb4a85c7c95149e6.htm">VSA Window Configuration</a> &gt; <span class="chm-breadcrumb">CALCulate&lt;n&gt;:FORMat</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_ff06f60045a7189f0a00206a01f4b460-91cc306f45a710ee0a00206a014baccb-en-US">
+</a><span class="bold">CALCulate&lt;n&gt;:FORMat </span>&lt;Format&gt;<br/></div><div class="rcdescription"><p>This command defines the result type of the traces. Which parameters are available depends on the setting for the data source (see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a> and <a class="xref" href="0b21c5a495ee4a29.htm#ID_79ce50e00cdc6f870a00206a016842d2-872c63c6410c614d0a00206a016aa6c2-en-US">Table "Available result types depending on data source"</a>).</p><p>Whether the result type shows absolute or relative values is defined using the <span class="command">DISP:WIND:TRAC:Y:MODE</span> command (see <a class="xref" href="e50de40479674c3b.htm#ID_1cd1bc722dcfb0640a00206a00e6a7a4-eaa33559e3289b620a00206a001c3cc7-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>MODE</nobr></a>).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Setting parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Format&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>MAGNitude |</nobr> <nobr> PHASe |</nobr> <nobr> UPHase |</nobr> <nobr> RIMag |</nobr> <nobr> FREQuency |</nobr> <nobr> COMP |</nobr> <nobr> CONS |</nobr> <nobr> IEYE |</nobr> <nobr> QEYE |</nobr> <nobr> FEYE |</nobr> <nobr> CONF |</nobr> <nobr> COVF |</nobr> <nobr> RCONstellation |</nobr> <nobr> RSUMmary |</nobr> <nobr> BERate |</nobr> <nobr> GDELay |</nobr> <nobr> MOVerview |</nobr> <nobr> BIN |</nobr> <nobr> OCT |</nobr> <nobr> DEC |</nobr> <nobr> HEX |</nobr> <nobr> NONE</nobr><br/><span class="bold">MAGNitude<br/></span><p>Magnitude Absolute</p><span class="bold">MOVerview<br/></span><p>Magnitude Overview Absolute (entire capture buffer)</p><span class="bold">PHASe<br/></span><p>Phase Wrap</p><span class="bold">UPHase<br/></span><p>Phase Unwrap</p><span class="bold">RIMag<br/></span><p>Real/Imag (I/Q)</p><span class="bold">FREQuency<br/></span><p>Frequency Absolute</p><span class="bold">COMP<br/></span><p>Vector I/Q</p><span class="bold">CONS<br/></span><p>Constellation I/Q</p><span class="bold">IEYE<br/></span><p>Eye Diagram Real (I)</p><span class="bold">QEYE<br/></span><p>Eye Diagram Imag (Q)</p><span class="bold">FEYE<br/></span><p>Eye Diagram Frequency</p><span class="bold">CONF<br/></span><p>Constellation Frequency</p><span class="bold">COVF<br/></span><p>Vector Frequency</p><span class="bold">RCONstellation<br/></span><p>Constellation I/Q (Rotated)</p><span class="bold">RSUMmary<br/></span><p>Result summary</p><span class="bold">BERate<br/></span><p>Bit error rate</p><span class="bold">GDELay<br/></span><p>Frequency Response Group Delay</p><span class="bold">BIN<br/></span><p>Symbol table in binary format</p><span class="bold">OCT<br/></span><p>Symbol table in octal format</p><span class="bold">DEC<br/></span><p>Symbol table in decimal format</p><span class="bold">HEX<br/></span><p>Symbol table in hexadecimal format</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="63c50c9dd7bb467d.htm#ID_a3ac549414b7a4ea0a720a2b014ab68b-cd97fd15ad6093a50a00206a01f17c35-en-US">"Measurement Example 1: User-defined Measurement of Continuous QPSK Signal"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="760c614d2beb475f.htm#ID_fab3307b5bdeb7770a720a2b00030ea9-3c55dba5410ce08e0a00206a010226ec-en-US">"Signal Source"</a><br/>See <a class="xref" href="40856fd606c141c7.htm#ID_e5bd98b25bdeb69c0a720a2b01487cd2-3c55dba5410ce08e0a00206a010226ec-en-US">"Result Type"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

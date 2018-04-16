@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Multi-Carrier Group Delay (R&amp;S FSW-K17)|Remote Commands to Perform Multi-Carrier Group Delay Measurements|Configuring and Performing Sweeps" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k17.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>ABORt</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_200b6bdf2e6085de0a00206a01eb3264-72c9d11620b0412a0a00206a00ce8d97-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k17/Content/76f7b105d83940f7.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Multi-Carrier Group Delay (R&amp;S FSW-K17)</a> &gt; <a class="chm-breadcrumb" href="4d17b40b3bb34476.htm">Remote Commands to Perform Multi-Carrier Group Delay Measurements</a> &gt; <a class="chm-breadcrumb" href="2d4e6ed8c6e24a22.htm">Configuring and Performing Sweeps</a> &gt; <span class="chm-breadcrumb">ABORt</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_200b6bdf2e6085de0a00206a01eb3264-72c9d11620b0412a0a00206a00ce8d97-en-US">
+</a><span class="bold">ABORt</span><br/></div><div class="rcdescription"><p>This command aborts the measurement in the current channel and resets the trigger system.</p><p>To prevent overlapping execution of the subsequent command before the measurement has been aborted successfully, use the <span class="command">*OPC?</span> or <span class="command">*WAI</span> command after <span class="command">ABOR</span> and before the next command.</p><p>To abort a sequence of measurements by the Sequencer, use the <a class="xref" href="5c938c4362c04926.htm#ID_b6c6328e48d6046e0a00206a000f661f-bc9c60b048e4f2e40a00206a01417839-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INITiate&lt;n&gt;:</nobr>​<nobr>SEQuencer:</nobr>​<nobr>ABORt</nobr></a> command.</p><p><b>Note on blocked remote control programs</b>:</p><p>If a sequential command cannot be completed, for example because a triggered sweep never receives a trigger, the remote control program will never finish and the remote channel to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is blocked for further commands. In this case, you must interrupt processing on the remote channel first in order to abort the measurement.</p><p>To do so, send a "Device Clear" command from the control instrument to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW on a parallel channel to clear all currently active remote channels. Depending on the used interface and protocol, send the following commands:</p><div class="block"><ul class="list"><li value="1"><b>Visa</b>: <span class="command">viClear()</span></li><li value="2"><b>GPIB</b>: <span class="command">ibclr()</span></li><li value="3"><b>RSIB</b>: <span class="command">RSDLLibclr()</span></li></ul></div><p>Now you can send the <span class="command">ABORt</span> command on the remote channel performing the measurement.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">ABOR;:INIT:IMM</span><br/><p>Aborts the current measurement and immediately starts a new one.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">ABOR;*WAI</span><br/><span class="commandline">INIT:IMM</span><br/><p>Aborts the current measurement and starts a new one once abortion has been completed.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Event<br/></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

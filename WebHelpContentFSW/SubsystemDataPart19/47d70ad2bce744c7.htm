@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurements and Result Displays|WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)|Evaluation Methods for WLAN IQ Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Group Delay</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWLANSkIdSmartGridGroupDelay">
+</meta>
+        <meta name="topic-id" value="30">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_665d24187e3211e1ad2f80fd99402963-742b73889d5e5f610a001ae77d4ca6d8-en-US;ID_2ffac183f02f11e5bf25939400607157-742b73889d5e5f610a001ae77d4ca6d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3bafe63f00094742.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="57cd9bda6ba64547.htm">WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="072780b9f8404988.htm">Evaluation Methods for WLAN IQ Measurements</a> &gt; <span class="chm-breadcrumb">Group Delay</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor126">
+</a><a name="kanchor127">
+</a><a name="kanchor128">
+</a><div class="function_heading"><a name="ID_665d24187e3211e1ad2f80fd99402963-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a><span style="font-weight: bold">Group Delay</span></div><p>Displays all Group Delay (GD) values recorded on a per-subcarrier basis - over the number of analyzed PPDUs as defined by the "Evaluation Range &gt; Statistics" settings (see <a class="xref" href="48edb0e3548e41c0.htm#ID_d65b2720aadc9a650a710a31000dadd3-979497de57b105550a001ae715a94b3f-en-US">"PPDU Statistic Count / No of PPDUs to Analyze"</a>.</p><p>All 57 carriers are shown, including the unused carrier 0.</p><p>This result display is <b>not</b> available for single-carrier measurements (<b>IEEE 802.11b, g (DSSS)</b>).</p><p><b><a name="ID_2ffac183f02f11e5bf25939400607157-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a>Note:</b> MIMO measurements. When you capture more than one data stream (MIMO measurement setup, see <a class="xref" href="6dff20d6bdc14ea6.htm#ID_4e2954eea06ddeed0a00206a00c28b4b-a152f5e2a64dafbf0a002019017fdb4d-en-US">"Signal Processing for MIMO Measurements (IEEE 802.11ac, n)"</a>), each result display contains several tabs. The results for each data stream are displayed in a separate tab. In addition, an overview tab is provided in which all data streams are displayed at once, in individual subwindows.<br/></p><p>Group delay is a measure of phase distortion and defined as the derivation of phase over frequency.</p><p>To calculate the group delay, the estimated channel is upsampled, inactive carriers are interpolated, and phases are unwrapped before they are differentiated over the carrier frequencies. Thus, the group delay indicates the time a pulse in the channel is delayed for each carrier frequency. However, not the absolute delay is of interest, but rather the deviation between carriers. Thus, the mean delay over all carriers is deducted.</p><p>For an ideal channel, the phase increases linearly, which causes a constant time delay over all carriers. In this case, a horizontal line at the zero value would be the result.</p><p>The numeric trace results for this evaluation method are described in <a class="xref" href="e689be1a28644e20.htm#ID_326f2f5a9b5343a70a00206a0191fc5d-e740bb56c9316de40a002019016c0552-en-US">"Group Delay"</a>.</p>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, GDEL</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p>Or:</p><p><span class="command">CONF:BURS:SPEC:FLAT:SEL GRD</span>, see <a class="xref" href="c1a043d49a204ba8.htm#ID_b728cdfd2f53b1b90a00206a004bb12a-369ac8a72f53a95c0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>BURSt:</nobr>​<nobr>SPECtrum:</nobr>​<nobr>FLATness:</nobr>​<nobr>SELect</nobr></a> and <a class="xref" href="c845d7c960b24ff2.htm#ID_393798e12f53c6690a00206a00e293de-441d583e2f53be6a0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>BURSt:</nobr>​<nobr>SPECtrum:</nobr>​<nobr>FLATness[:</nobr>​<nobr>IMMediate]</nobr></a></p><p>Querying results:</p><p><a class="xref" href="eb9e0051944d4569.htm#ID_7026e2c92f5d928b0a00206a01d4e7a2-eceb4ba32f5d89c10a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe[:</nobr>​<nobr>DATA]</nobr></a>, see <a class="xref" href="e689be1a28644e20.htm#ID_326f2f5a9b5343a70a00206a0191fc5d-e740bb56c9316de40a002019016c0552-en-US">"Group Delay"</a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

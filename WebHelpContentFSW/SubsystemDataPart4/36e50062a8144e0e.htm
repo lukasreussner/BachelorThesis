@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Configuration|Modulation Accuracy Measurement Configuration|Measurement Settings|Power vs Time" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Limit Line Time Alignment</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGSMSkIdPowerTimeConfigTimeAlignment">
+</meta>
+        <meta name="topic-id" value="605">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_820aea0bed8636730a00206a006a00f9-6de3276a7d447f250a0020190132413b-en-US;ID_a66f9dc1ed92d6d10a710a3101c5d81c-6de3276a7d447f250a0020190132413b-en-US;ID_aaa7875de91c4c110a710a3100715413-6de3276a7d447f250a0020190132413b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="1a64fe887be64f22.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="e90423ae33184d9a.htm">Modulation Accuracy Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="baf81276a8374be1.htm">Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="a79741b1b7db4945.htm">Power vs Time</a> &gt; <span class="chm-breadcrumb">Limit Line Time Alignment</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor601">
+</a><a name="kanchor602">
+</a><a name="kanchor603">
+</a><a name="kanchor604">
+</a><a name="kanchor605">
+</a><a name="kanchor606">
+</a><a name="kanchor607">
+</a><a name="kanchor608">
+</a><a name="kanchor609">
+</a><div class="function_heading"><a name="ID_820aea0bed8636730a00206a006a00f9-6de3276a7d447f250a0020190132413b-en-US">
+</a><span style="font-weight: bold">Limit Line Time Alignment</span></div><p>Controls how the limit lines are aligned in a "Power vs Time" measurement graph (see <a class="xref" href="697de42832494fdc.htm#ID_08ddac1aa57411e190e9ba0173fac731-ba763332e9bac3ec0a0020190069c7ce-en-US">"PvT Full Burst"</a>). Limit lines are defined for each slot. The limit lines are time-aligned in each slot, based on the position of the TSC (the center of the TSC is the reference point). This parameter affects how the center of the TSC is determined for each slot:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><b>Slot to measure</b> (default): For each slot the center of the TSC is derived from the measured center of the TSC of the <a class="xref" href="d4e31521.htm#shiv_FSV_K10_1254-7bf83232e9afc5160a002019003c84da-en-US">"Slot to Measure"</a> and the timeslot lengths specified in the standard (see "Timeslot length" in 3GPP TS 45.010 and <a class="xref" href="7ca1a6fd534e4deb.htm#shiv_FSV_K10_1325-6de3276a7d447f250a0020190132413b-en-US">"Equal Timeslot Length"</a>).</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><b>Per Slot</b>: For each slot the center of the TSC is measured. This provides reasonable time-alignment if the slot lengths are not according to standard. Note that in this case the "Power vs Time" limit check may show "pass" even if the timeslot lengths are not correct according to the standard.</li></ul></div><p><b><a name="ID_a66f9dc1ed92d6d10a710a3101c5d81c-6de3276a7d447f250a0020190132413b-en-US">
+</a>Note:</b> The "Limit Time Alignment" also decides whether the "Delta to sync" values of the "Power vs Time" list result are measured (for "Limit Time Alignment" = "Per Slot") or if they are constant as defined by the 3PP standard (for "Limit Time Alignment" = "Slot to measure").<br/></p><p>The R&amp;S FSW GSM application offers a strictly standard-conformant, multiple-slot PvT limit line check. This is based on time alignment to a single specified slot (the "Slot to Measure") and allows the user to check for correct BTS timeslot alignment in the DUT, according to the GSM standard. In addition, a less stringent test which performs PvT limit line alignment on a per-slot basis ("Per Slot") is also available.</p><p><b><a name="ID_aaa7875de91c4c110a710a3100715413-6de3276a7d447f250a0020190132413b-en-US">
+</a>Note:</b><a name="kanchor610">
+</a><a name="kanchor611">
+</a>When measuring access bursts the parameter "Limit Time Alignment" should be set to "Per Slot", since the position of an access burst within a slot depends on the set timing advance of the DUT.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="d36e52243.htm#ID_0df56d34996784510a00206a01626826-7d1128977edb9f400a002019003e04ea-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>BURSt:</nobr>​<nobr>PTEMplate:</nobr>​<nobr>TALign</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

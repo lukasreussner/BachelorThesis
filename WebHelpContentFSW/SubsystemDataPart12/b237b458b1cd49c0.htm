@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Configuring VSA|Input, Output and Frontend Settings|Output Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>OUTPut:IF[:SOURce]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7a4f8cd932b3521c0a00206a01f4b0d0-5f4402a5ddcc25580a00206a01600295-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="9dfa789013e942ca.htm">Configuring VSA</a> &gt; <a class="chm-breadcrumb" href="86c0283cbf5e421a.htm">Input, Output and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="2610cbfae3824d55.htm">Output Settings</a> &gt; <span class="chm-breadcrumb">OUTPut:IF[:SOURce]</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor1090">
+</a><a name="kanchor1091">
+</a><a name="kanchor1092">
+</a><a name="kanchor1093">
+</a><a name="kanchor1094">
+</a><a name="kanchor1095">
+</a><a name="kanchor1096">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_7a4f8cd932b3521c0a00206a01f4b0d0-5f4402a5ddcc25580a00206a01600295-en-US">
+</a><span class="bold">OUTPut:IF[:SOURce] </span>&lt;Source&gt;<br/></div><div class="rcdescription"><p>Defines the type of signal available at the IF/VIDEO/DEMOD or [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Source&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">IF<br/></span><p>The measured IF value is available at the IF/VIDEO/DEMOD output connector.</p><span class="bold">IF2<br/></span><p>The measured IF value is available at the [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] output connector at a frequency of 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz.</p><p>This setting is only available if the [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector or the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000/B5000) is available.</p><p>It is automatically set if the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000/B5000) is installed and active.</p><p>For details see <a class="xref" href="../../fsw_iqanalyzer/Content/688f35c556f04d25.htm">Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)</a>.</p><span class="bold">VIDeo<br/></span><p>The displayed video signal (i.e. the filtered and detected IF signal, 200mV) is available at the IF/VIDEO/DEMOD output connector.</p><p>This setting is required to provide demodulated audio frequencies at the output.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">IF</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">OUTP:IF VID</span><br/><p>Selects the video signal for the IF/VIDEO/DEMOD output connector.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="53443def05dc43c0.htm#ID_061f23dd00fafcde0a00206a01328dd5-837db41d2325342c0a00206a00039155-en-US">"Data Output"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

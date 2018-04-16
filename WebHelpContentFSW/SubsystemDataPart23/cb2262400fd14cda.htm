@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Uplink (R&amp;S FSW-K10x)|Configuration|Configuring I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_ul.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Signal Demodulation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdDemodUplink_UL">
+</meta>
+        <meta name="topic-id" value="614">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_bbd1a2466caf2c7e0a0020190090beba-3d74a2d66caf2c7e0a00201900d9c259-en-US;ID_5356215a6dd9da560a002019006fe203-3d74a2d66caf2c7e0a00201900d9c259-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_ul/Content/cb2262400fd14cda.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Uplink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="162c9abf945d400e.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2853690f3e8d44c9.htm">Configuring I/Q Measurements</a> &gt; <span class="chm-breadcrumb">Signal Demodulation</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Signal Demodulation</div><a name="kanchor184">
+</a><p><b>Access</b>: "Overview" &gt; "Demodulation"</p><div class="block" id="ID_5356215a6dd9da560a002019006fe203-3d74a2d66caf2c7e0a00201900d9c259-en-US"><div class="graphic"><img border="0" src="Resources/Images/img63308ee96dd9b54a0a00201900d9b72e_3_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="21734cd2a8d446b4.htm#ID_f59a34f826f04bcf0a00206a01f96733-bc224abb74b5e2550a00206a003caee3-en-US" class="title_toc">Analysis Mode</a></div><div class="function_block"><font face="Arial">└</font> <a href="91678c86b5774e08.htm#ID_77baf71275c3e51c0a00206a003e1c7c-b395cff074b520bc0a00206a003b5f17-en-US" class="title_toc">Channel Estimation Range</a></div><div class="function_block"><font face="Arial">└</font> <a href="601a2803881a4c76.htm#ID_736ac53b26f04bcf0a00206a00e67992-3eb9594974b609650a00206a01349512-en-US" class="title_toc">EVM with Exclusion Period</a></div><div class="function_block"><font face="Arial">└</font> <a href="22363f6c8c584102.htm#ID_2a979c07fff606ca0a0020190128f755-bfeb354efff606ca0a002019008607b0-en-US" class="title_toc">Analyze TDD Transient Slots</a></div><div class="function_block"><font face="Arial">└</font> <a href="1a9a82ee1ad845b5.htm#ID_046c86a675c3e51c0a00206a015887d2-318ae43874b545d70a00206a0107b4ad-en-US" class="title_toc">Compensate DC Offset</a></div><div class="function_block"><font face="Arial">└</font> <a href="f0b8542078164106.htm#ID_f1774aca7415822b0a00206a01b475ab-65c4559374b3590d0a00206a0173a171-en-US" class="title_toc">Scrambling of Coded Bits</a></div><div class="function_block"><font face="Arial">└</font> <a href="38cb791ceb1e408d.htm#ID_e1e9b1aa746b2e7b0a710a9200ef85f3-8ead620974b59bb80a00206a01e939f4-en-US" class="title_toc">Suppressed Interference Synchronization</a></div><div class="function_block"><font face="Arial">└</font> <a href="b04310303c5747e1.htm#ID_42bf5989746ac9c60a710a92001feb69-07ba6da374ad26280a00206a00556f25-en-US" class="title_toc">Multicarrier Filter</a></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

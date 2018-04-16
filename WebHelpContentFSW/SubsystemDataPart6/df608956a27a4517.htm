@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Multi-Carrier Group Delay (R&amp;S FSW-K17)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k17.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>About the Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_936f51351a20d10e0a00206a00bbb034-f7c4a1721a20d10e0a00206a002d4826-en-US;ID_14e64ede1f0719130a00206a01c8bff5-f7c4a1721a20d10e0a00206a002d4826-en-US;ID_d2af02fa1f0719130a00206a00b272d7-f7c4a1721a20d10e0a00206a002d4826-en-US;ID_e1ad51df1f0719130a00206a00a4c7fa-f7c4a1721a20d10e0a00206a002d4826-en-US;ID_0c31d00c1f0719130a00206a001ab27a-f7c4a1721a20d10e0a00206a002d4826-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k17/Content/df608956a27a4517.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Multi-Carrier Group Delay (R&amp;S FSW-K17)</a> &gt; <span class="chm-breadcrumb">About the Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">About the Measurement</div><div class="block"><div class="subtitle"><a name="ID_14e64ede1f0719130a00206a01c8bff5-f7c4a1721a20d10e0a00206a002d4826-en-US">
+</a>Frequency delay in transmitted signals</div></div><p>All frequency components of a signal are delayed when passed through a device such as an amplifier, a loudspeaker, or propagated through space or a medium, such as air. This signal delay will be different for the various frequencies unless the device has the property of being linear phase. The delay variation means that signals consisting of multiple frequency components will suffer distortion because these components are not delayed by the same amount of time at the output of the device. This changes the shape of the signal in addition to any constant delay, which can result in a signal that no longer matches the receiver filter, which in turn results in degraded Signal to Noise Ratio (SNR) or Bit Error Rate (BER).</p><div class="block"><div class="subtitle"><a name="ID_d2af02fa1f0719130a00206a00b272d7-f7c4a1721a20d10e0a00206a002d4826-en-US">
+</a>Group delay as a characterization of transmission components</div></div><p>The delay of all frequencies together is referred to as the group delay and can be used to characterize the quality of transmission for such components. Group delay is also a measure of how long it takes for a signal's information to propagate through a channel or device under test.</p><p>Since digital modulation schemes in which the frequency plays an important role are very common, the group delay is of special interest to all manufacturers or testers of transmission components, as well as frequency converters. Satellite transponders, for example, need to be characterized by the phase transmission in addition to the amplitude transmission. Both values can be determined precisely and easily with the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Multi-Carrier Group Delay application.</p><div class="block"><div class="subtitle"><a name="ID_e1ad51df1f0719130a00206a00a4c7fa-f7c4a1721a20d10e0a00206a002d4826-en-US">
+</a>The Multi-Carrier Group Delay measurement method</div></div><a name="kanchor19">
+</a><a name="kanchor20">
+</a><a name="kanchor21">
+</a><a name="kanchor22">
+</a><a name="kanchor23">
+</a><a name="kanchor24">
+</a><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Multi-Carrier Group Delay application evaluates an input signal provided by a signal generator. After a preliminary reference measurement of this signal without the device under test, the same signal is evaluated with the device subsequently. Instead of evaluating the timing of the signals, the phase shift and magnitude response of multiple carriers across frequency is measured. A baseband signal consisting of several unmodulated carriers with a fixed step size is used as an input signal, allowing for a very quick wideband measurement. By measuring the phase differences between the two signals at the input and at the output, the application calculates the relative phase between output and input.</p><p>However, the phase of the carriers at the input to the DUT does not actually have to be measured. Instead, the results are normalized. That way, no reference path or connection is needed between the input and the output of the DUT. A reference mixer in the signal generator provides a phase reference at the IF frequency. Thus, a constant delay factor is eliminated and the group delay is calculated relative to the reference signal.</p><p>If an external trigger is used, the absolute group delay can also be calculated. Absolute group delay is of interest for instance to equalize the delay of two channels, characterize cables and design quadrature FM demodulators.</p><div class="block" id="ID_0c31d00c1f0719130a00206a001ab27a-f7c4a1721a20d10e0a00206a002d4826-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgd015f4301effff210a00206a01efc8dc_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Multi-Carrier Group Delay Measurement Setup</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

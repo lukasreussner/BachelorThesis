@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Triggering</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b8213a2b4a3798c80a001ae731b98e90-3e7f60c551b212130a001ae729483b02-en-US;ID_03655b194a9b1ff50a001ae77e5abfed-3e7f60c551b212130a001ae729483b02-en-US;ID_d960a1a4cc22b1c20a001ae7251e248d-3e7f60c551b212130a001ae729483b02-en-US;ID_e3b2a3a46036fbe30a710ade00c7e071-3e7f60c551b212130a001ae729483b02-en-US;ID_20c503f74a9b1ff50a001ae705c44c36-3e7f60c551b212130a001ae729483b02-en-US;ID_d8d00fd85a250c490a001ae756bf4fe5-3e7f60c551b212130a001ae729483b02-en-US;ID_e8231dc74ef0d66c0a001ae70ee2de56-3e7f60c551b212130a001ae729483b02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="688f35c556f04d25.htm">Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)</a> &gt; <span class="chm-breadcrumb">Triggering</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor266">
+</a><a name="kanchor267">
+</a><a name="kanchor268">
+</a><div class="chm-chaptertitle">Triggering</div><p>Since the oscilloscope samples the data, triggering is also processed by the oscilloscope. The trigger source can be either the IF level or an external trigger, for example from the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><div class="block"><div class="subtitle"><a name="ID_03655b194a9b1ff50a001ae77e5abfed-3e7f60c551b212130a001ae729483b02-en-US">
+</a>External trigger</div></div><a name="kanchor269">
+</a><a name="kanchor270">
+</a><a name="kanchor271">
+</a><a name="kanchor272">
+</a><p>The external trigger must be connected to the <b>[Ch3]</b> input on the oscilloscope.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>In previous firmware versions, the external trigger was connected to the [CH2] input on the oscilloscope. As of firmware version R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW 2.30, the <b>[Ch3]</b> input on the oscilloscope must be used!</p></td></tr></table></div></div><p>All common trigger settings are available, except for a dropout time. In addition, the coupling to be used for external trigger input to the oscilloscope can be defined.</p><p>Data acquisition starts when the signal fed into the [CH3] input connector on the oscilloscope meets or exceeds the specified trigger level.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The length of the external trigger cable affects the trigger runtime. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW assumes a cable the length of 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>m between the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and the oscilloscope. Longer cables between the instruments must be compensated for by defining a <a class="xref" href="6e32dcf84dd241ec.htm#ID_e8c03bec7983720f0a00206a00071f05-9971ece60feda9d00a00206a01c43cd8-en-US">"Trigger Offset"</a>, if necessary.</p><p>Since the external trigger uses another channel on the oscilloscope, the maximum memory size, and thus record length, available for the input channel 1 may be reduced by half. For details see the oscilloscope's data sheet and documentation.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_20c503f74a9b1ff50a001ae705c44c36-3e7f60c551b212130a001ae729483b02-en-US">
+</a>IF Power trigger</div></div><a name="kanchor273">
+</a><a name="kanchor274">
+</a><a name="kanchor275">
+</a><a name="kanchor276">
+</a><a name="kanchor277">
+</a><a name="kanchor278">
+</a><p>The IF power trigger is used to trigger on a current power level, which corresponds to the envelope of the voltage. However, Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz oscilloscopes do not have power triggers or envelope triggers. Therefore, when using the B2000/B5000 option, the IF power trigger corresponds to a "width" trigger with a negative polarity and the range "longer" on the oscilloscope.</p><p>The width is specified by the <a class="xref" href="b58fe59afa584148.htm#ID_97c7cfec0d7fd1ec0a00206a007e9fef-a9aa45c10d7fd1ec0a00206a013620e3-en-US">Trigger Drop-out Time</a> on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, with a default value of 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s.</p><p>Triggering on a falling edge for the IF Power trigger with the B2000/B5000 option is not allowed.</p><p>Thus, data acquisition starts when the power level at the signal fed into the [CH1] input connector on the oscilloscope rises above the specified trigger level after having been below this level for a duration longer than the drop-out time.</p><div class="block" id="ID_d8d00fd85a250c490a001ae756bf4fe5-3e7f60c551b212130a001ae729483b02-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8ad756355a2348bd0a001ae74d91c43b_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Trigger event for IF power trigger using B2000/B5000</div></div><p>A <a class="xref" href="7c442cef14694c70.htm#ID_8f1a37ae798a2ff80a00206a0135a4b1-accf42a20ff28f840a00206a01d7df01-en-US">"Hysteresis"</a> defined on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is used as the hysteresis for the width of the trigger on the oscilloscope. By default this value is 0. However, if a value other than 0 is defined, an undefined state of the trigger system might occur. Therefore, the "robust trigger" option is activated on the oscilloscope.</p><p>The "robust trigger" shifts the trigger thresholds for the falling edge and for the rising edge by the <a class="xref" href="7c442cef14694c70.htm#ID_8f1a37ae798a2ff80a00206a0135a4b1-accf42a20ff28f840a00206a01d7df01-en-US">"Hysteresis"</a>, resulting in different trigger levels. Thus, the trigger cannot "hang" inside the hysteresis, triggering is always ensured. The disadvantage of the robust trigger is a slight inaccuracy in the trigger measurements, because different trigger levels are used. For steep edges, the inaccuracy can be ignored.</p><p>For more details on the robust trigger functionality see the oscilloscope's documentation.</p><div class="block"><div class="subtitle"><a name="ID_e8231dc74ef0d66c0a001ae70ee2de56-3e7f60c551b212130a001ae729483b02-en-US">
+</a>Trigger coupling</div></div><a name="kanchor279">
+</a><a name="kanchor280">
+</a><p>The coupling mode of the external trigger to the oscilloscope can be configured in the "Trigger" settings.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

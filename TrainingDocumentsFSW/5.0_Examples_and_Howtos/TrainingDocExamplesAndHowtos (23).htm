@@ -1,0 +1,63 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Working with Markers|Programming Examples for Using Markers and Marker Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Measuring Phase Noise</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6540821ed33511e28c55fa87ba57cc71-5ead00533d8b32370a00201901b8dc86-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="57a24637c8a048f0.htm">Working with Markers</a> &gt; <a class="chm-breadcrumb" href="806cef63805646a8.htm">Programming Examples for Using Markers and Marker Functions</a> &gt; <span class="chm-breadcrumb">Example: Measuring Phase Noise</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3239">
+</a><a name="kanchor3240">
+</a><div class="chm-chaptertitle">Example: Measuring Phase Noise</div><p>This example demonstrates how to measure phase noise using markers in a basic spectrum measurement in a remote environment. It assumes that the basic frequency sweep described in <a class="xref" href="364d7484fcce4673.htm#ID_d55ecc3fd4cd11e2ba0ed4c419c184f7-5ead00533d8b32370a00201901b8dc86-en-US">"Basic Frequency Sweep Measurement for Marker Function Examples"</a> has been performed and thus does not begin by presetting the instrument.</p><div class="verbatim"><pre class="verbatim_text">//------------- Configuring the phase noise marker -------------------
+DET SAMP
+//Switches to Sample detector
+
+CALC:MARK1 ON
+//Activates marker1 and sets it to the maximum power level
+
+CALC:DELT:FUNC:PNO ON
+//Activates phase noise marker function
+
+CALC:DELT1 ON
+CALC:DELT1:X 100kHz
+
+CALC:DELT2 ON
+CALC:DELT2:X 500kHz
+
+CALC:DELT3 ON
+CALC:DELT3:X 1MHz
+
+CALC:DELT4 ON
+CALC:DELT4:X 1.5MHz
+
+//Activates the phase noise measurement function for offsets 100kHz/500kHz/1MHz/1.5MHz.
+
+BAND:VID?
+//Queries the used VBW (= 0.1*RBW)
+
+
+//-------- Querying the phase noise results ------------------------------
+
+CALC:DELT1:FUNC:PNO:RES?
+CALC:DELT2:FUNC:PNO:RES?
+CALC:DELT3:FUNC:PNO:RES?
+CALC:DELT4:FUNC:PNO:RES?
+//Queries the difference in level between the peak and the noise power density
+//measured at the deltamarkers, referred to the carrier power level (dBc)
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

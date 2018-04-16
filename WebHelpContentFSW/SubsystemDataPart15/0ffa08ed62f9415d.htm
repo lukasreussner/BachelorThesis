@@ -1,0 +1,80 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Configuration|Code Domain Analysis|Automatic Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Upper Level Hysteresis
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAutoSetUpperLevelHysteresis">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAutoSetUpperLevelHysteresis">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAutoSetUpperLevelHysteresisRf">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAutoSetUpperLevelHysteresis">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAutoSetUpperLevelHysteresis">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAutoSetUpperLevelHysteresisRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAutoSetUpperLevelHysteresisRf">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdUpperLvlHysteresis">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAutoSetUpperLevelHysteresis">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdAutoSetUpperLevelHysteresis">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAutoSetUpperLevelHysteresis">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAutoSetUpperLevelHysteresisRf">
+</meta>
+        <meta name="topic-id" value="928">
+</meta>
+        <meta name="topic-id" value="929">
+</meta>
+        <meta name="topic-id" value="930">
+</meta>
+        <meta name="topic-id" value="931">
+</meta>
+        <meta name="topic-id" value="932">
+</meta>
+        <meta name="topic-id" value="933">
+</meta>
+        <meta name="topic-id" value="934">
+</meta>
+        <meta name="topic-id" value="935">
+</meta>
+        <meta name="topic-id" value="936">
+</meta>
+        <meta name="topic-id" value="937">
+</meta>
+        <meta name="topic-id" value="938">
+</meta>
+        <meta name="topic-id" value="939">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_86da57bd528e81e20a00206a01fd048e-7c329b155fd985af0a00206a018d38b4-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="13630feaac1346a4.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="0b1bb6aa00e34fa0.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="a05f8933348d4106.htm">Automatic Settings</a> &gt; <span class="chm-breadcrumb">Upper Level Hysteresis</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor586">
+</a><a name="kanchor587">
+</a><a name="kanchor588">
+</a><a name="kanchor589">
+</a><div class="function_heading"><a name="ID_86da57bd528e81e20a00206a01fd048e-7c329b155fd985af0a00206a018d38b4-en-US">
+</a>Upper Level Hysteresis</div><p>When the reference level is adjusted automatically using the <a class="xref" href="66fabceba2284339.htm#ID_b1ffc45a0aa0e2080a00206a0158cd2e-9e22a3100aa0e2080a00206a0106c332-en-US">Auto Level</a> function, the internal attenuators and the preamplifier are also adjusted. To avoid frequent adaptation due to small changes in the input signal, you can define a hysteresis. This setting defines an upper threshold the signal must exceed (compared to the last measurement) before the reference level is adapted automatically.</p><p>This function is only available for the MSRA/MSRT Master, not for the applications.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="34210d7e74014245.htm#ID_e21d0cea29a402a00a00206a0083197e-b3a26cc35fdd1ccb0a00206a00d817f5-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]ADJust:</nobr>​<nobr>CONFigure:</nobr>​<nobr>HYSTeresis:</nobr>​<nobr>UPPer</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

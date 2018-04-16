@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Retrieving Results|Transient Spectrum Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>READ:SPECtrum:SWITching:REFerence:GATing?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9b7d07529968ba9c0a00206a0119a9fb-e656c5d9235a8bcb0a002019000904d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="abc2974de9f84382.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="75aebf8b894c4201.htm">Transient Spectrum Results</a> &gt; <span class="chm-breadcrumb">READ:SPECtrum:SWITching:REFerence:GATing?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><a name="kanchor983">
+</a><a name="kanchor984">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_9b7d07529968ba9c0a00206a0119a9fb-e656c5d9235a8bcb0a002019000904d8-en-US">
+</a><span class="bold">READ:SPECtrum:SWITching:REFerence:GATing? </span></div><div class="rcdescription"><p>This command reads out the gating settings for gated measurements of the reference power of the "Transient Spectrum" measurement (see <a class="xref" href="e4b78e9487264c7b.htm#ID_097d6e8ea57411e190e9ba0173fac731-ad864b20e9bb2f2a0a0020190025026c-en-US">"Transient Spectrum Table"</a>).</p><p>Prior to this command make sure you set the correct Trigger Mode ("IF power" or "External") and Trigger Offset (see <a class="xref" href="c2ddbeebd7784c6e.htm#ID_da6821947629be900a00206a0111fcfe-9653d5c52c6311040a001ae735838a1b-en-US">"Triggering Measurements"</a>).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;TriggerOffset&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Calculated trigger offset, based on the user-defined "Trigger Offset" and "Frame Configuration", such that the useful part of the "Slot to measure" is measured.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;GateLength&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Calculated gate length, based on the user-defined "Trigger Offset" and "Frame Configuration", such that the useful part of the "Slot to measure" is measured.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">READ:SPEC:SWIT:REF:GAT?</span><br/><p>Result:</p><span class="commandline">0.00000185076,0.00054277002</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Spurious Emissions Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reference: ASCII Export File Format (Spurious)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_05562622eba4273b0a00206a0171cfcc-238389b206df62020a00206a01166944-en-US;ID_a8475d480aef815a0a00206a01144a75-238389b206df62020a00206a01166944-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="ad4325f75d6244b2.htm">Spurious Emissions Measurement</a> &gt; <span class="chm-breadcrumb">Reference: ASCII Export File Format (Spurious)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1029">
+</a><a name="kanchor1030">
+</a><a name="kanchor1031">
+</a><div class="chm-chaptertitle">Reference: ASCII Export File Format (Spurious)</div><p>The file has a header containing important parameters for scaling, several data sections containing the sweep settings per range, and a data section containing the peak list.</p><p>The header data is made up of three columns, separated by ';', with the syntax:</p><p>Parameter name; numeric value; basic unit</p><div class="block"><a name="ID_a8475d480aef815a0a00206a01144a75-238389b206df62020a00206a01166944-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>File contents</p></th><th valign="top"><p>Explanation</p></th></tr></thead><tbody><tr class="oddrow"><td colspan="2" valign="top"><p><b>File header</b></p></td></tr><tr class="evenrow"><td valign="top"><p>Type;FSW-26;</p></td><td valign="top"><p>Model</p></td></tr><tr class="oddrow"><td valign="top"><p>Version;1.00;</p></td><td valign="top"><p>Firmware version</p></td></tr><tr class="evenrow"><td valign="top"><p>Date;31.Mar 11;</p></td><td valign="top"><p>Storage date of data set</p></td></tr><tr class="oddrow"><td valign="top"><p>Mode;ANALYZER; SPURIOUS;</p></td><td valign="top"><p>Operating mode and measurement function</p></td></tr><tr class="evenrow"><td valign="top"><p>Center Freq;13250000000.000000;Hz</p></td><td rowspan="5" valign="top"><p>X-axis settings</p></td></tr><tr class="oddrow"><td valign="top"><p>Freq Offset;0.000000;Hz</p></td></tr><tr class="evenrow"><td valign="top"><p>Span;26499982000.000000;Hz</p></td></tr><tr class="oddrow"><td valign="top"><p>x-Axis;LIN;</p></td></tr><tr class="evenrow"><td valign="top"><p>Start;9000.000000;Hz</p><p>Stop;8000000000.000000;Hz</p></td></tr><tr class="oddrow"><td valign="top"><p>Level Offset;0.000000;dB</p></td><td rowspan="4" valign="top"><p>Y-axis settings</p></td></tr><tr class="evenrow"><td valign="top"><p>Ref Position;100.000000;%</p></td></tr><tr class="oddrow"><td valign="top"><p>y-Axis;LOG;</p></td></tr><tr class="evenrow"><td valign="top"><p>Level Range;100.000000;dB</p></td></tr><tr class="oddrow"><td colspan="2" valign="top"><p><b>Trace settings</b></p></td></tr><tr class="evenrow"><td valign="top"><p>Trace Mode;CLR/WRITE;</p></td><td rowspan="6" valign="top"> </td></tr><tr class="oddrow"><td valign="top"><p>Sweep Count;1;</p></td></tr><tr class="evenrow"><td valign="top"><p>TRACE 1:</p></td></tr><tr class="oddrow"><td valign="top"><p>Trace Mode;CLR/WRITE;</p></td></tr><tr class="evenrow"><td valign="top"><p>x-Unit;Hz;</p></td></tr><tr class="oddrow"><td valign="top"><p>y-Unit;dBm;</p></td></tr><tr class="evenrow"><td colspan="2" valign="top"><p><b>List evaluation settings</b></p></td></tr><tr class="oddrow"><td valign="top"><p>Margin;6.000000;s</p></td><td valign="top"><p>Peak List margin</p></td></tr><tr class="evenrow"><td valign="top"><p>PeaksPerRange;25;</p></td><td valign="top"><p>Max. number of peaks per range to be detected</p></td></tr><tr class="oddrow"><td valign="top"><p>Values;3;</p></td><td valign="top"><p>Number of detected peaks</p></td></tr><tr class="evenrow"><td colspan="2" valign="top"><p><b>File data section</b></p></td></tr><tr class="oddrow"><td valign="top"><p>0;9000;150000;1000;79500;-25.006643295288086;-12.006643295288086;PASS;</p><p>0;9000;150000;1000;101022.11126961483;-47.075111389160156;-34.075111389160156;PASS;</p><p>0;9000;150000;1000;58380.171184022824;-47.079341888427734;-34.079341888427734;PASS;</p></td><td valign="top"><p>Measured peak values:</p><p>&lt;range number&gt;;</p><p>&lt;start frequency&gt;;</p><p>&lt;stop frequency&gt;;</p><p>&lt;resolution bandwidth of range&gt;;</p><p>&lt;frequency of peak&gt;;</p><p>&lt;absolute power in dBm of peak&gt;;</p><p>&lt;distance to the limit line in dB&gt;; (positive value means above the limit)</p><p>&lt;limit fail (pass = 0, fail =1)&gt;;</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>General Programming Recommendations</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b7604da88036ffc40a00206a00b0ae90-f9dc5e45b8be5fb00a00201900b39796-en-US;ID_c4f0d389803c08620a00206a01cc172c-f9dc5e45b8be5fb00a00201900b39796-en-US;ID_cf8bda86803c08620a00206a00df4d21-f9dc5e45b8be5fb00a00201900b39796-en-US;ID_e012b27d803c08620a00206a0044772d-f9dc5e45b8be5fb00a00201900b39796-en-US;ID_d0745f4e803c08620a00206a014d3718-f9dc5e45b8be5fb00a00201900b39796-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <span class="chm-breadcrumb">General Programming Recommendations</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">General Programming Recommendations</div><div class="block"><div class="subtitle"><a name="ID_c4f0d389803c08620a00206a01cc172c-f9dc5e45b8be5fb00a00201900b39796-en-US">
+</a>Initial instrument status before changing settings</div></div><a name="kanchor2820">
+</a><a name="kanchor2821">
+</a><p>Manual operation is designed for maximum possible operating convenience. In contrast, the priority of remote control is the "predictability" of the instrument status. Thus, when a command attempts to define incompatible settings, the command is ignored and the instrument status remains unchanged, i.e. other settings are not automatically adapted. Therefore, control programs should always define an initial instrument status (e.g. using the *RST command) and then implement the required settings.</p><a name="kanchor2822">
+</a><div class="block"><div class="subtitle"><a name="ID_cf8bda86803c08620a00206a00df4d21-f9dc5e45b8be5fb00a00201900b39796-en-US">
+</a>Command sequence</div></div><a name="kanchor2823">
+</a><p>As a general rule, send commands and queries in different program messages. Otherwise, the result of the query may vary depending on which operation is performed first (see also <a class="xref" href="1d42f7139cff4524.htm#ID_90bf96bac30a9a170a00206a010d8a7e-ebf757a0c30a9a170a00206a01ff747b-en-US">"Preventing Overlapping Execution"</a>).</p><div class="block"><div class="subtitle"><a name="ID_e012b27d803c08620a00206a0044772d-f9dc5e45b8be5fb00a00201900b39796-en-US">
+</a>Reacting to malfunctions</div></div><a name="kanchor2824">
+</a><p>The service request is the only possibility for the instrument to become active on its own. Each controller program should instruct the instrument to initiate a service request in case of malfunction. The program should react appropriately to the service request.</p><div class="block"><div class="subtitle"><a name="ID_d0745f4e803c08620a00206a014d3718-f9dc5e45b8be5fb00a00201900b39796-en-US">
+</a>Error queues</div></div><a name="kanchor2825">
+</a><p>The error queue should be queried after every service request in the controller program as the entries describe the cause of an error more precisely than the status registers. Especially in the test phase of a controller program the error queue should be queried regularly since faulty commands from the controller to the instrument are recorded there as well.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

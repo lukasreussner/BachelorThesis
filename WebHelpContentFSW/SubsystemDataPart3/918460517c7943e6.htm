@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Configuration|Input and Frontend Settings|Frequency" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Center Frequency Stepsize
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodFrequencyStepSize">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodFrequencyStepSizeManual">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodFrequencyStepSizeXSpan">
+</meta>
+        <meta name="topic-id" value="306">
+</meta>
+        <meta name="topic-id" value="308">
+</meta>
+        <meta name="topic-id" value="310">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c8a580951ce986400a00206a00c25ced-bb0964cb3e0f9c370a001ae710f850c9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="adce0676b09b40a7.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="1b92da4b6c5d480f.htm">Input and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="ac99d2aad99640b5.htm">Frequency</a> &gt; <span class="chm-breadcrumb">Center Frequency Stepsize</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor175">
+</a><div class="function_heading"><a name="ID_c8a580951ce986400a00206a00c25ced-bb0964cb3e0f9c370a001ae710f850c9-en-US">
+</a><span style="font-weight: bold">Center Frequency Stepsize</span></div><p>Defines the step size of the center frequency. The step size can be coupled to the demodulation bandwidth, or it can be manually set to a fixed value.</p><p>For more details see <a class="xref" href="../../../Content/7f90d5381d5242bd.htm">Stepping Through the Frequency Range - Center Frequency  Stepsize</a>.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"0.1 * Demod BW"</p></td><td class="function_col_right"><p>Sets the step size for the center frequency to 10 % of the demodulation bandwidth.</p><p>This is the default setting.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"0.5 * Demod BW"</p></td><td class="function_col_right"><p>Sets the step size for the center frequency to 50 % of the demodulation bandwidth.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"X * Demod BW"</p></td><td class="function_col_right"><p>Sets the step size for the center frequency to a manually defined factor of the demodulation bandwidth. The "X-Factor" defines the percentage of the demodulation bandwidth.</p><p>Values between 1 and 100 % in steps of 1 % are allowed. The default setting is 10 %.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"= Center"</p></td><td class="function_col_right"><p>Sets the step size to the value of the center frequency and removes the coupling of the step size to the demodulation bandwidth. The used value is indicated in the "Value" field.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Manual"</p></td><td class="function_col_right"><p>Defines a fixed step size for the center frequency. Enter the step size in the "Value" field.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="61d556bf067d40df.htm#ID_404a68d02e3d4b3d0a00206a01a15dfa-17b0c4b4302ebc540a00206a00d83b28-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FREQuency:</nobr>​<nobr>CENTer:</nobr>​<nobr>STEP:</nobr>​<nobr>LINK</nobr></a></p><p><a class="xref" href="489423ae44b6437e.htm#ID_ca5cbc412e3dda5d0a00206a001b46c5-d2eb7b16302ee8170a00206a0030934d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FREQuency:</nobr>​<nobr>CENTer:</nobr>​<nobr>STEP:</nobr>​<nobr>LINK:</nobr>​<nobr>FACTor</nobr></a></p><p><a class="xref" href="dce11a3b33554641.htm#ID_80c412c42e40e8740a00206a0180e3cc-2cf5b477302e47430a00206a01a2570e-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FREQuency:</nobr>​<nobr>CENTer:</nobr>​<nobr>STEP</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Optimizing and Troubleshooting the Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Improving EVM Accuracy</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_68102b5f7b32ecc50a710a31003ded60-c03dcfec7d455beb0a00201901c34e02-en-US;ID_9131b0337b5f829f0a710a31012312e2-c03dcfec7d455beb0a00201901c34e02-en-US;ID_736e0c337b5f82130a710a3100d48618-c03dcfec7d455beb0a00201901c34e02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="f85693c62f444661.htm">Optimizing and Troubleshooting the Measurement</a> &gt; <span class="chm-breadcrumb">Improving EVM Accuracy</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor792">
+</a><div class="chm-chaptertitle">Improving EVM Accuracy</div><p>If the EVM results show unexpected power levels, check the following issues.</p><div class="block"><div class="subtitle"><a name="ID_9131b0337b5f829f0a710a31012312e2-c03dcfec7d455beb0a00201901c34e02-en-US">
+</a>Extending the data basis</div></div><a name="kanchor793">
+</a><a name="kanchor794">
+</a><p>Sporadic distortions in the EVM can be eliminated by evaluating several measurements and determining the average over all traces. Increase the <a class="xref" href="d4e30961.htm#ID_19f90d1adb274bc30a00206a002e115a-4d3a9a2feaaeff660a00201901e3a95b-en-US">"Statistic Count"</a> in the "Sweep" settings to obtain sufficiently stable results.</p><div class="block"><div class="subtitle"><a name="ID_736e0c337b5f82130a710a3100d48618-c03dcfec7d455beb0a00201901c34e02-en-US">
+</a>Excluding results from adjacent channels</div></div><a name="kanchor795">
+</a><a name="kanchor796">
+</a><a name="kanchor797">
+</a><a name="kanchor798">
+</a><p>For signals from base stations capable of using <b>multiple carriers</b>, configure the DUT as such in the signal description. In this case, an additional multicarrier (PvT) filter suppresses power from adjacent channels. This filter is also taken into account during the generation of the ideal (reference) signal, otherwise there would be an increase in EVM because the measured signal has a smaller bandwidth compared to the reference signal. Define which PvT filter to use, depending on whether the channel to be measured has a reduced or equal power compared to its adjacent channels (see <a class="xref" href="af660195044c4f94.htm#ID_bc714b819c4901010a710a31016529f8-6de3276a7d447f250a0020190132413b-en-US">"Power vs Time Filter"</a>).</p><p>For single carrier measurements, make sure the correct "Device Type" setting is selected so the correct PvT filter is used for the power measurement.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="General Instrument Setup|Transducers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reference: Transducer Factor File Format</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_853c9397bb2665fa0a001ae77cc89e45-f99e7543c0599da10a001ae735f05e88-en-US;ID_cfd75391509111e0b8be91347a8d73c4-f99e7543c0599da10a001ae735f05e88-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="c702547bd1064afb.htm">General Instrument Setup</a> &gt; <a class="chm-breadcrumb" href="685d06d5ce5a47fd.htm">Transducers</a> &gt; <span class="chm-breadcrumb">Reference: Transducer Factor File Format</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Reference: Transducer Factor File Format</div><p>Transducer factor data can be exported to a file in ASCII (CSV) format for further evaluation in other applications. Transducer factors stored in the specified ASCII (CSV) format can also be imported to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW for other measurements (see <a class="xref" href="a11333c314d44583.htm#ID_ffff3f02baf7519a0a71003a015d0326-0da5c8e9b80e6baa0a001ae7054bbb70-en-US">"Import"</a>). This reference describes in detail the format of the export/import files for transducer factors. Note that the <b>bold</b> data is <b>mandatory</b>, all other data is optional.</p><p>Different language versions of evaluation programs may require a different handling of the decimal point. Thus, you can define the decimal separator to be used (see <a class="xref" href="e334501bc549408e.htm#ID_d7730bd92959615f0a00206a00e5c849-1e4bafc52959615f0a00206a01c048ac-en-US">"Decimal Separator"</a>).</p><div class="block"><a name="ID_cfd75391509111e0b8be91347a8d73c4-f99e7543c0599da10a001ae735f05e88-en-US">
+</a><span class="table-caption">ASCII file format for transducer factor files</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>File contents</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td colspan="2" valign="top"><p><b>Header data</b></p></td></tr><tr class="evenrow"><td valign="top"><p><b>sep=;</b></p></td><td valign="top"><p>Separator for individual values (required by Microsoft Excel, for example)</p></td></tr><tr class="oddrow"><td valign="top"><p><b>Type</b>;RS_TransducerFactor;</p></td><td valign="top"><p>Type of data</p></td></tr><tr class="evenrow"><td valign="top"><p><b>FileFormatVersion</b>;1.00;</p></td><td valign="top"><p>File format version</p></td></tr><tr class="oddrow"><td valign="top"><p>Date;01.Oct 2006;</p></td><td valign="top"><p>Date of data set storage</p></td></tr><tr class="evenrow"><td valign="top"><p>OptionID;SpectrumAnalyzer</p></td><td valign="top"><p>Application the transducer factor was created for</p></td></tr><tr class="oddrow"><td valign="top"><p><b>Name;</b>TestTDF1</p></td><td valign="top"><p>Transducer factor name</p></td></tr><tr class="evenrow"><td valign="top"><p>Comment;Transducer for device A</p></td><td valign="top"><p>Description of transducer factor</p></td></tr><tr class="oddrow"><td valign="top"><p>XAxisScaling;LINEAR</p></td><td valign="top"><p>Scaling of x-axis linear (LIN) or logarithmic (LOG)</p></td></tr><tr class="evenrow"><td valign="top"><p>YAxisUnit;LEVEL_DB</p></td><td valign="top"><p>Unit of y values</p></td></tr><tr class="oddrow"><td valign="top"><p>YAxisScaleMode;ABSOLUTE</p></td><td valign="top"><p>Scaling of y-axis (absolute or relative)</p></td></tr><tr class="evenrow"><td valign="top"><p><b>NoOfPoints</b>;5</p></td><td valign="top"><p>Number of points the line is defined by</p></td></tr><tr class="oddrow"><td colspan="2" valign="top"><p><b>Data section for individual data points</b></p></td></tr><tr class="evenrow"><td valign="top"><p>100000000;-50.000000</p></td><td rowspan="5" valign="top"><p><b>x- and y-values of each data point defining the line</b></p></td></tr><tr class="oddrow"><td valign="top"><p>500000000;-30.000000</p></td></tr><tr class="evenrow"><td valign="top"><p>1000000000;0.000000</p></td></tr><tr class="oddrow"><td valign="top"><p>1500000000;-30.000000</p></td></tr><tr class="evenrow"><td valign="top"><p>2500000000;-50.000000</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

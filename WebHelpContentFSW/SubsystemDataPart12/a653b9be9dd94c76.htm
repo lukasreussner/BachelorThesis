@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Sample Rate, Symbol Rate and I/Q Bandwidth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7aba2997564717190a00206a01d25dda-184c8906411153460a00206a01532735-en-US;ID_75e9423aa8fd6c030a00206a01d6f03a-184c8906411153460a00206a01532735-en-US;ID_b85b827b85c51c140a00206a004e6b79-184c8906411153460a00206a01532735-en-US;ID_fc4181bdca8811e19b629b29e938be4f-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Sample Rate, Symbol Rate and I/Q Bandwidth</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor170">
+</a><a name="kanchor171">
+</a><div class="chm-chaptertitle">Sample Rate, Symbol Rate and I/Q Bandwidth</div><p>The "Symbol Rate" defined in the "Signal Description" settings determines how many symbols are captured and demodulated during a certain measurement time. However, for each symbol more than one sample can be captured, so that the sample rate can be higher than the symbol rate.</p><p>The "Sample Rate" parameter in the "Signal Capture" settings defines the <b>number of samples to capture per symbol</b>. (Do not confuse this number with the estimation points per symbol or display points per symbol, see <a class="xref" href="988958d2f6234c73.htm#ID_95fa6139a3d2eecc0a00206a0055d4dc-184c8906411153460a00206a01532735-en-US">"Display Points Vs Estimation Points Per Symbol"</a>). The resulting sample rate (depending on the "Symbol Rate") is indicated behind the parameter.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The number of samples to capture per symbol is commonly referred to as the <b>"Capture Oversampling"</b> value in Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz signal and spectrum analyzers.</p></td></tr></table></div></div><p>The resulting sample rate, also referred to as the user or output sample rate, is the rate at which the I/Q data is demodulated and analyzed. The sample rate also affects the demodulation (measurement) bandwidth. If the bandwidth is too narrow, the signal is not displayed completely. If the bandwidth is too wide, interference from outside the actual signal to be measured can distort the result. Thus, for signals with a large frequency spectrum (e.g. FSK modulated signals), a higher sample rate can be necessary.</p><p>(For further details, see <a class="xref" href="9dda88eec1c14dc7.htm#shiv_FSV_K70_0399-184c8906411153460a00206a01532735-en-US">"Filters and Bandwidths during  Signal Processing"</a>.)</p><p>For an indication of the required sample rate, view the "Real/Imag (I/Q)" display of the capture buffer with a "Spectrum" transformation. If the complete signal is displayed within the usable I/Q bandwidth, the selected value is suitable.</p><div class="block" id="ID_b85b827b85c51c140a00206a004e6b79-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb770607d512b0cec0a001ae75536d265_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Determining the I/Q bandwidth: Real/Imag (I/Q) display of the capture buffer with a spectrum transformation</div></div><p><b>If the signal is cut off</b>, increase the sample rate.</p><div class="block"><div class="listintro"><b>If the signal is too small</b>, decrease the sample rate by changing one of the following settings:</div><ul class="list"><li value="1">The "Symbol Rate" defined in the "Signal Description" settings</li><li value="2">The "Sample Rate" in the "Data Acquisition" settings</li></ul></div><a name="kanchor172">
+</a><a name="kanchor173">
+</a><p>As described above, the sample rate defines the number of samples to capture per symbol. Thus, the maximum sample rate depends on the maximum number of symbols to be captured (the <b>symbol rate</b>) and vice versa. The maximum sample rate for the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is 10 GHz (see below). Thus, the maximum symbol rate is:</p><div class="block"><a name="ID_fc4181bdca8811e19b629b29e938be4f-184c8906411153460a00206a01532735-en-US">
+</a><span class="table-caption">Maximum symbol rate depending on sample rate parameter</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Sample rate parameter</p></th><th valign="top"><p>Max. symbol rate</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>2* symbol rate</p></td><td valign="top"><p>5000 Msymbols</p></td></tr><tr class="evenrow"><td valign="top"><p>4* symbol rate</p></td><td valign="top"><p>2500 Msymbols</p></td></tr><tr class="oddrow"><td valign="top"><p>8* symbol rate</p></td><td valign="top"><p>1250 Msymbols</p></td></tr><tr class="evenrow"><td valign="top"><p>16* symbol rate</p></td><td valign="top"><p>625 Msymbols</p></td></tr><tr class="oddrow"><td valign="top"><p>32* symbol rate</p></td><td valign="top"><p>312.5 Msymbols</p></td></tr><tr class="evenrow"><td valign="top"><p>64* symbol rate</p></td><td valign="top"><p>156.25 Msymbols</p></td></tr><tr class="oddrow"><td valign="top"><p>128* symbol rate</p></td><td valign="top"><p>78.125 Msymbols</p></td></tr></tbody></table></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="ff6b1e95dc884c8e.htm" class="chapter_title_toc">Sample Rate and Maximum Usable I/Q Bandwidth for RF Input</a></li><li value="2"><a href="753b18e9b5734b3b.htm" class="chapter_title_toc">Sample Rates and Bandwidths for Digital I/Q Data</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

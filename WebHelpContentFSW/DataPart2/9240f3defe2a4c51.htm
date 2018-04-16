@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|SCPI Command Structure" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Responses to Queries</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_648ce8d666fb53330a00206a003c890e-73f249836105f78d0a00206a00818609-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="6aed0083cd0e4cbd.htm">SCPI Command Structure</a> &gt; <span class="chm-breadcrumb">Responses to Queries</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Responses to Queries</div><p>A query is defined for each setting command unless explicitly specified otherwise. It is formed by adding a question mark to the associated setting command. According to SCPI, the responses to queries are partly subject to stricter rules than in standard IEEE 488.2.</p><a name="kanchor2741">
+</a><a name="kanchor2742">
+</a><div class="block"><ul class="list"><li value="1">The requested parameter is transmitted without a header.<br/><b>Example:</b><span class="command">HCOP:PAGE:ORI?</span>, Response: <span class="command">LAND</span></li><li value="2">Maximum values, minimum values and all other quantities that are requested via a special text parameter are returned as numeric values.<br/><b>Example:</b><span class="command">SENSe:FREQuency:STOP? MAX</span>, Response: <span class="command">3.5E9</span></li><li value="3">Numeric values are output without a unit. Physical quantities are referred to the basic units or to the units set using the <span class="command">Unit</span> command. The response <span class="command">3.5E9</span> in the previous example stands for 3.5 GHz.</li><li value="4">Truth values (Boolean values) are returned as <span class="command">0</span> (for OFF) and <span class="command">1</span> (for ON).<br/><b>Example:</b><br/>Setting command: <span class="command">HCOPy:DEV:COL ON</span><br/>Query: <span class="command">HCOPy:DEV:COL?</span><br/>Response: <span class="command">1</span></li><li value="5">Text (character data) is returned in a short form.<br/><b>Example:</b><br/>Setting command: <span class="command">HCOPy:PAGE:ORIentation LANDscape</span><br/>Query: <span class="command">HCOP:PAGE:ORI?</span><br/>Response: <span class="command">LAND</span></li><li value="6"><a name="kanchor2743">
+</a><a name="kanchor2744">
+</a><a name="kanchor2745">
+</a>Invalid numerical results<br/>In some cases, particularly when a result consists of multiple numeric values, invalid values are returned as 9.91E37 (not a number).</li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

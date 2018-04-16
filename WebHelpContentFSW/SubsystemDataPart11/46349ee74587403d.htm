@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Measurement Basics|Trace Evaluation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Mapping Samples to Measurement Points with the Trace Detector</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d0c00b8b2894a1eb0a710a310159407f-9a7c4d2c91d28cb70a001ae732a846af-en-US;ID_a6f0a63329efc83d0a00206a01c307de-9a7c4d2c91d28cb70a001ae732a846af-en-US;ID_4ca273e729efc83d0a00206a00c4e9df-9a7c4d2c91d28cb70a001ae732a846af-en-US;ID_00fde6663382ba2a0a710a31018be602-9a7c4d2c91d28cb70a001ae732a846af-en-US;ID_d7661fc828b60e370a710a31018cc39e-9a7c4d2c91d28cb70a001ae732a846af-en-US;shiv_4a_instrument_functions_02066-9a7c4d2c91d28cb70a001ae732a846af-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="29b558e51ab84e3f.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="28e6a7e60ad34f52.htm">Trace Evaluation</a> &gt; <span class="chm-breadcrumb">Mapping Samples to Measurement Points with the Trace Detector</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor66">
+</a><a name="kanchor67">
+</a><a name="kanchor68">
+</a><a name="kanchor69">
+</a><a name="kanchor70">
+</a><a name="kanchor71">
+</a><a name="kanchor72">
+</a><a name="kanchor73">
+</a><a name="kanchor74">
+</a><div class="chm-chaptertitle">Mapping Samples to Measurement Points with the Trace Detector</div><p>A trace displays the values measured at the measurement points. The number of samples taken during a measurement is much larger than the number of measurement points that are displayed in the measurement trace.</p><p>Obviously, a data reduction must be performed to determine which of the samples are displayed for each measurement point. This is the trace detector's task.</p><p>The trace detector can analyze the measured data using various methods:</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The detector activated for the specific trace is indicated in the corresponding trace information by an abbreviation.</p></td></tr></table></div></div><div class="block"><a name="ID_4ca273e729efc83d0a00206a00c4e9df-9a7c4d2c91d28cb70a001ae732a846af-en-US">
+</a><span class="table-caption">Detector types</span><table border="1"><colgroup><col width="60.669000000000004">
+</col><col width="38.556000000000004">
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Detector</p></th><th valign="top"><p>Abbrev.</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Positive Peak</p></td><td valign="top"><p>Pk</p></td><td valign="top"><p>Determines the largest of all positive peak values of the levels measured at the individual frequencies which are displayed in one sample point</p></td></tr><tr class="evenrow"><td valign="top"><p>Negative Peak</p></td><td valign="top"><p>Mi</p></td><td valign="top"><p>Determines the smallest of all negative peak values of the levels measured at the individual frequencies which are displayed in one sample point</p></td></tr><tr class="oddrow"><td valign="top"><p>Auto Peak</p></td><td valign="top"><p>Ap</p></td><td valign="top"><p>Combines the peak detectors; determines the maximum and the minimum value of the levels measured at the individual frequencies which are displayed in one sample point</p></td></tr><tr class="evenrow"><td valign="top"><p>RMS</p></td><td valign="top"><p>Rm</p></td><td valign="top"><p>Calculates the root mean square of all samples contained in a measurement point.</p><p>The RMS detector supplies the power of the signal irrespective of the waveform (CW carrier, modulated carrier, white noise or impulsive signal). Correction factors as needed for other detectors to measure the power of the different signal classes are not required.</p></td></tr><tr class="oddrow"><td valign="top"><p>Average</p></td><td valign="top"><p>Av</p></td><td valign="top"><p>Calculates the linear average of all samples contained in a measurement point.</p><p>To this effect, R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW uses the linear voltage after envelope detection. The sampled linear values are summed up and the sum is divided by the number of samples (= linear average value). For logarithmic display the logarithm is formed from the average value. For linear display the average value is displayed. Each measurement point thus corresponds to the average of the measured values summed up in the measurement point.</p><p>The average detector supplies the average value of the signal irrespective of the waveform (CW carrier, modulated carrier, white noise or impulsive signal).</p></td></tr><tr class="evenrow"><td valign="top"><p>Sample</p></td><td valign="top"><p>Sa</p></td><td valign="top"><p>Selects the last measured value of the levels measured at the individual frequencies which are displayed in one sample point; all other measured values for the frequency range are ignored</p></td></tr></tbody></table></div><p>The result obtained from the selected detector for a measurement point is displayed as the value at this x-axis point in the trace.</p><div class="block" id="ID_00fde6663382ba2a0a710a31018be602-9a7c4d2c91d28cb70a001ae732a846af-en-US"><div class="graphic"><img border="0" src="Resources/Images/img75027b1391d938210a001ae743dc7ef9_1_--_--_PNG96.png" alt="" title=""/></div></div><p>The trace detector for the individual traces can be selected manually by the user or set automatically by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>The detectors of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW are implemented as pure digital devices. All detectors work in parallel in the background, which means that the measurement speed is independent of the detector combination used for different traces.</p><div class="block"><div class="subtitle"><a name="ID_d7661fc828b60e370a710a31018cc39e-9a7c4d2c91d28cb70a001ae732a846af-en-US">
+</a>Auto detector</div></div><p>If the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is set to define the appropriate detector automatically, the detector is set depending on the selected trace mode:</p><div class="block"><a name="shiv_4a_instrument_functions_02066-9a7c4d2c91d28cb70a001ae732a846af-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Trace mode</p></th><th valign="top"><p>Detector</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Clear Write</p></td><td valign="top"><p>Auto Peak</p></td></tr><tr class="evenrow"><td valign="top"><p>Max Hold</p></td><td valign="top"><p>Positive Peak</p></td></tr><tr class="oddrow"><td valign="top"><p>Min Hold</p></td><td valign="top"><p>Negative Peak</p></td></tr><tr class="evenrow"><td valign="top"><p>Average</p></td><td valign="top"><p>Sample Peak</p></td></tr><tr class="oddrow"><td valign="top"><p>View</p></td><td valign="top"><p>–</p></td></tr><tr class="evenrow"><td valign="top"><p>Blank</p></td><td valign="top"><p>–</p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Display Points Vs Estimation Points Per Symbol</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_95fa6139a3d2eecc0a00206a0055d4dc-184c8906411153460a00206a01532735-en-US;ID_160cf71ea3d2eecc0a00206a0109e8ed-184c8906411153460a00206a01532735-en-US;ID_29f4b272a3d2eecc0a00206a019b3193-184c8906411153460a00206a01532735-en-US;ID_301987bec9b6a1120a710a31013219ed-184c8906411153460a00206a01532735-en-US;ID_a0ef6796a3d2eecc0a00206a002e5fc5-184c8906411153460a00206a01532735-en-US;ID_a5626aad4c2f7d7a0a001ae722981631-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Display Points Vs Estimation Points Per Symbol</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Display Points Vs Estimation Points Per Symbol</div><div class="block"><div class="subtitle"><a name="ID_160cf71ea3d2eecc0a00206a0109e8ed-184c8906411153460a00206a01532735-en-US">
+</a>Estimation points per symbol</div></div><a name="kanchor344">
+</a><p>During synchronization, the measurement signal is matched to the reference signal. Various signal parameters are calculated, as well as the optional equalizer. You can define how many sample points are used for this calculation at each symbol. Typically, it is one point per symbol (=<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><b>symbol rate</b>) or all captured samples (=<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><b>sample rate</b>).</p><a name="kanchor345">
+</a><a name="kanchor346">
+</a><div class="block"><div class="subtitle"><a name="ID_29f4b272a3d2eecc0a00206a019b3193-184c8906411153460a00206a01532735-en-US">
+</a>Display points per symbol</div></div><a name="kanchor347">
+</a><p>The number of points per symbol used for estimation can vary from the number of points used to display the results of the calculation. If more points per symbol are selected than the defined sample rate, the additional points are interpolated for the display. The more points are displayed per symbol, the more detailed the trace becomes, as illustrated in <a class="xref" href="#ID_301987bec9b6a1120a710a31013219ed-184c8906411153460a00206a01532735-en-US">Figure "Result display with different numbers of display points per symbol"</a>.</p><div class="block" id="ID_301987bec9b6a1120a710a31013219ed-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgba3fc711c9b4d6430a00206a01c60ec0_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Result display with different numbers of display points per symbol</div><div class="legend"><div class="legentry">window A = 1</div><div class="legentry">window B = 2</div><div class="legentry">window C = 4</div><div class="legentry">window D = 16</div></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The displayed points per symbol also determine how many values are returned when you query the trace data using a remote command (see <a class="xref" href="85cf7a9a1e8a4831.htm#ID_5a71ecfa45ba2f470a00206a01a04c30-4a7ea8b245ba23dd0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]</nobr></a>).</p></td></tr></table></div></div><p>For results based on the <b>capture buffer</b>, one point is displayed for each sample taken, that is: the number of display points per symbol is always identical to the capture oversampling value. The capture oversampling is defined as the ratio between sample rate and symbol rate. The default capture oversampling is 4, that is: sample rate = 4 * symbol rate.</p><a name="kanchor348">
+</a><a name="kanchor349">
+</a><p>For the "Result Summary", the default number of display points corresponds to the estimation points per symbol. (By default, 1 for QAM and PSK modulated signals and the capture oversampling for MSK and FSK modulated signals.) This value controls which samples are considered for the peak and RMS values and the power result.</p><p>For most other result displays, the default number of displayed points per symbol is identical to the capture oversampling value.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>For very large capture oversampling rates (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">≥</span> 64), a lower number of display points per symbol is used by default. That avoids prolonged display times and extremely large amounts of trace data.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Measurements and Result Displays|GSM I/Q Measurement Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Trigger to Sync Table</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGSMSkIdDisplayConfig_TriggerToSyncTable">
+</meta>
+        <meta name="topic-id" value="32">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c92681f23fff9d280a710a310101a19e-29d332454000a9470a00201901b69f43-en-US;ID_061abed8403b84c60a0020190155a8ce-29d332454000a9470a00201901b69f43-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="0805db08e28e4860.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="8d7c30df256d4e7b.htm">GSM I/Q Measurement Results</a> &gt; <span class="chm-breadcrumb">Trigger to Sync Table</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor63">
+</a><a name="kanchor64">
+</a><div class="function_heading"><a name="ID_c92681f23fff9d280a710a310101a19e-29d332454000a9470a00201901b69f43-en-US">
+</a><span style="font-weight: bold">Trigger to Sync Table</span></div><p>The Trigger to Sync measurement determines the time between an <em>external</em> trigger event and the start of the first symbol of the TSC. The start of the first symbol of the TSC corresponds to the time 0 of the symbol period (see <a class="xref" href="bfbf0ef5eaed40de.htm#ID_0e567e00c1817e080a00206a00d20bca-b1f487377d4432d90a002019013b147f-en-US">"Definition of the Symbol Period"</a>).</p><p>Only one result per data capture is provided. Therefore, it is useful to perform several data captures and average the results to obtain an accurate value (see <a class="xref" href="d4e30961.htm#ID_19f90d1adb274bc30a00206a002e115a-4d3a9a2feaaeff660a00201901e3a95b-en-US">"Statistic Count"</a>).</p><p>Both graphical and numeric (table) results are available. While the graphical results are mainly used to determine the required measurement settings (see <a class="xref" href="7c2f04a676ce46e5.htm#ID_c92681f23fff9d280a710a310101a19e-e91376933ffff17f0a002019001e0b10-en-US">"Trigger to Sync Graph"</a>), the numeric results provide the actual trigger to sync value, including statistical evaluation.</p><p>The Trigger to Sync table shows the following values:</p><div class="block"><a name="ID_061abed8403b84c60a0020190155a8ce-29d332454000a9470a00201901b69f43-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Value</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Current</p></td><td valign="top"><p>Trigger to Sync value for current measurement in <span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s</p></td></tr><tr class="evenrow"><td valign="top"><p>Average</p></td><td valign="top"><p>Trigger to Sync value averaged over the <a class="xref" href="d4e30961.htm#ID_19f90d1adb274bc30a00206a002e115a-4d3a9a2feaaeff660a00201901e3a95b-en-US">"Statistic Count"</a> number of measurements</p></td></tr><tr class="oddrow"><td valign="top"><p>Min</p></td><td valign="top"><p>Minimum Trigger to Sync value in the previous <a class="xref" href="d4e30961.htm#ID_19f90d1adb274bc30a00206a002e115a-4d3a9a2feaaeff660a00201901e3a95b-en-US">"Statistic Count"</a> number of measurements</p></td></tr><tr class="evenrow"><td valign="top"><p>Max</p></td><td valign="top"><p>Maximum Trigger to Sync value in the previous <a class="xref" href="d4e30961.htm#ID_19f90d1adb274bc30a00206a002e115a-4d3a9a2feaaeff660a00201901e3a95b-en-US">"Statistic Count"</a> number of measurements</p></td></tr><tr class="oddrow"><td valign="top"><p>Std Dev</p></td><td valign="top"><p>Standard deviation of the individual Trigger to Sync values to the average value</p></td></tr></tbody></table></div>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH,TGST</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p>Results:</p><p><a class="xref" href="1ac1e44cd4db4689.htm#ID_d9619cae444cb82f0a0020190188f28b-c4dd8d2a2c4d1c830a001ae72a459a13-en-US">"Trigger to Sync Results"</a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

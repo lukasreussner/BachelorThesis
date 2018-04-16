@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Retrieving Results|Retrieving Trace Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe&lt;n&gt;[:DATA]?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f18fbf0ae42455960a00206a00dd6c4e-eb3b2bcefef7f9370a00206a016168c1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="e492fe40d86a471b.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="2a462e28d66f49e9.htm">Retrieving Trace Results</a> &gt; <span class="chm-breadcrumb">TRACe&lt;n&gt;[:DATA]?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_f18fbf0ae42455960a00206a00dd6c4e-eb3b2bcefef7f9370a00206a016168c1-en-US">
+</a><span class="bold">TRACe&lt;n&gt;[:DATA]? </span>ABITstream<br/></div><div class="rcdescription"><p>This command returns the bit streams of all 15 slots one after the other. The output format may be REAL, UINT or ASCII. The number of bits of a 16QAM-modulated channel is twice that of a QPSK-modulated channel, the number of bits of a 64QAM-modulated channel is three times that of a QPSK-modulated channel.</p><p>This query is only available if the evaluation for the corresponding window is set to "Bitstream" using the <span class="command">LAY:ADD:WIND "XTIM:CDP:BSTReam"</span> command (see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a>).</p><p>The output format is identical to that of the <span class="command">TRAC:DATA? TRAC</span> command for an activated Bitstream evaluation (see <a class="xref" href="e89fd345bf5449b4.htm#shiv_FSV_K72_1387-9c73b9e8277ee5940a001ae73a0b8ecb-en-US">"Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;"</a>). The only difference is the number of symbols which are evaluated. The <span class="command">ABITstream</span> parameter evaluates all symbols of one entire frame (vs. only one slot for <span class="command">TRAC:DATA? TRAC</span>).</p><p>The values 7 and 8 are only used in case of a varying modulation type of an HS-PDSCH channel. In this case the number of bits per symbol (<span class="command">NBitPerSymb</span>) varies, as well. However, the length of the transmitted bit vector (NBit) depends only on the maximum number of bits per symbol in that frame. Thus, if the modulation type changes throughout the frame this will not influence the number of bits being transmitted (see examples below).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">LAY:REPL 2,"XTIM:CDP:BSTReam"</span><br/><p>Sets the evaluation for window 2 to bit stream.</p><span class="commandline">TRAC2:DATA? ABITstream</span><br/><p>Returns the bit streams of all 15 slots in window 2, one after the other.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="72031098bdec4b00.htm#ID_58833ee2b6f10f840a00206a01e80d8f-14df114092791b800a00206a01fa83d8-en-US">"Bitstream"</a></td></tr></table><p><b>Examples for bits 7 and 8 for changing modulation types</b></p><p><b>Example 1:</b></p><p>Some slots of the frame are 64QAM modulated, other are 16QAM and QPSK modulated and some are switched OFF (NONE). If one or more slots of the frame are 64QAM modulated, six bits per symbol are transmitted and if the highest modulation order is 16QAM, four bits per symbol are transmitted. In any slot of the frame with lower order modulation, the first two or four of the four or six bits are marked by the number 8 and the last bits represent the transmitted symbol. If no power is transmitted in a slot, four or six entries per symbol of value 7 are transmitted.</p><p><b>Example 2:</b></p><p>Some slots of the frame are QPSK modulated and some are switched OFF. If one or more slots of the frame are QPSK modulated and no slot is 16QAM modulated, 2 bits per symbol are transmitted. If no power is transmitted in a slot, 2 entries per symbol of value 7 are transmitted.</p><p><b>Example 3:</b></p><p>Some slots of a DPCH are suppressed because of compressed mode transmission. The bits of the suppressed slots are marked by the digit '6'. In this case, always 2 bits per symbol are transmitted.</p></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

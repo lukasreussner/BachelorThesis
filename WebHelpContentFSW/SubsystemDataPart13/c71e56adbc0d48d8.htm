@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Examples (R&amp;S FSW-k72)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0040-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_e86925bcb74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_e86925bdb74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_e86925beb74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_e86925c0b74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_e86925c2b74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_9fc56c693d785ee50a00206a0176763f-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_449da442664602d90a00206a008ec8c7-3cd1b6d764fb0df60a00206a0057a628-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <span class="chm-breadcrumb">Programming Examples (R&amp;S FSW-k72)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor842">
+</a><a name="kanchor843">
+</a><div class="chm-chaptertitle">Programming Examples (R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW-k72)</div><p>The following programming examples are based on the measurement examples described in <a class="xref" href="20152d16c0ce4865.htm#shiv_FSV_K73_0040-a91350ca3d56b27a0a00206a00d23b50-en-US">"Measurement Examples"</a> for manual operation.</p><p>The measurements are performed with an R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW equipped with option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K72. Only the commands required to control the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K72 application are provided, not the signal generator.</p><p>The measurements are performed using the following devices and accessories:</p><div class="block"><ul class="list"><li value="1">The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW with Application Firmware R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K72: 3GPP FDD BTS base station test</li><li value="2">The Vector Signal Generator R&amp;S SMW100A with option R&amp;S SMW-K42: digital standard 3GPP FDD (requires options R&amp;S SMW-B10, R&amp;S SMW-B13 and R&amp;S SMW-B103)</li><li value="3">1 coaxial cable, 50<span style="font-family: arial; font-size: 10.5pt">Ω</span>, approx. 1 m, N connector</li><li value="4">1 coaxial cable, 50<span style="font-family: arial; font-size: 10.5pt">Ω</span>, approx. 1 m, BNC connector</li></ul></div><div class="block"><div class="subtitle"><a name="ID_e86925bcb74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US">
+</a>Test setup</div></div><div class="block"><a name="ID_e86925bdb74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US">
+</a><div><ol class="procedure"><li id="ID_e86925beb74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US" value="1"><p>Connect the RF output of the R&amp;S SMW200A to the input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p></li><li id="ID_e86925c0b74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US" value="2"><p>Connect the reference input ([REF INPUT]) on the rear panel of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to the reference input (REF OUT) on the rear panel of the R&amp;S SMW200A (coaxial cable with BNC connectors).</p></li><li id="ID_e86925c2b74b11e08adcfdca67b4b360-3cd1b6d764fb0df60a00206a0057a628-en-US" value="3"><p>Connect the external trigger input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW ([TRIGGER INPUT]) to the external trigger output of the R&amp;S SMW200A (TRIGOUT1 of PAR DATA).</p></li></ol></div></div><div class="block"><div class="subtitle"><a name="ID_9fc56c693d785ee50a00206a0176763f-3cd1b6d764fb0df60a00206a0057a628-en-US">
+</a>Settings on the R&amp;S SMW200A</div></div><div class="block"><a name="ID_449da442664602d90a00206a008ec8c7-3cd1b6d764fb0df60a00206a0057a628-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Setting</p></th><th valign="top"><p>value</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Preset</p></td><td valign="top"> </td></tr><tr class="evenrow"><td valign="top"><p>Frequency</p></td><td valign="top"><p>2.1175 GHz</p></td></tr><tr class="oddrow"><td valign="top"><p>Level</p></td><td valign="top"><p>0 dBm</p></td></tr><tr class="evenrow"><td valign="top"><p>Digital standard</p></td><td valign="top"><p>3GPP FDD</p></td></tr><tr class="oddrow"><td valign="top"><p>Link direction</p></td><td valign="top"><p>DOWN/FORWARD</p></td></tr><tr class="evenrow"><td valign="top"><p>Test model</p></td><td valign="top"><p>Test_Model_1_16_channels</p></td></tr><tr class="oddrow"><td valign="top"><p>Base station</p></td><td valign="top"><p>BTS 1</p></td></tr><tr class="evenrow"><td valign="top"><p>Digital standard - State</p></td><td valign="top"><p>ON</p></td></tr><tr class="oddrow"><td valign="top"><p>Scrambling code</p></td><td valign="top"><p>0000</p></td></tr></tbody></table></div><p>The following measurements are described:</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="6e077eb28eef4290.htm" class="chapter_title_toc">Measurement 1: Measuring the Signal Channel Power</a></li><li value="2"><a href="fbc9bb8de3834e6d.htm" class="chapter_title_toc">Measurement 2: Determining the Spectrum Emission Mask</a></li><li value="3"><a href="7f5d939003c4498e.htm" class="chapter_title_toc">Measurement 3: Measuring the Relative Code Domain Power</a></li><li value="4"><a href="98a53b6a2c29466d.htm" class="chapter_title_toc">Measurement 4: Triggered Measurement of Relative Code Domain Power</a></li><li value="5"><a href="287f9f8a030e4d43.htm" class="chapter_title_toc">Measurement 5: Measuring the Composite EVM</a></li><li value="6"><a href="3f32b6c054074bbd.htm" class="chapter_title_toc">Measurement 6: Determining the Peak Code Domain Error</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

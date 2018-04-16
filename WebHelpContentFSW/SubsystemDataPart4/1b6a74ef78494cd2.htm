@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Retrieving Results|Magnitude Capture Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>FETCh:MCAPture:SLOTs:SCOPe?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_02c7fd55952f12460a00201900acecf1-679a7335952f12460a00201900f7e884-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="abc2974de9f84382.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="b28d60fe72c7443d.htm">Magnitude Capture Results</a> &gt; <span class="chm-breadcrumb">FETCh:MCAPture:SLOTs:SCOPe?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_02c7fd55952f12460a00201900acecf1-679a7335952f12460a00201900f7e884-en-US">
+</a><span class="bold">FETCh:MCAPture:SLOTs:SCOPe? </span></div><div class="rcdescription"><p>This command queries the positions of the slot scopes in the current capture buffer (indicated by green bars in the result display).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Result&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>The result is a comma-separated list of positions for each scope with the following syntax:</p><p><span class="command">xPos[0],xLen[0], xPos[1],xLen[1],…</span></p><p>where:</p><p><span class="command">xPos[i]</span> is the x-value (in seconds) of the i-th scope</p><p><span class="command">xLen[i]</span> is the length of the i-th scope (in seconds)</p><p>The number of values is 2* [the number of GSM frames in the current capture buffer]. If the number of frames defined by the statistic count all fit into the capture buffer at once, the number of values is 2*statistic count. If not, the number of values is 2*[the number of frames in the last capture].</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">FETCh:MCAPture:SLOTs:SCOPe?</span><br/><p>Result for 3 slots to measure (e.g. after a single sweep mode with statistic count = 3)</p><span class="commandline">0.002261,0.001154,0.006876,0.001154,0.011492,0.001154</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="ecb90666813d44c7.htm#ID_01fbbd5ca57411e190e9ba0173fac731-8140036ae9b823400a002019002ed4f9-en-US">"Magnitude Capture"</a></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

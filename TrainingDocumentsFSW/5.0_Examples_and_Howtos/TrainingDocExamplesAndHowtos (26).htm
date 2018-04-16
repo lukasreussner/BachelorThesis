@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Working with Markers|Programming Examples for Using Markers and Marker Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Performing a Highly Accurate Frequency Measurement Using the Signal Count Marker</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c2c71307d33511e28c55fa87ba57cc71-5ead00533d8b32370a00201901b8dc86-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="57a24637c8a048f0.htm">Working with Markers</a> &gt; <a class="chm-breadcrumb" href="806cef63805646a8.htm">Programming Examples for Using Markers and Marker Functions</a> &gt; <span class="chm-breadcrumb">Example: Performing a Highly Accurate Frequency Measurement Using the Signal Count Marker</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3254">
+</a><a name="kanchor3255">
+</a><div class="chm-chaptertitle">Example: Performing a Highly Accurate Frequency Measurement Using the Signal Count Marker</div><p>This example demonstrates how to determine highly accurate frequency values using signal count markers in a basic spectrum measurement in a remote environment. It assumes that the basic frequency sweep described in <a class="xref" href="154b1387b81e4b54.htm#ID_1a60db9105d458720a710a3100121009-9feed69137344f0b0a00201900e8284f-en-US">"Programming Example: Performing a Basic Frequency Sweep"</a> has been performed and thus does not begin by presetting the instrument.</p><div class="verbatim"><pre class="verbatim_text">//------------- Configuring the signal count marker -------------------
+CALC:MARK1 ON
+//Activates marker1 
+CALC:MARK1:COUN ON
+//Switches on the frequency counter for marker 1.
+CALC:MARK1:COUN:RES 1kHz
+//Sets the resolution of the frequency counter to 1kHz
+
+//------- Performing the measurement -------------------------
+INIT;*WAI
+//Performs a measurement and waits for it to end
+
+//---------------Retrieving Results-------------
+CALC:MARK1:COUN:FREQ?
+//Returns the signal counter value as the precise marker frequency.</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

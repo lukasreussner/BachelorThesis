@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurement Basics|Time Alignment Error Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Setup for Transmit Signals From Multiple Base 
+Stations</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f4f522019e1c68130a710ade013cf533-192230c5f554e1c20a00206a019f8074-en-US;ID_453034b49e3144b60a001ae764a9245a-192230c5f554e1c20a00206a019f8074-en-US;ID_8e73c0d89e3144b60a001ae70031954e-192230c5f554e1c20a00206a019f8074-en-US;ID_0ce7b2df9e3144b60a001ae719bbc014-192230c5f554e1c20a00206a019f8074-en-US;ID_62e0aae29e3144b60a001ae756f0fe2f-192230c5f554e1c20a00206a019f8074-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="e58af4d1542b4c87.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="4446ffafe4eb4f19.htm">Time Alignment Error Measurements</a> &gt; <span class="chm-breadcrumb">Measurement Setup for Transmit Signals From Multiple Base Stations</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Measurement Setup for Transmit Signals From Multiple Base Stations</div><p>All of the signals must be superimposed in a similar way to the measurement with a single base station, prior to feeding them into the spectrum analyzer's RF input. The signals from the different base stations can each include one or both of the transmit antennas. Here too, all of the signals on all of the antennas to be tested must provide a common pilot channel: P-CPICH for all signals on antenna 1, P-CPICH or S-CPICH for signals on antenna 2.</p><div class="block"><div class="subtitle"><a name="ID_453034b49e3144b60a001ae764a9245a-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Carrier tables</div></div><p>The number of base stations and the transmit frequency of the base stations can be defined using a table. You can define a table interactively in the R&amp;S FSW 3GPP FDD Measurements application, using remote commands, or offline by defining an xml file with a specified structure. A template for such a file is provided with the R&amp;S FSW 3GPP FDD Measurements application.</p><p>A default table ("RECENT") is always available and cannot be deleted.</p><div class="block"><div class="subtitle"><a name="ID_8e73c0d89e3144b60a001ae70031954e-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Carriers and reference carrier</div></div><p>The measurement can be performed for base station signals on different transmit frequencies for up to 4 signals. One carrier must be defined as the reference carrier for the time alignment error results. Based on the maximum spacing for the base stations set in the table, the R&amp;S FSW 3GPP FDD Measurements application determines the necessary bandwidth and sampling rate. The smallest possible bandwidth and sampling rate are always used.</p><div class="block"><div class="subtitle"><a name="ID_0ce7b2df9e3144b60a001ae719bbc014-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Carrier frequencies</div></div><p>Carriers are defined by their frequencies, or more precisely: as frequency offsets to the reference carrier. The reference carrier itself is set to the current center frequency, thus the offset is always 0.</p><p>The <b>minimum spacing</b> between two carriers is 2.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz. If this minimum spacing is not maintained, a conflict is indicated.</p><div class="block"><div class="listintro">The <b>maximum positive and negative frequency offset</b> which a carrier can have from the reference depends on the available analysis bandwidth.</div><ul class="list"><li value="1">R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW with no bandwidth extension options: 1 carrier only (multi-carrier not available)</li><li value="2">R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW with bandwidth extension option B28: <span style="font-family: Arial Unicode MS; font-size: 10.5pt">±</span>5.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz</li><li value="3">R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW with bandwidth extension option B40: <span style="font-family: Arial Unicode MS; font-size: 10.5pt">±</span>17.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz</li><li value="4">R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW with bandwidth extension option B80: <span style="font-family: Arial Unicode MS; font-size: 10.5pt">±</span>37.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz</li><li value="5">R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW with bandwidth extension option B160 or higher: <span style="font-family: Arial Unicode MS; font-size: 10.5pt">±</span>61.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz</li></ul></div><p>If the maximum offsets from the reference are exceeded, a conflict is indicated.</p><div class="block"><div class="subtitle"><a name="ID_62e0aae29e3144b60a001ae756f0fe2f-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Carrier details</div></div><p>For each base station to be tested, the scrambling code, CPICH number and patterns used on both antennas must be known in order to enable synchronization to the signal for this antenna.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

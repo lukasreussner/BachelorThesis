@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="NB-IoT Downlink (R&amp;S FSW-K106)|Measurements and Result Displays|I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_nbiot_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>EVM vs Symbol</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridEVMvsSym_NBIOT_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkId_EVM_EVM_vs_Symbol_DL_NBIOT">
+</meta>
+        <meta name="topic-id" value="321">
+</meta>
+        <meta name="topic-id" value="322">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ff6bbad701d710da0a00206a01f47a0e-14806ca227f78aa20a00206a01a55c98-en-US;ID_bf7dcb2444ed03630a710a9201e0fada-14806ca227f78aa20a00206a01a55c98-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_nbiot_dl/Content/ceefade9dc1948bf.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">NB-IoT Downlink (R&amp;S FSW-K106)</a> &gt; <a class="chm-breadcrumb" href="a51e000ab7e84b5e.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="614ddb1357754423.htm">I/Q Measurements</a> &gt; <span class="chm-breadcrumb">EVM vs Symbol</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor24">
+</a><a name="kanchor25">
+</a><div class="function_heading"><a name="ID_ff6bbad701d710da0a00206a01f47a0e-14806ca227f78aa20a00206a01a55c98-en-US">
+</a><span style="font-weight: bold">EVM vs Symbol</span></div><p>Starts the EVM vs Symbol result display.</p><p>This result display shows the error vector magnitude (EVM) of the OFDM symbols. You can use it as a debugging technique to identify any symbols whose EVM is too high.</p><p>The results are based on an average EVM that is calculated over all subcarriers that are part of a certain OFDM symbol. This average OFDM symbol EVM is determined for all OFDM symbols in each analyzed subframe.</p><div class="block"><div class="listintro-in-compact-list">If you analyze all subframes, the result display contains three traces. </div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Average EVM<br/>This trace shows the OFDM symbol EVM, averaged over all subframes.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Minimum EVM<br/>This trace shows the lowest (average) OFDM symbol EVM that has been found over the analyzed subframes.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Maximum EVM<br/>This trace shows the highest (average) OFDM symbol EVM that has been found over the analyzed subframes.</li></ul></div><p>If you select and analyze one subframe only, the result display contains one trace that shows the OFDM symbol EVM for that subframe only. Average, minimum and maximum values in that case are the same. For more information, see <a class="xref" href="14eb019493fa4f5c.htm#ID_997785a25dbea4e80a00206a00458a8c-36ae3da374bb99150a00206a00fb920b-en-US">"Subframe Selection"</a>.</p><p>The x-axis represents the OFDM symbols, with each symbol represented by a dot on the line. Any missing connections from one dot to another mean that the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW could not determine the EVM for that symbol.</p><p>The number of displayed symbols depends on the subframe selection.</p><p>On the y-axis, the EVM is plotted either in % or in dB, depending on the <a class="xref" href="c497b62905864b04.htm#ID_8ea3988c5dbfd6cf0a00206a00be9461-b95d5ff5e57b4d630a00206a00aec8e8-en-US">"EVM Unit"</a>.</p><div class="block" id="ID_bf7dcb2444ed03630a710a9201e0fada-14806ca227f78aa20a00206a01a55c98-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgdbc7fd26496a72400a001ae7175fd535_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div>Remote command: <div class="rcclist_right"><p>Selecting the result display: <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD ? '1',LEFT,EVSY</a></p><p>Querying results:</p><p><a class="xref" href="e915914c6a294ed8.htm#ID_5a1811756aea50090a00206a00f772ae-bd6614d7f71d5c3a0a001ae77c0afff3-en-US">TRACe:DATA?</a></p><p><a class="xref" href="85e284f9a0444745.htm#ID_8a84c19553d651a60a001ae71c36692e-52c7d77453d650ea0a001ae739ccb36c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]:</nobr>​<nobr>X?</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

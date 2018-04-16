@@ -1,0 +1,87 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Remote Commands for TD-SCDMA Measurements|Programming Examples (TD-SCDMA BTS)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 2: Determining the Spectrum Emission Mask</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0130-35a87e936b755a000a00201900eda720-en-US;ID_b2811523664602d90a00206a0017fa00-35a87e936b755a000a00201900eda720-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="7b571c192e99473d.htm">Remote Commands for TD-SCDMA Measurements</a> &gt; <a class="chm-breadcrumb" href="f9566776f1f04efd.htm">Programming Examples (TD-SCDMA BTS)</a> &gt; <span class="chm-breadcrumb">Measurement 2: Determining the Spectrum Emission Mask</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor688">
+</a><a name="kanchor689">
+</a><div class="chm-chaptertitle">Measurement 2: Determining the Spectrum Emission Mask</div><div class="verbatim"><pre class="verbatim_text">//------- Preparing the instrument ------------
+//Reset the instrument
+*RST
+//Activate a TD-SCDMA BTS measurement channel named "BTSMeasurement"
+INST:CRE:NEW BTDS,'BTSMeasurement'
+//Set the reference level to 0 dBm
+DISP:TRAC:Y:SCAL:RLEV 0
+//Set the center frequency to 2.1175 GHz
+FREQ:CENT 2.1175 GHz
+//Select the spectrum emission mask measurement
+CONF:CDP:MEAS ESP
+
+//--------Configuring the measurement ----------------
+//Set the slot range to analyze downlink data from slots 3 to 7 (switching point = 2)
+SENS:POW:ACH:SLOT:STAR 3
+SENS:POW:ACH:SLOT:STOP 7
+//Automatically set the reference level and trigger to frame values according
+//to measured levels and time.
+SENS:POW:ACH:AUTO:LTIM
+
+//----------Performing the measurement -----------------
+//Stops continuous sweep
+INIT:CONT OFF
+//Sets the number of sweeps to be performed to 10
+SWE:COUN 10
+//Start a new measurement with 10 sweeps and wait for the end
+INIT;*WAI
+
+//-------------Retrieving results --------------------------
+//Retrieves the calculated channel power value of the reference channel
+CALC:MARK:FUNC:POW:RES? CPOW
+//Result: -36.013 [dBm]
+//Queries the result of the limit check
+CALC:LIM:FAIL?
+//Result: 0 [passed]
+//Retrieves the peak list of the spectrum emission mask measurement
+TRAC:DATA? LIST
+//Result: 
+//+1.000000000,-1.275000000E+007,-8.500000000E+006,+1.000000000E+006,+2.108782336E+009,
+//-8.057177734E+001,-7.882799530E+001,-2.982799530E+001,+0.000000000,+0.000000000,+0.000000000,
+
+//+2.000000000,-8.500000000E+006,-7.500000000E+006,+1.000000000E+006,+2.109000064E+009,
+//-8.158547211E+001,-7.984169006E+001,-3.084169006E+001,+0.000000000,+0.000000000,+0.000000000,
+
+//+3.000000000,-7.500000000E+006,-3.500000000E+006,+1.000000000E+006,+2.113987200E+009,
+//-4.202708435E+001,-4.028330231E+001,-5.270565033,+0.000000000,+0.000000000,+0.000000000,
+
+ [...]</pre></div><div class="block"><a name="ID_b2811523664602d90a00206a0017fa00-35a87e936b755a000a00201900eda720-en-US">
+</a><span class="table-caption">Trace results for Relative Code Domain Power measurement</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Range No.</p></th><th valign="top"><p>Start freq. [Hz]</p></th><th valign="top"><p>Stop freq. [Hz]</p></th><th valign="top"><p>RBW [Hz]</p></th><th valign="top"><p>Freq. peak power [Hz]</p></th><th valign="top"><p>Abs. peak power [dBm]</p></th><th valign="top"><p>Rel. peak power [%]</p></th><th valign="top"><p>Delta to margin [dB]</p></th><th valign="top"><p>Limit check result</p></th><th valign="top"><p>-</p></th><th valign="top"><p>-</p></th><th valign="top"><p>-</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1</p></td><td valign="top"><p>+1.000000000</p></td><td valign="top"><p>-1.275000000E+007</p></td><td valign="top"><p>-8.500000000E+006</p></td><td valign="top"><p>+1.000000000E+006</p></td><td valign="top"><p>+2.108782336E+009</p></td><td valign="top"><p>-8.057177734E+001</p></td><td valign="top"><p>-7.882799530E+001</p></td><td valign="top"><p>-2.982799530E+001</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td></tr><tr class="evenrow"><td valign="top"><p>2</p></td><td valign="top"><p>+2.000000000</p></td><td valign="top"><p>-8.500000000E+006</p></td><td valign="top"><p>-7.500000000E+006</p></td><td valign="top"><p>+1.000000000E+006</p></td><td valign="top"><p>+2.109000064E+009</p></td><td valign="top"><p>-8.158547211E+001</p></td><td valign="top"><p>-7.984169006E+001</p></td><td valign="top"><p>-3.084169006E+001</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td></tr><tr class="oddrow"><td valign="top"><p>3</p></td><td valign="top"><p>+3.000000000</p></td><td valign="top"><p>-7.500000000E+006</p></td><td valign="top"><p>-3.500000000E+006</p></td><td valign="top"><p>+1.000000000E+006</p></td><td valign="top"><p>+2.113987200E+009</p></td><td valign="top"><p>-4.202708435E+001</p></td><td valign="top"><p>-4.028330231E+001</p></td><td valign="top"><p>-5.270565033</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td></tr><tr class="evenrow"><td valign="top"><p>...</p></td><td valign="top"><p>...</p></td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td></tr></tbody></table></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

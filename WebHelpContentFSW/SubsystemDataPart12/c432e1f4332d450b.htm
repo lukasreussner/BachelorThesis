@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Filters and Bandwidths during Signal Processing" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Filters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5273143b3a095c160a00206a00fa05a2-184c8906411153460a00206a01532735-en-US;ID_5ec96dd33a14d2b70a710a31009b7336-184c8906411153460a00206a01532735-en-US;ID_274ba0fdd3f2ddff0a00206a0110e293-184c8906411153460a00206a01532735-en-US;ID_bd620a16a0a70ce20a710a310165e140-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="9dda88eec1c14dc7.htm">Filters and Bandwidths during Signal Processing</a> &gt; <span class="chm-breadcrumb">Measurement Filters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor164">
+</a><div class="chm-chaptertitle">Measurement Filters</div><a name="kanchor165">
+</a><p>The measurement filter can be used to filter the following two signals in the same way:</p><div class="block"><ul class="list"><li value="1">The measurement signal (after coarse frequency, phase and timing synchronization have been achieved)</li><li value="2">The reference signal, i.e the I/Q symbols that have been determined in the demodulator and have already been filtered with the Transmit filter;</li></ul></div><p>For FSK, the measurement filter filters the instantaneous frequency of the signal, not the I/Q signal.</p><p>For MSK, PSK, QAM and User QAM the measurement filter filters the real part and imaginary part of these signals (i.e. not the instantaneous frequency or magnitude of the signal).</p><p>The R&amp;S FSW VSA application defines the error signal as the difference between the reference signal and the measurement signal. Thus, the measurement filter also shapes the spectrum of the error signal, which is used to calculate the EVM, for example.</p><p>In many applications, the measurement filter is the same as the RX filter. However, unlike the measurement filter, the RX filter is not relevant for the measurement, but is only required to create the reference signal optimally.</p><a name="kanchor166">
+</a><p>If possible, the RX filter and the transmit filter are chosen such that their combination results in an <b>I</b>nter-<b>S</b>ymbol <b>I</b>nterference (ISI) free system (see <a class="xref" href="#ID_5ec96dd33a14d2b70a710a31009b7336-184c8906411153460a00206a01532735-en-US">Figure "Measurement filter in the block diagram (MSK, PSK, QAM and UserQAM)"</a> and <a class="xref" href="#ID_274ba0fdd3f2ddff0a00206a0110e293-184c8906411153460a00206a01532735-en-US">Figure "Modulator with Transmit filter  in detail"</a>).</p><div class="block" id="ID_5ec96dd33a14d2b70a710a31009b7336-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga87857b33a109ea50a00206a014ccf3e_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Measurement filter in the block diagram (MSK, PSK, QAM and UserQAM)</div></div><div class="block" id="ID_274ba0fdd3f2ddff0a00206a0110e293-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img84ff2a77d3958efc0a00206a004955d8_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Modulator with Transmit filter in detail</div></div><p>As the measurement filters of the R&amp;S FSW VSA application have low-pass characteristics, they suppress high frequency distortion components in the Meas/Ref/Error signal. The errors are weighted spectrally. Thus, turning off the measurement filter can have an influence on the numeric and graphical error values. However, to measure non-linear distortions, which usually produce high frequency components, switch off the measurement filter.</p><div class="block"><div class="subtitle"><a name="ID_bd620a16a0a70ce20a710a310165e140-184c8906411153460a00206a01532735-en-US">
+</a>Predefined measurement filters</div></div><p>The most frequently required measurement filters are provided by the R&amp;S FSW VSA application (see <a class="xref" href="946eb634408d4fd9.htm#ID_bc2df222a2fcba760a00206a000eeb87-1a3317aea2f40dec0a00206a019a82ca-en-US">"Measurement Filters"</a>).</p><p>The frequency response of the available standard-specific measurement filters is shown in <a class="xref" href="37f0a1696fa24e4d.htm#ID_76c17d6d48bd12c60a00206a0096d06a-5a86f95489fa87f80a00206a0173ee7e-en-US">"Measurement Filter"</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Measurement Basics|Signal Models" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frequency Hopping</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b129167f54d005a70a00201900116375-439f176840f97bcf0a00201900c3608b-en-US;ID_6c5da845827dfcb60a710ade019f6de3-439f176840f97bcf0a00201900c3608b-en-US;ID_c9f4649e54d005a70a0020190198c06a-439f176840f97bcf0a00201900c3608b-en-US;ID_7355cfa75b3d84de0a00201901e34430-439f176840f97bcf0a00201900c3608b-en-US;ID_4cf18ece5b3d84de0a0020190191bfc5-439f176840f97bcf0a00201900c3608b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="29b558e51ab84e3f.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="2c2c43a7ec154464.htm">Signal Models</a> &gt; <span class="chm-breadcrumb">Frequency Hopping</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor21">
+</a><a name="kanchor22">
+</a><a name="kanchor23">
+</a><a name="kanchor24">
+</a><div class="chm-chaptertitle">Frequency Hopping</div><p>Some digital data transmission standards employ a <em>frequency-hopping</em> technique, in which a carrier signal is rapidly switched among many frequency channels. Discrete frequencies and continuous modulation are characteristic of this signal model.</p><div class="block" id="ID_6c5da845827dfcb60a710ade019f6de3-439f176840f97bcf0a00201900c3608b-en-US"><a name="kanchor25">
+</a><div class="graphic"><img border="0" src="Resources/Images/img38ccec42823dec890a001ae73894f3d7_2_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Typical spectrogram of a frequency-hopping signal</div></div><p>Analyzing such signals includes the following challenges:</p><div class="block"><ul class="list"><li value="1">Detecting the currently used carrier frequency and a possible offset</li><li value="2">Determining the duration the signal stays at one frequency and the time it takes to switch to another</li><li value="3">Measuring the average power level</li><li value="4">Demodulating the signal correctly</li></ul></div><p>The R&amp;S FSW Transient Analysis application (with the additional R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K60H option installed) can automatically detect frequency hops in a measured signal and determine characteristic hop parameters. Both pulsed and continuous wave hopping signals can be analyzed.</p><p>Assuming a frequency-hopping signal model, the frequency bands in which the carrier can be expected are usually known in advance. Therefore, you can configure conditions that must apply to the measured signal in order to detect a frequency hop and distinguish it from random spurs or frequency distortions. Such conditions can be a frequency tolerance around a defined nominal value, for instance, or a minimum or maximum dwell time in which the frequency remains steady.</p><div class="block" id="ID_c9f4649e54d005a70a0020190198c06a-439f176840f97bcf0a00201900c3608b-en-US"><a name="kanchor26">
+</a><div class="graphic"><img border="0" src="Resources/Images/img27ee748054ce47a80a00201900b41c04_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Parameters required to detect hops</div></div><div class="block"><div class="subtitle"><a name="ID_7355cfa75b3d84de0a00201901e34430-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Nominal Frequency Values (Hop States)</div></div><a name="kanchor27">
+</a><p>The (nominal) frequency values the carrier is expected to "hop" to are defined in advance. Each such level is considered to be a <em>hop state</em>. The hop states are defined as frequency offsets from the center frequency. A tolerance span can be defined to compensate for settling effects. As long as the deviation remains within the tolerance above or below the nominal frequency, the hop state is detected.</p><p>The nominal frequency levels are numbered consecutively in the "Hop States" table (see <a class="xref" href="4782dc97793f4efb.htm#ID_afd47fb4b84811e0b10fe4c3e6c9de55-d130ada231c068490a0020190010b515-en-US">"Signal States"</a>), starting at 0. The state index of the corresponding nominal frequency level is assigned to each detected hop in the measured signal results.</p><div class="block"><div class="subtitle"><a name="ID_4cf18ece5b3d84de0a0020190191bfc5-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Dwell Time Conditions</div></div><a name="kanchor28">
+</a><a name="kanchor29">
+</a><p>The dwell time is the time the signal remains in the tolerance area of a nominal hop frequency, or in other words: the duration of a hop from beginning to end. In a default measurement, useful dwell times for the current measurement are determined automatically. However, you can define minimum or maximum dwell times, or both, manually, in order to detect only specific hops, for example.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

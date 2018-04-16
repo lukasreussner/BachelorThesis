@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Contents of the Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>STATus:QUEStionable:FREQuency  Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_49c8bc72e926bac00a00206a01d5e334-6a67da96e3f2628f0a00206a01805d1d-en-US;ID_ad16f79f2f3111de847b9d8bd5a95c88-6a67da96e3f2628f0a00206a01805d1d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="20b40c28f6194536.htm">Contents of the Status Registers</a> &gt; <span class="chm-breadcrumb">STATus:QUEStionable:FREQuency Register</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">STATus:QUEStionable:FREQuency Register</div><a name="kanchor2800">
+</a><p>The STATus:QUEStionable:FREQuency register contains information about the condition of the local oscillator and the reference frequency. A separate frequency register exists for each active channel.</p><p>You can read out the register with <a class="xref" href="22bc98dab3d54390.htm#ID_233961e3a0b611e0a7e0c2ad6d046cb6-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>FREQuency:</nobr>​<nobr>CONDition?</nobr></a> or <a class="xref" href="7db3e9e591d9410d.htm#ID_2b689c9bd0c5fa650a710a92006da68d-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>FREQuency[:</nobr>​<nobr>EVENt]?</nobr></a>.</p><div class="block"><a name="ID_ad16f79f2f3111de847b9d8bd5a95c88-6a67da96e3f2628f0a00206a01805d1d-en-US">
+</a><span class="table-caption">Meaning of the bits used in the STATus:QUEStionable:FREQuency register</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>OVEN COLD</p><p>This bit is set if the reference oscillator has not yet attained its operating temperature. "OCXO" is displayed.</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>LO UNLocked</p><p>This bit is set if the local oscillator no longer locks. "LOUNL" is displayed.</p></td></tr><tr class="oddrow"><td valign="top"><p>2 to 7</p></td><td valign="top"><p>Not used</p></td></tr><tr class="evenrow"><td valign="top"><p>8</p></td><td valign="top"><p>EXTernalREFerence</p><p>This bit is set if you have selected an external reference oscillator but did not connect a useable external reference source.</p><p>In that case the synthesizer can not lock. The frequency in all probability is not accurate.</p></td></tr><tr class="oddrow"><td valign="top"><p>9 to 14</p></td><td valign="top"><p>Not used</p></td></tr><tr class="evenrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always 0.</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

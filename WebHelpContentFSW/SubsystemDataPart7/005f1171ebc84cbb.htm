@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Remote Control Commands for Amplifier Measurements|Configuring Amplifier Measurements|Designing a Reference Signal" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CONFigure:REFSignal:CWF:LEDState?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5db68e3149c04b960a001ae734fc20fa-1d5c938449c049d00a001ae7070d7041-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/005f1171ebc84cbb.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="9d0828df6bce4ba4.htm">Remote Control Commands for Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="194c10c98f69418e.htm">Configuring Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="9b08731c6e9e4c52.htm">Designing a Reference Signal</a> &gt; <span class="chm-breadcrumb">CONFigure:REFSignal:CWF:LEDState?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_5db68e3149c04b960a001ae734fc20fa-1d5c938449c049d00a001ae7070d7041-en-US">
+</a><span class="bold">CONFigure:REFSignal:CWF:LEDState? </span></div><div class="rcdescription"><p>This command queries the processing status of a reference signal generated with a waveform file.</p><p>Available when you generate the reference signal with a waveform file.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">GREen<br/></span><p>The reference signal was successfully loaded into the application.</p><p>When <a class="xref" href="759b4e1be5e74952.htm#ID_d907faa65863af7b0a001ae769311bbc-c47b3e325863ac5e0a001ae735e62b8f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">CONFigure:REFSignal:CWF:ETGenerator[:STATe]</a> = ON, this also indicates that the waveform file was accepted by the signal generator.</p><span class="bold">GREY<br/></span><p>Unknown processing state.</p><span class="bold">RED<br/></span><p>The reference signal could not have been loaded into the application.</p><p>When <a class="xref" href="759b4e1be5e74952.htm#ID_d907faa65863af7b0a001ae769311bbc-c47b3e325863ac5e0a001ae735e62b8f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">CONFigure:REFSignal:CWF:ETGenerator[:STATe]</a> = ON, this could also mean that the waveform file was not accepted by the signal generator.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">CONF:REFS:CWF:FPAT 'C:\RefSignal.wv'</span><br/><span class="commandline">CONF:REFS:CWF:WRITE</span><br/><span class="commandline">CONF:REFS:CWF:LEDS?</span><br/><p>would return, e.g.</p><span class="commandline">GRE</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="18c4c700efa94c4b.htm#ID_984319a5c85789280a001ae75c3184ce-c44bacedc8a8676e0a001ae74e089a45-en-US">"Designing a reference signal in a waveform file"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

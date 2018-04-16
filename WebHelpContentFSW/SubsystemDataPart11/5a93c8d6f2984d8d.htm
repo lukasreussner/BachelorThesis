@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Remote Commands to Perform Transient Analysis|Configuring Transient Analysis|Configuring Signal Detection|Hop States" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CALCulate&lt;n&gt;:HOPDetection:STATes[:DATA]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5be50e02e3dc83860a001ae71881d167-69e96513e3dc81a20a001ae7503c1134-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="b3c74aa8fd9f42ae.htm">Remote Commands to Perform Transient Analysis</a> &gt; <a class="chm-breadcrumb" href="778997fd1d434b96.htm">Configuring Transient Analysis</a> &gt; <a class="chm-breadcrumb" href="16f593b6420f4224.htm">Configuring Signal Detection</a> &gt; <a class="chm-breadcrumb" href="7dd17c3ad4d543cc.htm">Hop States</a> &gt; <span class="chm-breadcrumb">CALCulate&lt;n&gt;:HOPDetection:STATes[:DATA]</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_5be50e02e3dc83860a001ae71881d167-69e96513e3dc81a20a001ae7503c1134-en-US">
+</a><span class="bold">CALCulate&lt;n&gt;:HOPDetection:STATes[:DATA] </span>{&lt;FreqOffset&gt;, &lt;Tolerance&gt;}...<br/></div><div class="rcdescription"><p>This command sets and queries the hop state detection table. It consists of a comma-separated list of value pairs, one for each possible hop state. A maximum of 1000 states can be defined.</p><p>Note that the state table can only be configured manually if <a class="xref" href="592d0f158a5341b5.htm#ID_8846503de3dc80d60a001ae77c1bb68c-368e2101e3dc7eb40a001ae7503c1134-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>HOPDetection:</nobr>​<nobr>STATes:</nobr>​<nobr>AUTO</nobr></a> is <span class="command">OFF.</span></p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2">irrelevant<br/></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;FreqOffset&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Frequency offsets from the center frequency</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Default unit: </span></td><td class="rc_col_content_right">HZ</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Tolerance&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Tolerance above or below the nominal frequency.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Default unit: </span></td><td class="rc_col_content_right">HZ</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">CALC:HOPD:STAT 1e6, 0.3, 1e5, 0.4</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="e9b27d029426432b.htm#ID_7d027bee407611e3abe885ac765889d8-d6c21068fdef31600a001ae74316722d-en-US">"Programming Example: Performing a Hop Detection Measurement"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="72a0c087bf7a4e9e.htm#ID_8364e6b754e399c40a710a31019f631b-d130ada231c068490a0020190010b515-en-US">"Frequency Offset / Chirp Rate"</a><br/>See <a class="xref" href="8d0305d425d44321.htm#ID_d52ad4a754e3982d0a710a3101d8dd48-d130ada231c068490a0020190010b515-en-US">"Tolerance"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

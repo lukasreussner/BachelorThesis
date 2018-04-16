@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="General Instrument Setup|Synchronizing Measurement Channel Configuration|General Parameter Coupling" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Synchronizing parameters across all measurement channels</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGsSkIdCMCenterFrequency">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMStartStopFrequency">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMSaMarkerRecFreq">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMAttenuation">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMMinAttenuation">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMPreamplifier">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMRBW">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMVBW">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMLimitLines">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMACDCCoupling">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMFSWTOut">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdCMPreselector">
+</meta>
+        <meta name="topic-id" value="3415">
+</meta>
+        <meta name="topic-id" value="3416">
+</meta>
+        <meta name="topic-id" value="3417">
+</meta>
+        <meta name="topic-id" value="3418">
+</meta>
+        <meta name="topic-id" value="3419">
+</meta>
+        <meta name="topic-id" value="3420">
+</meta>
+        <meta name="topic-id" value="3421">
+</meta>
+        <meta name="topic-id" value="3422">
+</meta>
+        <meta name="topic-id" value="3423">
+</meta>
+        <meta name="topic-id" value="3424">
+</meta>
+        <meta name="topic-id" value="3425">
+</meta>
+        <meta name="topic-id" value="3426">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e59c6d801d8c73970a001ae7709eb8cc-2a5b86111d8c73970a001ae7447692d7-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="c702547bd1064afb.htm">General Instrument Setup</a> &gt; <a class="chm-breadcrumb" href="85312872b27e41bf.htm">Synchronizing Measurement Channel Configuration</a> &gt; <a class="chm-breadcrumb" href="3fb56da354d540f0.htm">General Parameter Coupling</a> &gt; <span class="chm-breadcrumb">Synchronizing parameters across all measurement channels</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_e59c6d801d8c73970a001ae7709eb8cc-2a5b86111d8c73970a001ae7447692d7-en-US">
+</a>Synchronizing parameters across all measurement channels</div><p>To synchronize a specific parameter, turn on the corresponding function.</p><p>Note that you cannot synchronize all parameters at the same time, because some parameters are interdependent. For example, you cannot synchronize the resolution and video bandwidth simultaneously, because the video bandwidth depends on the resolution bandwidth and vice versa.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Center Frequency"</p></td><td class="function_col_right"><p>Synchronizes the center frequency</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="90ced4c22b7e445c.htm#ID_13698dccdc3e40df0a001ae744daef5e-7767b35bdc3e40340a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>CENTer</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Start / Stop Frequency"</p></td><td class="function_col_right"><p>Synchronizes the start and stop frequencies for measurements in the frequency domain.</p><p><b>Note</b>: The start and stop frequencies can automatically change when you change another frequency parameter (such as center frequency or span).</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="0f6d10d4a7424f7c.htm#ID_4d976812dc3e41f90a001ae72ca75bc8-76607874dc3e414d0a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>SPAN</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Marker <span style="font-family: Arial Unicode MS; font-size: 10.5pt">➙</span> Frequency"</p></td><td class="function_col_right"><p>Synchronizes the center frequency with the frequency of marker 1 in the spectrum application.</p><p><b>Note</b>: You cannot synchronize the center frequency, start frequency and stop frequency simultaneously, nor the marker and center frequency.</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="2b9128aef5b3425f.htm#ID_cc8c3a54dc3e508f0a001ae70e9feffb-5b0c1e50dc3e4fe30a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>MARKer</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Attenuation + Unit"</p></td><td class="function_col_right"><p>Synchronizes the attenuation and the unit of the level axis.</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="2c225f49432d4b24.htm#ID_d39b694bdc3e43700a001ae73709f6ee-5eb6aa52dc3e42950a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>ATTen</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Preamplifier"</p></td><td class="function_col_right"><p>Synchronizes the gain of the optional preamplifier.</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="7bad13c038964473.htm#ID_855b713bdc3e462f0a001ae76eebcf48-fb36a9ffdc3e45640a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>GAIN</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Resolution Bandwidth"</p></td><td class="function_col_right"><p>Synchronizes the measurement bandwidth.</p><p><b>Note</b>: You cannot synchronize the video bandwidth and the resolution bandwidth simultaneously.</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="4fba00e8b2474ee2.htm#ID_f0c7ef68dc3e4ac30a001ae74efc185e-58ec338bdc3e4a170a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>BANDwidth</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Video Bandwidth"</p></td><td class="function_col_right"><p>Synchronizes the video bandwidth.</p><p><b>Note</b>: You cannot synchronize the video bandwidth and the resolution bandwidth is not possible.</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="66a5e604a6574195.htm#ID_4b90bfcedc3e4bdc0a001ae73689355c-ff1e2f38dc3e4b400a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>VBW</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Limit Lines"</p></td><td class="function_col_right"><p>Activates the limit line over all channels.</p><p><b>Note</b>: Limit lines are only synchronized over channels if the limit line is compatible to the channel configuration (especially units of the x- and y-axis).</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="8d5bfc1e6ea64539.htm#ID_57d0117adc3e4e0e0a001ae70daea29a-b91cd59edc3e4d720a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>LIMit</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"AC DC Coupling"</p></td><td class="function_col_right"><p>Synchronizes the <a class="xref" href="be89007a5e584009.htm#ID_4eb8e7082300aaa30a00206a003f14f1-8e8006a02300aaa30a00206a0177f3fc-en-US">"Input Coupling"</a>.</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="8884990b741145d9.htm#ID_abbd5262dc3e4f660a001ae769fe4377-eb508eb9dc3e4e9b0a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>ACDC</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Output Configuration"</p></td><td class="function_col_right"><p>Synchronizes the <a class="xref" href="53443def05dc43c0.htm#ID_061f23dd00fafcde0a00206a01328dd5-837db41d2325342c0a00206a00039155-en-US">"Data Output"</a>.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Preselector"</p></td><td class="function_col_right"><p>Synchronizes the <a class="xref" href="17123d7216d04301.htm#ID_c2dbf37ed9ec45dd0a00206a00b3776f-f6b9a26d2307bd7b0a00206a016af4ef-en-US">"YIG-Preselector"</a> (state, mode and filter characteristics).</p><p>Remote command: <div class="rcclist_right"><p><a class="xref" href="baa929b790fd4fa8.htm#ID_b2704deddc3e47480a001ae77a920193-87a28a1cdc3e46ac0a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>COUPle:</nobr>​<nobr>PRESel</nobr></a></p></div><div style="clear:left;"> </div></p></td></tr></table><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

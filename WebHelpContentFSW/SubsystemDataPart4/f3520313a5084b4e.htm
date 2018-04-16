@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Configuration|Modulation Accuracy Measurement Configuration|Signal Description|Slot Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Training Sequence TSC/Sync</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGSMSkIdSlotTSC1">
+</meta>
+        <meta name="topic-keyword" value="eGSMSkIdSlotTSC2">
+</meta>
+        <meta name="topic-id" value="151">
+</meta>
+        <meta name="topic-id" value="152">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K10_1439-6de3276a7d447f250a0020190132413b-en-US;ID_dfcc3d74b6dc11e1a29ba6ceedaf083b-6de3276a7d447f250a0020190132413b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="1a64fe887be64f22.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="e90423ae33184d9a.htm">Modulation Accuracy Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="e01a77d7a0944516.htm">Signal Description</a> &gt; <a class="chm-breadcrumb" href="9afb6e6be0084e74.htm">Slot Settings</a> &gt; <span class="chm-breadcrumb">Training Sequence TSC/Sync</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor396">
+</a><a name="kanchor397">
+</a><a name="kanchor398">
+</a><a name="kanchor399">
+</a><a name="kanchor400">
+</a><div class="function_heading"><a name="shiv_FSV_K10_1439-6de3276a7d447f250a0020190132413b-en-US">
+</a><span style="font-weight: bold">Training Sequence TSC</span><span style="font-weight: bold">/</span><span style="font-weight: bold">Sync</span></div><p>(Note: for Access bursts, this setting is labeled "Sync", but the functionality is the same.)</p><p>The "Training Sequence TSC" or "Sync" values are known symbol sequences used to synchronize the measured signal with the expected input signal in a single slot.</p><p>The available values depend on the modulation as indicated in the table below.</p><p>For user-defined TSCs, select "User" and define the training sequence in the <a class="xref" href="cbf19437058843cb.htm#ID_531e98c49a43a2850a00206a00de81ba-6de3276a7d447f250a0020190132413b-en-US">"User TSC/User Sync"</a> table.</p><p><b><a name="ID_dfcc3d74b6dc11e1a29ba6ceedaf083b-6de3276a7d447f250a0020190132413b-en-US">
+</a>Note:</b> The "Slot" settings are dependant on each other, and only specific combinations of these parameters are available in this dialog box (see <a class="xref" href="a41f3ae565be4a0f.htm#ID_6b9b6774efd4584e0a710a3100afb1c2-b1f487377d4432d90a002019013b147f-en-US">"Dependency of Slot Parameters"</a>).<br/></p><p>For more information on TSCs see <a class="xref" href="364cfca47e5f40e3.htm#ID_baf4ac5ee5f3e8840a002019006f3046-b1f487377d4432d90a002019013b147f-en-US">"Training sequences (TSCs)"</a>.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="d36e46908.htm#ID_7224763ea0fe0bb70a00206a00d23204-d84762947ee129560a00201901c50a19-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>MS]:</nobr>​<nobr>CHANnel:</nobr>​<nobr>SLOT&lt;s&gt;:</nobr>​<nobr>TSC</nobr></a></p><p>AQPSK:</p><p><a class="xref" href="d36e46778.htm#ID_bff69a4945edc4bd0a00206a00f5b247-e6aa39aa2278022d0a0020190185d0c9-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>MS]:</nobr>​<nobr>CHANnel:</nobr>​<nobr>SLOT&lt;s&gt;:</nobr>​<nobr>SUBChannel&lt;ch&gt;:</nobr>​<nobr>TSC</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

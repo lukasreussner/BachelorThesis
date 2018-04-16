@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Remote Commands for Pulse Measurements|Configuring Standard Traces" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:NORMalize:MODE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a57bb1f9b5f7c6350a001ae71dddeb95-3ec64bc7b5f7c2ba0a001ae71f12f61a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="2a19c26881ae4bad.htm">Remote Commands for Pulse Measurements</a> &gt; <a class="chm-breadcrumb" href="5797fe1d0174407b.htm">Configuring Standard Traces</a> &gt; <span class="chm-breadcrumb">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:NORMalize:MODE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_a57bb1f9b5f7c6350a001ae71dddeb95-3ec64bc7b5f7c2ba0a001ae71f12f61a-en-US">
+</a><span class="bold">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:NORMalize:MODE </span>&lt;Mode&gt;<br/></div><div class="rcdescription"><p>Enables or disables normalization of the traces in reference to the measured pulse or a reference pulse. For details see <a class="xref" href="2a8fa2932d954d9b.htm#ID_1151e116a88690930a001ae7265a924c-77f58b7b6bc89ad60a00206a008ec9e8-en-US">"Normalizing Traces"</a>.</p><p>This command is valid only for Magnitude Time, Frequency Time, Phase Time and Phase Time Wrapped result displays.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;t&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Mode&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">OFF<br/></span><p>Traces are not normalized</p><span class="bold">MEASured<br/></span><p>The value in the measurement point (that is: the value in the Pulse Results table) for each pulse in phase, amplitude or frequency is subtracted from the respective trace to normalize each trace to 0.</p><span class="bold">REFerence<br/></span><p>The value in the measurement point (that is: the value in the Pulse Results table) for the <em>Reference Pulse</em> is subtracted from the respective trace to normalize the traces.</p><p>The reference pulse is defined using <a class="xref" href="4bc1f069b4ac4869.htm#ID_b7193605b5f990c40a001ae77cff117a-c85b5f7fb5f98fe90a001ae71f12f61a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SENSe:</nobr>​<nobr>TRACe:</nobr>​<nobr>MEASurement:</nobr>​<nobr>DEFine:</nobr>​<nobr>PULSe:</nobr>​<nobr>REFerence:</nobr>​<nobr>POSition</nobr></a> and <a class="xref" href="b874df9f650c49c3.htm#ID_623cc751b5f9927a0a001ae733432b85-6b0c6c20b5f9918f0a001ae71f12f61a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SENSe:</nobr>​<nobr>TRACe:</nobr>​<nobr>MEASurement:</nobr>​<nobr>DEFine:</nobr>​<nobr>PULSe:</nobr>​<nobr>REFerence</nobr></a>.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">OFF</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">DISP:WIND2:TRAC:NORM:MODE MEAS</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="0c5030c7090e4caa.htm#ID_66d756bfa9026b4d0a710ade004c0d81-ada6499374bc0a560a00206a01dc09f3-en-US">"Normalization"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

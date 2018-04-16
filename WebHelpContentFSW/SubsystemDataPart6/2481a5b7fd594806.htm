@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Multi-Carrier Group Delay (R&amp;S FSW-K17)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k17.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Troubleshooting the Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1ccc2f052df57c9d0a00206a0178887f-860e67e42df57c9d0a00206a01db942e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k17/Content/2481a5b7fd594806.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Multi-Carrier Group Delay (R&amp;S FSW-K17)</a> &gt; <span class="chm-breadcrumb">Troubleshooting the Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor368">
+</a><a name="kanchor369">
+</a><div class="chm-chaptertitle">Troubleshooting the Measurement</div><p>If the results do not meet your expectations, try the following methods to correct the measurement:</p><div class="block"><div class="listintro"><b>Calibration fails</b></div><ul class="list"><li value="1">Check the connection from the signal generator to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</li><li value="2">Check the settings on the signal generator.</li><li value="3">Check the input signal at the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</li></ul></div><div class="block"><div class="listintro">No trace visible in "Magnitude Reference" and "Phase Reference" windows</div><ul class="list"><li value="1">No calibration data is available, perform a calibration measurement (without the DUT) or load stored calibration data.</li></ul></div><div class="block"><div class="listintro">No trace visible in "Group Delay" window</div><ul class="list"><li value="1">No calibration data is available, perform a calibration measurement (without the DUT) or load stored calibration data.</li><li value="2">MCGD configuration is not compatible to the current calibration (reference) data. Perform a new calibration or adjust measurement settings to fit the calibration data (see <a class="xref" href="6686603b9bee4b81.htm#ID_703335f0f65350b40a00206a00deeec1-2203b480cc4724160a00206a0108393a-en-US">"Calibration"</a>).</li></ul></div><div class="block"><div class="listintro"><b>Group delay results are not calculated correctly</b></div><ul class="list"><li value="1">Check the connections from the DUT to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and to the signal generator.</li><li value="2">Repeat the calibration measurement (without the DUT) or load stored calibration data from the same measurement setup.</li><li value="3">Check if the MCGD configuration on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW fits to the signal sent by the generator.</li><li value="4">Connect an external reference to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to improve accuracy (see the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW User Manual).</li><li value="5">Check level settings on both the signal generator in use and the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW MCGD application. Increase the generator’s output level and adjust the reference level of the MCGD application accordingly.</li><li value="6">Check the measurement time. Longer measurement times result in better signal to noise ratios in the group delay calculation. The "Meas Time Auto" mode should provide a suitable value in most cases (see <a class="xref" href="508d903758e14d57.htm#ID_510ffa27af3137850a00206a016071d3-ac26801faf3137850a00206a00d0d874-en-US">"Measurement Time"</a>).</li><li value="7">For absolute group delay calculation an external trigger has to be used. Check whether an external trigger is connected and is being sent to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. The trigger periodicity has to be an integer multiple of the signal's periodicity, which is 1/carrier spacing.</li><li value="8">Increase the sweep count for absolute group delay calculation (for example 100 sweeps) to improve the measurement result. Use the sweep count for calibration as well as for group delay measurement (trace averaging) to compensate for trigger inaccuracies.</li><li value="9">Increase the carrier spacing on the used multi-carrier signal to reduce noise in the group delay calculation. Reducing the carrier spacing for multi-carrier signals leads to a better frequency resolution, but also causes more noise in the calculated group delay.</li><li value="10">For very low signal levels and short measurement times, the frequency estimation used by the MCGD application to determine the exact position of the carriers can degrade the measurement result due to uncompensated intercarrier interference. Increase the signal generator’s output level.</li></ul></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="5527950bd014486c.htm" class="chapter_title_toc">Error and Status Messages</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

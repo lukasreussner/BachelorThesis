@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Command Sequence and  Synchronization</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b5e8d99981128a820a00206a011f802f-7dca8529b9fd28060a00206a00e2bc74-en-US;ID_50208eb2671d75750a710a3101f08b14-7dca8529b9fd28060a00206a00e2bc74-en-US;ID_e3858ab3671d74f80a710a310120f96a-7dca8529b9fd28060a00206a00e2bc74-en-US;ID_067df647671d74e80a710a3101be346c-7dca8529b9fd28060a00206a00e2bc74-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <span class="chm-breadcrumb">Command Sequence and Synchronization</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Command Sequence and Synchronization</div><p>IEEE 488.2 defines a distinction between overlapped and sequential commands:</p><a name="kanchor2746">
+</a><a name="kanchor2747">
+</a><a name="kanchor2748">
+</a><a name="kanchor2749">
+</a><div class="block"><ul class="list"><li value="1">A sequential command is one which finishes executing before the next command starts executing. Commands that are processed quickly are usually implemented as sequential commands.</li><li value="2">An overlapping command is one which does not automatically finish executing before the next command starts executing. Usually, overlapping commands take longer to process and allow the program to do other tasks while being executed. If overlapping commands do have to be executed in a defined order, e.g. in order to avoid wrong measurement results, they must be serviced sequentially. This is called synchronization between the controller and the instrument.</li></ul></div><p>Setting commands within one command line, even though they may be implemented as sequential commands, are not necessarily serviced in the order in which they have been received. In order to make sure that commands are actually carried out in a certain order, each command must be sent in a separate command line.</p><div class="block"><span class="bold"><a name="ID_50208eb2671d75750a710a3101f08b14-7dca8529b9fd28060a00206a00e2bc74-en-US">
+</a>Example: Commands and queries in one message</span><p>The response to a query combined in a program message with commands that affect the queried value is not predictable.</p><p>The following commands always return the specified result:</p><p><span class="command">:FREQ:STAR 1GHZ;SPAN 100;:FREQ:STAR?</span></p><p>Result:</p><p><span class="command">1000000000</span> (1 GHz)</p><p>Whereas the result for the following commands is not specified by SCPI:</p><p><span class="command">:FREQ:STAR 1GHz;STAR?;SPAN 1000000</span></p><p>The result could be the value of <span class="command">STARt</span> before the command was sent since the instrument might defer executing the individual commands until a program message terminator is received. The result could also be 1 GHz if the instrument executes commands as they are received.</p></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>As a general rule, send commands and queries in different program messages.</p></td></tr></table></div></div><div class="block"><span class="bold"><a name="ID_067df647671d74e80a710a3101be346c-7dca8529b9fd28060a00206a00e2bc74-en-US">
+</a>Example: Overlapping command with *OPC</span><p>The instrument implements <span class="command">INITiate[:IMMediate]</span> as an overlapped command. Assuming that <span class="command">INITiate[:IMMediate]</span> takes longer to execute than <span class="command">*OPC</span>, sending the following command sequence results in initiating a sweep and, after some time, setting the <span class="command">OPC</span> bit in the <span class="command">ESR</span>:</p><p><span class="command">INIT; *OPC.</span></p><p>Sending the following commands still initiates a sweep:</p><p><span class="command">INIT; *OPC; *CLS</span></p><p>However, since the operation is still pending when the instrument executes <span class="command">*CLS</span>, forcing it into the "Operation Complete Command Idle" State (OCIS), <span class="command">*OPC</span> is effectively skipped. The <span class="command">OPC</span> bit is not set until the instrument executes another <span class="command">*OPC</span> command.</p></div><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="1d42f7139cff4524.htm" class="chapter_title_toc">Preventing Overlapping Execution</a></li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

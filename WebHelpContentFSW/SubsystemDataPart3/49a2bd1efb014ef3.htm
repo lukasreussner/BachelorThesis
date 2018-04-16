@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Analysis|Working with Markers in the R&amp;S FSW Analog Demodulation application|Marker Settings|General Marker Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Defining a Fixed Reference</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMarkerReferenceFixedState">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerReferenceFixedRefPointLevel">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerReferenceFixedRefPointFreqTime">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerReferenceFixedPeakSearch">
+</meta>
+        <meta name="topic-id" value="1357">
+</meta>
+        <meta name="topic-id" value="1359">
+</meta>
+        <meta name="topic-id" value="1361">
+</meta>
+        <meta name="topic-id" value="1363">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_207ab0d848553c680a00206a01ec3c0c-30579f4548553c680a00206a005a4419-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="422a06cbc46241ee.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="00e11ae7b6f24a0c.htm">Working with Markers in the R&amp;S FSW Analog Demodulation application</a> &gt; <a class="chm-breadcrumb" href="c8aeb6e225b341f1.htm">Marker Settings</a> &gt; <a class="chm-breadcrumb" href="24b0901552954bd4.htm">General Marker Settings</a> &gt; <span class="chm-breadcrumb">Defining a Fixed Reference</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor512">
+</a><a name="kanchor513">
+</a><a name="kanchor514">
+</a><a name="kanchor515">
+</a><div class="function_heading"><a name="ID_207ab0d848553c680a00206a01ec3c0c-30579f4548553c680a00206a005a4419-en-US">
+</a>Defining a Fixed Reference</div><p>Instead of using a reference marker that may vary its position depending on the measurement results, a fixed reference marker can be defined for trace analysis.</p><p>Note that this function may not be available in all result displays.</p><p>For "State" = "On" , a vertical and a horizontal red display line are displayed, marked as "FXD" . The normal marker 1 is activated and set to the peak value of the trace assigned to marker 1, and a delta marker to the next peak. The fixed reference marker is set to the position of marker 1 at the peak value. The delta marker refers to the fixed reference marker.</p><p>The "Level" and "Frequency" or "Time" settings define the position and value of the reference marker. To move the fixed reference, move the red display lines marked "FXD" in the diagram, or change the position settings in the "Marker Settings" tab of the "Marker" dialog box.</p><p><b>Peak Search</b> sets the fixed reference marker to the current maximum value of the trace assigned to marker 1.</p><p>If activated, the fixed reference marker ( "FXD" ) can also be selected as a <a class="xref" href="bd64e8332ca842d2.htm#ID_86bc62524849daaf0a00206a0195ccdb-2b71360c4849daaf0a00206a01bc72fe-en-US">"Reference Marker"</a> instead of another marker.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="acb4d3886a35429a.htm#ID_94d51ebf29e2380f0a00206a001477e7-84cab0b7e7d7dc390a00206a00c7371c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>DELTamarker&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>FIXed[:</nobr>​<nobr>STATe]</nobr></a></p><p><a class="xref" href="08c0f90a414246d6.htm#ID_ea555ee429c276740a00206a00e4a58f-f77b8db0e7d69aa20a00206a01ca5175-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>DELTamarker&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>FIXed:</nobr>​<nobr>RPOint:</nobr>​<nobr>Y</nobr></a></p><p><a class="xref" href="cb2ecdb3216b484b.htm#ID_b1398e0a29c198f60a00206a0018751e-fe716309e7d1764e0a00206a01603843-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>DELTamarker&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>FIXed:</nobr>​<nobr>RPOint:</nobr>​<nobr>X</nobr></a></p><p><a class="xref" href="829a651cba78429a.htm#ID_5f788a5729e14b6e0a00206a01ea87f9-3b7ec9422a804efe0a00206a00212f2e-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>DELTamarker&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>FIXed:</nobr>​<nobr>RPOint:</nobr>​<nobr>MAXimum[:</nobr>​<nobr>PEAK]</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

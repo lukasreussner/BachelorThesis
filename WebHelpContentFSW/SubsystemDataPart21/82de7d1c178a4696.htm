@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Signal Description|Downstream Signal Description|OFDM Channel Description (Downstream)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>PLC Start Index L</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDocsisSkIdOFDMChannelDescriptionPLCAuto">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdOFDMChannelDescriptionPLCStartIndex">
+</meta>
+        <meta name="topic-id" value="143">
+</meta>
+        <meta name="topic-id" value="144">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3d1eb31fe3cec4f70a001ae73c3c80d9-f2ebd9c6ddad6fb70a001ae77c050122-en-US;ID_f8e77cc4e8b8e6020a710ade00ad9aad-f2ebd9c6ddad6fb70a001ae77c050122-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="5c14c18ee5f1417e.htm">Signal Description</a> &gt; <a class="chm-breadcrumb" href="7feb2428dcc14fc1.htm">Downstream Signal Description</a> &gt; <a class="chm-breadcrumb" href="3834824746e849ab.htm">OFDM Channel Description (Downstream)</a> &gt; <span class="chm-breadcrumb">PLC Start Index L</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_3d1eb31fe3cec4f70a001ae73c3c80d9-f2ebd9c6ddad6fb70a001ae77c050122-en-US">
+</a><span style="font-weight: bold">PLC Start Index L</span></div><p>Defines the starting subcarrier index of the physical link channel (PLC).</p><p>The PLC is located at the same position in each OFDM symbol and consists of several consecutive subcarriers. The information in the PLC can be used by the R&amp;S FSW DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 application to determine several of the signal description parameters automatically.</p><p>For more information see <a class="xref" href="2cca8340baab41ea.htm#ID_65ab74fc26dc32790a001ae723d8404c-9b259ec462896a0f0a001ae700ae4a16-en-US">"Continuous pilots, excluded subcarriers, PLC"</a>.</p><p>If "Auto" is enabled, the start index of the PLC is detected automatically. After successful detection, this field indicates the PLC start index L.</p><p>If "Auto" is disabled, the numeric value defined manually is used as the start index.</p><p><b><a name="ID_f8e77cc4e8b8e6020a710ade00ad9aad-f2ebd9c6ddad6fb70a001ae77c050122-en-US">
+</a>Note:</b> If you enter a value manually, the "Auto" option is automatically disabled.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="2fa3d76e247c460f.htm#ID_b080bec8dd81ec7b0a001ae746e716a2-cc933f67dd81eac50a001ae75c84d48a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>DS:</nobr>​<nobr>CHANnel:</nobr>​<nobr>PLC:</nobr>​<nobr>INDex:</nobr>​<nobr>AUTO</nobr></a></p><p><a class="xref" href="3a9e33edb6be412c.htm#ID_05e499bddd81e9cb0a001ae720ca2d71-9a5f7239dd81e7c80a001ae75c84d48a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>DS:</nobr>​<nobr>CHANnel:</nobr>​<nobr>PLC:</nobr>​<nobr>INDex</nobr></a></p><p>Query PLC information:</p><p><a class="xref" href="ffbe4519fa8c42e0.htm#ID_2b5de83ddceeeb880a001ae74190db7b-d924641bdceeeacc0a001ae732a192bf-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>FETCh:</nobr>​<nobr>PLCMessages:</nobr>​<nobr>OCD:</nobr>​<nobr>PLC:</nobr>​<nobr>INDex?</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

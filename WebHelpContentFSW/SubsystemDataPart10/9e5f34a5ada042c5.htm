@@ -1,0 +1,26 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Spurious Measurements application (R&amp;S FSW-K50)|Configuration|Wide Search Measurement Settings|Configuring Individual Ranges" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k50.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Auto RBW</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_65cadc746bca19b40a001ae75e0a1a3f-0b700aeb9088a0a80a001ae7400d3d57-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Spurious Measurements application (R&amp;S FSW-K50)</a> &gt; <a class="chm-breadcrumb" href="296893c4f6374f9b.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="01438ccad962413e.htm">Wide Search Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="aeceeb6541394028.htm">Configuring Individual Ranges</a> &gt; <span class="chm-breadcrumb">Auto RBW</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_65cadc746bca19b40a001ae75e0a1a3f-0b700aeb9088a0a80a001ae7400d3d57-en-US">
+</a><span style="font-weight: bold">Auto RBW</span></div><p>Sets the RBW for the complete range such that the noise floor is displayed slightly below the user-defined threshold. Since the noise floor may vary across the frequencies, the RBW needs to be adapted to the signal. This is done by splitting the ranges into smaller segments with similar signal and noise characteristics.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"On"</p></td><td class="function_col_right"><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Spurious measurements application divides the ranges for which "Auto RBW" is active into segments according to the noise and power levels measured in the Spectral Overview sweep. The application then adapts the RBW setting within the segments so the noise floor lies below the threshold for the displayed signal. As a result, an additional "Segment" table is created with the used RBW for each segment (see <a class="xref" href="d1268e44dcf1428f.htm#ID_312c1d145c3c53090a001ae720ab609c-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Show Segment Table"</a>).</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Off"</p></td><td class="function_col_right"><p>The RBW becomes available for manual editing again and the segment table is deleted. The default parameter values are restored.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="cd56dc53a99940bb.htm#ID_727b7d394fedd5110a001ae728dd992c-5160457e4fedd36c0a001ae7327a65e6-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]LIST:</nobr>​<nobr>RANGe&lt;range&gt;:</nobr>​<nobr>BANDwidth:</nobr>​<nobr>AUTO</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

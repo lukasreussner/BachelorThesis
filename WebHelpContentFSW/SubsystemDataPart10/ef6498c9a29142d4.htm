@@ -1,0 +1,120 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Spurious Measurements application (R&amp;S FSW-K50)|Remote Commands to Perform Spurious Measurements|Configuring Spurious Measurements|Configuring the Data Input|Using External Mixers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k50.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Working with an External Mixer</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f79f1d9c912f441e0a00201900f08f86-218fbea7912f441e0a002019015ec4a5-en-US;ID_4eb748e8917787240a00201901fff65d-218fbea7912f441e0a002019015ec4a5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Spurious Measurements application (R&amp;S FSW-K50)</a> &gt; <a class="chm-breadcrumb" href="452b678315694dcc.htm">Remote Commands to Perform Spurious Measurements</a> &gt; <a class="chm-breadcrumb" href="eb1cea5aeb414ab8.htm">Configuring Spurious Measurements</a> &gt; <a class="chm-breadcrumb" href="c4f41684a3b4469d.htm">Configuring the Data Input</a> &gt; <a class="chm-breadcrumb" href="3127bdb04a03468c.htm">Using External Mixers</a> &gt; <span class="chm-breadcrumb">Programming Example: Working with an External Mixer</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor260">
+</a><a name="kanchor261">
+</a><div class="chm-chaptertitle">Programming Example: Working with an External Mixer</div><p>This example demonstrates how to work with an external mixer in a remote environment. It is performed in the Spectrum application in the default layout configuration. Note that without a real input signal and connected mixer, this measurement will not return useful results.</p><div class="verbatim"><pre class="verbatim_text">//--------------Preparing the instrument -----------
+//Reset the instrument
+*RST
+//Activate the use of the connected external mixer.
+SENS:MIX ON
+//----------- Configuring basic mixer behavior -------------
+//Set the LO level of the mixer's LO port to 15 dBm.
+SENS:MIX:LOP 15dBm
+//Set the bias current to -1 mA .
+SENS:MIX:BIAS:LOW -1mA
+//----------- Configuring the mixer and band settings -------------
+//Use band "V" to full possible range extent for assigned harmonic (6).
+SENS:MIX:HARM:BAND V
+SENS:MIX:RFOV ON
+//Query the possible range
+SENS:MIX:FREQ:STAR?
+//Result: 47480000000 (47.48 GHz)
+SENS:MIX:FREQ:STOP?
+//Result: 138020000000 (138.02 GHz)
+//Use a 3-port mixer type
+SENS:MIX:PORT 3
+//Split the frequency range into two ranges;
+//range 1 covers 47.48 GHz GHz to 80 GHz; harmonic 6, average conv. loss of 20 dB
+//range 2 covers 80 GHz to 138.02 GHz; harmonic 8, average conv.loss of 30 dB
+SENS:MIX:HARM:TYPE EVEN
+SENS:MIX:HARM:HIGH:STAT ON
+SENS:MIX:FREQ:HAND 80GHz
+SENS:MIX:HARM:LOW 6
+SENS:MIX:LOSS:LOW  20dB
+SENS:MIX:HARM:HIGH 8
+SENS:MIX:LOSS:HIGH 30dB
+//--------- Activating automatic signal identification functions -----------
+//Activate both automatic signal identification functions.
+SENS:MIX:SIGN ALL
+//Use auto ID threshold of 8 dB.
+SENS:MIX:THR 8dB
+
+//--------------Performing the Measurement-----
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a basic frequency sweep and wait until the sweep has finished.
+INIT;*WAI
+//---------------Retrieving Results-------------
+//Return the trace data for the input signal without distortions
+//(default screen configuration)
+TRAC:DATA? TRACE3
+
+</pre></div><div class="block"><div class="subtitle"><a name="ID_4eb748e8917787240a00201901fff65d-218fbea7912f441e0a002019015ec4a5-en-US">
+</a>Configuring a conversion loss table for a user-defined band</div></div><div class="verbatim"><pre class="verbatim_text">//--------------Preparing the instrument -----------
+//Reset the instrument
+*RST
+//Activate the use of the connected external mixer.
+SENS:MIX ON
+//--------------Configuring a new conversion loss table --------------
+//Define cvl table for range 1 of band as described in previous example
+// (extended V band)
+SENS:CORR:CVL:SEL 'UserTable'
+SENS:CORR:CVL:COMM 'User-defined conversion loss table for USER band'
+SENS:CORR:CVL:BAND USER
+SENS:CORR:CVL:HARM 6
+SENS:CORR:CVL:BIAS -1mA
+SENS:CORR:CVL:MIX 'FS_Z60'
+SENS:CORR:CVL:SNUM '123.4567'
+SENS:CORR:CVL:PORT 3
+//Conversion loss is linear from 55 GHz to 75 GHz
+SENS:CORR:CVL:DATA 55GHZ,-20DB,75GHZ,-30DB
+//----------- Configuring the mixer and band settings -------------
+//Use user-defined band and assign new cvl table.
+SENS:MIX:HARM:BAND USER
+//Define band by two ranges;
+//range 1 covers 47.48 GHz to 80 GHz; harmonic 6, cvl table 'UserTable'
+//range 2 covers 80 GHz to 138.02 GHz; harmonic 8, average conv.loss of 30 dB
+SENS:MIX:HARM:TYPE EVEN
+SENS:MIX:HARM:HIGH:STAT ON
+SENS:MIX:FREQ:HAND 80GHz
+SENS:MIX:HARM:LOW 6
+SENS:MIX:LOSS:TABL:LOW 'UserTable'
+SENS:MIX:HARM:HIGH 8
+
+SENS:MIX:LOSS:HIGH 30dB
+//Query the possible range
+SENS:MIX:FREQ:STAR?
+//Result: 47480000000 (47.48 GHz)
+SENS:MIX:FREQ:STOP?
+//Result: 138020000000 (138.02 GHz)
+
+//--------------Performing the Measurement-----
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a basic frequency sweep and wait until the sweep has finished.
+INIT;*WAI
+//---------------Retrieving Results-------------
+//Return the trace data (default screen configuration)
+TRAC:DATA? TRACe1</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

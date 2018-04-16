@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Configuring Amplifier Measurements|Estimating and Compensating Signal Errors" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Using the equalizer</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eETSkIdEqualiser_FilterLength">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdEqualiser_TrainCoeff">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdEqualiser_LoadCoeff">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdEqualiser_SaveCoeff">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdEqualiserState">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdEqualiser_FileFormat">
+</meta>
+        <meta name="topic-id" value="409">
+</meta>
+        <meta name="topic-id" value="411">
+</meta>
+        <meta name="topic-id" value="413">
+</meta>
+        <meta name="topic-id" value="415">
+</meta>
+        <meta name="topic-id" value="417">
+</meta>
+        <meta name="topic-id" value="419">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_33fc62fbd0618d710a001ae7175a3e4d-f2ec7098d0618d710a001ae725b03d35-en-US;ID_f0bd85bdf2aacbf70a001ae73b716120-f2ec7098d0618d710a001ae725b03d35-en-US;ID_1d7de043f31e319d0a001ae76d95231c-f2ec7098d0618d710a001ae725b03d35-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/98a070c65d8e46c1.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="514ce2c6787d4307.htm">Configuring Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="4c1e3258c444439b.htm">Estimating and Compensating Signal Errors</a> &gt; <span class="chm-breadcrumb">Using the equalizer</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor276">
+</a><a name="kanchor277">
+</a><div class="function_heading"><a name="ID_33fc62fbd0618d710a001ae7175a3e4d-f2ec7098d0618d710a001ae725b03d35-en-US">
+</a>Using the equalizer</div><p>Using the equalizer requires a description of the equalizer filter. You can either train (and save) such a filter automatically with the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, or use one that you already have.</p><p>Training (or creating) the equalizer filter is a process in which the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW compares the frequency response of the input and output signal and equalizes potential distortion. The goal is to match the frequency response of the output signal and the input signal. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is able to train the filter based on all samples in the evaluation range.</p><p>The "Equalizer Filter Length For Training" property defines the number of FIR filter coefficients to be calculated. A larger number of samples generally yields better results, but takes longer to calculate. After you have defined the filter length (coefficients), you can start the training sequence with the "Train Equalizer Filter on Current I/Q Data" feature. To apply the filter, turn on the equalizer with the "Equalizer State" toggle.</p><p>Note that the reference and measured signal need to be synchronized for a successful filter training. Make sure to turn on <a class="xref" href="a4eb71ebdbc7499f.htm#ID_d65f63b5d38b32610a001ae700484585-e1426f1bd38b32610a001ae708cc1ee8-en-US">signal synchronization</a> before you train a filter.</p><p>When the filter training is done, you can save the filter in a <span class="filename">csv</span> or a <span class="filename">fres</span> file (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">➙</span> "Save Equalizer Filter").</p><p>For more information about the <span class="filename">fres</span> file format, see <a class="xref" href="../../../Content/2394bc31ee1849b3.htm">Frequency Response Correction (R&amp;S FSW-K544)</a>.</p><p>If you want to use an equalizer filter that you already have from a previous measurement, you can restore that filter (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">➙</span> "Load Equalizer Filter") and apply it without a training sequence.</p><p>The dialog box also shows the information about the filter file that is currently in use. This information includes the file name, the date it was modified last and the length of the filter (in samples).</p><p><b><a name="ID_f0bd85bdf2aacbf70a001ae73b716120-f2ec7098d0618d710a001ae725b03d35-en-US">
+</a>Note:</b> Any equalizer filter is only valid for the sample rate it has been trained for.<br/>If you change the sample rate when an equalizer filter is active, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW automatically turns off the equalizer filter. If you still want to use an equalizer filter with the new sample rate, you have to train and apply the equalizer filter again.<br/></p><p><b><a name="ID_1d7de043f31e319d0a001ae76d95231c-f2ec7098d0618d710a001ae725b03d35-en-US">
+</a>Note:</b> An <a class="xref" href="../../../Content/54c1cada17ed40d1.htm">
+		I/Q Export
+	</a> always exports the unequalized (raw) data.<br/>If you want to export the equalized data, you can do so with the following SCPI command.<br/><a class="xref" href="1ec554d5b8634e8e.htm#ID_f3f13092f25799f00a001ae7625119c0-430a7d42f25799340a001ae76ad8fe4b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>EQUalized?</nobr></a><br/></p>Remote command: <div class="rcclist_right"><p>Filter length: <a class="xref" href="a938b2667bff4479.htm#ID_c9809d718ce6946a0a001ae71c61fb17-0934adf78ce6939f0a001ae750953149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>EQUalizer:</nobr>​<nobr>FILTer:</nobr>​<nobr>LENGth</nobr></a></p><p>Start training: <a class="xref" href="4dba13d0a375490c.htm#ID_62d6cea68ce696ac0a001ae711c93d56-9338594e8ce696000a001ae750953149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>EQUalizer:</nobr>​<nobr>TRAin</nobr></a></p><p>Store filter: <a class="xref" href="c1a996f2823545be.htm#ID_1f65416c8ce708a10a001ae723d6a868-e1454b108ce707e50a001ae750953149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>MMEMory:</nobr>​<nobr>STORe:</nobr>​<nobr>EQUalizer:</nobr>​<nobr>FILTer:</nobr>​<nobr>COEFficient</nobr></a></p><p>File format: <a class="xref" href="c3903b1fdb354a14.htm#ID_7d6553702757d0f60a001ae7666a22dc-0a99b6e62757d02b0a001ae7535d0c59-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>EQUalizer:</nobr>​<nobr>FILTer:</nobr>​<nobr>FILE:</nobr>​<nobr>FORMat</nobr></a></p><p>Restore filter: <a class="xref" href="e1d76315590e4c0d.htm#ID_d362edbe8ce705940a001ae7138601cc-aaafa8558ce704d80a001ae750953149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>MMEMory:</nobr>​<nobr>LOAD:</nobr>​<nobr>EQUalizer:</nobr>​<nobr>FILTer:</nobr>​<nobr>COEFficient</nobr></a></p><p>Equalizer state: <a class="xref" href="78d83deff7c844f8.htm#ID_39af18998ce698040a001ae71da0d987-699948358ce697290a001ae750953149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>EQUalizer[:</nobr>​<nobr>STATe]</nobr></a></p><p>Manual filter definition: <a class="xref" href="c84f5fb0fe434f0d.htm#ID_0e558aae8ce695930a001ae74d928cd8-7ebc68a58ce694c70a001ae750953149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>EQUalizer:</nobr>​<nobr>FPARameters</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics|Signal Processing for High-Efficiency Wireless Measurements (IEEE 802.11ax)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Demodulating 802.11ax signals in the R&amp;S FSW WLAN application</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4225caf1979dc4d50a001ae73919eafe-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="e567f64569e54b7c.htm">Signal Processing for High-Efficiency Wireless Measurements (IEEE 802.11ax)</a> &gt; <span class="chm-breadcrumb">Demodulating 802.11ax signals in the R&amp;S FSW WLAN application</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Demodulating 802.11ax signals in the R&amp;S FSW WLAN application</div><p>In order to demodulate high-efficiency PPDUs in the R&amp;S FSW WLAN application, the application must have knowledge of the used PPDU format and the PPDU configuration. For multi-user PPDUs, the RU allocation and user assignment are also required.</p><div class="block"><div class="listintro">Depending on the available channel bandwidth, the following multi-user configuration must be defined:</div><ul class="list"><li value="1">For channels with 20 MHz bandwidth, only 1 configuration is required (RU1).</li><li value="2">For channels with 40 MHz bandwidth, 2 configurations are required in different tabs (RU1 and RU2).</li><li value="3">For channels with 80 MHz bandwidth, 4 configurations are required, in 4 different tabs (RU1 to RU4), where the contents of RU1 and RU3 are identical, and RU2 and RU4 are identical.</li><li value="4">For channels with 2x80 MHz or 160 MHz bandwidth, 4 configurations are required for each 80-MHz-segment of the channel (Segment 1 and Segment 2).</li></ul></div><p>For single user (HE SU-PPDU) and trigger-based PPDUs (UL), the configuration is detected automatically by the R&amp;S FSW WLAN application. For multi-user downlink PPDUs (HE MU_PPDU), you must define the configuration manually (see <a class="xref" href="b672bdfc678a48b6.htm#ID_96030d67cf42122f0a001ae72fda98a8-d8e006d37c4158750a00201901359a7d-en-US">"HE PPDU Config"</a>).</p><p>For trigger-based PPDUs, you must also define the length of the HE-LTF field in the PPDUs in the R&amp;S FSW WLAN application.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

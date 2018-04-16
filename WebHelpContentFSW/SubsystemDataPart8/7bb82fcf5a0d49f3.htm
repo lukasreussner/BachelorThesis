@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Remote Control Commands for Noise Figure Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Using the Uncertainty Calculator</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_bfedc40b13b6ed780a00201901350e93-617eb98f13b6ed780a002019004ff23c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="8df071f8ae8c45f0.htm">Remote Control Commands for Noise Figure Measurements</a> &gt; <span class="chm-breadcrumb">Using the Uncertainty Calculator</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Using the Uncertainty Calculator</div><p>The following commands are necessary to work with the measurement uncertainty calculator.</p>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="f37bd9a746d64157.htm#ID_2394baa1680c528b0a00201900f0d791-2406fab2680c528b0a00201901d87d61-en-US" class="title_toc">CALCulate:UNCertainty:COMMon</a><br/><a href="d2184162e33828.htm#ID_4c4677c609ef5ca00a00201901ac670b-9cbcb7d309ef5ca00a00201901a11993-en-US" class="title_toc">CALCulate:UNCertainty:DATA:FREQuency</a><br/><a href="d2184162e33857.htm#ID_5eccce4b09ef0f990a00201901f65626-67d1961009ef0f990a00201901921130-en-US" class="title_toc">CALCulate:UNCertainty:DATA:GAIN</a><br/><a href="d2184162e33886.htm#ID_6b7fc84509eebcf50a002019012d71d0-9f16a10109eebcf50a002019008b3331-en-US" class="title_toc">CALCulate:UNCertainty:DATA:NOISe</a><br/><a href="a0f6dc9b25b1456f.htm#ID_f2c1b74a09ee71a30a0020190038178b-82c6af9109ee71a30a0020190091cab1-en-US" class="title_toc">CALCulate:UNCertainty:DATA:RESults</a><br/><a href="d2184162e33945.htm#ID_9ab361c4680cc3090a00201901abf0da-3af12515680cc3090a0020190151b38a-en-US" class="title_toc">CALCulate:UNCertainty:ENR:CALibration:UNCertainty</a><br/><a href="84f48ed7616540e0.htm#ID_801457293ee77e470a001ae762b3ac7b-548592bd3ee77e470a001ae70200f1dd-en-US" class="title_toc">CALCulate:UNCertainty:ENR:CALibration:UNCertainty:COLD</a><br/><a href="093f0c66ae0a4e96.htm#ID_679e82f93ee791230a001ae77718a2c3-78a2bb763ee791230a001ae77265ed4a-en-US" class="title_toc">CALCulate:UNCertainty:ENR:CALibration:UNCertainty:HOT</a><br/><a href="d2184162e34063.htm#ID_0e07678509ed94050a00201900956d03-0b34e03709ed94050a0020190027e355-en-US" class="title_toc">CALCulate:UNCertainty:ENR:UNCertainty</a><br/><a href="9de05d1fa8494bed.htm#ID_7d569b5a3ee3dbd20a001ae72674ab2a-14534ac13ee3dbd20a001ae73591661f-en-US" class="title_toc">CALCulate:UNCertainty:ENR:UNCertainty:COLD</a><br/><a href="4aaf2ef68a484e84.htm#ID_058f8d373ee3b9170a001ae705a3768d-5ea736ad3ee3b9170a001ae72ebc25df-en-US" class="title_toc">CALCulate:UNCertainty:ENR:UNCertainty:HOT</a><br/><a href="d2184162e34144.htm#ID_ec3bcb9a09f11f8e0a00201900023a6d-b3b2b94009f11f8e0a0020190049f117-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:DUT:IN:RL</a><br/><a href="d2184162e34164.htm#ID_01df8c4c09f047200a0020190011da3c-7ecf3f1e09f047200a002019000ed198-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:DUT:IN:[VSWR]</a><br/><a href="d2184162e34184.htm#ID_a0f9791709edde4c0a00201901ecad97-e87b787c09f190f60a00201900c539e2-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:DUT:OUT:RL</a><br/><a href="d2184162e34204.htm#ID_68d3112d09f161e70a00201901611152-412207bc09f161e70a00201901b838d8-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:DUT:OUT:[VSWR]</a><br/><a href="d2184162e34224.htm#ID_54c200b009f203860a002019005cfce6-61bdcc8a09f203860a00201900df76cb-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:PREamp:RL</a><br/><a href="d2184162e34244.htm#ID_9d29e94809f1c99a0a002019011a1881-8adfb5d709f1c99a0a002019003ed75c-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:PREamp[:VSWR]</a><br/><a href="d2184162e34268.htm#ID_c2c0a3e7680d302c0a002019017c0d0d-d0287710680d302c0a002019013d0eca-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:SOURce:CALibration[:VSWR]</a><br/><a href="d2184162e34302.htm#ID_a4bc9ec9680d4f9b0a00201901afa215-f2f95cc9680d4f9b0a00201901ba2c3c-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:SOURce:CALibration:RL</a><br/><a href="d2184162e34337.htm#ID_889122e209f010be0a00201901875e8c-b48c11e209f010be0a0020190050445e-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:SOURce:RL</a><br/><a href="d2184162e34359.htm#ID_fc5eea6409efe22c0a002019004985bc-9956ea5009efe22c0a00201900eb092c-en-US" class="title_toc">CALCulate:UNCertainty:MATCh:SOURce[:VSWR]</a><br/><a href="d2184162e34381.htm#ID_07569cc709dfeb990a00201901942e36-b6c1b31b09dfeb990a0020190165fde3-en-US" class="title_toc">CALCulate:UNCertainty:PREamp:GAIN</a><br/><a href="d2184162e34407.htm#ID_1e68542609f190f60a0020190090c636-066beee509df8f210a0020190001fc8c-en-US" class="title_toc">CALCulate:UNCertainty:PREamp:NOISe</a><br/><a href="1d3c437c1ba44629.htm#ID_f57880e909e048110a0020190058fbe6-154d563809e048110a0020190001c480-en-US" class="title_toc">CALCulate:UNCertainty:PREamp:STATe</a><br/><a href="d2184162e34456.htm#ID_a0f9791709edde4c0a00201901ecad97-8ab355d309edde4c0a0020190178ac0f-en-US" class="title_toc">CALCulate:UNCertainty[:RESult]?</a><br/><a href="d2184162e34474.htm#ID_4400eebec0344e9f0a00201901f6189f-8554cf9ec03421260a00201900521c2c-en-US" class="title_toc">CALCulate:UNCertainty:SANalyzer:GAIN:UNCertainty?</a><br/><a href="d2184162e34492.htm#ID_4400eebec0344e9f0a00201901f6189f-1ed3ce97c0344e9f0a00201901ca7d10-en-US" class="title_toc">CALCulate:UNCertainty:SANalyzer:NOISe:UNCertainty?</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

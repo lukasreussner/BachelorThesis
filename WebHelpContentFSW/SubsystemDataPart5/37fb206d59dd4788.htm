@@ -1,0 +1,26 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)|Optimizing and Troubleshooting the Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k15.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Problem: Missing results in Distortion Summary</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7f644c1ea9d5a7240a001ae725207d12-f1d8d7e8861670990a001ae74030c2f9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k15/Content/37fb206d59dd4788.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)</a> &gt; <a class="chm-breadcrumb" href="1bc329a560784549.htm">Optimizing and Troubleshooting the Measurement</a> &gt; <span class="chm-breadcrumb">Problem: Missing results in Distortion Summary</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_7f644c1ea9d5a7240a001ae725207d12-f1d8d7e8861670990a001ae74030c2f9-en-US">
+</a>Problem: Missing results in Distortion Summary</div><p>K2, K3, and THD of a signal can only be measured if its modulation depth was detected to be high enough to trust the estimated frequency.</p><div class="block"><div class="listintro-in-compact-list"><b>Possible Solutions:</b></div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">In your DUT, turn on the missing signal or increase its modulation depth.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">The THD result cannot be calculated if the <a class="xref" href="cf70db63477e4416.htm#ID_55a60c26e421ded80a001ae7193bc6b6-ac8f214a8613e8920a001ae71b55551b-en-US">"Distortion Max Frequency"</a> parameter is smaller than 2 times the fundamental frequency. Increase the <a class="xref" href="cf70db63477e4416.htm#ID_55a60c26e421ded80a001ae7193bc6b6-ac8f214a8613e8920a001ae71b55551b-en-US">"Distortion Max Frequency"</a>.</li></ul></div><p>Note that the <a class="xref" href="e9babf62e8824162.htm#ID_e4745af7e421ded80a001ae776bcd774-ac8f214a8613e8920a001ae71b55551b-en-US">"AF Span"</a> defined for the <a class="xref" href="d70838ea7f2046f2.htm#ID_b18eec7e39d111e5b9978aff8ba15c9e-4e43f070817b779d0a001ae778f8e974-en-US">"Modulation Spectrum"</a> result display has no effect on the THD, K2 and K3 results.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

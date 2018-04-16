@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Channel Table</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b8c4a9e6ead261ec0a710a310036babd-9c73b9e8277ee5940a001ae73a0b8ecb-en-US;ID_0bff7a56e590f2610a00206a017a0a8c-9c73b9e8277ee5940a001ae73a0b8ecb-en-US;ID_e7b53e37e590f2610a00206a014a88c1-9c73b9e8277ee5940a001ae73a0b8ecb-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="e492fe40d86a471b.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="e89fd345bf5449b4.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Channel Table</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor781">
+</a><div class="chm-chaptertitle">Channel Table</div><p>When the trace data for this evaluation is queried, 5 (7) values are transmitted for each channel (depending on the query parameter):</p><div class="block"><ul class="list"><li value="1">the class</li><li value="2">the channel number</li><li value="3">the absolute level</li><li value="4">the relative level</li><li value="5">the timing offset</li><li value="6">the pilot length <b>*)</b></li><li value="7">the active flag <b>*)</b></li></ul></div><p><b>*)</b> for CTAB query parameter only</p><p>For details on these parameters see <a class="xref" href="9f94d085c3c34cd9.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-6dc20829fef82b150a00206a004893c1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRAC:DATA? TRACE1</a> and <a class="xref" href="5b5374be8ed54900.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-1a158fbffef807310a00206a017e8287-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRAC:DATA? CTAB</a>.</p><div class="block"><span class="bold"><a name="ID_0bff7a56e590f2610a00206a017a0a8c-9c73b9e8277ee5940a001ae73a0b8ecb-en-US">
+</a>Example: </span><p>The following example shows the results of a query for three channels with the following configuration:</p><div class="block"><a name="ID_e7b53e37e590f2610a00206a014a88c1-9c73b9e8277ee5940a001ae73a0b8ecb-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Channel Pos.</p></th><th valign="top"><p>Code class</p></th><th valign="top"><p>Channel number</p></th><th valign="top"><p>Abs. Level</p></th><th valign="top"><p>Rel. level</p></th><th valign="top"><p>Timing offset</p></th><th valign="top"><p>Pilot Length</p></th><th valign="top"><p>Active?</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1</p></td><td valign="top"><p>9</p></td><td valign="top"><p>7</p></td><td valign="top"><p>-40</p></td><td valign="top"><p>-20</p></td><td valign="top"><p>0</p></td><td valign="top"><p>8</p></td><td valign="top"><p>1</p></td></tr><tr class="evenrow"><td valign="top"><p>2</p></td><td valign="top"><p>1</p></td><td valign="top"><p>1</p></td><td valign="top"><p>-40</p></td><td valign="top"><p>-20</p></td><td valign="top"><p>256 chips</p></td><td valign="top"><p>2</p></td><td valign="top"><p>1</p></td></tr><tr class="oddrow"><td valign="top"><p>3</p></td><td valign="top"><p>7</p></td><td valign="top"><p>255</p></td><td valign="top"><p>-40</p></td><td valign="top"><p>-20</p></td><td valign="top"><p>2560 chips</p></td><td valign="top"><p>6</p></td><td valign="top"><p>1</p></td></tr></tbody></table></div><p><span class="command">TRAC:DATA? TRAC1</span> returns the following result:</p><p>9, 7, -40, -20, 0, 2, 1, -40, -20, 256, 7, 255, -40, -20, 2560</p><p>The channel order is the same as in the CDP diagram, i.e. it depends on their position in the code domain of spreading factor 512.</p><p><span class="command">TRAC:DATA? CTAB</span> returns the following result:</p><p>9, 7, -40, -20, 0, <b>8, 1,</b> 1, 1, -40, -20, 256, <b>2, 1,</b> 7, 255, -40, -20, 2560, <b>6, 1</b></p></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

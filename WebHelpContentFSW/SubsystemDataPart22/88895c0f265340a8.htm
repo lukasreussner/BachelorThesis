@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Configuration|Configuring I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring the EPDCCH</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdControlChannelEPDCCHPRBPairs">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdControlChannelEPDCCHRelPower">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdControlChannelEPDCCHLocalized">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdControlChannelEPDCCHSetID">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdControlChannelEPDCCHRBAssign">
+</meta>
+        <meta name="topic-id" value="12937">
+</meta>
+        <meta name="topic-id" value="12938">
+</meta>
+        <meta name="topic-id" value="12939">
+</meta>
+        <meta name="topic-id" value="12940">
+</meta>
+        <meta name="topic-id" value="12941">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8e5c269d4d2dc5940a001ae75fcfe7e8-97314bbd4d2dc5940a001ae74a82617c-en-US;ID_51a9c653562fc62f0a001ae769e72fcc-97314bbd4d2dc5940a001ae74a82617c-en-US;ID_185728436b586b510a710b9a000fd114-97314bbd4d2dc5940a001ae74a82617c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/88895c0f265340a8.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="815a65ace54b46f5.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="b9dea6be44534e0a.htm">Configuring I/Q Measurements</a> &gt; <span class="chm-breadcrumb">Configuring the EPDCCH</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Configuring the EPDCCH</div><p><b>Access</b>: "Overview" &gt; "Signal Description" &gt; "Advanced Settings" &gt; "Enhanced Control Channel"</p><p>The enhanced physical downlink control channel (EPDCCH) carries the downlink control information. Compared to the PDCCH, the EPDCCH uses resource blocks normally reserved for the PDSCH.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_51a9c653562fc62f0a001ae769e72fcc-97314bbd4d2dc5940a001ae74a82617c-en-US">
+</a>Shared resource blocks of PDSCH and EPDCCH</div><p>PDSCH allocations overwrite the EPDCCH if they occupy the same resource blocks.</p></td></tr></table></div></div><p>The EPDCCH is always transmitted in an EPDCCH-PRB set. For each cell and user, you can define one or two EPDCCH-PRB sets. An EPDCCH-PRB set is made up out of two or more resource blocks that are combined logically.</p><p>Note that you have to measure one EPDCCH-PRB set at a time. If you have to measure a signal with more than one EPDCCH-PRB set, you have to configure each set separately and refresh the I/Q data for each set.</p><p>You can define several parameters for the EPDCCH.</p><div class="block" id="ID_185728436b586b510a710b9a000fd114-97314bbd4d2dc5940a001ae74a82617c-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgacd261ee6b55b83a0a001ae71551eccd_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img">
+</img></td><td><div class="tip_title">Configuring component carriers</div><p>When you are doing measurements on <a class="xref" href="ebbb0ad1db1840cd.htm#ID_b1dc68966fe64be00a001ae72d834bc9-ea7f42c56fe64be00a001ae706e49077-en-US">aggregated carriers</a>, you can configure each carrier separately.</p><p>When available, each carrier in the dialog boxes is represented by an additional tab labeled "CC&lt;x&gt;", with &lt;x&gt; indicating the number of the component carrier.</p><p>Note that the additional tabs are only added to the user interface after you have selected more than "1" component carrier.</p></td></tr></table></div></div><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="3dacd37f9df341c9.htm#ID_a7bbe1464d48e5f50a001ae766ea5810-97314bbd4d2dc5940a001ae74a82617c-en-US" class="title_toc">EPDCCH PRB Pairs</a></div><div class="function_block"><font face="Arial">└</font> <a href="5f07e09f0cce44bd.htm#ID_c05e4b154d48e5f50a001ae77116f3af-97314bbd4d2dc5940a001ae74a82617c-en-US" class="title_toc">EPDCCH Set ID</a></div><div class="function_block"><font face="Arial">└</font> <a href="a3820730d2f04776.htm#ID_7c86bf694d48e5f50a001ae745c98a55-97314bbd4d2dc5940a001ae74a82617c-en-US" class="title_toc">EPDCCH Rel Power</a></div><div class="function_block"><font face="Arial">└</font> <a href="0381b7c02d124447.htm#ID_508ea66f4d48e5f50a001ae74f3d864b-97314bbd4d2dc5940a001ae74a82617c-en-US" class="title_toc">EPDCCH RB Assignment</a></div><div class="function_block"><font face="Arial">└</font> <a href="1c6082dd44db40c1.htm#ID_00f0959a4d48e5f50a001ae777c281af-97314bbd4d2dc5940a001ae74a82617c-en-US" class="title_toc">EPDCCH Localized</a></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

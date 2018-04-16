@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Capture Buffer Display</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a56f7a4f6786b45c0a00201901969e40-184c8906411153460a00206a01532735-en-US;ID_d79f056b6786b45c0a00201900bfdf57-184c8906411153460a00206a01532735-en-US;ID_6b30ca783866bad20a710ade01e80401-184c8906411153460a00206a01532735-en-US;ID_51fcc1776786b45c0a002019001a0eb0-184c8906411153460a00206a01532735-en-US;ID_e95969e86786b45c0a00201901fdeda1-184c8906411153460a00206a01532735-en-US;ID_16cd1f7d38ab11000a001ae756bb253d-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Capture Buffer Display</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor350">
+</a><a name="kanchor351">
+</a><a name="kanchor352">
+</a><div class="chm-chaptertitle">Capture Buffer Display</div><p>Up to 200 million symbols can be captured and processed at a time.</p><p>If the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (B2000) is active, the capture buffer is restricted to 256,000 samples; thus, all data is included in one single range.</p><div class="block"><div class="subtitle"><a name="ID_d79f056b6786b45c0a00201900bfdf57-184c8906411153460a00206a01532735-en-US">
+</a>Processing large numbers of samples</div></div><a name="kanchor353">
+</a><p>If more than 256,000 samples are captured, overlapping capture ranges with a size of 256,000 samples each are created.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The maximum number of <em>symbols</em> that can be captured depends on the specified number of samples per symbol. For example, for the default sample rate of 4*symbol rate, the maximum number of symbols to be captured is 50,000,000 (see also <a class="xref" href="a653b9be9dd94c76.htm#ID_7aba2997564717190a00206a01d25dda-184c8906411153460a00206a01532735-en-US">"Sample Rate, Symbol Rate and I/Q Bandwidth"</a>).</p></td></tr></table></div></div><p>Only one capture range at a time can be displayed in the result displays based on the capture buffer (except for the <a class="xref" href="a98d3526e7b3451b.htm#ID_1c9607c164a211e2913ceec678f14989-872c63c6410c614d0a00206a016aa6c2-en-US">"Magnitude Overview Absolute"</a>). You can scroll through the different ranges using the <a class="xref" href="bba96ea33b6f4cde.htm#ID_25810d2d09b72cb90a00206a0111acef-7e33062f3089a2790a001ae71fb6fe51-en-US">"Select Result Rng"</a> function. When the selected result range moves outside the current capture range, the right edge of the current result range is displayed in the center of the next capture range.</p><div class="block"><div class="subtitle"><a name="ID_51fcc1776786b45c0a002019001a0eb0-184c8906411153460a00206a01532735-en-US">
+</a>Overview vs. details</div></div><p>While the <a class="xref" href="15317efd8be44b72.htm#ID_77226ae09767b49b0a00206a019f37a6-872c63c6410c614d0a00206a016aa6c2-en-US">"Magnitude Absolute"</a> and other result displays based on the capture buffer (<a class="xref" href="df901fa96169411f.htm#ID_06577f5a9767b49b0a00206a00273ff4-872c63c6410c614d0a00206a016aa6c2-en-US">"Real/Imag (I/Q)"</a>, <a class="xref" href="e827b6ec63394b4c.htm#ID_953b37349767b4aa0a00206a01ca4fa8-872c63c6410c614d0a00206a016aa6c2-en-US">"Vector I/Q"</a>, <a class="xref" href="00ee3008d32f465d.htm#ID_703733849767b49b0a00206a00aef468-872c63c6410c614d0a00206a016aa6c2-en-US">"Frequency Absolute"</a>) can only display a single capture range at a time, the <a class="xref" href="a98d3526e7b3451b.htm#ID_1c9607c164a211e2913ceec678f14989-872c63c6410c614d0a00206a016aa6c2-en-US">"Magnitude Overview Absolute"</a> displays the entire capture buffer at once. However, the overview trace is restricted to 25,000 points. If necessary, the captured samples are mapped to 25,000 display points using an autopeak detector for display in the Magnitude Overview Absolute diagram. Thus, this result display is not suitable to detect transient effects or analyze individual symbols closely. For these purposes, the Magnitude Absolute result display is suited better, where one display point can be displayed for each sample taken.</p><div class="block"><div class="subtitle"><a name="ID_e95969e86786b45c0a00201901fdeda1-184c8906411153460a00206a01532735-en-US">
+</a>Restrictions</div></div><p>Trace modes that calculate results for several sweeps (Average, MinHold, MaxHold) are applied to the individual ranges in the capture buffer diagrams and thus may not provide useful results. For the Magnitude Overview Absolute result display, these trace modes are not available at all. Furthermore, only one trace can be configured in the Magnitude Overview Absolute result display.</p><div class="block"><div class="subtitle"><a name="ID_16cd1f7d38ab11000a001ae756bb253d-184c8906411153460a00206a01532735-en-US">
+</a>Remote commands:</div></div><p>Remote commands are provided to determine the first and last values currently displayed in a particular window:</p><p><a class="xref" href="a371e93c19e04301.htm#ID_9404394e45b000ed0a00206a00aeffba-d439d64545aff6ac0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>X[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>STARt?</nobr></a></p><p><a class="xref" href="342d67b7cfb54f60.htm#ID_ee94fa7638836ae10a001ae71870f85b-ff0427bc3883693b0a001ae709e764d3-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>X[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>STOP?</nobr></a></p><p>And to determine the position of the current result range within the capture buffer:</p><p><a class="xref" href="20ce7cf1bfbc4e04.htm#ID_fa9f404438836c860a001ae72f676dea-b3d976aa38836b5e0a001ae709e764d3-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>SEARch:</nobr>​<nobr>MBURst:</nobr>​<nobr>STARt[:</nobr>​<nobr>SYMBols]?</nobr></a></p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

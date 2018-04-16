@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Range</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6b25ced35b3d84de0a00201901c53c0a-439f176840f97bcf0a00201900c3608b-en-US;ID_2bc731c7b3c511e287fcd8ce13057388-439f176840f97bcf0a00201900c3608b-en-US;ID_2f3ea2fe827dfb540a710ade0070d72f-439f176840f97bcf0a00201900c3608b-en-US;ID_f677946e69775c660a0020190086666d-439f176840f97bcf0a00201900c3608b-en-US;ID_ce13ff7f7b87d87c0a001ae7593ea4d3-439f176840f97bcf0a00201900c3608b-en-US;ID_2b33f69d827dfaf40a710ade015e02e1-439f176840f97bcf0a00201900c3608b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="29b558e51ab84e3f.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Measurement Range</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor55">
+</a><a name="kanchor56">
+</a><a name="kanchor57">
+</a><div class="chm-chaptertitle">Measurement Range</div><p>In order to calculate frequency, phase or power results in frequency hopping or chirped signals more accurately, it may be useful not to take the entire dwell time of the hop (or length of the chirp) into consideration, but only a certain range within the dwell time/length. Thus, it is possible to eliminate settling effects, for instance. For other measurements, the settling time may be of particular interest.</p><p>For such cases, a <em>measurement range</em> can be defined for frequency, phase and power results, in relation to specific hop or chirp characteristics.</p><div class="block" id="ID_2bc731c7b3c511e287fcd8ce13057388-439f176840f97bcf0a00201900c3608b-en-US"><a name="kanchor58">
+</a><a name="kanchor59">
+</a><div class="graphic"><img border="0" src="Resources/Images/imgd293ed626950410a0a0020190090a1e3_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Dwell time parameters for hopped signals</div></div><p>Similarly, for chirped signals, a measurement range can be defined for the corresponding parameters.</p><div class="block" id="ID_2f3ea2fe827dfb540a710ade0070d72f-439f176840f97bcf0a00201900c3608b-en-US"><a name="kanchor60">
+</a><a name="kanchor61">
+</a><div class="graphic"><img border="0" src="Resources/Images/imgd50d0586827873ae0a001ae710beb796_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Measurement range parameters for chirped signals</div></div><p>Each range is defined by a reference point, an offset, and the range length. The reference point can be either the center or either edge of the hop/chirp, or a point defined by an offset to one of these characteristic points. The range is then centered around this reference point.</p><div class="block"><span class="bold"><a name="ID_f677946e69775c660a0020190086666d-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Example: </span><a name="kanchor62">
+</a><p>In <a class="xref" href="#ID_2bc731c7b3c511e287fcd8ce13057388-439f176840f97bcf0a00201900c3608b-en-US">Figure "Dwell time  parameters for hopped signals"</a>, the indicated measurement range could be defined by the following parameters, for example:</p><div class="block"><ul class="list"><li value="1">"Reference": <span class="input">Hop End</span></li><li value="2">"Offset":<span class="input">-x</span></li><li value="3">"Alignment": <span class="input">right</span></li><li value="4">"Length": <span class="input">L</span></li></ul></div></div><p>For frequency/phase deviation and power measurements, the measurement range can also be aligned to the end of the FM or PM settling time.</p><div class="block" id="ID_ce13ff7f7b87d87c0a001ae7593ea4d3-439f176840f97bcf0a00201900c3608b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img09a6bfb17b49c8890a001ae72b158ab5_1_--_--_PNG96Small.png" alt="" title=""/></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_2b33f69d827dfaf40a710ade015e02e1-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Measurement range vs result range</div><a name="kanchor63">
+</a><a name="kanchor64">
+</a><p>While the measurement range defines which part of the hop/chirp is used for individual calculations, the <b>result range</b> determines which part is <b>displayed</b> on the screen in the form of AM, FM or PM vs. time traces (see also <a class="xref" href="8141be9dbf834c97.htm#ID_ca16cbb06b89b78c0a710a310183d345-d373f01240f9d3d30a0020190111d384-en-US">"Result Range"</a>).</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

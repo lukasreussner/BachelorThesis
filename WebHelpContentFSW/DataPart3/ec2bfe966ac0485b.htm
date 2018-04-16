@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement|Channel Power Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Repeatability</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1617d456d9d8700d0a00206a01c42257-afab76cfd7349b540a00206a00bfaa09-en-US;ID_5dbeffe59bd211df84a7f685a4836c35-afab76cfd7349b540a00206a00bfaa09-en-US;ID_0ace3e27962c11df9cc5f025b3e13dfb-afab76cfd7349b540a00206a00bfaa09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <a class="chm-breadcrumb" href="f37bb1a995864cd8.htm">Channel Power Basics</a> &gt; <span class="chm-breadcrumb">Measurement Repeatability</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Measurement Repeatability</div><a name="kanchor474">
+</a><a name="kanchor475">
+</a><p>The repeatability of the results, especially in the narrow adjacent channels, strongly depends on the measurement time for a given resolution bandwidth. A longer sweep time can increase the probability that the measured value converges to the true value of the adjacent channel power, but obviously increases measurement time.</p><p>Assume a measurement with five channels (1 channel plus 2 lower and 2 upper adjacent channels) and a sweep time of 100 ms. This measurement requires a measurement time per channel of 20 ms. To calculate the power in one channel, the analyzer considers the following number of effective samples:</p><p>&lt;sweep time in channel&gt; * &lt;selected resolution bandwidth&gt;</p><p>For example, for a sweep time of 100 ms the analyzer considers (30 kHz / 4.19 MHz) * 100 ms * 10 kHz ≈ 7 samples. Whereas in Fast ACLR mode, it considers (100 ms / 5) * 30 kHz ≈ 600 samples. If you compare these numbers, you understand the increase of repeatability with a 95<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>% confidence level (2δ). It rises from ±<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>2.8<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB in normal mode to ±<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>0.34<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB in Fast ACLR mode for a sweep time of 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>ms.</p><p>For the same repeatability, the integration method requires a sweep time of 8.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>s. The <a class="xref" href="#ID_5dbeffe59bd211df84a7f685a4836c35-afab76cfd7349b540a00206a00bfaa09-en-US">Figure "Repeatability of adjacent channel power measurement on CDMA2000 standard signals if the integration bandwidth method is used"</a> shows the standard deviation of the results as a function of the sweep time.</p><div class="block" id="ID_5dbeffe59bd211df84a7f685a4836c35-afab76cfd7349b540a00206a00bfaa09-en-US"><div class="graphic"><img border="0" src="Resources/Images/img2d87f865dcfe6d490a00206a0182b3e4_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Repeatability of adjacent channel power measurement on CDMA2000 standard signals if the integration bandwidth method is used</div></div><p>The <a class="xref" href="#ID_0ace3e27962c11df9cc5f025b3e13dfb-afab76cfd7349b540a00206a00bfaa09-en-US">Figure "Repeatability of adjacent channel power measurements on CDMA2000 signals in the fast ACLR mode"</a> shows the repeatability of power measurements in the transmit channel and of relative power measurements in the adjacent channels as a function of sweep time. The standard deviation of measurement results is calculated from 100 consecutive measurements. Consider the scaling when you compare power values.</p><div class="block" id="ID_0ace3e27962c11df9cc5f025b3e13dfb-afab76cfd7349b540a00206a00bfaa09-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgcf887b55dcff85db0a00206a01ec9b65_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Repeatability of adjacent channel power measurements on CDMA2000 signals in the fast ACLR mode</div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

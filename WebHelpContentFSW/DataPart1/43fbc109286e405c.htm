@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Programming Examples|Service Request" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Waiting for the Arrival of a Service Request</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_7_remote_examples_0017-3b7a13f29ff919f50a00206a019f27ff-en-US;shiv_7_remote_examples_0019-3b7a13f29ff919f50a00206a019f27ff-en-US;shiv_7_remote_examples_0025-3b7a13f29ff919f50a00206a019f27ff-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9cd40c31930e4200.htm">Programming Examples</a> &gt; <a class="chm-breadcrumb" href="08bab3c56ea044fc.htm">Service Request</a> &gt; <span class="chm-breadcrumb">Waiting for the Arrival of a Service Request</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Waiting for the Arrival of a Service Request</div><p>There are basically two methods of waiting for the arrival of a service request:</p><div class="block"><div class="subtitle"><a name="shiv_7_remote_examples_0019-3b7a13f29ff919f50a00206a019f27ff-en-US">
+</a>Blocking (user inputs not possible):</div></div><p>This method is appropriate if the waiting time until the event to be signaled by an SRQ is short (shorter than the selected timeout), if no response to user inputs is required during the waiting time, and if – as the main criterion – the event is absolutely certain to occur.</p><p>Reason:</p><p>From the time the viWaitOnEvent() function is called until the occurrence of the expected event, it does not allow the program to respond to mouse clicks or key entries during the waiting time. Moreover, it returns an error if the SRQ event does not occur within the predefined timeout period.</p><p>The method is, therefore, in many cases not suitable for waiting for measurement results, especially when using triggered measurements.</p><p>The following function calls are required:</p><div class="verbatim"><pre class="verbatim_text">Status = viWaitOnEvent(analyzer, VI_EVENT_SERVICE_REQ, SRQWaitTimeout, VI_NULL,
+ VI_NULL)
+'Wait for service request user
+'inputs are not possible during
+'the waiting time!
+IF (status = VI_SUCCESS) THEN CALL Srq
+'If SRQ is recognized =&gt;
+'subroutine for evaluation</pre></div><div class="verbatim"><pre class="verbatim_text">
+'--------- Sweep in first Spectrum Tab and query marker --------------------
+Dim Status = mbSession.WaitOnEvent( _
+MessageBasedSessionEventType.ServiceRequest, SRQWaitTimeout)
+'Wait for service request user inputs are not possible
+'during the waiting time!
+If (Status.EventType() = MessageBasedSessionEventType.ServiceRequest) Then
+'If SRQ is recognized =&gt; subroutine for evaluation
+    Srq()
+End If</pre></div><div class="block"><div class="subtitle"><a name="shiv_7_remote_examples_0025-3b7a13f29ff919f50a00206a019f27ff-en-US">
+</a>Non-blocking (user inputs possible):</div></div><p>This method is recommended if the waiting time until the event to be signaled by an SRQ is long (longer than the selected timeout), and user inputs should be possible during the waiting time, or if the event is not certain to occur. This method is, therefore, the preferable choice for waiting for the end of measurements, i.e. the output of results, especially in the case of triggered measurements.</p><p>The method necessitates a waiting loop that checks the status of the SRQ line at regular intervals and returns control to the operating system during the time the expected event has not yet occurred. In this way, the system can respond to user inputs (mouse clicks, key entries) during the waiting time.</p><p>It is advisable to employ the Hold() auxiliary function, which returns control to the operating system for a selectable waiting time (see section <a class="xref" href="e49b3f6efd524d9b.htm#shiv_7_remote_examples_0031-57e6ee759ff91baa0a00206a019f27ff-en-US">"Waiting Without Blocking the Keyboard and Mouse"</a>), so enabling user inputs during the waiting time.</p><div class="verbatim"><pre class="verbatim_text">result% = 0
+For i = 1 To 10 'Abort after max. 10 loop
+'iterations
+Status = viWaitOnEvent(analyzer, VI_EVENT_SERVICE_REQ, VI_TMO_IMMEDIATE, VI_NULL,
+ VI_NULL)
+'Check event queue
+If (status = VI_SUCCESS) Then
+result% = 1
+CALL Srq 'If SRQ is recognized =&gt;
+'subroutine for evaluation
+Else
+CALL Hold(20) 'Call hold function with
+'20 ms 'waiting time. User inputs
+'are possible.
+Endif
+Next i
+If result% = 0 Then
+Debug.Print "Timeout Error; Program aborted"'Output error message
+STOP 'Stop software
+Endif</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

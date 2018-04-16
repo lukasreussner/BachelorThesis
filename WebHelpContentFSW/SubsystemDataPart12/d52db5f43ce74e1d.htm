@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Troubleshooting the Measurement|Frequently Asked Questions|Synchronization and Demodulation Problems" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Question: How can I demodulate an FSK modulated signal using the "Manchester" code?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ab650f3c856cf65b0a001ae76bac5c73-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1c0026aadac1410a.htm">Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="d012716047bc4546.htm">Frequently Asked Questions</a> &gt; <a class="chm-breadcrumb" href="55c62ff2af34481c.htm">Synchronization and Demodulation Problems</a> &gt; <span class="chm-breadcrumb">Question: How can I demodulate an FSK modulated signal using the "Manchester" code?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1006">
+</a><a name="kanchor1007">
+</a><div class="function_heading"><a name="ID_ab650f3c856cf65b0a001ae76bac5c73-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">
+</a>Question: How can I demodulate an FSK modulated signal using the "Manchester" code?</div><p>The R&amp;S FSW VSA application does not provide a specific configuration setting to support this code. However, if you configure FSK modulation and use twice the usual symbol rate, the signal is demodulated correctly. Remember to consider the double symbol rate when evaluating the results, however! Only the <a class="xref" href="cdb5906152eb4ecd.htm#ID_73ba34809767b4aa0a00206a0133c88b-872c63c6410c614d0a00206a016aa6c2-en-US">"Symbol Table"</a> and the bitstream results returned by the <a class="xref" href="85cf7a9a1e8a4831.htm#ID_5a71ecfa45ba2f470a00206a01a04c30-4a7ea8b245ba23dd0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]</nobr></a> command are not interpreted correctly and must be demodulated manually (for example using a script).</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

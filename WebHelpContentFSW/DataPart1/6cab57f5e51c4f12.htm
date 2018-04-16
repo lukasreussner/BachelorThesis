@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Marker Usage|Marker (Measurement) Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Precise Frequency (Signal Count) Marker</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdSignalCountConfig">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSignalCountConfig">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdSignalCountConfig">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdSignalCountConfig">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdSignalCountConfig">
+</meta>
+        <meta name="topic-id" value="2455">
+</meta>
+        <meta name="topic-id" value="2456">
+</meta>
+        <meta name="topic-id" value="2457">
+</meta>
+        <meta name="topic-id" value="2458">
+</meta>
+        <meta name="topic-id" value="2459">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b4f5ca952b80a0900a00206a016afd70-32a02f802b80a0900a00206a0124cf0c-en-US;ID_8ec9abbe3e9711e09f5a94b975f4fe73-32a02f802b80a0900a00206a0124cf0c-en-US;ID_bcaf9c8e303057f20a002019005a835d-32a02f802b80a0900a00206a0124cf0c-en-US;ID_77c1a9c4726fd7930a001ae7317650df-32a02f802b80a0900a00206a0124cf0c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="40f2068ca727484b.htm">Marker Usage</a> &gt; <a class="chm-breadcrumb" href="f6177c1e3ac2436e.htm">Marker (Measurement) Functions</a> &gt; <span class="chm-breadcrumb">Precise Frequency (Signal Count) Marker</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Precise Frequency (Signal Count) Marker</div><p><b>Access</b>: "Overview" &gt; "Analysis" &gt; "Marker Functions" &gt; "Select Marker Function" &gt; "Signal Count" &gt; "Signal Count Config"</p><p><b>Or</b>: MKR FUNC &gt; "Select Marker Function" &gt; "Signal Count" &gt; "Signal Count Config"</p><p>A normal marker determines the position of the point on the trace and indicates the signal frequency at this position. The trace, however, contains only a limited number of points. Depending on the selected span, each trace point can contain many measurement values. Thus, the frequency resolution of each trace point is limited.</p><p>(See also <a class="xref" href="c4227e2d87664766.htm#ID_16e1527ef09f9f300a00206a006f5265-1d3d50d92bf15c5b0a001ae725159bc9-en-US">"How Much Data is Measured: Sweep Points and Sweep Count"</a>).</p><p>Frequency resolution is further restricted by the RBW and sweep time settings.</p><p>To determine the frequency of a signal point accurately without changing the sweep settings, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is equipped with a signal counter. The signal counter sets the RF to the current marker position, then counts the zero crossings of the IF (thus the term signal <span class="input">counter</span>) and derives the precise frequency value.</p><p>Signal counting can be performed explicitly at the current marker position ("Signal Count" marker function), or implicitly by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW for certain functions.</p><p>Signal counting is only possible while the instrument is not sweeping. Thus, to perform a signal count for a marker, the sweep is stopped at the marker position. The frequency is determined with the desired resolution and then the sweep is allowed to continue.</p><div class="block" id="ID_8ec9abbe3e9711e09f5a94b975f4fe73-32a02f802b80a0900a00206a0124cf0c-en-US"><div class="graphic"><img border="0" src="Resources/Images/img483bd2a54d182f960a00206a01ea2a6b_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>A measurement example is described in <a class="xref" href="2ecf87108baf4a69.htm#ID_dfe47b31db9be2330a00206a00c2b2f3-eabf7adadde327450a00206a01832141-en-US">"Measuring the Signal Frequency Using the Signal Counter"</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Signal counters are not available for measurements on I/Q-based data.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_77c1a9c4726fd7930a001ae7317650df-32a02f802b80a0900a00206a0124cf0c-en-US">
+</a>Remote commands:</div></div><p><a class="xref" href="4995013aa745489a.htm#ID_387de46d2a0ee93f0a00206a00bca58f-80406cad2aae2a3c0a00206a01207396-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>COUNt</nobr></a></p><p><a class="xref" href="b14cddab566e4974.htm#shiv_6a_remote_commands_1978-b281e4ff677b22ae0a00206a00f6e959-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>COUNt:</nobr>​<nobr>RESolution</nobr></a></p><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="822f7430749340b0.htm#ID_d27dd3013e9711e09f5a94b975f4fe73-32a02f802b80a0900a00206a0124cf0c-en-US" class="title_toc">Signal Count Marker State</a></div><div class="function_block"><font face="Arial">└</font> <a href="3aba3f77629f4d9c.htm#ID_d280440b3e9711e09f5a94b975f4fe73-32a02f802b80a0900a00206a0124cf0c-en-US" class="title_toc">Resolution</a></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

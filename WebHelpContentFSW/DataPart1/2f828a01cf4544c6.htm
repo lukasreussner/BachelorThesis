@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|SCPI Command Structure" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Overview of Syntax Elements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a667ab2d6638dbc00a00206a013589cb-73f249836105f78d0a00206a00818609-en-US;ID_50abe4bc6638dbc00a00206a01042237-73f249836105f78d0a00206a00818609-en-US;ID_a7d953fb6210d5af0a00206a01628683-73f249836105f78d0a00206a00818609-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="6aed0083cd0e4cbd.htm">SCPI Command Structure</a> &gt; <span class="chm-breadcrumb">Overview of Syntax Elements</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2722">
+</a><a name="kanchor2723">
+</a><a name="kanchor2724">
+</a><a name="kanchor2725">
+</a><a name="kanchor2726">
+</a><a name="kanchor2727">
+</a><a name="kanchor2728">
+</a><a name="kanchor2729">
+</a><a name="kanchor2730">
+</a><a name="kanchor2731">
+</a><a name="kanchor2732">
+</a><a name="kanchor2733">
+</a><a name="kanchor2734">
+</a><a name="kanchor2735">
+</a><a name="kanchor2736">
+</a><a name="kanchor2737">
+</a><a name="kanchor2738">
+</a><a name="kanchor2739">
+</a><div class="chm-chaptertitle">Overview of Syntax Elements</div><p>The following tables provide an overview of the syntax elements and special characters.</p><div class="block"><a name="ID_50abe4bc6638dbc00a00206a01042237-73f249836105f78d0a00206a00818609-en-US">
+</a><span class="table-caption">Syntax elements</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p><b>:</b></p></td><td valign="top"><p>The colon separates the mnemonics of a command.</p></td></tr><tr class="evenrow"><td valign="top"><p><b>;</b></p></td><td valign="top"><p>The semicolon separates two commands of a command line. It does not alter the path.</p></td></tr><tr class="oddrow"><td valign="top"><p><b>,</b></p></td><td valign="top"><p>The comma separates several parameters of a command.</p></td></tr><tr class="evenrow"><td valign="top"><p><b>?</b></p></td><td valign="top"><p>The question mark forms a query.</p></td></tr><tr class="oddrow"><td valign="top"><p><b>*</b></p></td><td valign="top"><p>The asterisk marks a common command.</p></td></tr><tr class="evenrow"><td valign="top"><p><b>' '</b></p><p><b>"</b></p></td><td valign="top"><p>Quotation marks introduce a string and terminate it (both single and double quotation marks are possible).</p></td></tr><tr class="oddrow"><td valign="top"><p><b>#</b></p></td><td valign="top"><p>The hash symbol introduces binary, octal, hexadecimal and block data.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Binary: #B10110</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Octal: #O7612</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Hexa: #HF3A7</li><li style="margin-bottom:0; padding-bottom:0;" value="4">Block: #21312</li></ul></div></td></tr><tr class="evenrow"><td valign="top"><p><b>
+</b></p></td><td valign="top"><p>A "white space" (ASCII-Code 0 to 9, 11 to 32 decimal, e.g. blank) separates the header from the parameters.</p></td></tr></tbody></table></div><div class="block"><a name="ID_a7d953fb6210d5af0a00206a01628683-73f249836105f78d0a00206a00818609-en-US">
+</a><span class="table-caption">Special characters</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p><b><span style="font-family: Arial Unicode MS; font-size: 10.5pt">|</span></b></p></td><td valign="top"><p><b>Parameters</b></p><p>A vertical stroke in parameter definitions indicates alternative possibilities in the sense of "or". The effect of the command differs, depending on which parameter is used.</p><p>Example:</p><p>Definition:<span class="command">HCOPy:PAGE:ORIentation LANDscape | PORTrait</span></p><p>Command <span class="command">HCOP:PAGE:ORI LAND</span> specifies landscape orientation</p><p>Command <span class="command">HCOP:PAGE:ORI PORT</span> specifies portrait orientation</p><p><b>Mnemonics</b></p><p>A selection of mnemonics with an identical effect exists for several commands. These mnemonics are indicated in the same line; they are separated by a vertical stroke. Only one of these mnemonics needs to be included in the header of the command. The effect of the command is independent of which of the mnemonics is used.</p><p>Example:</p><p>Definition<span class="command">SENSE:BANDwidth|BWIDth[:RESolution] &lt;numeric_value&gt;</span></p><p>The two following commands with identical meaning can be created:</p><p><span class="command">SENS:BAND:RES 1</span></p><p><span class="command">SENS:BWID:RES 1</span></p></td></tr><tr class="evenrow"><td valign="top"><p><b><span style="font-family: Arial Unicode MS; font-size: 10.5pt">[</span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">]</span></b></p></td><td valign="top"><p>Mnemonics in square brackets are optional and may be inserted into the header or omitted.</p><p>Example: <span class="command">HCOPy[:IMMediate]</span></p><p><span class="command">HCOP:IMM</span> is equivalent to <span class="command">HCOP</span></p></td></tr><tr class="oddrow"><td valign="top"><p><b><span style="font-family: Arial Unicode MS; font-size: 10.5pt">{</span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">}</span></b></p></td><td valign="top"><p>Parameters in curly brackets are optional and can be inserted once or several times, or omitted.</p><p>Example: <span class="command">SENSe:LIST:FREQuency &lt;numeric_value&gt;{,&lt;numeric_value&gt;}</span></p><p>The following are valid commands:</p><p><span class="command">SENS:LIST:FREQ 10</span></p><p><span class="command">SENS:LIST:FREQ 10,20</span></p><p><span class="command">SENS:LIST:FREQ 10,20,30,40</span></p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

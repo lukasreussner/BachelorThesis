@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Remote Commands for Pulse Measurements|Configuring and Performing Sweeps" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>INITiate&lt;n&gt;:CONTinuous</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9eb251022e54f3470a00206a00a5ac5d-2f2822882a047e3c0a00206a01cd19f9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="2a19c26881ae4bad.htm">Remote Commands for Pulse Measurements</a> &gt; <a class="chm-breadcrumb" href="a18734bb91df4104.htm">Configuring and Performing Sweeps</a> &gt; <span class="chm-breadcrumb">INITiate&lt;n&gt;:CONTinuous</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor781">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_9eb251022e54f3470a00206a00a5ac5d-2f2822882a047e3c0a00206a01cd19f9-en-US">
+</a><span class="bold">INITiate&lt;n&gt;:CONTinuous </span>&lt;State&gt;<br/></div><div class="rcdescription"><p>This command controls the measurement mode for an individual channel.</p><p>Note that in single measurement mode, you can synchronize to the end of the measurement with *OPC, *OPC? or *WAI. In continuous measurement mode, synchronization to the end of the measurement is not possible. Thus, it is not recommended that you use continuous measurement mode in remote control, as results like trace data or markers are only valid after a single measurement end synchronization.</p><p>If the measurement mode is changed for a channel while the Sequencer is active (see <a class="xref" href="1770dab869414c00.htm#ID_b6c6328e48d6046e0a00206a000f661f-0d99028d48e05e0e0a00206a01b7c652-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INITiate&lt;n&gt;:</nobr>​<nobr>SEQuencer:</nobr>​<nobr>IMMediate</nobr></a>) the mode is only considered the next time the measurement in that channel is activated by the Sequencer.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>irrelevant</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>ON |</nobr> <nobr> OFF |</nobr> <nobr> 0 |</nobr> <nobr> 1</nobr><br/><span class="bold">ON | 1<br/></span><p>Continuous measurement</p><span class="bold">OFF | 0<br/></span><p>Single measurement</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">1</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">INIT:CONT OFF</span><br/><p>Switches the measurement mode to single measurement.</p><span class="commandline">INIT:CONT ON</span><br/><p>Switches the measurement mode to continuous measurement.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="be548b01d4724f4c.htm#ID_d748d5b571b39b590a00206a015c44f5-e0b50daa71b5ad3f0a00206a002b01a4-en-US">"Continuous Sweep / Run Cont"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

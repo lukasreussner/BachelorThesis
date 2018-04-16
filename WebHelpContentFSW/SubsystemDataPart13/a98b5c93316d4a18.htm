@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Configuring Code Domain Analysis and Time Alignment Error Measurements|Code Domain Analysis Settings (UE Measurements)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]CDPower:ETCHips</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_2915-cc4d04182d7583ab0a00206a01815ab2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="277aa63e44a84197.htm">Configuring Code Domain Analysis and Time Alignment Error Measurements</a> &gt; <a class="chm-breadcrumb" href="c59a33612e504393.htm">Code Domain Analysis Settings (UE Measurements)</a> &gt; <span class="chm-breadcrumb">[SENSe:]CDPower:ETCHips</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_FSV_K73_2915-cc4d04182d7583ab0a00206a01815ab2-en-US">
+</a><span class="bold">[SENSe:]CDPower:ETCHips </span>&lt;State&gt;<br/></div><div class="rcdescription"><p>This command selects length of the measurement interval for calculation of error vector magnitude (EVM). In accordance with 3GPP specification Release 5, the EVM measurement interval is one slot (4096 chips) minus 25 <span style="font-family: arial; font-size: 10.5pt">µ</span>s (3904 chips) at each end of the burst if power changes are expected. If no power changes are expected, the evaluation length is one slot (4096 chips).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">ON | 1<br/></span><p>Changes of power are expected. Therefore an EVM measurement interval of one slot minus 25 <span style="font-family: arial; font-size: 10.5pt">µ</span>s (3904 chips) is considered.</p><span class="bold">OFF | 0<br/></span><p>Changes of power are not expected. Therefore an EVM measurement interval of one slot (4096 chips) is considered</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">0</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p><span class="command">SENS:CDP:ETCH ON</span></p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="4ee63ed82d984b80.htm#ID_b14beca10dca9d670a710a3100bf711e-078475d2d5ca314e0a00206a0015d874-en-US">"Eliminate Tail Chips"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

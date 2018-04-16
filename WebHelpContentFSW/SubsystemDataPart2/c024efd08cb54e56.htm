@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Measurements and Result Displays|Evaluation Methods for Pulse Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Parameter Trend</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4aeb81d16ace593d0a00206a0072b7c0-78a038206a778ca80a00206a00edc705-en-US;ID_ab88d635c72f00300a710ade01b70344-78a038206a778ca80a00206a00edc705-en-US;ID_0e0b59672e01c8900a002019007f8381-78a038206a778ca80a00206a00edc705-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="3a7036d5f4e843ef.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="e5518e775f214510.htm">Evaluation Methods for Pulse Measurements</a> &gt; <span class="chm-breadcrumb">Parameter Trend</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor177">
+</a><a name="kanchor178">
+</a><div class="function_heading"><a name="ID_4aeb81d16ace593d0a00206a0072b7c0-78a038206a778ca80a00206a00edc705-en-US">
+</a><span style="font-weight: bold">Parameter Trend</span></div><p>Plots all measured parameter values from the current capture vs pulse number or pulse timestamp. This is equivalent to plotting a column of the "Pulse Results" table for the rows highlighted green. This evaluation allows you to determine trends in a specific parameter, such as a frequency deviation or a fluctuation in power over several pulses.</p><p>The parameter trend evaluation can also be used for a more general scatter plot - the parameters from the current capture can not only be displayed over time, but also versus any other pulse parameter. For example, you can evaluate the rise time vs fall time.</p><p>For each parameter trend window you can configure a different parameter to be displayed for both the x-axis and the y-axis, making this a very powerful and flexible analysis tool.</p><p><b><a name="ID_ab88d635c72f00300a710ade01b70344-78a038206a778ca80a00206a00edc705-en-US">
+</a>Note:</b> Limit lines. Optionally, limit lines can be displayed in the Parameter Trend diagram. You can drag these lines to a new position in the window. The new position is maintained, the limit check is repeated, and the results of the limit check in any active table displays are adapted.<br/>If a limit is defined for a parameter that is displayed in a Parameter Trend diagram, the <a class="xref" href="0708252dad5b43a1.htm#ID_962bafd62739cf160a00206a01b11fdd-d8ed8e212739cf160a00206a01a2fc93-en-US">"Auto Scale Once"</a> function is not available for the axis this parameter is displayed on (see also <a class="xref" href="f59657f6eaf44738.htm#ID_935cb131046648000a001ae77666fd5a-ada6499374bc0a560a00206a01dc09f3-en-US">"Activating a limit check for a parameter"</a>). This avoids the rapid movement of the limit lines which would occur if the axis scale changed.<br/></p><p>Note that averaging is not possible for parameter trend traces.</p><p><b><a name="ID_0e0b59672e01c8900a002019007f8381-78a038206a778ca80a00206a00edc705-en-US">
+</a>Note:</b> Setting markers in Parameter Trend Displays. In Parameter Trend displays, especially when the x-axis unit is not pulse number, positioning a marker by defining its x-axis value can be very difficult or ambiguous. Thus, markers can be positioned by defining the corresponding pulse number in the "Marker" edit field for all parameter trend displays, regardless of the displayed x-axis parameter. The "Marker" edit field is displayed when you select one of the "Marker" softkeys.<br/>However, the position displayed in the marker information area or the marker table is shown in the defined x-axis unit.<br/></p>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD:WIND '2',RIGH,PTR</span> see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p><a class="xref" href="3b2aa7566ff944ee.htm#ID_3068d0427629be900a00206a007c7cbb-6200848f07d2806b0a001ae734e42823-en-US">"Configuring a Parameter Trend"</a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

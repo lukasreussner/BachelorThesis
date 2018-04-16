@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Remote Control Commands for Noise Figure Measurements|Retrieving Measurement Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe&lt;n&gt;[:DATA]?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f2d46d20cd903a5b0a00206a011b7139-886c99d2cd903a6b0a00206a01a82ecc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="8df071f8ae8c45f0.htm">Remote Control Commands for Noise Figure Measurements</a> &gt; <a class="chm-breadcrumb" href="9a55cbfeef3742b3.htm">Retrieving Measurement Results</a> &gt; <span class="chm-breadcrumb">TRACe&lt;n&gt;[:DATA]?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_f2d46d20cd903a5b0a00206a011b7139-886c99d2cd903a6b0a00206a01a82ecc-en-US">
+</a><span class="bold">TRACe&lt;n&gt;[:DATA]? </span>&lt;Trace&gt;, &lt;Result&gt;<br/></div><div class="rcdescription"><p>This command queries the noise figure measurement results.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Query parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Trace&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Selects the trace to be read out.</p><span class="bold">TRACE1<br/></span><span class="bold">TRACE2<br/></span><span class="bold">TRACE3<br/></span><span class="bold">TRACE4<br/></span></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Result&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Selects the result display to be read out.</p><span class="bold">CPCold<br/></span><p>Queries calibration power (cold) results.</p><span class="bold">CPHot<br/></span><p>Queries calibration power (hot) results.</p><span class="bold">CYFactor<br/></span><p>Queries calibration y-factor results.</p><span class="bold">GAIN<br/></span><p>Queries gain reuslts.</p><span class="bold">NOISe<br/></span><p>Queries noise figure results.</p><span class="bold">NUNCertainty<br/></span><p>Queries noise figure uncertainty results.</p><span class="bold">PCOLd<br/></span><p>Queries power (cold) results.</p><span class="bold">PHOT<br/></span><p>Queries power (hot) results.</p><span class="bold">TEMPerature<br/></span><p>Queries noise temperature results.</p><span class="bold">YFACtor<br/></span><p>Queries y-factor results.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;TraceData&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>For any graphical result display, the command returns one result for each measurement point.</p><p>The unit depends on the result you are querying.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC? TRACE1,GAIN</span><br/><p>Queries the gain results for the first trace.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="702998ca76bc42ae.htm#ID_551b0184017513d60a710a920129642c-7991b155f720fc650a00206a00ba52a9-en-US">"Noise Figure"</a><br/>See <a class="xref" href="1d04ced65ebc4f09.htm#ID_7a503811017513970a710a9201e2e2f4-7991b155f720fc650a00206a00ba52a9-en-US">"Gain"</a><br/>See <a class="xref" href="e30f2660ed894c6d.htm#ID_7372926a017513880a710a9201bfcfca-7991b155f720fc650a00206a00ba52a9-en-US">"Noise Temperature"</a><br/>See <a class="xref" href="7cfa8715fd16449f.htm#ID_dc3d72fe017513780a710a920151b6ea-7991b155f720fc650a00206a00ba52a9-en-US">"Y-Factor"</a><br/>See <a class="xref" href="d4004acc62b247c3.htm#ID_a3b0f9e6017513690a710a92000c1d35-7991b155f720fc650a00206a00ba52a9-en-US">"Power (Hot)"</a><br/>See <a class="xref" href="7bdf684fa6fd41cf.htm#ID_281122f6017513590a710a92012130d1-7991b155f720fc650a00206a00ba52a9-en-US">"Power (Cold)"</a><br/>See <a class="xref" href="87cb390c720b4679.htm#ID_faa2b199c3e911e4b2abc8815da599fc-7991b155f720fc650a00206a00ba52a9-en-US">"Cal Y-Factor"</a><br/>See <a class="xref" href="e0137492a6d04ac3.htm#ID_faa48667c3e911e4b2abc8815da599fc-7991b155f720fc650a00206a00ba52a9-en-US">"Cal Power (Hot)"</a><br/>See <a class="xref" href="f7dee355c3ad4ad1.htm#ID_faa5bef2c3e911e4b2abc8815da599fc-7991b155f720fc650a00206a00ba52a9-en-US">"Cal Power (Cold)"</a><br/>See <a class="xref" href="9cd251f37b494278.htm#ID_ae492502017513490a710a9200f42ea0-7991b155f720fc650a00206a00ba52a9-en-US">"Result Table"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measuring the Pulse Power</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a798fcf0b82cdd280a00206a000e06b4-de7a5b04b82cdd280a00206a00da3967-en-US;ID_c250f956c1ac7de70a00206a01e41a0a-de7a5b04b82cdd280a00206a00da3967-en-US;ID_19c00fe6b81fb5c00a00206a013400fb-de7a5b04b82cdd280a00206a00da3967-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <span class="chm-breadcrumb">Measuring the Pulse Power</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Measuring the Pulse Power</div><p>All remote control commands specific to measuring the mean or peak pulse power (e.g. bursts in various telecommunications standards) are described here. This measurement is available via remote control only.</p><p>The Pulse Power measurement is a gated measurement that determines the power over a particular number of pulses. The measurement is controlled by an external trigger or the video signal. A separate trigger event is required for each burst included in the measurement. In case of an external trigger source, the trigger level corresponds to the TTL level. In case of a video signal, you can define any threshold.</p><p>The figure below shows the relations between the available trigger settings.</p><div class="block" id="ID_c250f956c1ac7de70a00206a01e41a0a-de7a5b04b82cdd280a00206a00da3967-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7829baa0c19d82580a00206a009d1d87_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><p>The measurement is always on trace 1, either with the peak detector to determine the peak power or the RMS detector to determine the RMS power. Overall, you can configure the measurement independent of the instrument setup with the commands listed below only, which results in faster measurements.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>The Pulse Power measurement is incompatible to other measurement functions (e.g. marker functionality or statistics). If you use a command that controls those functions, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW aborts the Pulse Power measurement.</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW also aborts the Pulse Power measurement if you end the remote session.</p></td></tr></table></div></div><p>The commands can be used in two different ways.</p><div class="block"><ul class="list"><li value="1">Instrument setup, measurement and querying of the results in a single command line. With this method, there is the least delay between the measurement and the result output. However, it requires the control computer to wait for the response from the instrument.</li><li value="2">Instrument setup and querying of the result list at the end of the measurement: With this method, the control computer may be used for other activities while the measurement is being performed. However, more time is needed for synchronization via service request.</li></ul></div><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="92a43987d62a405e.htm" class="chapter_title_toc">Performing Pulse Power Measurements</a></li><li value="2"><a href="fe08866efcbb4349.htm" class="chapter_title_toc">Example: Performing a Pulse Power Measurement</a></li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

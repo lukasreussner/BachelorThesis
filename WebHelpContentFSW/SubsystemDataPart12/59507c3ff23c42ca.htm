@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Troubleshooting the Measurement|Frequently Asked Questions|Issues with Numeric Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Question: How can I get the demodulated symbols of all my GSM bursts in the capture buffer in remote control?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_50c7811371a845cc0a00206a00845017-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1c0026aadac1410a.htm">Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="d012716047bc4546.htm">Frequently Asked Questions</a> &gt; <a class="chm-breadcrumb" href="30b4cd43d59c445b.htm">Issues with Numeric Results</a> &gt; <span class="chm-breadcrumb">Question: How can I get the demodulated symbols of all my GSM bursts in the capture buffer in remote control?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_50c7811371a845cc0a00206a00845017-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">
+</a>Question: How can I get the demodulated symbols of all my GSM bursts in the capture buffer in remote control?</div><p>Answer:</p><p>Use the following remote commands:</p><p><span class="command">:SENSe1:DDEMod:PRESet 'GSM_NB'</span></p><p>Load the GSM standard.</p><p><span class="command">:SENSe1:DDEMod:RLENgth 10000 SYM</span></p><p>Enlarge the capture buffer length such that all the bursts you want to demodulate can be seen within the capture buffer.</p><p><span class="command">:INITiate1:CONTinuous OFF</span></p><p>Go to single sweep mode.</p><p><span class="command">:SENSe1:SWEep:COUNt 0</span></p><p>Set the "Statistic Count" to "Auto" mode.</p><p><span class="command">:INITiate1:IMMediate</span></p><p>Do single sweep.</p><p><span class="command">:SENSe1:SWEep:COUNt:CURRent?</span></p><p>Query the number of demodulated bursts within the capture buffer. 
+
+ </p><pre class="verbatim" xml:space="preserve">For n = 1:NumberOfBursts
+        :SENSe1:DDEMod:SEARch:MBURst:CALC n
+        :TRACe4? TRACe1 'Query the result symbols in window D
+End</pre><p>Step through all bursts and query the demodulated symbols.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

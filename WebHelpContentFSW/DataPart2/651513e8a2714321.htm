@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>List Evaluations</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d4d5d77bb7b6e80e0a00206a00ae52d9-aae1eeb3b7b6e80e0a00206a00c12a09-en-US;ID_c3d75fa8a56daf7a0a00206a00d48063-aae1eeb3b7b6e80e0a00206a00c12a09-en-US;ID_19c00fe6b81fb5c00a00206a013400fb-aae1eeb3b7b6e80e0a00206a00c12a09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <span class="chm-breadcrumb">List Evaluations</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3048">
+</a><div class="chm-chaptertitle">List Evaluations</div><p>A list evaluation is a multiple power measurement that measures the power at up to 200 frequencies. The measurement itself is a time domain measurement. Note that if you set a span greater than 0, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW aborts the list evaluation.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_c3d75fa8a56daf7a0a00206a00d48063-aae1eeb3b7b6e80e0a00206a00c12a09-en-US">
+</a>Noise cancellation in list evaluations</div><p>Noise cancellation is also available in zero span and thus also for list evaluations. See <a class="xref" href="7b1ae7d3e4a74d03.htm#ID_c8a7f3630464d0900a00206a00a14770-bc56235d0464d0900a00206a00593471-en-US">"Noise Cancellation"</a> for details.</p></td></tr></table></div></div><p>List evaluations allow for a different instrument setup for each frequency you want to measure. You can define most of the settings with the commands described here. Settings not covered by the commands listed below can be controlled with the common commands (see <a class="xref" href="09440eb16c2242b7.htm#ID_5302f7ca94a9c46a0a00206a005e9dd0-b55395c0702db14e0a00206a01819ec1-en-US">"Setting Basic Measurement Parameters"</a>. Note that these commands have to be sent prior to the commands that control the list evaluation.</p><p>In case of a triggered measurement, a separate trigger event is required for each frequency to initiate that measurement. Note that you have to make changes to the trigger level in the time domain in order for it to take effect for the List Evaluation commands.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>The list evaluation is incompatible to other measurement functions (e.g. marker functionality or statistics). If you use a command that controls those functions, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW aborts the list evaluation.</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW also aborts the list evaluation if you end the remote session.</p></td></tr></table></div></div><p>The commands can be used in two different ways.</p><div class="block"><ul class="list"><li value="1">Instrument setup, measurement and querying of the results in a single command line. This method causes the least delay between the measurement and the result output. However, it requires the control computer to wait for the response from the instrument.</li><li value="2">Instrument setup and querying of the result list at the end of the measurement: With this method, the control computer may be used for other activities while the measurement is being performed. However, more time is needed for synchronization via service request.</li></ul></div><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="cab11c9c73574ea2.htm" class="chapter_title_toc">Performing List Evaluations</a></li><li value="2"><a href="1f20bc04214b4f6d.htm" class="chapter_title_toc">Example: Performing List Evaluation</a></li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the Third Order Intercept Point|Determining the TOI" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CALCulate&lt;n&gt;:MARKer&lt;m&gt;:FUNCtion:TOI[:STATe]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_6a_remote_commands_2768-66bfa94872aa0e400a00206a005a4cb9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="920b1be734bc4170.htm">Measuring the Third Order Intercept Point</a> &gt; <a class="chm-breadcrumb" href="de736f39572244ff.htm">Determining the TOI</a> &gt; <span class="chm-breadcrumb">CALCulate&lt;n&gt;:MARKer&lt;m&gt;:FUNCtion:TOI[:STATe]</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_6a_remote_commands_2768-66bfa94872aa0e400a00206a005a4cb9-en-US">
+</a><span class="bold">CALCulate&lt;n&gt;:MARKer&lt;m&gt;:FUNCtion:TOI[:STATe] </span>&lt;State&gt;<br/></div><div class="rcdescription"><p>This command initiates a measurement to determine the third intercept point.</p><p>A two-tone signal with equal carrier levels is expected at the RF input of the instrument. Marker 1 and marker 2 (both normal markers) are set to the maximum of the two signals. Delta marker 3 and delta marker 4 are positioned to the intermodulation products. The delta markers can be modified separately afterwards with the <a class="xref" href="d6518c8768a84da6.htm#ID_1720d1be250843800a00206a0109a8a1-e0e2415be7cc6cf30a00206a01af4d1a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>DELTamarker&lt;m&gt;:</nobr>​<nobr>X</nobr></a> command.</p><p>The third-order intercept is calculated from the level spacing between the normal markers and the delta markers.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;m&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Marker</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>ON |</nobr> <nobr> OFF |</nobr> <nobr> 1 |</nobr> <nobr> 0</nobr><br/><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">0</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">CALC:MARK:FUNC:TOI ON</span><br/><p>Switches on the measurement of the third-order intercept.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="8852000f5a5141b7.htm#ID_7047091e059d9f370a00206a00abaf15-0e5cb7b83d150b560a001ae71226e3d7-en-US">"Programming Example: Measuring the TOI"</a>.</p></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

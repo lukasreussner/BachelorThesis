@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Configuration|Demodulation|AF Filter" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Low Pass
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodLowPassFilter">
+</meta>
+        <meta name="topic-id" value="678">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d6b8f836225e33eb0a00206a008807bb-4d3b454e1c23cad50a001ae752c96f78-en-US;ID_08d556277e02a84e0a00206a005669cb-4d3b454e1c23cad50a001ae752c96f78-en-US;ID_b95c6ac82a6603ea0a0020190071efca-4d3b454e1c23cad50a001ae752c96f78-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="adce0676b09b40a7.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2441272cdb0a46f0.htm">Demodulation</a> &gt; <a class="chm-breadcrumb" href="8dbcd67854e44953.htm">AF Filter</a> &gt; <span class="chm-breadcrumb">Low Pass</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor347">
+</a><a name="kanchor348">
+</a><a name="kanchor349">
+</a><div class="function_heading"><a name="ID_d6b8f836225e33eb0a00206a008807bb-4d3b454e1c23cad50a001ae752c96f78-en-US">
+</a><span style="font-weight: bold">Low Pass</span></div><p>Defines a low pass filter type. Relative and absolute low pass filter are available.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Absolute low pass filters:<br/>Absolute filters are indicated by the 3 dB cutoff frequency. The 3 kHz, 15 kHz and 23 kHz filters are designed as 5th-order Butterworth filters (30 dB/octave). The 150 kHz filter is designed as 8th-order Butterworth filter (48 dB/octave).<br/>The absolute low pass filters are active in the following demodulation bandwidth range:</li></ul></div><div class="block"><a name="ID_08d556277e02a84e0a00206a005669cb-4d3b454e1c23cad50a001ae752c96f78-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Filter type</p></th><th valign="top"><p>Demodulation bandwidth</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>3 kHz:</p></td><td valign="top"><p>6.4 kHz <span style="font-family: arial; font-size: 10.5pt">≤</span> demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≤</span> 3 MHz</p></td></tr><tr class="evenrow"><td valign="top"><p>15 kHz:</p></td><td valign="top"><p>50 kHz <span style="font-family: arial; font-size: 10.5pt">≤</span> demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≤</span> 8 MHz</p></td></tr><tr class="oddrow"><td valign="top"><p>23 kHz</p></td><td valign="top"><p>50 kHz <span style="font-family: arial; font-size: 10.5pt">≤</span> demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≤</span> 18 MHz</p></td></tr><tr class="evenrow"><td valign="top"><p>150 kHz:</p></td><td valign="top"><p>400 kHz <span style="font-family: arial; font-size: 10.5pt">≤</span> demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≤</span> 8 MHz</p></td></tr><tr class="oddrow"><td valign="top"><p>Manual:</p></td><td valign="top"><p>A low pass filter with the manually defined frequency is used.</p></td></tr></tbody><tfoot>
+</tfoot></table></div><p><b><a name="ID_b95c6ac82a6603ea0a0020190071efca-4d3b454e1c23cad50a001ae752c96f78-en-US">
+</a>Note:</b> If online demodulation output is active, the predefined (fixed) filters are not available. In this case, the frequency for the low pass filter must be defined manually (see also <a class="xref" href="beb2bf834a5f4dfd.htm#ID_437f7b679f0572a10a00206a004147e2-79d1c996a03c14ac0a00201901630d44-en-US">"Analog Demodulation Output Settings"</a>).<br/>If a filter was already configured when online demodulation output is activated, it is replaced by a manual filter that provides corresponding results, if possible.<br/></p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Relative low pass filters:<br/>Relative filters (3 dB) can be selected in % of the demodulation bandwidth. The filters are designed as 5th-order Butterworth filter (30 dB/octave) and active for all demodulation bandwidths.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">"NONE" deactivates the AF low pass filter (default).</li></ul></div>Remote command: <div class="rcclist_right"><p><a class="xref" href="7ad473071d244172.htm#ID_658cfacb453e52b20a00206a01255af8-f436ac0e45422b9b0a00206a014afa2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FILTer&lt;n&gt;:</nobr>​<nobr>LPASs[:</nobr>​<nobr>STATe]</nobr></a></p><p><a class="xref" href="8acadd5891f54800.htm#ID_4b2c499b4540206b0a00206a005bc993-96669e69454225610a00206a008812c7-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FILTer&lt;n&gt;:</nobr>​<nobr>LPASs:</nobr>​<nobr>FREQuency[:</nobr>​<nobr>ABSolute]</nobr></a></p><p><a class="xref" href="a8dd9bb08a534e90.htm#ID_4b2c499b4540206b0a00206a005bc993-8941398c4545b82a0a00206a0130accd-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FILTer&lt;n&gt;:</nobr>​<nobr>LPASs:</nobr>​<nobr>FREQuency:</nobr>​<nobr>RELative</nobr></a></p><p><a class="xref" href="74a9872689fc4374.htm#ID_4b2c499b4540206b0a00206a005bc993-3ff985cc02b60e730a00201901677786-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FILTer&lt;n&gt;:</nobr>​<nobr>LPASs:</nobr>​<nobr>FREQuency:</nobr>​<nobr>MANual</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

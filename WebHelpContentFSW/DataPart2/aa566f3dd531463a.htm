@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Bandwidth, Filter and Sweep Configuration|Impact of the Bandwidth, Filter and Sweep Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Which Data May Pass: Filter Types</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_385a63ed7fa3148e0a00206a00064bf3-fc6e2f34ebd4ca590a00206a01d1fc31-en-US;ID_e11d7cd8f09f9f300a00206a01f0e821-fc6e2f34ebd4ca590a00206a01d1fc31-en-US;ID_84043cfef09f9f300a00206a0153be9b-fc6e2f34ebd4ca590a00206a01d1fc31-en-US;ID_f86e1332f09f9f300a00206a0164ea92-fc6e2f34ebd4ca590a00206a01d1fc31-en-US;ID_70a87230f09f9f300a00206a00e72577-fc6e2f34ebd4ca590a00206a01d1fc31-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="409c8f6e27aa478c.htm">Bandwidth, Filter and Sweep Configuration</a> &gt; <a class="chm-breadcrumb" href="4282aff75bcb4b68.htm">Impact of the Bandwidth, Filter and Sweep Settings</a> &gt; <span class="chm-breadcrumb">Which Data May Pass: Filter Types</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1751">
+</a><a name="kanchor1752">
+</a><div class="chm-chaptertitle">Which Data May Pass: Filter Types</div><p>While the filter is irrelevant when measuring individual narrowband signals (as long as the signal remains within the RBW), the measurement result for broadband signals is very dependant on the selected filter type and its shape. If the filter is too narrow, the signal is distorted by the filter. If the filter is too wide, multiple signals can no longer be distinguished. Generally, the smaller the filter width and the steeper its edges, the longer the settling time and thus the longer the "Sweep Time" must be.</p><p>All resolution bandwidths are realized with digital filters. Normal (3dB) Gaussian filters are set by default. Some communication standards require different filters.</p><p>For a list of available filter types, see <a class="xref" href="7543ec1221234e96.htm#shiv_4a_instrument_functions_01447-fc6e2f34ebd4ca590a00206a01d1fc31-en-US">"Reference: List of Available RRC and Channel Filters"</a>.</p><div class="block"><div class="subtitle"><a name="ID_e11d7cd8f09f9f300a00206a01f0e821-fc6e2f34ebd4ca590a00206a01d1fc31-en-US">
+</a>Normal (3 dB) Gaussian filters</div></div><a name="kanchor1753">
+</a><p>Gaussian filters provide a good compromise between steep edges and a short settling time. This filter is suitable for most measurement tasks and is used by default.</p><p>The available Gaussian (3 dB) filters are listed in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW data sheet.</p><div class="block"><div class="subtitle"><a name="ID_84043cfef09f9f300a00206a0153be9b-fc6e2f34ebd4ca590a00206a01d1fc31-en-US">
+</a>Channel filters</div></div><a name="kanchor1754">
+</a><p>Channel filters are fairly steep but require a long settling time; they are useful for pulse measurements in the time domain.</p><div class="block"><div class="subtitle"><a name="ID_f86e1332f09f9f300a00206a0164ea92-fc6e2f34ebd4ca590a00206a01d1fc31-en-US">
+</a>RRC filters</div></div><a name="kanchor1755">
+</a><p>Root raised cosine filters are similar in shape to channel filters and are required by some measurement standards.</p><div class="block"><div class="subtitle"><a name="ID_70a87230f09f9f300a00206a00e72577-fc6e2f34ebd4ca590a00206a01d1fc31-en-US">
+</a>5-Pole filters</div></div><a name="kanchor1756">
+</a><p>5-Pole filters are very broad and allow for a large bandwidth to pass.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

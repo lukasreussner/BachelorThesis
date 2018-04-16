@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|Remote Commands to Perform Measurements in MSRA Mode|Retrieving Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>FORMat[:DATA]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_bd36634e7115e30a0a00206a007ce077-ad068e202055e5090a00206a00318951-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="8d95166c7a6548c9.htm">Remote Commands to Perform Measurements in MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="6ad1c5be74e54de7.htm">Retrieving Results</a> &gt; <span class="chm-breadcrumb">FORMat[:DATA]</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor449">
+</a><a name="kanchor450">
+</a><a name="kanchor451">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_bd36634e7115e30a0a00206a007ce077-ad068e202055e5090a00206a00318951-en-US">
+</a><span class="bold">FORMat[:DATA] </span>&lt;Format&gt;<br/></div><div class="rcdescription"><p>This command selects the data format that is used for transmission of trace data from the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to the controlling computer.</p><p>Note that the command has no effect for data that you send to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW automatically recognizes the data it receives, regardless of the format.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Format&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">ASCii<br/></span><p>ASCii format, separated by commas.</p><p>This format is almost always suitable, regardless of the actual data format. However, the data is not as compact as other formats may be.</p><span class="bold">REAL,16<br/></span><p>16-bit floating-point numbers (according to IEEE 754) in the "definite length block format".</p><p>In the Spectrum application, the format setting <span class="command">REAL</span> is used for the binary transmission of trace data.</p><p>Compared to <span class="command">REAL,32</span> format, half as many numbers are returned.</p><span class="bold">REAL,32<br/></span><p>32-bit floating-point numbers (according to  IEEE 754) in the "definite length
+
+block format".</p><p>In the Spectrum application, the format setting <span class="command">REAL</span> is used for the binary transmission of trace data.</p><p>For I/Q data, 8 bytes per sample are returned for this format setting.</p><span class="bold">REAL,64<br/></span><p>64-bit floating-point numbers (according to IEEE 754) in the "definite length block format".</p><p>In the Spectrum application, the format setting <span class="command">REAL</span> is used for the binary transmission of trace data.</p><p>Compared to <span class="command">REAL,32</span> format, twice as many numbers are returned.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">ASCII</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">FORM REAL,32</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../fsw_iqanalyzer/Content/36452d4e6acc4224.htm">Data Acquisition via the Optional Digital Baseband Interface</a>.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

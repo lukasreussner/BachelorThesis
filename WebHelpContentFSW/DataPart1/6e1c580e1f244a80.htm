@@ -1,0 +1,132 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Configuring the Trace Display and Retrieving Trace Data" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Configuring a Spectrogram</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7b44d8f13dee3aa70a710a310052a72a-98f1f1106a66bdca0a001ae746251398-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="b0991ded4a214d00.htm">Configuring the Trace Display and Retrieving Trace Data</a> &gt; <span class="chm-breadcrumb">Programming Example: Configuring a Spectrogram</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3186">
+</a><a name="kanchor3187">
+</a><div class="chm-chaptertitle">Programming Example: Configuring a Spectrogram</div><p>This example demonstrates how to configure a spectrogram for a basic frequency sweep in a remote environment. The spectrogram is displayed in addition to the spectrum display, in a new window. In addition, the usage of special spectrogram markers is demonstrated (see <a class="xref" href="17dd5f3db5e941d6.htm#ID_a8c7accc40065a560a00206a000536aa-5d01527d40065a560a00206a0047fcf7-en-US">"Marker Search (Spectrograms)"</a>).</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img">
+</img></td><td><p>Basic trace settings are demonstrated in the <a class="xref" href="154b1387b81e4b54.htm#ID_1a60db9105d458720a710a3100121009-9feed69137344f0b0a00201900e8284f-en-US">"Programming Example: Performing a Basic Frequency Sweep"</a>.</p></td></tr></table></div></div><div class="verbatim"><pre class="verbatim_text">//-----------Preparing the Measurement ------------
+*RST
+//Resets the instrument
+LAY:ADD? '1',BEL,SGR
+//Displays a new window below window 1 and activates spectrogram display.
+//The new window name is returned as a result: '2'.
+//The spectrogram is updated with each new sweep.
+INIT:CONT OFF
+//Selects single sweep mode.
+
+//--------------Configuring the Spectrogram--------------
+CALC:SGR:CLE
+//Clears the displayed spectrogram to start a new one.
+CALC:SGR:CONT ON
+//Configures a continuous spectrogram for a series of measurements.
+//The display is not cleared when a new measurement is started.
+CALC:SGR:FRAM:COUN 100
+//Sets the number of frames to be recorded per sweep to 100.
+CALC:SGR:HDEP 1000
+//Sets the number of frames to be stored to 1000 (=10 sweeps)
+CALC:SGR:TST ON
+//Activates a time stamp for each frame.
+
+//--------------Configuring the Color Map----------------
+DISP:WIND:SGR:COL GRAY
+//Defines a gray-scaled coloring: low values light gray, high values dark gray.
+DISP:WIND:SGR:COL:LOW 30
+DISP:WIND:SGR:COL:UPP 70
+DISP:WIND:SGR:COL:SHAP 0.8
+//Defines a color map for a range that comprises 40% of the measurement range,
+//excluding 30% at each end. The colors are not scaled linearly; the light gray  
+//colors are stretched to distinguish low values better.
+
+//--------------Performing the Measurement---------------
+SWE:COUN 10
+//Defines 10 sweeps to be performed per measurement.
+INIT;*WAI
+//Initiates a new measurement and waits until the sweeps have finished.
+//The spectrogram is updated with each new sweep.
+
+
+//--------------Positioning Markers----------------------
+CALC:MARK:SGR:SAR MEM
+//Includes all frames in the memory in the search area 
+
+CALC:MARK1:SGR:FRAM -1s
+//Sets marker 1 to the frame 1 second after measurement begin. (Note the
+//negative value!
+CALC:MARK1:MIN
+//Sets marker 1 to the minimum level in this frame.
+CALC:MARK1:SGR:Y:MIN
+//Sets marker 1 to the minimum level for the same frequency the marker is 
+//currently positioned at in all frames.
+
+CALC:MARK2:SGR:XY:MAX
+//Sets marker 2 to the maximum level in the entire spectrogram.
+
+CALC:DELT1:SGR:FRAM 3s
+//Sets the deltamarker 1 to the frame captured 3 seconds after marker 1. By default
+//it is set to the peak of that frame and displays the level difference to marker 1.
+//Note the positive value!
+CALC:DELT1:MIN
+//Sets deltamarker 1 to the minimum level in this frame.
+
+CALC:DELT3:SGR:XY:MAX
+//Sets deltamarker 3 to the maximum level in the entire spectrogram. By default
+//its value is the difference to marker 1. We will change it to refer to marker 2.
+CALC:DELT3:MREF 2
+//Deltamarker 3 now refers to marker 2, both are positioned on the maximum of the
+//spectrogram. Thus, D3=0. We will move deltamarker 3 to the next peak level
+//for the same frequency.
+CALC:DELT3:SGR:Y:MAX:NEXT
+
+//---------------Retrieving Results----------------------
+CALC:MARK1:X?
+CALC:MARK1:Y?
+CALC:MARK1:SGR:FRAM?
+//Queries the frequency (x), level (y) and frame values of marker 1.
+
+CALC:MARK2:X?
+CALC:MARK2:Y?
+CALC:MARK2:SGR:FRAM?
+//Queries the frequency (x), level (y) and frame values of marker 2.
+
+CALC:DELT1:X?
+CALC:DELT1:Y?
+CALC:DELT1:SGR:FRAM?
+//Queries the frequency (x), level (y) and frame values of deltamarker 1.
+
+CALC:DELT3:X?
+CALC:DELT3:Y?
+CALC:DELT3:SGR:FRAM?
+//Queries the frequency (x), level (y) and frame values of deltamarker 3.
+
+CALC:SGR:TST:DATA? ALL
+//Queries the time stamps of all stored frames.
+CALC:SGR:FRAM:SEL -1
+//Selects the frame that was captured 1 second after measurement start (Note the
+//negative value!). This frame is displayed in the Spectrum window.
+TRAC:DATA? SGR
+//Retrieves the trace data for the spectrogram. For each frame, the power level
+//and frequency at each sweep point are returned.
+TRAC:DATA? TRACE1
+//Retrieves the trace data for the selected frame only.
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

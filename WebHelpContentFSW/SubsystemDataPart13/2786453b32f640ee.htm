@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurements and Result Display|Code Domain Analysis|Evaluation Methods for Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Channel Table</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWCDMASkIdSmartGridChannelTable">
+</meta>
+        <meta name="topic-id" value="10">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3a0c6e19b68b8f510a00206a00e2adc7-14df114092791b800a00206a01fa83d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="a6ba98e833a74468.htm">Measurements and Result Display</a> &gt; <a class="chm-breadcrumb" href="6c18bcecabcf4624.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="1098fd20c8854cad.htm">Evaluation Methods for Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Channel Table</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor67">
+</a><div class="function_heading"><a name="ID_3a0c6e19b68b8f510a00206a00e2adc7-14df114092791b800a00206a01fa83d8-en-US">
+</a><span style="font-weight: bold">Channel Table</span></div><p>The Channel Table evaluation displays the detected channels and the results of the code domain power measurement. The channel table can contain a maximum of 512 entries.</p><p>In BTS measurements, this corresponds to the 512 codes that can be assigned within the class of spreading factor 512.</p><p>In UE measurements, this corresponds to the 256 codes that can be assigned within the class of spreading factor 256, with both I and Q branches.</p><p>The first entries of the table indicate the channels that must be available in the signal to be analyzed and any other control channels (see <a class="xref" href="fe2bedc0e9a54ec7.htm#ID_44311bbefa7f4fe70a710a3100076975-192230c5f554e1c20a00206a019f8074-en-US">"BTS Channel Types"</a> and <a class="xref" href="8bbb1d08caab4279.htm#ID_673ab48b422fe0e00a00206a0058f65b-192230c5f554e1c20a00206a019f8074-en-US">"UE Channel Types"</a>).</p><p>The lower part of the table indicates the data channels that are contained in the signal.</p><p>If the type of a channel can be fully recognized, based on pilot sequences or modulation type, the type is indicated in the table. In BTS measurements, all other channels are of type CHAN.</p><p>The channels are in descending order according to symbol rates and, within a symbol rate, in ascending order according to the channel numbers. Therefore, the unassigned codes are always displayed at the end of the table.</p>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, CTABle</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p><a class="xref" href="5b5374be8ed54900.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-1a158fbffef807310a00206a017e8287-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? CTABle</a></p><p><a class="xref" href="26fee67ee9a648a5.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-a85a2c89fef81f0f0a00206a00473941-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? PWCDp</a></p><p><a class="xref" href="183cd311c21d4724.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-a6ae4896fef80d3c0a00206a019750b1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? CWCDp</a></p></div><div style="clear:left;"> </div>
+						<div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="2c86e24dd02d44ab.htm#ID_a97443aa457d5be20a00206a01b4d2c1-14df114092791b800a00206a01fa83d8-en-US" class="title_toc">Table Configuration</a></div></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Result Configuration|Y-Scaling Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Scaling per division</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDocsisSkIdYScalingChkPerDivMulti1">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdYScalingChkPerDivMulti2">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdYScalingChkPerDivMulti2_5">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdYScalingChkPerDivMulti5">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdYScalingChkPerDivMulti1">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdYScalingChkPerDivMulti2">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdYScalingChkPerDivMulti2_5">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdYScalingChkPerDivMulti5">
+</meta>
+        <meta name="topic-id" value="865">
+</meta>
+        <meta name="topic-id" value="866">
+</meta>
+        <meta name="topic-id" value="867">
+</meta>
+        <meta name="topic-id" value="868">
+</meta>
+        <meta name="topic-id" value="869">
+</meta>
+        <meta name="topic-id" value="870">
+</meta>
+        <meta name="topic-id" value="871">
+</meta>
+        <meta name="topic-id" value="872">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_67ee47c807261fec0a001ae74f839200-adc297f572fe3cb70a001ae774048499-en-US;ID_4a85d39972da25470a001ae70b645743-adc297f572fe3cb70a001ae774048499-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="b4f87dbb278b4001.htm">Result Configuration</a> &gt; <a class="chm-breadcrumb" href="45e0c66dc5f846e5.htm">Y-Scaling Settings</a> &gt; <span class="chm-breadcrumb">Scaling per division</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_67ee47c807261fec0a001ae74f839200-adc297f572fe3cb70a001ae774048499-en-US">
+</a>Scaling per division</div><p>Determines the values shown for each division on the y-axis.</p><p>One or more multiples of 10<sup>n</sup> can be selected. The R&amp;S FSW DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 application then selects the optimal scaling from the selected values.</p><div class="block"><span class="bold"><a name="ID_4a85d39972da25470a001ae70b645743-adc297f572fe3cb70a001ae774048499-en-US">
+</a>Example: </span><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Multiples of "2.0" and <b>"2.5"</b> selected; division range = [-80..-130]; number of divisions: 10;<br/>Possible scaling (n=1):<br/>[-80;-85;-90;-95;-100;-105;-110;-115;-130;]</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Multiples of <b>"2.0"</b> selected; division range = [-80..-130]; number of divisions: 10;<br/>Possible scaling (n=1):<br/>[0;-20;-40;-60;-80;-100;-120;-140;-160;-180;]</li></ul></div></div><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"1.0"</p></td><td class="function_col_right"><p>Each division on the y-axis displays multiples of 1*10<sup>n</sup>:</p><p>For example for n= -1; division range = [0..1]; number of divisions: 10;</p><p>[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]</p></td></tr><tr><td class="function_col_left" valign="top"><p>"2.0"</p></td><td class="function_col_right"><p>Each division on the y-axis displays multiples of 2*10<sup>n</sup>:</p><p>For example for n= -1;division range = [0..1]; number of divisions: 5;</p><p>[0, 0.2, 0.4, 0.6, 0.8, 1.0]</p></td></tr><tr><td class="function_col_left" valign="top"><p>"2.5"</p></td><td class="function_col_right"><p>Each division on the y-axis displays multiples of 2.5*10<sup>n</sup>:</p><p>For example for n= -1; division range = [0..1]; number of divisions: 5;</p><p>[0, 0.25, 0.5, 0.75, 1.0]</p></td></tr><tr><td class="function_col_left" valign="top"><p>"5.0"</p></td><td class="function_col_right"><p>Each division on the y-axis displays multiples of 5*10<sup>n</sup>:</p><p>For example for n= -1; division range = [0..1]; number of divisions: 5,</p><p>[-0.5, 0, 0.5, 1.0, 1.5]</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="5c8b1b5f3c6a48cd.htm#ID_9c3fd517dd822fdd0a001ae744479bd6-9f1986e2dd822e470a001ae75c84d48a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>PDIVision</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

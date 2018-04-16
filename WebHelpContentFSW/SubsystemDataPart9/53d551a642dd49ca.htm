@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Phase Noise (R&amp;S FSW-K40)|Remote Control Commands for Phase Noise Measurements|Remote Control Example Scripts" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k40.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring Numerical Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_213c354f479183bf0a00206a01905224-4123961d46f28b350a00206a006cf776-en-US;ID_94b00a44479183bf0a00206a0000cdc6-4123961d46f28b350a00206a006cf776-en-US;ID_6d44ed05479183bf0a00206a0026d3e1-4123961d46f28b350a00206a006cf776-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k40/Content/53d551a642dd49ca.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Phase Noise (R&amp;S FSW-K40)</a> &gt; <a class="chm-breadcrumb" href="a8179e7c78fd4546.htm">Remote Control Commands for Phase Noise Measurements</a> &gt; <a class="chm-breadcrumb" href="05b34383eddd4886.htm">Remote Control Example Scripts</a> &gt; <span class="chm-breadcrumb">Configuring Numerical Results</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Configuring Numerical Results</div><div class="block"><div class="subtitle"><a name="ID_94b00a44479183bf0a00206a0000cdc6-4123961d46f28b350a00206a006cf776-en-US">
+</a>Defining a user range for residual noise results and query the results</div></div><pre class="verbatim" xml:space="preserve">//Select the trace for integration.
+CALC:EVAL:USER2:TRAC TRACE1
+//Define the start and stop frequencies of the integration range.
+CALC:EVAL:USER2:STAR 100KHZ
+CALC:EVAL:USER2:STOP 1MHZ
+//Query the results.
+//Residual FM:
+FETC:PNO:USER2:RFM?
+//Residual PM:
+FETC:PNO:USER2:RPM?
+//Residual RMS jitter:
+FETC:PNO:USER2:RMS?</pre><div class="block"><div class="subtitle"><a name="ID_6d44ed05479183bf0a00206a0026d3e1-4123961d46f28b350a00206a006cf776-en-US">
+</a>Working with spot noise results</div></div><pre class="verbatim" xml:space="preserve">//Turn on spot noise markers on every decade edge.
+CALC:SNO:DEC ON
+//Turn on spot noise markers at two additional offset frequencies.
+CALC:SNO1:STAT ON
+CALC:SNO1:X 50KHZ
+CALC:SNO2:STAT ON
+CALC:SNO2:X 500KHZ
+//Read out spot noise marker results.
+//Read out the decade edges:
+CALC:SNO:DEC:X?
+//Read out the marker positions on the decade edges:
+CALC:SNO:DEC:Y?
+//Read out customized spot noise marker results:
+//At 50 kHz:
+CALC:SNO1:Y?
+//At 500 kHz:
+CALC:SNO2:Y?</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

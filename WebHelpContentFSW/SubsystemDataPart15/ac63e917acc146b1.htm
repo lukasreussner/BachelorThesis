@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Channel Detection and Channel Types</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_dfc899a9fa11073a0a710a310022ca71-b7f661756d7580e80a00206a010113c9-en-US;ID_0da1a976acdbe3810a00206a008ac9c4-b7f661756d7580e80a00206a010113c9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="2555a026cc2a4d0c.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Channel Detection and Channel Types</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor234">
+</a><a name="kanchor235">
+</a><a name="kanchor236">
+</a><a name="kanchor237">
+</a><a name="kanchor238">
+</a><a name="kanchor239">
+</a><div class="chm-chaptertitle">Channel Detection and Channel Types</div><p>The CDMA2000 applications provide two basic methods of detecting active channels:</p><div class="block"><ul class="list"><li value="1"><b>Automatic search using pilot sequences</b><br/>The application performs an automatic search for active (DPCH) channels throughout the entire code domain. At the specific codes at which channels can be expected, the application detects an active channel if the corresponding symbol rate and a sufficiently high power level is measured (see <a class="xref" href="2fec93d7128148e1.htm#ID_df6eb623ea7bcad20a710a31005f4f03-b71653034984aa290a00206a0052ec9d-en-US">"Inactive Channel Threshold"</a>).<br/>Any channel that does not have a predefined channel number and symbol rate is considered to be a data channel.<br/><b>In the MS application</b>, a channel is considered to be active if a minimum signal/noise ratio is maintained within the channel.</li><li value="2"><b>Comparison with predefined channel tables</b><br/>The input signal is compared to a predefined channel table. All channels that are included in the predefined channel table are considered to be active.<br/>For a list of predefined channel tables provided by the CDMA2000 applications, see <a class="xref" href="a4cfe428b6014ec4.htm#ID_93f02d1aa1004a9d0a00206a002aeec9-69e672eba1004a9d0a00206a00a2e3bf-en-US">"Reference: Predefined Channel Tables"</a>.</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_0da1a976acdbe3810a00206a008ac9c4-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Quasi-inactive channels in the MS application</div><a name="kanchor240">
+</a><a name="kanchor241">
+</a><a name="kanchor242">
+</a><a name="kanchor243">
+</a><p>In the MS application, only one branch in the code domain is analyzed at a time (see also <a class="xref" href="53fe37d92acf44fe.htm#ID_2a91e529b1549a850a00206a01fd41d8-b7f661756d7580e80a00206a010113c9-en-US">"Code Mapping and Branches"</a>). However, even if the code on the analyzed branch is inactive, the code with the same number on the other branch can belong to an active channel. In this case, the channel is indicated as <b>quasi-inactive</b> in the current branch evaluation.</p></td></tr></table></div></div><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="6c4a7928586d4ea5.htm" class="chapter_title_toc">BTS Channel Types</a></li><li value="2"><a href="ead11a5bfec0445e.htm" class="chapter_title_toc">MS Channel Types</a></li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

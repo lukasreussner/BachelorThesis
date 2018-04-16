@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Retrieving Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Retrieving Trace Data and Marker Values</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6f9159b6b99f92e90a00206a0082cd84-b6cc20e340b6af1a0a00206a00580954-en-US;ID_491b3e9b47f411e19025afdb86cc3cad-b6cc20e340b6af1a0a00206a00580954-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="673f84be7f234710.htm">Retrieving Results</a> &gt; <span class="chm-breadcrumb">Retrieving Trace Data and Marker Values</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1175">
+</a><a name="kanchor1176">
+</a><div class="chm-chaptertitle">Retrieving Trace Data and Marker Values</div><p>In order to retrieve the trace and marker results in a remote environment, use the following commands:</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>All results that are not based on the capture buffer data are calculated for a single result range only (see <a class="xref" href="bd79fe99c4ec4493.htm#ID_f3b9b025c28101e90a00206a0061de00-184c8906411153460a00206a01532735-en-US">"Result Range"</a>). To retrieve the results for several result ranges, use the <a class="xref" href="4ff38818e25940d9.htm#ID_044ad35445b40cdd0a00206a00f84fc0-54e2e55645b404030a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>SEARch:</nobr>​<nobr>MBURst:</nobr>​<nobr>CALC</nobr></a> command to move from one result range to the next.</p></td></tr></table></div></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="c4b57904fed94b6a.htm#ID_99c45f04469c35320a00206a0127fb4c-e3649ad1469c2d620a00206a014baccb-en-US" class="title_toc">CALCulate&lt;n&gt;:DELTamarker&lt;m&gt;:X:ABSolute?</a><br/><a href="b2aebf18b83a4c0c.htm#ID_2036a0e52508f27c0a00206a002718bb-ac65169d2a7d57c80a00206a00f066ed-en-US" class="title_toc">CALCulate&lt;n&gt;:DELTamarker&lt;m&gt;:X:RELative?</a><br/><a href="a3728f40b5cf4b8a.htm#ID_8c5c561c29ea10910a00206a00f90ab1-9313d77ce7c667360a00206a01c878c3-en-US" class="title_toc">CALCulate&lt;n&gt;:MARKer&lt;m&gt;:Y?</a><br/><a href="a371e93c19e04301.htm#ID_9404394e45b000ed0a00206a00aeffba-d439d64545aff6ac0a00206a014baccb-en-US" class="title_toc">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:X[:SCALe]:STARt?</a><br/><a href="342d67b7cfb54f60.htm#ID_ee94fa7638836ae10a001ae71870f85b-ff0427bc3883693b0a001ae709e764d3-en-US" class="title_toc">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:X[:SCALe]:STOP?</a><br/><a href="4c67be541c8f4788.htm#ID_73ec99932e55f95b0a00206a00442145-37bd82bd20566d350a00206a00902ab1-en-US" class="title_toc">FORMat:DEXPort:DSEParator</a><br/><a href="0a09afa9aaff4ba9.htm#ID_4c1c613e45b0bc4d0a00206a0104781b-12b397e045b0b27a0a00206a014baccb-en-US" class="title_toc">FORMat:DEXPort:HEADer</a><br/><a href="fd1e87edba6e4663.htm#ID_fe1c8dad45b0c8a10a00206a0199502f-4da4e6ae45b0bece0a00206a014baccb-en-US" class="title_toc">FORMat:DEXPort:MODE</a><br/><a href="e0bdf244dbc9496a.htm#ID_9d145c2695f7202b0a00206a01f853f5-bf288bed209b676b0a00206a00ffe601-en-US" class="title_toc">MMEMory:STORe&lt;n&gt;:TRACe</a><br/><a href="20ce7cf1bfbc4e04.htm#ID_fa9f404438836c860a001ae72f676dea-b3d976aa38836b5e0a001ae709e764d3-en-US" class="title_toc">[SENSe:]DDEMod:SEARch:MBURst:STARt[:SYMBols]?</a><br/><a href="219244060f5340a4.htm#ID_fa9f404438836c860a001ae72f676dea-fff7d80c1888ce5f0a001ae703ff04b7-en-US" class="title_toc">[SENSe:]DDEMod:SEARch:MBURst:STARt:SAMPles?</a><br/><a href="85cf7a9a1e8a4831.htm#ID_5a71ecfa45ba2f470a00206a01a04c30-4a7ea8b245ba23dd0a00206a014baccb-en-US" class="title_toc">TRACe&lt;n&gt;[:DATA]</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

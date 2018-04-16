@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Data Input and Output|Receiving Data Input and Providing Data Output" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>RF Input from the Analog Baseband Connector</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_30c890d8f499f2da0a710a3101220ef7-d02d2a37f49a29f00a0020190005cd48-en-US;ID_a7c507d4ff291cde0a710a3101ebd834-d02d2a37f49a29f00a0020190005cd48-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="4dc72d92b87a4ee9.htm">Data Input and Output</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <span class="chm-breadcrumb">RF Input from the Analog Baseband Connector</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1297">
+</a><a name="kanchor1298">
+</a><div class="chm-chaptertitle">RF Input from the Analog Baseband Connector</div><p>RF input can not only be taken from the RF INPUT connector on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. If the optional Analog Baseband Interface is installed and active for input, an RF signal can be input at the BASEBAND INPUT I connector and redirected from there to the RF input path. A transducer is activated to compensate for the additional path of the redirected signal. The signal is then processed as usual in the frequency and time domain as for any other RF input.</p><p>This is useful, for example, to perform frequency sweep measurements with (single-ended or differential) active probes, which can also be connected to the BASEBAND INPUT I connector.</p><div class="block"><div class="subtitle"><a name="ID_a7c507d4ff291cde0a710a3101ebd834-d02d2a37f49a29f00a0020190005cd48-en-US">
+</a>Frequency sweep measurements on probe input</div></div><p>You can perform RF measurements (measurements in the time or frequency domain) by connecting a probe to the BASEBAND INPUT I connector and switching the input source to this connector in the RF input configuration (see <a class="xref" href="15a7907108824f1f.htm#ID_7f0484aef48ff5f10a710a31002a5465-a9e436fef4d6ea3d0a002019004d8b38-en-US">"Input Connector"</a>).</p><p>The probe's attenuation is compensated automatically by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW using a transducer named "Probe on Baseband Input I". (The probe can only be connected on I, as only input at the I connector can be redirected to the RF path). A comment is assigned that includes the type, name and serial number of the detected probe. The transducer is deleted as soon as the probe is disconnected.</p><p>For details on transducers see <a class="xref" href="116a6dfa127742b4.htm#ID_ce0bb4d399de87010a710a3100a5b597-5ad5d74fb7e40f450a001ae7612d9196-en-US">"Basics on Transducer Factors"</a>.</p><p>For more information on using probes for input see <a class="xref" href="e8384890d04b46f2.htm#ID_fbbc3fddf99ab04e0a00201900d59eb9-4c71256ff99ab04e0a00201900a7a1dc-en-US">"Using Probes"</a>.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

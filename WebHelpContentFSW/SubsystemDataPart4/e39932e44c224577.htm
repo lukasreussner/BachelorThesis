@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Configuration|Modulation Accuracy Measurement Configuration|Measurement Settings|Spectrum" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Modulation Spectrum Table: Frequency List</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGSMSkIdSpectrumFrequencyList">
+</meta>
+        <meta name="topic-id" value="610">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b2ce851bfffb412e0a00201901757d90-6de3276a7d447f250a0020190132413b-en-US;ID_2928fd03d26811e2a948a2152245255b-6de3276a7d447f250a0020190132413b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="1a64fe887be64f22.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="e90423ae33184d9a.htm">Modulation Accuracy Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="baf81276a8374be1.htm">Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="3006fce3ea724093.htm">Spectrum</a> &gt; <span class="chm-breadcrumb">Modulation Spectrum Table: Frequency List</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor623">
+</a><a name="kanchor624">
+</a><a name="kanchor625">
+</a><a name="kanchor626">
+</a><div class="function_heading"><a name="ID_b2ce851bfffb412e0a00201901757d90-6de3276a7d447f250a0020190132413b-en-US">
+</a><span style="font-weight: bold">Modulation Spectrum Table: Frequency List</span></div><p>This setting is only required by the "Modulation Spectrum Table" evaluation (see <a class="xref" href="97dd78ed0eae43ca.htm#ID_07d2a4b4a57411e190e9ba0173fac731-43ed4de0e9ba3d950a00201900481861-en-US">"Modulation Spectrum Table"</a>). In this evaluation, the spectrum of the signal at fixed frequency offsets is determined. The list of frequencies to be measured is defined by the standard. Additionally, sparse versions of the specified frequency lists with fewer intermediate frequencies are provided for quicker preliminary tests.</p><p><b><a name="ID_2928fd03d26811e2a948a2152245255b-6de3276a7d447f250a0020190132413b-en-US">
+</a>Note:</b> Modulation RBW at 1800 kHz. <a name="kanchor627">
+</a><a name="kanchor628">
+</a>As opposed to previous R&amp;S signal and spectrum analyzers, in which the modulation RBW at 1800<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz was configurable, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW configures the RBW (and VBW) internally according to the selected frequency list (see <a class="xref" href="#ID_b2ce851bfffb412e0a00201901757d90-6de3276a7d447f250a0020190132413b-en-US">"Modulation Spectrum Table: Frequency List"</a>). For the "Modulation Spectrum Graph" both the RBW and VBW are set to 30<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz. For the "Modulation Spectrum Table", they are set according to <a class="xref" href="97dd78ed0eae43ca.htm#ID_652febc2d26711e2a948a2152245255b-43ed4de0e9ba3d950a00201900481861-en-US">Table "RBW settings for Modulation Spectrum Table measurements according to standard"</a>.<br/>The frequency list also determines the used sample rate, see <a class="xref" href="35002937ba1d479a.htm#ID_4c3b890fa50c12720a00206a0195f01d-6de3276a7d447f250a0020190132413b-en-US">"Sample rate"</a>).<br/></p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"1.8 MHz"</p></td><td class="function_col_right"><p>The frequency list comprises offset frequencies up to 1.8 MHz from the carrier. The sample rate is 6.5 MHz.</p><p>In previous R&amp;S signal and spectrum analyzers, this setting was referred to as "narrow".</p></td></tr><tr><td class="function_col_left" valign="top"><p>"1.8 MHz (sparse)"</p></td><td class="function_col_right"><p>More compact version of "1.8 MHz". The sample rate is 6.5 MHz.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"6 MHz"</p></td><td class="function_col_right"><p>The frequency list comprises offset frequencies up to 6 MHz from the carrier. The sample rate is 19.5 MHz.</p><p>In previous R&amp;S signal and spectrum analyzers, this setting was referred to as "wide".</p></td></tr><tr><td class="function_col_left" valign="top"><p>"6 MHz (sparse)"</p></td><td class="function_col_right"><p>More compact version of "6 MHz". The sample rate is 19.5 MHz.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="d36e52551.htm#ID_11a8a704f31756940a00206a01b606da-cc53332a0912127b0a00201901047891-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>WSPectrum:</nobr>​<nobr>MODulation:</nobr>​<nobr>LIST:</nobr>​<nobr>SELect</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

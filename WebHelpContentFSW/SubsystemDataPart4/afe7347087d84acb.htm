@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Configuration|Modulation Accuracy Measurement Configuration|Demodulation|Demodulation Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Synchronization</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGSMSkIdDemodSynchronization">
+</meta>
+        <meta name="topic-id" value="597">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6c884211db258f200a00206a0154ff09-6de3276a7d447f250a0020190132413b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="1a64fe887be64f22.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="e90423ae33184d9a.htm">Modulation Accuracy Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="e3879097f05c495b.htm">Demodulation</a> &gt; <a class="chm-breadcrumb" href="87c80a22dedd49fa.htm">Demodulation Settings</a> &gt; <span class="chm-breadcrumb">Synchronization</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor580">
+</a><a name="kanchor581">
+</a><a name="kanchor582">
+</a><a name="kanchor583">
+</a><a name="kanchor584">
+</a><a name="kanchor585">
+</a><div class="function_heading"><a name="ID_6c884211db258f200a00206a0154ff09-6de3276a7d447f250a0020190132413b-en-US">
+</a><span style="font-weight: bold">Synchronization</span></div><p>Sets the synchronization mode of the R&amp;S FSW GSM application.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Burst+TSC"</p></td><td class="function_col_right"><p>First search for the power profile (burst search) according to the frame configuration in the capture buffer. Second, inside the found bursts search for the TSC of the <a class="xref" href="d4e31521.htm#shiv_FSV_K10_1254-7bf83232e9afc5160a002019003c84da-en-US">"Slot to Measure"</a> as given in the frame configuration. "Burst +TSC" is usually faster than "TSC" for bursted signals.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"TSC"</p></td><td class="function_col_right"><p>Search the capture buffer for the TSC of the <a class="xref" href="d4e31521.htm#shiv_FSV_K10_1254-7bf83232e9afc5160a002019003c84da-en-US">"Slot to Measure"</a> as given in the frame configuration. This mode corresponds to a correlation with the given TSC. This mode can be used for continuous (but framed) signals or bursted signals.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Burst"</p></td><td class="function_col_right"><p>Search for the power profile (burst search) according to the frame configuration in the capture buffer.</p><p>Note: For "Burst" no demodulation measurements (e.g. "Modulation Accuracy") are supported. Only "Power vs Time", "Modulation Spectrum", "Transient Spectrum" measurements are supported.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"None"</p></td><td class="function_col_right"><p>Do not synchronize at all. If an external or power trigger is chosen, the trigger instant corresponds to the frame start.</p><p><b>Tip</b>: Manually adjust the trigger offset to move the burst to be analyzed under the mask in the "Power vs Time" measurement.</p><p><b>Note</b>: For "None" no demodulation measurements (e.g. "Modulation Accuracy") are supported. Only "Power vs Time", "Modulation Spectrum", "Transient Spectrum" measurements are supported.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="785ac4c12be14c3f.htm#ID_8dc36ba1a0fd717c0a00206a011135b5-b641ac0d7dd65dd70a00201900d3050a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>MS]:</nobr>​<nobr>SYNC:</nobr>​<nobr>MODE</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

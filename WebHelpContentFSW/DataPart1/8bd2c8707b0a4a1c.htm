@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Network and Remote Control Settings|Returning to Manual Mode (&#34;Local&#34;)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Local</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f33a880295a0dd320a001ae706848aaa-edaf7fa6368cfd140a001ae76aad7d60-en-US;ID_17e6302e7b736f5a0a001ae764c5bb55-edaf7fa6368cfd140a001ae76aad7d60-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="67774168374947b1.htm">Network and Remote Control Settings</a> &gt; <a class="chm-breadcrumb" href="5556f764eb154a64.htm">Returning to Manual Mode ("Local")</a> &gt; <span class="chm-breadcrumb">Local</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_f33a880295a0dd320a001ae706848aaa-edaf7fa6368cfd140a001ae76aad7d60-en-US">
+</a><span style="font-weight: bold">Local</span></div><p>The instrument switches from remote to manual operation, but only if the local lockout function has not been activated in the remote control mode (see <a class="xref" href="94fc95c69b034e88.htm#ID_b23950b0c3140e040a00206a00278918-37e56ac8c3140e040a00206a01999204-en-US">"GPIB Interface Messages"</a>).</p><div class="block"><div class="listintro-in-compact-list">Furthermore, when you return to manual operation, the following happens:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">All front panel keys are enabled.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">The main softkey menu of the current mode is displayed.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">The measurement diagrams, traces and display fields are displayed again.</li><li style="margin-bottom:0; padding-bottom:0;" value="4">If, at the time of pressing the "LOCAL" softkey, the synchronization mechanism via <span class="command">*OPC</span>, <span class="command">*OPC?</span> or <span class="command">*WAI</span> is active, the currently running measurement procedure is aborted and synchronization is achieved by setting the corresponding bits in the registers of the status reporting system.</li><li style="margin-bottom:0; padding-bottom:0;" value="5">Bit 6 (User Request) of the Event Status Register is set.<br/>If the status reporting system is configured accordingly, this bit immediately causes the generation of a service request (SRQ) to inform the control software that the user wishes to return to front panel control. For example, this can be used to interrupt the control program and to correct instrument settings manually. This bit is set each time the "LOCAL" softkey is pressed.</li></ul></div><p><b><a name="ID_17e6302e7b736f5a0a001ae764c5bb55-edaf7fa6368cfd140a001ae76aad7d60-en-US">
+</a>Note:</b> Before you switch back to manual operation, all remote command processing must be completed. Otherwise, the instrument will switch back to remote control immediately.<br/>If you select the "Local" softkey while a self-alignment or a self-test is still running (which was started remotely), the instrument only returns to the manual operation state when the alignment or test is completed.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="d36e173274.htm#ID_c4212e25de582a7b0a00206a0050f98a-1f701c3b957856d60a001ae72f148321-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SYSTem:</nobr>​<nobr>KLOCk</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

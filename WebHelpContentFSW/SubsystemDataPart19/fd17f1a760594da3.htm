@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Demodulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]DEMod:FORMat:MCSindex:MODE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_844f107e2f5a94520a00206a00258dcb-d474ab6a2f5a8c150a00206a00636f5b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="ecabe2eae6a345a6.htm">Demodulation</a> &gt; <span class="chm-breadcrumb">[SENSe:]DEMod:FORMat:MCSindex:MODE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_844f107e2f5a94520a00206a00258dcb-d474ab6a2f5a8c150a00206a00636f5b-en-US">
+</a><span class="bold">[SENSe:]DEMod:FORMat:MCSindex:MODE </span>&lt;Mode&gt;<br/></div><div class="rcdescription"><p>This command defines the PPDUs taking part in the analysis depending on their Modulation and Coding Scheme (MCS) index (for <b>IEEE 802.11n, ac</b> standards only).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Mode&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>FBURst |</nobr> <nobr> ALL |</nobr> <nobr> MEASure |</nobr> <nobr> DEMod</nobr><br/><span class="bold">FBURst<br/></span><p>The MCS index of the first PPDU is detected and subsequent PPDUs are analyzed only if they have the same MCS index (corresponds to "Auto, same type as first PPDU")</p><span class="bold">ALL<br/></span><p>All recognized PPDUs are analyzed according to their individual MCS indexes (corresponds to "Auto, individually for each PPDU")</p><span class="bold">MEASure<br/></span><p>Only PPDUs with an MCS index which matches that specified by <a class="xref" href="4e2d09532f3e4739.htm#ID_a00ed18e2f5a88c90a00206a013e1d5a-84f9c4872f5a809b0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>MCSindex</nobr></a> are analyzed</p><span class="bold">DEMod<br/></span><p>All PPDUs will be analyzed according to the MCS index specified by <a class="xref" href="4e2d09532f3e4739.htm#ID_a00ed18e2f5a88c90a00206a013e1d5a-84f9c4872f5a809b0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>MCSindex</nobr></a>.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">FBURst</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SENS:DEM:FORM:MCS:MODE MEAS</span><br/><span class="commandline">SENS:DEM:FORM:MCS 1</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="bf56b0430d404b45.htm#ID_5d9c060034b411e2aa2aaab3cd47473f-30c408992c3666840a0020190176099a-en-US">"MCS Index to use"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

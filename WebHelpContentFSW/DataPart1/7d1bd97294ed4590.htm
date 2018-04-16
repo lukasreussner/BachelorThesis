@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Contents of the Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Event Status Register (ESR) and Event Status Enable Register (ESE)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_410b9bfbbdf9ea370a00206a004b9a14-84bc4cf9bdf9ea370a00206a0170d2b2-en-US;ID_8d870ee0c348a0ca0a00206a002fbc65-84bc4cf9bdf9ea370a00206a0170d2b2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="20b40c28f6194536.htm">Contents of the Status Registers</a> &gt; <span class="chm-breadcrumb">Event Status Register (ESR) and Event Status Enable Register (ESE)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Event Status Register (ESR) and Event Status Enable Register (ESE)</div><a name="kanchor2787">
+</a><a name="kanchor2788">
+</a><a name="kanchor2789">
+</a><a name="kanchor2790">
+</a><p>The ESR is defined in IEEE 488.2. It can be compared with the <span class="command">EVENt</span> part of a SCPI register. The event status register can be read out using command <a class="xref" href="95ef50eb2d894931.htm#ID_3eac563d5c72910c0a00206a00aee8d9-0c4fdb385c72910c0a00206a01a64c98-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>*ESR?</nobr></a>.</p><p>The ESE corresponds to the <span class="command">ENABle</span> part of a SCPI register. If a bit is set in the ESE and the associated bit in the ESR changes from 0 to 1, the ESB bit in the STB is set. The ESE register can be set using the command <a class="xref" href="9eb8ad07f71f425e.htm#ID_ff6b2dee5c64a5060a00206a00e459d8-31c9bd1f5c64a5060a00206a019522bf-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>*ESE</nobr></a> and read using the command <span class="command">*ESE?</span>.</p><div class="block"><a name="ID_8d870ee0c348a0ca0a00206a002fbc65-84bc4cf9bdf9ea370a00206a0170d2b2-en-US">
+</a><span class="table-caption">Meaning of the bits used in the event status register</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>Operation Complete</p><p>This bit is set on receipt of the command *OPC exactly when all previous commands have been executed.</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>Not used</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>Query Error</p><p>This bit is set if either the controller wants to read data from the instrument without having sent a query, or if it does not fetch requested data and sends new instructions to the instrument instead. The cause is often a query which is faulty and hence cannot be executed.</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>Device-dependent Error</p><p>This bit is set if a device-dependent error occurs. An error message with a number between -300 and -399 or a positive error number, which denotes the error in greater detail, is entered into the error queue.</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>Execution Error</p><p>This bit is set if a received command is syntactically correct but cannot be performed for other reasons. An error message with a number between -200 and -300, which denotes the error in greater detail, is entered into the error queue.</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>Command Error</p><p>This bit is set if a command is received, which is undefined or syntactically incorrect. An error message with a number between -100 and -200, which denotes the error in greater detail, is entered into the error queue.</p></td></tr><tr class="oddrow"><td valign="top"><p>6</p></td><td valign="top"><p>User Request</p><p>This bit is set when the instrument is switched over to manual control.</p></td></tr><tr class="evenrow"><td valign="top"><p>7</p></td><td valign="top"><p>Power On (supply voltage on)</p><p>This bit is set on switching on the instrument.</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

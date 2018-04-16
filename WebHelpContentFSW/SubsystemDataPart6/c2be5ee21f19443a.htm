@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Multi-Carrier Group Delay (R&amp;S FSW-K17)|Remote Commands to Perform Multi-Carrier Group Delay Measurements|Configuring Multi-Carrier Group Delay Measurements|Triggering Measurements|Configuring the Triggering Conditions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k17.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRIGger[:SEQuence]:SOURce</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k17/Content/c2be5ee21f19443a.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Multi-Carrier Group Delay (R&amp;S FSW-K17)</a> &gt; <a class="chm-breadcrumb" href="4d17b40b3bb34476.htm">Remote Commands to Perform Multi-Carrier Group Delay Measurements</a> &gt; <a class="chm-breadcrumb" href="0422ae0c6a65434c.htm">Configuring Multi-Carrier Group Delay Measurements</a> &gt; <a class="chm-breadcrumb" href="df403bb65c3841d7.htm">Triggering Measurements</a> &gt; <a class="chm-breadcrumb" href="3134f2b2abc34c65.htm">Configuring the Triggering Conditions</a> &gt; <span class="chm-breadcrumb">TRIGger[:SEQuence]:SOURce</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor427">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US">
+</a><span class="bold">TRIGger[:SEQuence]:SOURce </span>&lt;Source&gt;<br/></div><div class="rcdescription"><p>This command selects the trigger source.</p><p><b>Note on external triggers:</b></p><p>If a measurement is configured to wait for an external trigger signal in a remote control program, remote control is blocked until the trigger is received and the program can continue. Make sure this situation is avoided in your remote control programs.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Source&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">IMMediate<br/></span><p>Free Run</p><span class="bold">EXTernal<br/></span><p>Trigger signal from the [Trigger Input] connector.</p><span class="bold">EXT2<br/></span><p>Trigger signal from the [Trigger Input/Output] connector.</p><p>Note: Connector must be configured for "Input".</p><span class="bold">EXT3<br/></span><p>Trigger signal from the [TRIGGER 3 INPUT/ OUTPUT] connector.</p><p>Note: Connector must be configured for "Input".</p><span class="bold">RFPower<br/></span><p>First intermediate frequency</p><p>(Frequency and time domain measurements only.)</p><span class="bold">IFPower<br/></span><p>Second intermediate frequency</p><span class="bold">IQPower<br/></span><p>Magnitude of sampled I/Q data</p><p>For applications that process I/Q data, such as the I/Q Analyzer or optional applications.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">IMMediate</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRIG:SOUR EXT</span><br/><p>Selects the external trigger input as source of the trigger signal</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../fsw_iqanalyzer/Content/6360bdecfa4646da.htm">Basic I/Q Analysis with Improved Performance</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../fsw_iqanalyzer/Content/36452d4e6acc4224.htm">Data Acquisition via the Optional Digital Baseband Interface</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../fsw_iqanalyzer/Content/76eb21dfcb904669.htm">Data Acquisition via the Optional Analog Baseband Interface</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../../Content/154b1387b81e4b54.htm">Programming Example: Performing a Basic Frequency Sweep</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="b80acb08b5c243bc.htm#ID_560d1d670f01bf380a00206a01bc391b-45c1d1ed1982cea10a00206a004779e9-en-US">"Trigger Source"</a><br/>See <a class="xref" href="194af0b432d74dc4.htm#ID_73f5cba10fd626230a00206a00d4aec9-d01bf32b0fd626230a00206a011f4f2c-en-US">"Free Run"</a><br/>See <a class="xref" href="e8ed95e874164cdc.htm#ID_3d5f41ee0fd6b6ca0a00206a005b3e2e-1c6a070f0fd6b6ca0a00206a004f79b0-en-US">"External Trigger 1/2/3"</a><br/>See <a class="xref" href="8bd3881a9d5f4d06.htm#ID_9aae69920fd872d10a00206a00f5a9a7-bf3a61f20fd872d10a00206a00554bda-en-US">"IF Power"</a><br/>See <a class="xref" href="b866b7d1a9cd4e47.htm#ID_46cf38c80fd747b00a00206a00b827be-8926e32a0fd747bf0a00206a00394b1d-en-US">"RF Power"</a><br/>See <a class="xref" href="1462f3776bbc478a.htm#ID_9aae69920fd872d10a00206a00f5a9a7-0e18397d02baf1c20a00206a00e6b693-en-US">"I/Q Power"</a><br/>See <a class="xref" href="63dcc688e4704015.htm#ID_86778644f679591a0a001ae72142dc67-2203b480cc4724160a00206a0108393a-en-US">"Trigger Source"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

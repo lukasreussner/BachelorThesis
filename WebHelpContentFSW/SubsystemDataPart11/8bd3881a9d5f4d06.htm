@@ -1,0 +1,83 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Configuration|Trigger Settings|Trigger Settings|Trigger Source" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		IF Power
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTriggerSourceIFPower">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerSourcePVTIFPower">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerSourceIFPowerRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerSourcePVTIFPower">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerSourceCDAIFPower">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdIqTriggerSourceIFPower">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodTriggerSourceIFPower">
+</meta>
+        <meta name="topic-id" value="435">
+</meta>
+        <meta name="topic-id" value="437">
+</meta>
+        <meta name="topic-id" value="439">
+</meta>
+        <meta name="topic-id" value="441">
+</meta>
+        <meta name="topic-id" value="443">
+</meta>
+        <meta name="topic-id" value="445">
+</meta>
+        <meta name="topic-id" value="447">
+</meta>
+        <meta name="topic-id" value="449">
+</meta>
+        <meta name="topic-id" value="451">
+</meta>
+        <meta name="topic-id" value="453">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9aae69920fd872d10a00206a00f5a9a7-bf3a61f20fd872d10a00206a00554bda-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="31c25e64e0ec4788.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="d6fff5cb795b4cf9.htm">Trigger Settings</a> &gt; <a class="chm-breadcrumb" href="81593c7c4a6a4947.htm">Trigger Settings</a> &gt; <a class="chm-breadcrumb" href="001bc2f03e694f2a.htm">Trigger Source</a> &gt; <span class="chm-breadcrumb">IF Power</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor391">
+</a><a name="kanchor392">
+</a><a name="kanchor393">
+</a><div class="function_heading"><a name="ID_9aae69920fd872d10a00206a00f5a9a7-bf3a61f20fd872d10a00206a00554bda-en-US">
+</a><span style="font-weight: bold">IF Power</span></div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW starts capturing data as soon as the trigger level is exceeded around the third intermediate frequency.</p><p>For frequency sweeps, the third IF represents the start frequency. The trigger bandwidth at the third IF depends on the RBW and sweep type.</p><p>For measurements on a fixed frequency (e.g. zero span or I/Q measurements), the third IF represents the center frequency.</p><p>This trigger source is only available for RF input.</p><p>The available trigger levels depend on the RF attenuation and preamplification. A reference level offset, if defined, is also considered.</p><div class="block"><div class="listintro-in-compact-list">When using the optional 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000/B5000) with an IF power trigger, the IF power trigger corresponds to a "width" trigger on the oscilloscope, with a negative polarity and the range "longer". Thus, data acquisition starts when both of the following conditions apply to the signal fed into the CH1 input connector on the oscilloscope:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">The power level has remained below the specified trigger level for a duration longer than the drop-out time.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">The power level then rises above the specified trigger level.</li></ul></div><p>For details, see <a class="xref" href="../../fsw_iqanalyzer/Content/943d78ffa774452d.htm#ID_20c503f74a9b1ff50a001ae705c44c36-3e7f60c551b212130a001ae729483b02-en-US">Triggering</a>.</p><p>For details on available trigger levels and trigger bandwidths, see the data sheet.</p>Remote command: <div class="rcclist_right"><p><span class="command">TRIG:SOUR IFP</span>, see <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SOURce</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

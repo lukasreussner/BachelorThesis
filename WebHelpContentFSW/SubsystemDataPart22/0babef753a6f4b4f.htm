@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Measurements and Result Displays|I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>EVM vs RB</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkId_EVM_EVM_vs_RB_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridEVMvsRB">
+</meta>
+        <meta name="topic-id" value="12627">
+</meta>
+        <meta name="topic-id" value="12628">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6dfdb0f22926a2240a00206a009939b8-2f5c5dd62926a2240a00206a019c802a-en-US;ID_46db3e3c393bdd300a710b9a00371a47-2f5c5dd62926a2240a00206a019c802a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/0babef753a6f4b4f.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="f3aebef1a77345df.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="4a3740a6b39543f6.htm">I/Q Measurements</a> &gt; <span class="chm-breadcrumb">EVM vs RB</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor18">
+</a><a name="kanchor19">
+</a><div class="function_heading"><a name="ID_6dfdb0f22926a2240a00206a009939b8-2f5c5dd62926a2240a00206a019c802a-en-US">
+</a><span style="font-weight: bold">EVM vs RB</span></div><p>Starts the EVM vs RB result display.</p><p>This result display shows the Error Vector Magnitude (EVM) for all resource blocks that can be occupied by the PDSCH.</p><p>The results are based on an average EVM that is calculated over all resource elements in the resource block. This average resource block EVM is determined for each analyzed subframe.</p><div class="block"><div class="listintro-in-compact-list">If you analyze all subframes, the result display contains three traces. </div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Average EVM<br/>This trace shows the resource block EVM, averaged over all subframes.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Minimum EVM<br/>This trace shows the lowest (average) resource block EVM that has been found over the analyzed subframes.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Maximum EVM<br/>This trace shows the highest (average) resource block EVM that has been found over the analyzed subframes.</li></ul></div><p>If you select and analyze one subframe only, the result display contains one trace that shows the resource block EVM for that subframe only. Average, minimum and maximum values in that case are the same. For more information, see <a class="xref" href="14eb019493fa4f5c.htm#ID_997785a25dbea4e80a00206a00458a8c-36ae3da374bb99150a00206a00fb920b-en-US">"Subframe Selection"</a>.</p><p>The x-axis represents the PDSCH resource blocks. On the y-axis, the EVM is plotted either in % or in dB, depending on the <a class="xref" href="c497b62905864b04.htm#ID_8ea3988c5dbfd6cf0a00206a00be9461-b95d5ff5e57b4d630a00206a00aec8e8-en-US">"EVM Unit"</a>.</p><div class="block" id="ID_46db3e3c393bdd300a710b9a00371a47-2f5c5dd62926a2240a00206a019c802a-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga6d1f9187e5aad320a00201901a5caca_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div>Remote command: <div class="rcclist_right"><p>Selecting the result display: <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD ? '1',LEFT,BSTR</a></p><p>Querying results:</p><p><a class="xref" href="c5bce3843b4b4913.htm#ID_5d1a96baa1c4b5400a00206a00b8886e-7722ae30f71b6cd90a001ae702a0384e-en-US">TRACe:DATA?</a></p><p><a class="xref" href="85e284f9a0444745.htm#ID_8a84c19553d651a60a001ae71c36692e-52c7d77453d650ea0a001ae739ccb36c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]:</nobr>​<nobr>X?</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Basics on FFT" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>FFT Calculation Methods</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_350432fa8dca14820a002019007696de-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_70678fce8dca14820a00201901aae9e2-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_0bce180a8e3dcb830a710a3100b272ec-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_7132722d8dca14820a002019014a7bed-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_610b95238e3dcab80a710a3100befc7d-03e72dbd6b54d8ef0a001ae70832b793-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="80556469d0ef4efb.htm">Basics on FFT</a> &gt; <span class="chm-breadcrumb">FFT Calculation Methods</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">FFT Calculation Methods</div><p>FFT calculation can be performed using different methods.</p><div class="block"><div class="subtitle"><a name="ID_70678fce8dca14820a00201901aae9e2-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a>Single</div></div><p>In single mode, one FFT is calculated for the entire record length, that means the window length is identical to the record length.</p><p>If the defined <a class="xref" href="ca96fb2e83714523.htm#ID_c78dbeda842f47b60a00201901a7bc9d-6731e0a781e124820a001ae7595eefa7-en-US">"FFT Length"</a> is larger than the record length, zeros are appended to the captured data to reach the FFT length.</p><div class="block" id="ID_0bce180a8e3dcb830a710a3100b272ec-03e72dbd6b54d8ef0a001ae70832b793-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgac11036c8e2a71ed0a00201900ca6006_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">FFT parameters for single FFT calculation</div></div><div class="block"><div class="subtitle"><a name="ID_7132722d8dca14820a002019014a7bed-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a>Averaging</div></div><p>In averaging mode, several overlapping FFTs are calculated for each record; the results are combined to determine the final FFT result for the record.</p><p>The number of FFTs to be combined is determined by the <a class="xref" href="ee3dc24c44eb47ec.htm#ID_e160d79d842f47b60a002019003e8dc9-8a2ad0b681e0110c0a001ae75e2ce6d1-en-US">"Window Overlap"</a> and the <a class="xref" href="48ee9268e4334f6c.htm#ID_a8659b40842f47b60a00201901ba76ee-7e69703b81df97470a001ae76be34558-en-US">"Window Length"</a>.</p><div class="block" id="ID_610b95238e3dcab80a710a3100befc7d-03e72dbd6b54d8ef0a001ae70832b793-en-US"><div class="graphic"><img border="0" src="Resources/Images/img888734568e24514f0a00201901b15a5e_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">FFT parameters for averaged FFT calculation</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

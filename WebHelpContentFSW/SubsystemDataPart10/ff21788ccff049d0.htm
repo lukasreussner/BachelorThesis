@@ -1,0 +1,138 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Spurious Measurements application (R&amp;S FSW-K50)|Remote Commands to Perform Spurious Measurements|Programming Examples: Spurious Emissions Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k50.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Performing a Wide Search Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6cf9109857f071800a001ae75cce0448-ded60269577122d20a001ae74c480996-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Spurious Measurements application (R&amp;S FSW-K50)</a> &gt; <a class="chm-breadcrumb" href="452b678315694dcc.htm">Remote Commands to Perform Spurious Measurements</a> &gt; <a class="chm-breadcrumb" href="d82c72080cfd45ac.htm">Programming Examples: Spurious Emissions Measurements</a> &gt; <span class="chm-breadcrumb">Performing a Wide Search Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Performing a Wide Search Measurement</div><a name="kanchor319">
+</a><a name="kanchor320">
+</a><p>This example demonstrates how to perform a wide search measurement in a remote environment.</p><p>Note that some of the used commands may not be necessary as they define default values, but are included to demonstrate their use.</p><div class="verbatim"><pre class="verbatim_text">//----------- Preparing the measurement ------------
+//Reset the instrument
+*RST
+//Activate the spurious measurement application
+INST:SEL 'SPUR'
+
+//Configure the carrier reference level as -50dBm
+CREF:VAL -50DBM
+//Define power results as relative to the carrier power
+CREF:PREF REL
+
+//---------------Configuring a Wide Search Measurement ----------
+//Select the wide search measurement
+SSE:STYP WIDE
+//Mark residual spurs in the spur table
+SSE:RMAR ON
+//Perform measurement without spot search
+SSE:CNTR SDET
+
+//Define the first range from 0 Hz to 1.125 GHz.
+LIST:RANG1:STAR 0
+LIST:RANG1:STOP 1.125GHZ
+//Define a constant spur detection threshold of -5 dBc
+LIST:RANG1:THR:STAR -5
+LIST:RANG1:THR:STOP -5
+//Define a limit offset of 10 dB
+LIST:RANG1:LOFF 10DB
+//Define a peak excursion of 3 dB
+LIST:RANG1:PEXC 3DB
+//Define a minimum spur SNR of 10 dB
+LIST:RANG1:SNR 10DB
+//Use automatic RBW mode with a maximum RBW of 10 kHz.
+LIST:RANG1:BAND:AUTO ON
+LIST:RANG1:MFRB 10000
+//Select a positive peak detector
+LIST:RANG1:DET POS
+//Define a Number of FFT Averages of 10
+LIST:RANG1:NFFT 10
+//Define a reference level of -20 dBm.
+LIST:RANG1:RLEV -20
+//Define an attenuation level of 10 dB
+LIST:RANG1:INP:ATT 10
+
+//Define the second range from 1.125 GHz to 3.375 GHz with the same settings as range 1.
+LIST:RANG2:STAR 1.125GHZ
+LIST:RANG2:STOP 3.375GHZ
+LIST:RANG2:THR:STAR -5
+LIST:RANG2:THR:STOP -5
+LIST:RANG2:LOFF 10DB
+LIST:RANG2:PEXC 3DB
+LIST:RANG2:SNR 10DB
+LIST:RANG2:BAND:AUTO ON
+LIST:RANG2:MFRB 10000
+LIST:RANG2:DET POS
+LIST:RANG2:NFFT 10
+LIST:RANG2:RLEV -20
+LIST:RANG2:INP:ATT 10
+
+//Define the third range from 3.375 GHz to 5.75 GHz with the same settings as range 1.
+LIST:RANG3:STAR 3.375GHZ
+LIST:RANG3:STOP 5.75GHZ
+LIST:RANG3:THR:STAR -5
+LIST:RANG3:THR:STOP -5
+LIST:RANG3:LOFF 10DB
+LIST:RANG3:PEXC 3DB
+LIST:RANG3:SNR 10DB
+LIST:RANG3:BAND:AUTO ON
+LIST:RANG3:MFRB 10000
+LIST:RANG3:DET POS
+LIST:RANG3:NFFT 10
+LIST:RANG3:RLEV -20
+LIST:RANG3:INP:ATT 10
+
+//Define the fourth range from 5.75 GHz to 7 GHz with the same settings as range 1.
+LIST:RANG4:STAR 5.75GHZ
+LIST:RANG4:STOP 7GHZ
+LIST:RANG4:THR:STAR -5
+LIST:RANG4:THR:STOP -5
+LIST:RANG4:LOFF 10DB
+LIST:RANG4:PEXC 3DB
+LIST:RANG4:SNR 10DB
+LIST:RANG4:BAND:AUTO ON
+LIST:RANG4:MFRB 10000
+LIST:RANG4:DET POS
+LIST:RANG4:NFFT 10
+LIST:RANG4:RLEV -20
+LIST:RANG4:INP:ATT 10
+
+//Query the number of measurement ranges in the sweep list.
+LIST:RANG:COUNt?
+
+//Save the list to repeat the measurement with same configuration
+LIST:SAVE 'C:\R_S\USER\SPURIOUS_WIDEMEAS.csv'
+
+//Add a result display for the noise floor estimation diagram
+LAY:ADD:WIND? '3',BEL,NEST
+
+
+//--------------Performing the Measurement-----
+
+//Perform a spurious emission measurement and wait until the measurement has finished.
+INIT:IMM; *WAI
+
+
+//---------------Retrieving Results-------------
+//Query the spurious detection spectrum of the measurement
+TRAC2?
+//Save the frequency and power results from the spurious detection
+//table to a file
+CALC3:SSE:TABL:COL OFF,STAR,OFF,STOP,ON,FREQ,ON,POW
+MMEM:STOR3:TABL SEL; 'C:\R_S\USER\SPURIOUS_WIDEMEAS_RESULTS.csv'
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

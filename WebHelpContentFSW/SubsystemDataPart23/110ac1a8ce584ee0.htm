@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Uplink (R&amp;S FSW-K10x)|Measurements and Result Displays|I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_ul.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CCDF</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkId_Statistics_CCDF_UL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridCCDF_UL">
+</meta>
+        <meta name="topic-id" value="337">
+</meta>
+        <meta name="topic-id" value="338">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ebf5ed280248f7ba0a00206a0092d21e-401466f027f748980a00206a011f55fd-en-US;ID_e2b3a19044e749140a710a92003155a8-401466f027f748980a00206a011f55fd-en-US;shiv_4a_instrument_functions_06486-401466f027f748980a00206a011f55fd-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_ul/Content/110ac1a8ce584ee0.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Uplink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="4664a4ef11444407.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="08f8b7e16fa0470e.htm">I/Q Measurements</a> &gt; <span class="chm-breadcrumb">CCDF</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor34">
+</a><a name="kanchor35">
+</a><div class="function_heading"><a name="ID_ebf5ed280248f7ba0a00206a0092d21e-401466f027f748980a00206a011f55fd-en-US">
+</a><span style="font-weight: bold">CCDF</span></div><p>Starts the Complementary Cumulative Distribution Function (CCDF) result display.</p><p>This result display shows the probability of an amplitude exceeding the mean power. For the measurement, the complete capture buffer is used.</p><p>The x-axis represents the power relative to the measured mean power. On the y-axis, the probability is plotted in %.</p><div class="block" id="ID_e2b3a19044e749140a710a92003155a8-401466f027f748980a00206a011f55fd-en-US"><div class="graphic"><img border="0" src="Resources/Images/img57ee9b9691053c890a002019011c715a_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>In addition to the diagram, the results for the CCDF measurement are summarized in the CCDF table.</p><div class="block"><a name="shiv_4a_instrument_functions_06486-401466f027f748980a00206a011f55fd-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p><b>Mean</b></p></td><td valign="top"><p>Mean power</p></td></tr><tr class="evenrow"><td valign="top"><p><b>Peak</b></p></td><td valign="top"><p>Peak power</p></td></tr><tr class="oddrow"><td valign="top"><p><b>Crest</b></p></td><td valign="top"><p>Crest factor (peak power – mean power)</p></td></tr><tr class="evenrow"><td valign="top"><p><b>10 %</b></p></td><td valign="top"><p>Level values over 10 % above mean power</p></td></tr><tr class="oddrow"><td valign="top"><p><b>1 %</b></p></td><td valign="top"><p>Level values over 1 % above mean power</p></td></tr><tr class="evenrow"><td valign="top"><p><b>0.1 %</b></p></td><td valign="top"><p>Level values over 0.1 % above mean power</p></td></tr><tr class="oddrow"><td valign="top"><p><b>0.01 %</b></p></td><td valign="top"><p>Level values over 0.01 % above mean power</p></td></tr></tbody></table></div>Remote command: <div class="rcclist_right"><p>Selecting the result display: <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD ? '1',LEFT,CCDF</a></p><p>Querying results: <a class="xref" href="ae88eab906a94ceb.htm#ID_77288d356aea50090a00206a00fa8058-cac41fd1ede2946a0a001ae75536ffe3-en-US">TRACe:DATA?</a></p><p>Numerical results: <a class="xref" href="23adbd2d2f394f43.htm#shiv_6a_remote_commands_3964-c4b401a7725d032d0a00206a00e1ac08-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>STATistics:</nobr>​<nobr>CCDF:</nobr>​<nobr>X&lt;t&gt;?</nobr></a></p><p>Numerical results: <a class="xref" href="0db26d69bbca480f.htm#ID_1d58e6069a4f05910a00206a01ff809c-badf88c37296fb510a00206a00eae4ad-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>STATistics:</nobr>​<nobr>RESult&lt;t&gt;?</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

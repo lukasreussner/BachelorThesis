@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics|Signal Processing for Single-Carrier Measurements (IEEE 802.11b, g (DSSS))" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Block Diagram for Single-Carrier Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K91n_0252-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_f3cbd222011b11df87a687866b630abe-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_928cb3b240e27eb90a00206a01275e55-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_ceab8a0422e3954f0a00201901584fc6-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="21780ffeb8504f5e.htm">Signal Processing for Single-Carrier Measurements (IEEE 802.11b, g (DSSS))</a> &gt; <span class="chm-breadcrumb">Block Diagram for Single-Carrier Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Block Diagram for Single-Carrier Measurements</div><p>A block diagram of the measurement application is shown below in <a class="xref" href="#ID_f3cbd222011b11df87a687866b630abe-a152f5e2a64dafbf0a002019017fdb4d-en-US">Figure "Signal processing for IEEE 802.11b or g (DSSS) signals"</a>. The baseband signal of an IEEE 802.11b or g (DSSS) wireless LAN system transmit antenna is sampled with a sample rate of 44<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p><p>The first task of the measurement application is to detect the position of the PPDU within the measurement signal r<sub>1</sub>(v). The detection algorithm is able to find the beginning of short and long PPDUs and can distinguish between them. The algorithm also detects the initial state of the scrambler, which is not specified by the IEEE 802.11 standard.</p><p>If the start position of the PPDU is known, the header of the PPDU can be demodulated. The bits transmitted in the header provide information about the length of the PPDU and the modulation type used in the PSDU.</p><p>Once the start position and the PPDU length are fully known, better estimates of timing offset, timing drift, frequency offset and phase offset can be calculated using the entire data of the PPDU.</p><p>At this point of the signal processing, demodulation can be performed without decision error. After demodulation the normalized (in terms of power) and undisturbed reference signal s(v) is available.</p><p>If the frequency offset is not constant and varies with time, the frequency offset and phase offset in several partitions of the PPDU must be estimated and corrected. Additionally, timing offset, timing drift and gain factor can be estimated and corrected in several partitions of the PPDU. These corrections can be switched off individually in the demodulation settings of the application.</p><div class="block" id="ID_f3cbd222011b11df87a687866b630abe-a152f5e2a64dafbf0a002019017fdb4d-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb2339d5e427122940a00206a01e6205e_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Signal processing for IEEE 802.11b or g (DSSS) signals</div></div><p>Once the normalized and undisturbed reference signal is available, the transmit antenna baseband filter (Tx filter) is estimated by minimizing the cost function of a maximum-likelihood-based estimator:</p><div class="block" id="ID_928cb3b240e27eb90a00206a01275e55-a152f5e2a64dafbf0a002019017fdb4d-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga5b7b5bb2227c3630a00201900cac190_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption">transmit antenna baseband filter (Tx filter) estimation</div></div><div class="block" id="ID_ceab8a0422e3954f0a00201901584fc6-a152f5e2a64dafbf0a002019017fdb4d-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8735e9e4225b21230a002019013d7ce4_1_--_--_PNG96.png" alt="" title=""/></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Basics on FFT" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Overlapping</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_15795c9928a61cdb0a00206a01d129d6-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_fd5610f4bd5211e283eeaa0671bfc246-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_c2e4e9c12b395f810a00206a008baeff-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_fb9efab6ac8c4b790a00201901452565-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_ae04afe3ac8c4b790a00201900bd2377-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_71717a08ac8c4b790a002019007377c6-03e72dbd6b54d8ef0a001ae70832b793-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="80556469d0ef4efb.htm">Basics on FFT</a> &gt; <span class="chm-breadcrumb">Overlapping</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor300">
+</a><div class="chm-chaptertitle">Overlapping</div><p>The I/Q Analyzer calculates multiple FFTs per measurement by dividing one captured record into several windows. Furthermore, the I/Q Analyzer allows consecutive windows to overlap. Overlapping "reuses" samples that were already used to calculate the preceding FFT result.</p><div class="block" id="ID_fd5610f4bd5211e283eeaa0671bfc246-03e72dbd6b54d8ef0a001ae70832b793-en-US"><div class="graphic"><img border="0" src="Resources/Images/img255b264eac8293670a00201900c03bcb_1_--_--_PNG96.png" alt="" title=""/></div></div><p>In advanced FFT mode with averaging, the overlapping factor can be set freely. The higher the overlap factor, the more windows are used. This leads to more individual results and improves detection of transient signal effects. However, it also extends the duration of the calculation. The size of the window can be defined manually according to the record length, the overlap factor, and the FFT length.</p><p>An FFT overlap of 67%, for example, means the second FFT calculation uses the last 67% of the data of the first FFT. It uses only 33% new data. The third FFT still covers 33% of the first FFT and 67% of the second FFT, and so on.</p><div class="block" id="ID_c2e4e9c12b395f810a00206a008baeff-03e72dbd6b54d8ef0a001ae70832b793-en-US"><div class="graphic"><img border="0" src="Resources/Images/img4470c5ab2b31ac600a00206a01a8a318_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Overlapping FFTs</div></div><p>In "Manual" or "Auto" FFT mode, an FFT length of 4096 and a window length of 4096 (or the record length, if shorter) is used to calculate the spectrum.</p><div class="block"><div class="subtitle"><a name="ID_fb9efab6ac8c4b790a00201901452565-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a>Combining results - trace detector</div></div><p>If the record length permits, multiple overlapping windows are calculated and combined to create the final spectrum using the selected trace detector. If necessary, the trace detector is also used to reduce the number of calculated frequency points (defined by the FFT length) to the defined number of sweep points. By default, the Autopeak trace detector is used.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>Since the frequency points are reduced to the number of sweep points, using a detector other than "Auto Peak" and fewer than 4096 sweep points can lead to false level results.</p></td></tr></table></div></div><div class="block" id="ID_71717a08ac8c4b790a002019007377c6-03e72dbd6b54d8ef0a001ae70832b793-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgfdae7170ac7f8c010a00201901c4d75d_1_--_--_PNG96.png" alt="" title=""/></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

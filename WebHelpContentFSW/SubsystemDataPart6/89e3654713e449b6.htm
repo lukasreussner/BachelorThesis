@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Multi-Carrier Group Delay (R&amp;S FSW-K17)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k17.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Setup</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ed1b8baa1a505cec0a00206a0144f62f-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_9391db4a1f7bf51e0a00206a00eb06ad-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_8909e9ca1f7bf51e0a00206a00036f4e-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_02bbd3ec1f7bf51e0a00206a00777f0f-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_9b853aa8fb23afe20a00206a002575a8-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_4d46afe0fb23afe20a00206a014f9cfc-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_828ed4eafb23afe20a00206a004aa18d-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_85e9511cfb23afe20a00206a0071e5e2-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_2be6e2c6fb23afe20a00206a0120a110-9b70f648ccc647dd0a00206a016c8f05-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k17/Content/89e3654713e449b6.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Multi-Carrier Group Delay (R&amp;S FSW-K17)</a> &gt; <a class="chm-breadcrumb" href="9281e9bebab744c2.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Measurement Setup</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor68">
+</a><a name="kanchor69">
+</a><div class="chm-chaptertitle">Measurement Setup</div><p>Before a Multi-Carrier Group Delay measurement can be performed, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW must be set up in a test environment. This section describes the required settings of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Before starting the measurements, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW has to be configured correctly and supplied with power as described in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Getting Started manual, "Preparing For Use". Furthermore, the application firmware R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K17 must be enabled. Installation and enabling of the application firmware are described in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Getting Started manual or in the Release Notes.</p><p>A Multi-Carrier Group Delay measurement requires the following devices:</p><div class="block"><ul class="list"><li value="1">A baseband signal generator, e.g. a Vector Signal Generator R&amp;S SMW</li><li value="2">The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW with application firmware R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K17: Multi-Carrier Group Delay</li><li value="3">The device under test to be analyzed</li></ul></div><div class="block"><a name="ID_9391db4a1f7bf51e0a00206a00eb06ad-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a><div><table border="0"><tr><td align="left" valign="top" width="24px" class="procedure_table"><font face="Arial">►</font> </td><td class="procedure_table"><p>Connect the signal generator output to the [RF Input] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW - first without the DUT, then with the DUT inbetween.</p></td></tr></table></div></div><p>For absolute group delay measurement, connect the trigger output of the signal generator to one of the trigger inputs ([TRIGGER INPUT]) of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW (see <a class="xref" href="6466327d4749428e.htm#ID_f67e410a232ee05a0a00206a0157589e-999f08a7232ee05a0a00206a017b283a-en-US">"Trigger 2/3"</a>).</p><div class="block" id="ID_02bbd3ec1f7bf51e0a00206a00777f0f-9b70f648ccc647dd0a00206a016c8f05-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgc0d039641f743e700a00206a01279243_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Multi-Carrier Group Delay test setup</div></div><a name="kanchor70">
+</a><p>It is recommended that you use an input signal with a low crest factor to get the phase response of the DUT. Furthermore, an external frequency reference is recommended for high accuracy measurements.</p><p>The following list summarizes the necessary measurement and calculation steps:</p><div class="block"><a name="ID_9b853aa8fb23afe20a00206a002575a8-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a><div><ol class="procedure"><li id="ID_4d46afe0fb23afe20a00206a014f9cfc-9b70f648ccc647dd0a00206a016c8f05-en-US" value="1"><p>Calibration measurement without DUT:</p><p><span class="input"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">φ</span><sub>cal</sub>(f)</span></p></li><li id="ID_828ed4eafb23afe20a00206a004aa18d-9b70f648ccc647dd0a00206a016c8f05-en-US" value="2"><p>Measurement with DUT:</p><p><span class="input"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">φ</span><sub>meas</sub>(f)</span></p></li><li id="ID_85e9511cfb23afe20a00206a0071e5e2-9b70f648ccc647dd0a00206a016c8f05-en-US" value="3"><p>Evaluate group delay:</p><div class="block" id="ID_2be6e2c6fb23afe20a00206a0120a110-9b70f648ccc647dd0a00206a016c8f05-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga4d198f3cccad6770a00206a0192a052_1_--_--_PNG96.png" alt="" title=""/></div></div></li></ol></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

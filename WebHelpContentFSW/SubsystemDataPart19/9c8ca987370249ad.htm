@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurements and Result Displays|WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)|Modulation Accuracy, Flatness and Tolerance Parameters" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Unused Tone Error</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8c343075fc7007390a71003a00b95380-742b73889d5e5f610a001ae77d4ca6d8-en-US;ID_fe771673394a11e790e4df5708edc4de-742b73889d5e5f610a001ae77d4ca6d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3bafe63f00094742.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="57cd9bda6ba64547.htm">WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="bbca4974819a4f7c.htm">Modulation Accuracy, Flatness and Tolerance Parameters</a> &gt; <span class="chm-breadcrumb">Unused Tone Error</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor97">
+</a><div class="chm-chaptertitle">Unused Tone Error</div><p>Similarly to the adjacent channel power requirements for other WLAN standards, the IEEE 802.11 ax standard specifies limits for power leakage into neighboring resource units (IEEE P802.11ax/D1.2, "Transmitter modulation accuracy (EVM) test" section). In high-efficiency wireless signals, the subcarriers or frequencies that are not used for active transmission are referred to as <em>unused tones</em>. Thus, the parameter that indicates the power leakage into adjacent resource units is referred to as the <em>unused tone error</em>. The R&amp;S FSW WLAN application provides a dedicated result display for the IEEE 802.11 ax standard for HE trigger-based PPDUs.</p><p>The region in which the power leakage must be determined depends on the size and position within the channel of the resource unit being checked. Up to 3 times the number of subcarriers contained in the resource unit are checked on either side of it. Any remaining subcarriers are checked against the fixed limit of -35<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB. However, only subcarriers in the same channel are evaluated. If the resource unit is at the edge of the channel, possibly no or not enough adjacent subcarriers are available in the channel. Assuming the resource unit contains n carriers, the adjacent n subcarriers are assigned a certain limit, the next n subcarriers have another limit, and the third n subcarriers have yet another limit. All subcarriers beyond that have a fixed limit of -35<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB in relation to the EVM tolerance limit for the original resource unit (<em>"[IEEE P802.11ax/D1.2] Equation (28-123)"</em>).</p><p>Since the n subcarriers can be allocated to several different resource units, we refer to such a subset as an <em>RU group</em>. The RU group containing the resource unit to be checked is referred to as <em>RU<sub>Idx</sub></em>. The other subsets evaluated on either side of the RU<sub>Idx</sub> are referred to as RU groups <em>RU<sub>Idx-1</sub>, RU<sub>Idx-2</sub>, RU<sub>Idx-3</sub>,</em> and <em>RU<sub>Idx+1</sub>, RU<sub>Idx+2</sub>, RU<sub>Idx+3</sub></em>. The remaining subcarriers are referred to as the RU groups <em>-35<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>LHS</em> (left-hand side) and <em>-35<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>RHS</em> (right-hand side).</p><p>The size of the evaluated RU groups corresponds to the size of the RU<sub>Idx</sub>, even if the actual resource unit allocation in the channel differs. However, the R&amp;S FSW WLAN application measures one unused tone value for each set of 26 subcarriers. For each RU group, the mean, maximum, and minimum of these values is determined. In the <a class="xref" href="6860491f9ac94f8c.htm#ID_ae69ed242f3111e7ac0f80f55b9442c1-742b73889d5e5f610a001ae77d4ca6d8-en-US">"Unused Tone Error Summary"</a>, the "RU Size [RU26]" is indicated as the quotient of the RU size divided by the RU26 size (see <em>"[IEEE P802.11ax/D1.2] Equation (28-123)"</em>). Thus, the "RU Size [RU26]" also indicates the number of measurement points determined for each RU group.</p><p><a class="xref" href="#ID_fe771673394a11e790e4df5708edc4de-742b73889d5e5f610a001ae77d4ca6d8-en-US">Figure "RU groups to be checked for unused tone error for different RU indexes"</a> illustrates the RU groups for which the unused tone error is determined for different RU indexes. The blue dots indicate individual power measurement points in the channel.</p><div class="block" id="ID_fe771673394a11e790e4df5708edc4de-742b73889d5e5f610a001ae77d4ca6d8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img428839260b2edf4a0a001ae76d35015f_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">RU groups to be checked for unused tone error for different RU indexes</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

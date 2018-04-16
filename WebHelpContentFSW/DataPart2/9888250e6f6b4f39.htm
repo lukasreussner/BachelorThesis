@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Emulating Other Instruments' Commands|Reference: GPIB Commands of Emulated HP Models" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>GPIB Status Reporting</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_6b_remote_commands_basic_4617-701374bba001554a0a00206a01899a59-en-US;shiv_6b_remote_commands_basic_4620-701374bba001554a0a00206a01899a59-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9905538076f04781.htm">Emulating Other Instruments' Commands</a> &gt; <a class="chm-breadcrumb" href="d25b76b4562e4429.htm">Reference: GPIB Commands of Emulated HP Models</a> &gt; <span class="chm-breadcrumb">GPIB Status Reporting</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">GPIB Status Reporting</div><p>The assignment of status bits by commands R1, R2, R3, R4, RQS is supported.</p><p>The STB command and the serial poll respond with an 8-bit value with the following assignment:</p><div class="block"><a name="shiv_6b_remote_commands_basic_4620-701374bba001554a0a00206a01899a59-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit enabled by RQS</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>not used (value 0)</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>Units key pressed</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>End of Sweep</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>Device Error</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>Command Complete</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>Illegal Command</p></td></tr><tr class="oddrow"><td valign="top"><p>6</p></td><td valign="top"><p>Service Request</p></td></tr><tr class="evenrow"><td valign="top"><p>7</p></td><td valign="top"><p>not used (value 0)</p></td></tr></tbody></table></div><p>Bits 0 and 7 are not used and always have the value 0.</p><p>Please note that the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW reports any key pressed on the front panel rather than only the unit keys if bit 1 was enabled.</p><p>Another difference is the behavior of bit 6 when using the STB? query. On the HP analyzers this bit monitors the state of the SRQ line on the bus. On the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW this is not possible. Therefore this bit is set, as soon as one of the bits 1 to 5 is set. It won't be reset by performing a serial poll.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

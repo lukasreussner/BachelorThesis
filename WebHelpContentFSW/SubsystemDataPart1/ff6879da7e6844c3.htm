@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Basics on External Generator Control" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>External Generator Connections</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_4a_instrument_functions_08665-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_e10f7d0c412c017d0a710a3101397d49-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_5fe0e2aba0eed2ec0a71003a01dbe44d-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_7dbed398388511e29f06e7e0fcec513e-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_188824fc387911e29f06e7e0fcec513e-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_6298e4f742561c030a710a310122173d-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_f2c82e37388411e29f06e7e0fcec513e-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_f92b74db412c011f0a710a31017eabaf-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_5fa8b39c412c00c10a710a310152af7a-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_2ba686bd412c00640a710a31017496b6-460fc0b33bf3b3540a0020190086cf8b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="69aad3245e114b6c.htm">Basics on External Generator Control</a> &gt; <span class="chm-breadcrumb">External Generator Connections</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor159">
+</a><div class="chm-chaptertitle">External Generator Connections</div><p>The external generator is controlled either via a LAN connection or via the [EXT. GEN. CONTROL GPIB] interface of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW supplied with the option.</p><p>For more information on configuring interfaces see <a class="xref" href="../../../Content/b6c17eb98ccb482e.htm">Remote Control Interfaces and Protocols</a>.</p><div class="block"><div class="subtitle"><a name="ID_e10f7d0c412c017d0a710a3101397d49-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>TTL synchronization</div></div><a name="kanchor160">
+</a><a name="kanchor161">
+</a><a name="kanchor162">
+</a><a name="kanchor163">
+</a><a name="kanchor164">
+</a><a name="kanchor165">
+</a><a name="kanchor166">
+</a><p>In addition, TTL synchronization can be used with some Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz generators connected via GPIB. The TTL interface is included in the [AUX control] connector of the External Generator Control option.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>Using the TTL interface allows for considerably higher measurement rates than pure GPIB control, because the frequency stepping of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is directly coupled with the frequency stepping of the generator. For details see <a class="xref" href="37ec39c705ac4d49.htm#ID_3479e386386d11e29f06e7e0fcec513e-460fc0b33bf3b3540a0020190086cf8b-en-US">"Coupling the Frequencies"</a>.</p></td></tr></table></div></div><p>In <a class="xref" href="#ID_5fe0e2aba0eed2ec0a71003a01dbe44d-460fc0b33bf3b3540a0020190086cf8b-en-US">Figure " TTL connection for an R&amp;S SMW generator"</a>, the connection for an R&amp;S SMW is shown.</p><div class="block" id="ID_5fe0e2aba0eed2ec0a71003a01dbe44d-460fc0b33bf3b3540a0020190086cf8b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img5e272ecda0eb9a0a0a001ae748a8939c_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">TTL connection for an R&amp;S SMW generator</div></div><p>The external generator can be used to calibrate the data source by performing either transmission or reflection measurements.</p><div class="block"><div class="subtitle"><a name="ID_7dbed398388511e29f06e7e0fcec513e-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>Transmission Measurement</div></div><a name="kanchor167">
+</a><a name="kanchor168">
+</a><p>This measurement yields the transmission characteristics of a two-port network. The external generator is used as a signal source. It is connected to the input connector of the DUT. The input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is fed from the output of the DUT. A calibration can be carried out to compensate for the effects of the test setup (e.g. frequency response of connecting cables).</p><div class="block" id="ID_188824fc387911e29f06e7e0fcec513e-460fc0b33bf3b3540a0020190086cf8b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8fcce4c49fdb154d0a00206a01e5214d_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Test setup for transmission measurement</div></div><div class="block"><div class="subtitle"><a name="ID_6298e4f742561c030a710a310122173d-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>Reflection Measurement</div></div><a name="kanchor169">
+</a><a name="kanchor170">
+</a><a name="kanchor171">
+</a><p>Scalar reflection measurements can be carried out using a reflection-coefficient measurement bridge.</p><div class="block" id="ID_f2c82e37388411e29f06e7e0fcec513e-460fc0b33bf3b3540a0020190086cf8b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img4bff10d09fdb15f90a00206a01e5214d_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Test setup for reflection measurement</div></div><div class="block"><div class="subtitle"><a name="ID_f92b74db412c011f0a710a31017eabaf-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>Generated signal input</div></div><p>In order to use the functions of the external generator, an appropriate generator must be connected and configured correctly. In particular, the generator output must be connected to the RF input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><div class="block"><div class="subtitle"><a name="ID_5fa8b39c412c00c10a710a310152af7a-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>External reference frequency</div></div><a name="kanchor172">
+</a><a name="kanchor173">
+</a><p>In order to enhance measurement accuracy, a common reference frequency should be used for both the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and the generator. If no independent 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz reference frequency is available, it is recommended that you connect the reference output of the generator with the reference input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and that you enable usage of the external reference on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW via "SETUP" &gt; "Reference" &gt; "External Reference".</p><p>For more information on external references see <a class="xref" href="../../../Content/0f8842894b314aea.htm">Reference Frequency Settings</a>.</p><div class="block"><div class="subtitle"><a name="ID_2ba686bd412c00640a710a31017496b6-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>Connection errors</div></div><p>If no external generator is connected, if the connection address is not correct, or the generator is not ready for operation, an error message is displayed (e.g."Ext. Generator TCPIP Handshake Error!", see <a class="xref" href="998ab96b262c47ef.htm#shiv_4a_instrument_functions_09438-460fc0b33bf3b3540a0020190086cf8b-en-US">"Displayed Information and Errors"</a>).</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

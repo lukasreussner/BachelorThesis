@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="1xEV-DO Measurements (R&amp;S FSW-K84/-K85)|Measurement Basics|Channel Detection and Channel Types" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k84_k85.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>MS Channel Types</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_673ab48b422fe0e00a00206a0058f65b-67698f60f4ad5da30a00206a0051b8a0-en-US;ID_78b42edd0e6d274a0a00206a0012c0da-67698f60f4ad5da30a00206a0051b8a0-en-US;ID_49d590350e842daf0a00206a01de76bc-67698f60f4ad5da30a00206a0051b8a0-en-US;ID_2fc7a8a40e6d274a0a00206a002ff8e5-67698f60f4ad5da30a00206a0051b8a0-en-US;ID_ee790ad50e6d274a0a00206a01fff671-67698f60f4ad5da30a00206a0051b8a0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">1xEV-DO Measurements (R&amp;S FSW-K84/-K85)</a> &gt; <a class="chm-breadcrumb" href="47b6236f95dd45f9.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="272a18ad674d46e8.htm">Channel Detection and Channel Types</a> &gt; <span class="chm-breadcrumb">MS Channel Types</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor216">
+</a><div class="chm-chaptertitle">MS Channel Types</div><p>The following channel types can be detected in 1xEV-DO MS signals by the 1xEV-DO MS application.</p><a name="kanchor217">
+</a><a name="kanchor218">
+</a><a name="kanchor219">
+</a><a name="kanchor220">
+</a><a name="kanchor221">
+</a><a name="kanchor222">
+</a><a name="kanchor223">
+</a><a name="kanchor224">
+</a><a name="kanchor225">
+</a><a name="kanchor226">
+</a><a name="kanchor227">
+</a><a name="kanchor228">
+</a><a name="kanchor229">
+</a><div class="block"><a name="ID_78b42edd0e6d274a0a00206a0012c0da-67698f60f4ad5da30a00206a0051b8a0-en-US">
+</a><span class="table-caption">Channel types in 1xEV-DO MS signals</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p><b>Channel type</b></p></th><th valign="top"><p><b>Ch.no / SF</b></p></th><th valign="top"><p><b>Mapping</b></p></th><th valign="top"><p><b>Description</b></p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>PICH</p></td><td valign="top"><p>0.16</p></td><td valign="top"><p>I</p></td><td valign="top"><p>Reverse Pilot Channel</p></td></tr><tr class="evenrow"><td valign="top"><p>RRI</p></td><td valign="top"><p>0.16</p></td><td valign="top"><p>I</p></td><td valign="top"><p>Reverse Rate Indicator</p></td></tr><tr class="oddrow"><td valign="top"><p>DATA</p></td><td valign="top"><p>2.4</p></td><td valign="top"><p>Q</p></td><td valign="top"><p>Reverse Data Channel</p></td></tr><tr class="evenrow"><td valign="top"><p>ACK</p></td><td valign="top"><p>4.8</p></td><td valign="top"><p>I</p></td><td valign="top"><p>Reverse Acknowledgment Channel</p></td></tr><tr class="oddrow"><td valign="top"><p>DRC</p></td><td valign="top"><p>8.16</p></td><td valign="top"><p>Q</p></td><td valign="top"><p>Reverse Data Rate Control Channel</p></td></tr></tbody></table></div><p>If the RRI and the PICH channel types are active, it is assumed that for the first 256 chips (1/4 of the half slot, 1/8 of the entire slot) only the RRI and then the PICH is active in this half slot. If only the PICH is active (RRI activity 0), the PICH is active for the entire 1024 chips of the half slot.</p><div class="block"><div class="subtitle"><a name="ID_49d590350e842daf0a00206a01de76bc-67698f60f4ad5da30a00206a0051b8a0-en-US">
+</a>Operating Modes - Access and Traffic</div></div><a name="kanchor230">
+</a><a name="kanchor231">
+</a><a name="kanchor232">
+</a><p>In the MS application, there are two operating modes for transmission: Access mode and Traffic mode.</p><p>The following diagrams show the possible channels together with their position on the I and Q branch, the possible orientation in time and the gain.</p><p>The <b>ACCESS</b> mode initiates and controls the data transmission between the mobile station and the base station. In Access mode, only the Reverse Pilot Channel (PICH) and the Reverse Data Channel (DATA) are used.</p><div class="block" id="ID_2fc7a8a40e6d274a0a00206a002ff8e5-67698f60f4ad5da30a00206a0051b8a0-en-US"><div class="graphic"><img border="0" src="Resources/Images/img29e3ccef0e62c3790a00206a01533bbc_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">1xEV-DO MS channels in ACCESS mode</div></div><p>Once the transmission has been established, the <b>TRAFFIC</b> mode takes over. The Traffic mode contains all five channels listed in <a class="xref" href="#ID_78b42edd0e6d274a0a00206a0012c0da-67698f60f4ad5da30a00206a0051b8a0-en-US">Table "Channel types in 1xEV-DO MS signals"</a>.</p><p>The RRI takes up the first 256 chips of the first half slot and shares its code with the PICH. The ACK is always just one half slot in length. The DRC is a multiple of slots in length and offset by one half slot.</p><div class="block" id="ID_ee790ad50e6d274a0a00206a01fff671-67698f60f4ad5da30a00206a0051b8a0-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge8395f220e62e3450a00206a01b4b56b_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">1xEV-DO MS channels in TRAFFIC mode</div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

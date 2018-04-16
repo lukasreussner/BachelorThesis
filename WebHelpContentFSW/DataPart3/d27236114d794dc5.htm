@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring the Result Display|Working with Windows in the Display" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>LAYout:MOVE[:WINDow]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8ded1302d3ec9cf30a001ae74273f42d-9cb436e2d3ec9c180a001ae71c1b5b2f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="e9985da796bd4738.htm">Configuring the Result Display</a> &gt; <a class="chm-breadcrumb" href="bbf69b2b137e405a.htm">Working with Windows in the Display</a> &gt; <span class="chm-breadcrumb">LAYout:MOVE[:WINDow]</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_8ded1302d3ec9cf30a001ae74273f42d-9cb436e2d3ec9c180a001ae71c1b5b2f-en-US">
+</a><span class="bold">LAYout:MOVE[:WINDow] </span>&lt;arg0&gt;, &lt;arg1&gt;, &lt;arg2&gt;<br/></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Setting parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;arg0&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>String containing the name of an existing window that is to be moved.</p><p>By default, the name of a window is the same as its index. To determine the name and index of all active windows in the active channel, use the <a class="xref" href="3e849b2e90fa4f55.htm#ID_9bea63bb7a578fea0a00206a00f9e54d-bd0721c17a578fea0a00206a00ea62d8-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>CATalog[:</nobr>​<nobr>WINDow]?</nobr></a> query.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;arg1&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>String containing the name of an existing window the selected window is placed next to or replaces.</p><p>By default, the name of a window is the same as its index. To determine the name and index of all active windows in the active channel, use the <a class="xref" href="3e849b2e90fa4f55.htm#ID_9bea63bb7a578fea0a00206a00f9e54d-bd0721c17a578fea0a00206a00ea62d8-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>CATalog[:</nobr>​<nobr>WINDow]?</nobr></a> query.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;arg2&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>LEFT |</nobr> <nobr> RIGHt |</nobr> <nobr> ABOVe |</nobr> <nobr> BELow |</nobr> <nobr> REPLace</nobr><br/><p>Destination the selected window is moved to, relative to the reference window.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">LAY:MOVE '4','1',LEFT</span><br/><p>Moves the window named '4' to the left of window 1.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">LAY:MOVE '1','3',REPL</span><br/><p>Replaces the window named '3' by window 1. Window 3 is deleted.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Setting only<br/></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

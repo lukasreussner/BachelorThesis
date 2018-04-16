@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Using Probes" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Common Mode Offset</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_40d68790e81b19860a710ade014e4833-4c71256ff99ab04e0a00201900a7a1dc-en-US;ID_5be453e47b0e7b3d0a710a9800ff5155-4c71256ff99ab04e0a00201900a7a1dc-en-US;ID_b92ee5bb7b0e7aff0a710a98007f3a06-4c71256ff99ab04e0a00201900a7a1dc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="e8384890d04b46f2.htm">Using Probes</a> &gt; <span class="chm-breadcrumb">Common Mode Offset</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor156">
+</a><a name="kanchor157">
+</a><div class="chm-chaptertitle">Common Mode Offset</div><p>Common mode offset compensation is available for R&amp;S<sup><span style="font-family: Arial Unicode MS; font-size: 10.5pt">®</span></sup>RT-ZD10/20/30 probes with serial number <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≥</span> 200 000. It can compensate a common DC voltage applied to both input sockets (referenced to the ground socket). This is particularly helpful for measurements on differential signals with high common mode levels, for example, current measurements using a shunt resistor.</p><div class="block" id="ID_5be453e47b0e7b3d0a710a9800ff5155-4c71256ff99ab04e0a00201900a7a1dc-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8f734c5b7b090d030a00201900f3a330_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Common mode (CM) offset compensation for a differential measurement</div></div><p>If the input signals fit into the operating voltage window of the R&amp;S<sup><span style="font-family: Arial Unicode MS; font-size: 10.5pt">®</span></sup>RT-ZD10/20/30, it is not necessary to set a common mode offset compensation.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_b92ee5bb7b0e7aff0a710a98007f3a06-4c71256ff99ab04e0a00201900a7a1dc-en-US">
+</a>Clipping effects due to incorrect common mode offset</div><p>The R&amp;S<sup><span style="font-family: Arial Unicode MS; font-size: 10.5pt">®</span></sup>RT-ZD10/20/30 probe measures only differential input signals. Common mode signals are suppressed by the probe. Therefore, the common mode offset compensation is not directly visible in the result display. An incorrect common mode offset compensation can lead to unwanted clipping effects. Measuring the common mode input voltage using the R&amp;S ProbeMeter is a convenient way to detect breaches of the operating voltage window.</p><p>For more information on common mode offset see the R&amp;S<sup><span style="font-family: Arial Unicode MS; font-size: 10.5pt">®</span></sup>RT-ZD10/20/30 User Manual.</p></td></tr></table></div></div><p>A common mode offset is only configurable in remote control, see <a class="xref" href="4225c61854194110.htm#ID_3a2791cccc03e1c70a001ae76eca74fd-ec4ec475e79855600a001ae70144c17f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]PROBe&lt;p&gt;:</nobr>​<nobr>SETup:</nobr>​<nobr>CMOFfset</nobr></a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

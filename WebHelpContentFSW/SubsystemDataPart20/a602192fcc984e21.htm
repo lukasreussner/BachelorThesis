@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="802.11ad measurements application (R&amp;S FSW-K95)|Remote Commands for IEEE 802.11ad Measurements|Configuring the IEEE 802.11ad Modulation Accuracy Measurement|Signal Capturing|Configuring Triggered Measurements|Configuring the Trigger Output" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k95.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>OUTPut:TRIGger&lt;port&gt;:LEVel</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_824270b37a3cbe380a00206a007fbb78-caa449547a3d1f630a00206a01c27c23-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">802.11ad measurements application (R&amp;S FSW-K95)</a> &gt; <a class="chm-breadcrumb" href="1853bfe4be9647e3.htm">Remote Commands for IEEE 802.11ad Measurements</a> &gt; <a class="chm-breadcrumb" href="363acb8679ca40fe.htm">Configuring the IEEE 802.11ad Modulation Accuracy Measurement </a> &gt; <a class="chm-breadcrumb" href="5ef0a860c2724f66.htm">Signal Capturing</a> &gt; <a class="chm-breadcrumb" href="3e38b79f571f4e1c.htm">Configuring Triggered Measurements</a> &gt; <a class="chm-breadcrumb" href="0f1002e9a03d4ff8.htm">Configuring the Trigger Output</a> &gt; <span class="chm-breadcrumb">OUTPut:TRIGger&lt;port&gt;:LEVel</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_824270b37a3cbe380a00206a007fbb78-caa449547a3d1f630a00206a01c27c23-en-US">
+</a><span class="bold">OUTPut:TRIGger&lt;port&gt;:LEVel </span>&lt;Level&gt;<br/></div><div class="rcdescription"><p>This command defines the level of the (TTL compatible) signal generated at the trigger output.</p><p>This command works only if you have selected a user defined output with <a class="xref" href="ce73f41bfe8c417c.htm#ID_824270b37a3cbe380a00206a007fbb78-c4e48eb27a3cbe380a00206a0040efcb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>OUTPut:</nobr>​<nobr>TRIGger&lt;port&gt;:</nobr>​<nobr>OTYPe</nobr></a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;port&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Selects the trigger port to which the output is sent.</p><p>2 = trigger port 2 (front)</p><p>3 = trigger port 3 (rear)</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Level&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">HIGH<br/></span><p>5 V</p><span class="bold">LOW<br/></span><p>0 V</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">LOW</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../../Content/154b1387b81e4b54.htm">Programming Example: Performing a Basic Frequency Sweep</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">OUTP:TRIG2:LEV HIGH</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="068bdb6068144f1b.htm#ID_4f1a9561fd46f2b00a00206a012b7978-999f08a7232ee05a0a00206a017b283a-en-US">"Level"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

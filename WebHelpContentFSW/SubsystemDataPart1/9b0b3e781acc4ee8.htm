@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Configuration|Data Input and Output Settings|Input Source Settings|Oscilloscope Baseband Input" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		TCPIP Address / Computer Name
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAnalogBasebandOscilloscopeTcpip">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogBasebandOscilloscopeEditModeAbc123">
+</meta>
+        <meta name="topic-id" value="369">
+</meta>
+        <meta name="topic-id" value="371">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3ad8180b565538760a710ade013f7a2b-9a48793da0dd26be0a001ae71b7f5f51-en-US;ID_5a24f47756b375400a001ae7557aefd9-9a48793da0dd26be0a001ae71b7f5f51-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c29ac284be8f4c1b.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="208b979a57b8495d.htm">Data Input and Output Settings</a> &gt; <a class="chm-breadcrumb" href="2a84fad068b747b6.htm">Input Source Settings</a> &gt; <a class="chm-breadcrumb" href="d0e3a6587bf844a1.htm">Oscilloscope Baseband Input</a> &gt; <span class="chm-breadcrumb">TCPIP Address / Computer Name</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor435">
+</a><div class="function_heading"><a name="ID_3ad8180b565538760a710ade013f7a2b-9a48793da0dd26be0a001ae71b7f5f51-en-US">
+</a><span style="font-weight: bold">TCPIP Address / Computer Name</span></div><p>When using the optional Oscilloscope Baseband Input, the entire measurement, as well as both instruments, are controlled by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Thus, the instruments must be connected via LAN, and the TCPIP address or computer name of the oscilloscope must be defined on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>For tips on how to determine the computer name or TCPIP address, see <a class="xref" href="9b1abd6d5324464b.htm#ID_9d101f48565479620a001ae760a0025d-193e1eafb4d3332d0a001ae7005d49a1-en-US">"To determine the oscilloscope's computer name"</a>, <a class="xref" href="9b1abd6d5324464b.htm#ID_4eaeafb7565479620a001ae70d9f03db-b47084b2b4d3e66e0a001ae712aae857-en-US">"To determine the oscilloscope's TCPIP address"</a>, or the oscilloscope's user documentation.</p><p>By default, the TCPIP address is expected. To enter the computer name, toggle the "123"/"ABC" button to "ABC".</p><p>As soon as a name or address is entered, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW attempts to establish a connection to the oscilloscope. If it is detected, the oscilloscope's identity string is queried and displayed in the dialog box.</p><p><b><a name="ID_5a24f47756b375400a001ae7557aefd9-9a48793da0dd26be0a001ae71b7f5f51-en-US">
+</a>Note:</b> The IP address / computer name is maintained after a [PRESET], and is transferred between applications.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="c93d500a01f44a17.htm#ID_8f0560c3d3ec75e20a001ae76d158bb4-c44d3a47d3ec75080a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>IQ:</nobr>​<nobr>OSC:</nobr>​<nobr>TCPip</nobr></a></p><p><a class="xref" href="76cab4026dde40c2.htm#ID_9062baf155159aa20a001ae739fac095-1f082fe0551599a80a001ae70eba8865-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>IQ:</nobr>​<nobr>OSC:</nobr>​<nobr>IDN?</nobr></a></p><p>To check whether the connected oscilloscope is supported for Oscilloscope Baseband Input:</p><p><a class="xref" href="884c81037e334ffe.htm#ID_b1654ef855159f650a001ae700c8d1c1-c393e2cb55159e9a0a001ae70eba8865-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>IQ:</nobr>​<nobr>OSC:</nobr>​<nobr>VDEVice?</nobr></a></p><p><a class="xref" href="c62d89a7e973488d.htm#ID_8ed389075515a10b0a001ae73941dda0-d95e88d35515a0110a001ae70eba8865-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>IQ:</nobr>​<nobr>OSC:</nobr>​<nobr>VFIRmware?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

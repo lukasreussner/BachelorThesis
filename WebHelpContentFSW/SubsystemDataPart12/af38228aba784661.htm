@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Status Reporting System</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K10_4934-b6cc20e340b6af1a0a00206a00580954-en-US;ID_76fb401c22aa11050a00206a00e0b5bc-b6cc20e340b6af1a0a00206a00580954-en-US;shiv_FSV_K10_4941-b6cc20e340b6af1a0a00206a00580954-en-US;ID_0bd497ecf8d8e93b0a00206a003b1733-b6cc20e340b6af1a0a00206a00580954-en-US;ID_df737ffdaf76f3520a00206a011f70b1-b6cc20e340b6af1a0a00206a00580954-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <span class="chm-breadcrumb">Status Reporting System</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1191">
+</a><div class="chm-chaptertitle">Status Reporting System</div><p>The status reporting system stores all information on the current operating state of the instrument, e.g. information on errors or limit violations which have occurred. This information is stored in the status registers and in the error queue. The status registers and the error queue can be queried via IEC bus.</p><p>In this section, only the status registers/bits specific to the VSA application are described.</p><p>For details and a description of the common R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW status registers see <a class="xref" href="../../../Content/abd8c6112e0c47e5.htm">Status Reporting System</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>*RST does not influence the status registers.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="shiv_FSV_K10_4941-b6cc20e340b6af1a0a00206a00580954-en-US">
+</a>Description of the Status Registers</div></div><a name="kanchor1192">
+</a><p>In addition to the registers provided by the base system, the following registers are used in the VSA application:</p><div class="block"><ul class="list"><li value="1"><span class="command">STATus:QUEStionable:SYNC&lt;n&gt;</span> - contains application-specific information about synchronization errors or errors during burst detection.</li><li value="2"><span class="command">STATus:QUESTionable:MODulation&lt;n&gt;</span> – provides information on any limit violations that occur after demodulation in one of the 4 windows</li><li value="3"><span class="command">STATus:QUESTionable:MODulation&lt;n&gt;:EVM</span> - limit violations in EVM evaluation</li><li value="4"><span class="command">STATus:QUESTionable:MODulation&lt;n&gt;:PHASe</span> - limit violations in Phase Error evaluation</li><li value="5"><span class="command">STATus:QUESTionable:MODulation&lt;n&gt;:MAGnitude</span> - limit violations in Magnitude Error evaluation</li><li value="6"><span class="command">STATus:QUESTionable:MODulation&lt;n&gt;:CFRequency</span> - limit violations in Carrier Frequency evaluation</li><li value="7"><span class="command">STATus:QUESTionable:MODulation&lt;n&gt;:IQRHO</span> - limit violations in I/Q-Offset and RHO evaluation</li><li value="8"><span class="command">STATus:QUESTionable:MODulation&lt;n&gt;:FSK</span> - limit violations in FSK evaluation</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The <span class="command">STATus:QUEStionable</span> register "sums up" the information from all subregisters (e.g. bit 11 sums up the information for all <span class="command">STATus:QUEStionable:SYNC</span> registers). For some subregisters, there may be separate registers for each active channel. Thus, if a status bit in the <span class="command">STATus:QUEStionable</span> register indicates an error, the error may have occurred in any of the channel-specific subregisters. In this case, you must check the subregister of each channel to determine which channel caused the error. By default, querying the status of a subregister always returns the result for the currently selected channel.</p></td></tr></table></div></div><p>The commands to query the contents of the following status registers are described in <a class="xref" href="ac907b531ad14e8f.htm#ID_57d3de0946cf04c80a00206a01db4989-b6cc20e340b6af1a0a00206a00580954-en-US">"Querying the Status Registers"</a>.</p><div class="block" id="ID_df737ffdaf76f3520a00206a011f70b1-b6cc20e340b6af1a0a00206a00580954-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgbfd8b089a8487c290a00206a018fb44c_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Overview of VSA-specific status registers</div></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="911913710d1347b8.htm" class="chapter_title_toc">STATus:QUEStionable:SYNC&lt;n&gt; Register</a></li><li value="2"><a href="f74618d52a394dfb.htm" class="chapter_title_toc">STATus:QUEStionable:MODulation&lt;n&gt; Register</a></li><li value="3"><a href="a00f36142f6c4d43.htm" class="chapter_title_toc">STATus:QUESTionable:MODulation&lt;n&gt;:EVM Register</a></li><li value="4"><a href="f7bf8c315a00457a.htm" class="chapter_title_toc">STATus:QUESTionable:MODulation&lt;n&gt;:PHASe Register</a></li><li value="5"><a href="410f71fb37aa40b7.htm" class="chapter_title_toc">STATus:QUESTionable:MODulation&lt;n&gt;:MAGnitude Register</a></li><li value="6"><a href="5087ad9c46e24c25.htm" class="chapter_title_toc">STATus:QUESTionable:MODulation&lt;n&gt;:CFRequency Register</a></li><li value="7"><a href="c03abd815e6a486d.htm" class="chapter_title_toc">STATus:QUESTionable:MODulation&lt;n&gt;:IQRHO Register</a></li><li value="8"><a href="cb852faff5fd4208.htm" class="chapter_title_toc">STATus:QUESTionable:MODulation&lt;n&gt;:FSK Register</a></li><li value="9"><a href="ac907b531ad14e8f.htm" class="chapter_title_toc">Querying the Status Registers</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

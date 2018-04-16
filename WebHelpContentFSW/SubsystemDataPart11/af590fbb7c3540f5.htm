@@ -1,0 +1,107 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Configuration|Input and Frontend Settings|Frequency Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Frequency Offset
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eTaSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="ePMSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eWigigSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdFreqOffset">
+</meta>
+        <meta name="topic-keyword" value="eGSMSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-keyword" value="eOfdmVsaSkIdFrequencyOffset">
+</meta>
+        <meta name="topic-id" value="304">
+</meta>
+        <meta name="topic-id" value="306">
+</meta>
+        <meta name="topic-id" value="308">
+</meta>
+        <meta name="topic-id" value="310">
+</meta>
+        <meta name="topic-id" value="312">
+</meta>
+        <meta name="topic-id" value="314">
+</meta>
+        <meta name="topic-id" value="316">
+</meta>
+        <meta name="topic-id" value="318">
+</meta>
+        <meta name="topic-id" value="320">
+</meta>
+        <meta name="topic-id" value="322">
+</meta>
+        <meta name="topic-id" value="324">
+</meta>
+        <meta name="topic-id" value="326">
+</meta>
+        <meta name="topic-id" value="328">
+</meta>
+        <meta name="topic-id" value="330">
+</meta>
+        <meta name="topic-id" value="332">
+</meta>
+        <meta name="topic-id" value="334">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1bbc8992b701578f0a00206a0090e5cd-409d9625b701578f0a00206a00df242e-en-US;ID_0bc0012211d38a910a002019019cb2da-409d9625b701578f0a00206a00df242e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="31c25e64e0ec4788.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="6bef7ecabca34e4f.htm">Input and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="83163a7219f04cd6.htm">Frequency Settings</a> &gt; <span class="chm-breadcrumb">Frequency Offset</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor341">
+</a><a name="kanchor342">
+</a><div class="function_heading"><a name="ID_1bbc8992b701578f0a00206a0090e5cd-409d9625b701578f0a00206a00df242e-en-US">
+</a><span style="font-weight: bold">Frequency Offset</span></div><p>Shifts the displayed frequency range along the x-axis by the defined offset.</p><p>This parameter has no effect on the instrument's hardware, or on the captured data or on data processing. It is simply a manipulation of the final results in which absolute frequency values are displayed. Thus, the x-axis of a spectrum display is shifted by a constant offset if it shows absolute frequencies, but not if it shows frequencies relative to the signal's center frequency.</p><p>A frequency offset can be used to correct the display of a signal that is slightly distorted by the measurement setup, for example.</p><p>The allowed values range from -100 GHz to 100 GHz. The default setting is 0 Hz.</p><p><b><a name="ID_0bc0012211d38a910a002019019cb2da-409d9625b701578f0a00206a00df242e-en-US">
+</a>Note:</b> In MSRA/MSRT mode, this function is only available for the MSRA/MSRT Master.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="bd56e3db49834c65.htm#ID_df5e37c32e3fdc640a00206a0138f1bc-5d452033302f13ab0a00206a00badfef-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FREQuency:</nobr>​<nobr>OFFSet</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

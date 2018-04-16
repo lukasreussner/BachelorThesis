@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring the R&amp;S FSW|Using Service Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>DIAGnostic:SERVice:SINFo?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_93ed11c2d1a559580a00206a0111b2ee-5d9c047d4da06aeb0a00201900f3d525-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="238ee539da9f4d16.htm">Configuring the R&amp;S FSW</a> &gt; <a class="chm-breadcrumb" href="ad2cfd8f324444f3.htm">Using Service Functions</a> &gt; <span class="chm-breadcrumb">DIAGnostic:SERVice:SINFo?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_93ed11c2d1a559580a00206a0111b2ee-5d9c047d4da06aeb0a00201900f3d525-en-US">
+</a><span class="bold">DIAGnostic:SERVice:SINFo? </span>&lt;FileName&gt;<br/></div><div class="rcdescription"><p>This command creates a *.zip file with important support information. The *.zip file contains the system configuration information ("device footprint"), the current eeprom data and a screenshot of the screen display (if available).</p><p>This data is stored to the <span class="filename">C:\R_S\INSTR\USER</span> directory on the instrument.</p><p>As a result of this command, the created file name (including the drive and path) is returned.</p><p>You can use the resulting file name information as a parameter for the <span class="command">MMEM:COPY</span> command to store the file on the controller PC.</p><p>(See <a class="xref" href="17c92f7c5935499c.htm#ID_121f7aaa2059f6b80a00206a01fce516-dc47ccf82059f6b80a00206a00f3d6ed-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>MMEMory:</nobr>​<nobr>COPY</nobr></a>)</p><p>If you contact the Rohde&amp;Schwarz support to get help for a certain problem, send this file to the support in order to identify and solve the problem faster.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;FileName&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>C:\R_S\INSTR\USER\&lt;R&amp;S Device ID&gt;_&lt;CurrentDate&gt;_&lt;CurrentTime&gt;</nobr><br/><p>String containing the drive, path and file name of the created support file, where the file name consists of the following elements:</p><p><b>&lt;R&amp;S Device ID&gt;</b>: The unique R&amp;S device ID indicated in the "Versions + Options" information</p><p>(See <a class="xref" href="e85b1765cd2c445f.htm#ID_bde4b4468fde8cab0a00206a016ee7c3-93be3f81fe2e1dda0a001ae779cd5414-en-US">"Information on Versions and Options"</a>)</p><p><b>&lt;CurrentDate&gt;</b>: The date on which the file is created (&lt;YYYYMMDD&gt;)</p><p><b>&lt;CurrentTime&gt;</b>: The time at which the file is created (&lt;HHMMSS&gt;)</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">DIAG:SERV:SINF?</span><br/><p>Result:</p><div class="verbatim"><pre class="verbatim_text">"c:\R&amp;S\instr\user\FSW-26_1312.8000K26-100005-xx_20130116_165858.zip"</pre></div><div class="verbatim"><pre class="verbatim_text">MMEM:COPY "c:\R&amp;S\instr\user\FSW-26_ 
+1312.8000K26-100005-xx_20130116_165858.zip", 
+"S:\Debug\ESW-26_1312.8000K26-100005-xx_ 
+20130116_165858.zip"</pre></div></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="5079f1750d5d4a24.htm#ID_a25770779b076c500a00206a01f3995b-e88064829b076c500a00206a01d931a5-en-US">"Create R&amp;S Support Information"</a></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

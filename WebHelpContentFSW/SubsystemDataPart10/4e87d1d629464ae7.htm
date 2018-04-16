@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Spurious Measurements application (R&amp;S FSW-K50)|Remote Commands to Perform Spurious Measurements|Configuring Spurious Measurements|Directed Search Measurement Settings Commands" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k50.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]DIRected:SAVE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f23091244fedb9aa0a001ae7798481c2-9ae4cfc04fedb8230a001ae7327a65e6-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Spurious Measurements application (R&amp;S FSW-K50)</a> &gt; <a class="chm-breadcrumb" href="452b678315694dcc.htm">Remote Commands to Perform Spurious Measurements</a> &gt; <a class="chm-breadcrumb" href="eb1cea5aeb414ab8.htm">Configuring Spurious Measurements</a> &gt; <a class="chm-breadcrumb" href="639980022a6742a3.htm">Directed Search Measurement Settings Commands</a> &gt; <span class="chm-breadcrumb">[SENSe:]DIRected:SAVE</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_f23091244fedb9aa0a001ae7798481c2-9ae4cfc04fedb8230a001ae7327a65e6-en-US">
+</a><span class="bold">[SENSe:]DIRected:SAVE </span>&lt;Filename&gt;<br/></div><div class="rcdescription"><p>Saves the current directed search configuration to a user-defined <span class="filename">.csv</span> file for later use. The result is a comma-separated list of values with the following syntax for each span:</p><p><span class="command">&lt;No&gt;,&lt;Frequency&gt;,&lt;SearchSpan&gt;,&lt;DetThreshold&gt;,&lt;SNR&gt;,&lt;DetectMode&gt;</span></p><p>For details on the parameters see <a class="xref" href="14bdb1ca12514fa3.htm#ID_50b81f686c2d11e59b96de28c91c84ae-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Directed Search Measurement Settings"</a>).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Setting parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Filename&gt;<br/></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><div class="verbatim"><pre class="verbatim_text">SENS:DIR:SETT 1.0e9,10e6,-120,10,1.2e9,20e6,-110,15,1.4e9,15e6,-120,10
+SENS:DIR:SAV 'c:\temp\spur1'
+//Result (in file):
+//Number,SpurFreq,SearchSpan,DetectThresh,MinimumSNR,DetectMode
+//1,1499999671,383,-120,10,Measured
+//2,1504999863,383,-30,10,Entered</pre></div></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Setting only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="4a44998763ce4ab5.htm#ID_581734c580002a920a001ae742ffea21-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Save Table"</a><br/>See <a class="xref" href="c925e055c7f5480d.htm#ID_44828b64765211e5a180a66a2a1bb0c4-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Frequency"</a><br/>See <a class="xref" href="e05475edc0cd49e0.htm#ID_f819fdb580002a920a001ae72c264a20-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Search Span"</a><br/>See <a class="xref" href="3b2f1b9fedaf4e2f.htm#ID_f8cbf4ff80002a920a001ae75f73e678-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Detection Threshold"</a><br/>See <a class="xref" href="52d045d709ed49e2.htm#ID_7fc166b780002a920a001ae74ffee12b-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Minimum Spur SNR"</a><br/>See <a class="xref" href="f9624861fc564830.htm#ID_37752cc3765211e5a180a66a2a1bb0c4-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Detection Mode"</a></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

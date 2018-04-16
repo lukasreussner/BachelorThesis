@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Spurious Measurements application (R&amp;S FSW-K50)|Configuration|Transferring Settings Between Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k50.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Segment Table</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSpurSkIdSegmentTableConfig">
+</meta>
+        <meta name="topic-id" value="411">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_82120d6c3d7b55b10a001ae75dc9dbe5-0b700aeb9088a0a80a001ae7400d3d57-en-US;ID_a6f3efd93d63255a0a71003a00d82ee3-0b700aeb9088a0a80a001ae7400d3d57-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Spurious Measurements application (R&amp;S FSW-K50)</a> &gt; <a class="chm-breadcrumb" href="296893c4f6374f9b.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="4cb2ddae7ddf4d6d.htm">Transferring Settings Between Measurements</a> &gt; <span class="chm-breadcrumb">Segment Table</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Segment Table</div><p><b>Access</b>: "Overview" &gt; "Ranges" &gt; "Show Segment Table"</p><p><b>Or</b>: MEAS CONFIG &gt; "Transfer" &gt; "Segment Table" tab</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Spurious measurements application provides a function to optimize the RBW in individual ranges for speed and accuracy (see <a class="xref" href="9e5f34a5ada042c5.htm#ID_65cadc746bca19b40a001ae75e0a1a3f-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Auto RBW"</a>). If activated, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Spurious measurements application divides the ranges for which <a class="xref" href="9e5f34a5ada042c5.htm#ID_65cadc746bca19b40a001ae75e0a1a3f-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Auto RBW"</a> is active into segments according to the noise and power levels measured in the Spectral Overview sweep. The application then adapts the RBW within the segments to optimize the measurement speed and accuracy during the subsequent spur detection sweep (see <a class="xref" href="146299cf89ea41bd.htm#ID_4ca1917f6e6411e5a7c984de3f856677-6ad409fd9069063d0a001ae762c8e99f-en-US">"Measurement Process"</a>). As a result, an additional "Segment" table is created with the used RBW for each segment. This segment table can be transferred to the "Wide Search Settings" table to repeat the measurement with the same RBW and segment settings. Only the settings that differ by segment are displayed (see <a class="xref" href="aeceeb6541394028.htm#ID_838b21d35bf33b9a0a001ae76e7f3e7d-0b700aeb9088a0a80a001ae7400d3d57-en-US">"Configuring Individual Ranges"</a> for details on individual parameters).</p><div class="block" id="ID_a6f3efd93d63255a0a71003a00d82ee3-0b700aeb9088a0a80a001ae7400d3d57-en-US"><div class="graphic"><img border="0" src="Resources/Images/img77be842b3d5fb9eb0a001ae7278db74e_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>If the segments are transferred to the "Wide Search Settings", the RBW setting in each segment is set to "Auto Off" to prevent the application from performing a new segmentation. However, the spectral overview is still performed. Thus, you can check if the signal changed and decide whether the segmentation and RBW settings are still valid. If they are no longer valid, simply set the RBW to "Auto" mode again and segmentation is performed as usual.</p><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="4385eca9a29c4088.htm#ID_b7d78e117068e8ec0a001ae708a9eea1-0b700aeb9088a0a80a001ae7400d3d57-en-US" class="title_toc">Transfer to Wide Search Settings</a></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

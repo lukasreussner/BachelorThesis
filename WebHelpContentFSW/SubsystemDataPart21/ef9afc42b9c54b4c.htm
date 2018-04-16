@@ -1,0 +1,235 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Remote Commands for DOCSIS 3.1 Measurements|Programming Examples for DOCSIS 3.1 Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 1: Measuring Modulation Accuracy</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_22fca6f1b41e98520a002019015390c3-0dd11ef0107d77cf0a001ae760ecd65e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="12ebb6581ee04ea4.htm">Remote Commands for DOCSIS 3.1 Measurements</a> &gt; <a class="chm-breadcrumb" href="8674fd297c1342c6.htm">Programming Examples for DOCSIS 3.1 Measurements</a> &gt; <span class="chm-breadcrumb">Measurement 1: Measuring Modulation Accuracy</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor558">
+</a><a name="kanchor559">
+</a><div class="chm-chaptertitle">Measurement 1: Measuring Modulation Accuracy</div><p>This example demonstrates how to configure a modulation accuracy measurement in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//---------- Preparing the application ------------
+// Preset the instrument
+*RST
+//Activate a DOCSIS measurement channel
+INST:SEL DOCS
+
+//-----------Configuring the measurement ------------
+//Set the center frequency
+FREQ:CENT 1.0GHZ
+
+//---------- Signal description ------------
+//Define the OFDM spectrum location (frequency of sc0) at 897.6 MHz 
+CONF:DS:CHAN:SPEC:FREQ 897600000
+//Nfft mode is 4K
+CONF:CHAN:NFFT FFT4K
+//Configure the cyclic prefix to be 256 samples
+CONF:CHAN:CP S256
+//Configure roll-off factor of 64 samples
+CONF:CHAN:ROFF S64
+//Time-interleaving depth is 16
+CONF:DS:CHAN:TID 16
+//NCP uses 16-QAM modulation
+CONF:DS:CHAN:NCP:MOD QAM16
+//Set PLC start index to 2044 manually
+CONF:DS:CHAN:PLC:IND:AUTO OFF
+CONF:DS:CHAN:PLC:IND 2044
+//Query the used PLC modulation
+CONF:DS:CHAN:PLC:MOD?
+//Result: 16-QAM
+//Query the number of subcarriers used by the PLC
+CONF:DS:CHAN:PLC:CARR?
+//Result: 8
+
+//Configure continuous pilots on every 50th subcarrier from 250 to 500
+CONF:DS:CHAN:CPES2:SUBC:TYPE CPIL
+CONF:DS:CHAN:CPES2:SUBC:STAR 250
+CONF:DS:CHAN:CPES2:SUBC:STOP 500
+CONF:DS:CHAN:CPES2:SUBC:INCR 50
+
+//Exclude subcarriers 324 to 328 and 356 to 357
+CONF:DS:CHAN:CPES3:SUBC:TYPE ESUB
+CONF:DS:CHAN:CPES3:SUBC:SET 324,325,326,327,328,356,357
+
+//Query the number of entries in the Continuous Pilots and Excluded
+//Subcarrier Assignment table
+CONF:DS:CHAN:CPES1:COUN?
+//Result: 3 (PLC is default entry 1)
+
+//Configure profile A:
+//Assign 16-QAM modulation for excluded subcarriers and pilots
+//Assign 4096-QAM for all other subcarriers
+CONF:DS:CHAN:PCON:SEL A
+CONF:DS:CHAN:PCON1:SUBC:STAR 0
+CONF:DS:CHAN:PCON1:SUBC:STOP 8191
+CONF:DS:CHAN:PCON1:SUBC:INCR 1
+CONF:DS:CHAN:PCON1:SUBC:MOD QAM4096
+
+CONF:DS:CHAN:PCON2:SUBC:SET 324,325,326,327,328,356,357
+CONF:DS:CHAN:PCON2:SUBC:MOD QAM16
+
+CONF:DS:CHAN:PCON3:SUBC:STAR 250
+CONF:DS:CHAN:PCON3:SUBC:STOP 500
+CONF:DS:CHAN:PCON3:SUBC:INCR 50
+CONF:DS:CHAN:PCON3:SUBC:MOD QAM16
+
+//Query the number of entries in the Profile configuration table
+CONF:DS:CHAN:PCON:COUN?
+//Result: 3
+//Query the state of profile B
+CONF:DS:CHAN:PCON:SEL B
+CONF:DS:CHAN:PCON:STAT?
+//Result: 0
+
+//Query the number of entries in the Profile configuration table
+CONF:DS:CHAN:FCON:COUN?
+//Result: 1
+
+//Configure the codewords in the frames:
+// Profile A is used for the first 1620 carriers
+CONF:DS:CHAN:FCON1:PROF A
+CONF:DS:CHAN:FCON1:SUBC:STAR 0
+CONF:DS:CHAN:FCON1:SUBC:COUN 1620
+// Profile A is used for the next 2700 carriers (requires 2 symbols)
+CONF:DS:CHAN:FCON2:PROF A
+CONF:DS:CHAN:FCON2:SUBC:STAR 1620
+CONF:DS:CHAN:FCON2:SUBC:COUN 2700
+CONF:DS:CHAN:FCON2:SYMB:COUN?
+//Result: 2
+
+//---------- Configuring Data Acquisition ---------------------
+//Each measurement captures data for 6 ms.
+SWE:TIME 6ms
+//Query the used sample rate
+TRAC:IQ:SRAT?
+//Result: 204.8 MHZ
+//Query number of samples
+SWE:LENG?
+// Number of samples captured per measurement: 0.006s * 204.8e6 samples per second
+// = 1228800 samples
+//Query the analysis bandwidth
+TRAC:IQ:BWID?
+//Result: 192.0 MHz
+
+//---------- Tracking and channel estimation -----------------
+//Disable all tracking and compensation functions
+SENS:TRAC:PHAS OFF
+SENS:TRAC:TIME OFF
+
+//---------- Demodulation ------------
+//Activate codeword decoding
+SENS:DEM:DEC:COD ON
+
+//---------- Configuring the result displays ------------
+// Activate following result displays:
+// 1: Magnitude Capture (default, upper left)
+// 2: Power Spectrum (default, upper right)
+// 3: Result Summary (default, lower left)
+// 4: Constellation (default, lower right)
+// 5: Signal Content Detailed (bottom)
+// 6: Bitstream (bottom right)
+
+LAY:REPL '1',RFM
+LAY:REPL '2',PSP
+LAY:REPL '3',RSUM
+LAY:REPL '4',CONS
+LAY:ADD:WIND? '3',BEL,SCD
+//Result: '5'
+LAY:ADD:WIND? '5',RIGH,BITS
+//Result: '6'
+
+//Remove the individual MER data and MER Pilot results from the Result Summary table
+DISP:WIND3:TABL:ITEM MERD,0
+DISP:WIND3:TABL:ITEM MERP,0
+//Query the display state of the combined pilot+data MER result
+DISP:WIND3:TABL:ITEM? MER
+//Result: 1
+
+//Configure the y-axis scaling for the power spectrum:
+// Minimum: Automatic scaling according to hyst. interval from -20% to +10%
+// Maximum: fixed upper limit at -20dBm
+//Display 10 divisions with multiples of 5E10
+DISP:WIND2:TRAC:Y:SCAL:AUTO ON
+DISP:WIND2:TRAC:Y:SCAL:AUTO:MODE HYST
+DISP:WIND2:TRAC:Y:SCAL:AUTO:HYST:LOW:LOW 20
+DISP:WIND2:TRAC:Y:SCAL:AUTO:HYST:LOW:UPP 10
+DISP:WIND2:TRAC:Y:SCAL:AUTO:FIX:RANG UPP
+DISP:WIND2:TRAC:Y:SCAL:MAX 20
+DISP:WIND2:TRAC:Y:SCAL:DIV 10
+DISP:WIND2:TRAC:Y:SCAL:PDIV 5.0
+
+//Configure constellation for all subcarriers in symbol 1
+SENS:SUBC:SEL ALL
+SENS:SYMB:SEL 1
+
+//---------- Evaluation range settings -----------------
+//Configure statistical evaluation over 10 frames.
+SENS:FRAM:COUN:STAT ON
+SENS:FRAM:COUN 10
+
+//---------- Performing the Measurements -----
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and wait until the sweep has finished. 
+INIT;*WAI
+
+//---------- Retrieving Results -------------
+
+//Query the I/Q data from magnitude capture buffer for first ms
+// 200 000 samples per second -&gt; 200 samples
+TRAC1:IQ:DATA:MEMory? 0,200
+//Note: result will be too long to display in IECWIN, but is stored in log file
+//Query the I/Q data from magnitude capture buffer for second ms
+TRAC1:IQ:DATA:MEMory? 201,400
+//Note: result will be too long to display in IECWIN, but is stored in log file
+
+//Query the number of frames detected in the current capture buffer
+FETC:FRAM:COUN?
+//Query the number of frames detected in all measurements
+FETC:FRAM:COUN:ALL?
+//Select second frame (frame 1) to be evaluated in graphical results
+SENS:FRAM:SEL:STAT ON
+SENS:FRAM:SEL 1
+
+//Query constellation data (window 4) in frame 1
+TRAC4:DATA? TRACE1
+//Note: result will be too long to display in IECWIN, but is stored in log file
+
+//Query detailed signal content in frame 1
+FETC:SCD:ALL?
+//Note: result will be too long to display in IECWIN, but is stored in log file
+
+//Query maximum MER for pilots and data in frame 1
+FETC:SUMM:MER:MAX?
+
+//Query the limit for minimum MER for pilots and data and the result of the limit check
+CALC:LIM:SUMM:MER:MIN?
+CALC:LIM:SUMM:MER:MIN:RES?
+
+//Query the results for bitstream in byte format in frames 1 and 2
+UNIT:BITS BYTE
+FETC:BITS:ALL?
+SENS:FRAM:SEL 2
+FETC:BITS:ALL?
+
+
+//---------- Exporting Captured I/Q Data-------------
+//Store the captured I/Q data to a file.
+MMEM:STOR:IQ:STAT 1, 'C:\R_S\Instr\user\data.iq.tar'
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

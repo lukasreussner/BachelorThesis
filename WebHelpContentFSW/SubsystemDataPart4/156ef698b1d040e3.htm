@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Configuration|Modulation Accuracy Measurement Configuration|Data Acquisition|Data Acquisition" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Capture Time</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGSMSkIdCaptureTime">
+</meta>
+        <meta name="topic-keyword" value="eGSMSkIdAutoCaptureTime">
+</meta>
+        <meta name="topic-id" value="506">
+</meta>
+        <meta name="topic-id" value="507">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K91n_0968-7c405e264c1c29060a001ae7187ce5cd-en-US;ID_94241718d44211e39709bdfd915dac9d-7c405e264c1c29060a001ae7187ce5cd-en-US;ID_9424653ad44211e39709bdfd915dac9d-7c405e264c1c29060a001ae7187ce5cd-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="1a64fe887be64f22.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="e90423ae33184d9a.htm">Modulation Accuracy Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="7b2c751b79434d29.htm">Data Acquisition</a> &gt; <a class="chm-breadcrumb" href="397f6f7f68e24b36.htm">Data Acquisition</a> &gt; <span class="chm-breadcrumb">Capture Time</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor527">
+</a><a name="kanchor528">
+</a><div class="function_heading"><a name="shiv_FSV_K91n_0968-7c405e264c1c29060a001ae7187ce5cd-en-US">
+</a><span style="font-weight: bold">Capture Time</span></div><p>Specifies the duration (and therefore the amount of data) to be captured in the capture buffer.</p><p>The capture time can be defined automatically or manually.</p><p>If <b>Auto mode</b> is enabled, the optimal capture time is determined according to the <a class="xref" href="35002937ba1d479a.htm#ID_4c3b890fa50c12720a00206a0195f01d-6de3276a7d447f250a0020190132413b-en-US">"Sample rate"</a> and <a class="xref" href="fe66737d8efb434f.htm#ID_77c43431858393170a00206a01d5c858-6de3276a7d447f250a0020190132413b-en-US">"Analysis Bandwidth"</a>.</p><p>In <b>Manual mode</b> be sure to define a sufficiently long capture time. If the capture time is too short, demodulation will fail.</p><p><b><a name="ID_94241718d44211e39709bdfd915dac9d-7c405e264c1c29060a001ae7187ce5cd-en-US">
+</a>Note:</b> The duration of one GSM slot equals 15/26 ms = 0.576923 ms. The duration of one GSM frame (8 slots) equals 60/13 ms = 4.615384 ms.<br/></p><div class="block"><div class="listintro-in-compact-list"><b>Tip:</b> In order to improve the measurement speed further by using short capture times, consider the following:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Use an external trigger which indicates the frame start. In this case, the minimum allowed capture time is reduced from 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>ms to 866<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>us (see <a class="xref" href="b23a1814fc8d418e.htm#ID_8ab1bb9f365c51100a00206a0080e497-b1f487377d4432d90a002019013b147f-en-US">"Trigger settings"</a>)</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Measure only slots at the beginning of the frame, directly after the trigger (see <a class="xref" href="2ae1e0f8070f4c0e.htm#ID_01dbfe3f5feb7e7b0a002019005ed08f-6de3276a7d447f250a0020190132413b-en-US">"Slot Scope"</a>)</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Use a small statistic count (see <a class="xref" href="d4e30961.htm#ID_19f90d1adb274bc30a00206a002e115a-4d3a9a2feaaeff660a00201901e3a95b-en-US">"Statistic Count"</a>)</li></ul></div><p><b><a name="ID_9424653ad44211e39709bdfd915dac9d-7c405e264c1c29060a001ae7187ce5cd-en-US">
+</a>Note:</b> MSRA operating mode. <a name="kanchor529">
+</a><a name="kanchor530">
+</a><a name="kanchor531">
+</a>In MSRA operating mode, only the MSRA Master channel actually captures data from the input signal. The "Capture Time" for the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW GSM application in MSRA mode defines the length of the <b>application data extract</b> (see also <a class="xref" href="5fbf0c99b7da4b92.htm#ID_39e3067abf33dfd80a00206a00f886f0-b1f487377d4432d90a002019013b147f-en-US">"GSM in MSRA Operating Mode"</a>).<br/>For details on the MSRA operating mode see <a class="xref" href="../../fsw_msra_help/Content/e12562f574b74ff8.htm">Applications and Operating Modes</a>.<br/></p><p>The "Capture Time" can also be defined using the softkey which is available from the SPAN, BW or SWEEP menus.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="3ba410557c6249b5.htm#ID_7ca1f2a42e3a7e940a00206a01dfeab3-50801f014c192f3d0a001ae76c29d7cc-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>TIME</nobr></a></p><p><a class="xref" href="58036172847f43fc.htm#ID_7ca1f2a42e3a7e940a00206a01dfeab3-6e0636d0cba9885d0a001ae70180db24-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>TIME:</nobr>​<nobr>AUTO</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

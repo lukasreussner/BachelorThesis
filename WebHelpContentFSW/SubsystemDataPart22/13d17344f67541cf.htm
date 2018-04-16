@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Configuration|Configuring Frequency Sweep Measurements|SEM and Multi-Carrier SEM Signal Description" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Category</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdMeasSpectrumEMaskCategoty">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdMeasSpectrumEMaskAggregatedMaxPower">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdMeasSpectrumEMaskTxPowerState">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdMeasSpectrumEMaskTxPowerValue">
+</meta>
+        <meta name="topic-id" value="13049">
+</meta>
+        <meta name="topic-id" value="13050">
+</meta>
+        <meta name="topic-id" value="13051">
+</meta>
+        <meta name="topic-id" value="13052">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0ec99d7d96a0ee910a00206a00b1745f-67ce782674bf48200a00206a00f416a2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/13d17344f67541cf.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="815a65ace54b46f5.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="93a0995062274727.htm">Configuring Frequency Sweep Measurements</a> &gt; <a class="chm-breadcrumb" href="84cc6d7f74b14272.htm">SEM and Multi-Carrier SEM Signal Description</a> &gt; <span class="chm-breadcrumb">Category</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_0ec99d7d96a0ee910a00206a00b1745f-67ce782674bf48200a00206a00f416a2-en-US">
+</a><span style="font-weight: bold">Category</span></div><p>Selects the type, category and option of the limit definitions for SEM measurements.</p><div class="block"><div class="listintro-in-compact-list">The software supports limit definitions for the following types of base stations:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Wide areas base stations (Category A and B)</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Local Area base stations</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Home base stations</li><li style="margin-bottom:0; padding-bottom:0;" value="4">Medium Range base stations</li></ul></div><p>Categories A and B are defined in ITU-R recommendation SM.329. For Category B operating band unwanted emissions, there are two options for the limits that can be applied regionally (Opt1 and Opt2).</p><p>The type and category you should use for the measurement depends on the category and option that the base station you are testing supports.</p><p>For Home Area base stations, you can define an additional <a class="xref" href="e0b7019ee7ee42c4.htm#ID_1052702fe362e7c60a00206a00cdf5b4-b02c7267e362e7c60a00206a01be1da9-en-US">Aggregated Maximum Power Of All TX Ports (P)</a> for all antenna ports of a home area base station. The aggregated maximum power is the aggregated power of all antenna ports and defines the shape of the SEM.</p><p>For Medium Range base station, you can automatically measure or manually enter the power of the carrier <a class="xref" href="11c859e8d84746e9.htm#ID_a5c2e7beed7d84a90a001ae70e9eae89-dc3ea386ed7d84a90a001ae753d4abde-en-US">TX Power</a>.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="9ff407bda3904da5.htm#ID_463c01c7e2a1e6020a00206a01b44896-feaf28e5e2a1e6020a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>SEM:</nobr>​<nobr>CATegory</nobr></a></p><p>Home BS power: <a class="xref" href="2fe93a02f50140b9.htm#ID_5b2c1457e38c60fe0a00206a00f27e1b-2fc4317ae38c5a480a00206a016357f7-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>SEM:</nobr>​<nobr>CHBS:</nobr>​<nobr>AMPower</nobr></a></p><p>Medium BS power mode: <a class="xref" href="877144f618204cb8.htm#ID_4ef5ead4cc0eade40a001ae77efa000c-54a53521cc0eac4e0a001ae765ad80b0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>SEM:</nobr>​<nobr>CHBS:</nobr>​<nobr>AMPower:</nobr>​<nobr>AUTO</nobr></a></p><p>Medium BS power value: <a class="xref" href="2fe93a02f50140b9.htm#ID_5b2c1457e38c60fe0a00206a00f27e1b-2fc4317ae38c5a480a00206a016357f7-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>SEM:</nobr>​<nobr>CHBS:</nobr>​<nobr>AMPower</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

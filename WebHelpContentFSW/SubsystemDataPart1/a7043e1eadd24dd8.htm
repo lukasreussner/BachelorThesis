@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Basic Principle of the B2000</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_dd3c47ff4a3798c80a001ae7018e493b-3e7f60c551b212130a001ae729483b02-en-US;ID_4e6c89a95226b8640a001ae76422fe3a-3e7f60c551b212130a001ae729483b02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="688f35c556f04d25.htm">Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)</a> &gt; <span class="chm-breadcrumb">Basic Principle of the B2000</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor239">
+</a><div class="chm-chaptertitle">Basic Principle of the B2000</div><p>The optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000) allows you to analyze signals with a bandwidth of up to 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz. In order to process the data with this bandwidth, a Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz oscilloscope (e.g. R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>RTO) is inserted in the measurement setup. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW provides the signal to the oscilloscope at a fixed IF frequency of 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz via the additional connector. The oscilloscope samples the signal at a configurable rate of 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Gigasamples or 20<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Gigasamples, using an external frequency reference. The A/D converted data is then sent to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, where it is equalized and resampled to the sample rate required by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW measurement application. The entire measurement and both instruments are controlled by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><div class="block" id="ID_4e6c89a95226b8640a001ae76422fe3a-3e7f60c551b212130a001ae729483b02-en-US"><a name="kanchor240">
+</a><div class="graphic"><img border="0" src="Resources/Images/img95dcea3d5204f0820a001ae743b05930_3_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Signal processing using the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000)</div></div><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>The RF input signal to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW may also be provided from an imported I/Q data file. The data evaluated by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW with the 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension can also be exported for further processing in another application.</p><p>For details see <a class="xref" href="2b759318b3654a88.htm#ID_7da4bfb4a3ef29fd0a00206a005fe6fe-f7571c26a3ef29fd0a00206a003653d7-en-US">"I/Q Data Import and Export"</a>.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

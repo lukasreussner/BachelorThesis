@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Frequency and Span Configuration|Impact of the Frequency and Span Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Coping with Large Frequency Ranges - Logarithmic Scaling</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_fd08d979b8a3b25b0a002019008db70e-09656d87d00122b60a001ae734c859f2-en-US;ID_c82a9aa5f9f99d750a001ae76a5e4632-09656d87d00122b60a001ae734c859f2-en-US;ID_7e4830ddf9f99d750a001ae75a713870-09656d87d00122b60a001ae734c859f2-en-US;ID_648b996cf9f99d750a001ae704e5076e-09656d87d00122b60a001ae734c859f2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="659ab9e710ba4db2.htm">Frequency and Span Configuration</a> &gt; <a class="chm-breadcrumb" href="5c722b49f126403e.htm">Impact of the Frequency and Span Settings</a> &gt; <span class="chm-breadcrumb">Coping with Large Frequency Ranges - Logarithmic Scaling</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1627">
+</a><a name="kanchor1628">
+</a><a name="kanchor1629">
+</a><a name="kanchor1630">
+</a><a name="kanchor1631">
+</a><a name="kanchor1632">
+</a><div class="chm-chaptertitle">Coping with Large Frequency Ranges - Logarithmic Scaling</div><p>In a linear display, the frequencies are distributed linearly across the x-axis. That means the entire frequency range is divided by the number of sweep points, and the distance between sweep points is equal. Linear scaling is useful to determine precise frequencies within a small range.</p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span></p><div class="block" id="ID_c82a9aa5f9f99d750a001ae76a5e4632-09656d87d00122b60a001ae734c859f2-en-US"><div class="graphic"><img border="0" src="Resources/Images/img9da272a3f9f736360a001ae722baeab1_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Linear x-axis scaling: the distance between the sweep points is equal, e.g. 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz</div></div><p>However, if high and low frequencies appear in the same display, it is difficult to determine individual frequencies precisely or to distinguish frequencies that are close together.</p><p>In a logarithmic display, lower frequencies are distributed among a much larger area of the display, while high frequencies are condensed to a smaller area. Now it is much easier to distinguish several lower frequencies, as they are spread over a wider area. Logarithmic scaling is useful for overview measurements when a large frequency range must be displayed in one diagram.</p><p>However, with logarithmic scaling, the frequency resolution between two sweep points deteriorates with higher frequencies.</p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span></p><div class="block" id="ID_7e4830ddf9f99d750a001ae75a713870-09656d87d00122b60a001ae734c859f2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgfcb1de47f9f7ab380a001ae7139f527c_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Logarithmic x-axis scaling: the distance between sweep points is variable</div></div><p>In the spectrum from 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz to 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Hz, the distance is a few Hz. Between 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz and 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, the distance is several MHz.</p><p>Thus, for logarithmic x-axis scaling, the number of sweep points must be sufficiently high in order to distinguish high frequencies precisely. The resolution bandwidth should cover at least one sweep point (that means: the distance between two sweep points should not exceed the RBW). If this condition is not met, signals or interferers could be missed, especially narrowband interferers.</p><div class="block" id="ID_648b996cf9f99d750a001ae704e5076e-09656d87d00122b60a001ae734c859f2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb8fb966ff9f7dbbe0a001ae71efd03e2_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2017 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

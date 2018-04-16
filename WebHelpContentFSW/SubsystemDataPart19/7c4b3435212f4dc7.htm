@@ -1,0 +1,93 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Programming Examples (R&amp;S FSW WLAN application)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 2: Determining the Spectrum Emission Mask</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0130-a940efd2b2ef02960a00201901b2a602-en-US;ID_b2811523664602d90a00206a0017fa00-a940efd2b2ef02960a00201901b2a602-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="da386ffaacd9456d.htm">Programming Examples (R&amp;S FSW WLAN application)</a> &gt; <span class="chm-breadcrumb">Measurement 2: Determining the Spectrum Emission Mask</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1001">
+</a><a name="kanchor1002">
+</a><div class="chm-chaptertitle">Measurement 2: Determining the Spectrum Emission Mask</div><pre class="verbatim" xml:space="preserve">//---------- Preparing the application ------------
+*RST
+//Reset the instrument
+INST:CRE:NEW WLAN,'SEMMeasurement'
+//Activate a WLAN measurement channel named "SEMMeasurement"
+
+//---------- Configuring the measurement ------------
+DISP:TRAC:Y:SCAL:RLEV 0
+//Set the reference level to 0 dBm
+FREQ:CENT 2.1175 GHz
+//Set the center frequency to 2.1175 GHz
+CONF:BURS:SPEC:MASK
+//Select the spectrum emission mask measurement
+
+//---------- Performing the Measurement-----
+INIT:CONT OFF
+//Stops continuous sweep
+SWE:COUN 100
+//Sets the number of sweeps to be performed to 100
+INIT;*WAI
+//Start a new measurement with 100 sweeps and wait for the end
+
+//---------- Retrieving Results-------------
+CALC:LIM:FAIL?
+//Queries the result of the limit check
+//Result: 0 [passed]
+TRAC:DATA? LIST
+//Retrieves the peak list of the spectrum emission mask measurement
+//Result: 
+//+1.000000000,-1.275000000E+007,-8.500000000E+006,+1.000000000E+006,
+//+2.108782336E+009,-8.057177734E+001,-7.882799530E+001,-2.982799530E+001,
+//+0.000000000,+0.000000000,+0.000000000,
+
+//+2.000000000,-8.500000000E+006,-7.500000000E+006,+1.000000000E+006,
+//+2.109000064E+009,-8.158547211E+001,-7.984169006E+001,-3.084169006E+001,
+//+0.000000000,+0.000000000,+0.000000000,
+
+//+3.000000000,-7.500000000E+006,-3.500000000E+006,+1.000000000E+006,
+//+2.113987200E+009,-4.202708435E+001,-4.028330231E+001,-5.270565033,
+//+0.000000000,+0.000000000,+0.000000000,
+
+ [...]</pre><div class="block"><a name="ID_b2811523664602d90a00206a0017fa00-a940efd2b2ef02960a00201901b2a602-en-US">
+</a><span class="table-caption">Trace results for SEM measurement</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Range No.</p></th><th valign="top"><p>Start freq. [Hz]</p></th><th valign="top"><p>Stop freq. [Hz]</p></th><th valign="top"><p>RBW [Hz]</p></th><th valign="top"><p>Freq. peak power [Hz]</p></th><th valign="top"><p>Abs. peak power [dBm]</p></th><th valign="top"><p>Rel. peak power [%]</p></th><th valign="top"><p>Delta to margin [dB]</p></th><th valign="top"><p>Limit check result</p></th><th valign="top"><p>-</p></th><th valign="top"><p>-</p></th><th valign="top"><p>-</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1</p></td><td valign="top"><p>+1.000000000</p></td><td valign="top"><p>-1.275000000E+007</p></td><td valign="top"><p>-8.500000000E+006</p></td><td valign="top"><p>+1.000000000E+006</p></td><td valign="top"><p>+2.108782336E+009</p></td><td valign="top"><p>-8.057177734E+001</p></td><td valign="top"><p>-7.882799530E+001</p></td><td valign="top"><p>-2.982799530E+001</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td></tr><tr class="evenrow"><td valign="top"><p>2</p></td><td valign="top"><p>+2.000000000</p></td><td valign="top"><p>-8.500000000E+006</p></td><td valign="top"><p>-7.500000000E+006</p></td><td valign="top"><p>+1.000000000E+006</p></td><td valign="top"><p>+2.109000064E+009</p></td><td valign="top"><p>-8.158547211E+001</p></td><td valign="top"><p>-7.984169006E+001</p></td><td valign="top"><p>-3.084169006E+001</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td></tr><tr class="oddrow"><td valign="top"><p>3</p></td><td valign="top"><p>+3.000000000</p></td><td valign="top"><p>-7.500000000E+006</p></td><td valign="top"><p>-3.500000000E+006</p></td><td valign="top"><p>+1.000000000E+006</p></td><td valign="top"><p>+2.113987200E+009</p></td><td valign="top"><p>-4.202708435E+001</p></td><td valign="top"><p>-4.028330231E+001</p></td><td valign="top"><p>-5.270565033</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td><td valign="top"><p>+0.000000000</p></td></tr><tr class="evenrow"><td valign="top"><p>...</p></td><td valign="top"><p>...</p></td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

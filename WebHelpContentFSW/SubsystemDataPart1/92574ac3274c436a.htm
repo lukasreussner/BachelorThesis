@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Configuring I/Q Analyzer Measurements|Configuring the Data Input and Output" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring Oscilloscope Baseband Input</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_21b87d058c4d6d320a710ade00a8839a-ce1bf422a4f1e4640a001ae703ebc597-en-US;ID_1111ab18d42883a00a001ae765fdd2f6-ce1bf422a4f1e4640a001ae703ebc597-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="245b36a17e924f58.htm">Configuring I/Q Analyzer Measurements</a> &gt; <a class="chm-breadcrumb" href="72302c2a8af340cf.htm">Configuring the Data Input and Output</a> &gt; <span class="chm-breadcrumb">Configuring Oscilloscope Baseband Input</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Configuring Oscilloscope Baseband Input</div><p>The following commands define settings for analog baseband input from an oscilloscope.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The commands for analog baseband input from an oscilloscope are similar, but <em>not identical</em> to those used for analog baseband using the optional Analog Baseband interface on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p></td></tr></table></div></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="98f55aee439e4684.htm#ID_d3b00d00d3ec77790a001ae74d6578e8-e96198c7d3ec768e0a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:BALanced[:STATe]</a><br/><a href="a7146945781449ba.htm#ID_1deea6aa551597470a001ae72341ca8f-79e35c155515963d0a001ae70eba8865-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:CONState?</a><br/><a href="f689cc2d25f24fd3.htm#ID_a8809cf4d3ec7a180a001ae7727112b9-912e7d40d3ec794d0a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:FULLscale[:LEVel]</a><br/><a href="76cab4026dde40c2.htm#ID_9062baf155159aa20a001ae739fac095-1f082fe0551599a80a001ae70eba8865-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:IDN?</a><br/><a href="37136e67a005411c.htm#ID_f24af65b544bf7400a001ae7571107fa-95dd8167544bf6270a001ae70eba8865-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:IMPedance</a><br/><a href="7759054b7e7a403b.htm#ID_5e564de7544bf9820a001ae765132386-da54a8fe544bf8590a001ae70eba8865-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:IMPedance:PTYPe</a><br/><a href="8c7ac35fc87b4427.htm#ID_76a628c6d3ec7eac0a001ae70ded478c-939213dcd3ec7dd20a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:SKEW:I</a><br/><a href="ff56fc63564944c8.htm#ID_373c45a7d3ec80040a001ae76bf53b8e-4524ababd3ec7f290a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:SKEW:I:INVerted</a><br/><a href="5d950d3318414bf1.htm#ID_5b4096e3d3ec816c0a001ae76755da1f-7ca704edd3ec80910a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:SKEW:Q</a><br/><a href="e2fdb1af34ba4d96.htm#ID_fa542ed1d3ec82b40a001ae73bb44ced-0b048a4ed3ec81f80a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:SKEW:Q:INVerted</a><br/><a href="cc297eb05fa54690.htm#ID_a87ecf0dd3ec7d450a001ae7285619ea-60e584ffd3ec7c6a0a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:SRATe</a><br/><a href="9ad68e2c8a5c4551.htm#ID_5f2f4151d3ec749a0a001ae71e5a321a-8c3850f4d3ec73bf0a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC[:STATe]</a><br/><a href="c93d500a01f44a17.htm#ID_8f0560c3d3ec75e20a001ae76d158bb4-c44d3a47d3ec75080a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:TCPip</a><br/><a href="24f272682c2f4271.htm#ID_9af3b73bd3ec7bce0a001ae70f801381-0941ba40d3ec7b030a001ae71c1b5b2f-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:TYPE</a><br/><a href="884c81037e334ffe.htm#ID_b1654ef855159f650a001ae700c8d1c1-c393e2cb55159e9a0a001ae70eba8865-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:VDEVice?</a><br/><a href="c62d89a7e973488d.htm#ID_8ed389075515a10b0a001ae73941dda0-d95e88d35515a0110a001ae70eba8865-en-US" class="title_toc">INPut&lt;ip&gt;:IQ:OSC:VFIRmware?</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

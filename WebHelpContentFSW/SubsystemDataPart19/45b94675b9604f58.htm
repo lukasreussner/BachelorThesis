@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Configuration|WLAN I/Q Measurement Configuration|Demodulation|Demodulation - IEEE 802.11ax" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Guard Interval (GI) + HE-LTF Size</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWLANSkIdDemod_HE_LTF_GI">
+</meta>
+        <meta name="topic-id" value="666">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3b72c16f34b411e2aa2aaab3cd47473f-b3850ef4cee817590a001ae70dc04b6c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3a844e7770fd4a7a.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2e3336f147004a28.htm">WLAN I/Q Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="c50dac5d1cbc45f8.htm">Demodulation</a> &gt; <a class="chm-breadcrumb" href="e40f931a37b2494d.htm">Demodulation - IEEE 802.11ax</a> &gt; <span class="chm-breadcrumb">Guard Interval (GI) + HE-LTF Size</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor559">
+</a><a name="kanchor560">
+</a><div class="function_heading"><a name="ID_3b72c16f34b411e2aa2aaab3cd47473f-b3850ef4cee817590a001ae70dc04b6c-en-US">
+</a><span style="font-weight: bold">Guard Interval (GI) + HE-LTF Size</span></div><p>Defines the PPDUs taking part in the analysis depending on the guard interval (GI) and HE long training field (LTF) length.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto (HE-SIG-A), same type as first PPDU"</p></td><td class="function_col_right"><p>All HE PPDUs using the guard interval length identical to the first recognized PPDU are analyzed.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Auto (HE-SIG-A), individually for each PPDU"</p></td><td class="function_col_right"><p>All HE PPDUs are analyzed.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Meas only 4.0<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s (1x HE-LTF + 1x GI1 = 3.2 + 0.8 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s)"</p></td><td class="function_col_right"><p>Only HE PPDUs with one long training field (LTF) and one guard interval (GI) with the specified length are analyzed.</p><p>Not available for HE trigger-based PPDUs.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Meas only 4.8<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s (1x HE-LTF + 2x GI1 = 3.2 + 1.6<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s)"</p></td><td class="function_col_right"><p>Only HE PPDUs with one long training field (LTF) and two guard intervals (GI) with the specified length are analyzed.</p><p>For HE trigger-based PPDUs only.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Meas only 7.2<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s (2x HE-LTF + 1x GI1 = 6.4 + 0.8<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s)"</p></td><td class="function_col_right"><p>Only HE PPDUs with two long training field (LTF) and one guard interval (GI) with the specified length are analyzed.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Meas only 8.0<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s (2x HE-LTF + 2x GI1 = 6.4 + 1.6<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s)"</p></td><td class="function_col_right"><p>Only HE PPDUs with two long training fields (LTF) and two guard intervals (GI) with the specified length are analyzed.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Meas only 13.6<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s (4x HE-LTF + 1x GI1 = 12.8 + 0.8<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s)"</p></td><td class="function_col_right"><p>Only HE PPDUs with four long training fields (LTF) and one guard interval (GI) with the specified length are analyzed.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Meas only 16.0<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s (4x HE-LTF + 4x GI1 = 12.8 + 3.2<span style="font-family: Arial Unicode MS; font-size: 10.5pt">μ</span>s)"</p></td><td class="function_col_right"><p>Only HE PPDUs with four long training fields (LTF) and four guard intervals (GI) with the specified length are analyzed.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="65b8da3b9f814261.htm#ID_a84eb64b2f52b8f20a00206a01a142ca-843d365a2f52b0f30a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>WLAN:</nobr>​<nobr>GTIMe:</nobr>​<nobr>AUTO</nobr></a></p><p><a class="xref" href="9220956faf2545ef.htm#ID_182eb6c92f52c5d30a00206a0010b211-ac18e7f92f52bc5d0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>WLAN:</nobr>​<nobr>GTIMe:</nobr>​<nobr>AUTO:</nobr>​<nobr>TYPE</nobr></a></p><p><a class="xref" href="1f55b473bd964e07.htm#ID_97a124632f52aeb10a00206a0105c995-8f0b44632f52a73f0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>WLAN:</nobr>​<nobr>GTIMe:</nobr>​<nobr>SELect</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

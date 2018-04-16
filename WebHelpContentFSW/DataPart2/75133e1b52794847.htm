@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Emulating Other Instruments' Commands|Setting up Instrument Emulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>SYSTem:LANGuage</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3f1f593b78a3ac8d0a00206a01749463-be96a0bc78a3ac8d0a00206a0097019c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9905538076f04781.htm">Emulating Other Instruments' Commands</a> &gt; <a class="chm-breadcrumb" href="e909e19f6f4b49ba.htm">Setting up Instrument Emulation</a> &gt; <span class="chm-breadcrumb">SYSTem:LANGuage</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><a name="kanchor3313">
+</a><a name="kanchor3314">
+</a><a name="kanchor3315">
+</a><a name="kanchor3316">
+</a><a name="kanchor3317">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_3f1f593b78a3ac8d0a00206a01749463-be96a0bc78a3ac8d0a00206a0097019c-en-US">
+</a><span class="bold">SYSTem:LANGuage </span>&lt;Language&gt;<br/></div><div class="rcdescription"><p>This command selects the system language.</p><p>For details see <a class="xref" href="6e9dbf1e909d42da.htm#shiv_6b_remote_commands_basic_2887-69b3a901a00153850a00206a01899a59-en-US">"GPIB Languages"</a>.</p><p><b>Note</b>:This command is also used to emulate previous R&amp;S signal and spectrum analyzers, making the <span class="command">SYST:COMP</span> command obsolete.</p><p><b>Note:</b> For PSA89600 emulation, the option is indicated as "B7J" for the <span class="command">*OPT?</span> query ("B7J, 140" if <a class="xref" href="9a7e6a7dd4ef4e8e.htm#ID_2f5d421c4e4b11e18e38b0dbc2852878-1243637dd263f59e0a001ae702e79d05-en-US">"Wideband"</a> is activated).</p><p><b>Note:</b> For R&amp;S FSP/FSQ/FSU emulation, HP commands are not automatically also allowed. In this case, set <a class="xref" href="d45a2592c9184165.htm#ID_84d43d9bdc3f06df0a001ae73b438389-b9c4d782dc3f05f40a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SYSTem:</nobr>​<nobr>HPADditional</nobr></a> to <span class="command">ON</span>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Language&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>"SCPI" |</nobr> <nobr> "8560E" |</nobr> <nobr> "8561E" |</nobr> <nobr> "8562E" |</nobr> <nobr> "8563E" |</nobr> <nobr> "8564E" |</nobr> <nobr> "8565E" |</nobr> <nobr> "8566A" |</nobr> <nobr> "8566B" |</nobr> <nobr> "8568A" |</nobr> <nobr> "8568A_DC" |</nobr> <nobr> "8568B" |</nobr> <nobr> "8568B_DC" |</nobr> <nobr> "8591E" |</nobr> <nobr> "8594E" |</nobr> <nobr> "71100C" |</nobr> <nobr> "71200C" |</nobr> <nobr> "71209A" |</nobr> <nobr> "PSA89600" |</nobr> <nobr> "PSA" |</nobr> <nobr> "PXA" |</nobr> <nobr> "FSP" |</nobr> <nobr> "FSU" |</nobr> <nobr> "FSQ" |</nobr> <nobr> "FSV" |</nobr> <nobr> "FSEA" |</nobr> <nobr> "FSEB" |</nobr> <nobr> "FSEM" |</nobr> <nobr> "FSEK"</nobr><br/><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">SCPI</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SYST:LANG 'PSA'</span><br/><p>Emulates the PSA.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="d10f1a56ffbe4d0a.htm#shiv_4b_instrument_functions_0967-e47fcf4db88fbb110a001ae76a207000-en-US">"Language"</a></td></tr></table><p><b>Note</b>: If you use <b>"PSA89600"</b>, you must switch to an HP language first before returning to SCPI (in remote operation only). For the identical language "PSA", this intermediate step is not necessary.</p></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

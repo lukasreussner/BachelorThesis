@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Working with Markers|Programming Examples for Using Markers and Marker Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Basic Frequency Sweep Measurement for Marker Function Examples</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d55ecc3fd4cd11e2ba0ed4c419c184f7-5ead00533d8b32370a00201901b8dc86-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="57a24637c8a048f0.htm">Working with Markers</a> &gt; <a class="chm-breadcrumb" href="806cef63805646a8.htm">Programming Examples for Using Markers and Marker Functions</a> &gt; <span class="chm-breadcrumb">Basic Frequency Sweep Measurement for Marker Function Examples</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3231">
+</a><a name="kanchor3232">
+</a><div class="chm-chaptertitle">Basic Frequency Sweep Measurement for Marker Function Examples</div><p>Since markers can only be placed on an existing trace, the following example provides a simple frequency sweep measurement to be used as a basis for the subsequent marker function scripts.</p><div class="verbatim"><pre class="verbatim_text">//-------------- Configuring the basic frequency sweep -------------
+*RST
+//Resets the instrument
+INIT:CONT OFF
+//Selects single sweep mode.
+FREQ:CENT 100MHz
+//Defines the center frequency
+FREQ:SPAN 200MHz
+//Sets the span to 100 MHz on either side of the center frequency.
+DISP:TRAC1:Y:RLEV 0dBm
+//Sets the reference level to 0 dBm.
+
+//------- Performing the measurement -------------------------
+INIT;*WAI
+//Performs a measurement and waits for it to end
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

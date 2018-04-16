@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Overview of the Demodulation Process" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Synchronization and the Reference Signal</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8acdb4a931d511e591689627e3a667e1-184c8906411153460a00206a01532735-en-US;ID_0aee6f4bd3d87f8d0a001ae70ee3b2f0-184c8906411153460a00206a01532735-en-US;ID_5db419bed3d87f8d0a001ae706f8b233-184c8906411153460a00206a01532735-en-US;ID_f8a1485bd3d87f8d0a001ae7100c1149-184c8906411153460a00206a01532735-en-US;ID_e598e11cd3d87f8d0a001ae77cc36c65-184c8906411153460a00206a01532735-en-US;ID_1a3ed386d3d87f8d0a001ae7375f2ace-184c8906411153460a00206a01532735-en-US;ID_aafc33efd3d87f8d0a001ae76386858d-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="a9433bb736a54dfb.htm">Overview of the Demodulation Process</a> &gt; <span class="chm-breadcrumb">Synchronization and the Reference Signal</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Synchronization and the Reference Signal</div><p>TheR&amp;S FSW VSA application generates the ideal reference signal based on the detected symbols and the specifications of the signal model, that is: the modulation scheme, the transmit filter (Tx filter), and the transmitted symbols. In the fine synchronization stage, the measurement signal and the reference signal are correlated to obtain a more precisely synchronized measurement signal.</p><p>The results of the correlation are used to calculate various results, e.g. the EVM and BER. Various methods are available to determine the reference signal and perform fine synchronization.</p><div class="block"><div class="subtitle"><a name="ID_0aee6f4bd3d87f8d0a001ae70ee3b2f0-184c8906411153460a00206a01532735-en-US">
+</a>Fine synchronization using detected data</div></div><p>By default, the reference signal is estimated from the detected data. However, if the signal has a poor transmission quality or a high noise level, false symbol decisions are more frequent. False decisions can cause spikes in the EVM results and lead to a false reference signal.</p><div class="block" id="ID_5db419bed3d87f8d0a001ae706f8b233-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge3e6e67ed3b512c60a001ae75c56a643_1_--_--_PNG96.png" alt="" title=""/></div></div><p>To improve the symbol decisions in poor signals, in particular when multiple detection errors occur, the reference signal can be estimated from a smaller area that includes a known symbol sequence in the input signal. In this case, the results for the limited reference area are more precise, at the cost of less accurate results outside this area. The reference area can be defined either using a pattern or using a known data sequence from a Known Data file. If no predefined data sequences are available for the signal, the detected data is used by default.</p><div class="block"><div class="subtitle"><a name="ID_f8a1485bd3d87f8d0a001ae7100c1149-184c8906411153460a00206a01532735-en-US">
+</a>Fine synchronization using known data</div></div><p>If the data sequences to be expected in the signal are known in advance, they can be loaded to the R&amp;S FSW VSA application and used for comparison with the measured signal. The reference signal is then defined as the data sequence from the file that most closely matches the measured data.</p><p>Additionally, you can define a maximum symbol error rate (SER) for the known sequence in reference to the measured data. If the SER of the known sequence exceeds this limit, the default synchronization using the detected data is performed.</p><p>Thus, assuming a perfect match exists in the known data, this sequence is the ideal reference signal, with no detection errors. The EVM is calculated correctly and fine synchronization is very precise.</p><div class="block" id="ID_e598e11cd3d87f8d0a001ae77cc36c65-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img83520a83d3b514ba0a001ae76fed9325_1_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><div class="subtitle"><a name="ID_1a3ed386d3d87f8d0a001ae7375f2ace-184c8906411153460a00206a01532735-en-US">
+</a>Fine synchronization using a pattern</div></div><p>Sometimes, the data sequence to be expected in the entire result range is not known in advance; however, a specific symbol pattern that always occurs is known. In this case, the reference signal can be estimated from the defined pattern where available, while all data outside the pattern is estimated using the detected symbols. Detection errors within the pattern are corrected. The EVM is calculated using the complete reference signal; it is correct only within the pattern.</p><p>Fine synchronization, on the other hand, is performed only within the pattern range, which is usually much shorter than the result range. The fewer the symbols on which synchronization is based, the less accurate it becomes.</p><p>To obtain correct results for all evaluated data, it is recommended that you reduce the result range to the length of the pattern.</p><div class="block" id="ID_aafc33efd3d87f8d0a001ae76386858d-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgc7a3da15d3b5167f0a001ae71c7ddb46_1_--_--_PNG96.png" alt="" title=""/></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

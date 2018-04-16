@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Data Input and Output|Optional External Mixers|Basics on External Mixers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frequency Ranges</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d30f074b5f76b77a0a710a31012a2a50-24a48b8b71093ce10a0020190133b1b2-en-US;ID_e2b351028c5f73200a00201900aa2790-24a48b8b71093ce10a0020190133b1b2-en-US;ID_f4e3c80d8c08849a0a0020190138e325-24a48b8b71093ce10a0020190133b1b2-en-US;ID_15eda8898bf605ec0a00201901be424c-24a48b8b71093ce10a0020190133b1b2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="4dc72d92b87a4ee9.htm">Data Input and Output</a> &gt; <a class="chm-breadcrumb" href="40415c05f5614879.htm">Optional External Mixers</a> &gt; <a class="chm-breadcrumb" href="263b29fb7ef84c8e.htm">Basics on External Mixers</a> &gt; <span class="chm-breadcrumb">Frequency Ranges</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1542">
+</a><a name="kanchor1543">
+</a><a name="kanchor1544">
+</a><a name="kanchor1545">
+</a><a name="kanchor1546">
+</a><div class="chm-chaptertitle">Frequency Ranges</div><p>In a common spectrum analyzer, rather than providing one large (and thus inaccurate) filter, or providing several filters to cover the required frequency range of the input signal (at a high cost), a single, very accurate filter is used. Therefore, the input signal must be converted to the frequencies covered by the single accurate filter. This is done by a mixer, which converts and multiplies the frequency of the input signal with the help of the local oscillator (LO). The result is a higher and lower intermediate frequency (IF). The local oscillator can be tuned within the supported frequency range of the input signal.</p><p>In order to extend the supported frequency range of the input signal, an external mixer can be used. In this case, the LO frequency is output to the external mixer, where it is mixed with the RF input from the original input signal. In addition, the <em>harmonics</em> of the LO are mixed with the input signal, and converted to new intermediate frequencies. Thus, a wider range of frequencies can be obtained. The IF from the external mixer is then returned to the spectrum analyzer.</p><p>The frequency of the input signal can be expressed as a function of the LO frequency and the selected harmonic of the first LO as follows:</p><p>f<sub>in</sub> = n * f<sub>LO</sub> + f<sub>IF</sub></p><p>Where:</p><p><b>f<sub>in</sub></b>: Frequency of input signal</p><p><b>n</b>: Order of harmonic used for conversion</p><p><b>f<sub>LO</sub></b>: Frequency of first LO: 7.65 GHz to 17.45 GHz</p><p><b>f<sub>IF</sub></b>: Intermediate frequency (variable; defined internally depending on RBW and span)</p><p>Thus, depending on the required frequency band, the appropriate order of harmonic must be selected. For commonly required frequency ranges, predefined bands with the appropriate harmonic order setting are provided. By default, the lowest harmonic order is selected that allows conversion of input signals in the whole band.</p><p>For the band "USER", the order of harmonic is defined by the user. The order of harmonic can be between 2 and 128, the lowest usable frequency being 16.88<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz.</p><p>The frequency ranges for pre-defined bands are described in <a class="xref" href="154eb9fee23c44e2.htm#ID_b0df55b55843e4270a710a31000b7c24-5daeab1b52649e240a0020190141bb4a-en-US">Table " Frequency ranges for pre-defined bands"</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Changes to the band and mixer settings are maintained even after using the PRESET function. A "Preset band" function allows you to restore the original band settings.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_f4e3c80d8c08849a0a0020190138e325-24a48b8b71093ce10a0020190133b1b2-en-US">
+</a>Extending predefined ranges</div></div><a name="kanchor1547">
+</a><p>In some cases, the harmonics defined for a specific band allow for an even larger frequency range than the band requires. By default, the pre-defined range is used. However, you can take advantage of the extended frequency range by overriding the defined start and stop frequencies by the maximum possible values ("RF Overrange" option).</p><div class="block"><div class="subtitle"><a name="ID_15eda8898bf605ec0a00201901be424c-24a48b8b71093ce10a0020190133b1b2-en-US">
+</a>Additional ranges</div></div><a name="kanchor1548">
+</a><p>If due to the LO frequency the conversion of the input signal is not possible using one harmonic, the band must be split. An adjacent, partially overlapping frequency range can be defined using different harmonics. In this case, the sweep begins using the harmonic defined for the first range, and at a specified frequency in the overlapping range ("handover frequency"), switches to the harmonic for the second range.</p><p>Which harmonics are supported depends on the mixer type.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

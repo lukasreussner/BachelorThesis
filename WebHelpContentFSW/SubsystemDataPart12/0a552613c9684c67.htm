@@ -1,0 +1,51 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Configuration|Demodulation Settings|Advanced Demodulation (Synchronization)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Estimation Points/Sym</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdEstimPtrProSymAuto">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdEstimPtrProSymValue">
+</meta>
+        <meta name="topic-id" value="917">
+</meta>
+        <meta name="topic-id" value="919">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_83ba2ac6819f13120a00206a002792b9-98ce8ff6410963710a00206a00a7855c-en-US;ID_38d9eaeb5afb30d20a00206a01cfaa40-98ce8ff6410963710a00206a00a7855c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1df8557b8c6a4078.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="7193e7b913224924.htm">Demodulation Settings</a> &gt; <a class="chm-breadcrumb" href="33d6346cac664079.htm">Advanced Demodulation (Synchronization)</a> &gt; <span class="chm-breadcrumb">Estimation Points/Sym</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor773">
+</a><a name="kanchor774">
+</a><div class="function_heading"><a name="ID_83ba2ac6819f13120a00206a002792b9-98ce8ff6410963710a00206a00a7855c-en-US">
+</a><span style="font-weight: bold">Estimation Points/Sym</span></div><p>During synchronization, the measurement signal is matched to the reference signal and various signal parameters are calculated. You can define how many sample points are used for this calculation at each symbol.</p><p>For more information on estimation points per symbol see <a class="xref" href="988958d2f6234c73.htm#ID_95fa6139a3d2eecc0a00206a0055d4dc-184c8906411153460a00206a01532735-en-US">"Display Points Vs Estimation Points Per Symbol"</a>.</p><p>You can set the estimation points manually or let the VSA application decide how many estimation points to use.</p><p>If automatic mode is enabled, the VSA application uses the following settings, depending on the modulation type:</p><div class="block"><a name="ID_38d9eaeb5afb30d20a00206a01cfaa40-98ce8ff6410963710a00206a00a7855c-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Modulation</p></th><th valign="top"><p>Est. Points</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>PSK, QAM</p></td><td valign="top"><p>1</p></td></tr><tr class="evenrow"><td valign="top"><p>Offset QPSK</p></td><td valign="top"><p>2</p></td></tr><tr class="oddrow"><td valign="top"><p>FSK, MSK</p></td><td valign="top"><p>Capture Oversampling</p></td></tr></tbody></table></div><p>For manual mode, the following settings are available:</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"1"</p></td><td class="function_col_right"><p>The estimation algorithm takes only the symbol time instants into account</p></td></tr><tr><td class="function_col_left" valign="top"><p>"2"</p></td><td class="function_col_right"><p>Two points per symbol instant are used (required for Offset QPSK)</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Capture Oversampling"</p></td><td class="function_col_right"><p>The number of samples per symbol defined in the signal capture settings is used (see <a class="xref" href="7e4276c5656f4bec.htm#ID_e7e3186512886dfc0a00206a0152b768-98ce8ff6410963710a00206a00a7855c-en-US">"Sample Rate"</a>), i.e. all sample time instants are weighted equally</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="a679a43a308c4f36.htm#ID_229b937b45b2c23d0a00206a017905e5-c803d29b45b2b7dd0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>EPRate:</nobr>​<nobr>AUTO</nobr></a></p><p><a class="xref" href="d1017492e67211.htm#ID_81eaabce45b2b2010a00206a01fb62e6-49bc308845b2a38a0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>EPRate[:</nobr>​<nobr>VALue]</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

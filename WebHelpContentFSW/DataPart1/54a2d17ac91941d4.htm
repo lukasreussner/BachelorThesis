@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Data Input and Output|Input Source Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Radio Frequency Input</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdSignalSourceRF">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdSignalSourceRF">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSignalSourceRF">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdSignalSourceRF">
+</meta>
+        <meta name="topic-keyword" value="ePMSkIdIo">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdSignalSourceRF">
+</meta>
+        <meta name="topic-keyword" value="eSpurSkIdSignalSourceRF">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdSignalSourceRFCaptureMode">
+</meta>
+        <meta name="topic-id" value="966">
+</meta>
+        <meta name="topic-id" value="967">
+</meta>
+        <meta name="topic-id" value="968">
+</meta>
+        <meta name="topic-id" value="969">
+</meta>
+        <meta name="topic-id" value="970">
+</meta>
+        <meta name="topic-id" value="971">
+</meta>
+        <meta name="topic-id" value="972">
+</meta>
+        <meta name="topic-id" value="973">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d3d1dae82336afa80a710a31004fa43b-4b1a317214755d240a001ae71d4e703b-en-US;ID_c673cb20f4877df30a710a31002d881e-4b1a317214755d240a001ae71d4e703b-en-US;ID_9968e3b2d27bc7d60a001ae746963581-4b1a317214755d240a001ae71d4e703b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="4dc72d92b87a4ee9.htm">Data Input and Output</a> &gt; <a class="chm-breadcrumb" href="2a84fad068b747b6.htm">Input Source Settings</a> &gt; <span class="chm-breadcrumb">Radio Frequency Input</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1307">
+</a><a name="kanchor1308">
+</a><div class="chm-chaptertitle">Radio Frequency Input</div><p><b>Access</b>: "Overview" &gt; "Input/Frontend" &gt; "Input Source" &gt; "Radio Frequency"</p><div class="block" id="ID_c673cb20f4877df30a710a31002d881e-4b1a317214755d240a001ae71d4e703b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img6853679fd9a805760a001ae738e9fb2d_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_9968e3b2d27bc7d60a001ae746963581-4b1a317214755d240a001ae71d4e703b-en-US">
+</a>RF Input Protection</div><div class="block"><p>The RF input connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW must be protected against signal levels that exceed the ranges specified in the data sheet. Therefore, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is equipped with an overload protection mechanism for DC and signal frequencies up to 30<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz. This mechanism becomes active as soon as the power at the input mixer exceeds the specified limit. It ensures that the connection between RF input and input mixer is cut off.</p><p>When the overload protection is activated, an error message is displayed in the status bar ("INPUT OVLD"), and a message box informs you that the RF Input was disconnected. Furthermore, a status bit (bit 3) in the <span class="command">STAT:QUES:POW</span> status register is set. In this case you must decrease the level at the RF input connector and then close the message box. Then measurement is possible again. Reactivating the RF input is also possible via the remote command <a class="xref" href="c36f490da095483a.htm#ID_9974567cdc3e1a3d0a001ae70009ddaa-6a78712ddc3e19810a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>ATTenuation:</nobr>​<nobr>PROTection:</nobr>​<nobr>RESet</nobr></a>.</p></div></td></tr></table></div></div><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="092f2d20d0d14524.htm#ID_f990a387232248200a00206a01e3088e-5a95575c232248200a00206a0046d5dd-en-US" class="title_toc">Radio Frequency State</a></div><div class="function_block"><font face="Arial">└</font> <a href="be89007a5e584009.htm#ID_4eb8e7082300aaa30a00206a003f14f1-8e8006a02300aaa30a00206a0177f3fc-en-US" class="title_toc">Input Coupling</a></div><div class="function_block"><font face="Arial">└</font> <a href="c00e978a63aa453a.htm#ID_d844b5a72301285f0a00206a00d10652-8c7fdafdd9a3b37e0a001ae708057e4e-en-US" class="title_toc">Impedance</a></div><div class="function_block"><font face="Arial">└</font> <a href="76a9dcecce2f4885.htm#ID_364350b39f4431ba0a001ae76c93e7a2-63759dea9f4431ba0a001ae7624c745e-en-US" class="title_toc">Direct Path</a></div><div class="function_block"><font face="Arial">└</font> <a href="9ada201918e7472d.htm#ID_1540987b69f0d50a0a00206a0065c502-537d384a69f0d50a0a00206a01692c76-en-US" class="title_toc">High Pass Filter 1 to 3 GHz</a></div><div class="function_block"><font face="Arial">└</font> <a href="17123d7216d04301.htm#ID_c2dbf37ed9ec45dd0a00206a00b3776f-f6b9a26d2307bd7b0a00206a016af4ef-en-US" class="title_toc">YIG-Preselector</a></div><div class="function_block"><font face="Arial">└</font> <a href="68170032f3a14b81.htm#ID_2eb98dd5f5eeda4b0a71003a01c5970f-22b42510f5ef1bf80a001ae76c33e69e-en-US" class="title_toc">Preselector Adjust</a></div><div class="function_block"><font face="Arial">└</font> <a href="15a7907108824f1f.htm#ID_7f0484aef48ff5f10a710a31002a5465-a9e436fef4d6ea3d0a002019004d8b38-en-US" class="title_toc">Input Connector</a></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

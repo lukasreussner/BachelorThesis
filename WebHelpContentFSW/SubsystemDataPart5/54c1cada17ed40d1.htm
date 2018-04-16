@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)|Analysis|Export Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k15.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		I/Q Export
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdIqExport">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdIqExportDlg">
+</meta>
+        <meta name="topic-keyword" value="ePMSkIdIqTarFileExport">
+</meta>
+        <meta name="topic-keyword" value="eWigigSkIdIqTarFileExport">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdIqTarFileExport">
+</meta>
+        <meta name="topic-id" value="1111">
+</meta>
+        <meta name="topic-id" value="1112">
+</meta>
+        <meta name="topic-id" value="1113">
+</meta>
+        <meta name="topic-id" value="1114">
+</meta>
+        <meta name="topic-id" value="1115">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a7bd0bab7bc9c6600a00206a01d95b28-60cb2e797bc9c6600a00206a00efdb8a-en-US;ID_4a3ee252d2cb51540a71003a017ee84e-60cb2e797bc9c6600a00206a00efdb8a-en-US;ID_3b588d8d5727e1fa0a71003a011716a2-60cb2e797bc9c6600a00206a00efdb8a-en-US;ID_d58ea103c4af4eb00a710ade01504325-60cb2e797bc9c6600a00206a00efdb8a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k15/Content/54c1cada17ed40d1.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)</a> &gt; <a class="chm-breadcrumb" href="729fbd6b838d4454.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="19929cb44d014fba.htm">Export Functions</a> &gt; <span class="chm-breadcrumb">I/Q Export</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor241">
+</a><a name="kanchor242">
+</a><a name="kanchor243">
+</a><div class="function_heading"><a name="ID_a7bd0bab7bc9c6600a00206a01d95b28-60cb2e797bc9c6600a00206a00efdb8a-en-US">
+</a>I/Q Export</div><p>Opens a file selection dialog box to define an export file name to which the I/Q data is stored. This function is only available in single sweep mode.</p><p>For details, see <a class="xref" href="../../fsw_iqanalyzer/Content/2b759318b3654a88.htm">I/Q Data Import and Export</a>.</p><p><b><a name="ID_4a3ee252d2cb51540a71003a017ee84e-60cb2e797bc9c6600a00206a00efdb8a-en-US">
+</a>Note:</b> Storing large amounts of I/Q data (several Gigabytes) can exceed the available (internal) storage space on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. In this case, it can be necessary to use an external storage medium.<br/></p><p><b><a name="ID_3b588d8d5727e1fa0a71003a011716a2-60cb2e797bc9c6600a00206a00efdb8a-en-US">
+</a>Note:</b> I/Q data cannot be imported in MSRT mode; however, you can use the I/Q Analyzer or (optional) Transient Analysis applications, for example, to import and analyze the exported I/Q data in Signal and Spectrum Analyzer mode later.<br/></p><p><b><a name="ID_d58ea103c4af4eb00a710ade01504325-60cb2e797bc9c6600a00206a00efdb8a-en-US">
+</a>Note:</b> Secure user mode. <div class="block"><p>In secure user mode, settings that are stored on the instrument are stored to volatile memory, which is restricted to 256<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MB. Thus, a "memory limit reached" error can occur although the hard disk indicates that storage space is still available.</p><p>To store data permanently, select an external storage location such as a USB memory device.</p><p>For details, see <a class="xref" href="../../../Content/d07bb3f7ad6e4543.htm">Protecting Data Using the Secure User Mode</a>.</p></div></p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

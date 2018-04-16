@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Uplink (R&amp;S FSW-K10x)|Measurements and Result Displays|I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_ul.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Bit Stream</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkId_Statistics_Bitsream_UL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridBitstream_UL">
+</meta>
+        <meta name="topic-id" value="341">
+</meta>
+        <meta name="topic-id" value="342">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_01d9f943025338060a00206a01160ed4-a9f8487327f73aec0a00206a016a15e2-en-US;ID_3a60c7cd44e4c1dc0a710a9201a69790-a9f8487327f73aec0a00206a016a15e2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_ul/Content/8204841c2ee346c9.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Uplink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="4664a4ef11444407.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="08f8b7e16fa0470e.htm">I/Q Measurements</a> &gt; <span class="chm-breadcrumb">Bit Stream</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor38">
+</a><a name="kanchor39">
+</a><div class="function_heading"><a name="ID_01d9f943025338060a00206a01160ed4-a9f8487327f73aec0a00206a016a15e2-en-US">
+</a><span style="font-weight: bold">Bit Stream</span></div><p>Starts the Bit Stream result display.</p><p>This result display shows the demodulated data stream for each data allocation. Depending on the <a class="xref" href="3d8a451a395d4c1a.htm#ID_65308e0c5dc3b93a0a00206a0091b4dc-2ce86669e57c6a3b0a00206a014b7e09-en-US">"Bit Stream Format"</a>, the numbers represent either bits (bit order) or symbols (symbol order).</p><p>Selecting symbol format shows the bit stream as symbols. In that case, the bits belonging to one symbol are shown as hexadecimal numbers with two digits. In the case of bit format, each number represents one raw bit.</p><p>Symbols or bits that are not transmitted are represented by a "-".</p><p>If a symbol could not be decoded because the number of layers exceeds the number of receive antennas, the application shows a "#" sign.</p><div class="block" id="ID_3a60c7cd44e4c1dc0a710a9201a69790-a9f8487327f73aec0a00206a016a15e2-en-US"><div class="graphic"><img border="0" src="Resources/Images/img91eb4d799104dd330a002019014d7246_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>The table contains the following information:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><b>Subframe</b><br/>Number of the subframe the bits belong to.</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><b>Allocation ID</b><br/>Channel the bits belong to.</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><b>Codeword</b><br/>Code word of the allocation.</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><b>Modulation</b><br/>Modulation type of the channels.</li><li style="margin-bottom:0; padding-bottom:0;" value="5"><b>Symbol Index</b> or <b>Bit Index</b><br/>Shows the position of the table row's first bit or symbol within the complete stream.</li><li style="margin-bottom:0; padding-bottom:0;" value="6"><b>Bit Stream</b><br/>The actual bit stream.</li></ul></div>Remote command: <div class="rcclist_right"><p>Selecting the result display: <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD ? '1',LEFT,BSTR</a></p><p>Querying results: <a class="xref" href="2a68bdc59d6b4c2f.htm#ID_aa009e916aea50090a00206a002b5468-e105822eede164a10a001ae740a572b2-en-US">TRACe:DATA?</a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

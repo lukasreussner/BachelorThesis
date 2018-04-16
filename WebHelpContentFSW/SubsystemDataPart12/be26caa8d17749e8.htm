@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Troubleshooting the Measurement|Frequently Asked Questions|Issues with Numeric Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Question: Why doesn't my BER measurement provide results?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1eba2fd3ad8611e6b92cb08d8ce88bc0-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1c0026aadac1410a.htm">Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="d012716047bc4546.htm">Frequently Asked Questions</a> &gt; <a class="chm-breadcrumb" href="30b4cd43d59c445b.htm">Issues with Numeric Results</a> &gt; <span class="chm-breadcrumb">Question: Why doesn't my BER measurement provide results?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_1eba2fd3ad8611e6b92cb08d8ce88bc0-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">
+</a>Question: Why doesn't my BER measurement provide results?</div><p>As a prerequisite for the BER measurement, the R&amp;S FSW VSA application must know which bit sequences may occur. This data can be provided in a known data file (see <a class="xref" href="ba709fbefc6b4a2b.htm#ID_6fec54491c21d61b0a710a31014a12de-d0ec2a1d410ee47b0a00206a013e80e3-en-US">"How to Work With Known Data Files"</a>). If the measurement fails despite a loaded known data file, check the following issues:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">If you used an external reference during recording and there is no pattern within the signal, phase ambiguities might have been missed during recording.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">If you used a trigger during recording and more than one measurement was performed within the capture buffer, the required sequence may not have been recorded. The recording tool only records the first result range within the capture buffer.</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

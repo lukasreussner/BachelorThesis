@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Troubleshooting" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Error Messages in Remote Control Mode</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_00c75a82cba8403b0a00206a019451d2-413ffc5c8ee93e6b0a001ae733e320ac-en-US;ID_2469225a246318760a00206a014d7dcc-413ffc5c8ee93e6b0a001ae733e320ac-en-US;shiv_9_errors_new_0019-413ffc5c8ee93e6b0a001ae733e320ac-en-US;shiv_FSV_K9_0574-413ffc5c8ee93e6b0a001ae733e320ac-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="9d910e570dd84690.htm">Troubleshooting</a> &gt; <span class="chm-breadcrumb">Error Messages in Remote Control Mode</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Error Messages in Remote Control Mode</div><p>In remote control mode error messages are entered in the error/event queue of the status reporting system and can be queried with the command <span class="command">SYSTem:ERRor?</span>. The answer format of R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to the command is as follows:</p><p><span class="command">&lt;error code&gt;, "&lt;error text with queue query&gt;;</span><span class="command">&lt;remote control command concerned&gt;"</span></p><p>The indication of the remote control command with prefixed semicolon is optional.</p><div class="block"><span class="bold"><a name="ID_2469225a246318760a00206a014d7dcc-413ffc5c8ee93e6b0a001ae733e320ac-en-US">
+</a>Example: </span><p>The command <span class="command">TEST:COMMAND</span> generates the following answer to the query <span class="command">SYSTem:ERRor?</span></p><p><span class="command">-113,"Undefined header;TEST:COMMAND"</span></p></div><p>There are two types of error messages:</p><div class="block"><ul class="list"><li value="1">Error messages defined by SCPI are marked by negative error codes. These messages are defined and described in the SCPI standard and not listed here.</li><li value="2">Device-specific error messages use positive error codes. These messages are described below.</li></ul></div><div class="block"><a name="shiv_9_errors_new_0019-413ffc5c8ee93e6b0a001ae733e320ac-en-US">
+</a><a name="kanchor3329">
+</a><span class="table-caption">Device-specific error messages</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Error code</p></th><th valign="top"><p>Error text in the case of queue poll</p><p>Error explanation</p></th></tr></thead><tbody><tr class="oddrow" valign="top"><td valign="top"><p>1006</p><a name="kanchor3330">
+</a></td><td valign="top"><p><b>Failed to connect to server (code. 1006)</b></p><p>LXI web browser access to the instrument has been deactivated.</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p>1052</p></td><td valign="top"><p><b>Frontend LO is Unlocked</b></p><p>This message is displayed when the phase regulation of the local oscillator fails in the RF front-end.</p></td></tr><tr class="oddrow" valign="top"><td valign="top"><p>1060</p></td><td valign="top"><p><b>Trigger-Block Gate Delay Error- gate length &lt; Gate Delay</b></p><p>This message is displayed when the gate signal length is not sufficient for the pull-in delay with a predefined gate delay.</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p>1064</p></td><td valign="top"><p><b>Tracking LO is Unlocked</b></p><p>This message is displayed when the phase regulation of the local oscillator fails on the external generator module.</p></td></tr><tr class="oddrow" valign="top"><td valign="top"><p>2028</p></td><td valign="top"><p><b>Hardcopy not possible during measurement sequence</b></p><p>This message is displayed when a printout is started during scan sequences that cannot be interrupted. Such sequences are for example:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Recording the system error correction data (alignment)</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Instrument self-test</li></ul></div><p>In such cases synchronization to the end of the scan sequence should be performed prior to starting the printout.</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p>2033</p></td><td valign="top"><p><b>Printer Not Available</b></p><p>This message is displayed when the selected printer is not included in the list of available output devices. A possible cause is that the required printer driver is missing or incorrectly installed.</p></td></tr><tr class="oddrow" valign="top"><td valign="top"><p>2034</p></td><td valign="top"><p><b>CPU Temperature is too high</b></p><p>This message is displayed when the temperature of the processor exceeds 70 °C.</p></td></tr></tbody></table></div><div class="block"><a name="shiv_FSV_K9_0574-413ffc5c8ee93e6b0a001ae733e320ac-en-US">
+</a><span class="table-caption">Power Sensor errors</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Status bar message</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Zeroing could not be performed</p></td><td valign="top"><p>Zeroing could not be performed because the RF power applied is too high.</p></td></tr><tr class="evenrow"><td valign="top"><p>Power sensor zero failed</p></td><td valign="top"> </td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

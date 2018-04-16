@@ -1,0 +1,25 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Emulating Other Instruments' Commands|Reference: GPIB Commands of Emulated HP Models" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Data Output Formats</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_6b_remote_commands_basic_4606-7967d66ea0014c710a00206a01899a59-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9905538076f04781.htm">Emulating Other Instruments' Commands</a> &gt; <a class="chm-breadcrumb" href="d25b76b4562e4429.htm">Reference: GPIB Commands of Emulated HP Models</a> &gt; <span class="chm-breadcrumb">Data Output Formats</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Data Output Formats</div><p>In the case of the SCPI and IEEE488.2 standards, the output formats for numerical data are flexible to a large extent. The output format for the HP units, by contrast, is accurately defined with respect to the number of digits. The memory areas for reading instrument data have therefore been adapted accordingly in the remote-control programs for instruments of this series.</p><p>Therefore, in response to a query, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW returns data of the same structure as that used by the original instruments; this applies in particular to the number of characters returned.</p><p>Two formats are currently supported when trace data is output: Display Units (command O1) and physical values (command O2, O3 or TDF P). As to the "Display Units" format, the level data of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is converted to match the value range and the resolution of the 8566/8568 series. Upon transition to the <b>REMOTE</b> state, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is reconfigured such that the number of test points (trace points) corresponds to that of the 85xx families (1001 for 8566A/B and 8568A/B, 601 for 8560E to 8565E, 401 for 8594E).</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

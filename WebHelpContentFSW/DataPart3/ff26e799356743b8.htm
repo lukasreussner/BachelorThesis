@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="General Instrument Setup|Alignment" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Basics on Alignment</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4627711690936a480a710a31003ca41c-c99de3b2fe1ffc270a001ae76b837433-en-US;ID_aee270f8142a8fbb0a001ae75db839f1-c99de3b2fe1ffc270a001ae76b837433-en-US;ID_9238b559c80a362d0a00206a014eaff3-c99de3b2fe1ffc270a001ae76b837433-en-US;ID_4e8833d77b740fb20a001ae70bfc1d8f-c99de3b2fe1ffc270a001ae76b837433-en-US;ID_ad30a1179095e7be0a710a31013636ed-c99de3b2fe1ffc270a001ae76b837433-en-US;shiv_4b_instrument_functions_0813-c99de3b2fe1ffc270a001ae76b837433-en-US;ID_0593d2e67458f0660a00206a00dbb814-c99de3b2fe1ffc270a001ae76b837433-en-US;ID_924201c89095e79f0a710a31001576fa-c99de3b2fe1ffc270a001ae76b837433-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="c702547bd1064afb.htm">General Instrument Setup</a> &gt; <a class="chm-breadcrumb" href="12e705d131f24e61.htm">Alignment</a> &gt; <span class="chm-breadcrumb">Basics on Alignment</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2414">
+</a><div class="chm-chaptertitle">Basics on Alignment</div><p>When you put the instrument into operation for the first time or when strong temperature changes occur, align the data to a reference source (see <a class="xref" href="#ID_0593d2e67458f0660a00206a00dbb814-c99de3b2fe1ffc270a001ae76b837433-en-US">"Temperature check"</a>).</p><p>The correction data and characteristics required for the alignment are determined by the firmware. It compares the results at different settings with the known characteristics of the high-precision calibration signal source at 64<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Depending on the installation settings, an automatic self-alignment is performed directly after installation, and a dialog is displayed indicating how much warm-up time is still required before self-alignment can be performed.</p></td></tr></table></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><a name="kanchor2415">
+</a><a name="kanchor2416">
+</a><p>During instrument start, the firmware checks whether the installed hardware is supported. If not, an error message is displayed ("Wrong Firmware Version") and you are asked to update the firmware. Until the firmware version is updated, self-alignment fails.</p></td></tr></table></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>If you start a self-alignment remotely and then select the "Local" softkey while the alignment is still running, the instrument only returns to the manual operation state after the alignment is completed.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_ad30a1179095e7be0a710a31013636ed-c99de3b2fe1ffc270a001ae76b837433-en-US">
+</a>Alignment results</div></div><a name="kanchor2417">
+</a><p>The alignment results are displayed and contain the following information:</p><div class="block"><ul class="list"><li value="1">Date and time of last correction data record</li><li value="2">Overall results of correction data record</li><li value="3">List of found correction values according to function/module</li></ul></div><p>The results are classified as follows:</p><div class="block"><a name="shiv_4b_instrument_functions_0813-c99de3b2fe1ffc270a001ae76b837433-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p><b>PASSED</b></p></td><td valign="top"><p>Calibration successful without any restrictions</p></td></tr><tr class="evenrow"><td valign="top"><p><b>CHECK</b></p></td><td valign="top"><p>Deviation of correction value larger than expected, correction could however be performed</p></td></tr><tr class="oddrow"><td valign="top"><p><b>FAILED</b></p></td><td valign="top"><p>Deviations of correction value too large, no correction was possible. The found correction data is not applicable.</p></td></tr></tbody></table></div><p>The results are available until the next self-alignment process is started or the instrument is switched off.</p><div class="block"><div class="subtitle"><a name="ID_0593d2e67458f0660a00206a00dbb814-c99de3b2fe1ffc270a001ae76b837433-en-US">
+</a>Temperature check</div></div><a name="kanchor2418">
+</a><a name="kanchor2419">
+</a><a name="kanchor2420">
+</a><a name="kanchor2421">
+</a><a name="kanchor2422">
+</a><a name="kanchor2423">
+</a><p>During self-alignment, the instrument's (frontend) temperature is also measured (as soon as the instrument has warmed up completely). This temperature is used as a reference for a continuous temperature check during operation. If the current temperature deviates from the stored self-alignment temperature by a certain degree, a warning is displayed in the status bar. The warning indicates the resulting deviation in the measured power levels. A status bit in the <span class="command">STATUs:QUEStionable:TEMPerature</span> register indicates a possible deviation. The current temperature of the RF frontend can be queried using a remote command (see <a class="xref" href="8a46088949984f11.htm#shiv_6b_remote_commands_basic_2035-7ff9065fb297e0e20a00201900344b6c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SOURce:</nobr>​<nobr>TEMPerature:</nobr>​<nobr>FRONtend?</nobr></a>).</p><div class="block"><div class="subtitle"><a name="ID_924201c89095e79f0a710a31001576fa-c99de3b2fe1ffc270a001ae76b837433-en-US">
+</a>Touchscreen alignment</div></div><a name="kanchor2424">
+</a><a name="kanchor2425">
+</a><p>When the device is delivered, the touchscreen is initially calibrated. However, to ensure that the touchscreen responds to the finger contact correctly, a touchscreen alignment is required.</p><div class="block"><div class="listintro">Alignment of the touchscreen is useful:</div><ul class="list"><li value="1">At first use</li><li value="2">After an image update or after exchanging a hard disk</li><li value="3">If you notice that touching a specific point on the screen does not achieve the correct response</li><li value="4">If the position of the instrument has been changed and you cannot look straight on the screen</li><li value="5">If another person operates the instrument</li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

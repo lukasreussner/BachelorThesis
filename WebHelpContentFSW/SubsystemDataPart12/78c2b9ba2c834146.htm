@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Capture Buffer Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e43b749d38c64e410a001ae7308b03c0-00d6486d389f6b7d0a001ae7386bb539-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="673f84be7f234710.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="3cfd556346bb45bd.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Capture Buffer Results</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1178">
+</a><div class="chm-chaptertitle">Capture Buffer Results</div><p>For the result displays based on the capture buffer, the command returns the y-axis values of the data that is stored in the capture buffer. The number of returned values depends on the size of the capture buffer and the sample rate. For example, a capture buffer size of 500 symbols in combination with a sample rate of 4 would return 2000 level values.</p><div class="block"><div class="listintro">The scaling of the capture buffer depends on the input source:</div><ul class="list"><li value="1">Scaling is relative to the current reference level for RF input.</li><li value="2">Scaling is relative to the full scale level for I/Q input.</li></ul></div><p>The unit is dBm.</p><p>Note that the trace results return only the values for the currently displayed capture buffer <em>range</em> (see also <a class="xref" href="9adaf6b700e94674.htm#ID_a56f7a4f6786b45c0a00201901969e40-184c8906411153460a00206a01532735-en-US">"Capture Buffer Display"</a>). For the Magnitude Overview Absolute result display, this command returns a maximum of 25,000 values (corresponding to the displayed trace points).</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>You can query the x-value that relates to the first value of the y-axis using <a class="xref" href="a371e93c19e04301.htm#ID_9404394e45b000ed0a00206a00aeffba-d439d64545aff6ac0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>X[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>STARt?</nobr></a>.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

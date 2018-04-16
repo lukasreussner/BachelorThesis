@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Remote Commands for Analog Demodulation Measurements|Configuring the Measurement|Triggering" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring the Triggering Conditions</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_22400115403552b40a00206a00c47d78-c3524b74403552b40a00206a00096423-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="4777278d10bc498a.htm">Remote Commands for Analog Demodulation Measurements</a> &gt; <a class="chm-breadcrumb" href="981d9d678f1c4fa3.htm">Configuring the Measurement</a> &gt; <a class="chm-breadcrumb" href="17b35b60956445a3.htm">Triggering</a> &gt; <span class="chm-breadcrumb">Configuring the Triggering Conditions</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Configuring the Triggering Conditions</div><p>The following commands are required to configure a triggered measurement.</p>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="bdb38266cbce4499.htm#ID_aabb497e33b022be0a00206a01e51805-49cd5541ddfb67da0a00206a01c8f64b-en-US" class="title_toc">TRIGger[:SEQuence]:BBPower:HOLDoff</a><br/><a href="dd45393d1bc94c8a.htm#ID_31ddbbb9d06f1eb30a00206a01d8a98b-ac77fdf7d06f1eb30a00206a008174bd-en-US" class="title_toc">TRIGger[:SEQuence]:DTIMe</a><br/><a href="80641da3cd01482e.htm#ID_326049c82e5de0830a00206a003d2feb-32dde402ddfd6af90a00206a01339a18-en-US" class="title_toc">TRIGger[:SEQuence]:HOLDoff[:TIME]</a><br/><a href="061ccad9f8e04291.htm#ID_915daf962e5a4dac0a00206a01cfebaa-5c7b1ae2732fd5540a00206a01ddb572-en-US" class="title_toc">TRIGger[:SEQuence]:IFPower:HOLDoff</a><br/><a href="9fb99e5392bf4729.htm#ID_204855e92e5be4a50a00206a01818c2d-f7c7c49e300466140a00206a018d4cfc-en-US" class="title_toc">TRIGger[:SEQuence]:IFPower:HYSTeresis</a><br/><a href="a2a72aa986e5426d.htm#ID_a03eef0d2e5ce74f0a00206a018bba6b-9e6ae2813004f5e00a00206a01042c95-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel:BBPower</a><br/><a href="e4766545ed4f4923.htm#ID_a7081f9d2e5897440a00206a01f29c78-3f574d493005acdc0a00206a002f29f9-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel[:EXTernal&lt;port&gt;]</a><br/><a href="1975b13ccf5d489c.htm#ID_a7081f9d2e5897440a00206a01f29c78-b7554e1f30063b020a00206a006faeb2-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel:IFPower</a><br/><a href="415bdbef789346cf.htm#ID_a7081f9d2e5897440a00206a01f29c78-75ffe9937a3159d00a00206a00dba8fd-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel:IQPower</a><br/><a href="296560da2e8e49b8.htm#ID_31ddbbb9d06f1eb30a00206a01d8a98b-1b14760456e73c410a001ae7788214ae-en-US" class="title_toc">TRIGger[:SEQuence]:OSCilloscope:COUPling</a><br/><a href="b608bb97a1ac460d.htm#ID_a7081f9d2e5897440a00206a01f29c78-4525dc1b3006b9e60a00206a01ddfe01-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel:RFPower</a><br/><a href="d1278330e49181.htm#shiv_FSV_K7_3244-2ffae3236a306cf00a00206a006aea73-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel:AM:RELative</a><br/><a href="d1278330e49210.htm#shiv_FSV_K7_3232-3e0b7d526a307caf0a00206a014d4c02-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel:AM[:ABSolute]</a><br/><a href="d1278330e49239.htm#shiv_FSV_K7_3256-54b1f0a36a308b260a00206a007fc732-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel:FM</a><br/><a href="d1278330e49273.htm#shiv_FSV_K7_3268-7404a8096a3098940a00206a015d3c4c-en-US" class="title_toc">TRIGger[:SEQuence]:LEVel:PM</a><br/><a href="9c455006f73748d5.htm#ID_ce81cfc82e5928870a00206a00ed43ad-3ae6891f3007d3640a00206a0000c25e-en-US" class="title_toc">TRIGger[:SEQuence]:SLOPe</a><br/><a href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" class="title_toc">TRIGger[:SEQuence]:SOURce</a><br/><a href="e507b70eed104daf.htm#ID_afb3f93ed8a5ebd40a00206a001f7002-027f5d1b3008bae60a00206a01553994-en-US" class="title_toc">TRIGger[:SEQuence]:TIME:RINTerval</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

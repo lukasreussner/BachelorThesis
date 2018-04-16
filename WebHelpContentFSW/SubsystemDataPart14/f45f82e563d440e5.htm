@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Measurements and Result Display" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Domain Analysis</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eBTDSSkIdCodeDomainAnalyzerK76FSPB">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdCodeDomainAnalyzerK77FSPB">
+</meta>
+        <meta name="topic-id" value="6">
+</meta>
+        <meta name="topic-id" value="7">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_beb9da67eae39af70a00206a011d1b32-a17c8fff6b754c540a0020190052c5dc-en-US;ID_9dcfb5502dd4151b0a00206a01d621a9-a17c8fff6b754c540a0020190052c5dc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="b393a5dcefed4a8f.htm">Measurements and Result Display</a> &gt; <span class="chm-breadcrumb">Code Domain Analysis</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor26">
+</a><a name="kanchor27">
+</a><a name="kanchor28">
+</a><div class="chm-chaptertitle">Code Domain Analysis</div><p><b>Access</b>: "Overview" &gt; "Select Measurement" &gt; "Code Domain Analyzer"</p><p>The Code Domain Analysis measurement provides various evaluation methods and result diagrams.</p><p>A signal section containing at least two TD-SCDMA subframes is recorded for analysis and then searched through to find the start of the first subframe. If a subframe start is found in the signal, the code domain power analysis is performed for the selected slot. The different evaluations are calculated from the captured I/Q data set. Therefore it is not necessary to start a new measurement to change the evaluation.</p><p>The TD-SCDMA applications provide the peak code domain error measurement and composite EVM specified by the TD-SCDMA standard, as well as the code domain power measurement of assigned and unassigned codes. The power can be displayed either for all channels in one slot, or for one channel in all slots. The composite constellation diagram of the entire signal can also be displayed. In addition, the symbols demodulated in a slot, their power, and the determined bits or the symbol EVM can be displayed for an active channel.</p><p>The power of a channel is always measured in relation to its symbol rate within the code domain. It can be displayed either as absolute values or relative to the total signal (data parts only). By default, the power relative to the total signal is displayed.</p><p>The composite EVM, peak code domain error and composite constellation measurements are also always referenced to the total signal.</p><div class="block"><div class="subtitle"><a name="ID_9dcfb5502dd4151b0a00206a01d621a9-a17c8fff6b754c540a0020190052c5dc-en-US">
+</a>Remote command:</div></div><p><span class="command">CONF:CDP[:BTS]:MEAS CDP</span>, see <a class="xref" href="f98bb254a72540ff.htm#ID_19adaf1468dbc2cb0a00206a01d73458-ba22ac95be4515920a002019008536fa-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>CDPower:</nobr>​<nobr>MEASurement</nobr></a></p><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="eafbf0ac2bc94b78.htm" class="chapter_title_toc">Code Domain Parameters</a></li><li value="2"><a href="ab3a345fb0634b6d.htm" class="chapter_title_toc">Evaluation Methods for Code Domain Analysis</a></li><li value="3"><a href="daf8bb6d38074544.htm" class="chapter_title_toc">CDA Measurements in MSRA Operating Mode</a></li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

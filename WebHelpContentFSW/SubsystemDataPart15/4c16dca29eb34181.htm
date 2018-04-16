@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Remote Commands for CDMA2000 Measurements|Configuring Code Domain Analysis|Channel Detection|Configuring Channel Tables" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CONFigure:CDPower:MS:CTABle:DATA</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K72_2653-240f3109cbc00c530a00206a011ff9a3-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="50c310d0c42e48e5.htm">Remote Commands for CDMA2000 Measurements</a> &gt; <a class="chm-breadcrumb" href="58ba2e20ba4f4930.htm">Configuring Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="ef34f35623f54366.htm">Channel Detection</a> &gt; <a class="chm-breadcrumb" href="fad677f08ba64958.htm">Configuring Channel Tables</a> &gt; <span class="chm-breadcrumb">CONFigure:CDPower:MS:CTABle:DATA</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><a name="kanchor875">
+</a><a name="kanchor876">
+</a><a name="kanchor877">
+</a><a name="kanchor878">
+</a><a name="kanchor879">
+</a><a name="kanchor880">
+</a><a name="kanchor881">
+</a><a name="kanchor882">
+</a><a name="kanchor883">
+</a><a name="kanchor884">
+</a><a name="kanchor885">
+</a><a name="kanchor886">
+</a><a name="kanchor887">
+</a><a name="kanchor888">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_FSV_K72_2653-240f3109cbc00c530a00206a011ff9a3-en-US">
+</a><span class="bold">CONFigure:CDPower:MS:CTABle:DATA </span>&lt;ChannelType&gt;, &lt;CodeClass&gt;, &lt;CodeNumber&gt;, &lt;Mapping&gt;, &lt;Reserved1&gt;, &lt;Reserved2&gt;, &lt;Status&gt;, &lt;CDPRelative&gt;<br/></div><div class="rcdescription"><p>This command defines a channel table. The following description applies to MS mode only. For BTS mode, see <a class="xref" href="d36e46529.htm#shiv_FSV_K72_2653-617de2e68c9145dd0a00206a01df84a2-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>CDPower[:</nobr>​<nobr>BTS]:</nobr>​<nobr>CTABle:</nobr>​<nobr>DATA</nobr></a>.</p><p>Before using this command, you must set the name of the channel table using the <a class="xref" href="d36e46864.htm#shiv_FSV_K72_2635-6465124e8c9152af0a00206a018322ac-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>CDPower[:</nobr>​<nobr>BTS]:</nobr>​<nobr>CTABle:</nobr>​<nobr>NAME</nobr></a> command.</p><p>For a detailed description of the parameters refer to <a class="xref" href="aefce1e95610487f.htm#ID_ab3d7e0bb11811e09c948f65e6c4a698-b71653034984aa290a00206a0052ec9d-en-US">"MS Channel Details"</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ChannelType&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Numeric channel type according to <a class="xref" href="ef34f35623f54366.htm#ID_5c32c55bb1db11e0be5eb3f316136a86-7142e2d54984b2c40a00206a01258451-en-US">Table "MS channel types and their assignment to a numeric parameter value"</a></p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;CodeClass&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>2 to 4</nobr><br/><p>Code class depending on spreading factor; see <a class="xref" href="5fa20ee3b69a40c1.htm#ID_6cd49f86104f11e18e06993eae0b40a4-b7f661756d7580e80a00206a010113c9-en-US">Table "Relationship between various code parameters for CDMA2000 MS signals"</a></p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;CodeNumber&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>0…spreading factor-1</nobr><br/><p>Channel number (without SF)</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Mapping&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">0<br/></span><p>I branch</p><span class="bold">1<br/></span><p>Q branch</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Reserved1&gt;, &lt;Reserved2&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Always 0 (reserved for future use)</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Status&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>0: inactive, 1: active</p><p>Can be used in a setting command to disable a channel temporarily</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;CDPRelative&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Power value in dB.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">"INST:SEL M2K"</span><br/><p>'Activate cdma2000 MS mode</p><span class="commandline">"CONF:CDP:CTAB:NAME 'NEW_TAB'"</span><br/><p>'Select table to edit</p><span class="commandline">"CONF:CDP:MS:CTAB:DATA 0,4,0,0,65535,0,1,0, 1,4,0,0,43690,0,1,0, 2,2,2,1,65535,0,1,0"</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Mode: </span></td><td class="rc_col_content_left" colspan="2">MS mode only</td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="6f1d01ca4a944720.htm#ID_d0e1d31d3c757e230a00206a01ba3274-d46f5f7383074b990a00206a01ef871e-en-US">"Channel Type"</a><br/>See <a class="xref" href="0796d04918dd488d.htm#ID_ae8494243c77d39a0a00206a0008ac3f-9895eab7830741f40a00206a0090be7d-en-US">"Channel Number (Ch. SF)"</a><br/>See <a class="xref" href="45096f8fb35e426a.htm#ID_c6efb54c8326a1940a00206a01a52301-dc1c98128326a1940a00206a009d4087-en-US">"Power"</a><br/>See <a class="xref" href="98526d7129014318.htm#ID_112703383c79ce5f0a00206a012b1ec2-304dbd6f830756b40a00206a0047038f-en-US">"Status"</a></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Contents of the Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>IST Flag and Parallel Poll Enable Register (PPE)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1299a587c33aedf00a00206a015decb0-abcc88ccc33aedf00a00206a015e3f85-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="20b40c28f6194536.htm">Contents of the Status Registers</a> &gt; <span class="chm-breadcrumb">IST Flag and Parallel Poll Enable Register (PPE)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">IST Flag and Parallel Poll Enable Register (PPE)</div><a name="kanchor2785">
+</a><a name="kanchor2786">
+</a><p>As with the SRQ, the IST flag combines the entire status information in a single bit. It can be read by means of a parallel poll (see <a class="xref" href="dbbfcbda6d6742ce.htm#ID_4b2a4823c2d252780a00206a0085204a-20b33b79c2d252780a00206a000af11b-en-US">"Parallel Poll"</a>) or using the command <a class="xref" href="b923c7ef241646a1.htm#ID_0cec4e7f5c89b52e0a00206a005e6890-4d1a35215c89b52e0a00206a01553937-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>*IST?</nobr></a>.</p><p>The parallel poll enable register (PPE) determines which bits of the STB contribute to the IST flag. The bits of the STB are "ANDed" with the corresponding bits of the PPE, with bit 6 being used as well in contrast to the SRE. The IST flag results from the "ORing" of all results. The PPE can be set using commands <a class="xref" href="9acd1993cf494443.htm#ID_bdfe5cc05ca881850a00206a00a9b1d6-cd729d8c5ca881850a00206a00fddeb8-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>*PRE</nobr></a> and read using command *PRE?.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

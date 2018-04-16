@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Multi-Carrier Group Delay (R&amp;S FSW-K17)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k17.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>The Multi-Carrier Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b83581861f7bf51e0a00206a014f2be9-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_d930a96efb23afe20a00206a004e1949-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_178a29defb23afe20a00206a0185c5d4-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_944b5785fb23afe20a00206a00db668d-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_f64947ef1f7bf51e0a00206a003a74dc-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_726d7b73f5fde0330a001ae71e061a66-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_ab0a7d7f1a6ed6fc0a00206a01511e1d-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_2a7e3ad21f7bf51e0a00206a011f9b71-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_7abd23841f7bf51e0a00206a006b659c-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_5046e07a1a505cec0a00206a00d1e0e7-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_2dbadb7c1f7bf51e0a00206a0157e5b3-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_d1817e56161af4ee0a001ae775dde8e4-9b70f648ccc647dd0a00206a016c8f05-en-US;ID_54d5b71e161af4ee0a001ae73ac4e908-9b70f648ccc647dd0a00206a016c8f05-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k17/Content/b3123a1a38c646db.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Multi-Carrier Group Delay (R&amp;S FSW-K17)</a> &gt; <a class="chm-breadcrumb" href="9281e9bebab744c2.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">The Multi-Carrier Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor51">
+</a><div class="chm-chaptertitle">The Multi-Carrier Measurement</div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Multi-Carrier Group Delay application evaluates an input signal provided by a signal generator. A signal consisting of several unmodulated carriers with a fixed step size is used as an input signal.</p><div class="block"><div class="subtitle"><a name="ID_d930a96efb23afe20a00206a004e1949-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Dependency of the span on the number of carriers</div></div><a name="kanchor52">
+</a><p>The frequency <b>span</b> to be swept during the measurement is determined by the number of carriers in the input signal and the spacing between them. It is recommended that you set the span according to the following equation:</p><p><span class="input">Span = (Number of carriers -1) * carrier spacing (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Δ</span>f)</span></p><div class="block"><span class="bold"><a name="ID_178a29defb23afe20a00206a0185c5d4-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Example: </span><p>A span <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≥</span> 3 * carrier spacing (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Δ</span>f) is required to measure a signal with four carriers.</p><div class="block" id="ID_944b5785fb23afe20a00206a00db668d-9b70f648ccc647dd0a00206a016c8f05-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgdbf6dba2fb2299e00a00206a0060f20c_1_--_--_PNG96.png" alt="" title=""/></div></div></div><p>As a rule, the span can only be defined as a multiple of the carrier spacing.</p><div class="block"><div class="subtitle"><a name="ID_f64947ef1f7bf51e0a00206a003a74dc-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Center frequency and carrier offset</div></div><a name="kanchor53">
+</a><a name="kanchor54">
+</a><p>If the carriers are not aligned with the defined center frequency, the offset can be estimated automatically; the carrier frequencies with the fixed offset are then used to improve the calculation.</p><div class="block"><div class="subtitle"><a name="ID_726d7b73f5fde0330a001ae71e061a66-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Carrier estimation</div></div><a name="kanchor55">
+</a><p>If the carrier frequencies are distorted due to the Doppler-effect, the frequencies for each carrier can be estimated, thus improving the results of the group delay.</p><div class="block"><div class="subtitle"><a name="ID_ab0a7d7f1a6ed6fc0a00206a01511e1d-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Demodulation bandwidth</div></div><p>The bandwidth to be demodulated during the measurement is determined automatically by the application from the defined span and carrier spacing.</p><div class="block"><div class="subtitle"><a name="ID_2a7e3ad21f7bf51e0a00206a011f9b71-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Measurement time</div></div><a name="kanchor56">
+</a><p>The required duration of the measurement can be determined automatically by the application according to the defined carrier spacing and span, or it can be configured manually.</p><div class="block"><div class="subtitle"><a name="ID_7abd23841f7bf51e0a00206a006b659c-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Averaging results</div></div><a name="kanchor57">
+</a><a name="kanchor58">
+</a><p>The calculated values can be averaged over several sweeps in order to obtain more reliable results.</p><div class="block"><div class="subtitle"><a name="ID_5046e07a1a505cec0a00206a00d1e0e7-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Orthogonal calculation method</div></div><a name="kanchor59">
+</a><a name="kanchor60">
+</a><a name="kanchor61">
+</a><a name="kanchor62">
+</a><a name="kanchor63">
+</a><p>The orthogonal calculation method aligns the trace points in the result display to the carrier frequencies of the input signal. To do so, a DFT window length equaling 1/<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Δ</span>f is used.</p><div class="block"><div class="subtitle"><a name="ID_2dbadb7c1f7bf51e0a00206a0157e5b3-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Absolute vs relative group delay</div></div><a name="kanchor64">
+</a><a name="kanchor65">
+</a><p>By default, the group delay is calculated relative to the reference signal, eliminating any constant delay factors. Optionally, the reference carrier frequency for relative measurements can be defined manually.</p><p>Alternatively, if an external trigger is used, the absolute group delay can also be calculated. In this case, the trigger uncertainty for the current measurement bandwidth is indicated and considered as an additional error in the group delay calculation.</p><div class="block"><div class="subtitle"><a name="ID_d1817e56161af4ee0a001ae775dde8e4-9b70f648ccc647dd0a00206a016c8f05-en-US">
+</a>Unambiguous group delay results</div></div><p>In the time domain, a multi-carrier signal with a group delay of 1/&lt;CarrierSpacing&gt; simply repeats itself. The result is the same as a signal with a group delay of 0. The R&amp;S FSW MCGD application can not distinguish the two signals. Therefore, any group delays larger than 1/&lt;CarrierSpacing&gt; are no longer unambiguous.</p><p>The range in which unambiguous group delay results can be measured is defined by the following equation:</p><div class="block" id="ID_54d5b71e161af4ee0a001ae73ac4e908-9b70f648ccc647dd0a00206a016c8f05-en-US"><div class="graphic"><img border="0" src="Resources/Images/img6fbe7e0c16022cd50a001ae77a02bba7_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption">Range in which unambiguous group delay results can be measured</div></div><p>Any group delay that exceeds this range is wrapped back into the unambiguous range. To avoid ambiguous results, define the carrier spacing such that the expected group delay does not exceed the unambiguous range.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

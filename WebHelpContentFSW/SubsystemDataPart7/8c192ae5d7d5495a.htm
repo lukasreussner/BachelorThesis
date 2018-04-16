@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Configuring Amplifier Measurements|Configuring the Parameter Sweep" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Synchronizing the levels of signal generator and analyzer</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eETSkId_CoupleLevel">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdPS_Gain">
+</meta>
+        <meta name="topic-id" value="493">
+</meta>
+        <meta name="topic-id" value="495">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ccb1e64c712b1cec0a001ae76baa5a37-b9ada80d712b1cec0a001ae77d090819-en-US;ID_480d3a706faa7cb30a001ae71160fc1d-b9ada80d712b1cec0a001ae77d090819-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/8c192ae5d7d5495a.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="514ce2c6787d4307.htm">Configuring Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="670b9fcbc52b4bfa.htm">Configuring the Parameter Sweep</a> &gt; <span class="chm-breadcrumb">Synchronizing the levels of signal generator and analyzer</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor333">
+</a><div class="function_heading"><a name="ID_ccb1e64c712b1cec0a001ae76baa5a37-b9ada80d712b1cec0a001ae77d090819-en-US">
+</a>Synchronizing the levels of signal generator and analyzer</div><p>When you sweep the output level of the generator, make sure to synchronize the reference level of the analyzer and the RMS level of the generator to avoid damage to the RF input of the analyzer (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">➙</span> "Couple FSx and SMx Level"). When you do so, the application automatically adjusts the reference level of the analyzer to the output level of the generator.</p><p>Note that it is mandatory to define the "Expected Gain" of the DUT. Otherwise the synchronization between the levels might fail or lead to invalid results.</p><p><b><a name="ID_480d3a706faa7cb30a001ae71160fc1d-b9ada80d712b1cec0a001ae77d090819-en-US">
+</a>NOTICE!</b> Risk of damage to the RF input of the analyzer. <span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><br/>Make sure to define the correct "Expected Gain". Otherwise the gain of the amplifier will not be taken into account during the level changes on signal analyzer and generator, which in turn might lead to a high level signal damaging or destroying the RF input mixer of the analyzer.<br/>With a correct "Expected Gain" value, however, the application is able to attenuate the signal accordingly.<br/></p>Remote command: <div class="rcclist_right"><p>Synchronization state: <a class="xref" href="afcfe73dd8f74eee.htm#ID_a3bc336558637fb00a001ae72e96c7b2-b110a7c758637ce20a001ae735e62b8f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>PSWeep:</nobr>​<nobr>ADJust:</nobr>​<nobr>LEVel[:</nobr>​<nobr>STATe]</nobr></a></p><p>Expected gain: <a class="xref" href="ce4cd7a776014384.htm#ID_d4f2bed2586382120a001ae72311e1bd-c1d1f13c5863804d0a001ae735e62b8f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>PSWeep:</nobr>​<nobr>EXPected:</nobr>​<nobr>GAIN</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

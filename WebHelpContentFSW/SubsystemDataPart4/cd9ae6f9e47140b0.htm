@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Importing and Exporting I/Q Data and Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>MMEMory:STORe&lt;n&gt;:IQ:STATe</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_857ab52733c963080a00206a0187c1ac-7d2254b32089ea840a00206a0136ae5f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="84805a3a1a31468b.htm">Importing and Exporting I/Q Data and Results</a> &gt; <span class="chm-breadcrumb">MMEMory:STORe&lt;n&gt;:IQ:STATe</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_857ab52733c963080a00206a0187c1ac-7d2254b32089ea840a00206a0136ae5f-en-US">
+</a><span class="bold">MMEMory:STORe&lt;n&gt;:IQ:STATe </span>1, &lt;FileName&gt;<br/></div><div class="rcdescription"><p>This command writes the captured I/Q data to a file.</p><p>The file extension is *.iq.tar. By default, the contents of the file are in 32-bit floating point format.</p><p><b>Secure User Mode</b></p><div class="block"><p>In secure user mode, settings that are stored on the instrument are stored to volatile memory, which is restricted to 256<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MB. Thus, a "memory limit reached" error can occur although the hard disk indicates that storage space is still available.</p><p>To store data permanently, select an external storage location such as a USB memory device.</p><p>For details, see <a class="xref" href="../../../Content/d07bb3f7ad6e4543.htm">Protecting Data Using the Secure User Mode</a>.</p></div></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>irrelevant</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Setting parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">1<br/></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;FileName&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>String containing the path and name of the target file.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p><span class="command">MMEM:STOR:IQ:STAT 1, 'C:\R_S\Instr\user\data.iq.tar'</span></p><p>Stores the captured I/Q data to the specified file.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="f612f85ebf5547d8.htm#ID_e86c7d4646743a2c0a00201901f646a7-77b9ab8e46743a2c0a00201901988934-en-US">"Programming Example: Determining the EVM"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Setting only<br/></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

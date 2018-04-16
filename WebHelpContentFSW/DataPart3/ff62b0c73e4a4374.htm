@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Spurious Emissions Measurement|Spurious Emissions Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Limit Lines in Spurious Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e3a3e4d5363d4ba10a710a31003fa50b-238389b206df62020a00206a01166944-en-US;ID_accf48603a654b0a0a710a310032af89-238389b206df62020a00206a01166944-en-US;ID_845674563a7bbd400a710a3100d854d8-238389b206df62020a00206a01166944-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="ad4325f75d6244b2.htm">Spurious Emissions Measurement</a> &gt; <a class="chm-breadcrumb" href="54452cce5bcb4fd2.htm">Spurious Emissions Basics</a> &gt; <span class="chm-breadcrumb">Limit Lines in Spurious Measurements</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor941">
+</a><a name="kanchor942">
+</a><div class="chm-chaptertitle">Limit Lines in Spurious Measurements</div><p>Limit lines allow you to check the measured data against specified limit values. Generally, it is possible to define limit lines for any measurement in the Spectrum application using the LINES key. For Spurious measurements, however, a special limit line is available via the "Sweep List", and it is strongly recommended that you use only this limit line definition.</p><p>In the "Sweep List", you can define a limit line that varies its level according to the specified frequency ranges. A distinguished limit line is automatically defined according to the current "Sweep List" settings every time the settings change. This limit line is labeled "_SPURIOUS_LINE_ABS_&lt;xxx&gt;", where &lt;xxx&gt; is an index to distinguish limit lines between different channels.</p><p>If a limit check is activated in the "Sweep List", the "_SPURIOUS_LINE_ABS_&lt;xxx&gt;" limit line is indicated by a red line in the display. The result of the limit check is indicated at the top of the diagram. Note that only "Pass" or "Fail" is indicated; a margin function as for general limit lines is not available. Also, only absolute limits can be checked, not relative ones.</p><div class="block" id="ID_accf48603a654b0a0a710a310032af89-238389b206df62020a00206a01166944-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgaeba45b6db986dde0a00206a006c5f5a_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>As for general limit lines, the results of each limit line check are displayed (here: "_SPURIOUS_LINE_ABS_&lt;xxx&gt;"), as well as the combined result for all defined limit lines ("Limit Check").</p></td></tr></table></div></div><a name="kanchor943">
+</a><p>The limit check is considered to be "' failed!" if any signal level outside the absolute limits is measured.</p><p>If the limit check is activated, the limit line values for each range are displayed in the evaluation list. Furthermore, the largest deviations of the absolute power from the limit line for each range are displayed. Values that exceed the limit are indicated in red and by an asterisk (*).</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img">
+</img></td><td><p>Although a margin functionality is not available for the limit check, a margin (threshold) for the peak values to be displayed in the evaluation list can be defined. Furthermore, you can define how many peaks per range are listed. For details, see <a class="xref" href="728360fcd15a4c74.htm#ID_8168293be34564070a00206a0127ad0f-238389b206df62020a00206a01166944-en-US">"List Evaluation"</a>.</p></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

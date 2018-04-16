@@ -1,0 +1,129 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Remote Commands for EMI Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: EMI Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3c0f981148fed3fe0a710a31007a9c95-59b15751a8efdc5e0a00201900683aac-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="2002a25c45a64214.htm">Remote Commands for EMI Measurements</a> &gt; <span class="chm-breadcrumb">Programming Example: EMI Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3046">
+</a><a name="kanchor3047">
+</a><div class="chm-chaptertitle">Programming Example: EMI Measurement</div><p>This example demonstrates how to detect electromagnetic interferences (EMI) in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//----------- Preparing the measurement ------------
+//Reset the instrument
+*RST
+//Define the span to be analyzed
+FREQ:STAR 150kHz
+FREQ:STOP 1GHz
+//Configure two traces, one with peak detector, one with average detector
+DISP:TRAC1 ON
+DISP:TRAC2 ON
+DET1 POS
+DET2 AVER
+
+
+//----------- Configuring the measurement ------------
+//Select EMI measurement
+CALC:MARK:FUNC:FME:STAT ON
+//Configure CISPR filter and RBW
+BAND:TYPE CISP
+BAND:RES 1MHz
+//Define the dwell time
+CALC:MARK:FUNC:FME:DWEL 1ms
+//Configure an auto peak search
+CALC:MARK:FUNC:FME:PEAK:AUTO ON
+//Configure a logarithmic frequency scaling
+DISP:TRAC:X:SPAC LOG
+//Configure marker demodulation for marker 1
+CALC:MARK:FUNC:DEM ON
+//Increase the number of sweep points
+SWE:POIN 200000
+//Set the unit to V
+CALC:UNIT:POW V
+
+//----------- Configuring EMI markers ---------------
+//Activate 6 normal EMI markers
+CALC:MARK1 ON
+CALC:MARK2 ON
+CALC:MARK3 ON
+CALC:MARK4 ON
+CALC:MARK5 ON
+CALC:MARK6 ON
+//Set  markers 1 to 3  on trace 1. Set markers 4 to 6 on trace 2.
+CALC:MARK1:TRAC 1
+CALC:MARK2:TRAC 1
+CALC:MARK3:TRAC 1
+CALC:MARK4:TRAC 2
+CALC:MARK5:TRAC 2
+CALC:MARK6:TRAC 2
+//Use CISPR average detector for all markers during final test
+CALC:MARK1:FUNC:FME:DET CAV
+CALC:MARK2:FUNC:FME:DET CAV
+CALC:MARK3:FUNC:FME:DET CAV
+CALC:MARK4:FUNC:FME:DET CAV
+CALC:MARK5:FUNC:FME:DET CAV
+CALC:MARK6:FUNC:FME:DET CAV
+
+//----------- Configuring a limit check -------------
+//Select EN55011A.LIN as limit line 1
+CALC:LIM1:NAME "EN55011A.LIN"
+//Configure trace 1 to be checked against limit line 1
+CALC:LIM1:TRAC1:CHEC ON
+//Clear the results of all previous limit checks
+CALC:LIM:CLE
+
+//----------- Performing the Measurement ------------
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and wait until the sweep has finished.
+INIT;*WAI
+
+
+//------------ Retrieving Results -------------------
+//Query the results for the EMI measurement
+//First marker frequency, then final test level
+CALC:MARK1:X?
+CALC:MARK1:FUNC:FME:RES?
+CALC:MARK2:X?
+CALC:MARK2:FUNC:FME:RES?
+CALC:MARK3:X?
+CALC:MARK3:FUNC:FME:RES?
+CALC:MARK4:X?
+CALC:MARK4:FUNC:FME:RES?
+CALC:MARK5:X?
+CALC:MARK5:FUNC:FME:RES?
+CALC:MARK6:X?
+CALC:MARK6:FUNC:FME:RES?
+
+//Query the result of the limit check for trace 1
+CALC:LIM1:FAIL?
+//Query the result of the limit check and the distance from the limit line
+//for each marker
+CALC:MARK1:FUNC:FME:LIM1:COND?
+CALC:MARK1:FUNC:FME:LIM1:DELT?
+CALC:MARK2:FUNC:FME:LIM1:COND?
+CALC:MARK2:FUNC:FME:LIM1:DELT?
+CALC:MARK3:FUNC:FME:LIM1:COND?
+CALC:MARK3:FUNC:FME:LIM1:DELT?
+CALC:MARK4:FUNC:FME:LIM1:COND?
+CALC:MARK4:FUNC:FME:LIM1:DELT?
+CALC:MARK5:FUNC:FME:LIM1:COND?
+CALC:MARK5:FUNC:FME:LIM1:DELT?
+CALC:MARK6:FUNC:FME:LIM1:COND?
+CALC:MARK6:FUNC:FME:LIM1:DELT?
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

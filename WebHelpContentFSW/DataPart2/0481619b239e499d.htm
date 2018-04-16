@@ -1,0 +1,88 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Working with Markers|Programming Examples for Using Markers and Marker Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Basic  Markers</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7b05230886786e1f0a710a31005e4712-5ead00533d8b32370a00201901b8dc86-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="57a24637c8a048f0.htm">Working with Markers</a> &gt; <a class="chm-breadcrumb" href="806cef63805646a8.htm">Programming Examples for Using Markers and Marker Functions</a> &gt; <span class="chm-breadcrumb">Example: Basic Markers</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3227">
+</a><a name="kanchor3228">
+</a><div class="chm-chaptertitle">Example: Basic Markers</div><p>This example demonstrates how to configure and define markers for a basic spectrum measurement in a remote environment. It assumes that the basic frequency sweep described in <a class="xref" href="154b1387b81e4b54.htm#ID_1a60db9105d458720a710a3100121009-9feed69137344f0b0a00201900e8284f-en-US">"Programming Example: Performing a Basic Frequency Sweep"</a> has been performed and thus does not begin by presetting the instrument.</p><div class="verbatim"><pre class="verbatim_text">
+//--------------Configuring marker behavior ------------------
+DISP:MTAB ON
+//Marker information is always displayed in a separate table.
+CALC:MARK:X:SSIZ STAN
+//The marker moves from one pixel to the next instead of sweep points in manual op.
+CALC:MARK:PEXC 6dB
+//Defines a peak excursion of 6 dB.
+CALC:MARK:X:SLIM ON
+CALC:MARK:X:SLIM:LEFT 50MHz
+CALC:MARK:X:SLIM:RIGH 150MHz
+//Restricts the search area for peaks to the frequencies between 50 and 150 MHz.
+CALC:THR -100dBm
+CALC:THR:STAT ON
+//Configures a threshold level for peak searches at -100 dBm.
+
+//--------------Defining and positioning markers -------------
+CALC:MARK1 ON
+//Activates marker 1 and sets it to the peak of trace 1.
+CALC:MARK2:TRAC 2 
+//Activates marker 2 and sets it to the peak of trace 2.
+CALC:MARK3:X 150MHz
+//Activates marker 3 and sets it to the freq. 150 MHz  on trace 1.
+CALC:MARK4:TRAC 4
+//Activates marker 4 and sets it to the peak of trace 4.
+
+CALC:MARK1:MAX:AUTO ON
+//Moves M1 to the current peak of trace 1 after each sweep.
+CALC:MARK2:MAX:NEXT
+//Moves M2 to the next lower peak of trace 2.
+
+CALC:DELT5 ON
+CALC:DELT5:LINK ON
+//Activates delta marker 5 and links it to marker 1. If M1 moves, so does D5.
+CALC:DELT5:MREF 4
+//Changes the reference for D5 to marker 4. D5 now shows the difference between
+//the peak of trace 1 after each sweep and the value at the same position in
+//trace 4, which is a copy of trace 1, averaged over 10 sweeps.
+CALC:DELT5:MODE REL
+//Shows the difference as relative values.
+
+CALC:DELT6 ON
+CALC:DELT6:MAX:NEXT
+//Activates delta marker 6 and sets it to the next lower maximum of trace 1.
+//Thus it shows the difference between the two highest peaks in trace 1.
+
+//--------------Retrieving marker values ---------------------
+CALC:MARK1:Y?
+CALC:MARK2:Y?
+CALC:MARK3:Y?
+CALC:MARK4:Y?
+CALC:DELT5:Y?
+CALC:DELT6:Y?
+//Retrieves the marker levels of each active normal and delta marker.
+CALC:DELT5:X:REL?
+CALC:DELT6:X:REL?
+//Retrieves the frequency difference between the delta marker and marker 1.
+
+//--------------Deactivating all markers ---------------------
+//CALC:MARK:AOFF
+//CALC:DELT:AOFF
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

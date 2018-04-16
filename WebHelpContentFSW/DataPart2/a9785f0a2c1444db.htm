@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the Spectrum Emission Mask|Configuring the Power Classes" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ESPectrum&lt;sb&gt;:PCLass&lt;PClass&gt;:MINimum</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_66105dbf2f3d92fd0a00206a00f13543-82e68b3f3055acf40a00206a0057b186-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="78e7a05f14ff4aa7.htm">Measuring the Spectrum Emission Mask</a> &gt; <a class="chm-breadcrumb" href="321513aeb57a4a9c.htm">Configuring the Power Classes</a> &gt; <span class="chm-breadcrumb">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ESPectrum&lt;sb&gt;:PCLass&lt;PClass&gt;:MINimum</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_66105dbf2f3d92fd0a00206a00f13543-82e68b3f3055acf40a00206a0057b186-en-US">
+</a><span class="bold">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ESPectrum&lt;sb&gt;:PCLass&lt;PClass&gt;:MINimum </span>&lt;Level&gt;<br/></div><div class="rcdescription"><p>This command defines the lower limit of a particular power class.</p><div class="block"><div class="listintro">Note:</div><ul class="list"><li value="1">The first power class always has a lower limit of -200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dBm.</li><li value="2">The lower limit of a power class must always be the same as the upper limit of the previous power class.</li><li value="3">The power class must already exist (see <a class="xref" href="5c88fedbf9574f2c.htm#ID_63edded42f3ebf3e0a00206a0161678b-49390e4314a72ae10a00206a00b08bfd-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ESPectrum&lt;sb&gt;:</nobr>​<nobr>PCLass:</nobr>​<nobr>COUNt</nobr></a>).</li></ul></div></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;, &lt;k&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>irrelevant</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;sb&gt;<br/></td><td class="rc_col_content_left" colspan="2">1 | 2 | 3<br/><p>Sub block in a Multi-SEM measurement</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;PClass&gt;<br/></td><td class="rc_col_content_left" colspan="2">1...4<br/><p>power class</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Level&gt;<br/></td><td class="rc_col_content_left" colspan="2"><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Range: </span></td><td class="rc_col_content_right"><span>-200 dBm  to  199.9 dBm</span></td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">CALC:LIM:ESP:PCL2:MIN -40 dBm</span><br/><p>Sets the minimum power value of the second power class to -40 dBm.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="b558cb8647444b82.htm#ID_ec58e91055e00ecd0a710a3101bfdaa4-258ed597e33732360a00206a0157de69-en-US">"PMin/ PMax"</a></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

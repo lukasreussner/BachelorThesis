@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="NB-IoT Downlink (R&amp;S FSW-K106)|Configuration|Frequency Sweep Measurement Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_nbiot_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>SEM Measurement Configuration</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdSignalDescriptionPowerNBIoTCarrier_NBIOT_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSignalDescriptionPowerNBIoTCarrierValue_NBIOT_DL">
+</meta>
+        <meta name="topic-id" value="499">
+</meta>
+        <meta name="topic-id" value="500">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f931512fa89ace9d0a710a920049f19d-cbd76ca91afc1dd90a001ae71f283451-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_nbiot_dl/Content/22374ca9d070468a.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">NB-IoT Downlink (R&amp;S FSW-K106)</a> &gt; <a class="chm-breadcrumb" href="c4c7270aee074286.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="3989163e0de54aa3.htm">Frequency Sweep Measurement Configuration</a> &gt; <span class="chm-breadcrumb">SEM Measurement Configuration</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">SEM Measurement Configuration</div><p><b>Access</b>: "Overview"</p><div class="block"><div class="listintro">The SEM measurement and its settings are basically the same as in the spectrum application of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</div><ul class="list"><li value="1">"Input": <a class="xref" href="../../../Content/2a84fad068b747b6.htm">Input Source Settings</a></li><li value="2">"Amplitude": <a class="xref" href="../../../Content/d074c0e547734d0a.htm">Amplitude Settings</a></li><li value="3">"Scale": <a class="xref" href="../../../Content/75e5c4c4602a4270.htm">Scaling the Y-Axis</a></li><li value="4">"Frequency": <a class="xref" href="../../../Content/659ab9e710ba4db2.htm">Frequency and Span Configuration</a></li><li value="5">"Trigger / Gate": <a class="xref" href="../../../Content/17dd587d33cf488f.htm">Trigger and Gate Configuration</a></li><li value="6">"SEM Setup": <a class="xref" href="../../../Content/3f144cc620bf4508.htm">Spectrum Emission Mask (SEM) Measurement</a><br/>Note: Multi-SEM measurement are not supported by the NB-IoT application.</li><li value="7">"Output": <a class="xref" href="../../../Content/6ac935994e714905.htm">Output Settings</a></li><li value="8">"Analysis" (marker, limit lines etc.): <a class="xref" href="../../../Content/92331bd8057347c8.htm">Common Analysis and Display Functions</a></li></ul></div><p>In addition, the SEM measurement in the NB-IoT application has several exclusive settings not available in the spectrum application.</p><p>The signal description for SEM measurements contains settings to describe general physical characteristics of the signal you are measuring.</p><p><b>Access</b>: "Meas Setup" &gt; "Signal Description"</p><div class="block"><ul class="list"><li value="1">NB-IoT "Mode": The <a class="xref" href="e11c1a991afd4cbf.htm#ID_36af03d05d27bb8b0a00206a009b0d6c-a230844b747f80480a00206a014b5d54-en-US">NB-IoT mode</a> is always "FDD Downlink".</li><li value="2">"Deployment": The SEM measurement only supports measurements on stand-alone <a class="xref" href="808e8b79ebda4e1d.htm#ID_856693cc77e401c90a001ae70a73df49-cad8065077e401c90a001ae73d4836fb-en-US">deployment</a>.</li><li value="3">"Channel Bandwidth": The <a class="xref" href="2fe3cf5f90c64ce0.htm#ID_6cbcf3149e630cbd0a001ae7060be666-7d05387c9e630cbd0a001ae7774335a3-en-US">channel bandwidth</a> for the stand-alone deployment is a fix value of 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz.</li></ul></div><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="656049316c2f486d.htm#ID_ea150fd0a0499e760a001ae7124e3136-63a699d4a0499e760a001ae74b80d99d-en-US" class="title_toc">Power NB-IoT Carrier</a></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Troubleshooting the Measurement|Frequently Asked Questions|Issues with Numeric Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Question: How do I calculate the differential EVM (DEVM) for Bluetooth?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b6cdf6fd3642e1b20a001ae74639a843-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1c0026aadac1410a.htm">Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="d012716047bc4546.htm">Frequently Asked Questions</a> &gt; <a class="chm-breadcrumb" href="30b4cd43d59c445b.htm">Issues with Numeric Results</a> &gt; <span class="chm-breadcrumb">Question: How do I calculate the differential EVM (DEVM) for Bluetooth?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1003">
+</a><a name="kanchor1004">
+</a><a name="kanchor1005">
+</a><div class="function_heading"><a name="ID_b6cdf6fd3642e1b20a001ae74639a843-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">
+</a>Question: How do I calculate the differential EVM (DEVM) for Bluetooth?</div><p>The following sample MATLAB<sup><span style="font-family: Arial Unicode MS; font-size: 10.5pt">®</span></sup> script shows you how to calculate the DEVM according to the instructions in "Bluetooth Spec. v2.0 Appendix C".</p><p>Note: "h_FSW" refers to the corresponding VISA object.</p><pre class="verbatim" xml:space="preserve">fprintf(h_FSW,'<b>DDEM:PRES ''Bluetooth_2-DH1'';*OPC?</b>');
+query(h_FSW,'<b>INIT:IMM; *OPC?</b>');
+
+% Query the Meas and the Ref Trace
+I_Meas = str2num(query(h_FSW,'<b>TRAC4:DATA? TRACE1R</b>'));
+Q_Meas = str2num(query(h_FSW,'<b>TRAC4:DATA? TRACE1I</b>'));
+I_Ref = str2num(query(h_FSW,'<b>TRAC4:DATA? TRACE2R</b>'));
+Q_Ref = str2num(query(h_FSW,'<b>TRAC4:DATA? TRACE2I</b>'));
+
+% Calculate differential EVM according to Bluetooth Spec. v2.0 Appendix C
+Zk = I_Meas + 1j*Q_Meas;
+Sk = I_Ref + 1j*Q_Ref;
+
+% Q: received signal is compensated for the ideal phase changes between 
+% symbols by multiplying it with the complex conjugate of the reference 
+% symbol sequence
+Qk = Zk .* conj(Sk);
+
+%DEVM
+RMS_DEVM = sqrt(sum(abs(diff(Qk)).^2) / sum(abs(Qk).^2));
+
+DEVM_k = sqrt(abs(diff(Qk)).^2) / (sum(abs(Qk).^2)/length(Qk));
+Peak_DEVM = max(DEVM_k);
+
+% 99%-percentile of DEVM
+DEVM_99 = prctile(DEVM_k,99);</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

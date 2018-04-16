@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Processing Analog I/Q Data from RF Input</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8ceba96dc35354e80a00206a0143d53b-598b128689ae8d810a001ae730be37a4-en-US;ID_d2b658a6048273a20a002019019a9c2f-598b128689ae8d810a001ae730be37a4-en-US;ID_3d716d6e048273a20a00201901471f71-598b128689ae8d810a001ae730be37a4-en-US;ID_ec817f03048273a20a0020190112f497-598b128689ae8d810a001ae730be37a4-en-US;shiv_6a_remote_commands_7897-598b128689ae8d810a001ae730be37a4-en-US;ID_0d386892a3c30be60a002019017affa3-598b128689ae8d810a001ae730be37a4-en-US;ID_40cd2e363aef11e39a46ed7954cc09bc-598b128689ae8d810a001ae730be37a4-en-US;ID_83f14dd93a5411e395f1f246b1625ba5-598b128689ae8d810a001ae730be37a4-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <span class="chm-breadcrumb">Processing Analog I/Q Data from RF Input</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor50">
+</a><a name="kanchor51">
+</a><a name="kanchor52">
+</a><a name="kanchor53">
+</a><a name="kanchor54">
+</a><div class="chm-chaptertitle">Processing Analog I/Q Data from RF Input</div><div class="block"><div class="subtitle"><a name="ID_d2b658a6048273a20a002019019a9c2f-598b128689ae8d810a001ae730be37a4-en-US">
+</a>Complex baseband data</div></div><p>In the telephone systems of the past, baseband data was transmitted unchanged as an analog signal. In modern phone systems and in radio communication, however, the baseband data is modulated on a carrier frequency, which is then transmitted. The receiver must demodulate the data based on the carrier frequency. When using modern modulation methods (e.g. QPSK, QAM etc.), the baseband signal becomes complex. Complex data (or: <em>I/Q</em> data) consists of an imaginary (I) and a real (Q) component.</p><div class="block"><div class="subtitle"><a name="ID_3d716d6e048273a20a00201901471f71-598b128689ae8d810a001ae730be37a4-en-US">
+</a>Sweep vs sampling</div></div><p>The standard Spectrum application on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW performs frequency sweeps on the input signal and measurements in the frequency and time domain. Other applications on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, such as the I/Q Analyzer, sample and process the individual I and Q components of the complex signal.</p><div class="block"><div class="subtitle"><a name="ID_ec817f03048273a20a0020190112f497-598b128689ae8d810a001ae730be37a4-en-US">
+</a>I/Q Analyzer - processing complex data from RF input</div></div><p>The I/Q Analyzer is a standard application used to capture and analyze I/Q data on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. By default, it assumes the I/Q data is modulated on a carrier frequency and input via the [RF Input] connector on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>The A/D converter samples the IF signal at a rate of 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz. The digital signal is down-converted to the complex baseband, lowpass-filtered, and the sample rate is reduced. The analog filter stages in the analyzer cause a frequency response which adds to the modulation errors. An <b>equalizer filter</b> before the <b>resampler</b> compensates for this frequency response. The continuously adjustable sample rates are realized using an optimal decimation filter and subsequent resampling on the set sample rate.</p><p>A dedicated memory (<b>capture buffer</b>) is available in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW for a maximum of 400 Msamples (400*1000*1000) of complex samples (pairs of I and Q data). The number of complex samples to be captured can be defined (for restrictions refer to <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a>).</p><p>The block diagram in <a class="xref" href="#shiv_6a_remote_commands_7897-598b128689ae8d810a001ae730be37a4-en-US">Figure "Block diagram illustrating the R&amp;S FSW signal processing for analog I/Q data (without bandwidth extension options)"</a> shows the analyzer hardware from the IF section to the processor.</p><div class="block" id="shiv_6a_remote_commands_7897-598b128689ae8d810a001ae730be37a4-en-US"><a name="kanchor55">
+</a><div class="graphic"><img border="0" src="Resources/Images/img22fc21d7a3c1db160a00201901eacbab_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Block diagram illustrating the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW signal processing for analog I/Q data (without bandwidth extension options)</div></div><div class="block" id="ID_0d386892a3c30be60a002019017affa3-598b128689ae8d810a001ae730be37a4-en-US"><div class="graphic"><img border="0" src="Resources/Images/img5ec4e1fba3acfae70a0020190117c51c_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Block diagram illustrating the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW signal processing for analog I/Q data (with option B160)</div></div><div class="block" id="ID_40cd2e363aef11e39a46ed7954cc09bc-598b128689ae8d810a001ae730be37a4-en-US"><div class="graphic"><img border="0" src="Resources/Images/img15858131df27b0fd0a001ae7032044d4_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Block diagram illustrating the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW signal processing for analog I/Q data (with option B320)</div></div><div class="block" id="ID_83f14dd93a5411e395f1f246b1625ba5-598b128689ae8d810a001ae730be37a4-en-US"><div class="graphic"><img border="0" src="Resources/Images/img6896361bdb3420f30a001ae75393c465_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Block diagram illustrating the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW signal processing for analog I/Q data (with option B512)</div></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="ff6b1e95dc884c8e.htm" class="chapter_title_toc">Sample Rate and Maximum Usable I/Q Bandwidth for RF Input</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

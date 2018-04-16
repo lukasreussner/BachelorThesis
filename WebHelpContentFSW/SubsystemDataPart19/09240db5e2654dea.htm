@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurements and Result Displays|WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)|Modulation Accuracy, Flatness and Tolerance Parameters" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>RF Carrier Suppression (IEEE 802.11b, g (DSSS))</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K91n_0301-742b73889d5e5f610a001ae77d4ca6d8-en-US;shiv_FSV_K91n_0302-742b73889d5e5f610a001ae77d4ca6d8-en-US;shiv_FSV_K91n_0304-742b73889d5e5f610a001ae77d4ca6d8-en-US;shiv_FSV_K91n_0308-742b73889d5e5f610a001ae77d4ca6d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3bafe63f00094742.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="57cd9bda6ba64547.htm">WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="bbca4974819a4f7c.htm">Modulation Accuracy, Flatness and Tolerance Parameters</a> &gt; <span class="chm-breadcrumb">RF Carrier Suppression (IEEE 802.11b, g (DSSS))</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">RF Carrier Suppression (IEEE 802.11b, g (DSSS))</div><div class="block"><div class="subtitle"><a name="shiv_FSV_K91n_0302-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a>Standard definition</div></div><p>The RF carrier suppression, measured at the channel center frequency, shall be at least 15 dB below the peak SIN(x)/x power spectrum. The RF carrier suppression shall be measured while transmitting a repetitive 01 data sequence with the scrambler disabled using DQPSK modulation. A 100 kHz resolution bandwidth shall be used to perform this measurement.</p><div class="block"><div class="subtitle"><a name="shiv_FSV_K91n_0304-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a>Comparison to IQ offset measurement in the R&amp;S FSW WLAN application</div></div><p>The IQ offset measurement in the R&amp;S FSW WLAN application returns the current carrier feedthrough normalized to the mean power at the symbol timings. This measurement does not require a special test signal and is independent of the transmit filter shape.</p><p>The RF carrier suppression measured according to the standard is inversely proportional to the IQ offset measured in the R&amp;S FSW WLAN application. The difference (in dB) between the two values depends on the transmit filter shape. Determine it with a reference measurement.</p><p>The following table lists the difference exemplarily for three transmit filter shapes (<span style="font-family: arial; font-size: 10.5pt">±</span>0.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB):</p><div class="block"><a name="shiv_FSV_K91n_0308-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Transmit filter</p></th><th valign="top"><p>– IQ-Offset [dB] – RF-Carrier-Suppression [dB]</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Rectangular</p></td><td valign="top"><p>11 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>Root raised cosine, "<span style="font-family: symbol; font-size: 10.5pt">α</span>" = 0.3</p></td><td valign="top"><p>10 dB</p></td></tr><tr class="oddrow"><td valign="top"><p>Gaussian, "<span style="font-family: symbol; font-size: 10.5pt">α</span>" = 0.3</p></td><td valign="top"><p>9 dB</p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

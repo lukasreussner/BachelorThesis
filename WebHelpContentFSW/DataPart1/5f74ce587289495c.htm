@@ -1,0 +1,26 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Data Input and Output" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>How to Output a Trigger Signal</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1377b22efd46ebe90a00206a013ab3c2-ff638dc16bb9d6150a001ae72b4e87d3-en-US;ID_236a7955806411e08f59a4df88087b0c-ff638dc16bb9d6150a001ae72b4e87d3-en-US;ID_92cb7d51fd46ebf90a00206a01b0b319-ff638dc16bb9d6150a001ae72b4e87d3-en-US;ID_c9fcb177595211e69c21ca05e684c103-ff638dc16bb9d6150a001ae72b4e87d3-en-US;ID_0c4e6c134f7d22cf0a001ae76d3a017c-ff638dc16bb9d6150a001ae72b4e87d3-en-US;ID_236a795a806411e08f59a4df88087b0c-ff638dc16bb9d6150a001ae72b4e87d3-en-US;ID_97594863fd46ebf90a00206a010a621d-ff638dc16bb9d6150a001ae72b4e87d3-en-US;ID_236a7956806411e08f59a4df88087b0c-ff638dc16bb9d6150a001ae72b4e87d3-en-US;ID_dd4418f8fd46ebf90a00206a01b18280-ff638dc16bb9d6150a001ae72b4e87d3-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="4dc72d92b87a4ee9.htm">Data Input and Output</a> &gt; <span class="chm-breadcrumb">How to Output a Trigger Signal</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">How to Output a Trigger Signal</div><p>Using the variable TRIGGER 2 INPUT / OUTPUT connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, the internal trigger signal can be output for use by other connected devices. For details on the connectors see the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW "Getting Started" manual.</p><div class="block"><a name="ID_236a7955806411e08f59a4df88087b0c-ff638dc16bb9d6150a001ae72b4e87d3-en-US">
+</a><div class="procedure_title">To output a trigger to a connected device</div><div><ol class="procedure"><li id="ID_92cb7d51fd46ebf90a00206a01b0b319-ff638dc16bb9d6150a001ae72b4e87d3-en-US" value="1"><p>Select TRIGGER &gt; "Trigger Config".</p></li><li id="ID_c9fcb177595211e69c21ca05e684c103-ff638dc16bb9d6150a001ae72b4e87d3-en-US" value="2"><p>Switch to the "Trigger In/Out" tab of the "Trigger and Gate".</p></li><li id="ID_0c4e6c134f7d22cf0a001ae76d3a017c-ff638dc16bb9d6150a001ae72b4e87d3-en-US" value="3"><p>Set the trigger to be used to "Output".</p><p>(Note: Trigger 2 is output to the front panel connector, Trigger 3 is output to the rear panel connector.)</p></li><li id="ID_236a795a806411e08f59a4df88087b0c-ff638dc16bb9d6150a001ae72b4e87d3-en-US" value="4"><p>Define whether the trigger signal is to be output automatically ("Output Type" = "Device triggered" or "Trigger Armed") or whether you want to start output manually ("Output Type" = "User-defined").</p></li><li id="ID_97594863fd46ebf90a00206a010a621d-ff638dc16bb9d6150a001ae72b4e87d3-en-US" value="5"><p>For manual output: Specify the constant signal level and the length of the trigger pulse to be output. Note that the level of the trigger pulse is opposite to the constant output "Level" setting (compare the graphic on the "Send Trigger" button).</p></li><li id="ID_236a7956806411e08f59a4df88087b0c-ff638dc16bb9d6150a001ae72b4e87d3-en-US" value="6"><p>Connect a device that will receive the trigger signal to the configured TRIGGER 2 INPUT / OUTPUT connector.</p></li><li id="ID_dd4418f8fd46ebf90a00206a01b18280-ff638dc16bb9d6150a001ae72b4e87d3-en-US" value="7"><p>Start a measurement and wait for an internal trigger, or select the "Send Trigger" button.</p><p>The configured trigger is output to the connector.</p></li></ol></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

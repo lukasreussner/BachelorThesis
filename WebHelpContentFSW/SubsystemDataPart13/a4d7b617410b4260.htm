@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurements and Result Display|Code Domain Analysis|Evaluation Methods for Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Mag Error vs Chip</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWCDMASkIdSmartGridMagErrorvsChip">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdSmartGridMagErrorvsChip">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdSmartGridMagErrorvsChip">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSmartGridMagErrorvsChip">
+</meta>
+        <meta name="topic-id" value="30">
+</meta>
+        <meta name="topic-id" value="32">
+</meta>
+        <meta name="topic-id" value="34">
+</meta>
+        <meta name="topic-id" value="36">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_2fb16b33b6f10f840a00206a0096677c-bfb20934970db5c80a001ae74c11223b-en-US;ID_68c63c26b20411e0be5eb3f316136a86-bfb20934970db5c80a001ae74c11223b-en-US;ID_efd60cf07f9ac1e80a00206a01758904-bfb20934970db5c80a001ae74c11223b-en-US;shiv_FSV_K72_1709-bfb20934970db5c80a001ae74c11223b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="a6ba98e833a74468.htm">Measurements and Result Display</a> &gt; <a class="chm-breadcrumb" href="6c18bcecabcf4624.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="1098fd20c8854cad.htm">Evaluation Methods for Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Mag Error vs Chip</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor85">
+</a><div class="function_heading"><a name="ID_2fb16b33b6f10f840a00206a0096677c-bfb20934970db5c80a001ae74c11223b-en-US">
+</a><span style="font-weight: bold">Mag Error vs Chip</span></div><p>The Magnitude Error versus chip display shows the magnitude error for all chips of the selected slot.</p><p><b><a name="ID_68c63c26b20411e0be5eb3f316136a86-bfb20934970db5c80a001ae74c11223b-en-US">
+</a>Note:</b> In UE measurements, if the measurement interval "Halfslot" is selected for evaluation, 30 slots are displayed instead of the usual 15 (see <a class="xref" href="7bf7915d77b94143.htm#ID_5026b47c0dca9db60a710a3100700edc-078475d2d5ca314e0a00206a0015d874-en-US">"Measurement Interval"</a>).<br/></p><p>The magnitude error is calculated as the difference of the magnitude of the received signal to the magnitude of the reference signal. The reference signal is estimated from the channel configuration of all active channels. The magnitude error is related to the square root of the mean power of reference signal and given in percent.</p><div class="block" id="ID_efd60cf07f9ac1e80a00206a01758904-bfb20934970db5c80a001ae74c11223b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img4fd479247f99ece50a00206a00e23323_1_--_--_PNG96.png" alt="" title=""/></div></div><p>Where:</p><div class="block"><a name="shiv_FSV_K72_1709-bfb20934970db5c80a001ae74c11223b-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>MAG<sub>k</sub></p></td><td valign="top"><p>Magnitude error of chip number k</p></td></tr><tr class="evenrow"><td valign="top"><p>s<sub>k</sub></p></td><td valign="top"><p>Complex chip value of received signal</p></td></tr><tr class="oddrow"><td valign="top"><p>x<sub>k</sub></p></td><td valign="top"><p>Complex chip value of reference signal</p></td></tr><tr class="evenrow"><td valign="top"><p>k</p></td><td valign="top"><p>Index number of the evaluated chip</p></td></tr><tr class="oddrow"><td valign="top"><p>N</p></td><td valign="top"><p>Number of chips at each CPICH slot</p></td></tr><tr class="evenrow"><td valign="top"><p>n</p></td><td valign="top"><p>Index number for mean power calculation of reference signal</p></td></tr></tbody></table></div>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, MECHip</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p><a class="xref" href="9f94d085c3c34cd9.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-6dc20829fef82b150a00206a004893c1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? TRACE&lt;1...4&gt;</a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

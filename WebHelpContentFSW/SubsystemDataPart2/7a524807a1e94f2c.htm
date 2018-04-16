@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Remote Commands for Pulse Measurements|Configuring and Performing Sweeps" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]SWEep:COUNt</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d6f5caa22dde9ffd0a00206a01a137be-99851b6729fdd1040a00206a0039c2fb-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="2a19c26881ae4bad.htm">Remote Commands for Pulse Measurements</a> &gt; <a class="chm-breadcrumb" href="a18734bb91df4104.htm">Configuring and Performing Sweeps</a> &gt; <span class="chm-breadcrumb">[SENSe:]SWEep:COUNt</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_d6f5caa22dde9ffd0a00206a01a137be-99851b6729fdd1040a00206a0039c2fb-en-US">
+</a><span class="bold">[SENSe:]SWEep:COUNt </span>&lt;SweepCount&gt;<br/></div><div class="rcdescription"><p>This command defines the number of measurements that the application uses to average traces.</p><p>(For Pulse measurements, see also <a class="xref" href="ba03c68443434609.htm#ID_0a0a248eeb9f94d80a00206a00169a2b-77f58b7b6bc89ad60a00206a008ec9e8-en-US">"Trace Statistics"</a>).</p><p>In case of continuous measurement mode, the application calculates the moving average over the average count.</p><p>In case of single measurement mode, the application stops the measurement and calculates the average after the average count has been reached.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;SweepCount&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>When you set a sweep count of 0 or 1, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW performs one single measurement in single measurement mode.</p><p>In continuous measurement mode, if the sweep count is set to 0, a moving average over 10 measurements is performed.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Range: </span></td><td class="rc_col_content_right"><span>0  to  200000</span></td></tr><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">0</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;SweepCount&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>If you set a sweep count of 0 or 1, the application performs one single sweep in single sweep mode.</p><p>In continuous sweep mode, if the average count is set to 0, a moving average over 10 sweeps is performed.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Range: </span></td><td class="rc_col_content_right"><span>0  to  100000</span></td></tr><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">0</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SWE:COUN 64</span><br/><p>Sets the number of measurements to 64.</p><span class="commandline">INIT:CONT OFF</span><br/><p>Switches to single measurement mode.</p><span class="commandline">INIT;*WAI</span><br/><p>Starts a measurement and waits for its end.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../../Content/154b1387b81e4b54.htm">Programming Example: Performing a Basic Frequency Sweep</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="5158c5befbd24308.htm#ID_e8b935c20ebb0c060a00206a01dfb869-dc21614b0ebb0c060a00206a00c42bcc-en-US">"Sweep/Average Count"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

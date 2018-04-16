@@ -1,0 +1,141 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Remote Commands to Perform Transient Analysis|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Performing a Chirp Detection Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_43d1ebc9fe3822240a001ae777615976-d6c21068fdef31600a001ae74316722d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="b3c74aa8fd9f42ae.htm">Remote Commands to Perform Transient Analysis</a> &gt; <a class="chm-breadcrumb" href="ee6c620ea0994dba.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Programming Example: Performing a Chirp Detection Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor932">
+</a><a name="kanchor933">
+</a><div class="chm-chaptertitle">Programming Example: Performing a Chirp Detection Measurement</div><p>This example demonstrates how to perform transient analysis on a chirped signal in a remote environment.</p><pre class="verbatim" xml:space="preserve">
+//----------- Preparing the measurement ------------
+//Reset the instrument
+*RST
+//Activate the transient analysis application
+INST:SEL 'TA'
+
+//-----------Configuring the measurement -----------
+//Set the center frequency
+FREQ:CENT 1GHz
+
+// Configure a power trigger to detect transient power effects
+TRIG:SEQ:SOUR IFP
+TRIG:SEQ:LEV:IFP -50dBm
+
+//Configure data acquisition for 5 ms in a 80 MHz bandwidth
+BAND:DEM 80MHz
+MTIM 1ms
+SRAT 100 MHz
+RLEN 100000
+
+//Configure the expected chirp signal manually
+SIGN:MOD CHIR
+CALC:CHRD:STAT:AUTO OFF
+CALC:CHRD:STAT 400kHz, 4kHz
+CALC:CHRD:LENG:AUTO OFF
+CALC:CHRD:LENG:MIN 0.000003022
+CALC:CHRD:LENG:MAX 0.001
+
+//Configure the measurement range
+//Frequency calc: cut off 5us at beginning and end of chirp
+CALC:CHRD:FREQ:REF EDGE
+CALC:CHRD:FREQ:OFFS:BEG 0.000005
+CALC:CHRD:FREQ:OFFS:END 0.000005
+//Power calc. : cut off 5% at each end of chirp
+CALC:CHRD:POW:REF CENT
+CALC:CHRD:POW:LENG 90
+
+//Configure the analysis region: analyze 0.5 ms in 20MHz bandwidth in center
+CALC:AR:FREQ:BAND 40MHz
+CALC:AR:FREQ:DELT -20MHz
+CALC:AR:TIME:LENG 500 us
+CALC:AR:TIME:STAR 250 us
+
+//Configure the result range manually: display 50us at beginning of each chirp, 
+//but cut off first 5us
+CALC:RES:RANG:AUTO OFF
+CALC:RES:REF RISE
+CALC:RES:OFFS 0.000005
+CALC:RES:ALIG LEFT
+CALC:RES:LENG 0.00005
+
+//----------- Configuring the results -------------------------------
+//Result displays:
+//upper row: (1)RF Spectrum (A.Region) (2)RF Spectrum (chirp1)
+//middle row: (3) Spectrogram (full capture), default (4) RF Power Time Domain (full capture)
+//bottom row: (5) Chirp Results table (default) (4) Chirp Statistics table
+DISP:WIND1:EVAL REG
+LAY:ADD:WIND? '1',RIGH,RFSP
+DISP:WIND2:EVAL ##SIGN##
+INIT:CONT OFF
+INIT:IMM;*WAI
+CALC:CHRD:SEL 1
+LAY:REPL:WIND '4',RFPT
+DISP:WIND4:EVAL FULL
+LAY:ADD:WIND? '5',RIGH,STAB
+
+//Configure RF Power Time Domain: automatic scaling
+DISP:WIND4:TRAC:Y:SCAL:AUTO ON
+
+//Configure range for (1)RF Spectrum (A. Region) 
+DISP:WIND1:TRAC:Y:SCAL:AUTO OFF
+DISP:WIND1:TRAC:Y:SCAL:MAX -80 dBM
+DISP:WIND1:TRAC:Y:SCAL:MIN -130 dBM
+
+//Configure table results: show state,begin, length, frequency, max fm, average power
+CALC:CHRD:TABL:COL ON, STAT, BEG, LENG, FREQ, MAXF, AVGP
+
+//Configure Spectrogram. MAX detector, GAUSS window function; Query number of bins
+SENS:WIND3:SGR:DET:FUNC MAX
+SWE:FFT:WIND:TYPE GAUS
+SWE:FFT:WIND:LENG?
+
+//-----------Performing the Measurement-----
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and waits until the sweep has finished. 
+INIT;*WAI
+
+//-----------Retrieving Results-------------
+//Retrieve trace data for RF Power Time Domain
+TRAC1:DATA? TRACe1
+TRAC1:DATA:X? TRACe1
+
+//Retrieve trace length for single transient
+DISP:WIND2:TRAC1:LENG?
+
+//Retrieve table results for first 10 chirps
+CALC5:CHRD:TABL:RES? 1,10
+CALC5:CHRD:STAT:DATA?
+
+//Export entire statistics result table (all params) to an ASCII file
+MMEM:STOR6:TABL ALL,'C:\R_S\Instr\AllStatResults.dat'</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

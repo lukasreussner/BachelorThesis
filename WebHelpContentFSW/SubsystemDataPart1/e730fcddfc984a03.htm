@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Configuration|Data Acquisition and Bandwidth Settings|Data Acquisition" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>200 MHz Filter</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdIqDataAquisition200MHzFilter">
+</meta>
+        <meta name="topic-id" value="978">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_69bfb860df1780fe0a71003a00b80f58-f5aa5d77df17f36a0a001ae758f9f5b8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c29ac284be8f4c1b.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="ef2a54395e21418d.htm">Data Acquisition and Bandwidth Settings</a> &gt; <a class="chm-breadcrumb" href="a52e1f41da374f62.htm">Data Acquisition</a> &gt; <span class="chm-breadcrumb">200 MHz Filter</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_69bfb860df1780fe0a71003a00b80f58-f5aa5d77df17f36a0a001ae758f9f5b8-en-US">
+</a><span style="font-weight: bold">200 MHz Filter</span></div><p>Activates a 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz filter before the A/D converter, thus restricting the processed bandwidth to 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz while using the wideband processing path in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>This is useful for signals that have a bandwidth of approximately 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz (for example Docsis 3.1). In this case, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW can optimize signal processing for the relevant signal and filter out unwanted signal parts from adjacent channels, while taking advantage of a higher sample rate.</p><p>If you simply reduce the specified <a class="xref" href="db385fb203ca425d.htm#ID_77c43431858393170a00206a01d5c858-defe0982858393170a00206a005420ea-en-US">"Analysis Bandwidth"</a>, the sample rate, which is coupled, is also reduced.</p><div class="block"><div class="block"><div class="listintro-in-compact-list">This function is only available under the following conditions:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Bandwidth extension R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320 Extension Board 1, Revision 2 or higher, R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B512, or the real-time option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160R is installed (these options provide a separate wideband processing path in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW)</li><li style="margin-bottom:0; padding-bottom:0;" value="2">An I/Q bandwidth higher than 80<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz is used (only in this case the wideband path is used)</li><li style="margin-bottom:0; padding-bottom:0;" value="3">The optional Digital Baseband Interface is not active</li></ul></div></div><p>If the filter is active, "200 MHz" is indicated in the channel information bar.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="e9c49e6b72c94b03.htm#ID_425fae3795fa530f0a001ae771f56788-b05a3907def63caf0a001ae74d805014-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>WFILter</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

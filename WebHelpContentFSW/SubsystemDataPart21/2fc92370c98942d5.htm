@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Signal Description|Downstream Signal Description" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Continuous Pilots and Excluded Subcarrier Assignment</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDocsisSkIdOFDMChannelDescriptionConfig">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdOFDMChannelDescriptionConfig_DS">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdDlgWidgetContPilots">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdContPilotsTable">
+</meta>
+        <meta name="topic-id" value="149">
+</meta>
+        <meta name="topic-id" value="150">
+</meta>
+        <meta name="topic-id" value="151">
+</meta>
+        <meta name="topic-id" value="152">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b048bdf6e3b516810a001ae724c4b196-f2ebd9c6ddad6fb70a001ae77c050122-en-US;ID_c30bc1f92c5811e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="5c14c18ee5f1417e.htm">Signal Description</a> &gt; <a class="chm-breadcrumb" href="7feb2428dcc14fc1.htm">Downstream Signal Description</a> &gt; <span class="chm-breadcrumb">Continuous Pilots and Excluded Subcarrier Assignment</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor120">
+</a><a name="kanchor121">
+</a><div class="chm-chaptertitle">Continuous Pilots and Excluded Subcarrier Assignment</div><p><b>Access</b>: "Overview" &gt; "Signal Description" &gt; "OFDM Channel Description" &gt; "Continuous Pilots, Excluded Subcarriers Configuration..."</p><p><b>or:</b> MEAS CONFIG &gt; "Signal Description" &gt; "OFDM Channel Description" &gt; "Continuous Pilots, Excluded Subcarriers Configuration..."</p><p>Some subcarriers have a specific function and are used identically for all symbols. Such fixed objects in the channel must be configured so that the R&amp;S FSW DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 application can distinguish their contents from the useful data. Subcarriers with a special function are configured in the signal description in the "Continuous Pilots and Excluded Subcarrier Assignment" table.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>The OFDM channel description for upstream channels is described in <a class="xref" href="57ee7bab95854d79.htm#ID_2980cff62c5811e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"OFDM Channel Description (Upstream)"</a>.</p></td></tr></table></div></div><p>For downstream signals, the first row contains the PLC and is configured automatically according to the <a class="xref" href="82de7d1c178a4696.htm#ID_3d1eb31fe3cec4f70a001ae73c3c80d9-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"PLC Start Index L"</a>, and <a class="xref" href="44f819ec6d6f482d.htm#ID_aca9c4d3e3cec4f70a001ae73590e7d2-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"PLC Number of Subcarriers (N<sub>p</sub>)"</a> from the <a class="xref" href="5c14c18ee5f1417e.htm#ID_c9b9aded98daf4460a00206a00fa5258-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"Signal Description"</a> settings. Therefore the first row providing the PLC info is read only.</p><p>Below the table, a modulation vs. subcarrier diagram indicates which channels are defined for which function.</p><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="2214a8a07a8248a4.htm#ID_299458942c5811e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Set Index</a></div><div class="function_block"><font face="Arial">└</font> <a href="26ae680b25be4b21.htm#ID_2994f4d92c5811e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Type</a></div><div class="function_block"><font face="Arial">└</font> <a href="bd210f16c82344bd.htm#ID_dece0dc5e3cec4f70a001ae70fb78cd6-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Subcarrier Range(Start/ Increment/ Stop)</a></div><div class="function_block"><font face="Arial">└</font> <a href="e57a4fdf9f194d2b.htm#ID_3973f54cb12e11e49c1381783a9c52ef-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Subcarrier Set</a><div class="function_block"><font face="Arial">└</font> <a href="a600bda034ee44c8.htm#ID_39763f47b12e11e49c1381783a9c52ef-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Add</a></div><div class="function_block"><font face="Arial">└</font> <a href="7007a1c82b754ce1.htm#ID_39763f49b12e11e49c1381783a9c52ef-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Remove</a></div><div class="function_block"><font face="Arial">└</font> <a href="8d145a00eff141b5.htm#ID_0a10db9476f511e5a9779bef29ca9dfc-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Remove All</a></div></div><div class="function_block"><font face="Arial">└</font> <a href="823dfa0066154823.htm#ID_6b0bd979e3cec4f70a001ae728c5d0e5-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Insert</a></div><div class="function_block"><font face="Arial">└</font> <a href="9630cf04c41c4111.htm#ID_3f1f7bd7e3cec4f70a001ae71cdb4fd3-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Delete</a></div><div class="function_block"><font face="Arial">└</font> <a href="31ec6976d26e46a9.htm#ID_a66a809fe3cec4f70a001ae74f242da6-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Delete All</a></div><div class="function_block"><font face="Arial">└</font> <a href="c937fc4afb9d4c5e.htm#ID_bd5d5f1ce3cec4f70a001ae734bd9a99-43a5a78ce8bcb9390a001ae75b738167-en-US" class="title_toc">Auto Detection:Continuous Pilots (downstream only)</a></div><div class="function_block"><font face="Arial">└</font> <a href="8d370def54bc47d1.htm#ID_bbfa1e927af053890a00206a009e89e5-7ad0d3b5e89b3b300a001ae75e17c9ac-en-US" class="title_toc">OK</a></div><div class="function_block"><font face="Arial">└</font> <a href="7f67c6d3302640b5.htm#ID_bb2f88007af053890a00206a008671ff-7e66e413e89c2e0c0a001ae76e318409-en-US" class="title_toc">Cancel</a></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

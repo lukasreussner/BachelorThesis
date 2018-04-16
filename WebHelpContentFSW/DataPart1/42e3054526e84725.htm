@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Statistical Measurements (APD, CCDF)|Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuration Example: Gated Statistics</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_200edf55d9d87c520a00206a0124763c-e64d30f50c2f0f890a00206a01ce826c-en-US;shiv_4a_instrument_functions_07542-e64d30f50c2f0f890a00206a01ce826c-en-US;shiv_4a_instrument_functions_07549-e64d30f50c2f0f890a00206a01ce826c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="eccef9cbede445bc.htm">Statistical Measurements (APD, CCDF)</a> &gt; <a class="chm-breadcrumb" href="d513e6dd454f44ab.htm">Examples</a> &gt; <span class="chm-breadcrumb">Configuration Example: Gated Statistics</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Configuration Example: Gated Statistics</div><a name="kanchor1106">
+</a><p>A statistics evaluation has to be done over the useful part of the signal between t3 and t4. The period of the GSM signal is 4.61536<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>ms.</p><div class="block" id="shiv_4a_instrument_functions_07542-e64d30f50c2f0f890a00206a01ce826c-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgc12ee5149fdb104c0a00206a01e5214d_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>t1: External positive trigger slope</p><p>t2: Begin of burst (after 25 <span style="font-family: arial; font-size: 10.5pt">µ</span>s)</p><p>t3: Begin of useful part, to be used for statistics (after 40 <span style="font-family: arial; font-size: 10.5pt">µ</span>s)</p><p>t4: End of useful part, to be used for statistics (after 578 <span style="font-family: arial; font-size: 10.5pt">µ</span>s)</p><p>t5: End of burst (after 602 <span style="font-family: arial; font-size: 10.5pt">µ</span>s)</p><p>The instrument has to be configured as follows:</p><div class="block"><a name="shiv_4a_instrument_functions_07549-e64d30f50c2f0f890a00206a01ce826c-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>Trigger Offset</p></td><td valign="top"><p>t2 – t1 = 25 <span style="font-family: arial; font-size: 10.5pt">µ</span>s</p></td><td valign="top"><p>now the gate ranges are relative to t2</p></td></tr><tr class="evenrow"><td valign="top"><p>Range1 Start</p></td><td valign="top"><p>t3 – t2 = 15 <span style="font-family: arial; font-size: 10.5pt">µ</span>s</p></td><td valign="top"><p>start of range 1 relative to t2</p></td></tr><tr class="oddrow"><td valign="top"><p>Range1 End</p></td><td valign="top"><p>t4 – t2 = 553 <span style="font-family: arial; font-size: 10.5pt">µ</span>s</p></td><td valign="top"><p>end of range 1 relative to t2</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

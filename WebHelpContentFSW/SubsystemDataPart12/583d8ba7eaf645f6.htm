@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurements and Result Displays|Result Types in VSA" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Error Vector Magnitude (EVM)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdErrVecEVM">
+</meta>
+        <meta name="topic-id" value="22">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b5d6cf099767b4aa0a00206a01036ea9-872c63c6410c614d0a00206a016aa6c2-en-US;ID_79cbe595859a4ae30a00206a01332b3a-872c63c6410c614d0a00206a016aa6c2-en-US;ID_9d9c9703d7b9a5ae0a710a9201457184-872c63c6410c614d0a00206a016aa6c2-en-US;ID_adb2fd6c859a4ae30a00206a0160b027-872c63c6410c614d0a00206a016aa6c2-en-US;ID_79a192dda6e80a910a00206a00022888-872c63c6410c614d0a00206a016aa6c2-en-US;ID_38048a8a26e6b3ac0a00206a0072fe7f-872c63c6410c614d0a00206a016aa6c2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="430c648a605d4470.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="0b21c5a495ee4a29.htm">Result Types in VSA</a> &gt; <span class="chm-breadcrumb">Error Vector Magnitude (EVM)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor71">
+</a><div class="chm-chaptertitle">Error Vector Magnitude (EVM)</div><a name="kanchor72">
+</a><p>Displays the error vector magnitude as a function of symbols or time.</p><div class="block" id="ID_79cbe595859a4ae30a00206a01332b3a-872c63c6410c614d0a00206a016aa6c2-en-US"><div class="graphic"><img border="0" src="Resources/Images/img2416b4c5855b5b850a00206a0084a48c_2_--_--_PNG96.png" alt="" title=""/></div></div><p>with t=n<span style="font-family: Arial Unicode MS; font-size: 10.5pt">·</span>T<sub>D</sub> and T<sub>D</sub>=the duration of one sampling period at the sample rate defined by the display points per symbol parameter (see <a class="xref" href="441712004bf74f9b.htm#ID_4df69d1f0cdc6f870a00206a00c5fd56-3c55dba5410ce08e0a00206a010226ec-en-US">"Display Points/Sym"</a>).</p><p>The normalization constant C is chosen according to the EVM normalization. By default C² is the mean power of the reference signal.</p><div class="block" id="ID_9d9c9703d7b9a5ae0a710a9201457184-872c63c6410c614d0a00206a016aa6c2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgebb96441855b381f0a00206a018529b7_1_--_--_PNG96.png" alt="" title=""/></div></div><p>and</p><div class="block" id="ID_adb2fd6c859a4ae30a00206a0160b027-872c63c6410c614d0a00206a016aa6c2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgda8073f9855ba7530a00206a001536aa_1_--_--_PNG96.png" alt="" title=""/></div></div><p>Note that k=0.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt">·</span>n<span style="font-family: Arial Unicode MS; font-size: 10.5pt">·</span>T for Offset QPSK with inactive <a class="xref" href="ee393719dde740e3.htm#ID_97338a0e3e71195e0a710a9201fba118-98ce8ff6410963710a00206a00a7855c-en-US">"Offset EVM"</a>.</p><div class="block" id="ID_79a192dda6e80a910a00206a00022888-872c63c6410c614d0a00206a016aa6c2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgdc99890b53a741c30a00201900ab9a09_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Result display "Error Vector Magnitude"</div></div><p>For signals with a user-defined frame structure (see <a class="xref" href="f9bac06cced642a0.htm#ID_29558a34758145270a7c00a001898de7-184c8906411153460a00206a01532735-en-US">"Multi-Modulation Analysis (R&amp;S FSW-K70M)"</a>), the individual subframes are indicated by vertical green lines.</p><div class="block"><div class="listintro">Available for source types:</div><ul class="list"><li value="1">Error Vector</li></ul></div><div class="block"><div class="subtitle"><a name="ID_38048a8a26e6b3ac0a00206a0072fe7f-872c63c6410c614d0a00206a016aa6c2-en-US">
+</a>Remote commands:</div></div><p><span class="command">LAY:ADD? '1',BEL,EVEC</span></p><p>to define the required source type (see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a>)</p><p><span class="command">CALC:FORM MAGN</span></p><p>to define the result type (see <a class="xref" href="1521f543fefc41db.htm#ID_ff06f60045a7189f0a00206a01f4b460-91cc306f45a710ee0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>FORMat</nobr></a>)</p><p><span class="command">TRAC:DATA? TRACE1</span></p><p>to query the trace results (see <a class="xref" href="85cf7a9a1e8a4831.htm#ID_5a71ecfa45ba2f470a00206a01a04c30-4a7ea8b245ba23dd0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> and <a class="xref" href="9f598f476cfc45c5.htm#ID_e5d3a3be38c64e410a001ae737ff4463-00d6486d389f6b7d0a001ae7386bb539-en-US">"Cartesian Diagrams"</a>)</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

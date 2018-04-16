@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Scrambling via PN Offsets and Long Codes</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_79ab0795b1549a850a00206a01edd628-b7f661756d7580e80a00206a010113c9-en-US;ID_cdd3d0bdc56a711b0a00206a0013aab7-b7f661756d7580e80a00206a010113c9-en-US;ID_9d6699bcc56a711b0a00206a012cdc9f-b7f661756d7580e80a00206a010113c9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="2555a026cc2a4d0c.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Scrambling via PN Offsets and Long Codes</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor211">
+</a><a name="kanchor212">
+</a><a name="kanchor213">
+</a><a name="kanchor214">
+</a><a name="kanchor215">
+</a><div class="chm-chaptertitle">Scrambling via PN Offsets and Long Codes</div><div class="block"><div class="subtitle"><a name="ID_cdd3d0bdc56a711b0a00206a0013aab7-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Short code scrambling</div></div><p><b>Base stations</b> use a pseudo noise (PN) sequence (also referred to as short code sequence) to scramble the data during transmission. The used PN sequence is circulated in fixed time intervals. A specified <b>PN offset</b> value determines the start phase for the short code sequence.</p><p>The PN parameter is unique for each base station. Thus, the CDMA2000 BTS application can distinguish the signals from different base stations quickly if both of the following conditions apply:</p><div class="block"><ul class="list"><li value="1">The "PN Offset" is defined in the signal description</li><li value="2">An external trigger is used to provide a reference for the start phase</li></ul></div><p>If no offset is specified or no external trigger is available, calculation is much slower as the correct PN must be determined from all possible positions.</p><p>During short code scrambling, the channel data is split up into I and Q components.</p><div class="block"><div class="subtitle"><a name="ID_9d6699bcc56a711b0a00206a012cdc9f-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Long code scrambling</div></div><a name="kanchor216">
+</a><a name="kanchor217">
+</a><a name="kanchor218">
+</a><a name="kanchor219">
+</a><p><b>Mobile stations</b> also use a PN short code, but with a fixed or no offset. Additionally, a complex <b>long code</b> is used for scrambling, making the data less susceptible to interference. The long code used by a mobile station is defined by a mask and an offset. The CDMA2000 MS application requires these settings to distinguish the senders. They are defined in the signal description.</p><p>The long code offset also includes the PN offset (if any) and is defined in chips. The offset corresponds to the GPS timing since 6.1.1980 00:00:00 UTC. The offset in chips is calculated as follows:</p><p><span class="command">tSinceStartGPS * 1.2288 MChips/s</span></p><p>Where <span class="command">tSinceStartGPS</span> is defined in seconds</p><p>The offset is applied at the next trigger pulse, which cannot occur until a setup time of 300 ms has elapsed.</p><p>A special <b>long code generation mode</b> is provided to analyze signals sent by an Agilent ESG 101 generator.</p><p>During long code scrambling, the channel data is mapped either to the I or to the Q branch of the complex input signal.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

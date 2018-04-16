@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Configuring I/Q Analyzer Measurements|Configuring Data Acquisition" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]IQ:FFT:ALGorithm</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_226c8f07c3f798250a00206a01497139-dd0b26548429e2f70a002019015079f4-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="245b36a17e924f58.htm">Configuring I/Q Analyzer Measurements</a> &gt; <a class="chm-breadcrumb" href="5b7691ae43a34258.htm">Configuring Data Acquisition</a> &gt; <span class="chm-breadcrumb">[SENSe:]IQ:FFT:ALGorithm</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_226c8f07c3f798250a00206a01497139-dd0b26548429e2f70a002019015079f4-en-US">
+</a><span class="bold">[SENSe:]IQ:FFT:ALGorithm </span>&lt;Method&gt;<br/></div><div class="rcdescription"><p>Defines the FFT calculation method.</p><p>For more information see <a class="xref" href="80556469d0ef4efb.htm#ID_4d24220683b72a6d0a710a3100cd239a-03e72dbd6b54d8ef0a001ae70832b793-en-US">"Basics on FFT"</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Method&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">SINGle<br/></span><p>One FFT is calculated for the entire record length; if the FFT length is larger than the record length (see <a class="xref" href="7a4cf8bff725467e.htm#ID_226c8f07c3f798250a00206a01497139-b75dd8aa842b156c0a0020190027b3fc-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]IQ:</nobr>​<nobr>FFT:</nobr>​<nobr>LENGth</nobr></a> and <a class="xref" href="3b9714e08d3f4cc4.htm#ID_35c3bc2a51a442c60a00206a01c7d365-6310d46b72b9804d0a00206a004b8a9c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>RLENgth</nobr></a>), zeros are appended to the captured data.</p><span class="bold">AVERage<br/></span><p>Several overlapping FFTs are calculated for each record; the results are averaged to determine the final FFT result for the record.</p><p>The user-defined window length and window overlap are used (see <a class="xref" href="6906cae5e0ed4449.htm#ID_226c8f07c3f798250a00206a01497139-e3d79df6842cde460a00201900a0b148-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]IQ:</nobr>​<nobr>FFT:</nobr>​<nobr>WINDow:</nobr>​<nobr>LENGth</nobr></a> and <a class="xref" href="936375b0d0ea40e7.htm#ID_226c8f07c3f798250a00206a01497139-45053d6f842e50450a002019006e399d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]IQ:</nobr>​<nobr>FFT:</nobr>​<nobr>WINDow:</nobr>​<nobr>OVERlap</nobr></a>).</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">AVER</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">IQ:FFT:ALG SING</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="0bf1b406e89f44d6.htm#ID_46bee4937f488c400a00201901e16f33-72d1921e81e1a1440a001ae7783118f0-en-US">"Transformation Algorithm"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Configuration|Configuring I/Q Measurements|Demodulating the PDSCH" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>PDSCH Subframe Configuration Detection</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="TKEYWORD_12840">
+</meta>
+        <meta name="topic-id" value="010102">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5c5c52b17443a8ce0a00206a00c9285a-6ae57ac774acafa10a00206a00ddbdbc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/4ed6ee10309c4d67.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="815a65ace54b46f5.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="b9dea6be44534e0a.htm">Configuring I/Q Measurements</a> &gt; <a class="chm-breadcrumb" href="8f6939ae27be446a.htm">Demodulating the PDSCH</a> &gt; <span class="chm-breadcrumb">PDSCH Subframe Configuration Detection</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor118">
+</a><a name="kanchor119">
+</a><div class="function_heading"><a name="ID_5c5c52b17443a8ce0a00206a00c9285a-6ae57ac774acafa10a00206a00ddbdbc-en-US">
+</a><span style="font-weight: bold">PDSCH Subframe Configuration Detection</span></div><p>Selects the method of identifying the PDSCH resource allocation.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Off<br/>Uses the user configuration to demodulate the PDSCH subframe. If the user configuration does not match the frame that was measured, a bad EVM will result.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">PDCCH protocol<br/>Sets the PDSCH configuration according to the data in the protocol of the PDCCH DCIs.<br/>When you use this method, the application measures the boosting for each PDCCH it has detected. The result is displayed in the <a class="xref" href="0676924cba784fb9.htm#ID_fab8463c295964d40a00206a008cd244-9ed03999295964d40a00206a0140ab2a-en-US">Channel Decoder Results</a>.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Physical detection<br/>The physical detection is based on power and modulation detection.<br/>Physical detection makes measurements on TDD E-TMs without a 20<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>ms trigger signal possible.<br/><a class="xref" href="305e07fbf06e41c5.htm#ID_168a50fd5d48c22d0a00206a005cb401-fd34108f74ac551d0a00206a00b968c5-en-US">More information</a>.</li></ul></div>Remote command: <div class="rcclist_right"><p><a class="xref" href="ef16f86ab56246db.htm#ID_52741c4be2a16c9c0a00206a00d64020-558ce03ee2a16c9c0a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>][LTE:</nobr>​<nobr>]DL:</nobr>​<nobr>FORMat:</nobr>​<nobr>PSCD</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Uplink (R&amp;S FSW-K10x)|Configuration|Configuring I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_ul.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring Subframes</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdSubframeConfigConfigurableSubframes_UL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSubframeConfig_UL">
+</meta>
+        <meta name="topic-id" value="495">
+</meta>
+        <meta name="topic-id" value="496">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c61a8d515d65cea10a00206a00923ecc-d71b00c8dfdf9c5e0a00206a000960c5-en-US;ID_b12b1f2f903148ec0a71013400a91ea0-d71b00c8dfdf9c5e0a00206a000960c5-en-US;ID_10ce6401e33c11e40a710b9a01ddf8f1-d71b00c8dfdf9c5e0a00206a000960c5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_ul/Content/ad0721c9cfe343ca.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Uplink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="162c9abf945d400e.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2853690f3e8d44c9.htm">Configuring I/Q Measurements</a> &gt; <span class="chm-breadcrumb">Configuring Subframes</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor89">
+</a><a name="kanchor90">
+</a><a name="kanchor91">
+</a><a name="kanchor92">
+</a><a name="kanchor93">
+</a><a name="kanchor94">
+</a><div class="chm-chaptertitle">Configuring Subframes</div><p><b>Access</b>: "Overview" &gt; "Signal Description" &gt; "Subframe Configuration"</p><p>An LTE frame consists of 10 subframes. Each individual subframe can have a different resource block configuration. This configuration is shown in the "Subframe Configuration Table".</p><div class="block"><div class="listintro">The application supports two ways to determine the characteristics of each subframe.</div><ul class="list"><li value="1">Automatic demodulation of the channel configuration and detection of the subframe characteristics.<br/>For automatic demodulation, the contents of the table are determined according to the signal currently evaluated.<br/>For more information, see <a class="xref" href="5fe1744753e94030.htm#ID_fe583a8575c3e51c0a00206a016fb2cc-0e08fbeb74b573fc0a00206a01b6b664-en-US">"Auto Demodulation"</a>.</li><li value="2">Custom configuration of the configuration of each subframe.<br/>For manual configuration, you can customize the table according to the signal that you expect. The signal is demodulated even if the signal does not fit the description in the table or, for <a class="xref" href="19bc05cb337a4974.htm#ID_0607608626f04bdf0a00206a01378dd7-eb34685374b5bff90a00206a00665537-en-US">Physical Detection</a>, only if the frame fits the description in the table.<br/>Remote command:<br/>Conf. subframes: <a class="xref" href="9598158bd4074fe7.htm#ID_84a9776fe29dd82e0a00206a01aa9b4f-fe001259e29dd82e0a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>UL[:</nobr>​<nobr>CC&lt;cc&gt;]:</nobr>​<nobr>CSUBframes</nobr></a></li></ul></div><div class="block" id="ID_b12b1f2f903148ec0a71013400a91ea0-d71b00c8dfdf9c5e0a00206a000960c5-en-US"><div class="graphic"><img border="0" src="Resources/Images/img3b0356e8fbd029cb0a001ae71c4b049e_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="block"><div class="subtitle"><a name="ID_10ce6401e33c11e40a710b9a01ddf8f1-d71b00c8dfdf9c5e0a00206a000960c5-en-US">
+</a>Frame number offset</div></div><p>A frame number offset is also supported. The frame number offset assigns a number to the demodulated frame in order to identify it in a series of transmitted (and captured) frames. You can define this frame in the <a class="xref" href="fb00785fa1fc496c.htm#ID_2a889b7cfcb5225f0a002019005cfe04-f255c7600de851670a001ae76f6ed958-en-US">Global Settings</a>.</p><p>Remote command:</p><p><a class="xref" href="d84ab3011d524af3.htm#ID_e4dccc0fe29e66440a00206a00565f61-bee04345e29e66540a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>UL[:</nobr>​<nobr>CC&lt;cc&gt;]:</nobr>​<nobr>SFNO</nobr></a></p><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="6044e7d8e4ba4eb1.htm" class="chapter_title_toc">General Subframe Configuration</a></li><li value="2"><a href="d5159253af334fb3.htm" class="chapter_title_toc">Individual Subframe Configuration</a></li><li value="3"><a href="a4d5e24f03d54e02.htm" class="chapter_title_toc">Enhanced Settings</a></li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

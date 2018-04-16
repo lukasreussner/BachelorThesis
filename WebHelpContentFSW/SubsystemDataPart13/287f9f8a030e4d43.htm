@@ -1,0 +1,69 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Programming Examples (R&amp;S FSW-k72)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 5: Measuring the Composite EVM</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0291-3cd1b6d764fb0df60a00206a0057a628-en-US;ID_797066b4664602e90a00206a018cfa23-3cd1b6d764fb0df60a00206a0057a628-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="c71e56adbc0d48d8.htm">Programming Examples (R&amp;S FSW-k72)</a> &gt; <span class="chm-breadcrumb">Measurement 5: Measuring the Composite EVM</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor857">
+</a><a name="kanchor858">
+</a><div class="chm-chaptertitle">Measurement 5: Measuring the Composite EVM</div><pre class="verbatim" xml:space="preserve">*RST
+//Reset the instrument
+INST:CRE:NEW BWCD,'BTSMeasurement'
+//Activate a 3GPP FDD BTS measurement channel named "BTSMeasurement"
+DISP:TRAC:Y:SCAL:RLEV 10
+//Set the reference level to 10 dBm
+FREQ:CENT 2.1175 GHz
+//Set the center Frequency to 2.1175 GHz
+TRIG:SOUR EXT
+//Set the trigger source to the external trigger 
+//(TRIGGER INPUT connector)
+LAY:REPL '2','XTIM:CDP:MACC' 
+//Replace the second measurement window (Result Summary) by Composite EVM evaluation
+DISP:WIND2:TRAC:Y:SCAL:AUTO ONCE
+//Optimize the scaling of the y-axis for the Composite EVM measurement
+INIT:CONT OFF
+//Stops continuous sweep
+SWE:COUN 100
+//Set the number of sweeps to be performed to 100
+INIT;*WAI
+//Start a new measurement with 100 sweeps and wait for the end
+TRAC2:DATA? TRACE1
+//Retrieve the trace data of the composite EVM measurement
+//Result: +0.000000000,+5.876136422E-001,
+//+1.000000000,+5.916179419E-001,
+//+2.000000000,+5.949081182E-001,
+//[...]
+</pre><div class="block"><a name="ID_797066b4664602e90a00206a018cfa23-3cd1b6d764fb0df60a00206a0057a628-en-US">
+</a><span class="table-caption">Trace results for Composite EVM measurement</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>(CPICH) Slot number</p></th><th valign="top"><p>EVM</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>+5.876136422E-001</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>+5.916179419E-001</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>+5.949081182E-001</p></td></tr><tr class="evenrow"><td valign="top"><p>...</p></td><td valign="top"><p>...</p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

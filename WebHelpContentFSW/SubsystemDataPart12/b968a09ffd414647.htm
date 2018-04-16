@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Configuration|Demodulation Settings|Demodulation - Compensation and Equalizer" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Compensate for...[(PSK, MSK, ASK, QAM)]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdIqOffset">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdIqImbalance">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdAmpDroop">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdChannel">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdSymbClockErr">
+</meta>
+        <meta name="topic-id" value="901">
+</meta>
+        <meta name="topic-id" value="903">
+</meta>
+        <meta name="topic-id" value="905">
+</meta>
+        <meta name="topic-id" value="907">
+</meta>
+        <meta name="topic-id" value="909">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e6b9b44d07f1fed50a710a3100607cad-98ce8ff6410963710a00206a00a7855c-en-US;ID_9cfbaa6dfffdf5ec0a00206a0093fb5c-98ce8ff6410963710a00206a00a7855c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1df8557b8c6a4078.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="7193e7b913224924.htm">Demodulation Settings</a> &gt; <a class="chm-breadcrumb" href="e7df23f27848458b.htm">Demodulation - Compensation and Equalizer</a> &gt; <span class="chm-breadcrumb">Compensate for...[(PSK, MSK, ASK, QAM)]</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor757">
+</a><a name="kanchor758">
+</a><a name="kanchor759">
+</a><a name="kanchor760">
+</a><a name="kanchor761">
+</a><a name="kanchor762">
+</a><div class="function_heading"><a name="ID_e6b9b44d07f1fed50a710a3100607cad-98ce8ff6410963710a00206a00a7855c-en-US">
+</a><span style="font-weight: bold">Compensate for...</span><span style="font-weight: bold">[(PSK, MSK, ASK, QAM)]</span></div><p>If enabled, compensation for various effects is taken into consideration during demodulation. Thus, these distortions are not shown in the calculated error values.</p><p><b><a name="ID_9cfbaa6dfffdf5ec0a00206a0093fb5c-98ce8ff6410963710a00206a00a7855c-en-US">
+</a>Note:</b> Note that compensation for all the listed distortions can result in lower EVM values.<br/></p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">I/Q Offset (default: on)</li><li style="margin-bottom:0; padding-bottom:0;" value="2">I/Q Imbalance</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Amplitude Droop (default: on)</li><li style="margin-bottom:0; padding-bottom:0;" value="4">Symbol Rate Error (required to display the SRE in the Result Summary)</li><li style="margin-bottom:0; padding-bottom:0;" value="5">Channel (default: on)<br/>Note that channel distortion can only be determined if the equalizer is on (see <a class="xref" href="fb6f5678e46e4d75.htm#ID_763bb1103fbc99bc0a710a31002151f9-98ce8ff6410963710a00206a00a7855c-en-US">"State"</a>). Thus, compensation can only be disabled if the equalizer is on.<br/>By default, channel compensation is enabled to improve accuracy of the error results. If compensation is disabled, the EVM is calculated from the original input signal with channel distortions.</li><li style="margin-bottom:0; padding-bottom:0;" value="6">I/Q Skew (PSK/ QAM/ Offset QPSK only, see also <a class="xref" href="01d5ffada7b74bbe.htm#ID_47618c39c058bbc30a7c00a00193e337-184c8906411153460a00206a01532735-en-US">"I/Q skew results depend on modulation"</a>)</li></ul></div><p>For details on these effects see <a class="xref" href="01d5ffada7b74bbe.htm#ID_de98a0c40ae626270a00206a01f456b3-184c8906411153460a00206a01532735-en-US">"Modulation Errors"</a>.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="8a9e11ab72df492e.htm#ID_80f99ea945b2eb600a00206a01f4e382-cea280a445b2e3130a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>NORMalize:</nobr>​<nobr>IQOFfset</nobr></a></p><p><a class="xref" href="24855932499f440d.htm#ID_31c2933345b2f9a90a00206a01d8ca3c-711759c945b2ede10a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>NORMalize:</nobr>​<nobr>IQIMbalance</nobr></a></p><p><a class="xref" href="a77f98665c45482f.htm#ID_d9538a44ee54d85c0a001ae713b3eb84-558ee9aeee54d7810a001ae73a1bad4b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>NORMalize:</nobr>​<nobr>IQSKew</nobr></a></p><p><a class="xref" href="1bc0e739626a4128.htm#ID_fdb72d0945b308eb0a00206a00cb9e2b-4de501f545b2fe8b0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>NORMalize:</nobr>​<nobr>ADRoop</nobr></a></p><p><a class="xref" href="d0c6883e6817430d.htm#ID_4f18a29212d9ac6b0a002019017be325-07a0e97612d9aa770a00201900273520-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>NORMalize:</nobr>​<nobr>SRERror</nobr></a></p><p><a class="xref" href="ccfb6fef2da24faa.htm#ID_75d85c0bf7337b6a0a00206a00207342-b801ca3bf733734b0a00206a01301721-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>NORMalize:</nobr>​<nobr>CHANnel</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

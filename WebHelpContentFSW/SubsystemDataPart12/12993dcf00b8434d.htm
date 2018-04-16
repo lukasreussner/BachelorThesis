@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Troubleshooting the Measurement|Frequently Asked Questions|Issues with Graphical Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Problem: The Constellation I/Q measurement result display has a different number of constellation points in the R&amp;S FSQ-K70 and the R&amp;S FSW-K70</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_40aa4a9f5e1186340a00206a00f96f02-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;ID_67db0da41c229bf10a710a3100fca6ab-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;ID_40b6994224c0fc810a00206a00804475-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1c0026aadac1410a.htm">Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="d012716047bc4546.htm">Frequently Asked Questions</a> &gt; <a class="chm-breadcrumb" href="de18e2ed82a046e5.htm">Issues with Graphical Results</a> &gt; <span class="chm-breadcrumb">Problem: The Constellation I/Q measurement result display has a different number of constellation points in the R&amp;S FSQ-K70 and the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K70</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_40aa4a9f5e1186340a00206a00f96f02-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">
+</a>Problem: The Constellation I/Q measurement result display has a different number of constellation points in the R&amp;S FSQ-K70 and the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K70</div><p>Reason:</p><p>In the FSQ-K70, the Constellation I/Q measurement displays the symbol instants of the Vector I/Q measurement. Hence, this is a rotated constellation, e.g. for a <span style="font-family: Arial Unicode MS; font-size: 10.5pt">π</span>/4-DQPSK, 8 points are displayed.</p><p>In the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K70, the Constellation I/Q diagram shows the de-rotated constellation (i.e. for a <span style="font-family: Arial Unicode MS; font-size: 10.5pt">π</span>/4-DQPSK, 4 instead of 8 points are displayed). The inter-symbol interference has been removed.</p><p><b><a name="ID_67db0da41c229bf10a710a3100fca6ab-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">
+</a>Note:</b> The result display "I/Q Constellation (Rotated)" displays the rotated constellation, as the FSQ-K70 does.<br/></p><p>For details on the Constellation I/Q diagram in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K70, see <a class="xref" href="42d3251015ea4fa0.htm#ID_86d8a1399767b4aa0a00206a00944b09-872c63c6410c614d0a00206a016aa6c2-en-US">"Constellation I/Q"</a>.</p><div class="block"><a name="ID_40b6994224c0fc810a00206a00804475-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">
+</a><span class="table-caption">Constellation I/Q and Vector I/Q for pi/4-DQPSK modulation</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/imgdbef38f424bd05b00a00206a0145a0e1_1_--_--_PNG96Small.png" alt="" title=""/></div></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/imgf21478cc24bd3ad90a00206a00cbbcf6_1_--_--_PNG96Small.png" alt="" title=""/></div></td></tr></tbody><tfoot><tr class="oddrow"><th class="tfoot" valign="top"><p>R&amp;S FSQ-K70</p></th><th class="tfoot" valign="top"><p>R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K70</p></th></tr></tfoot></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

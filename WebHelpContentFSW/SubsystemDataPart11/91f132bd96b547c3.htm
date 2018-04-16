@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Signal Processing</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f33638995a92de550a002019019b0dd2-439f176840f97bcf0a00201900c3608b-en-US;ID_953b883629bb26560a00206a0145c277-439f176840f97bcf0a00201900c3608b-en-US;ID_09dd2a8a6aa1495c0a002019004115ba-439f176840f97bcf0a00201900c3608b-en-US;ID_39902c3a6aa1495c0a00201900144809-439f176840f97bcf0a00201900c3608b-en-US;ID_45ed82486aa1495c0a00201900939821-439f176840f97bcf0a00201900c3608b-en-US;ID_13fe47906aa1495c0a00201901e8a914-439f176840f97bcf0a00201900c3608b-en-US;ID_119c36e56aa1495c0a002019007558de-439f176840f97bcf0a00201900c3608b-en-US;ID_3bb64a16d80ffcbc0a710ade013f6506-439f176840f97bcf0a00201900c3608b-en-US;ID_e4c1a923d81535270a001ae7522198e1-439f176840f97bcf0a00201900c3608b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="29b558e51ab84e3f.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Signal Processing</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor12">
+</a><div class="chm-chaptertitle">Signal Processing</div><p>The R&amp;S FSW Transient Analysis application measures the power of the signal input over time. In order to convert the time domain signal to a frequency spectrum, an FFT (Fast Fourier Transformation) is performed which converts a vector of input values into a discrete spectrum of frequencies.</p><p>The application calculates multiple FFTs per capture, by dividing one capture into several overlapping FFT frames. This is especially useful in conjunction with window functions since it enables a gap-free frequency analysis of the signal.</p><p>Using overlapping FFT frames leads to more individual results and improves detection of transient signal effects. However, it also extends the duration of the calculation. The size of the FFT frame depends on the number of input signal values (record length), the overlap factor, and the time resolution (time span used for each FFT calculation).</p><div class="block"><div class="subtitle"><a name="ID_953b883629bb26560a00206a0145c277-439f176840f97bcf0a00201900c3608b-en-US">
+</a>FFT window functions</div></div><a name="kanchor13">
+</a><a name="kanchor14">
+</a><p>Each FFT frame is multiplied with a specific window function after sampling in the time domain. Windowing helps minimize the discontinuities at the end of the measured signal interval and thus reduces the effect of spectral leakage, increasing the frequency resolution.</p><p>Additional filters can be applied after demodulation to filter out unwanted signals, or correct pre-emphasized input signals.</p><div class="block"><div class="subtitle"><a name="ID_09dd2a8a6aa1495c0a002019004115ba-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Asynchronous data processing</div></div><a name="kanchor15">
+</a><p>During a measurement in the R&amp;S FSW Transient Analysis application, the data is captured and stored in the capture buffer until the defined measurement time has expired. As soon as a minimum amount of data is available, the first FFT calculation is performed. As soon as the required number of (overlapping) FFT results is available (defined by the "sweep count"), the detector function is applied to the data and the first frame is displayed in the Spectrogram (and any other active result displays).</p><div class="block" id="ID_39902c3a6aa1495c0a00201900144809-439f176840f97bcf0a00201900c3608b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7243a13b69b9429c0a002019017b833f_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Signal processing: calculating one spectrogram frame</div></div><p>Shortly after the measurement time is over, the final results are displayed and the measurement is complete. Due to this asynchronous processing, initial analysis results are available very quickly. At the same time, the data is captured over the full bandwidth entirely without gaps. The following figure illustrates how the capture and result display processes are performed asynchronously.</p><div class="block" id="ID_45ed82486aa1495c0a00201900939821-439f176840f97bcf0a00201900c3608b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8ccf844969edbe930a00201900150be8_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Asynchronous data processing</div></div><div class="block"><div class="subtitle"><a name="ID_13fe47906aa1495c0a00201901e8a914-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Multiple spectrograms</div></div><a name="kanchor16">
+</a><a name="kanchor17">
+</a><a name="kanchor18">
+</a><p>However, after each data acquisition, a short delay occurs before the next acquisition can be carried out. Thus, for measurements for which several spectrograms are required and the capturing process is repeated several times (defined by the "frame count"), a short gap in the results between spectrograms can be detected.</p><div class="block" id="ID_119c36e56aa1495c0a002019007558de-439f176840f97bcf0a00201900c3608b-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgae7876e269b940f60a0020190134d7c7_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Signal processing: calculating several spectrograms</div></div><div class="block"><div class="subtitle"><a name="ID_3bb64a16d80ffcbc0a710ade013f6506-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Resolution bandwidth</div></div><p>The resolution bandwidth (RBW) has an effect on how the spectrum is measured and displayed. It determines the frequency resolution of the measured spectrum and is directly coupled to the selected analysis bandwidth (ABW). The ABW can be the full measurement bandwidth, the bandwidth of the analysis region, or the length of the result range, depending on the evaluation basis of the result display (see <a class="xref" href="7d578f007a7c4ea9.htm#ID_8d74eb1982b184440a710ade00a3e846-439f176840f97bcf0a00201900c3608b-en-US">"Basis of Evaluation"</a>). If the ABW is changed, the resolution bandwidth is automatically adjusted. Which coupling ratios are available depends on the selected <a class="xref" href="a1de96f679604443.htm#ID_ff021919831d5a010a00201901bc2527-3b24b2fad7fbddee0a001ae7230640bf-en-US">"FFT Window"</a>.</p><p>A small resolution bandwidth has several advantages. The smaller the resolution bandwidth, the better you can observe signals whose frequencies are close together and the less noise is displayed. However, a small resolution bandwidth also increases the required measurement time.</p><p>The resolution bandwidth parameters can be defined in the bandwidth configuration, see <a class="xref" href="9f59ed0a09a949c4.htm#ID_5510bdc5d81050c40a001ae7799a76d2-d130ada231c068490a0020190010b515-en-US">"Bandwidth Settings"</a>.</p><div class="block"><div class="subtitle"><a name="ID_e4c1a923d81535270a001ae7522198e1-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Time resolution</div></div><p>The time resolution determines the size of the bins used for each FFT calculation. The shorter the time span used for each FFT, the shorter the resulting span, and thus the higher the resolution in the spectrum becomes. The time resolution to be used for R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW can be defined manually or automatically according to the data acquisition settings.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

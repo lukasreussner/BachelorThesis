@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Troubleshooting the Measurement|Explanation of Status Bar Messages" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Message: Sync Prefers More Valid Symbols</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c8700fee851bf52b0a710a9201ae74f5-5ec6da20410e46660a00206a009c64d8-en-US;ID_28a970e9851bf51b0a710a92010d4ade-5ec6da20410e46660a00206a009c64d8-en-US;ID_1ee7f8078664ea8b0a00206a01ad646a-5ec6da20410e46660a00206a009c64d8-en-US;ID_70794a508664ea8b0a00206a009b701c-5ec6da20410e46660a00206a009c64d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1c0026aadac1410a.htm">Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="dbc22b75b920431a.htm">Explanation of Status Bar Messages</a> &gt; <span class="chm-breadcrumb">Message: Sync Prefers More Valid Symbols</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_c8700fee851bf52b0a710a9201ae74f5-5ec6da20410e46660a00206a009c64d8-en-US">
+</a>Message: <span style="font-weight: bold">Sync Prefers More Valid Symbols</span></div><p><b><a name="ID_28a970e9851bf51b0a710a92010d4ade-5ec6da20410e46660a00206a009c64d8-en-US">
+</a>Note:</b> Note that this message does not necessarily indicate a problem. Its purpose is to inform you that you might have the opportunity to get a more stable demodulation and/or better measurement results by improving your setup.<br/></p><p>Synchronization in the VSA application is performed in two stages: coarse synchronization that precedes the reference signal generation and fine synchronization based on the reference signal.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">The coarse synchronization stage can work data-aided (i.e. based on a known pattern) or non-data-aided (i.e. based on the unknown data symbols). The default is a non-data-aided coarse synchronization. In the case that a pattern is part of signal, the user can switch to data-aided synchronization.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">The fine synchronization stage always works data-aided.</li></ul></div><p>'Sync Prefers More Valid Symbols' indicates that one of the synchronization stages has too few symbols to ensure that the synchronization is robust.</p><div class="block"><div class="listintro-in-compact-list">The message is given if</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Coarse Synchronization = Non-Data-Aided (User Pattern for Sync = Off):<br/>Estimation range shorter than 40 symbols<br/>(see <a class="xref" href="c9352f8e8b9c47d4.htm#ID_a0230e96d7e0e40f0a00206a00fc891a-184c8906411153460a00206a01532735-en-US">"Estimation"</a>)</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Fine Synchronization:<br/>Estimation range shorter than 10 symbols<br/>(see <a class="xref" href="c9352f8e8b9c47d4.htm#ID_a0230e96d7e0e40f0a00206a00fc891a-184c8906411153460a00206a01532735-en-US">"Estimation"</a>)</li></ul></div><div class="block"><div class="listintro-in-compact-list">Solution:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">If the signal contains a pattern, set "Coarse Synchronization: Pattern".<br/>(see <a class="xref" href="a46a863e71764fea.htm#ID_021fe23c819dbc0f0a00206a01e62e07-98ce8ff6410963710a00206a00a7855c-en-US">"Coarse Synchronization"</a>).<br/>Example: measurement of a GSM EDGE pattern that has a length of 26 symbols.<div class="block" id="ID_1ee7f8078664ea8b0a00206a01ad646a-5ec6da20410e46660a00206a009c64d8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img3894e915854ad4d40a00206a01f141fd_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">User Pattern for Sync = Off</div></div><div class="block" id="ID_70794a508664ea8b0a00206a009b701c-5ec6da20410e46660a00206a009c64d8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img0ff6b094854ed75c0a00206a01f72bc9_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">User Pattern for Sync = On</div></div></li><li style="margin-bottom:0; padding-bottom:0;" value="2">Choose a longer "Result Range".</li><li style="margin-bottom:0; padding-bottom:0;" value="3">If the signal is bursted and the bursts are short:<table border="0" cellpadding="0" cellspacing="0" class="list2-in-compact-list" style="border:0px solid #FFFFFF; margin-bottom:0;"><tr><td valign="baseline" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; border:0px solid #FFFFFF;">Make sure your "Result Range" comprises the entire burst.</td></tr><tr><td valign="baseline" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; border:0px solid #FFFFFF;">Make sure that "Run-In/Out" is not chosen too large, since the "Run-In/Out" ranges are excluded from the synchronization.</td></tr></table></li><li style="margin-bottom:0; padding-bottom:0;" value="4">If the signal is bursted and contains a pattern:<br/>Only switch off the burst search if absolutely necessary. If you need to switch it off, align your "Result Range" to the pattern, make sure it does not exceed the burst ramps and choose "Continuous Signal" as the "Signal Type" in the "Signal Description" dialog.</li></ul></div><div class="block"><div class="listintro-in-compact-list">For more information, see</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><a class="xref" href="a9433bb736a54dfb.htm#shiv_FSV_K70_0895-184c8906411153460a00206a01532735-en-US">"Overview of the Demodulation Process"</a></li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

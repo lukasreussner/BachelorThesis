@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Trigger and Gate Configuration|Triggering|Triggered Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Trigger Drop-Out Time</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6a0148c9074e257f0a00206a0116b3a6-29df81aa552fd45e0a00201901b30639-en-US;ID_51f993db074e257f0a00206a01232045-29df81aa552fd45e0a00201901b30639-en-US;ID_9616c28f7fdc0b430a710ade01a15d1a-29df81aa552fd45e0a00201901b30639-en-US;ID_e30868927fe70ab90a001ae748828ee3-29df81aa552fd45e0a00201901b30639-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="17dd587d33cf488f.htm">Trigger and Gate Configuration</a> &gt; <a class="chm-breadcrumb" href="909a428670bd4bdd.htm">Triggering</a> &gt; <a class="chm-breadcrumb" href="f2de56076f9341b5.htm">Triggered Measurements</a> &gt; <span class="chm-breadcrumb">Trigger Drop-Out Time</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1827">
+</a><a name="kanchor1828">
+</a><div class="chm-chaptertitle">Trigger Drop-Out Time</div><p>If a modulated signal is instable and produces occasional "drop-outs" during a burst, you can define a minimum duration that the input signal must stay below the trigger level before triggering again. This is called the "drop-out" time. Defining a dropout time helps you stabilize triggering when the analyzer is triggering on undesired events.</p><div class="block" id="ID_51f993db074e257f0a00206a01232045-29df81aa552fd45e0a00201901b30639-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgd6c569c8074545ad0a00206a013e516a_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Effect of the trigger drop-out time</div></div><p>See <a class="xref" href="b58fe59afa584148.htm#ID_97c7cfec0d7fd1ec0a00206a007e9fef-a9aa45c10d7fd1ec0a00206a013620e3-en-US">"Drop-Out Time"</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_9616c28f7fdc0b430a710ade01a15d1a-29df81aa552fd45e0a00201901b30639-en-US">
+</a>Drop-out times for falling edge triggers</div><p>If a trigger is set to a falling edge ("Slope" = "Falling", see <a class="xref" href="907eb6d6fa4f4bac.htm#ID_d00257381002a0c50a00206a01a7dd5b-6309b8b51002a0c50a00206a01b599ce-en-US">"Slope"</a>) the measurement is to start when the power level falls below a certain level. This is useful, for example, to trigger at the end of a burst, similar to triggering on the rising edge for the beginning of a burst.</p><p>If a drop-out time is defined, the power level must remain below the trigger level at least for the duration of the drop-out time (as defined above). However, if a drop-out time is defined that is longer than the pulse width, this condition cannot be met before the final pulse, so a trigger event will not occur until the pulsed signal is over!</p><div class="block" id="ID_e30868927fe70ab90a001ae748828ee3-29df81aa552fd45e0a00201901b30639-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgf3917e5d7fe68a3e0a001ae73f3fc9a4_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Trigger drop-out time for falling edge trigger</div></div><p>For gated measurements, a combination of a falling edge trigger and a drop-out time is generally not allowed.</p></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

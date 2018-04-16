@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Occupied Bandwidth Measurement (OBW)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>About the Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0945a0edeba4273b0a00206a01e14344-216dedebe1fc31bd0a00206a01a4cad1-en-US;shiv_4a_instrument_functions_06670-216dedebe1fc31bd0a00206a01a4cad1-en-US;ID_6d2e29d05d3411e1ab19f5e7610aa81b-216dedebe1fc31bd0a00206a01a4cad1-en-US;ID_41e2aa6ca54fd6350a00206a0185fd7a-216dedebe1fc31bd0a00206a01a4cad1-en-US;ID_2711af09e2fc79660a710a31004a7d46-216dedebe1fc31bd0a00206a01a4cad1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="3f2951ff1ae34ebe.htm">Occupied Bandwidth Measurement (OBW)</a> &gt; <span class="chm-breadcrumb">About the Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor680">
+</a><a name="kanchor681">
+</a><div class="chm-chaptertitle">About the Measurement</div><p>The occupied bandwidth is defined as the bandwidth containing a defined percentage of the total transmitted power. A percentage between 10 % and 99.9 % can be set.</p><div class="block"><div class="subtitle"><a name="shiv_4a_instrument_functions_06670-216dedebe1fc31bd0a00206a01a4cad1-en-US">
+</a>Measurement principle</div></div><p>The bandwidth containing 99% of the signal power is to be determined, for example. The algorithm first calculates the total power of all displayed points of the trace. In the next step, the points from the right edge of the trace are summed up until 0.5 % of the total power is reached. Auxiliary marker 1 is positioned at the corresponding frequency. Then the points from the left edge of the trace are summed up until 0.5 % of the power is reached. Auxiliary marker 2 is positioned at this point. 99 % of the power is now between the two markers. The distance between the two frequency markers is the occupied bandwidth which is displayed in the marker field.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_6d2e29d05d3411e1ab19f5e7610aa81b-216dedebe1fc31bd0a00206a01a4cad1-en-US">
+</a>OBW within defined search limits - multicarrier OBW measurement in one sweep</div><a name="kanchor682">
+</a><a name="kanchor683">
+</a><a name="kanchor684">
+</a><p>The occupied bandwidth of the signal can also be determined within defined search limits instead of for the entire signal. Thus, only a single sweep is required to determine the OBW for a multicarrier signal. To do so, search limits are defined for an individual carrier and the OBW measurement is restricted to the frequency range contained within those limits. Then the search limits are adapted for the next carrier and the OBW is automatically recalculated for the new range.</p><div class="block" id="ID_41e2aa6ca54fd6350a00206a0185fd7a-216dedebe1fc31bd0a00206a01a4cad1-en-US"><div class="graphic"><img border="0" src="Resources/Images/img71e351faa53d89f80a00206a001874c7_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>For step-by-step instructions, see <a class="xref" href="b1a7ae9e010649b3.htm#ID_8e6a9de15d3411e1ab19f5e7610aa81b-216dedebe1fc31bd0a00206a01a4cad1-en-US">"How to determine the OBW for a multicarrier signal using search limits"</a>.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_2711af09e2fc79660a710a31004a7d46-216dedebe1fc31bd0a00206a01a4cad1-en-US">
+</a>Prerequisites</div></div><a name="kanchor685">
+</a><p>To ensure correct power measurement, especially for noise signals, and to obtain the correct occupied bandwidth, the following prerequisites and settings are necessary:</p><div class="block"><ul class="list"><li value="1">Only the signal to be measured is displayed in the window, or search limits are defined to include only one (carrier) signal. An additional signal would falsify the measurement.</li><li value="2">RBW &lt;&lt; occupied bandwidth (approx. 1/20 of occupied bandwidth, for voice communication type: 300 Hz or 1 kHz)</li><li value="3">VBW <span style="font-family: arial; font-size: 10.5pt">≥</span> 3 x RBW</li><li value="4">RMS detector</li><li value="5">Span <span style="font-family: arial; font-size: 10.5pt">≥</span> 2 to 3 x occupied bandwidth</li></ul></div><p>Some of the measurement specifications (e.g. PDC, RCR STD-27B) require measurement of the occupied bandwidth using a peak detector. The detector setting of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW has to be changed accordingly then.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

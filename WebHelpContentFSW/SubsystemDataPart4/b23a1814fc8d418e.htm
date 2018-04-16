@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Basics on GSM Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Trigger settings</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8ab1bb9f365c51100a00206a0080e497-b1f487377d4432d90a002019013b147f-en-US;ID_2d44fd81eb6c0c7f0a002019015127af-b1f487377d4432d90a002019013b147f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="639d9fcc151e43b9.htm">Basics on GSM Measurements</a> &gt; <span class="chm-breadcrumb">Trigger settings</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Trigger settings</div><a name="kanchor176">
+</a><a name="kanchor177">
+</a><a name="kanchor178">
+</a><a name="kanchor179">
+</a><a name="kanchor180">
+</a><p>The GSM measurements can be performed in "Free Run" (untriggered) mode; however, an external trigger or a power trigger can speed up measurements. To perform measurements the R&amp;S FSW GSM application needs the frame start as a time reference. The R&amp;S FSW GSM application searches for a frame start after every I/Q data acquisition. The required search effort depends on the trigger mode.</p><p>Consider the following trigger mode settings:</p><div class="block"><ul class="list"><li value="1">In "Free Run" mode, i.e. without any trigger, the R&amp;S FSW GSM application totally relies on the frame/slot configuration to find the frame start. The start of a measurement is not triggered. Once a measurement is completed, another is started immediately. For an unambiguous frame configuration, the GSM application searches for the frame start inside the captured I/Q data. This is the slowest frame search mode.</li><li value="2">With a "Power Trigger", the measurement is triggered by the power ramp of the received GSM bursts. Nevertheless the R&amp;S FSW GSM application still relies on the frame/slot configuration to find the frame start inside the captured I/Q data. Once a measurement is completed, the R&amp;S FSW GSM application waits for the next trigger event to start the next measurement. The search for the frame start is as in "Free Run" mode, except that the I/Q data capture is triggered.</li><li value="3">With the "External Trigger", the measurement is triggered by an external signal (connected to the "EXT TRIGGER" input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW). The R&amp;S FSW GSM application assumes that the frame start (i.e. the "active part" in slot 0) directly follows the trigger event. An external trigger requires a correct setting of the trigger offset. The search is faster compared to the free run and power trigger modes. Use an external trigger to maximize the measurement speed or if the frame configuration is ambiguous (i.e. if the slot properties are cyclic with a cycle less than the frame duration).</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_2d44fd81eb6c0c7f0a002019015127af-b1f487377d4432d90a002019013b147f-en-US">
+</a>Trigger source for MSRA Master</div><a name="kanchor181">
+</a><p>Any trigger source other than "Free Run" defined for the MSRA Master is ignored when determining the frame start in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW GSM application. For this purpose, the trigger is considered to be in "Free Run" mode.</p></td></tr></table></div></div><p>Refer to <a class="xref" href="15cbcfdd72344abd.htm#ID_b1dfd6fb704621e70a001ae717a151fc-7af94569311ea6770a001ae74a2c107d-en-US">"Trigger Settings"</a> to learn more about appropriate trigger settings and to <a class="xref" href="e01a77d7a0944516.htm#ID_3db7fd665fd17fee0a0020190041ae40-6de3276a7d447f250a0020190132413b-en-US">"Signal Description"</a> for information on the frame/slot configuration.</p><p>Refer to <a class="xref" href="501ca58b40ec44c9.htm#shiv_FSV_K10_1215-307d16f3a15143c50a001ae723d683e6-en-US">"Automatic Trigger Offset"</a> to learn more about setting the trigger offset automatically.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

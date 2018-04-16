@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="1xEV-DO Measurements (R&amp;S FSW-K84/-K85)|Remote Commands for 1xEV-DO Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k84_k85.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Domain Error Power (BTS application)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d8cd65ccead2617f0a710a3100b4bc93-256514d6f4add5530a00206a013240dd-en-US;ID_a146efa74e0603ee0a00206a01441c9d-256514d6f4add5530a00206a013240dd-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">1xEV-DO Measurements (R&amp;S FSW-K84/-K85)</a> &gt; <a class="chm-breadcrumb" href="f1f2880b582e4099.htm">Remote Commands for 1xEV-DO Measurements</a> &gt; <a class="chm-breadcrumb" href="5fc41fd44c8446e2.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="7c0969f37d474f81.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Code Domain Error Power (BTS application)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor994">
+</a><div class="chm-chaptertitle">Code Domain Error Power (BTS application)</div><p>The command returns three values for each code in a channel:</p><p>&lt;code number&gt;, &lt;error power&gt;, &lt;power ID&gt;</p><p>The number of results corresponds to the spreading factor (see <a class="xref" href="3fe0d2fc412d4717.htm#shiv_FSV_K84_2815-f04f2ed9fd8bbace0a00206a00f7c8f6-en-US">"Channel Type Characteristics"</a>).</p><p>In addition, the output depends on the mapping settings. The output is either the I branch, the Q branch or the complex signal.</p><div class="block"><a name="ID_a146efa74e0603ee0a00206a01441c9d-256514d6f4add5530a00206a013240dd-en-US">
+</a><table border="1"><colgroup><col width="82.4985">
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Value</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>&lt;code number&gt;</p></td><td valign="top"><p>code number within the channel</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;error power&gt;</p></td><td valign="top"><p>value of the composite EVM</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;power ID&gt;</p></td><td valign="top"><p>type of power detection:</p><p>0 - inactive channel</p><p>1 - active channel</p></td></tr></tbody></table></div><p>The Hadamard or BitReverse order is important for sorting the channels, but not for the number of values.</p><p>With Hadamard, the individual codes are output in ascending order.</p><p>With BitReverse, codes which belong to a particular channel are adjacent to each other.</p><p>Since an error power is output for Code Domain Error Power, consolidation of the power values is not appropriate. The number of codes that are output therefore generally corresponds to the base spreading factor.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Converting an RF Signal to a Digital I/Q Signal via the Optional Digital Baseband Interface</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0d04cdb2cae5bcff0a00206a01ab2146-0a4b224e9f5016990a00206a012f67bc-en-US;ID_69acf351cafbe69e0a00206a0064acd1-0a4b224e9f5016990a00206a012f67bc-en-US;ID_cbd64d519d9611e1a7e9d55eb2eaf52c-0a4b224e9f5016990a00206a012f67bc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="cd12fe88f05c4826.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Converting an RF Signal to a Digital I/Q Signal via the Optional Digital Baseband Interface</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Converting an RF Signal to a Digital I/Q Signal via the Optional Digital Baseband Interface</div><p>In the following example, an RF signal is measured at the RF input and then output as digital I/Q data via the Digital Baseband Interface, which requires an additional hardware option.</p><p>The following signal is to be measured:</p><div class="block"><a name="ID_69acf351cafbe69e0a00206a0064acd1-0a4b224e9f5016990a00206a012f67bc-en-US">
+</a><span class="table-caption">Signal parameters for programming example</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>carrier frequency</p></td><td valign="top"><p>5 GHz</p></td></tr><tr class="evenrow"><td valign="top"><p>peak power</p></td><td valign="top"><p>-10 dBm</p></td></tr><tr class="oddrow"><td valign="top"><p>bandwidth</p></td><td valign="top"><p>22 MHz</p></td></tr></tbody></table></div><p>Note: For a bandwidth of 22 MHz, a sample rate of 27.5 MHz is required.</p><div class="block"><a name="ID_cbd64d519d9611e1a7e9d55eb2eaf52c-0a4b224e9f5016990a00206a012f67bc-en-US">
+</a><span class="table-caption">Required I/Q data acquisition parameters for TRAC:IQ:SET command</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>Filter type</p></td><td valign="top"><p>Normal</p></td></tr><tr class="evenrow"><td valign="top"><p>Sample Rate</p></td><td valign="top"><p>27.5 MHz</p></td></tr><tr class="oddrow"><td valign="top"><p>Trigger Source</p></td><td valign="top"><p>External</p></td></tr><tr class="evenrow"><td valign="top"><p>Trigger Slope</p></td><td valign="top"><p>Positive</p></td></tr><tr class="oddrow"><td valign="top"><p>Pretrigger Samples</p></td><td valign="top"><p>0</p></td></tr><tr class="evenrow"><td valign="top"><p>Number of Samples</p></td><td valign="top"><p>1000</p></td></tr></tbody></table></div><pre class="verbatim" xml:space="preserve">//----------Preparing the instrument------------------------
+*RST
+//Sets the instrument to a defined default status
+
+//------------Configuring the measurement-----------------------------
+
+FREQ:CENT 5GHz
+//Sets the center frequency to 5 GHz
+DISP:TRAC1:Y:RLEV -10dBm
+//Sets the reference level to -10 dBm
+TRACE:IQ:STATE ON
+//Enables acquisition of I/Q data
+TRAC:IQ:SET NORM,50MHz,27.5MHz,EXT,POS,0,1000
+//Configures the measurement. Only the sample rate and trigger source settings
+//are relevant to the digital baseband interface. The other parameters can be set
+//to their default values as listed above. 
+OUTPUT:DIQ ON
+//Enables digital I/Q data output interface
+
+//------------Performing the measurement-----------------------------
+
+INIT:IMM
+//    Starts data acquisition and transmission to the output connector</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

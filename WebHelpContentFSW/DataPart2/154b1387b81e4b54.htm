@@ -1,0 +1,155 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Performing a Basic Frequency Sweep</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1a60db9105d458720a710a3100121009-9feed69137344f0b0a00201900e8284f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9cd40c31930e4200.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Programming Example: Performing a Basic Frequency Sweep</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3324">
+</a><a name="kanchor3325">
+</a><div class="chm-chaptertitle">Programming Example: Performing a Basic Frequency Sweep</div><p>This example demonstrates how to configure and perform a basic frequency sweep measurement in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//--------------Preparing the measurement ---------------------
+*RST
+//Resets the instrument
+INIT:CONT OFF
+//Selects single sweep mode.
+
+//--------------Configuring the Frequency and Span-------------
+FREQ:CENT 100MHz
+//Defines the center frequency
+FREQ:SPAN 200MHz
+//Sets the span to 100 MHz on either side of the center frequency.
+
+//Activate signal tracking to keep the center frequency on the signal peak:
+CALC:MARK:FUNC:STR ON
+CALC:MARK:FUNC:STR:BAND 20MHz
+CALC:MARK:FUNC:STR:THR -90dBm
+CALC:MARK:FUNC:STR:TRAC 1
+//After each sweep the maximum on trace 1 is searched within a range of 20 MHz
+//around the center frequency. It must have a minimum power of -90dBm.
+
+//--------------Configuring the Bandwidth----------------------
+BAND:AUTO OFF
+BAND 1MHz
+BAND:TYPE RRC
+//Defines the RBW as 1 MHz using an RRC filter
+
+BAND:VID:AUTO OFF
+BAND:VID 500kHz
+//Decouples the VBW from the RBW and decreases it to smooth the trace.
+
+//--------------Configuring the Sweep--------------------------
+SENS:SWE:COUN 10
+//Defines 10 sweeps to be performed in each measurement.
+SENS:SWE:POIN 500
+//During each sweep, 500 trace points will be measured.
+SENS:SWE:TIME:AUTO OFF
+SENS:SWE:TIME 50ms
+//Decouples the sweep time from the RBW,VBW and span and increases it to
+//make the measurement more precise. 
+
+//--------------Configuring Attenuation------------------------
+//Only if electronic attenuator is available:
+//INP:EATT:STAT ON
+//Switches on the electronic attenuator.
+//INP:EATT 30dB
+//Sets the electronic attenuation to 30 dB.
+INP:ATT 10dB
+//Sets the mechanical attenuation to 10 dB and couples the reference level
+//to the attenuation instead of vice versa.
+
+//--------------Configuring the Amplitude and Scaling----------
+DISP:TRAC1:Y:RLEV -10dBm
+//Sets the reference level to -10 dBm.
+DISP:TRAC1:Y:RLEV:OFFS 10dB
+//Shifts the trace display in the diagram up by 10dB. 
+CALC:UNIT:POW V
+//Sets the unit of the y-axis to Volt. The reference level is now 70.711 mV.
+DISP:TRAC1:Y:SPAC LOG
+//Uses logarithmic scaling with absolute values (V).
+DISP:TRAC1:Y 110dB
+//Increases the displayed range of the y-axis to 110 dB.
+DISP:TRAC1:Y:RPOS 80PCT
+//Shifts the display of the reference level down, it is no longer the top line
+//in the diagram. The reference level is displayed as a red line.
+
+//--------------Triggering-------------------------------------
+TRIG:SOUR IFP
+TRIG:LEV:IFP -10dBm
+TRIG:SLOP POS
+TRIG:DTIM 50ms
+TRIG:IFP:HYST 5dB
+TRIG:HOLD 10ms
+//Defines triggering when the second intermediate frequency rises to a level
+//of -10 dBm, with a dropout time of 50 ms, a hysteresis of 5 dB and a delay
+//of 10 ms.
+
+
+SWE:EGAT ON
+SWE:EGAT:TYPE EDGE
+SWE:EGAT:LENG 5ms
+//Defines gating. Values are measured for 5 ms after triggering.
+
+OUTP:TRIG2:DIR OUTP
+OUTP:TRIG2:OTYP UDEF
+OUTP:TRIG2:LEV HIGH
+OUTP:TRIG2:PULS:LENG 100us
+OUTP:TRIG2:PULS:IMM
+//Configures a high trigger signal with a pulse length of 100 us to be output at
+//the front TRIGGER INPUT/OUTPUT connector once.
+
+//--------------Configuring the Trace--------------------------
+DISP:TRAC2 ON
+DISP:TRAC2:MODE AVER
+DISP:TRAC3 ON
+DISP:TRAC3:MODE MAXH
+//Configures 3 traces: 1 (default): clear/write; 2: average; 3: max hold
+
+SENS:DET1 POS
+SENS:DET2 RMS
+SENS:DET3 POS
+//Configures traces 1 and 3 to use the positive peak detector; trace 2 uses
+//the RMS detector.
+
+TRAC:COPY TRACE4,TRACE1
+//Copies trace 1 to a new trace 4 which will then be averaged.
+
+SENS:AVER:STAT4 ON
+SENS:AVER:COUN 10
+SENS:AVER:TYPE LIN
+//Configures trace 4 to be averaged linearly over 10 sweeps.
+
+CALC:MATH:STAT ON
+CALC:MATH:MODE LIN
+CALC:MATH (TRACE1-TRACE2)
+CALC:MATH:POS 100
+//Calculates the linear difference between the measured and average values.
+//The resulting trace is displayed at the top of the diagram.
+
+//--------------Performing the Measurement---------------------
+INIT;*WAI
+//Initiates a new measurement and waits until the last sweep has finished.
+
+//---------------Retrieving Results----------------------------
+TRAC:DATA? TRACE1
+TRAC:DATA? TRACE2
+TRAC:DATA? TRACE3
+TRAC:DATA? TRACE4
+//Returns one power and one frequency value per sweep point for each trace.
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

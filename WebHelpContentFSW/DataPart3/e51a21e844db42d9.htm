@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Application of the Status Reporting System" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Query of an instrument status</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8788f93cc2d352d20a00206a0128f165-c36ab1eec2d352d20a00206a01002bd1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="700fcfbd775e4611.htm">Application of the Status Reporting System</a> &gt; <span class="chm-breadcrumb">Query of an instrument status</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Query of an instrument status</div><p>Each part of any status register can be read using queries. There are two types of commands:</p><a name="kanchor2818">
+</a><a name="kanchor2819">
+</a><div class="block"><ul class="list"><li value="1">The common commands <span class="command">*ESR?</span>, <span class="command">*IDN?</span>, <span class="command">*IST?</span>, <span class="command">*STB?</span> query the higher-level registers.</li><li value="2">The commands of the <span class="command">STATus</span> system query the SCPI registers (<span class="command">STATus:QUEStionable</span>...)</li></ul></div><p>The returned value is always a decimal number that represents the bit pattern of the queried register. This number is evaluated by the controller program.</p><p>Queries are usually used after an SRQ in order to obtain more detailed information on the cause of the SRQ.</p><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="ad62bebfb5d44cc9.htm" class="chapter_title_toc">Decimal representation of a bit pattern</a></li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Spurious Measurements application (R&amp;S FSW-K50)|Remote Commands to Perform Spurious Measurements|Retrieving Results|Retrieving and Storing Trace Data" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k50.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe&lt;n&gt;[:DATA]?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9491cb03b999025e0a00206a00093e3d-5a61c39d4d7fe3eb0a001ae727cfae59-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Spurious Measurements application (R&amp;S FSW-K50)</a> &gt; <a class="chm-breadcrumb" href="452b678315694dcc.htm">Remote Commands to Perform Spurious Measurements</a> &gt; <a class="chm-breadcrumb" href="6259e78958ab4e64.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="b19b44f2955c4964.htm">Retrieving and Storing Trace Data</a> &gt; <span class="chm-breadcrumb">TRACe&lt;n&gt;[:DATA]?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_9491cb03b999025e0a00206a00093e3d-5a61c39d4d7fe3eb0a001ae727cfae59-en-US">
+</a><span class="bold">TRACe&lt;n&gt;[:DATA]? </span>&lt;ResultType&gt;<br/></div><div class="rcdescription"><p>This command queries the y-values in the selected result display.</p><p>The unit depends on the display and on the unit you have currently set.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="452b678315694dcc.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Query parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ResultType&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Determines the type of result to be returned.</p><span class="bold">TRACE1<br/></span><p>The trace number whose values are to be returned. For Spurious result displays, only one trace is available. This parameter value is only available for graphical displays.</p><p>For each trace point, the measured or calculated value is returned. For the Magnitude Capture display, the maximum y-value for each trace point is returned.</p><span class="bold">LIST<br/></span><p>Returns the Spurious Detection Table results, in the following order:</p><p>&lt;spur frequency&gt;, &lt;power of the spur&gt;, &lt;delta to limit&gt;, &lt;RBW&gt;, &lt;segment start&gt;, &lt;segment stop&gt;,&lt; spur ID&gt;, &lt;reserved&gt;</p><p>For details on the results see <a class="xref" href="e8114e85bfec4044.htm#ID_c86579e2427b6bd10a001ae765a20928-7d0605c9908345770a001ae71545267d-en-US">Table "Spurious Detection Table Results"</a>.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC2:DATA? TRACE1</span><br/><p>//Results (extract of 1001 values):</p><div class="verbatim"><pre class="verbatim_text">-1.244600830E+002,-1.220300903E+002,-1.220475464E+002,
+-1.230028992E+002,-1.262179794E+002,-1.253178787E+002,
+-1.262033005E+002,-1.268296967E+002,-1.260616837E+002,
+-1.261392593E+002,-1.261168823E+002,-1.257556992E+002,
+...</pre></div></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC3:DATA? LIST</span><br/><p>//Results:</p><div class="verbatim"><pre class="verbatim_text">999999875.5,-31.18,88.82,86.0,382690429.7,1687500000.0,1,0,
+1999999703.8,-74.02,45.98,90.8,1687500000.0,2422851562.5,2,0,
+2999999786.5,-100.57,19.43,72.6,2422851562.5,3084960937.5,3,0,
+3999999443.9,-107.36,12.64,93.5,3084960937.5,4154663085.9,4,0,
+4999999378.7,-112.65,7.35,66.2,4992553710.9,5018554687.5,5,0,
+5999999219.2,-109.34,10.66,136.1,5360595703.1,6000000000.0,6,0</pre></div></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

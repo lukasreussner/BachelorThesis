@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Optimizing and Troubleshooting the Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5a9970a22dfc1f1e0a00206a012340dd-322c91766b7551e20a00201900e92ace-en-US;ID_c6d31342e26463dd0a0020190007bb7c-322c91766b7551e20a00201900e92ace-en-US;ID_2a2c7bcee26463dd0a0020190034a6df-322c91766b7551e20a00201900e92ace-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <span class="chm-breadcrumb">Optimizing and Troubleshooting the Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Optimizing and Troubleshooting the Measurement</div><p>If the results do not meet your expectations, try the following methods to optimize the measurement:</p><div class="block"><div class="subtitle"><a name="ID_c6d31342e26463dd0a0020190007bb7c-322c91766b7551e20a00201900e92ace-en-US">
+</a>Synchronization fails</div></div><div class="block"><ul class="list"><li value="1">Check the frequency.</li><li value="2">Check the reference level.</li><li value="3">When using an <b>external trigger,</b> check whether an external trigger is being sent to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</li><li value="4">Check the <b>carrier frequency error</b> (see <a class="xref" href="eafbf0ac2bc94b78.htm#ID_b8017c09a6f811e0bd7d9ca521cdb013-a17c8fff6b754c540a0020190052c5dc-en-US">"Code Domain Parameters"</a>)<br/>Frequency differences between the transmitter and receiver of more than 1.0 kHz impair synchronization of the Code Domain Power measurement. If at all possible, the transmitter and the receiver should be synchronized.</li><li value="5">Check the <b>chip rate error</b>. A large chip rate error results in symbol errors and, therefore, in possible synchronization errors for code domain measurements.</li></ul></div><div class="block"><div class="subtitle"><a name="ID_2a2c7bcee26463dd0a0020190034a6df-322c91766b7551e20a00201900e92ace-en-US">
+</a>EVM and Error results are too high</div></div><p>Only the channels detected as being active are used to generate the ideal reference signal. If a channel is not detected as being active, e.g. on account of low power, the difference between the test signal and the reference signal and therefore the (composite) EVM and code domain errors are very large.</p><p>Distortions also occur if unassigned codes are wrongly given the status of "active channel". To obtain reliable measurement results, select an adequate <b>channel threshold</b>.</p><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="52f9956a199d474e.htm" class="chapter_title_toc">Error Messages</a></li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

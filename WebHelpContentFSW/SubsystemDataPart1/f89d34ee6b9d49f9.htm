@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Activating I/Q Analyzer Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_aa1559a33fd036ea0a710a3100bf7a4d-37c07c805703a7430a00206a00b14126-en-US;ID_487b96c28374df830a710a310173e0c7-37c07c805703a7430a00206a00b14126-en-US;ID_104f6a3730291a7e0a00201900559980-37c07c805703a7430a00206a00b14126-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <span class="chm-breadcrumb">Activating I/Q Analyzer Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor974">
+</a><a name="kanchor975">
+</a><div class="chm-chaptertitle">Activating I/Q Analyzer Measurements</div><p>I/Q Analyzer measurements require a special channel on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. It can be activated using the common <a class="xref" href="726c08629a1246e5.htm#ID_a7857aa1ae926ec30a00206a005529ee-a93e3b4720e106fd0a00206a01cb33ec-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>CREate[:</nobr>​<nobr>NEW]</nobr></a> or <a class="xref" href="80d9d52ae3b047ce.htm#ID_437503d7981353f70a00206a012ea906-732b6c66981353f70a00206a017c2132-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INSTrument:</nobr>​<nobr>CREate:</nobr>​<nobr>REPLace</nobr></a> commands. In this case, some - but not all - parameters from the previously selected application are passed on to the I/Q Analyzer channel. In order to retain <span class="input">all</span> relevant parameters from the current application for the I/Q measurement, use the <a class="xref" href="b9226319fffa460d.htm#shiv_6a_remote_commands_7962-e07bd02a57cebe5d0a00206a00924ecf-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ[:</nobr>​<nobr>STATe]</nobr></a> command to change the application of the current channel.</p><p>A measurement is started immediately with the default settings when the channel is activated.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_487b96c28374df830a710a310173e0c7-37c07c805703a7430a00206a00b14126-en-US">
+</a>Different remote modes available</div><a name="kanchor976">
+</a><a name="kanchor977">
+</a><p>In remote control, two different modes for the I/Q Analyzer measurements are available:</p><div class="block"><ul class="list"><li value="1">A quick mode for pure data acquisition<br/>This mode is activated by default with the <a class="xref" href="b9226319fffa460d.htm#shiv_6a_remote_commands_7962-e07bd02a57cebe5d0a00206a00924ecf-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ[:</nobr>​<nobr>STATe]</nobr></a> command. The evaluation functions are not available; however, performance is slightly improved.</li><li value="2">A more sophisticated mode for acquisition and analysis.<br/>This mode is activated when a new channel is opened for the I/Q Analyzer application (<span class="command">INST:CRE:NEW</span>/ <span class="command">INST:CRE:REPL</span>) or by an additional command (see <a class="xref" href="74145df6603d4576.htm#ID_1a1adaf583779bc40a710a3100420d74-07fd696057d8ab780a00206a00f92f22-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>EVAL</nobr></a>).</li></ul></div></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_104f6a3730291a7e0a00201900559980-37c07c805703a7430a00206a00b14126-en-US">
+</a>Switching the data basis for measurement</div></div><p>By default, the I/Q Analyzer captures and processes I/Q data. However, the I/Q Analyzer application (<em>not Master</em>) <b>in MSRA mode</b> can also perform measurements on the captured I/Q data in the time and frequency domain. In order to do so, the I/Q Analyzer performs an FFT sweep on the captured I/Q data, providing power vs frequency results, or uses the RBW filter to obtain power vs time (zero span) results. This data is then used for the common frequency or time domain measurements. In order to switch between these measurements, you must select the data basis before performing a measurement.</p><p>For a description of remote commands required to perform measurements in the time and frequency domain, see <a class="xref" href="../../../Content/5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a>.</p>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="207b12e391054de0.htm#ID_283cd1002c0f29220a00201900b65eaa-2346a0dd2c0f29220a002019010104e8-en-US" class="title_toc">CALCulate&lt;n&gt;:IQ:MODE</a><br/><a href="0e9c824e04ee4e5d.htm#ID_437503d7981353f70a00206a012ea906-489609676d755ef50a00201901c5e629-en-US" class="title_toc">INSTrument:CREate:DUPLicate</a><br/><a href="726c08629a1246e5.htm#ID_a7857aa1ae926ec30a00206a005529ee-a93e3b4720e106fd0a00206a01cb33ec-en-US" class="title_toc">INSTrument:CREate[:NEW]</a><br/><a href="80d9d52ae3b047ce.htm#ID_437503d7981353f70a00206a012ea906-732b6c66981353f70a00206a017c2132-en-US" class="title_toc">INSTrument:CREate:REPLace</a><br/><a href="1826c2d90f694516.htm#ID_e0ac19ccae92eb0e0a00206a01a8e13d-b7e7799e20e164cc0a00206a0095dc1a-en-US" class="title_toc">INSTrument:DELete</a><br/><a href="4e455cb4c20848d9.htm#ID_9622992c981a01b50a00206a014943d9-5b17b7ef981a01b50a00206a014fb5c5-en-US" class="title_toc">INSTrument:LIST?</a><br/><a href="eca724a0bf2a47c7.htm#ID_4aacbed398367d6b0a00206a00f18d79-4d0aa2bb98367d6b0a00206a01211c7b-en-US" class="title_toc">INSTrument:REName</a><br/><a href="1763fd22fe614557.htm#shiv_6b_remote_commands_basic_1204-fd872d0920e1d21d0a00206a018fb588-en-US" class="title_toc">INSTrument[:SELect]</a><br/><a href="94db68c38d6b4873.htm#ID_4e7b2f78e90424cc0a00206a0039df2f-d9f271e0e90424dc0a00206a00df3149-en-US" class="title_toc">SYSTem:PRESet:CHANnel[:EXEC]</a><br/><a href="74145df6603d4576.htm#ID_1a1adaf583779bc40a710a3100420d74-07fd696057d8ab780a00206a00f92f22-en-US" class="title_toc">TRACe:IQ:EVAL</a><br/><a href="b9226319fffa460d.htm#shiv_6a_remote_commands_7962-e07bd02a57cebe5d0a00206a00924ecf-en-US" class="title_toc">TRACe:IQ[:STATe]</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

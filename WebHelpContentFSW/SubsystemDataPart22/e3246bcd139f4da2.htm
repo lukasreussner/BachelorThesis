@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Configuration|Configuring I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring PDSCH Subframes</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdPDSCHSettingsNumOfSubframes">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdPDSCHSettingsSelectedSubframe">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdPDSCHSettingsUsedAllocations">
+</meta>
+        <meta name="topic-id" value="12842">
+</meta>
+        <meta name="topic-id" value="12843">
+</meta>
+        <meta name="topic-id" value="12844">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c61a8d515d65cea10a00206a00923ecc-a26675e4dfdfe7220a00206a01d6fba8-en-US;ID_0b50d0e27f7881c80a710a9201907225-a26675e4dfdfe7220a00206a01d6fba8-en-US;ID_acd407837f7b425e0a710a92014d03c1-a26675e4dfdfe7220a00206a01d6fba8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/e3246bcd139f4da2.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="815a65ace54b46f5.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="b9dea6be44534e0a.htm">Configuring I/Q Measurements</a> &gt; <span class="chm-breadcrumb">Configuring PDSCH Subframes</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor122">
+</a><a name="kanchor123">
+</a><a name="kanchor124">
+</a><a name="kanchor125">
+</a><a name="kanchor126">
+</a><a name="kanchor127">
+</a><a name="kanchor128">
+</a><a name="kanchor129">
+</a><a name="kanchor130">
+</a><a name="kanchor131">
+</a><a name="kanchor132">
+</a><a name="kanchor133">
+</a><div class="chm-chaptertitle">Configuring PDSCH Subframes</div><p><b>Access</b>: "Overview" &gt; "Signal Description" &gt; "PDSCH Settings"</p><p>The application allows you to configure individual subframes that are used to carry the information of the PDSCH. The PDSCH (Physical Downlink Shared Channel) primarily carries all general user data. It therefore takes up most of the space in a radio frame.</p><p>When you turn on "Auto Demodulation", the application automatically determines the subframe configuration for the PDSCH. In the default state, automatic configuration is on (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">➙</span><a class="xref" href="305e07fbf06e41c5.htm#ID_168a50fd5d48c22d0a00206a005cb401-fd34108f74ac551d0a00206a00b968c5-en-US">More information</a>).</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img">
+</img></td><td><div class="tip_title">Configuring component carriers</div><p>When you are doing measurements on <a class="xref" href="ebbb0ad1db1840cd.htm#ID_b1dc68966fe64be00a001ae72d834bc9-ea7f42c56fe64be00a001ae706e49077-en-US">aggregated carriers</a>, you can configure each carrier separately.</p><p>When available, each carrier in the dialog boxes is represented by an additional tab labeled "CC&lt;x&gt;", with &lt;x&gt; indicating the number of the component carrier.</p><p>Note that the additional tabs are only added to the user interface after you have selected more than "1" component carrier.</p></td></tr></table></div></div><p>Every LTE frame (FDD and TDD) contains 10 subframes. (In TDD systems, some subframes are used by the uplink, however.) Each downlink subframe consists of one or more (resource) allocations. The application shows the contents for each subframe in the configuration table. In the configuration table, each row corresponds to one allocation.</p><div class="block" id="ID_0b50d0e27f7881c80a710a9201907225-a26675e4dfdfe7220a00206a01d6fba8-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgd5822c3c7f7854640a002019009ddbb7_3_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>If there are any errors or conflicts between allocations in one or more subframes, the application shows the corrupt subframe in the "Error in Subframes" field, which appears below the table and is highlighted red if an error occurs. In addition, it shows the conflicting rows of the configuration table. It does not show the kind of error.</p><div class="block" id="ID_acd407837f7b425e0a710a92014d03c1-a26675e4dfdfe7220a00206a01d6fba8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img9dd1ac317f7b208c0a00201901f514fb_3_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>Before you start to work on the contents of each subframe, you should define the number of subframes you want to customize with the "Configurable Subframes" parameter. The application supports the configuration of up to 40 subframes.</p><p>Then you can select a particular subframe that you want to customize in the "Selected Subframe" field. Enter the number of the subframe (starting with 0). The application updates the contents of the configuration table to the selected subframe.</p><p>Remote command:</p><p>Number of subframes: <a class="xref" href="d041f14306db49d9.htm#ID_b0c8f03ae29cd99b0a00206a013af160-1306f6d3e29cd99b0a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>DL[:</nobr>​<nobr>CC&lt;cc&gt;]:</nobr>​<nobr>CSUBframes</nobr></a></p><p>Number of allocations: <a class="xref" href="88f89b8047d94cf7.htm#ID_9ef627e2e29d703d0a00206a010c800c-e5682234e29d703d0a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>DL[:</nobr>​<nobr>CC&lt;cc&gt;]:</nobr>​<nobr>SUBFrame&lt;sf&gt;:</nobr>​<nobr>ALCount</nobr></a></p><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="1c332f98cf734a7b.htm" class="chapter_title_toc">PDSCH Allocations</a></li><li value="2"><a href="56d792ec222d4e30.htm" class="chapter_title_toc">Enhanced Settings</a></li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

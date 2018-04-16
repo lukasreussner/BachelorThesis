@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Configuring VSA|Demodulation Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]DDEMod:ECALc:OFFSet</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_594d916245b29ddd0a00206a011e2639-674346c145b290fc0a00206a014baccb-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="9dfa789013e942ca.htm">Configuring VSA</a> &gt; <a class="chm-breadcrumb" href="8dac9c79912a4ac4.htm">Demodulation Settings</a> &gt; <span class="chm-breadcrumb">[SENSe:]DDEMod:ECALc:OFFSet</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_594d916245b29ddd0a00206a011e2639-674346c145b290fc0a00206a014baccb-en-US">
+</a><span class="bold">[SENSe:]DDEMod:ECALc:OFFSet </span>&lt;EVMOffsetState&gt;<br/></div><div class="rcdescription"><p>Configures the way the VSA application calculates the error vector results for offset QPSK.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Setting parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;EVMOffsetState&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>ON |</nobr> <nobr> OFF</nobr><br/><span class="bold">ON | 1<br/></span><p>VSA application compensates the delay of the Q component with respect to the I component in the measurement signal as well as the reference signal before calculating the error vector. That means that the error vector contains only one symbol instant per symbol period.</p><span class="bold">OFF | 0<br/></span><p>The VSA application subtracts the measured signal from the reference signal to calculate the error vector. This method results in the fact that the error vector contains two symbol instants per symbol period: one that corresponds to the I component and one that corresponds to the Q component.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">ON</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="ee393719dde740e3.htm#ID_97338a0e3e71195e0a710a9201fba118-98ce8ff6410963710a00206a00a7855c-en-US">"Offset EVM"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Remote Commands for Analog Demodulation Measurements|Retrieving Results|Retrieving Trace Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe&lt;n&gt;[:DATA]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a01c6d2f2f4ad9ee0a00206a016e96f1-a93672d2211b70620a00206a010caf3b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="4777278d10bc498a.htm">Remote Commands for Analog Demodulation Measurements</a> &gt; <a class="chm-breadcrumb" href="9d032f2a9bbb42e3.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="26433c7f02c44bb2.htm">Retrieving Trace Results</a> &gt; <span class="chm-breadcrumb">TRACe&lt;n&gt;[:DATA]</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_a01c6d2f2f4ad9ee0a00206a016e96f1-a93672d2211b70620a00206a010caf3b-en-US">
+</a><span class="bold">TRACe&lt;n&gt;[:DATA]</span><br/></div><div class="rcdescription"><p>This command queries current trace data and measurement results.</p><p>The data format depends on <a class="xref" href="c9cf34a38c724856.htm#ID_bd36634e7115e30a0a00206a007ce077-ad068e202055e5090a00206a00318951-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>FORMat[:</nobr>​<nobr>DATA]</nobr></a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Query parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ResultType&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Selects the type of result to be returned.</p><span class="bold">TRACE1 | ... | TRACE6<br/></span><p>Returns the trace data for the corresponding trace.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;TraceData&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>The trace data consists of a list of power levels that have been measured. The number of power levels in the list depends on the currently selected number of sweep points. The unit depends on the measurement and on the unit you have currently set.</p><p>If you are measuring with the auto peak detector, the command returns positive peak values only. (To retrieve negative peak values, define a second trace with a negative peak detector.)</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC? TRACE3</span><br/><p>Queries the data of trace 3.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../../Content/154b1387b81e4b54.htm">Programming Example: Performing a Basic Frequency Sweep</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../fsw_iqanalyzer/Content/36452d4e6acc4224.htm">Data Acquisition via the Optional Digital Baseband Interface</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../fsw_iqanalyzer/Content/76eb21dfcb904669.htm">Data Acquisition via the Optional Analog Baseband Interface</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="8f52dee8931b43ba.htm#ID_b3bef695eb380f0f0a00206a006e7f1e-2f8681ebeb380f0f0a00206a005ba262-en-US">"Programming Example"</a>.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

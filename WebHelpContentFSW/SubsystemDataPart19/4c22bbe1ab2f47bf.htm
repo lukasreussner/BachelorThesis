@@ -1,0 +1,210 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Programming Examples (R&amp;S FSW WLAN application)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 1: Measuring Modulation Accuracy for WLAN 802.11n Standard</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_22fca6f1b41e98520a002019015390c3-a940efd2b2ef02960a00201901b2a602-en-US;ID_717200fdb5c2b5d70a001ae771e0f6bf-a940efd2b2ef02960a00201901b2a602-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="da386ffaacd9456d.htm">Programming Examples (R&amp;S FSW WLAN application)</a> &gt; <span class="chm-breadcrumb">Measurement 1: Measuring Modulation Accuracy for WLAN 802.11n Standard</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor999">
+</a><a name="kanchor1000">
+</a><div class="chm-chaptertitle">Measurement 1: Measuring Modulation Accuracy for WLAN 802.11n Standard</div><p>This example demonstrates how to configure a WLAN IQ measurement for a signal according to WLAN 802.11n standard in a remote environment.</p><pre class="verbatim" xml:space="preserve">//---------- Preparing the application ------------
+// Preset the instrument
+*RST
+// Enter the WLAN option K91n
+INSTrument:SELect WLAN
+// Switch to single sweep mode and stop sweep
+INITiate:CONTinuous OFF;:ABORt
+
+//---------- Configuring the result display ------------
+// Activate following result displays:
+// 1: Magnitude Capture (default, upper left)
+// 2: Result Summary Detailed (below Mag Capt)
+// 3: Result Summary Global (default, lower right)
+// 4: EVM vs Carrier (next to Mag Capt)
+
+LAY:REPL '2',RSD
+LAY:ADD:WIND? '1',RIGH,EVC
+//Result: '4'
+
+//---------- Signal description ------------
+//Use measurement standard IEEE 802 11n
+CONF:STAN 6
+//Center frequency is 13.25 GHz
+FREQ:CENT 13.25GHZ
+
+//---------- Configuring Data Acquisition ---------------------
+//Each measurement captures data for 10 ms.
+SWE:TIME 10ms
+//Set the input sample rate for the captured I/Q data to 20MHz
+TRAC:IQ:SRAT 20MHZ
+// Number of samples captured per measurement: 0.01s * 20e6 samples per second
+// = 200 000 samples
+//Include effects from adjacent channels - switch off filter
+BAND:FILT OFF
+
+//---------- Synchronization -----------------
+//Improve performance - perform coarse burst search initially
+SENS:DEM:TXAR ON
+//Minimize the intersymbol interference - FFT start offset determined automatically
+SENS:DEM:FFT:OFFS AUTO
+
+//---------- Tracking and channel estimation -----------------
+//Improve EVM accuracy - estimate channel from preamble and payload
+SENS:DEM:CEST ON
+//Use pilot sequence as defined in standard
+SENS:TRAC:PIL STAN
+//Disable all tracking and compensation functions
+SENS:TRAC:LEV OFF
+SENS:TRAC:PHAS OFF
+SENS:TRAC:TIME OFF
+
+//---------- Demodulation ------------
+//Define a user-defined logical filter to analyze:
+SENS:DEM:FORM:BCON:AUTO OFF
+//all PPDU formats
+SENS:DEM:FORM:BAN:BTYP:AUTO:TYPE ALL
+//20MHZ channel bandwidth
+SENS:BAND:CHAN:AUTO:TYPE MB20
+//an MCS Index '1'
+SENS:DEM:FORM:MCS:MODE MEAS
+SENS:DEM:FORM:MCS 1
+//STBC field = '1'
+CONF:WLAN:STBC:AUTO:TYPE M1
+//Ness = 1
+CONF:WLAN:EXT:AUTO:TYPE M1
+//short guard interval length (8 samples)
+CONF:WLAN:GTIM:AUTO ON
+CONF:WLAN:GTIM:AUTO:TYPE MS
+
+//---------- Evaluation range settings -----------------
+//Calculate statistics over 10 PPDUs
+SENS:BURS:COUN:STAT ON
+SENS:BURS:COUN 10
+//Determine payload length from HT signal
+CONF:WLAN:PAYL:LENG:SRC HTS
+//Payload length: 8-16 symbols
+SENS:DEM:FORM:BAN:SYMB:EQU OFF
+SENS:DEM:FORM:BAN:SYMB:MIN 8
+SENS:DEM:FORM:BAN:SYMB:MAX 16
+
+//---------- Measurement settings --------------------
+//Define units for EVM and Gain imbalance results
+UNIT:EVM PCT
+UNIT:GIMB PCT
+
+//---------- Defining Limits -----------------------
+//Define non-standard limits for demonstration purposes
+//and return to standard limits later.
+//Query current limit settings:
+CALC:LIM:BURS:ALL?
+//Set new limits:
+//Average CF error: 5HZ
+//max CF error: 10HZ
+//average symbol clock error: 5
+//max symbol clock error: 10
+//average I/Q offset: 5
+//maximum I/Q offset: 10
+//average EVM all carriers: 0.1%
+//max EVM all carriers: 0.5%
+//average EVM data carriers: 0.1%
+//max EVM data carriers: 0.5%
+//average EVM pilots: 0.1%
+//max EVM pilots: 0.5%
+CALC:LIM:BURS:ALL 5,10,5,10,5,10,0.1,0.5,0.1,0.5,0.1,0.5
+
+//---------- Performing the Measurements -----
+// Run 10 (blocking) single measurements
+INITiate:IMMediate;*WAI
+
+//---------- Retrieving Results -------------
+//Query the I/Q data from magnitude capture buffer for first ms
+// 200 000 samples per second -&gt; 200 samples
+TRACe1:IQ:DATA:MEMory? 0,200
+//Note: result will be too long to display in IECWIN, but is stored in log file
+//Query the I/Q data from magnitude capture buffer for second ms
+TRACe1:IQ:DATA:MEMory? 201,400
+//Note: result will be too long to display in IECWIN, but is stored in log file
+
+
+//Select window 4 (EVM vs carrier)
+DISP:WIND4:SEL
+//Query the current EVM vs carrier trace
+TRAC:DATA? TRACE1
+//Note: result will be too long to display in IECWIN, but is stored in log file
+//Query the result of the average EVM for all carriers
+FETC:BURS:EVM:ALL:AVER?
+//Query the result of the EVM limit check for all carriers
+CALC:LIM:BURS:ALL:RES?
+
+//Return to standard-defined limits
+CALC:LIM:BURS:ALL
+//Query the result of the EVM limit check for all carriers again
+CALC:LIM:BURS:ALL:RES?
+
+
+//---------- Exporting Captured I/Q Data-------------
+//Store the captured I/Q data to a file.
+MMEM:STOR:IQ:STAT 1, 'C:\R_S\Instr\user\data.iq.tar'
+</pre><div class="block"><div class="subtitle"><a name="ID_717200fdb5c2b5d70a001ae771e0f6bf-a940efd2b2ef02960a00201901b2a602-en-US">
+</a>Example of results from a WLAN 802.11 MIMO measurement</div></div><pre class="verbatim" xml:space="preserve">FETC:BURS:ALL:FORM?</pre><pre class="verbatim" xml:space="preserve">//Global Results from "Result Summary Global" for 11n/11ac standard
+-11.0804,-11.0921,-0.9189,    //&lt;preamble power&gt;, &lt;payload power&gt;, &lt;peak power&gt;,                            
+nan,nan,nan,                  //&lt;min rms power&gt;, &lt;avg rms power&gt;, &lt;max rms power&gt; 
+nan,nan,nan,                  //&lt;min crest factor&gt;,&lt;avg crest factor&gt;,&lt;max crest factor&gt;,
+199.0661,211.5656,222.7475,   //&lt;min freq error&gt;,&lt;avg freq error&gt;, &lt;max freq error&gt;,
+-0.0281,0.1477,0.3204,        //&lt;min symbol error&gt;, &lt;avg symbol error&gt;, &lt;max symbol error&gt;,
+nan,nan,nan,                  //&lt;min IQ offset&gt;, &lt;avg IQ offset&gt;, &lt;max IQ offset&gt;,
+nan,nan,nan,                  //&lt;min gain imb&gt;, &lt;avg gain imb&gt;, &lt;max gain imb&gt;,
+nan,nan,nan,                  //&lt;min quad offset&gt;, &lt;avg quad offset&gt;, &lt;max quad offset&gt;,
+-43.8807,-43.4476,-43.0819,   //&lt;min EVM all&gt;, &lt;avg EVM all&gt;, &lt;max EVM all&gt;,
+-43.9346,-43.4823,-43.1164,   //&lt;min EVM data&gt;, &lt;avg EVM data &gt;, &lt;max EVM data&gt;
+-44.0135,-42.5833,-41.7621,   //&lt;min EVM pilots&gt;, &lt;avg EVM pilots &gt;, &lt;max EVM pilots&gt;
+nan,nan,nan,                  //&lt;min BER&gt;, &lt;avg BER &gt;, &lt;max BER&gt; 
+nan,nan,nan,                  //&lt;min IQ skew&gt;, &lt;avg IQ skew&gt;, &lt;max IQ skew&gt;
+nan,nan,nan,                  //&lt;min MIMO CP&gt;, &lt;avg MIMO CP&gt;, &lt;max MIMO CP&gt; 
+nan,nan,nan,                  //&lt;min CPE&gt;, &lt;avg CPE&gt;, &lt;max CPE&gt;
+
+//MIMO Stream 1 Results from "Result Summary Detailed" for 11n/11ac standard
+nan,nan,nan,                  //&lt;preamble power&gt;, &lt;payload power&gt;, &lt;peak power&gt;, 
+-11.0882,-11.0876,-11.0866,   //&lt;min rms power&gt;, &lt;avg rms power&gt;, &lt;max rms power&gt;
+10.1580,10.1687,10.1756,      //&lt;min crest factor&gt;,&lt;avg crest factor&gt;,&lt;max crest factor&gt;,
+199.0661,211.5656,222.7475,   //&lt;min freq error&gt;,&lt;avg freq error&gt;, &lt;max freq error&gt;,
+-0.0281,0.1477,0.3204,        //&lt;min symbol error&gt;, &lt;avg symbol error&gt;, &lt;max symbol error&gt;,
+-60.1847,-59.6930,-59.2831,   //&lt;min IQ offset&gt;, &lt;avg IQ offset&gt;, &lt;max IQ offset&gt;,
+-0.0011,-0.0001,0.0010,       //&lt;min gain imb&gt;, &lt;avg gain imb&gt;, &lt;max gain imb&gt;,
+-0.0377,-0.0394,-0.0409,      //&lt;min quad offset&gt;, &lt;avg quad offset&gt;, &lt;max quad offset&gt;,
+-43.8807,-43.4476,-43.0819,   //&lt;min EVM all&gt;, &lt;avg EVM all&gt;, &lt;max EVM all&gt;,
+-43.9346,-43.4823,-43.1164,   //&lt;min EVM data&gt;, &lt;avg EVM data &gt;, &lt;max EVM data&gt;
+-44.0135,-42.5833,-41.7621,   //&lt;min EVM pilots&gt;, &lt;avg EVM pilots &gt;, &lt;max EVM pilots&gt;
+nan,nan,nan,                  //&lt;min BER&gt;, &lt;avg BER &gt;, &lt;max BER&gt; 
+1.4105,2.0148,2.4481,         //&lt;min IQ skew&gt;, &lt;avg IQ skew&gt;, &lt;max IQ skew&gt;
+nan,nan,nan,                  //&lt;min MIMO CP&gt;, &lt;avg MIMO CP&gt;, &lt;max MIMO CP&gt;
+0.0026,-0.1309,-0.6969        //&lt;min CPE&gt;, &lt;avg CPE&gt;, &lt;max CPE&gt;</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

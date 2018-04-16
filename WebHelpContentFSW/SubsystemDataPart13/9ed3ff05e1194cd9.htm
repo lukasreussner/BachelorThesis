@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Configuring Code Domain Analysis and Time Alignment Error Measurements|Channel Detection|General Channel Detection" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CONFigure:WCDPower[:BTS]:CTABle:COMPare</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K72_2619-16016d942d380d3d0a00206a00b5f268-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="277aa63e44a84197.htm">Configuring Code Domain Analysis and Time Alignment Error Measurements</a> &gt; <a class="chm-breadcrumb" href="236fdd6edb0545ae.htm">Channel Detection</a> &gt; <a class="chm-breadcrumb" href="7e7de905e493492f.htm">General Channel Detection</a> &gt; <span class="chm-breadcrumb">CONFigure:WCDPower[:BTS]:CTABle:COMPare</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_FSV_K72_2619-16016d942d380d3d0a00206a00b5f268-en-US">
+</a><span class="bold">CONFigure:WCDPower[:BTS]:CTABle:COMPare </span>&lt;State&gt;<br/></div><div class="rcdescription"><p>This command switches between normal predefined mode and predefined channel table compare mode.</p><p>In the compare mode a predefined channel table model can be compared with the measurement in respect to power, pilot length and timing offset of the active channels.</p><p>Comparison is a submode of predefined channel table measurement. It only influences the measurement if the "Channel Search Mode" is set to <span class="input">Predefined</span> (see <a class="xref" href="5a13694f61da4c7a.htm#shiv_FSV_K72_2610-58db64032d37b0740a00206a018f4742-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>WCDPower[:</nobr>​<nobr>BTS]:</nobr>​<nobr>CTABle[:</nobr>​<nobr>STATe]</nobr></a>). If the compare mode is selected, the power values, pilot lengths and timing offsets are measured and are compared with the values from the predefined channel table. The "Timing Offset" setting is disabled in this case. The differences between the measured and the predefined values are visualized in the corresponding columns of the "CHANNEL TABLE" evaluation (see <a class="xref" href="2786453b32f640ee.htm#ID_3a0c6e19b68b8f510a00206a00e2adc7-14df114092791b800a00206a01fa83d8-en-US">"Channel Table"</a>). The following columns are displayed in the channel table:</p><div class="block"><ul class="list"><li value="1"><b>PilotL</b> is the subtraction of PilotLengthMeasured - PilotLengthPredefined</li><li value="2"><b>PwrRel</b> is the subtraction of PowerRelMeasured - PowerRelPredefined</li><li value="3"><b>T Offs</b> is the subtraction of TimingOffsetMeasured - TimingOffsetPredefined</li></ul></div><p>For non-active channels dashes are shown.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>ON |</nobr> <nobr> OFF |</nobr> <nobr> 1 |</nobr> <nobr> 0</nobr><br/><span class="bold">ON | 1<br/></span><p>Predefined channel table compare mode</p><span class="bold">OFF | 0<br/></span><p>Normal predefined mode</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">0</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p><span class="command">CONF:WCDP:CTAB:COMP ON</span></p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Mode: </span></td><td class="rc_col_content_left" colspan="2">BTS application only</td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="e055e7d2aed647db.htm#ID_c2e636e4ea7bc90d0a710a3100b93e8f-36dc93a6925af2ef0a00206a01773c49-en-US">"Comparing the Measurement Signal with the Predefined Channel Table"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

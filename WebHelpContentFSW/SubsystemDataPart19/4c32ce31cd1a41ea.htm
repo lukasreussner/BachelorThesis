@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring Frequency Sweep Measurements on WLAN 802.11 Signals</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_fd3a2678e5f263dc0a00206a00a21ed3-3fc395d87c7994da0a002019018890ff-en-US;ID_205228047e4fcb7f0a00201901145d7b-3fc395d87c7994da0a002019018890ff-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <span class="chm-breadcrumb">Configuring Frequency Sweep Measurements on WLAN 802.11 Signals</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor873">
+</a><div class="chm-chaptertitle">Configuring Frequency Sweep Measurements on WLAN 802.11 Signals</div><p>The R&amp;S FSW WLAN application uses the functionality of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW base system (Spectrum application, see <a class="xref" href="../../../Content/5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a>) to perform the WLAN 802.11 frequency sweep measurements. The R&amp;S FSW WLAN application automatically sets the parameters to predefined settings as described in <a class="xref" href="529c4de60a204016.htm#ID_92419539e5985d4e0a00206a01f37b1b-fb8264167c41036f0a0020190176f717-en-US">"Frequency Sweep Measurements"</a>.</p><p>The WLAN RF measurements must be activated for a measurement channel in the R&amp;S FSW WLAN application, see <a class="xref" href="b8ed6cb6aa654fff.htm#ID_aa1559a33fd036ea0a710a3100bf7a4d-3fc395d87c7994da0a002019018890ff-en-US">"Activating WLAN 802.11 Measurements"</a>.</p><p>For details on configuring these RF measurements in a remote environment, see <a class="xref" href="../../../Content/5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a>.</p><div class="block"><div class="subtitle"><a name="ID_205228047e4fcb7f0a00201901145d7b-3fc395d87c7994da0a002019018890ff-en-US">
+</a>Remote commands exclusive to RF measurements in the R&amp;S FSW WLAN application:</div></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="1fbaa958675e4296.htm#ID_61041dadcadfccfe0a001ae74af75431-21b7156dcadfcc430a001ae71b489a5a-en-US" class="title_toc">CONFigure:BURSt:SPECtrum:MASK:SELect</a><br/><a href="1fbaa958675e4296.htm#ID_9d52625e2f5c29580a00206a0041989a-db5ccc012f5c20300a00206a00636f5b-en-US" class="title_toc">[SENSe:]POWer:SEM</a><br/><a href="86c4d1678f4a47f3.htm#ID_b3676f5dc92f4dd00a001ae7392dd89c-34d877bfc92f4cf50a001ae704638ba5-en-US" class="title_toc">[SENSe:]POWer:ACHannel:CBWidth</a><br/><a href="2d5b743ab60a4e18.htm#ID_c9db43a62f5c33890a00206a01b819dc-1f6e22e22f5c2ba90a00206a00636f5b-en-US" class="title_toc">[SENSe:]POWer:SEM:CLASs</a><br/><a href="b5810489894f40d3.htm#ID_98ede38b2e4251780a00206a002a743d-1db624ae302f43270a00206a00974c5e-en-US" class="title_toc">[SENSe:]FREQuency:SPAN</a><br/><a href="680f661f52e44f04.htm#ID_974048c22e4182420a00206a00050065-955bfa97302f75720a00206a00c3d81c-en-US" class="title_toc">[SENSe:]FREQuency:SPAN:FULL</a><br/><a href="5f083c6cac2c4239.htm#ID_3acdafd82e3ea9930a00206a01e1335f-1be3701e302fa7ae0a00206a00704b48-en-US" class="title_toc">[SENSe:]FREQuency:STARt</a><br/><a href="ba96053ff4ed40ed.htm#ID_d23624df2e3f33350a00206a00ef3344-8e5f9e60302fcebe0a00206a010c505b-en-US" class="title_toc">[SENSe:]FREQuency:STOP</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

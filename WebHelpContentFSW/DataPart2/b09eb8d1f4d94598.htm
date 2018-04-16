@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the AM Modulation Depth" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Measuring the AM Modulation Depth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5237bf296a9d44190a00206a017b2602-9bb10a533d17ae540a001ae74d3cc400-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="8b151f2862e44dd1.htm">Measuring the AM Modulation Depth</a> &gt; <span class="chm-breadcrumb">Example: Measuring the AM Modulation Depth</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3044">
+</a><a name="kanchor3045">
+</a><div class="chm-chaptertitle">Example: Measuring the AM Modulation Depth</div><p>This example demonstrates how to determine the AM modulation depth in a remote environment. Note that without a real input signal this measurement will not return useful results.</p><div class="verbatim"><pre class="verbatim_text">//-----------Configuring the measurement ------------
+*RST
+//Reset the instrument
+FREQ:CENT 100MHz
+//Set center frequency
+FREQ:SPAN 10KHz
+// Set span
+CALC:MARK:FUNC:MDEP ON
+//Activate AM modulation depth measurement.
+
+//--------------Performing the Measurement-----
+INIT:CONT OFF
+//Selects single sweep mode.
+INIT:IMM
+// Perform a single measurement 
+CALC:MARK:FUNC:MDEP:SEAR ONCE
+//Initiates a search for signals in the current trace.
+
+//---------------Retrieving Results-------------
+CALC:MARK:FUNC:MDEP:RES?
+//Queries the measurement results.
+
+//If the results are not accurate, change the position of the
+//the temporary markers manually.
+
+//----Changing the position of the temp markers-----
+CALC:MARK:X 100MHZ
+//Positions the reference marker on 100 MHz.
+CALC:DELT2:X 5KHZ
+//Positions delta marker 2 and 3 at a distance of 5 kHz to the reference marker.
+CALC:DELT3:X 1KHZ
+//Corrects the position of delta marker 3 by 1 kHz.
+
+CALC:MARK:FUNC:MDEP:RES?
+//Queries the measurement results for the repositioned markers.
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

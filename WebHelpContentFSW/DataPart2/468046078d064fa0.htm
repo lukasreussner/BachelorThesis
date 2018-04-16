@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement|Channel Power Configuration|Channel Setup" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Channel Spacings
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMeasACPSpacingTx">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasACPSpacingAdj">
+</meta>
+        <meta name="topic-id" value="326">
+</meta>
+        <meta name="topic-id" value="327">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_26ebc5aacd7811e08d4cf32e0e8c8c57-4c8b741e73333e100a001ae751d6fc99-en-US;ID_26ee36b0cd7811e08d4cf32e0e8c8c57-4c8b741e73333e100a001ae751d6fc99-en-US;ID_26ee36bacd7811e08d4cf32e0e8c8c57-4c8b741e73333e100a001ae751d6fc99-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <a class="chm-breadcrumb" href="983910f48b5c4015.htm">Channel Power Configuration</a> &gt; <a class="chm-breadcrumb" href="93e82c1da1e74a6e.htm">Channel Setup</a> &gt; <span class="chm-breadcrumb">Channel Spacings</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor559">
+</a><a name="kanchor560">
+</a><a name="kanchor561">
+</a><div class="function_heading"><a name="ID_26ebc5aacd7811e08d4cf32e0e8c8c57-4c8b741e73333e100a001ae751d6fc99-en-US">
+</a>Channel Spacings</div><p>Channel spacings are normally defined by the transmission standard but can be changed. </p><p>If the spacings are not equal, the channel distribution in relation to the center frequency is as follows:</p><div class="block"><a name="ID_26ee36b0cd7811e08d4cf32e0e8c8c57-4c8b741e73333e100a001ae751d6fc99-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>Odd number of Tx channels</p></td><td valign="top"><p>The middle Tx channel is centered to center frequency.</p></td></tr><tr class="evenrow"><td valign="top"><p>Even number of Tx channels</p></td><td valign="top"><p>The two Tx channels in the middle are used to calculate the frequency between those two channels. This frequency is aligned to the center frequency.</p></td></tr></tbody></table></div><p>The spacings between all Tx channels can be defined individually. When you change the spacing for one channel, the value is automatically also defined for all subsequent Tx channels. This allows you to set up a system with equal Tx channel spacing quickly. For different spacings, set up the channels from top to bottom.</p><div class="block"><a name="ID_26ee36bacd7811e08d4cf32e0e8c8c57-4c8b741e73333e100a001ae751d6fc99-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>Tx1-2</p></td><td valign="top"><p>Spacing between the first and the second carrier</p></td></tr><tr class="evenrow"><td valign="top"><p>Tx2-3</p></td><td valign="top"><p>Spacing between the second and the third carrier</p></td></tr><tr class="oddrow"><td valign="top"><p>…</p></td><td valign="top"><p>…</p></td></tr></tbody></table></div><p>If you change the adjacent-channel spacing (ADJ), all higher adjacent channel spacings (ALT1, ALT2, …) are multiplied by the same factor (new spacing value/old spacing value). Again, only enter one value for equal channel spacing. For different spacing, configure the spacings from top to bottom.</p><p>For details, see <a class="xref" href="163be2dc9a5846a2.htm#ID_2c2fda42ad56db390a710a310144c133-afab76cfd7349b540a00206a00bfaa09-en-US">"How to Set Up the Channels"</a></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="21c6634f2e35471e.htm#ID_a01d8e0e2de759290a00206a001810ec-122a74d52105113f0a00206a0068fddc-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>ACHannel:</nobr>​<nobr>SPACing:</nobr>​<nobr>CHANnel&lt;ch&gt;</nobr></a></p><p><a class="xref" href="86235f95c02a4367.htm#ID_def935be2de5f8910a00206a000c0e34-3b628cee2104bb110a00206a0050741f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>ACHannel:</nobr>​<nobr>SPACing[:</nobr>​<nobr>ACHannel]</nobr></a></p><p><a class="xref" href="09a4b336ea8640d1.htm#ID_dc167dc42de6d4c70a00206a00ec1a71-1fa50ccf2104e59b0a00206a00e1bc3e-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>ACHannel:</nobr>​<nobr>SPACing:</nobr>​<nobr>ALTernate&lt;ch&gt;</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

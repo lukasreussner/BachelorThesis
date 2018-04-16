@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Symbol Mapping" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frequency Shift Keying (FSK)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K70_0793-184c8906411153460a00206a01532735-en-US;shiv_FSV_K70_0797-184c8906411153460a00206a01532735-en-US;ID_eefd3122f1915d460a00206a014c422a-184c8906411153460a00206a01532735-en-US;shiv_FSV_K70_0803-184c8906411153460a00206a01532735-en-US;ID_3c570a96f1915d460a00206a018be78d-184c8906411153460a00206a01532735-en-US;ID_0f8c6a58f1915d460a00206a000f1b66-184c8906411153460a00206a01532735-en-US;ID_ac53b0b5f1915d460a00206a01cfe351-184c8906411153460a00206a01532735-en-US;ID_adbdc657766d8ae80a00206a003d695c-184c8906411153460a00206a01532735-en-US;ID_a40f6e83766d8ae80a00206a01d0454c-184c8906411153460a00206a01532735-en-US;ID_3a77023f7b9a295c0a001ae7602b51cf-184c8906411153460a00206a01532735-en-US;ID_601e71fc7b9a295c0a001ae73c081e5c-184c8906411153460a00206a01532735-en-US;ID_585bb1c2eebe22860a71003a009b4a76-184c8906411153460a00206a01532735-en-US;ID_95b02a7bf3ba2f430a71003a018580c9-184c8906411153460a00206a01532735-en-US;ID_87fce9b8fe5a99940a7c00a0011b1b40-184c8906411153460a00206a01532735-en-US;ID_9c231e28fe5a99900a7c00a0003878dd-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="325e2356f7644f86.htm">Symbol Mapping</a> &gt; <span class="chm-breadcrumb">Frequency Shift Keying (FSK)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Frequency Shift Keying (FSK)</div><a name="kanchor238">
+</a><a name="kanchor239">
+</a><p>To illustrate symbol mappings for FSK modulations, the symbol numbers are marked in the logical mapping diagram versus the instantaneous frequency. An instantaneous frequency of zero in the baseband corresponds to the input frequency of the analyzer.</p><div class="block"><div class="subtitle"><a name="shiv_FSV_K70_0797-184c8906411153460a00206a01532735-en-US">
+</a>2FSK (NATURAL)</div></div><p>With 2FSK, the symbol decision is made by a simple frequency discriminator:</p><div class="block" id="ID_eefd3122f1915d460a00206a014c422a-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img0021a618f18e803a0a00206a018943ba_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for 2FSK (NATURAL, SMx) including the logical symbol mapping</div></div><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>2FSK (NATURAL) is the 2FSK mapping used by supported R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>SMx signal generators when using PRBS algorithms. See <a class="xref" href="07f3cfd6d01e4ec3.htm#ID_2ceceb1ce73719030a7c00a0003ddfbe-184c8906411153460a00206a01532735-en-US">"Symbol mapping in accordance with the PRBS generator"</a>.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="shiv_FSV_K70_0803-184c8906411153460a00206a01532735-en-US">
+</a>4FSK</div></div><p>With 4FSK, the symbol decision is made by a frequency discriminator with 3 decision thresholds (-2/3; 0; +2/3) normalized to the FSK reference deviation.</p><div class="block" id="ID_3c570a96f1915d460a00206a018be78d-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img71c4de29f18edbd80a00206a003e91f3_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for 4FSK (NATURAL, SMx) including the logical symbol mapping</div></div><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>4FSK (NATURAL) is the 4FSK mapping used by supported R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>SMx signal generators when using PRBS algorithms. See <a class="xref" href="07f3cfd6d01e4ec3.htm#ID_2ceceb1ce73719030a7c00a0003ddfbe-184c8906411153460a00206a01532735-en-US">"Symbol mapping in accordance with the PRBS generator"</a>.</p></td></tr></table></div></div><div class="block" id="ID_0f8c6a58f1915d460a00206a000f1b66-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgd0b1b2d5f18ebf480a00206a0096a7ca_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for 4FSK (GRAY) including the logical symbol mapping</div></div><div class="block" id="ID_ac53b0b5f1915d460a00206a01cfe351-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga4214256f18e9fb90a00206a01890878_2_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for 4FSK for APCO C4FM and APCO Phase 2 including the logical symbol mapping</div></div><div class="block"><div class="subtitle"><a name="ID_adbdc657766d8ae80a00206a003d695c-184c8906411153460a00206a01532735-en-US">
+</a>8FSK (NATURAL)</div></div><div class="block" id="ID_a40f6e83766d8ae80a00206a01d0454c-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge7cbb527762376e90a00206a00d1a5d1_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for 8FSK (NATURAL) including the logical symbol mapping</div></div><div class="block"><div class="subtitle"><a name="ID_3a77023f7b9a295c0a001ae7602b51cf-184c8906411153460a00206a01532735-en-US">
+</a>16 FSK</div></div><div class="block" id="ID_601e71fc7b9a295c0a001ae73c081e5c-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge7d0540e7b9995980a001ae7639cfb0e_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for 16FSK including the logical symbol mapping</div></div><div class="block"><div class="subtitle"><a name="ID_585bb1c2eebe22860a71003a009b4a76-184c8906411153460a00206a01532735-en-US">
+</a>32FSK</div></div><div class="block" id="ID_95b02a7bf3ba2f430a71003a018580c9-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img77079993f3b9d1290a001ae741d9e03f_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for 32FSK including the logical symbol mapping</div></div><div class="block"><div class="subtitle"><a name="ID_87fce9b8fe5a99940a7c00a0011b1b40-184c8906411153460a00206a01532735-en-US">
+</a>64FSK</div></div><div class="block" id="ID_9c231e28fe5a99900a7c00a0003878dd-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgcec77856fe56239a0a001ae7042fabbe_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for 64FSK including the logical symbol mapping</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

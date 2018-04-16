@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Result Summary</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c4d2643538b978b10a710ade01ffa536-00d6486d389f6b7d0a001ae7386bb539-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="673f84be7f234710.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="3cfd556346bb45bd.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Result Summary</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1182">
+</a><div class="chm-chaptertitle">Result Summary</div><p>For the <b>Result Summary</b>, the command returns all values listed in the result table from top to bottom, i.e.:</p><p><b>For PSK, MSK and QAM modulation:</b></p><p>&lt;EVM_RMS&gt;,&lt;EVM_Peak&gt;,&lt;MER_RMS&gt;,&lt;MER_Peak&gt;,&lt;Phase Error RMS&gt;,&lt;Phase Error Peak&gt;,&lt;MagError_RMS&gt;,&lt;MagError_Peak&gt;,&lt;Carrier Frequency Error&gt;,&lt;Rho&gt;,&lt;I/Q Offset&gt;,&lt;I/Q Imbalance&gt;,&lt;Gain Imbalance&gt;,&lt;Quadrature Error&gt;,Amplitude Droop&gt;,&lt;Power&gt;,<b>&lt;Symbol Rate Error&gt;,&lt;I/Q_Skew&gt;</b></p><p>(Note that the "Symbol Rate Error" and "I/Q skew" were appended at the end to provide compatibility to previous versions and instruments. Consider the notes on I/Q skew results described in <a class="xref" href="01d5ffada7b74bbe.htm#ID_47618c39c058bbc30a7c00a00193e337-184c8906411153460a00206a01532735-en-US">"I/Q skew results depend on modulation"</a>.)</p><p><b>For FSK modulation:</b></p><p>&lt;Freq_Error_RMS&gt;,&lt;Freq_Error_Peak&gt;,&lt;Mag_Error_RMS&gt;,&lt;Mag_Error_Peak&gt;,&lt;FSK Deviation Error&gt;,&lt;FSK Meas Deviation&gt;,&lt;FSK Ref Deviation&gt;,&lt;Carrier Frequency Error&gt;, &lt;Carrier Frequency Drift&gt;,&lt;Power&gt;</p><p>For each result type, both the current and statistical values are provided. The order of the results is as follows:</p><p>&lt;result1_current&gt;, &lt;result1_mean&gt;, &lt;result1_peak&gt;, &lt;result1_stddev&gt;, &lt;result1_95%ile&gt;,</p><p>&lt;result2_current&gt;, &lt;result2_mean&gt;, (...)</p><p>Empty cells in the table return nothing. The number of returned values depends on the modulation scheme. PSK, MSK and QAM modulation returns 85 values 17 results x 5 statistical values), FSK modulation returns 55 values (11 results x 5 statistical values).</p><p>For more details on the individual results see <a class="xref" href="ae225e66035143c2.htm#ID_2087c98f9767b4aa0a00206a003c62af-872c63c6410c614d0a00206a016aa6c2-en-US">"Result Summary"</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

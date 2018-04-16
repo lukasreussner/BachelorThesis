@@ -1,0 +1,25 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Optimizing Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Improving Averaging Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c24e68786ea2bfc80a001ae725bfef0a-dc8211f2032aaddd0a001ae765260aef-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="16241329f7af4ab2.htm">Optimizing Measurements</a> &gt; <span class="chm-breadcrumb">Improving Averaging Results</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Improving Averaging Results</div><p>Instead of <b>trace averaging</b>, use an RMS detector with a higher sweep time to obtain better average power results in less time. Furthermore, enforce the use of the <b>sweep type "FFT"</b> (as opposed to "Auto"; in Sweep mode, the averaging effect of the RMS detector may be less efficient).</p><p>In FFT mode, FFTs are calculated per bin and combined using the RMS detector. For trace averaging, on the other hand, the local oscillator must be switched repeatedly for each trace, which takes additional time.</p><p>Generally, a higher <b>sweep time</b> leads to more data to be averaged and thus stabilizes the results. In FFT mode, a higher sweep time means more FFTs are calculated and combined per bin.</p><p>Thus, in the same capture time, the FFT mode with an RMS detector can provide better results than an averaged trace.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

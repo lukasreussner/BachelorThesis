@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Configuring Amplifier Measurements|Configuring Inputs and Outputs|Reference: I/Q File Input" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>I/Q Data File Format (iq-tar)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b8eed8e37ba899de0a00206a00e743a8-2e8d3b527ba899de0a00206a010acc15-en-US;ID_e6a066abc7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/093e11648f9c46e1.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="514ce2c6787d4307.htm">Configuring Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="74ecbcb0a5444d2a.htm">Configuring Inputs and Outputs</a> &gt; <a class="chm-breadcrumb" href="d0ad4e0c1d9d4693.htm">Reference: I/Q File Input</a> &gt; <span class="chm-breadcrumb">I/Q Data File Format (iq-tar)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor225">
+</a><div class="chm-chaptertitle">I/Q Data File Format (iq-tar)</div><p>I/Q data is packed in a file with the extension <span class="filename">.iq.tar</span>. An iq-tar file contains I/Q data in binary format together with meta information that describes the nature and the source of data, e.g. the sample rate. The objective of the iq-tar file format is to separate I/Q data from the meta information while still having both inside one file. In addition, the file format allows you to preview the I/Q data in a web browser, and allows you to include user-specific data.</p><p>The iq-tar container packs several files into a single <span class="filename">.tar</span> archive file. Files in <span class="filename">.tar</span> format can be unpacked using standard archive tools (see <a href="http://en.wikipedia.org/wiki/Comparison_of_file_archivers" class="link" target="_new">http://en.wikipedia.org/wiki/Comparison_of_file_archivers</a>) available for most operating systems. The advantage of <span class="filename">.tar</span> files is that the archived files inside the <span class="filename">.tar</span> file are not changed (not compressed) and thus it is possible to read the I/Q data directly within the archive without the need to unpack (untar) the <span class="filename">.tar</span> file first.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>An application note on converting Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz I/Q data files is available from the Rohde &amp; Schwarz website:</p><div class="block"><p><a href="http://www.rohde-schwarz.com/appnote/1EF85" class="link" target="_new">1EF85: Converting R&amp;S I/Q data files</a></p></div></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_e6a066abc7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Contained files</div></div><div class="block"><div class="listintro">An iq-tar file must contain the following files:</div><ul class="list"><li value="1"><b>I/Q parameter XML file</b>, e.g. <span class="filename">xyz.xml</span><br/>Contains meta information about the I/Q data (e.g. sample rate). The filename can be  defined freely, but there must be only one single I/Q parameter XML file inside an iq-tar file.</li><li value="2"><b>I/Q data binary file</b>, e.g. <span class="filename">xyz.complex.float32</span><br/>Contains the binary I/Q data of all channels. There must be only one single I/Q data binary file inside an iq-tar file.</li></ul></div><div class="block"><div class="listintro">Optionally, an iq-tar file can contain the following file:</div><ul class="list"><li value="1"><b>I/Q preview XSLT file</b>, e.g. <span class="filename">open_IqTar_xml_file_in_web_browser.xslt</span><br/>Contains a stylesheet to display the I/Q parameter XML file and a preview of the I/Q data in a web browser.<br/>A sample stylesheet is available at <a href="http://www.rohde-schwarz.com/file/open_IqTar_xml_file_in_web_browser.xslt" class="link" target="_new">http://www.rohde-schwarz.com/file/open_IqTar_xml_file_in_web_browser.xslt</a>.</li></ul></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="ab0c2a10cbc3415a.htm" class="chapter_title_toc">I/Q Parameter XML File Specification</a></li><li value="2"><a href="29a0dbebb001474c.htm" class="chapter_title_toc">I/Q Data Binary File</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

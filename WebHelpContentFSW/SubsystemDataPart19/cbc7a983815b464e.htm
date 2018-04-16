@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Demodulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CONFigure:WLAN:EXTension:AUTO:TYPE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_00c9f7d92f52f4450a00206a01a00633-c7b3dd582f52e8fb0a00206a00636f5b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="ecabe2eae6a345a6.htm">Demodulation</a> &gt; <span class="chm-breadcrumb">CONFigure:WLAN:EXTension:AUTO:TYPE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor810">
+</a><a name="kanchor811">
+</a><a name="kanchor812">
+</a><a name="kanchor813">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_00c9f7d92f52f4450a00206a01a00633-c7b3dd582f52e8fb0a00206a00636f5b-en-US">
+</a><span class="bold">CONFigure:WLAN:EXTension:AUTO:TYPE </span>&lt;PPDUType&gt;<br/></div><div class="rcdescription"><p>Defines the PPDUs taking part in the analysis according to the Ness (Extension Spatial Streams) field content (for <b>IEEE 802.11n</b> standard only).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;PPDUType&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>FBURst |</nobr> <nobr> ALL |</nobr> <nobr> M0 |</nobr> <nobr> M1 |</nobr> <nobr> M2 |</nobr> <nobr> M3 |</nobr> <nobr> D0 |</nobr> <nobr> D1 |</nobr> <nobr> D2 |</nobr> <nobr> D3</nobr><br/><p>The first PPDU is analyzed and subsequent PPDUs are analyzed only if they match</p><span class="bold">FBURst<br/></span><p>The Ness field contents of the first PPDU is detected and subsequent PPDUs are analyzed only if they have the same Ness field contents (corresponds to "Auto, same type as first PPDU")</p><span class="bold">ALL<br/></span><p>All recognized PPDUs are analyzed according to their individual Ness field contents (corresponds to "Auto, individually for each PPDU")</p><span class="bold">M0 | M1 | M2 | M3<br/></span><p>Only PPDUs with the specified Ness value are analyzed.</p><span class="bold">D0 | D1 | D2| D3<br/></span><p>All PPDUs are analyzed assuming the specified Ness value. </p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">FBURst</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">CONF:WLAN:EXT:AUTO:TYPE M0</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="86e353e23e00480d.htm#ID_3b70776734b411e2aa2aaab3cd47473f-d8e006d37c4158750a00201901359a7d-en-US">"Extension Spatial Streams (sounding)"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Analysis Region</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_634747c05a92de550a002019004650d1-439f176840f97bcf0a00201900c3608b-en-US;ID_e4cfbd57827dfba90a710ade0051917f-439f176840f97bcf0a00201900c3608b-en-US;ID_bff2d4d39fa74e860a001ae731e0de77-439f176840f97bcf0a00201900c3608b-en-US;ID_b6f707056aa1495c0a00201900d95bae-439f176840f97bcf0a00201900c3608b-en-US;ID_4b122b9b64ea3b7b0a002019017b2387-439f176840f97bcf0a00201900c3608b-en-US;ID_b64f40746aa1495c0a0020190012083a-439f176840f97bcf0a00201900c3608b-en-US;ID_73ac323d6aa1495c0a002019007d6cdc-439f176840f97bcf0a00201900c3608b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="29b558e51ab84e3f.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Analysis Region</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor40">
+</a><div class="chm-chaptertitle">Analysis Region</div><p>The <em>analysis region</em> determines which of the captured data is analyzed and displayed on the screen. By default, the entire capture buffer data is defined as the analysis region. However, you can select a specific frequency and time region which is of interest for analysis. The results can then be restricted to this region (see <a class="xref" href="f56fa5c5ed704c35.htm#ID_c87b1386b84811e0b10fe4c3e6c9de55-d373f01240f9d3d30a0020190111d384-en-US">"Evaluation Basis"</a>).</p><p>Note, however, that only <em>one</em> analysis region can be defined. All result displays that are restricted to the analysis region thus have the same data basis.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><a name="kanchor41">
+</a><a name="kanchor42">
+</a><p>Numeric results (displayed in the result or statistics tables) are always calculated based on the analysis region.</p><p>For graphical result displays based on the analysis region, the x-axis range corresponds to the analysis region length (see <a class="xref" href="9a5fb8da73e54660.htm#ID_dfe5c3817066aeb30a00206a0134fcf6-d130ada231c068490a0020190010b515-en-US">"Time Gate Length"</a>).</p><p>The analysis region is indicated by a colored frame in the Full Spectrogram display, and by vertical blue lines in result displays based on the full capture buffer.</p><div class="block" id="ID_bff2d4d39fa74e860a001ae731e0de77-439f176840f97bcf0a00201900c3608b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8df21fb49f40b5860a001ae7290c2c4f_2_--_--_PNG96Small.png" alt="" title=""/></div></div><p>The colors used to indicate the analysis range in spectrograms are configurable, see <a class="xref" href="da95524ac2ae4b21.htm#ID_08cc1e705524adb70a71003a0069e969-d373f01240f9d3d30a0020190111d384-en-US">"Modifying Analysis Region and Sweep Separator Colors"</a>.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_b6f707056aa1495c0a00201900d95bae-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Defining the analysis region</div></div><a name="kanchor43">
+</a><a name="kanchor44">
+</a><a name="kanchor45">
+</a><div class="block"><div class="listintro">There are different methods of defining the analysis region:</div><ul class="list"><li value="1">absolute definition: by defining an absolute frequency span and an absolute time gate<br/>The frequency span is defined by an offset from the center frequency and an analysis bandwidth.<br/>The time gate is defined by a starting point after measurement begin and the gate length.</li><li value="2">Relative definition: by linking the analysis region to the full capture buffer and defining a percentage of the full bandwidth and measurement time<br/>The specified frequency offset or time gate start are also considered for relative values.</li><li value="3">Graphically: The analysis region is indicated by a dotted frame in the Spectrogram display and by vertical lines in the full spectrum display. Its size and position can be moved by tapping and dragging the frame on the touchscreen.<br/>Furthermore, the data zoom and shift functions allow you to change the size and position of the analysis region from any graphical result display (see <a class="xref" href="26d767a64bda4178.htm#ID_0b08261959be17b90a001ae761de45d0-439f176840f97bcf0a00201900c3608b-en-US">"Zooming and Shifting Results"</a>).</li></ul></div><p>The absolute and relative methods can be combined, for example by defining an absolute frequency span and a relative time gate.</p><div class="block" id="ID_4b122b9b64ea3b7b0a002019017b2387-439f176840f97bcf0a00201900c3608b-en-US"><a name="kanchor46">
+</a><div class="graphic"><img border="0" src="Resources/Images/img7b6932ed64e996320a00201901757ecd_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Visualization of absolute analysis region parameters</div></div><div class="block"><div class="subtitle"><a name="ID_b64f40746aa1495c0a0020190012083a-439f176840f97bcf0a00201900c3608b-en-US">
+</a>Processing data in the analysis region - data zoom</div></div><a name="kanchor47">
+</a><p>In result displays restricted to the analysis region, only the data measured for the specified frequency range and within the defined time gate is considered. Furthermore, the analysis region data is taken only from the latest data acquisition, that is, only data that is still in the capture buffer is analyzed.</p><p>Restricting the results to an analysis region has the same effect as a data zoom: the results are recalculated for a restricted data base. The data in the capture buffer is filtered by the defined time gate; the measured data within that time span then passes a bandpass filter, so only the frequency range of interest is analyzed. Depending on the selected result display, the data is then demodulated, if necessary, and distributed among the trace points using a detector. The time span displayed per division of the diagram is much smaller compared to the initial full data analysis. Thus, the results of the analysis range become more precise.</p><div class="block" id="ID_73ac323d6aa1495c0a002019007d6cdc-439f176840f97bcf0a00201900c3608b-en-US"><div class="graphic"><img border="0" src="Resources/Images/img09b4a1c36a58da650a002019011f9342_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Data zoom - full result vs. analysis region result</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

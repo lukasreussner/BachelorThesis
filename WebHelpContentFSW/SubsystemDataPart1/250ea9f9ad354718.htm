@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Processing Data from the Analog Baseband Interface" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Analog Baseband Input</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d8daacf3caba19e10a710a310125871f-047f705f96372d670a0020190131cbaa-en-US;ID_7a473aa3ba32c0cf0a001ae721776137-047f705f96372d670a0020190131cbaa-en-US;ID_fb0141bd601b3c1c0a00201901cf8611-047f705f96372d670a0020190131cbaa-en-US;ID_dde3f01c048275190a00201901805bfe-047f705f96372d670a0020190131cbaa-en-US;ID_50646624601b3c1c0a002019016ae0a9-047f705f96372d670a0020190131cbaa-en-US;ID_e57d2bee048275190a0020190069dd24-047f705f96372d670a0020190131cbaa-en-US;ID_418dc69d9edf76b80a00206a006c114a-047f705f96372d670a0020190131cbaa-en-US;ID_82d7cc289d7e07e20a710a310182ab3e-047f705f96372d670a0020190131cbaa-en-US;ID_ab3bf2f39d8e26830a710a3100764838-047f705f96372d670a0020190131cbaa-en-US;ID_e80ebf9f087aa0e80a710a3101737d35-047f705f96372d670a0020190131cbaa-en-US;ID_0fded889ecacc2f50a710ade010314f7-047f705f96372d670a0020190131cbaa-en-US;ID_c771bca85191385f0a710ade000d6bcc-047f705f96372d670a0020190131cbaa-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="e991833b0aad4467.htm">Processing Data from the Analog Baseband Interface</a> &gt; <span class="chm-breadcrumb">Analog Baseband Input</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor129">
+</a><a name="kanchor130">
+</a><div class="chm-chaptertitle">Analog Baseband Input</div><p>The Analog Baseband Interface can be used as an alternative data input source for measurements with the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW in one of the following ways:</p><div class="block"><ul class="list"><li value="1">An analog baseband signal is input at the [Baseband Input I] and [Baseband Input Q] connectors and processed from there.</li><li value="2">An RF signal is input at the [Baseband Input I] connector and redirected from there to the RF input path.</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The [Baseband Input I] connector cannot be used to input RF signals on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW67 or R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW85.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_fb0141bd601b3c1c0a00201901cf8611-047f705f96372d670a0020190131cbaa-en-US">
+</a>RF signals via the Analog Baseband Interface</div></div><p>For RF signals that are redirected to the RF input path, the signal from the Analog Baseband Interface is processed in the same manner as for other RF input (see <a class="xref" href="471eea7681f04dd8.htm#ID_8ceba96dc35354e80a00206a0143d53b-598b128689ae8d810a001ae730be37a4-en-US">"Processing Analog I/Q Data from RF Input"</a>). However, a transducer is activated before the common process to compensate for the additional path of the redirected signal. Also, the modulated signals can be converted to any frequency in the analysis bandwidth.</p><div class="block"><div class="subtitle"><a name="ID_dde3f01c048275190a00201901805bfe-047f705f96372d670a0020190131cbaa-en-US">
+</a>Complex spectrum analysis</div></div><p>However, if the input is already available as a complex baseband signal (I and Q signals), the Analog Baseband Interface allows you to analyze the complex spectrum of the baseband signal. This is useful for measurements in the early stages of signal processing or radio transmission, when the analog baseband signal has not yet been modulated.</p><div class="block"><div class="subtitle"><a name="ID_50646624601b3c1c0a002019016ae0a9-047f705f96372d670a0020190131cbaa-en-US">
+</a>Low IF signals</div></div><p>I/Q input that has already been modulated ("Low IF signal") is down-converted digitally.</p><div class="block"><div class="subtitle"><a name="ID_e57d2bee048275190a0020190069dd24-047f705f96372d670a0020190131cbaa-en-US">
+</a>Data acquisition</div></div><a name="kanchor131">
+</a><a name="kanchor132">
+</a><p>The Analog Baseband Interface of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW can process both single-ended (unbalanced) and differential (balanced) input. The signal is input to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW via the connectors of the Analog Baseband Interface. If necessary, the I and Q values in the input can be swapped. This is useful, for instance, if the connections are mixed up or the data is inverted by the device under test. The A/D converter samples the input at a rate of 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz. As a result, 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Msamples of I values and 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Msamples of Q values are obtained per second.</p><div class="block"><div class="subtitle"><a name="ID_418dc69d9edf76b80a00206a006c114a-047f705f96372d670a0020190131cbaa-en-US">
+</a>Voltage levels - full scale level</div></div><a name="kanchor133">
+</a><a name="kanchor134">
+</a><p>For RF input, the maximum expected voltage level is defined by the reference level. For analog baseband input, the maximum expected voltage level <em>for each component</em> (I or Q) is defined by the <b>full scale level</b>. The full scale level defines the maximum power you can input at the [Baseband input] connector without clipping the signal.</p><p>The full scale level can be defined manually or automatically, such that the power of I and Q does not exceed the reference level.</p><p>If probes are connected, the possible full scale values are adapted according to the probe's attenuation and maximum allowed voltage.</p><p>For details on probes, see <a class="xref" href="e8384890d04b46f2.htm#ID_fbbc3fddf99ab04e0a00201900d59eb9-4c71256ff99ab04e0a00201900a7a1dc-en-US">"Using Probes"</a>.</p><p>When converting the measured voltage into dBm, an impedance of 50 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> is assumed.</p><div class="block"><div class="subtitle"><a name="ID_82d7cc289d7e07e20a710a310182ab3e-047f705f96372d670a0020190131cbaa-en-US">
+</a>Triggering</div></div><a name="kanchor135">
+</a><a name="kanchor136">
+</a><p>The following trigger sources are supported for analog baseband input (see <a class="xref" href="1604ead4768b4e89.htm#ID_560d1d670f01bf380a00206a01bc391b-da953dae0f01bf380a00206a004923af-en-US">"Trigger Source"</a>):</p><div class="block"><ul class="list"><li value="1">External</li><li value="2">Baseband power</li><li value="3">Time</li><li value="4">Power sensor</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_ab3bf2f39d8e26830a710a3100764838-047f705f96372d670a0020190131cbaa-en-US">
+</a>Gating</div><p>Gating is not supported for analog baseband input.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_e80ebf9f087aa0e80a710a3101737d35-047f705f96372d670a0020190131cbaa-en-US">
+</a>Calibration</div></div><a name="kanchor137">
+</a><a name="kanchor138">
+</a><p>A special calibration signal is available for analog baseband input and can be activated in the general instrument settings. If activated, an internal DC or AC calibration signal is input to the Analog Baseband Interface.</p><p>For details, see <a class="xref" href="../../../Content/af84faee1c1e434a.htm">
+		Calibration Analog Baseband
+	</a>.</p><div class="block"><div class="subtitle"><a name="ID_0fded889ecacc2f50a710ade010314f7-047f705f96372d670a0020190131cbaa-en-US">
+</a>High-accuracy timing</div></div><p>Some measurements require a timing precision of the analog baseband signals related to the external trigger signal and the RF signal. In this case, activate the "High Accuracy Timing Trigger - Baseband - RF" option for analog baseband input (see <a class="xref" href="a39e1c580dbb4ee6.htm#ID_300372dfec879a970a710ade00a25519-a8fc7be862cedb400a001ae707a3bdca-en-US">"High Accuracy Timing Trigger - Baseband - RF"</a>).</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_c771bca85191385f0a710ade000d6bcc-047f705f96372d670a0020190131cbaa-en-US">
+</a>Prerequisites for previous models of R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW</div><div class="block"><div class="listintro">For R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW models with a serial number lower than 103000, special prerequisites and restrictions apply for high accuracy timing:</div><ul class="list"><li value="1">To obtain this high timing precision, trigger port 1 and port 2 must be connected via the Cable for High Accuracy Timing (order number 1325.3777.00).</li><li value="2">As trigger port 1 and port 2 are connected via the cable, only trigger port 3 can be used to trigger a measurement.</li><li value="3">Trigger port 2 is configured as output if the high accuracy timing option is active. Make sure not to activate this option if you use trigger port 2 in your measurement setup.</li><li value="4">When you first enable this setting, you are prompted to connect the cable for high accuracy timing to trigger ports 1 and 2. If you cancel this prompt, the setting remains disabled. When you confirm this prompt, the cable must be in place.</li></ul></div></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Symbol Mapping" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Minimum Shift Keying (MSK)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K70_0810-184c8906411153460a00206a01532735-en-US;ID_f1df62de271911e1878ebdc795396de1-184c8906411153460a00206a01532735-en-US;ID_496cff38a83011dea2bbac2f90501e8e-184c8906411153460a00206a01532735-en-US;ID_292655dee1c091310a00206a007a06a3-184c8906411153460a00206a01532735-en-US;shiv_FSV_K70_0820-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="325e2356f7644f86.htm">Symbol Mapping</a> &gt; <span class="chm-breadcrumb">Minimum Shift Keying (MSK)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Minimum Shift Keying (MSK)</div><a name="kanchor240">
+</a><a name="kanchor241">
+</a><p>MSK modulation causes modulation-dependent phase shifts of +/- 90° which can be shown in a Constellation I/Q diagram. As with PSK, the phase positions are evaluated during demodulation.</p><div class="block"><a name="ID_f1df62de271911e1878ebdc795396de1-184c8906411153460a00206a01532735-en-US">
+</a><span class="table-caption">MSK (NATURAL)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th colspan="3" valign="top"><p>Logical symbol mapping</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Modulation symbol (binary indication: MSB, LSB)</p></td><td valign="top"><p>0</p></td><td valign="top"><p>1</p></td></tr><tr class="evenrow"><td valign="top"><p>Phase shift</p></td><td valign="top"><p>-90°</p></td><td valign="top"><p>+90°</p></td></tr></tbody></table></div><div class="block"><a name="ID_496cff38a83011dea2bbac2f90501e8e-184c8906411153460a00206a01532735-en-US">
+</a><span class="table-caption">MSK (GSM)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th colspan="3" valign="top"><p>Logical symbol mapping</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Modulation symbol (binary indication: MSB, LSB)</p></td><td valign="top"><p>0</p></td><td valign="top"><p>1</p></td></tr><tr class="evenrow"><td valign="top"><p>Phase shift</p></td><td valign="top"><p>+90°</p></td><td valign="top"><p>-90°</p></td></tr></tbody></table></div><div class="block" id="ID_292655dee1c091310a00206a007a06a3-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgc3f3e807dd96c8380a00206a01ba4a17_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">MSK (for GSM and NATURAL) and DMSK Constellation Diagram including the symbol mapping</div></div><p>Similar to PSK, differential coding can also be used with MSK. In this case, too, the information is represented by the transition of two consecutive symbols. The block diagram of the coder is shown below.</p><div class="block" id="shiv_FSV_K70_0820-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8683c02f9fdb89920a00206a01e5214d_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">DMSK: differential encoder in the transmitter</div></div><p>d<sub>i</sub> input symbol {0;1} of differential encoder</p><p>d<sub>i-1</sub> input symbol delayed by the symbol period Ts</p><p>d<sup>'</sup><sub>i</sub> output symbol {0;1} of differential encoder</p><p>The logical symbol mapping is then performed on the XOR-coded bitstream d<sup>'</sup>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

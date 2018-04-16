@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Phase Noise (R&amp;S FSW-K40)|Configuration|Controlling the Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k40.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Online I/Q</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="ePNoiseSkIdMeasSettingsControl_OnlineIQ">
+</meta>
+        <meta name="topic-id" value="96">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4f84449f43d380c30a001ae70be59c2a-1c0f804f43d380c30a001ae70f6f8f80-en-US;ID_2b1c55ae44e2f2400a710b9a0065693d-1c0f804f43d380c30a001ae70f6f8f80-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k40/Content/14439d968f194e46.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Phase Noise (R&amp;S FSW-K40)</a> &gt; <a class="chm-breadcrumb" href="ffd2a4181c77425c.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="5c090575f01f430c.htm">Controlling the Measurement</a> &gt; <span class="chm-breadcrumb">Online I/Q</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_4f84449f43d380c30a001ae70be59c2a-1c0f804f43d380c30a001ae70f6f8f80-en-US">
+</a>Online I/Q</div><p>Turns the online measurement mode for I/Q measurements on and off.</p><p>When you turn the online measurement mode on, the application records smaller amounts of data at a time. It is thus able to process that data faster, because it does not have to wait until the I/Q capture buffer is full, before processing the data.. The result is that the measurement results are updated faster.</p><p>This mode is useful to measure the phase noise at small offset frequencies, because the small bandwidths required to measure these offset frequencies usually lead to long measurement times (and especially when you apply averaging).</p><p>In the Half Decade Configuration Table, half decades that are measured in online mode are highlighted in a darker shade of green (compared to the shade of green that is used to highlight the half decades that are taken into account in the measurement).</p><div class="block" id="ID_2b1c55ae44e2f2400a710b9a0065693d-1c0f804f43d380c30a001ae70f6f8f80-en-US"><div class="graphic"><img border="0" src="Resources/Images/img540fd36d44ceb40b0a001ae76d146ae1_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="legend"><div class="legentry">Light green = normal I/Q mode</div><div class="legentry">Dark green = online I/Q mode</div></div></div><div class="block"><div class="listintro-in-compact-list">The online measurement mode is available under the following conditions:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Only half decades with a frequency offset smaller than 30<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz can be measured in online mode.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">The half decades that you want to measure in online mode have to be set to "I/Q FFT" sweep mode.</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><a class="xref" href="f0a466b3ac944fad.htm#ID_d5e4f7bea1445f930a00201901ece027-ed7dfe6aa1445f930a00201900703f2d-en-US">Decimation</a> has to be turned on.</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><a class="xref" href="d61693e19919.htm#ID_1f722c606c3633430a00206a016f556b-6ee6037e6c3633430a00206a00511cf4-en-US">Sweep Forward</a> has to be turned off.</li></ul></div>Remote command: <div class="rcclist_right"><p><a class="xref" href="1dd7634ab87546ad.htm#ID_b32a912d44da23280a001ae7647a2490-24f364ad44da23280a001ae70ef69d79-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]IQ:</nobr>​<nobr>ONLine</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

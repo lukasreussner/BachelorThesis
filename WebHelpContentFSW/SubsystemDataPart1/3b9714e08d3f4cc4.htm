@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Configuring I/Q Analyzer Measurements|Configuring Data Acquisition" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe:IQ:RLENgth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_35c3bc2a51a442c60a00206a01c7d365-6310d46b72b9804d0a00206a004b8a9c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="245b36a17e924f58.htm">Configuring I/Q Analyzer Measurements</a> &gt; <a class="chm-breadcrumb" href="5b7691ae43a34258.htm">Configuring Data Acquisition</a> &gt; <span class="chm-breadcrumb">TRACe:IQ:RLENgth</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_35c3bc2a51a442c60a00206a01c7d365-6310d46b72b9804d0a00206a004b8a9c-en-US">
+</a><span class="bold">TRACe:IQ:RLENgth </span>&lt;NoOfSamples&gt;<br/></div><div class="rcdescription"><p>This command sets the record length for the acquired I/Q data.</p><p>Increasing the record length also increases the measurement time.</p><p><b>Note</b>: Alternatively, you can define the measurement time using the <span class="command">SENS:SWE:TIME</span> command.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;NoOfSamples&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Number of samples to record.</p><p>See <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a>.</p><p>For digital input via the Digital Baseband Interface (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B17) the valid number of samples is described in <a class="xref" href="753b18e9b5734b3b.htm#ID_50cf23fdaede25e90a00206a012e28b3-c731609eaede25e90a00206a017235b7-en-US">"Sample Rates and  Bandwidths for Digital I/Q Data"</a>.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">1001</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC:IQ:RLEN 256</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="d5cd2b58929947da.htm#ID_4efb858b3e1294bf0a00206a01260b58-21cb0fb51d5a73bf0a00201901376412-en-US">"I/Q Analysis with Graphical Evaluation"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="36452d4e6acc4224.htm#ID_e93414ec1d5cbe380a710a3101304162-21cb0fb51d5a73bf0a00201901376412-en-US">"Data Acquisition via the Optional Digital Baseband Interface"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="76eb21dfcb904669.htm#ID_23a4977032fd11e2895089ab14b83382-21cb0fb51d5a73bf0a00201901376412-en-US">"Data Acquisition via the Optional Analog Baseband Interface"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="76aaaf0ae5034118.htm#ID_c59eef7485860df60a00206a017c94c2-fe92235c85860df60a00206a000a7866-en-US">"Record Length"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

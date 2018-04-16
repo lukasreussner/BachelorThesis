@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring the R&amp;S FSW|Checking the System Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>DEVice:INFO:HWBand?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b9178a2b5101273c0a001ae755083c52-a1df4e9b510126800a001ae7782dcd62-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="238ee539da9f4d16.htm">Configuring the R&amp;S FSW</a> &gt; <a class="chm-breadcrumb" href="f83ec8940c254319.htm">Checking the System Configuration</a> &gt; <span class="chm-breadcrumb">DEVice:INFO:HWBand?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_b9178a2b5101273c0a001ae755083c52-a1df4e9b510126800a001ae7782dcd62-en-US">
+</a><span class="bold">DEVice:INFO:HWBand? </span></div><div class="rcdescription"><p>Queries the frequency bands used for measurement by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW hardware. The start frequency of each band is provided.</p><p>The bands are instrument-specific and depend on the currently defined RBW, VBW and YIG preselector state. The precise frequency bands are required to define correction data for the correct bands, in particular for frequency-drifting DUTs.</p><p>This query is only available in zero span mode.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><div class="verbatim"><pre class="verbatim_text">//Set to zero span mode
+FREQ:SPAN 0
+//Set RBW
+BAND:RES 1000000
+//Set VBW
+BAND:VID 10000
+//Activate YIG filter
+INP:FILT:YIG ON
+//Query used hardware bands
+DEV:INFO:HWB?
+//Result:
+//0,50000000,450000000,1000000000,3000000000,4000000000,5200000000,...</pre></div><p>The used bands for this instrument and measurement setup are:</p><p>0 Hz to 49999999 Hz</p><p>50000000 Hz to 44999999</p><p>450000000 Hz to 999999999</p><p>1000000000 Hz to 2999999999</p><p>3000000000 Hz to 3999999999</p><p>4000000000 Hz to 5199999999</p><p>5200000000 Hz to ...</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

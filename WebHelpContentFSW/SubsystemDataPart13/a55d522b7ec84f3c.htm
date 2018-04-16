@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Channel Detection</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_dfc899a9fa11073a0a710a310022ca71-192230c5f554e1c20a00206a019f8074-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="e58af4d1542b4c87.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Channel Detection</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor166">
+</a><a name="kanchor167">
+</a><a name="kanchor168">
+</a><a name="kanchor169">
+</a><a name="kanchor170">
+</a><a name="kanchor171">
+</a><a name="kanchor172">
+</a><div class="chm-chaptertitle">Channel Detection</div><p>The 3GPP FDD applications provide two basic methods of detecting active channels:</p><div class="block"><ul class="list"><li value="1"><b>Automatic search using pilot sequences</b><br/>The application performs an automatic search for active (DPCH) channels throughout the entire code domain. The search is based on the presence of known symbol sequences (pilot symbols) in the despread symbols of a channel. A data channel is considered to be active if the pilot symbols as specified by the 3GPP FDD standard are found at the end of each slot. In this mode, channels without or with incomplete pilot symbols are therefore not recognized as being active.<br/>An exception to this rule is seen in the special channels PICH and SCCPCH, which can be recognized as active in the automatic search mode although they do not contain pilot symbols. Optionally, all QPSK-modulated channels can also be recognized without pilot symbols (see <a class="xref" href="d78502e23985.htm#ID_f684e3bc3c40978b0a00206a01a85321-2863920e3c40978b0a00206a01e9a288-en-US">"HSDPA/UPA"</a>).<br/>In addition, the channel must exceed a minimum power in order to be considered active (see <a class="xref" href="36a6fb0800914404.htm#ID_df6eb623ea7bcad20a710a31005f4f03-36dc93a6925af2ef0a00206a01773c49-en-US">"Inactive Channel Threshold (BTS measurements only)"</a>).<br/><b>In UE measurements</b>, a channel is considered to be active if a minimum signal/noise ratio is maintained within the channel.</li><li value="2"><b>Comparison with predefined channel tables</b><br/>The input signal is compared to a predefined channel table. All channels that are included in the predefined channel table are considered to be active.</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

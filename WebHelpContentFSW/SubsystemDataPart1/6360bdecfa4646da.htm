@@ -1,0 +1,84 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Basic I/Q Analysis with Improved Performance</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9eece254d48811e085d3f8ae623853ff-21cb0fb51d5a73bf0a00201901376412-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="cd12fe88f05c4826.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Basic I/Q Analysis with Improved Performance</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1206">
+</a><a name="kanchor1207">
+</a><div class="chm-chaptertitle">Basic I/Q Analysis with Improved Performance</div><p>This example demonstrates how to configure and perform a basic I/Q data acquisition and analyze the data using the I/Q Analyzer in a remote environment.</p><pre class="verbatim" xml:space="preserve">//--------------Activating the I/Q Analyzer application ---------------------
+*RST
+//Reset the instrument
+
+INIT:CONT OFF
+//Switches to single sweep mode
+TRACE:IQ ON
+//Switches the operating mode of the current measurement channel to I/Q Analyzer 
+//while retaining the relevant parameters from the Spectrum mode.
+
+//--------------Configuring Data Acquisition-------------
+TRACE:IQ:SET NORM,0,32000000,IQP,POS,0,1000
+//Configures the sample rate as 32 MHz, IQP trigger, positive trigger slope,
+//no pretrigger samples, 1000 samples to capture
+FORM REAL,32
+//The data is formatted as real values.
+
+//--------------Configuring I/Q Gating--------------------------
+TRAC:IQ:EGAT ON
+//Turns on gated measurement.
+TRAC:IQ:EGAT:TYPE LEV
+//Select the level gate type.
+TRAC:IQ:EGAT:LENG 20
+//Sets the gate length to 20 samples.
+TRAC:IQ:EGAT:GAP 20
+//Sets the interval between gate periods to 20 samples.
+TRAC:IQ:EGAT:NOF 2
+//Sets the number of gate periods after the trigger signal to 2.
+TRIG:SOUR IQP
+//Defines the magnitude of the sampled I/Q data to be used as a trigger.
+TRIG:LEV:IQP -30dbm
+//Sets the trigger level. 
+
+//---------------Performing the Measurement and Retrieving Results--------------
+TRAC:IQ:DATA?; *WAI;
+//Performs a measurement and returns the RF input voltage at each sample point
+//(first 1000 I-values, then 1000 Q-values).
+
+TRAC:IQ:DATA:MEM? 0,500
+//Returns the first 500 samples of the stored trace data for the measurement.
+//For each sample, first the I-value, then the Q-value is listed.
+
+TRAC:IQ:DATA:MEM? 500,500
+//Returns the second half of the 1000 captured sample values.
+
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Multi-Carrier Group Delay (R&amp;S FSW-K17)|Annex" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k17.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reference: ASCII File Export Format</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_cde80dc30e95cd040a00206a01105bd2-b79305fe0e95cd040a00206a00fc5e7e-en-US;ID_cfd75391509111e0b8be91347a8d73c4-b79305fe0e95cd040a00206a00fc5e7e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k17/Content/508a71ffa5e24d28.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Multi-Carrier Group Delay (R&amp;S FSW-K17)</a> &gt; <a class="chm-breadcrumb" href="db3711c27dfb4ece.htm">Annex</a> &gt; <span class="chm-breadcrumb">Reference: ASCII File Export Format</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Reference: ASCII File Export Format</div><a name="kanchor482">
+</a><a name="kanchor483">
+</a><a name="kanchor484">
+</a><a name="kanchor485">
+</a><p>Trace data (both measurement and reference traces) can be exported to a file in ASCII format for further evaluation in other applications</p><p>The file consists of the header containing important scaling parameters and a data section containing the trace data.</p><p>Generally, the format of this ASCII file can be processed by spreadsheet calculation programs, e.g. MS-Excel. Different language versions of evaluation programs may require a different handling of the decimal point. Thus you can define the decimal separator to be used (decimal point or comma, see <a class="xref" href="e334501bc549408e.htm#ID_d7730bd92959615f0a00206a00e5c849-1e4bafc52959615f0a00206a01c048ac-en-US">"Decimal Separator"</a>).</p><p>The data of the file header consist of two columns, separated by a semicolon: parameter name; numeric value. The data section contains the measured data in two columns, which are also separated by a semicolon.</p><div class="block"><a name="ID_cfd75391509111e0b8be91347a8d73c4-b79305fe0e95cd040a00206a00fc5e7e-en-US">
+</a><span class="table-caption">ASCII file format for trace export</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>File contents</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td colspan="2" valign="top"><p><b>Header data</b></p></td></tr><tr class="evenrow"><td valign="top"><p>Type;R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW;</p></td><td valign="top"><p>Instrument model</p></td></tr><tr class="oddrow"><td valign="top"><p>Version;1.30;</p></td><td valign="top"><p>Firmware version</p></td></tr><tr class="evenrow"><td valign="top"><p>Date;20.Jan 2012;</p></td><td valign="top"><p>Date of data set storage</p></td></tr><tr class="oddrow"><td valign="top"><p>Mode;MCGD</p></td><td valign="top"><p>Channel type</p></td></tr><tr class="evenrow"><td valign="top"><p>Ref Level;0;</p></td><td valign="top"><p>Reference level</p></td></tr><tr class="oddrow"><td valign="top"><p>Level offset;0;</p></td><td valign="top"><p>Reference level offset</p></td></tr><tr class="evenrow"><td valign="top"><p>Rf Att;10;</p></td><td valign="top"><p>Input attenuation</p></td></tr><tr class="oddrow"><td valign="top"><p>El Att;0;</p></td><td valign="top"><p>Electronic attentuation</p></td></tr><tr class="evenrow"><td valign="top"><p>Center Freq;10000000;Hz</p></td><td valign="top"><p>Center frequency</p></td></tr><tr class="oddrow"><td valign="top"><p>Freq Offset;0;Hz</p></td><td valign="top"><p>Frequency offset</p></td></tr><tr class="evenrow"><td valign="top"><p>Span;10000000;Hz</p></td><td valign="top"><p>Frequency range</p></td></tr><tr class="oddrow"><td valign="top"><p>Carrier Spacing,10000000;Hz</p></td><td valign="top"><p>Distance between two carriers</p></td></tr><tr class="evenrow"><td valign="top"><p>Meas Time;0.00003128125;s</p></td><td valign="top"><p>Measurement time</p></td></tr><tr class="oddrow"><td valign="top"><p>Group Delay;Absolute;</p></td><td valign="top"><p>Value type for group delay</p></td></tr><tr class="evenrow"><td valign="top"><p>Carrier Offset;AUTO;</p></td><td valign="top"><p>Auto mode for carrier offset</p></td></tr><tr class="oddrow"><td valign="top"><p>Carrier Offset;0;Hz</p></td><td valign="top"><p>Carrier offset value</p></td></tr><tr class="evenrow"><td valign="top"><p>Sweep Count;0;</p></td><td valign="top"><p>Number of sweeps set</p></td></tr><tr class="oddrow"><td valign="top"><p>Preamplifier;OFF</p></td><td valign="top"><p>Preamplifier status</p></td></tr><tr class="evenrow"><td valign="top"><p>Window;1 Magnitude;</p></td><td valign="top"><p>Window name containing trace</p></td></tr><tr class="oddrow"><td valign="top"><p>Trace 1:;;</p></td><td valign="top"><p>Selected trace</p></td></tr><tr class="evenrow"><td valign="top"><p>Trace Mode;Clear Write</p></td><td valign="top"><p>Display mode of trace: CLR/WRITE,AVERAGE,MAXHOLD,MINHOLD</p></td></tr><tr class="oddrow"><td valign="top"><p>x-Axis;Linear;</p></td><td valign="top"><p>Scaling of x-axis linear (LIN) or logarithmic (LOG)</p></td></tr><tr class="evenrow"><td valign="top"><p>Start;95000000;Hz</p><p>Stop;105000000;Hz</p></td><td valign="top"><p>Start/stop value of the display range</p></td></tr><tr class="oddrow"><td valign="top"><p>x-Unit;Hz;</p></td><td valign="top"><p>Unit of x values: Hz with span &gt; 0; s with span = 0; dBm/dB with statistics measurements</p></td></tr><tr class="evenrow"><td valign="top"><p>y-Axis;Linear;</p></td><td valign="top"><p>Scaling of y-axis linear (LIN) or logarithmic (LOG)</p></td></tr><tr class="oddrow"><td valign="top"><p>Level Range;100;dB</p></td><td valign="top"><p>Display range in y direction. Unit: dB with x-axis LOG, % with x-axis LIN</p></td></tr><tr class="evenrow"><td valign="top"><p>Ref Position;100; %</p></td><td valign="top"><p>Position of reference value referred to diagram limits (0 % = lower edge)</p></td></tr><tr class="oddrow"><td valign="top"><p>Ref Value;0.0;dBm</p></td><td valign="top"><p>Reference value</p></td></tr><tr class="evenrow"><td valign="top"><p>y-Unit;dBm;</p></td><td valign="top"><p>Unit of y values: dB*/V/A/W depending on the selected unit with y-axis LOG or % with y-axis LIN</p></td></tr><tr class="oddrow"><td colspan="2" valign="top"><p><b>Data section</b></p></td></tr><tr class="evenrow"><td valign="top"><p>Values; 1001;</p></td><td valign="top"><p>Number of measurement points</p></td></tr><tr class="oddrow"><td valign="top"><p>95000000;-20.5</p><p>96000000;-20.3</p><p>97000000;-24.2</p><p>...;...;</p></td><td valign="top"><p>Measured values: &lt;x value&gt;, &lt;y value&gt;</p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

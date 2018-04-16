@@ -1,0 +1,63 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Analysis|Marker Usage|Marker Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measuring the Power in a Channel (Band Power Marker)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMarkerBandPowerMenu">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdBandPowerConfig">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdMarkerBandPowerMenu">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdMarkerBandPowerMenu">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdMarkerBandPowerMenu">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdMarkerBandPowerMenu">
+</meta>
+        <meta name="topic-id" value="1887">
+</meta>
+        <meta name="topic-id" value="1889">
+</meta>
+        <meta name="topic-id" value="1891">
+</meta>
+        <meta name="topic-id" value="1893">
+</meta>
+        <meta name="topic-id" value="1895">
+</meta>
+        <meta name="topic-id" value="1897">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0560fc4f2b851cc40a00206a01c116b1-2f05d78a2b851cc40a00206a01b8de23-en-US;ID_cecb4186721500df0a71003a00aa4b83-2f05d78a2b851cc40a00206a01b8de23-en-US;ID_32d0c97bd4e111e2ba0ed4c419c184f7-2f05d78a2b851cc40a00206a01b8de23-en-US;ID_5c8991794d6e695b0a710a3100d4a117-2f05d78a2b851cc40a00206a01b8de23-en-US;ID_911d8a4a726fd1690a001ae76279c9d7-2f05d78a2b851cc40a00206a01b8de23-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="453786820f4e4236.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="d17e89978d9c4b02.htm">Marker Usage</a> &gt; <a class="chm-breadcrumb" href="d4b97e44662e4ed4.htm">Marker Functions</a> &gt; <span class="chm-breadcrumb">Measuring the Power in a Channel (Band Power Marker)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Measuring the Power in a Channel (Band Power Marker)</div><p><b>Access</b>: "Overview" &gt; "Analysis" &gt; "Marker Functions" &gt; "Band Power" &gt; "Band Power Config"</p><p><b>or</b>: [MKR FUNC] &gt; "Select Marker Function" &gt; "Band Power"</p><p>To determine the noise power in a transmission channel, you could use a noise marker and multiply the result with the channel bandwidth. However, the results would only be accurate for flat noise.</p><p>Band power markers allow you to measure the integrated power for a defined span (band) around a marker (similar to ACP measurements). By default, 5 % of the current span is used. The span is indicated by limit lines in the diagram. The results can be displayed either as a power (dBm) or density (dBm/Hz) value and are indicated in the marker table for each band power marker.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_cecb4186721500df0a71003a00aa4b83-2f05d78a2b851cc40a00206a01b8de23-en-US">
+</a>Relative band power markers</div><p>The results for band power markers which are defined as <em>delta</em> markers and thus have a reference value can also be calculated as reference power values (in dB).</p><p>For analog demodulation measurements, relative band power markers are not available.</p><p>In this case, the result of the band power deltamarker is the difference between the absolute power in the band around the delta marker and the absolute power for the reference marker. The powers are subtracted logarithmically, so the result is a dB value.</p><p><em>[Relative band power (Delta2) in dB] = [absolute band power (Delta2) in dBm] - [absolute (band) power of reference marker in dBm]</em></p><p>The measured power for the reference marker may be an absolute power at a single point (if the reference marker is not a band power marker), or the power in a band (if the reference marker is a band power marker itself).</p><p>If the reference marker for the band power marker is also a delta marker, the absolute power level for the reference marker is used for calculation.</p></td></tr></table></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>For the I/Q Analyzer application, band power markers are only available for Spectrum displays.</p><p>The entire band must lie within the display. If it is moved out of the display, the result cannot be calculated (indicated by "-<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>-<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>-" as the "Function Result" ). However, the width of the band is maintained so that the band power can be calculated again when it returns to the display.</p></td></tr></table></div></div><p>All markers can be defined as band power markers, each with a different span. When a band power marker is activated, if no marker is active yet, marker 1 is activated. Otherwise, the currently active marker is used as a band power marker (all other marker functions for this marker are deactivated).</p><p>If the detector mode for the marker trace is set to "Auto" , the RMS detector is used.</p><p>The individual marker settings correspond to those defined in the "Marker" dialog box (see <a class="xref" href="ae327dd412924a79.htm#ID_d50e506a47fab91b0a710a310123df1e-c6cae38f2b6f7a350a00206a0045d012-en-US">"Individual Marker Setup"</a>). Any settings to the marker state or type changed in the "Marker Function" dialog box are also changed in the "Marker" dialog box and vice versa.</p><div class="block" id="ID_5c8991794d6e695b0a710a3100d4a117-2f05d78a2b851cc40a00206a01b8de23-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8199d7d64d17aa780a00206a007c092f_2_--_--_PNG96Small.png" alt="" title=""/></div></div><div class="block"><div class="subtitle"><a name="ID_911d8a4a726fd1690a001ae76279c9d7-2f05d78a2b851cc40a00206a01b8de23-en-US">
+</a>Remote commands:</div></div><p><a class="xref" href="82f6c6a700ca4072.htm#ID_71eaec56b3458c260a710a3101d1dca4-065aa1dd677eeea70a00206a01788dd0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>BPOWer[:</nobr>​<nobr>STATe]</nobr></a></p><p><a class="xref" href="2455b691a52a4da4.htm#ID_fefb4935158c11dfbd4694509e0f78ea-4e8a61e0677d554c0a00206a011513d8-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>BPOWer:</nobr>​<nobr>RESult?</nobr></a></p>
+						<div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="5da628c6eb9546de.htm#ID_5fa844b5fb7113080a00206a00e503b5-efae436efb7113080a00206a015669c3-en-US" class="title_toc">Marker X / Delta X</a></div><div class="function_block"><font face="Arial">└</font> <a href="d227d758efb74dbf.htm#ID_4ec670a73e9211e09f5a94b975f4fe73-2f05d78a2b851cc40a00206a01b8de23-en-US" class="title_toc">Band Power Measurement State</a></div><div class="function_block"><font face="Arial">└</font> <a href="2f289dc9ad2f4fe7.htm#ID_a316baed4de4cf610a710a31012a9389-2f05d78a2b851cc40a00206a01b8de23-en-US" class="title_toc">Span</a></div><div class="function_block"><font face="Arial">└</font> <a href="8e3730ce5137438f.htm#ID_de84f1b44de4cea50a710a3101ad4a49-2f05d78a2b851cc40a00206a01b8de23-en-US" class="title_toc">Power Mode</a></div><div class="function_block"><font face="Arial">└</font> <a href="d743c9d29a024229.htm#ID_4ec8bab13e9211e09f5a94b975f4fe73-2f05d78a2b851cc40a00206a01b8de23-en-US" class="title_toc">Switching All Band Power Measurements Off</a></div></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

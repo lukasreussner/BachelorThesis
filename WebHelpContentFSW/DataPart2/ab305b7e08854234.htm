@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the Time Domain Power" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Time Domain Power</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4671da0765c8a6b10a00206a01a8cb32-84ac02913d0d372c0a001ae766e57ed2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="9c61a44559ab4db8.htm">Measuring the Time Domain Power</a> &gt; <span class="chm-breadcrumb">Programming Example: Time Domain Power</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Programming Example: Time Domain Power</div><p>This programming example demonstrates the measurement example described in <a class="xref" href="841dcd06cdae4fca.htm#ID_d9382bfadbdcda170a00206a01081f5c-cbe0db7d114b30c50a00206a011a4bee-en-US">"Measurement Example"</a> in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//-------------Configuring the Measurement-----------------------
+*RST
+//Resets the instrument
+
+INIT:CONT OFF
+//Turns on single sweep mode.
+
+FREQ:CENT 1.8GHz
+//Sets the center frequency to 1.8 GHz.
+
+BAND:RES 100kHz
+//Sets the bandwidth to 100 kHz.
+
+SWE:TIME 10ms
+//Sets the sweep time to 640 µs.
+
+FREQ:SPAN 0
+//Sets the instrument to zero span.
+
+
+CALC:MARK:FUNC:SUMM:STAT ON
+//Turns on time domain power measurements.
+
+CALC:MARK:FUNC:SUMM:MEAN ON
+CALC:MARK:FUNC:SUMM:PPE ON
+CALC:MARK:FUNC:SUMM:RMS ON
+//Turns the evalution of the mean, peak and RMS time domain power.
+
+CALC:MARK:X:SLIM ON
+//Activates limit lines for evaluation.
+
+CALC:MARK:X:SLIM:LEFT 1ms
+//Sets the left limit line to 326 µs.
+
+CALC:MARK:X:SLIM:RIGH 6ms
+//Sets the right limit line to 538 µs.
+
+//--------------Performing the Measurement------------------------
+
+INIT;*WAI
+//Initiates the measurement and waits until the measurement is finished.
+
+//-------------Retrieving the Results--------------------------------
+CALC:MARK:FUNC:SUMM:MEAN:RES?
+CALC:MARK:FUNC:SUMM:PPE:RES?
+CALC:MARK:FUNC:SUMM:RMS:RES?
+//Queries the mean, peak and RMS time domain power.</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

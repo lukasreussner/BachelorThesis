@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring the R&amp;S FSW|Calibration and Checks" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CALibration[:ALL]?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_6b_remote_commands_basic_0258-a5925ff0fb9e78b70a00201900ec7ad1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="238ee539da9f4d16.htm">Configuring the R&amp;S FSW</a> &gt; <a class="chm-breadcrumb" href="caa246dc433a41a8.htm">Calibration and Checks</a> &gt; <span class="chm-breadcrumb">CALibration[:ALL]?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><a name="kanchor3276">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_6b_remote_commands_basic_0258-a5925ff0fb9e78b70a00201900ec7ad1-en-US">
+</a><span class="bold">CALibration[:ALL]? </span></div><div class="rcdescription"><p>This command initiates a calibration (self-alignment) routine and queries if calibration was successful.</p><p>During the acquisition of correction data the instrument does not accept any remote control commands.</p><p><b>Note:</b>If you start a self-alignment remotely, then select the "Local" softkey while the alignment is still running, the instrument only returns to the manual operation state after the alignment is completed.</p><p>In order to recognize when the acquisition of correction data is completed, the MAV bit in the status byte can be used. If the associated bit is set in the Service Request Enable (SRE) register, the instrument generates a service request after the acquisition of correction data has been completed.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;CalibrationState&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">0<br/></span><p>The command returns a '0' if calibration was successful.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">*CLS</span><br/><p>Resets the status management.</p><span class="commandline">*SRE 16</span><br/><p>Enables MAV bit in the Service Request Enable register.</p><span class="commandline">*CAL?</span><br/><p>Starts the correction data recording, and then a service request is generated.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="009416b1763a4ec5.htm#ID_572e7fb0909369ac0a710a3101aedd0d-c99de3b2fe1ffc270a001ae76b837433-en-US">"Start Self Alignment"</a></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

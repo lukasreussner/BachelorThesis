@@ -1,0 +1,277 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Remote Commands for Pulse Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Pulse Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_385a9f51f60a26730a001ae77547389a-b6f5accef60a26730a001ae716d5429d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="2a19c26881ae4bad.htm">Remote Commands for Pulse Measurements</a> &gt; <span class="chm-breadcrumb">Programming Example: Pulse Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Programming Example: Pulse Measurement</div><p>This example demonstrates how to perform a pulse measurement in a remote environment.</p><p>Note that some of the used commands may not be necessary as they define default values, but are included to demonstrate their use.</p><pre class="verbatim" xml:space="preserve">//----------- Preparing the measurement ------------
+//Reset the instrument
+*RST
+//Activate the pulse measurement application
+INST:SEL 'PULSE'
+
+//-----------Configuring the measurement ------------
+//Set the center frequency
+FREQ:CENT 1GHz
+
+// Set the filter, bandwidth, and implicitly the sample rate
+SENS:BWID:DEM:TYPE GAUSS
+SENS:BWID:DEM 80MHZ
+SENS:SRAT?
+
+//Configure the expected pulse:
+//width between 1ms and 1.5ms, off time at least 0.5ms
+SENS:TRAC:MEAS:DEF:DUR:AUTO OFF
+SENS:TRAC:MEAS:DEF:DUR:MIN 1ms
+SENS:TRAC:MEAS:DEF:DUR:MAX 1.5ms
+SENS:TRAC:MEAS:DEF:DUR:OFF 0.5ms
+
+//Assume amplitude droop
+SENS:TRAC:MEAS:DEF:PULS:ADR ON
+//Assume Linear FM modulation
+SENS:TRAC:MEAS:DEF:PULS:MOD LFM
+//Pulse starts with rising edge
+SENS:TRAC:MEAS:DEF:PULS:PER LH
+//Determine freq offset and chirp rate for each pulse automatically
+SENS:TRAC:MEAS:DEF:FREQ:OFFS:AUTO ON
+SENS:TRAC:MEAS:DEF:FREQ:RATE:AUTO ON
+
+//Input from RF input connector
+INP:SEL RF
+//Alternatively: Input from I/Q data file
+//INP:SEL FIQ
+//INP:FILE:PATH 'C:\R_S\Instr\user\data.iq.tar'
+
+//Configure a power trigger at -20dBm (pulse level - 10dB default attenuation)
+TRIG:SOUR RFP
+TRIG:LEV:RFP -20dBm
+//Avoid triggering on overshoot:
+//level must remain below trigger level at least 0.5ms
+TRIG:DTIM 0.5ms
+
+//Configure the conditions for pulse detection:
+//max. 10 pulses, min. -30dB power level, 2dB hysteresis
+DET:LIM ON
+DET:LIM:COUN 10
+DET:REF ABS
+DET:THR -30dB
+DET:HYST 2dB
+
+//Configure how and which levels are used for pulse detection:
+//mean level for top, power values in dBm, consider droop
+//ripple calculated in first 5% of pulse top
+SENS:TRAC:MEAS:ALG MEAN
+SENS:TRAC:MEAS:DEF:AMPL:UNIT DBM
+SENS:TRAC:MEAS:DEF:COMP:ADR ON
+SENS:TRAC:MEAS:DEF:RIPP 5
+
+// meas levels at 15,50,85% power
+//in dB: -1.41, -6.02, -26.02
+SENS:TRAC:MEAS:DEF:TRAN:HREF -1.41
+SENS:TRAC:MEAS:DEF:TRAN:REF  -6.02
+SENS:TRAC:MEAS:DEF:TRAN:LREF -26.02
+
+//boundary calculated in top 5% = 0.26dB 
+SENS:TRAC:MEAS:DEF:BOUN:TOP 0.26
+
+//Configure which point is used to determine pulse characteristics:
+//0.1ms from top center, window 1ms
+SENS:TRAC:MEAS:DEF:PULS:INST:REF CENT
+SENS:TRAC:MEAS:DEF:PULS:INST 0.1ms
+SENS:TRAC:MEAS:DEF:PULS:INST:AWIN 1ms
+
+//Configure the range used for estimation: 0.1ms from either edge
+SENS:TRAC:MEAS:DEF:PULS:EST:REF EDGE
+SENS:TRAC:MEAS:DEF:PULS:EST:OFFS:LEFT 0.1ms
+SENS:TRAC:MEAS:DEF:PULS:EST:OFFS:RIGH 0.1ms
+
+//Configure the range for which individual pulse results are displayed:
+//300us starting from left edge of pulse top
+SENS:TRAC:MEAS:DEF:RRAN:REF RISE
+SENS:TRAC:MEAS:DEF:RRAN:ALIG LEFT
+SENS:TRAC:MEAS:DEF:RRAN:LENG 300us
+
+//Configure data acquisition for 10ms 
+SWE:TIME 10ms
+
+//------------- Configuring the results -------------------------------
+//Result displays: 
+//upper row: (1)MagCapt (2)Pulse results (3)Pulse statistics
+//bottom row: (4)Pulse magnitude (5)Pulse power dist vs occurance
+//(6)Pulse power spectrum
+LAY:REPL '1',MCAP
+LAY:REPL '2',PRES
+LAY:ADD:WIND? '2',RIGH,PST
+LAY:REPL '4',PMAG
+LAY:REPL '5',PDIS
+CALC5:DIST:POW POIN,OCC
+LAY:REPL '6',PSP
+CALC6:PSP:POW POIN
+
+//Configure magnitude capture: automatic scaling 
+DISP:WIND1:TRAC:Y:SCAL:AUTO ON
+
+//Configure parameters in pulse results table:
+//Freq.: freq. at meas point, pulse-pulse difference, freq.dev., freq. err peak
+CALC2:TABL:FREQ:POIN ON
+CALC2:TABL:FREQ:PPFR ON
+CALC2:TABL:FREQ:DEV ON
+CALC2:TABL:FREQ:PERR ON
+
+//Phase: phase deviation
+CALC2:TABL:PHAS:DEV ON
+
+//Power: average ON, droop, pulse-pulse difference, amplitude
+CALC2:TABL:POW:ON ON
+CALC2:TABL:POW:ADR ON
+CALC2:TABL:POW:PPR ON
+CALC2:TABL:POW:AMPL ON
+//Limit check for average ON power: lower limit -10 dBm, upper: 1 dBm
+CALC2:TABL:POW:ON:LIM:STAT ON
+CALC2:TABL:POW:ON:LIM -10DBM,1DBM
+
+//Timing: settling time, pulse width
+CALC2:TABL:TIM:SETT ON
+CALC2:TABL:TIM:PWID ON
+
+//Configure pulse statistics table - same par. as results table
+CALC3:TABL:FREQ:POIN ON
+CALC3:TABL:FREQ:PPFR ON
+CALC3:TABL:FREQ:DEV ON
+CALC3:TABL:FREQ:PERR ON
+CALC3:TABL:PHAS:DEV ON
+CALC3:TABL:POW:ON ON
+CALC3:TABL:POW:ADR ON
+CALC3:TABL:POW:PPR ON
+CALC3:TABL:POW:AMPL ON
+CALC3:TABL:TIM:SETT ON
+CALC3:TABL:TIM:PWID ON
+
+
+//Configure pulse magnitude: 
+//scaling is 25 dBm above and below pulse mid level
+DISP:WIND4:TRAC:Y:SCAL:AUTO OFF
+DISP:WIND4:TRAC:Y:SCAL:RPOS 50
+DISP:WIND4:TRAC:Y:SCAL:RVAL 0
+DISP:WIND4:TRAC:Y:SCAL:PDIV 2
+
+
+//--------------Performing the Measurement-----
+INIT:CONT OFF
+//Selects single sweep mode.
+INIT;*WAI
+//Initiates a new measurement and waits until the sweep has finished.
+
+
+//---------------Retrieving Results-------------
+//Select pulse for individual pulse results: pulse 1
+SENS:TRAC:MEAS:DEF:PULS:SEL 1
+//    Determine pulse numbers in entire meas
+SENS:PULS:NUMB? ALL
+//    Determine pulse numbers in current capture buffer
+SENS:PULS:NUMB? CURR
+
+//Retrieve parameter results from results table (pulse 1)
+SENS:PULS:FREQ:POIN? SEL
+SENS:PULS:FREQ:PPFR? SEL
+SENS:PULS:FREQ:DEV? SEL
+SENS:PULS:FREQ:PERR? SEL
+SENS:PULS:PHAS:DEV? SEL
+SENS:PULS:POW:ON? SEL
+SENS:PULS:POW:ADR? SEL
+SENS:PULS:POW:PPR? SEL
+SENS:PULS:POW:AMPL? SEL
+SENS:PULS:TIM:SETT? SEL
+SENS:PULS:TIM:PWID? SEL
+
+//Retrieve limit check result for average ON power in pulses in current meas
+SENS:PULS:POW:ON:LIM? CURR
+
+//Retrieve pulse statistics (aver., min., max) for all pulses in entire meas
+SENS:PULS:FREQ:POIN:AVER? ALL
+SENS:PULS:FREQ:POIN:MIN? ALL
+SENS:PULS:FREQ:POIN:MAX? ALL
+
+SENS:PULS:FREQ:PPFR:AVER? ALL
+SENS:PULS:FREQ:PPFR:MIN? ALL
+SENS:PULS:FREQ:PPFR:MAX? ALL
+
+SENS:PULS:FREQ:DEV:AVER? ALL
+SENS:PULS:FREQ:DEV:MIN? ALL
+SENS:PULS:FREQ:DEV:MAX? ALL
+
+SENS:PULS:FREQ:PERR:AVER? ALL
+SENS:PULS:FREQ:PERR:MIN? ALL
+SENS:PULS:FREQ:PERR:MAX? ALL
+
+SENS:PULS:PHAS:DEV:AVER? ALL
+SENS:PULS:PHAS:DEV:MIN? ALL
+SENS:PULS:PHAS:DEV:MAX? ALL
+
+SENS:PULS:POW:ON:AVER? ALL
+SENS:PULS:POW:ON:MIN? ALL
+SENS:PULS:POW:ON:MAX? ALL
+
+SENS:PULS:POW:ADR:AVER? ALL
+SENS:PULS:POW:ADR:MIN? ALL
+SENS:PULS:POW:ADR:MAX? ALL
+
+SENS:PULS:POW:PPR:AVER? ALL
+SENS:PULS:POW:PPR:MIN? ALL
+SENS:PULS:POW:PPR:MAX? ALL
+
+SENS:PULS:POW:AMPL:AVER? ALL
+SENS:PULS:POW:AMPL:MIN? ALL
+SENS:PULS:POW:AMPL:MAX? ALL
+
+SENS:PULS:TIM:SETT:AVER? ALL
+SENS:PULS:TIM:SETT:MIN? ALL
+SENS:PULS:TIM:SETT:MAX? ALL
+
+SENS:PULS:TIM:PWID:AVER? ALL
+SENS:PULS:TIM:PWID:MIN? ALL
+SENS:PULS:TIM:PWID:MAX? ALL
+
+//Retrieve trace data for pulse magnitude (pulse 1)
+//TRAC4:DATA? TRACe1
+//TRAC4:DATA:X? TRACe1
+
+//Export entire result table (all params) to an ASCII file
+//MMEM:STOR2:TABL ALL,'C:\R_S\Instr\user\AllResults.dat'
+
+//Store I/Q data for result range to an iq-tar file
+//MMEM:STOR:IQ:COMM 'I/Q data for result range'
+//MMEM:STOR:IQ:RANG RRAN
+//MMEM:STOR:IQ:STAT 1,'C:\R_S\Instr\user\RRTestdata.iq.tar'
+
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

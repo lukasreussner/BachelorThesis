@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Basics on External Generator Control" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reference Trace, Reference Line and Reference Level</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e682335547169af50a00201901fd8d93-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_d887caa4425614c00a710a3101b33c81-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_846001fd4b12bd550a710a3101965e4b-460fc0b33bf3b3540a0020190086cf8b-en-US;ID_7df508aa425614620a710a310098e448-460fc0b33bf3b3540a0020190086cf8b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="69aad3245e114b6c.htm">Basics on External Generator Control</a> &gt; <span class="chm-breadcrumb">Reference Trace, Reference Line and Reference Level</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor196">
+</a><a name="kanchor197">
+</a><a name="kanchor198">
+</a><a name="kanchor199">
+</a><a name="kanchor200">
+</a><a name="kanchor201">
+</a><div class="chm-chaptertitle">Reference Trace, Reference Line and Reference Level</div><div class="block"><div class="subtitle"><a name="ID_d887caa4425614c00a710a3101b33c81-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>Reference trace</div></div><p>The calibration results are stored internally on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW as a <em>reference trace</em>. For each measured sweep point the offset to the expected values is determined. If normalization is activated, the offsets in the reference trace are removed from the current measurement results to compensate for the inherent distortions.</p><div class="block"><div class="subtitle"><a name="ID_846001fd4b12bd550a710a3101965e4b-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>Reference line</div></div><p>The reference line is defined by the <a class="xref" href="22ae9ef214ab4c22.htm#ID_0903211337be11e29fe1a4927e7834ad-c00cf4553be48ed90a00201900ba981e-en-US">"Reference Value"</a> and <a class="xref" href="88d763b8dd084261.htm#ID_0903210c37be11e29fe1a4927e7834ad-c00cf4553be48ed90a00201900ba981e-en-US">"Reference Position"</a> in the "External Generator" &gt; "Source Calibration" settings. It is similar to the <a class="xref" href="6a4e851d0383450a.htm#ID_809bde6205305f050a00206a011056b0-ae4a67e705305f050a00206a01ab427c-en-US">"Reference Level"</a> defined in the "Amplitude" settings. However, as opposed to the reference <em>level</em>, this reference <em>line</em> only affects the y-axis scaling in the diagram, it has no effect on the expected input power level or the hardware settings.</p><p>The reference line determines the range and the scaling of the y-axis, just as the reference level does.</p><p>The normalized reference trace (0<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB directly after calibration) is displayed on this reference line, indicated by a red line in the diagram. By default, the reference line is displayed at the top of the diagram. If you shift the reference line, the normalized trace is shifted, as well.</p><div class="block"><div class="subtitle"><a name="ID_7df508aa425614620a710a310098e448-460fc0b33bf3b3540a0020190086cf8b-en-US">
+</a>Shifting the reference line (and normalized trace)</div></div><a name="kanchor202">
+</a><p>You can shift the reference line - and thus the normalized trace - in the result display by changing the <a class="xref" href="88d763b8dd084261.htm#ID_0903210c37be11e29fe1a4927e7834ad-c00cf4553be48ed90a00201900ba981e-en-US">"Reference Position"</a> or the <a class="xref" href="22ae9ef214ab4c22.htm#ID_0903211337be11e29fe1a4927e7834ad-c00cf4553be48ed90a00201900ba981e-en-US">"Reference Value"</a>.</p><p>If the DUT inserts a gain or an attenuation in the measurement, this effect can be reflected in the result display on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. To reflect a power offset in the measurement trace, change the <a class="xref" href="22ae9ef214ab4c22.htm#ID_0903211337be11e29fe1a4927e7834ad-c00cf4553be48ed90a00201900ba981e-en-US">"Reference Value"</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,85 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Phase Noise (R&amp;S FSW-K40)|Remote Control Commands for Phase Noise Measurements|Remote Control Example Scripts" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k40.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Performing a Basic Phase Noise Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0193692e479183bf0a00206a014c2e25-4123961d46f28b350a00206a006cf776-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k40/Content/869f153efe9a4d77.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Phase Noise (R&amp;S FSW-K40)</a> &gt; <a class="chm-breadcrumb" href="a8179e7c78fd4546.htm">Remote Control Commands for Phase Noise Measurements</a> &gt; <a class="chm-breadcrumb" href="05b34383eddd4886.htm">Remote Control Example Scripts</a> &gt; <span class="chm-breadcrumb">Performing a Basic Phase Noise Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Performing a Basic Phase Noise Measurement</div><pre class="verbatim" xml:space="preserve">//Enter Phase Noise application
+INST:SEL PNO
+//Perform a preset of the channel
+SYST:PRES:CHAN
+//Customizing the screen layout.
+//Add residual noise window:
+LAY:ADD? '1',BEL,RNO
+//Add spot noise window:
+LAY:ADD? '2',RIGH,SNO
+//Configure single sweep measurement.
+INIT:CONT OFF
+//Define the measurement range.
+FREQ:STAR 100HZ
+FREQ:STOP 1MHZ
+//Select the sweep type.
+SWE:MODE AVER
+//Turn on frequency tracking.
+FREQ:TRAC ON
+//Turn on level tracking.
+POW:TRAC ON
+//Start the measurement with synchronization.
+INIT;*WAI
+//Set a marker on trace 1 and query its position.
+CALC:MARK ON
+CALC:MARK:X 1MHZ
+CALC:MARK:Y?
+//Query the residual noise results of trace 2 over the measurement range.
+CALC:EVAL ON
+//Residual FM:
+FETC:PNO2:RFM?
+//Residual PM:
+FETC:PNO2:RPM?
+//Residual RMS jitter:
+FETC:PNO2:RMS?
+//Freeze trace 1 and trace 2.
+DISP:TRAC:MODE VIEW
+DISP:TRAC2:MODE VIEW
+//Activate trace 3 and trace 4.
+DISP:TRAC3:MODE WRIT
+DISP:TRAC4:MODE WRIT
+//Activate linear trace smoothing for trace 4.
+DISP:TRAC4:SMO ON
+DISP:TRAC4:SMO:TYPE LIN
+DISP:TRAC:SMO:APER 1
+//Select IQ sweep mode.
+SWE:MODE MAN
+LIST:BWID:RES:TYPE IQFF
+//Repeat the measurement.
+INIT;*WAI</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

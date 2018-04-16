@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Managing Settings and Results|Storing and Loading Instrument Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>MMEMory:LOAD:TYPE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_50caf550dc1f0f8d0a00206a001d4131-11591f74dc1f0f8d0a00206a0151a0b5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="0676e691243b42ba.htm">Managing Settings and Results</a> &gt; <a class="chm-breadcrumb" href="cbafe3d85c3747d2.htm">Storing and Loading Instrument Settings</a> &gt; <span class="chm-breadcrumb">MMEMory:LOAD:TYPE</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_50caf550dc1f0f8d0a00206a001d4131-11591f74dc1f0f8d0a00206a0151a0b5-en-US">
+</a><span class="bold">MMEMory:LOAD:TYPE </span>&lt;Mode&gt;<br/></div><div class="rcdescription"><p>This command defines whether the channels that will be loaded with the subsequent <span class="command">MMEM:LOAD:STAT</span> command will replace the current channel or activate a new channel.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Mode&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>NEW |</nobr> <nobr> REPLace</nobr><br/><span class="bold">NEW<br/></span><p>The loaded settings will be activated in a new channel.</p><span class="bold">REPLace<br/></span><p>The loaded settings will replace the currently active channel.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">NEW</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><div class="verbatim"><pre class="verbatim_text">INST:SEL 'SPECTRUM2'
+//Selects channel 'SPECTRUM2'.
+MMEM:STOR:TYP CHAN
+//Specifies that channel data is to be stored.
+MMEM:STOR:STAT 1, 'C:\R_S\INSTR\USER\Spectrum'
+//Stores the settings from channel 
+//'SPECTRUM2' to the file 'C:\R_S\INSTR\USER \Spectrum'.
+MMEM:LOAD:TYPE NEW
+//Specifies that channels are to be loaded
+//in a new channel.
+MMEM:LOAD:STAT 1, 'C:\R_S\INSTR\USER\Spectrum'
+//Loads the channel from the file 
+//'C:\R_S\INSTR\USER\Spectrum' to the new channel
+//'SPECTRUM2*'.</pre></div></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

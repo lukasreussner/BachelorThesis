@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Configuration|Burst and Pattern Configuration|Burst Search|Burst Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Min Gap Length</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdMinGapLen">
+</meta>
+        <meta name="topic-id" value="854">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_245ba8aa07c9017c0a710a3101062bb6-98ce8ff6410963710a00206a00a7855c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1df8557b8c6a4078.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="a22f12bdf98047fb.htm">Burst and Pattern Configuration</a> &gt; <a class="chm-breadcrumb" href="472a6b9589414ae9.htm">Burst Search</a> &gt; <a class="chm-breadcrumb" href="7003b19add1a4156.htm">Burst Configuration</a> &gt; <span class="chm-breadcrumb">Min Gap Length</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor700">
+</a><a name="kanchor701">
+</a><div class="function_heading"><a name="ID_245ba8aa07c9017c0a710a3101062bb6-98ce8ff6410963710a00206a00a7855c-en-US">
+</a><span style="font-weight: bold">Min Gap Length</span></div><p>Represents the minimum distance (in symbols) between adjacent bursts. The default value is 1 symbol in order to make sure that the burst search finds bursts that are very close to each other. However, in case the capture buffer does not contain very close bursts, it is recommended that you increase the value. This makes the burst search faster and also more robust for highly distorted signals.</p><p>Note that this parameter only influences the robustness of the burst search. It should not be used to explicitly exclude certain bursts from the measurement. For example, setting the minimum gap length to 100 symbols does not ensure that the burst search does not find bursts that have a very small gap.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="831d1f8f8f45416d.htm#ID_b117af7845b3c3220a00206a016c2d49-5dbc282545b3bb430a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>SEARch:</nobr>​<nobr>BURSt:</nobr>​<nobr>GLENgth[:</nobr>​<nobr>MINimum]</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

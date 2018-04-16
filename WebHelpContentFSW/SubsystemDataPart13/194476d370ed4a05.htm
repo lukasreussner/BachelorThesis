@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurement Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 2: Determining the Spectrum Emission Mask</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0130-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_526d95d63d785ee50a00206a01330bd9-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_6846cd5b3d785ee50a00206a004ee7aa-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_bdaed7faa26b13f10a00206a015f8de7-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_15c2abeaa26b13f10a00206a005d48c8-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_9ea15132a26b13f10a00206a012c2c36-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_fd84b72da26b13f10a00206a00e4233f-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_35716409a26b13f10a00206a01c6279c-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_c030e7c3a26b13f10a00206a01bb40f0-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_23e3f18aa26b13f10a00206a004453e3-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_50f5a87ba26b13f10a00206a002bfa39-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_1e3cf571a26b13f10a00206a01498de1-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_6965cd61a26b13f10a00206a0001e5ce-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_4f77a23c0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_4f77a23d0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_4f77a23f0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_4f77a2410ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_4f77a2430ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_4f77a2450ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_a44538c5a26b13f10a00206a00964ced-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_52ab0bc84bc0c17d0a00206a00045491-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_7b581abe4ce4696d0a00206a013a7e0f-a91350ca3d56b27a0a00206a00d23b50-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="20152d16c0ce4865.htm">Measurement Examples</a> &gt; <span class="chm-breadcrumb">Measurement 2: Determining the Spectrum Emission Mask</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor644">
+</a><a name="kanchor645">
+</a><div class="chm-chaptertitle">Measurement 2: Determining the Spectrum Emission Mask</div><p>The 3GPP specification defines a measurement which monitors the compliance with a spectral mask in a range of at least <span style="font-family: arial; font-size: 10.5pt">±</span>12.5 MHz around the 3GPP FDD BTS carrier. To assess the power emissions in the specified range, the signal power is measured in the range near the carrier using a 30kHz filter, in the ranges far away from the carrier using a 1MHz filter. The resulting trace is compared to a limit line defined in the 3GPP specification.</p><div class="block"><a name="ID_526d95d63d785ee50a00206a01330bd9-a91350ca3d56b27a0a00206a00d23b50-en-US">
+</a><div class="procedure_title">Test setup</div><div><table border="0"><tr><td align="left" valign="top" width="24px" class="procedure_table"><font face="Arial">►</font> </td><td class="procedure_table"><p>Connect the RF output of the R&amp;S SMW200A to the RF input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW (coaxial cable with N connectors).</p></td></tr></table></div></div><div class="block"><a name="ID_bdaed7faa26b13f10a00206a015f8de7-a91350ca3d56b27a0a00206a00d23b50-en-US">
+</a><div class="procedure_title">Settings on the R&amp;S SMW200A</div><div><ol class="procedure"><li id="ID_15c2abeaa26b13f10a00206a005d48c8-a91350ca3d56b27a0a00206a00d23b50-en-US" value="1"><p>PRESET</p></li><li id="ID_9ea15132a26b13f10a00206a012c2c36-a91350ca3d56b27a0a00206a00d23b50-en-US" value="2"><p>"FREQ" = <span class="input">2.1175 GHz</span></p></li><li id="ID_fd84b72da26b13f10a00206a00e4233f-a91350ca3d56b27a0a00206a00d23b50-en-US" value="3"><p>"LEVEL"= <span class="input">0 dBm</span></p></li><li id="ID_35716409a26b13f10a00206a01c6279c-a91350ca3d56b27a0a00206a00d23b50-en-US" value="4"><p>"DIGITAL STD" = "WCDMA/3GPP"</p></li><li id="ID_c030e7c3a26b13f10a00206a01bb40f0-a91350ca3d56b27a0a00206a00d23b50-en-US" value="5"><p>"DIGITAL STD &gt; Set Default"</p></li><li id="ID_23e3f18aa26b13f10a00206a004453e3-a91350ca3d56b27a0a00206a00d23b50-en-US" value="6"><p>"DIGITAL STD &gt; LINK DIRECTION &gt; DOWN/FORWARD"</p></li><li id="ID_50f5a87ba26b13f10a00206a002bfa39-a91350ca3d56b27a0a00206a00d23b50-en-US" value="7"><p>"DIGITAL STD &gt; TEST MODELS &gt; Test_Model_1_16_channels"</p></li><li id="ID_1e3cf571a26b13f10a00206a01498de1-a91350ca3d56b27a0a00206a00d23b50-en-US" value="8"><p>"DIGITAL STD &gt; Select Base station &gt; UE 1" = "ON"</p></li><li id="ID_6965cd61a26b13f10a00206a0001e5ce-a91350ca3d56b27a0a00206a00d23b50-en-US" value="9"><p>"DIGITAL STD &gt; WCDMA/3GPP &gt; STATE"= "ON"</p></li></ol></div></div><div class="block"><a name="ID_4f77a23c0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US">
+</a><div class="procedure_title">Settings on the R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW</div><div><ol class="procedure"><li id="ID_4f77a23d0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="1"><p>PRESET</p></li><li id="ID_4f77a23f0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="2"><p>"MODE &gt; 3GPP FDD BTS"</p></li><li id="ID_4f77a2410ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="3"><p>"AMPT &gt; Reference level"= <span class="input">0 dBm</span></p></li><li id="ID_4f77a2430ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="4"><p>"FREQ &gt; Center frequency" = <span class="input">2.1175 GHz</span></p></li><li id="ID_4f77a2450ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="5"><p>"MEAS &gt; Spectrum Emission Mask"</p></li><li id="ID_a44538c5a26b13f10a00206a00964ced-a91350ca3d56b27a0a00206a00d23b50-en-US" value="6"><p>"AMPT &gt; Scale Config &gt; Auto Scale Once"</p></li></ol></div></div><div class="block"><div class="subtitle"><a name="ID_52ab0bc84bc0c17d0a00206a00045491-a91350ca3d56b27a0a00206a00d23b50-en-US">
+</a>Result</div></div><p>The following results are displayed:</p><div class="block"><ul class="list"><li value="1">Spectrum of the 3GPP FDD BTS signal</li><li value="2">Limit line defined in the standard</li><li value="3">Information on limit line violations (passed/failed)</li></ul></div><div class="block" id="ID_7b581abe4ce4696d0a00206a013a7e0f-a91350ca3d56b27a0a00206a00d23b50-en-US"><div class="graphic"><img border="0" src="Resources/Images/img283f82de4cd813b10a00206a0067695d_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Measurement Example 2: Determining the Spectrum Emission Mask</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

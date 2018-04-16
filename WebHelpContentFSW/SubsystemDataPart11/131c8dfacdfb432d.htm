@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Remote Commands to Perform Transient Analysis|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Analyzing Parameter Trends</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8f8341004979d7100a001ae775b6815d-d6c21068fdef31600a001ae74316722d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="b3c74aa8fd9f42ae.htm">Remote Commands to Perform Transient Analysis</a> &gt; <a class="chm-breadcrumb" href="ee6c620ea0994dba.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Programming Example: Analyzing Parameter Trends</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor938">
+</a><a name="kanchor939">
+</a><div class="chm-chaptertitle">Programming Example: Analyzing Parameter Trends</div><p>This example demonstrates how to analyze parameter trend for a hopped signal in a remote environment. It can be performed subsequently to the measurement described in <a class="xref" href="e9b27d029426432b.htm#ID_7d027bee407611e3abe885ac765889d8-d6c21068fdef31600a001ae74316722d-en-US">"Programming Example: Performing a Hop Detection Measurement"</a>.</p><pre class="verbatim" xml:space="preserve">//------------- Adding parameter trend results -------------------------------
+//Result displays:
+//upper row: (1)RF Power Time Domain (full capture), (2) Avg. Power vs. Dwell Time Trend
+//middle row: (3)Average Frequency vs Begin Trend (4)RF Spectrum (A.Region)
+//bottom row: (5)Hop Results table, default (6)Hop Statistics table
+LAY:REPL:WIND '2',PTR
+CALC2:TREN:HOP:TIM:X DWEL
+CALC2:TREN:HOP:POW:Y AVGP
+LAY:REPL:WIND '3',PTR
+CALC3:TREN:HOP:FREQ FREQ,BEG
+
+//-----------Performing the Measurement-----
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and waits until the sweep has finished. 
+INIT;*WAI
+
+//---------------Retrieving Results-------------
+//Retrieve results for parameter trends
+//CALC2:TREN:X?
+//CALC2:TREN:Y?
+//CALC3:TREN:X?
+//CALC3:TREN:Y?
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

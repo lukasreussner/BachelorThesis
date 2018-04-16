@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Processing Data from the Digital Baseband Interface" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Digital Input</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d8daacf3caba19e10a710a310125871f-5e9fe65b9f08f6a20a00206a005ed478-en-US;ID_75a05c4b9d3311de805bce8b0d8bd0de-5e9fe65b9f08f6a20a00206a005ed478-en-US;ID_5cea241b9edf76b80a00206a00c8c2c8-5e9fe65b9f08f6a20a00206a005ed478-en-US;ID_405dd3bd0ba7d7920a00201900313f47-5e9fe65b9f08f6a20a00206a005ed478-en-US;ID_8345ec8fcb4eec560a710a310022c86e-5e9fe65b9f08f6a20a00206a005ed478-en-US;ID_4f41ba89c1ba511a0a00206a01e8de4d-5e9fe65b9f08f6a20a00206a005ed478-en-US;ID_418dc69d9edf76b80a00206a006c114a-5e9fe65b9f08f6a20a00206a005ed478-en-US;ID_82d7cc289d7e07e20a710a310182ab3e-5e9fe65b9f08f6a20a00206a005ed478-en-US;ID_ab3bf2f39d8e26830a710a3100764838-5e9fe65b9f08f6a20a00206a005ed478-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="a7c1297b45c64a58.htm"> Processing Data from the Digital Baseband Interface </a> &gt; <span class="chm-breadcrumb">Digital Input</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor83">
+</a><a name="kanchor84">
+</a><div class="chm-chaptertitle">Digital Input</div><p>Digital I/Q data can be used as an alternative data input source for measurements with the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The digital input and output cannot be used simultaneously.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_5cea241b9edf76b80a00206a00c8c2c8-5e9fe65b9f08f6a20a00206a005ed478-en-US">
+</a>Connecting the digital input instrument</div></div><p>The instrument that provides digital input must be connected to the R&amp;S Digital Baseband Interface on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Information on the detected input instrument is shown in the "Digital I/Q Input Source" configuration dialog. You can configure the basic connection settings, e.g. the input sample rate.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>It is recommended that you use the R&amp;S<sup><span style="font-family: Arial Unicode MS; font-size: 10.5pt">®</span></sup>SMU-Z6 (1415.0201.02) cable to connect other devices to the Digital Baseband Interface of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_8345ec8fcb4eec560a710a310022c86e-5e9fe65b9f08f6a20a00206a005ed478-en-US">
+</a>Processing digital input</div></div><p>The digital I/Q data stream is fed into the analyzer via the connector of the optional digital baseband interface. There is no need to equalize any IF filter or mix the signal into the complex baseband. The digital hardware just has to ensure that the final I/Q data stored in the record buffer has the correct sample rate.</p><p>The digital input signal is brought to the desired sample rate using a downsampling filter and fractional resampling. The word length of the data is 18 bits fixed point for each I and Q. The resulting data can be processed by the selected application. As illustrated in <a class="xref" href="#ID_4f41ba89c1ba511a0a00206a01e8de4d-5e9fe65b9f08f6a20a00206a005ed478-en-US">Figure "Signal path using digital input"</a>, the usable sample rate for analysis is dependent on the input sample rate.</p><div class="block" id="ID_4f41ba89c1ba511a0a00206a01e8de4d-5e9fe65b9f08f6a20a00206a005ed478-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgc4efda5fba71c3f60a0020190013ff5c_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Signal path using digital input</div></div><div class="block"><div class="subtitle"><a name="ID_418dc69d9edf76b80a00206a006c114a-5e9fe65b9f08f6a20a00206a005ed478-en-US">
+</a>Full scale level</div></div><a name="kanchor85">
+</a><a name="kanchor86">
+</a><p>The "Full Scale Level" defines the level that corresponds to an I/Q sample with the magnitude "1" and can be defined in various units. When converting the measured power into dBm, an impedance of 50 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> is assumed.</p><div class="block"><div class="subtitle"><a name="ID_82d7cc289d7e07e20a710a310182ab3e-5e9fe65b9f08f6a20a00206a005ed478-en-US">
+</a>Triggering</div></div><a name="kanchor87">
+</a><a name="kanchor88">
+</a><p>The following trigger sources are supported:</p><div class="block"><ul class="list"><li value="1">External (see <a class="xref" href="e8ed95e874164cdc.htm#ID_3d5f41ee0fd6b6ca0a00206a005b3e2e-1c6a070f0fd6b6ca0a00206a004f79b0-en-US">"External Trigger 1/2/3"</a>)</li><li value="2">BB Power (see <a class="xref" href="../../fsw_k192/Content/c26ef181d471430c.htm">
+		Baseband Power
+	</a>)</li><li value="3">Time (see <a class="xref" href="6cec8b1da5d24f1e.htm#ID_7ea50d360fdaf97b0a00206a00857491-4479ca850fdaf97b0a00206a01a80b0b-en-US">"Time"</a>)</li><li value="4">Digital I/Q general purpose trigger (see <a class="xref" href="19b669d4e7f14301.htm#ID_128217377973f1c70a00206a00d73dcc-cf71869ff78ed9ed0a00206a00c08bb0-en-US">"Digital I/Q"</a>)</li></ul></div><p>If external triggering is used, the external trigger must be applied via the connector on the rear panel of the instrument (as for analog input).</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_ab3bf2f39d8e26830a710a3100764838-5e9fe65b9f08f6a20a00206a005ed478-en-US">
+</a>Gating</div><p>Gating is not supported for digital input.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

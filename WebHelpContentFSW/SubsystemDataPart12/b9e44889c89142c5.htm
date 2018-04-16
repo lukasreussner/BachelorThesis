@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Examples|Measurement Example 2: Burst GSM EDGE Signals" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Evaluating the Rising and Falling Edges</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c19af22e2b1e019f0a00206a018df7b7-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_49d01917aa956c420a00206a0167f977-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_6d09c6a7aa956c420a00206a012b33f3-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_afc9ac32aa956c420a00206a019158f7-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_17f73365aa956c420a00206a00b7b18d-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_16874ed2a5bc53d30a00206a0064c4d9-7c60cc67410fd4a60a00206a01c84e65-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ddfa726bcfd3409b.htm">Measurement Examples</a> &gt; <a class="chm-breadcrumb" href="011612b9941d4e61.htm">Measurement Example 2: Burst GSM EDGE Signals</a> &gt; <span class="chm-breadcrumb">Evaluating the Rising and Falling Edges</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Evaluating the Rising and Falling Edges</div><p>The "Result Length" is the number of symbols that are to be demodulated and analyzed together. In most common applications, only the parts of the capture buffer containing the bursts need to be analyzed. Hence, for bursted signals the "Result Length" usually coincides with the burst length. However, there are certain scenarios where the rising and falling edge of a burst are also of interest, e.g. checking the power ramping of the device under test. For this measurement task, it is useful to choose a "Result Length" that exceeds the burst length.</p><div class="block"><a name="ID_49d01917aa956c420a00206a0167f977-7c60cc67410fd4a60a00206a01c84e65-en-US">
+</a><div><ol class="procedure"><li id="ID_6d09c6a7aa956c420a00206a012b33f3-7c60cc67410fd4a60a00206a01c84e65-en-US" value="1"><p>In order to include the rising and falling edges of the bursts in the EVM vs Time display (window 1), you need to increase the "Result Length".</p><p>In the "Overview", select "Cut Result Range" and increase the "Result Length" to <span class="input">200</span> symbols.</p></li><li id="ID_afc9ac32aa956c420a00206a019158f7-7c60cc67410fd4a60a00206a01c84e65-en-US" value="2"><p>To evaluate the rising and falling edges further, display the absolute magnitude values of the measured signal in window 4 (Source: "Meas&amp;Ref Signal", Result type: "Magnitude Absolute", see <a class="xref" href="b7bdaca16a544e2f.htm#ID_acc6f25f2ad5540b0a710a3100c35c97-7c60cc67410fd4a60a00206a01c84e65-en-US">"Changing the Display Configuration"</a>).</p></li><li id="ID_17f73365aa956c420a00206a00b7b18d-7c60cc67410fd4a60a00206a01c84e65-en-US" value="3"><p>Press [Run Single].</p><p>The rising and falling edges of the burst in the selected result range are displayed in window 4. You could now add an average trace to evaluate the rising and falling edges further.</p><div class="block" id="ID_16874ed2a5bc53d30a00206a0064c4d9-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img70a931a9a5a71fd20a00206a0036a253_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Result range that exceeds the burst length</div></div></li></ol></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

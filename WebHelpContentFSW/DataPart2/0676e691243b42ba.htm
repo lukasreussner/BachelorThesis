@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Managing Settings and Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_40fa7c152873813d0a00206a0146f849-893708fa29701e230a00206a01343a01-en-US;ID_37cdcd027be520610a710a3101f2a7e9-893708fa29701e230a00206a01343a01-en-US;ID_1e43204c7be8ebfb0a710a3100cc995c-893708fa29701e230a00206a01343a01-en-US;ID_2d23b9a4f7b7abd00a00206a016ccefc-893708fa29701e230a00206a01343a01-en-US;ID_d58ea103c4af4eb00a710ade01504325-893708fa29701e230a00206a01343a01-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <span class="chm-breadcrumb">Managing Settings and Results</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Managing Settings and Results</div><p>The commands required to store and load instrument settings and import and export measurement results in a remote environment are described here.</p><p>The tasks for manual operation are described in <a class="xref" href="eeac49b666d249c9.htm#ID_005aa9772965ce140a00206a002a5f41-9d1541d32965ce140a00206a01d3b6f3-en-US">"Data Management"</a>.</p><div class="block"><div class="subtitle"><a name="ID_37cdcd027be520610a710a3101f2a7e9-893708fa29701e230a00206a01343a01-en-US">
+</a>Addressing drives</div></div><p>The various drives can be addressed via the "mass storage instrument specifier" &lt;msis&gt; using the conventional Windows syntax. The internal hard disk is addressed by "C:".</p><p>For details on storage locations refer to <a class="xref" href="c471f6f004ce4b2f.htm#ID_3200d1d9c9323e010a00206a01fb9d0a-f6fe6a3936462c370a001ae76bfa0bb1-en-US">"Storage Location and Filename"</a>.</p><p>The file names (&lt;FileName&gt; parameter) are given as string parameters enclosed in quotation marks. They also comply with Windows conventions. Windows file names do not distinguish between uppercase and lowercase notation.</p><div class="block"><div class="subtitle"><a name="ID_1e43204c7be8ebfb0a710a3100cc995c-893708fa29701e230a00206a01343a01-en-US">
+</a>Wildcards</div></div><p>The two characters "*" and "?" can be used as "wildcards", i.e., they are variables for a selection of several files. The question mark "?" replaces exactly one character, the asterisk replaces any of the remaining characters in the file name. "*.*" thus means all files in a directory.</p><div class="block"><div class="subtitle"><a name="ID_2d23b9a4f7b7abd00a00206a016ccefc-893708fa29701e230a00206a01343a01-en-US">
+</a>Path names</div></div><p>Storage locations can be specified either as absolute (including the entire path) or relative paths (including only subfolders of the current folder). Use the <span class="command">MMEM:CDIR?</span> query to determine the current folder.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_d58ea103c4af4eb00a710ade01504325-893708fa29701e230a00206a01343a01-en-US">
+</a>Secure user mode</div><p>In secure user mode, settings that are to be stored on the instrument are stored to volatile memory, which is restricted to 256<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz. Thus, a "Memory full" error may occur although the hard disk indicates that storage space is still available.</p></td></tr></table></div></div><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="0f346ea9a479400d.htm" class="chapter_title_toc">General Data Storage and Loading Commands</a></li><li value="2"><a href="9a283abf571e4a9a.htm" class="chapter_title_toc">Selecting the Items to Store</a></li><li value="3"><a href="cbafe3d85c3747d2.htm" class="chapter_title_toc">Storing and Loading Instrument Settings</a></li><li value="4"><a href="c64595e53669443a.htm" class="chapter_title_toc">Storing or Printing Screenshots</a></li><li value="5"><a href="55d92ed5fd1a4db7.htm" class="chapter_title_toc">Storing Measurement Results</a></li><li value="6"><a href="98a3111eaf4a465b.htm" class="chapter_title_toc">Examples: Managing Data</a></li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

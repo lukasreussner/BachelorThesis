@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Configuration|WLAN I/Q Measurement Configuration|Demodulation|Demodulation - IEEE 802.11b, g (DSSS)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>PPDU Format to measure[/]PSDU Modulation to use</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWLANSkIdDemod_PPDUAnalysisMode11b">
+</meta>
+        <meta name="topic-id" value="668">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3b56387a34b411e2aa2aaab3cd47473f-d8e006d37c4158750a00201901359a7d-en-US;ID_3b56387f34b411e2aa2aaab3cd47473f-d8e006d37c4158750a00201901359a7d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3a844e7770fd4a7a.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2e3336f147004a28.htm">WLAN I/Q Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="c50dac5d1cbc45f8.htm">Demodulation</a> &gt; <a class="chm-breadcrumb" href="df4dfe0171f443d5.htm">Demodulation - IEEE 802.11b, g (DSSS)</a> &gt; <span class="chm-breadcrumb">PPDU Format to measure[/]PSDU Modulation to use</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor561">
+</a><a name="kanchor562">
+</a><a name="kanchor563">
+</a><div class="function_heading"><a name="ID_3b56387a34b411e2aa2aaab3cd47473f-d8e006d37c4158750a00201901359a7d-en-US">
+</a><span style="font-weight: bold">PPDU Format to measure</span><span style="font-weight: bold">[/]</span><span style="font-weight: bold">PSDU Modulation to use</span></div><p>Defines which PPDU formats/modulations are to be included in the analysis. Depending on which standards the communicating devices are using, different formats of PPDUs are available. Thus you can restrict analysis to the supported formats.</p><p><b><a name="ID_3b56387f34b411e2aa2aaab3cd47473f-d8e006d37c4158750a00201901359a7d-en-US">
+</a>Note:</b> The PPDU format determines the available channel bandwidths.<br/></p><p>For details on supported PPDU formats, modulations, and channel bandwidths depending on the standard see <a class="xref" href="244ca84f50394369.htm#ID_e45cf0c8856611e1a221e7ee371f3cea-a152f5e2a64dafbf0a002019017fdb4d-en-US">Table "Supported modulation formats, PPDU formats and channel bandwidths depending on standard"</a>.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto, same type as first PPDU"</p></td><td class="function_col_right"><p>The format/modulation of the first valid PPDU is detected and subsequent PPDUs are analyzed only if they have the same format.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Auto, individually for each PPDU"</p></td><td class="function_col_right"><p>All PPDUs are analyzed regardless of their format/modulation</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Meas only ..."</p></td><td class="function_col_right"><p>Only PPDUs with the specified format or PSDUs with the specified modulation are analyzed</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Demod all as ..."</p></td><td class="function_col_right"><p>All PPDUs are assumed to have the specified PPDU format/ PSDU modulation</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="9033ade50ec14868.htm#ID_f86607992f5a1ce10a00206a00bec4d5-9287fc832f5a14840a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>BANalyze:</nobr>​<nobr>BTYPe:</nobr>​<nobr>AUTO:</nobr>​<nobr>TYPE</nobr></a></p><p><a class="xref" href="d4195593931c42d6.htm#ID_5c4384db2f5a04a60a00206a018664ae-911fabe12f59f6ea0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>BANalyze</nobr></a></p><p><a class="xref" href="6923e1c7507e43c5.htm#ID_e1a97a0d2f59df8a0a00206a0133ce56-b9723e222f59d7ba0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>SIGSymbol</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

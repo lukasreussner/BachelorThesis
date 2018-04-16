@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Configuration|Using the Uncertainty Calculator" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Guidelines and Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_Guidelines">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_2ndStageNoiseResult">
+</meta>
+        <meta name="topic-id" value="236">
+</meta>
+        <meta name="topic-id" value="238">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b11214aa002f08c20a0020190094fc69-0fca6040001083b80a0020190143e16f-en-US;ID_b3c0e64e13b0ce5f0a710a9201b7b490-0fca6040001083b80a0020190143e16f-en-US;ID_5258a51c13b0cda30a710a9201de277d-0fca6040001083b80a0020190143e16f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="6f413a5358b94877.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="112d0d5ae3ab4748.htm">Using the Uncertainty Calculator</a> &gt; <span class="chm-breadcrumb">Guidelines and Results</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Guidelines and Results</div><p><b>Access</b>: [MEAS CONFIG] &gt; "Uncertainty Calculation"</p><p>The lower part of the dialog box contains measurement guidelines that provide information on the quality of measurement and the actual noise figure uncertainty.</p><div class="block"><div class="subtitle"><a name="ID_b3c0e64e13b0ce5f0a710a9201b7b490-0fca6040001083b80a0020190143e16f-en-US">
+</a>Guidelines</div></div><p>The guidelines are an indicator of the quality of the measurement and an indicator the repeatability of the measurement.</p><p>The three guidelines are:</p><div class="block"><ul class="list"><li value="1">Make sure that the noise figure of the DUT and the gain of the DUT is greater than the noise figure of the analyzer plus 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB.</li><li value="2">Make sure that the ENR of the noise source is greater than the noise figure of the DUT plus 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB.</li><li value="3">Make sure that the ENR of the noise source is greater than the noise figure of the analyzer plus 3<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB.</li></ul></div><p>A short form of these guidelines is indicated in the "Uncertainty Calculation" dialog box. The dialog box also indicates if the guidelines have been met or not by a colored dot.</p><div class="block"><ul class="list"><li value="1">Green light <img border="0" src="Resources/Images/imgf77e701413aa786c0a00201900a8a4bb_1_--_--_PNG96.png" alt="" title=""/>: guideline condition met.</li><li value="2">Yellow light <img border="0" src="Resources/Images/img41d042b113aab73a0a00201901a69fb7_1_--_--_PNG96.png" alt="" title=""/>: guideline condition not met, but within 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB of being met.</li><li value="3">Red light <img border="0" src="Resources/Images/img5555cfa913aa97fa0a002019019d0270_1_--_--_PNG96.png" alt="" title=""/>: guideline condition not met.</li></ul></div><p>Note that the guidelines have no effect on the actual uncertainty that has been calculated and that they are only considered for measurements with 2nd Stage Correction.</p><div class="block"><div class="subtitle"><a name="ID_5258a51c13b0cda30a710a9201de277d-0fca6040001083b80a0020190143e16f-en-US">
+</a>Uncertainty</div></div><p>The "Uncertainty" result is shown only if you define the noise figure and gain characteristics of the DUT manually on a single frequency. In that case, the uncertainty shown in the "Uncertainty Calculation" dialog box is valid only for the DUT frequency you have defined.</p><p>The "Measurement Offset" evaluates the internal noise of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW that is added to the noise figure results. The measurement offset result is displayed when 2nd stage correction is turned off. When you turn on 2nd stage correction, the internal noise is automatically removed from the uncertainty results, so the measurement offset is not shown.</p><p>If you are using the noise figure and gain that has been determined during a measurement, the uncertainty is displayed only in the result table.</p><p>For more information see <a class="xref" href="4c5058dec84a46d4.htm#ID_491e8e56002f08c20a002019008f3724-0fca6040001083b80a0020190143e16f-en-US">"Use Measurement Values"</a>.</p><p>SCPI command:</p><p><a class="xref" href="d2184162e34456.htm#ID_a0f9791709edde4c0a00201901ecad97-8ab355d309edde4c0a0020190178ac0f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty[:</nobr>​<nobr>RESult]?</nobr></a></p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

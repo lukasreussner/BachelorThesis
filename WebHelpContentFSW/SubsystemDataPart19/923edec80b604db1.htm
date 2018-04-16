@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics|Signal Processing for MIMO Measurements (IEEE 802.11ac, n)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Space-Time Block Coding (STBC)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1925e3002de47a4d0a001ae716190ba1-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="6dff20d6bdc14ea6.htm">Signal Processing for MIMO Measurements (IEEE 802.11ac, n)</a> &gt; <span class="chm-breadcrumb">Space-Time Block Coding (STBC)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Space-Time Block Coding (STBC)</div><p>The coded bits to be transmitted are modulated to create a data stream, referred to as a <em>spatial stream</em>, by the stream parser in the transmitting device under test (see <a class="xref" href="6dff20d6bdc14ea6.htm#ID_56311d97a089647e0a00206a017c9277-a152f5e2a64dafbf0a002019017fdb4d-en-US">Figure "Data flow from the transmit antenna to the receive antenna"</a>).</p><p>The Space-Time Block Encoder (STBC) implements the transmit diversity technique (see <a class="xref" href="6dff20d6bdc14ea6.htm#ID_f43dbe803229d9610a001ae75c23f20e-a152f5e2a64dafbf0a002019017fdb4d-en-US">"Basic technologies"</a>). It creates multiple copies of the data streams, each encoded differently, which can then be transmitted by a number of antennas.</p><p>To do so, the STBC encodes only the <em>data</em> carriers in the spatial stream using a matrix. Each row in the matrix represents an OFDM symbol and each column represents one antenna's transmissions over time (thus the term <em>space-time encoder</em>). This means each block represents the same data, but with a different coding. The resulting blocks are referred to as <em>space-time streams</em> (STS). Each stream is sent to a different Tx antenna. This <em>diversity coding</em> increases the signal-to-noise ratio at the receive antenna. The <em>pilot</em> carriers are inserted after the data carriers went through the STBC. Thus, only the data carriers are decoded by the analyzer to determine characteristics of the demodulated data (see also <a class="xref" href="c520980983114a15.htm#ID_3ad04310a089647e0a00206a00a665a0-a152f5e2a64dafbf0a002019017fdb4d-en-US">Figure "Results at individual processing stages"</a>).</p><p>In order to transmit the space-time streams, two or more antennas are required by the sender, and one or more antennas are required by the receive antenna.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Basics on GSM Measurements|Multicarrier and Wideband Noise" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Contiguous vs Non-Contiguous Multicarrier Allocation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e2480de09d00f80f0a001ae749c823f3-b1f487377d4432d90a002019013b147f-en-US;ID_8da5c19c4bdb6feb0a001ae726ba602b-b1f487377d4432d90a002019013b147f-en-US;ID_244752ca9d00f81e0a001ae7172b562e-b1f487377d4432d90a002019013b147f-en-US;ID_057f77deb74241b00a001ae740b965f0-b1f487377d4432d90a002019013b147f-en-US;ID_112067da9d00f81e0a001ae73a4cb414-b1f487377d4432d90a002019013b147f-en-US;ID_09ee9f839d37c82e0a001ae72d2b8f28-b1f487377d4432d90a002019013b147f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="639d9fcc151e43b9.htm">Basics on GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="7559c8f057184021.htm">Multicarrier and Wideband Noise</a> &gt; <span class="chm-breadcrumb">Contiguous vs Non-Contiguous Multicarrier Allocation</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor302">
+</a><a name="kanchor303">
+</a><a name="kanchor304">
+</a><a name="kanchor305">
+</a><div class="chm-chaptertitle">Contiguous vs Non-Contiguous Multicarrier Allocation</div><p>In a standard GSM measurement scenario, multiple carriers are positioned with a fixed spacing in one block. This setup is referred to as <em>contiguous carrier allocation</em>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Carrier frequencies are allocated in a grid with a spacing of 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz. The minimum carrier spacing is 600<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_244752ca9d00f81e0a001ae7172b562e-b1f487377d4432d90a002019013b147f-en-US">
+</a>Multi-standard radio (MSR) signals</div></div><a name="kanchor306">
+</a><p>Modern base stations may process multiple signals for different communication standards, for example two GSM subblocks with an LTE subblock in-between. In this case, if you consider only the GSM carriers, the carriers are spaced regularly within the GSM subblocks, but there is a gap between the two subblocks. Such a carrier setup is referred to as <em>non-contiguous carrier allocation</em>.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img">
+</img></td><td><p>According to the 3GPP standard TS 51.021, a subblock is defined as <em>"one contiguous allocated block of spectrum for use by the same base station. There may be multiple instances of subblocks within an RF bandwidth"</em>.</p><p>A gap is defined as <em>"A frequency gap between two consecutive sub-blocks within an RF bandwidth, where the RF requirements in the gap are based on co-existence for uncoordinated operation."</em></p></td></tr></table></div></div><div class="block" id="ID_057f77deb74241b00a001ae740b965f0-b1f487377d4432d90a002019013b147f-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga6b6ab0db73d7dc50a001ae704c67c07_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Non-contiguous carrier allocation</div></div><div class="block"><div class="subtitle"><a name="ID_112067da9d00f81e0a001ae73a4cb414-b1f487377d4432d90a002019013b147f-en-US">
+</a>Non-contiguous carrier allocation</div></div><a name="kanchor307">
+</a><p>The R&amp;S FSW GSM application now allows you to measure such non-contiguous carrier setups containing up to 16 carriers and a single gap (two subblocks). The position of the individual carriers is defined as absolute frequency values. In addition, the position of the gap between the GSM subblocks is defined explicitly by the number of the carrier after which it begins. The burst type and modulation can be defined individually for each carrier to reflect different GSM configurations.</p><div class="block"><div class="subtitle"><a name="ID_09ee9f839d37c82e0a001ae72d2b8f28-b1f487377d4432d90a002019013b147f-en-US">
+</a>Limit checks for non-contiguous carrier allocation</div></div><a name="kanchor308">
+</a><p>In order to perform useful limit checks for such non-contiguous carrier allocation, the limit lines are automatically adapted to the gap, so that other signals do not distort the GSM limit check.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Programming Examples|Service Request" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Waiting Without Blocking the Keyboard and Mouse</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_7_remote_examples_0031-57e6ee759ff91baa0a00206a019f27ff-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9cd40c31930e4200.htm">Programming Examples</a> &gt; <a class="chm-breadcrumb" href="08bab3c56ea044fc.htm">Service Request</a> &gt; <span class="chm-breadcrumb">Waiting Without Blocking the Keyboard and Mouse</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Waiting Without Blocking the Keyboard and Mouse</div><p>A frequent problem with remote control programs using Visual Basic is to insert waiting times without blocking the keyboard and the mouse.</p><p>If the program is to respond to user inputs also during a waiting time, control over the program events during this time must be returned to the operating system. In Visual Basic, this is done by calling the <span class="command">DoEvents</span> function. This function causes keyboard-or mouse-triggered events to be executed by the associated elements. For example, it allows the operation of buttons and input fields while the user waits for an instrument setting to be completed.</p><p>The following programming example describes the <span class="command">Hold()</span> function, which returns control to the operating system for the period of the waiting time selectable in milliseconds.</p><div class="verbatim"><pre class="verbatim_text">Rem ***********************************************************************
+Rem The waiting function below expects the transfer of the desired
+Rem waiting time in milliseconds. The keyboard and the mouse remain
+Rem operative during the waiting period, thus allowing desired elements
+Rem to be controlled
+Rem ***********************************************************************
+Public Sub Hold(delayTime As Single)
+Start = Timer 'Save timer count on calling the
+'function
+Do While Timer &lt; Start + delayTime/1000 'Check timer count
+DoEvents 'Return control to operating
+'system to enable control of
+'desired elements as long as
+'timer has not elapsed
+Loop
+End Sub
+Rem ***********************************************************************</pre></div><p>The waiting procedure is activated simply by calling <span class="command">Hold(&lt;Waiting time in milliseconds&gt;)</span>.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

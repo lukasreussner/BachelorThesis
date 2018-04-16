@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Input, Output, and Frontend Settings|Output Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Data Output</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdIfOutput">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdIfOutput">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdIfOutput">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdIfOutput">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdIfOutput">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdIfOutputFrequency">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdIfOutputFrequency">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdIfOutputFrequency">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdIfOutputFrequency">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdIfOutputFrequency">
+</meta>
+        <meta name="topic-id" value="338">
+</meta>
+        <meta name="topic-id" value="339">
+</meta>
+        <meta name="topic-id" value="340">
+</meta>
+        <meta name="topic-id" value="341">
+</meta>
+        <meta name="topic-id" value="342">
+</meta>
+        <meta name="topic-id" value="343">
+</meta>
+        <meta name="topic-id" value="344">
+</meta>
+        <meta name="topic-id" value="345">
+</meta>
+        <meta name="topic-id" value="346">
+</meta>
+        <meta name="topic-id" value="347">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_061f23dd00fafcde0a00206a01328dd5-837db41d2325342c0a00206a00039155-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="aede1128a4d04b47.htm">Input, Output, and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="6ac935994e714905.htm">Output Settings</a> &gt; <span class="chm-breadcrumb">Data Output</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor157">
+</a><a name="kanchor158">
+</a><a name="kanchor159">
+</a><a name="kanchor160">
+</a><a name="kanchor161">
+</a><a name="kanchor162">
+</a><a name="kanchor163">
+</a><a name="kanchor164">
+</a><div class="function_heading"><a name="ID_061f23dd00fafcde0a00206a01328dd5-837db41d2325342c0a00206a00039155-en-US">
+</a>Data Output</div><p>Defines the type of signal available at one of the output connectors of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"IF"</p></td><td class="function_col_right"><p>The measured IF value is provided at the IF/VIDEO/DEMOD output connector.</p><p>For bandwidths up to 80<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHZ, the IF output is provided at the specified "IF Out Frequency".</p><p>If an optional bandwidth extension R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320/-B500/ -B512 is used, the measured IF value is available at the IF WIDE OUTPUT connector. The frequency at which this value is output is determined automatically. It is displayed as the "IF Wide Out Frequency". For details on the used frequencies, see the data sheet.</p><p>This setting is not available for bandwidths larger than 512<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"2ND IF"</p></td><td class="function_col_right"><p>The measured IF value is provided at the IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHZ/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHZ output connector, if available, at a frequency of 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz and with a bandwidth of 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz. The availability of this connector depends on the instrument model.</p><p>This setting is not available if the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000/B5000) is active.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="b237b458b1cd49c0.htm#ID_7a4f8cd932b3521c0a00206a01f4b0d0-5f4402a5ddcc25580a00206a01600295-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>OUTPut:</nobr>​<nobr>IF[:</nobr>​<nobr>SOURce]</nobr></a></p><p><a class="xref" href="d2b72e97644140ec.htm#ID_df031571d4e13dfd0a00206a0031cd09-3e080adbd4e13dfd0a00206a01ac51d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>OUTPut:</nobr>​<nobr>IF:</nobr>​<nobr>IFFRequency</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

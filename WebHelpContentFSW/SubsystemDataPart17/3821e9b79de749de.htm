@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="1xEV-DO Measurements (R&amp;S FSW-K84/-K85)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k84_k85.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Subtypes</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_440b5797f8b232930a00206a01cad45f-67698f60f4ad5da30a00206a0051b8a0-en-US;ID_fe22f7f7224d8fa10a00206a0154b090-67698f60f4ad5da30a00206a0051b8a0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">1xEV-DO Measurements (R&amp;S FSW-K84/-K85)</a> &gt; <a class="chm-breadcrumb" href="47b6236f95dd45f9.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Subtypes</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor233">
+</a><div class="chm-chaptertitle">Subtypes</div><p>The 1xEV-DO standard includes various subtypes of the protocol for the physical layer. In <b>subtype 2</b>, the number of active users increases. This affects the used traffic channel MAC, and the spreading factor (number of orthogonal codes) doubles for channel types MAC and PREAMBLE.</p><p>In subtype 2 the following modulation types are added within some of the MAC channels in the BTS application:</p><a name="kanchor234">
+</a><a name="kanchor235">
+</a><a name="kanchor236">
+</a><a name="kanchor237">
+</a><a name="kanchor238">
+</a><a name="kanchor239">
+</a><a name="kanchor240">
+</a><a name="kanchor241">
+</a><a name="kanchor242">
+</a><a name="kanchor243">
+</a><a name="kanchor244">
+</a><a name="kanchor245">
+</a><a name="kanchor246">
+</a><a name="kanchor247">
+</a><div class="block"><ul class="list"><li value="1">ON/OFF keying ACK on the I branch (OOKA-I)</li><li value="2">ON/OFF keying ACK on the Q branch (OOKA-Q)</li><li value="3">ON/OFF keying NACK on the I branch (OOKN-I)</li><li value="4">ON/OFF keying NACK on the Q branch (OOKN-Q)</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>If the 2 bits within an ON/OFF keying modulation are identical, the modulation cannot be recognized as an ON/OFF keying modulation. If both bits contain '1' (ON), the modulation is identical to a BPSK and is recognized as BPSK. If both bits contain '0' (OFF) there is no power within that code and slot and therefore no modulation is detected. If the evaluation is set to "MAPPING COMPLEX", the separate I and Q branch detection within the result summary is no longer selected. The modulation type is a 2BPSK with the coding number 5 via remote.</p></td></tr></table></div></div><p>In the MS application, as of subtype 2, the new modulation types B4, Q4, Q2, Q4Q2 and E4E2 are supported.</p><p>In both R&amp;S FSW 1xEV-DO Measurements applications, a special multicarrier mode is available (see below) and channels using the new modulation types can be detected.</p><p>As of subtype 3, the additional modulation type 64QAM can be used. For BTS signals, the MAC RA channel occupies a variable code number and the preamble occupies the I- and the Q-branch.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

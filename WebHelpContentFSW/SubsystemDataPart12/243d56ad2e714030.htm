@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Signal Model, Estimation and Modulation Errors|FSK Modulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Error Model</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_2219d85f5defa49d0a710a3101729ca5-184c8906411153460a00206a01532735-en-US;ID_f6f72ef9d79d6bcf0a00206a01e11804-184c8906411153460a00206a01532735-en-US;ID_0a230c4bd79d6bcf0a00206a00efed1f-184c8906411153460a00206a01532735-en-US;ID_7f03e7f2d79d6bcf0a00206a01b8a338-184c8906411153460a00206a01532735-en-US;ID_774329bdd79d6bcf0a00206a00e3c1cd-184c8906411153460a00206a01532735-en-US;ID_c554b2481a7c209e0a00206a01b0a975-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="a261ad0bf05c48c0.htm">Signal Model, Estimation and Modulation Errors</a> &gt; <a class="chm-breadcrumb" href="7f676bef2de94124.htm">FSK Modulation</a> &gt; <span class="chm-breadcrumb">Error Model</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor324">
+</a><a name="kanchor325">
+</a><div class="chm-chaptertitle">Error Model</div><p>The FSK measurement model used assumes that signal distortions in both the magnitude and phase/frequency are present, as well as additive noise. The measured signal model is expressed as:</p><div class="block" id="ID_f6f72ef9d79d6bcf0a00206a01e11804-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img592787d5d79b256a0a00206a000a9572_1_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><div class="listintro">With</div><ul class="list"><li value="1"><span class="input">n(t)</span> is a disturbing additive noise process of unknown power</li><li value="2"><span class="input">A<sub>DIST</sub>(t)</span> is the distorted magnitude model</li><li value="3"><span class="input"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">φ</span><sup>DIST(t)</sup></span> is the distorted phase model</li></ul></div><p>The magnitude model is given by:</p><div class="block" id="ID_0a230c4bd79d6bcf0a00206a00efed1f-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img6a9d44a7d79ada580a00206a00bb589c_1_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><div class="listintro">With</div><ul class="list"><li value="1"><span class="input">K</span> is a constant scaling factor which can be interpreted as the system gain</li><li value="2"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">⍺</span> is the amplitude droop in Nepers per second</li></ul></div><p>The phase model is given by:</p><div class="block" id="ID_7f03e7f2d79d6bcf0a00206a01b8a338-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img08fe9614d79afea80a00206a01932c4c_1_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><div class="listintro">With</div><ul class="list"><li value="1"><span class="input">B</span> is a scaling factor which results in a reference deviation error</li><li value="2"><span class="input">C</span> is a carrier frequency offset in radians per second</li><li value="3"><span class="input">D</span> is a frequency drift in radians per second per second</li><li value="4"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">τ</span> is a timing offset in seconds</li><li value="5"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">ϕ</span> is a phase offset in radians</li></ul></div><p>For the above phase model, an equivalent frequency distortion model can be expressed as:</p><div class="block" id="ID_774329bdd79d6bcf0a00206a00e3c1cd-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgcb45f56ed79ab9d00a00206a00015db5_1_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><div class="listintro">With:</div><ul class="list"><li value="1"><span class="input">B</span> is the scaling factor which results in a reference deviation error</li><li value="2"><span class="input">f<sub>0</sub>=C/(2<span style="font-family: Arial Unicode MS; font-size: 10.5pt">·</span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">π</span>)</span> is a carrier frequency offset in Hz</li><li value="3"><span class="input">f<sub>0</sub>=D/(2<span style="font-family: Arial Unicode MS; font-size: 10.5pt">·</span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">π</span>)</span> is a frequency drift in Hz per second</li><li value="4"><span class="input"><span style="font-family: Arial Unicode MS; font-size: 10.5pt">τ</span></span> is the timing offset in seconds</li></ul></div><p>The measured signal model in terms of the instantaneous frequency and all distortion parameters is given by:</p><div class="block" id="ID_c554b2481a7c209e0a00206a01b0a975-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgd71aeeeb1a6cb1bb0a00206a0050b6ac_1_--_--_PNG96.png" alt="" title=""/></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

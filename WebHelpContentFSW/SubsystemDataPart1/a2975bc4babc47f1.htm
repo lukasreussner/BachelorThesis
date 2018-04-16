@@ -1,0 +1,85 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Analysis|Trace Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Detector
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTraceDetector">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTraceDetector">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTraceDetector">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTraceDetector">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTraceDetector">
+</meta>
+        <meta name="topic-id" value="1264">
+</meta>
+        <meta name="topic-id" value="1266">
+</meta>
+        <meta name="topic-id" value="1268">
+</meta>
+        <meta name="topic-id" value="1270">
+</meta>
+        <meta name="topic-id" value="1272">
+</meta>
+        <meta name="topic-id" value="1274">
+</meta>
+        <meta name="topic-id" value="1276">
+</meta>
+        <meta name="topic-id" value="1278">
+</meta>
+        <meta name="topic-id" value="1280">
+</meta>
+        <meta name="topic-id" value="1282">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e78d699b2b6b40710a00206a00b5a86f-b390441f2b6b40710a00206a0045244a-en-US;ID_a3ea9d76b14d03100a710a3101628a83-b390441f2b6b40710a00206a0045244a-en-US;ID_6c43b8e1b277d4ec0a710a310099de62-b390441f2b6b40710a00206a0045244a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="453786820f4e4236.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="18e2809c4d044926.htm">Trace Settings</a> &gt; <span class="chm-breadcrumb">Detector</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor739">
+</a><a name="kanchor740">
+</a><a name="kanchor741">
+</a><div class="function_heading"><a name="ID_e78d699b2b6b40710a00206a00b5a86f-b390441f2b6b40710a00206a0045244a-en-US">
+</a><span style="font-weight: bold">Detector</span></div><p>Defines the trace detector to be used for trace analysis.</p><p>For details see <a class="xref" href="../../../Content/63f5b5bec531405f.htm">Mapping Samples to sweep Points with the Trace Detector</a>.</p><p>The trace detector is used to combine multiple FFT window results to create the final spectrum. (Note: in previous versions of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, the I/Q Analyzer always used the linear average detector.) If necessary, the trace detector is also used to reduce the number of calculated frequency points (defined by the FFT length) to the defined number of sweep points. By default, the Autopeak trace detector is used.</p><p><b><a name="ID_a3ea9d76b14d03100a710a3101628a83-b390441f2b6b40710a00206a0045244a-en-US">
+</a>Note:</b> Using a detector other than Auto Peak and fewer than 4096 sweep points may lead to wrong level results. For details see <a class="xref" href="ad2b4171c5d24977.htm#ID_fb9efab6ac8c4b790a00201901452565-03e72dbd6b54d8ef0a001ae70832b793-en-US">"Combining results - trace detector"</a>.<br/></p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto"</p></td><td class="function_col_right"><p>Selects the optimum detector for the selected trace and filter mode. This is the default setting.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Type"</p></td><td class="function_col_right"><p>Defines the selected detector type.</p><p><b><a name="ID_6c43b8e1b277d4ec0a710a310099de62-b390441f2b6b40710a00206a0045244a-en-US">
+</a>Note:</b> If the EMI (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K54) measurement option is installed and the filter type "CISPR" is selected, additional detectors are available, even if EMI measurement is not active.<br/></p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="9a7d3e9a29544192.htm#ID_110f8655336bb4660a00206a00cda1d7-50ba8388062c8ca50a00206a007eed63-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>][WINDow&lt;n&gt;:</nobr>​<nobr>]DETector&lt;t&gt;[:</nobr>​<nobr>FUNCtion]</nobr></a></p><p><a class="xref" href="e026d086721f4dc7.htm#ID_2412c28c336c32500a00206a005dcabe-28841ab5062da50a0a00206a00c5d312-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>][WINDow&lt;n&gt;:</nobr>​<nobr>]DETector&lt;t&gt;[:</nobr>​<nobr>FUNCtion]:</nobr>​<nobr>AUTO</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

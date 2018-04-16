@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Contents of the Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>STATus:QUEStionable:POWer Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3f694d22e932e8970a00206a0171f34a-ea782e62f86ad7240a00206a01cbd273-en-US;ID_5e0a7f6d2f3211de847b9d8bd5a95c88-ea782e62f86ad7240a00206a01cbd273-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="20b40c28f6194536.htm">Contents of the Status Registers</a> &gt; <span class="chm-breadcrumb">STATus:QUEStionable:POWer Register</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">STATus:QUEStionable:POWer Register</div><a name="kanchor2803">
+</a><p>The <span class="filename">STATus:QUEStionable:POWer</span> register contains information about possible overload situations that may occur during operation of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. A separate power register exists for each active channel.</p><p>You can read out the register with <a class="xref" href="22bc98dab3d54390.htm#ID_233babd9a0b611e0a7e0c2ad6d046cb6-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>POWer:</nobr>​<nobr>CONDition?</nobr></a> or <a class="xref" href="7db3e9e591d9410d.htm#ID_7cd24ea5d0c5f9d80a710a9201c4734b-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>POWer[:</nobr>​<nobr>EVENt]?</nobr></a></p><div class="block"><a name="ID_5e0a7f6d2f3211de847b9d8bd5a95c88-ea782e62f86ad7240a00206a01cbd273-en-US">
+</a><a name="kanchor2804">
+</a><a name="kanchor2805">
+</a><a name="kanchor2806">
+</a><a name="kanchor2807">
+</a><span class="table-caption">Meaning of the bits used in the STATus:QUEStionable:POWer register</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>OVERload</p><p>This bit is set if an overload occurs at the RF input, causing signal distortion but not yet causing damage to the device.</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW displays the keyword "RF OVLD".</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>Unused</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>IF_OVerload</p><p>This bit is set if an overload occurs in the IF path.</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW displays the keyword "IF OVLD".</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>Input Overload</p><p>This bit is set if the signal level at the RF input connector exceeds the maximum.</p><p>The RF input is disconnected from the input mixer to protect the device. In order to re-enable measurement, decrease the level at the RF input connector and reconnect the RF input to the mixer input.</p><p>For details on the protection mechanism see <a class="xref" href="54a2d17ac91941d4.htm#ID_9968e3b2d27bc7d60a001ae746963581-4b1a317214755d240a001ae71d4e703b-en-US">"RF Input Protection"</a> or <a class="xref" href="c36f490da095483a.htm#ID_9974567cdc3e1a3d0a001ae70009ddaa-6a78712ddc3e19810a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>ATTenuation:</nobr>​<nobr>PROTection:</nobr>​<nobr>RESet</nobr></a>.</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW displays the keyword "INPUT OVLD".</p></td></tr><tr class="oddrow"><td valign="top"><p>4 to 14</p></td><td valign="top"><p>Unused</p></td></tr><tr class="evenrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always 0.</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

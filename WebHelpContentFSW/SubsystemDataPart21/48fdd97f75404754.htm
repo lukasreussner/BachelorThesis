@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Remote Commands for DOCSIS 3.1 Measurements|Retrieving Results|Numeric Modulation Accuracy Results|Error Parameter and Detailed Signal Content Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>FETCh:BITStream:ALL?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_36c8285ddd8241610a001ae70830942e-9782336779cd941f0a001ae751c4776f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="12ebb6581ee04ea4.htm">Remote Commands for DOCSIS 3.1 Measurements</a> &gt; <a class="chm-breadcrumb" href="7b7f83b752f944d1.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="835e483849184618.htm">Numeric Modulation Accuracy Results</a> &gt; <a class="chm-breadcrumb" href="47485b0610964b60.htm">Error Parameter and Detailed Signal Content Results</a> &gt; <span class="chm-breadcrumb">FETCh:BITStream:ALL?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_36c8285ddd8241610a001ae70830942e-9782336779cd941f0a001ae751c4776f-en-US">
+</a><span class="bold">FETCh:BITStream:ALL? </span></div><div class="rcdescription"><p>This command returns the decoded payload data stream for each detected codeword in the currently captured I/Q data as a comma-separated list. For each codeword, the following information is displayed:</p><p><span class="command">&lt;CW_Index&gt;,&lt;Object&gt;,&lt;Modulation&gt;,&lt;NoBits&gt;,&lt;NoEntries&gt;,&lt;Bits&gt;,</span></p><p><b>Note</b>: Whether the result display is shown in compact or extended mode is irrelevant for the query results. However, the results do depend on whether bit or byte format is selected (see <a class="xref" href="64410e3040c84e5a.htm#ID_64eb8708dd8457410a001ae7557bd6ed-331bf01192f763380a001ae75f9fd24f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>UNIT:</nobr>​<nobr>BITStream</nobr></a>).</p><p>For details see <a class="xref" href="040c6daf98104efd.htm#ID_2cd02dc4622b11de86bfbb0ad05a1093-716bdb5d5dbe3dae0a001ae75d856842-en-US">"Bitstream (downstream only)"</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;CW_Index&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>integer (0..1535) |</nobr> <nobr> nan</nobr><br/><p>Codeword index</p><p>Not available (nan) for PLC, pilots and excluded subcarriers</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Object&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Information type</p><span class="bold">nan<br/></span><p>Invalid data</p><span class="bold">PLCD<br/></span><p>PLC Data</p><span class="bold">NCPCWA | ... | NCPCWP<br/></span><p>NCP Codeword A...P</p><span class="bold">NCPC24<br/></span><p>NCP CRC-24</p><span class="bold">NCPN<br/></span><p>NCP Null</p><span class="bold">CWA | ... | CWP<br/></span><p>Codeword A .. P</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Modulation&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>BPSK|</nobr> <nobr>QPSK|</nobr> <nobr>QAM16|</nobr> <nobr>QAM64|</nobr> <nobr>QAM128|</nobr> <nobr>QAM256|</nobr> <nobr>QAM512|</nobr> <nobr>QAM1024|</nobr> <nobr>QAM2048|</nobr> <nobr>QAM4096|</nobr> <nobr>QAM8192|</nobr> <nobr>QAM16384|</nobr> <nobr>NONE|</nobr> <nobr>MIXED</nobr><br/><p>Modulation (see <a class="xref" href="1e0a9560ee2b4e9b.htm#ID_9335013aed1f6fa50a001ae7298d9138-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"Modulation"</a>)</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;NoBits&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Total number of bits in object</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;NoEntries&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Number of decoded payload bits</p><p>For byte format (see <a class="xref" href="64410e3040c84e5a.htm#ID_64eb8708dd8457410a001ae7557bd6ed-331bf01192f763380a001ae75f9fd24f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>UNIT:</nobr>​<nobr>BITStream</nobr></a>): &lt;NoEntries&gt; := &lt;NoBits&gt; / 8</p><p>For bit format: &lt;NoEntries&gt; := &lt;NoBits&gt;</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Bits&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Decoded payload bits in hexadecimal format</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">UNIT:BITS BYTE</span><br/><span class="commandline">FETC:BITS:ALL?</span><br/><p>Result (in byte format):</p><div class="verbatim"><pre class="verbatim_text">nan,PLCD,QAM16,2880,360,1F,35,B0,FF,B3,58,78,63,47,F8,...
+0,NCPCWC,QAM16,24,3,20,00,00,
+1,NCPCWC,QAM16,24,3,20,06,54,
+2,NCPCWA,QAM16,24,3,01,0C,A8,
+0,NCPC24,QAM16,24,3,A4,74,7D,
+0,CWC,QAM1024,14232,1779,A0,01,C0,04,80,1B,00,5A,01,DC,...
+1,CWC,QAM1024,14232,1779,A0,01,C0,04,80,1B,00,5A,01,DC,...
+2,CWA,QAM64,14232,1779,80,01,00,06,00,14,00,78,01,10,...
+3,NCPCWD,QAM16,24,3,30,08,E9,
+4,NCPCWD,QAM16,24,3,31,0E,2F,
+1,NCPC24,QAM16,24,3,7E,E4,A4,
+3,CWD,QAM4096,14232,1779,E0,00,40,01,80,05,00,1E,00,44,...
+4,CWD,QAM4096,14232,1779,E0,00,40,01,80,05,00,1E,00,44,...
+5,NCPCWD,QAM16,24,3,30,05,1D,
+6,NCPCWC,QAM16,24,3,21,0A,63,
+2,NCPC24,QAM16,24,3,F3,28,22,
+5,CWD,QAM4096,14232,1779,E0,00,40,01,80,05,00,1E,00,44,...
+</pre></div></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="040c6daf98104efd.htm#ID_2cd02dc4622b11de86bfbb0ad05a1093-716bdb5d5dbe3dae0a001ae75d856842-en-US">"Bitstream (downstream only)"</a></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

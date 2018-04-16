@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Analysis|Display and Window Configuration|Result Window Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Display Points/Sym</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdDisplPtsPerSymbAuto">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdDisplPtsPerSymb">
+</meta>
+        <meta name="topic-id" value="1499">
+</meta>
+        <meta name="topic-id" value="1501">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4df69d1f0cdc6f870a00206a00c5fd56-3c55dba5410ce08e0a00206a010226ec-en-US;ID_a3fc5e27858c6a560a710a3100f1cbd7-3c55dba5410ce08e0a00206a010226ec-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="65838846b208403c.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="be9b9157654c43e1.htm">Display and Window Configuration</a> &gt; <a class="chm-breadcrumb" href="539ec3b4a0d143b9.htm">Result Window Configuration</a> &gt; <span class="chm-breadcrumb">Display Points/Sym</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor943">
+</a><div class="function_heading"><a name="ID_4df69d1f0cdc6f870a00206a00c5fd56-3c55dba5410ce08e0a00206a010226ec-en-US">
+</a><span style="font-weight: bold">Display Points/Sym</span></div><p><b>Access</b>: "Overview" &gt; "Display Config" &gt; "More"</p><p>Defines the number of display points that are displayed per symbol. If more points per symbol are selected than the defined <a class="xref" href="7e4276c5656f4bec.htm#ID_e7e3186512886dfc0a00206a0152b768-98ce8ff6410963710a00206a00a7855c-en-US">"Sample Rate"</a>, the additional points are interpolated for the display. The more points are displayed per symbol, the more detailed the trace becomes.</p><p>For more information, see <a class="xref" href="988958d2f6234c73.htm#ID_95fa6139a3d2eecc0a00206a0055d4dc-184c8906411153460a00206a01532735-en-US">"Display Points Vs Estimation Points Per Symbol"</a>.</p><p><b><a name="ID_a3fc5e27858c6a560a710a3100f1cbd7-3c55dba5410ce08e0a00206a010226ec-en-US">
+</a>Note:</b> If the capture buffer is used as the signal source, the <a class="xref" href="7e4276c5656f4bec.htm#ID_e7e3186512886dfc0a00206a0152b768-98ce8ff6410963710a00206a00a7855c-en-US">"Sample Rate"</a> defines the number of displayed points per symbol; the "Display Points/Sym" parameter is not available.<br/></p><p>If "Auto" is enabled, optimal number of points, depending on the result display, is used - usually, the <a class="xref" href="7e4276c5656f4bec.htm#ID_e7e3186512886dfc0a00206a0152b768-98ce8ff6410963710a00206a00a7855c-en-US">"Sample Rate"</a> value.</p><p>Alternatively, select the number of points to be displayed per symbol manually. The available values depend on the source type.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"1"</p></td><td class="function_col_right"><p>Only the symbol time instants are displayed.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"2, 4, 8, 16, 32"</p></td><td class="function_col_right"><p>More points are displayed than symbols.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Capture Oversampling"</p></td><td class="function_col_right"><p>The number of samples per symbol defined in the signal capture settings are displayed (see <a class="xref" href="7e4276c5656f4bec.htm#ID_e7e3186512886dfc0a00206a0152b768-98ce8ff6410963710a00206a00a7855c-en-US">"Sample Rate"</a>).</p><p>For very large numbers of capture points (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">≥</span> 64), a lower number of display points per symbol must be used to avoid prolonged display times and extremely large amounts of trace data.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="c9f1d22f5a7a45e1.htm#ID_65b54c8745af988f0a00206a01ceeda1-51733c0845af8f570a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>PRATe[:</nobr>​<nobr>VALue]</nobr></a></p><p><a class="xref" href="de6e68a849744d58.htm#ID_f33f6ff445afa5700a00206a00ca5e77-0de6864945af9b2f0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>PRATe:</nobr>​<nobr>AUTO</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

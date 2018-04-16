@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Retrieving Results|Exporting Trace Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>MMEMory:STORe&lt;n&gt;:TRACe</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9d145c2695f7202b0a00206a01f853f5-bf288bed209b676b0a00206a00ffe601-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="e492fe40d86a471b.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="c30326eb19344430.htm">Exporting Trace Results</a> &gt; <span class="chm-breadcrumb">MMEMory:STORe&lt;n&gt;:TRACe</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_9d145c2695f7202b0a00206a01f853f5-bf288bed209b676b0a00206a00ffe601-en-US">
+</a><span class="bold">MMEMory:STORe&lt;n&gt;:TRACe </span>&lt;Trace&gt;, &lt;FileName&gt;<br/></div><div class="rcdescription"><p>This command exports trace data from the specified window to an ASCII file.</p><p>For details on the file format see <a class="xref" href="../../../Content/72003922eed04c62.htm">Reference: ASCII File Export Format</a>.</p><p>Trace export is only available for RF measurements.</p><p><b>Secure User Mode</b></p><div class="block"><p>In secure user mode, settings that are stored on the instrument are stored to volatile memory, which is restricted to 256<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MB. Thus, a "memory limit reached" error can occur although the hard disk indicates that storage space is still available.</p><p>To store data permanently, select an external storage location such as a USB memory device.</p><p>For details, see <a class="xref" href="../../../Content/d07bb3f7ad6e4543.htm">Protecting Data Using the Secure User Mode</a>.</p></div></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Setting parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Trace&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Number of the trace to be stored</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;FileName&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>String containing the path and name of the target file.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">MMEM:STOR1:TRAC 1,'C:\TEST.ASC'</span><br/><p>Stores trace 1 from window 1 in the file <span class="filename">TEST.ASC</span>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Setting only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="6342953f458e4244.htm#ID_f79bd77f7bc660060a00206a00a2e778-bf0e5e837bc660060a00206a010a8e2c-en-US">"Export Trace to ASCII File"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

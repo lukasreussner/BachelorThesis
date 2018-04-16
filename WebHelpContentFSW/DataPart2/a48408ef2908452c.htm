@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Data Input and Output|Power Sensors|Basics on Power Sensors" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Using a Power Sensor as an External Power Trigger</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_02770852238cfb700a00206a012cb5f4-2825cff3238cfb700a00206a005dcdc1-en-US;ID_02b430b1a84dcaad0a00206a01d057ad-2825cff3238cfb700a00206a005dcdc1-en-US;ID_82f34120a85bc07c0a00206a001bb311-2825cff3238cfb700a00206a005dcdc1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="4dc72d92b87a4ee9.htm">Data Input and Output</a> &gt; <a class="chm-breadcrumb" href="90523fe41b0f4f51.htm">Power Sensors</a> &gt; <a class="chm-breadcrumb" href="8d2f8d11e9d94bf2.htm">Basics on Power Sensors</a> &gt; <span class="chm-breadcrumb">Using a Power Sensor as an External Power Trigger</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1328">
+</a><a name="kanchor1329">
+</a><a name="kanchor1330">
+</a><a name="kanchor1331">
+</a><div class="chm-chaptertitle">Using a Power Sensor as an External Power Trigger</div><p>Power sensors can be used to trigger a measurement at a specified power level, e.g. from a signal generator. For a list of supported power sensors see the data sheet.</p><p>With the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, the power sensors can be connected to the "Power Sensor" interface directly, and no further cables are required. They can then be configured as an external power sensor trigger.</p><div class="block" id="ID_02b430b1a84dcaad0a00206a01d057ad-2825cff3238cfb700a00206a005dcdc1-en-US"><div class="graphic"><img border="0" src="Resources/Images/img02e5175b241786260a00206a0116bca0_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Connecting a power sensor using the POWER SENSOR interface</div></div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW receives an external trigger signal when the defined trigger level is measured by the power sensor. Power measurement results are provided as usual.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>The "Gate Mode" <span class="input">Level</span> is not supported for R&amp;S power sensors. The signal sent by these sensors merely reflects the instant the level is first exceeded, rather than a time period. However, only time periods can be used for gating in level mode. Thus, the trigger impulse from the sensors is not long enough for a fully gated measurement; the measurement cannot be completed. For details on gating see <a class="xref" href="b42655e1174e4474.htm#ID_ccdf7544101a6d170a710a31018396f8-eacc23b998208ca00a001ae77ca37319-en-US">"Gated Measurements"</a>.</p></td></tr></table></div></div><p>For details see <a class="xref" href="86c33e46bc1d42b3.htm#ID_5770115e238d9c630a00206a00862e55-0a9a86ad238d9c630a00206a014bf8c6-en-US">"How to Configure a Power Sensor as an External (PSE) Trigger"</a>.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

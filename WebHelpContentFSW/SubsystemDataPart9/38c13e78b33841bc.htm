@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Phase Noise (R&amp;S FSW-K40)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k40.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Level Determination</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ae997ccd6bf570e80a00206a005075e3-5414fee2e1764e750a00206a01e1e5c4-en-US;ID_cd2879e0d7ceb7530a00206a01c762ac-5414fee2e1764e750a00206a01e1e5c4-en-US;ID_037776c2d7ceb7530a00206a011f331f-5414fee2e1764e750a00206a01e1e5c4-en-US;ID_d51b1f37d7ceb7530a00206a01554e57-5414fee2e1764e750a00206a01e1e5c4-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k40/Content/38c13e78b33841bc.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Phase Noise (R&amp;S FSW-K40)</a> &gt; <a class="chm-breadcrumb" href="eeab4ecd0bca433e.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Level Determination</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Level Determination</div><div class="block"><div class="subtitle"><a name="ID_cd2879e0d7ceb7530a00206a01c762ac-5414fee2e1764e750a00206a01e1e5c4-en-US">
+</a>Nominal level</div></div><p>The nominal level in other terms is the reference level of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. This is the level that the analyzer expects at the RF input.</p><p>The available level range depends on the hardware. For more information see the datasheet of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>Make sure to define a level that is as close to the level of the DUT to get the best dynamic range for the measurement. At the same time make sure that the signal level is not higher than the reference level to avoid an overload of the A/D converter and thus deteriorating measurement results.</p><p>If you are not sure about the power level of the DUT, but would still like to use the best dynamic range and get results that are as accurate as possible, you can verify or track the level.</p><div class="block"><div class="subtitle"><a name="ID_037776c2d7ceb7530a00206a011f331f-5414fee2e1764e750a00206a01e1e5c4-en-US">
+</a>Level verification</div></div><p>When you are using the level verification, the application initiates a measurement that determines the level of the DUT. If the level of the DUT is within a certain tolerance range, it will adjust the nominal level to that of the DUT. Else, it will abort the phase noise measurement.</p><p>Define a level tolerance in relation to the current nominal level. The tolerance range works for DUT levels that are above or below the current nominal level.</p><div class="block"><div class="subtitle"><a name="ID_d51b1f37d7ceb7530a00206a01554e57-5414fee2e1764e750a00206a01e1e5c4-en-US">
+</a>Level tracking</div></div><p>For tests on DUTs whose level varies, use level tracking. If active, the application keeps track of the DUTs level during the phase noise measurement and adjusts the nominal level accordingly.</p><p>For a graphical representation of level verification and level tracking see the figures in <a class="xref" href="a576159512fb4012.htm#ID_1d8183556b9dad3f0a00206a00026309-5414fee2e1764e750a00206a01e1e5c4-en-US">"Frequency Determination"</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

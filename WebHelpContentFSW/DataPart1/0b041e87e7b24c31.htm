@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Remote Commands for Noise Power Ratio (NPR) Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Measuring the Noise Power Ratio</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_28e4a250565fdd7e0a001ae704fda3bf-817d39c95235d40e0a001ae7228b7695-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="36d58cd7b0d242b2.htm">Remote Commands for Noise Power Ratio (NPR) Measurements</a> &gt; <span class="chm-breadcrumb">Programming Example: Measuring the Noise Power Ratio</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2999">
+</a><a name="kanchor3000">
+</a><div class="chm-chaptertitle">Programming Example: Measuring the Noise Power Ratio</div><p>This example demonstrates how to determine the noise power ratio for the <a class="xref" href="3cf145f1d28b4b1a.htm#ID_7d57d7b45240e9350a001ae71a3075d9-d15a70a352032e990a001ae744a34fa0-en-US">"Measurement Example"</a> in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//-----------Configuring the measurement ------------
+//Reset the instrument
+*RST
+//Set the center frequency to 500 MHz
+FREQ:CENT 500000000
+FREQ:SPAN 80000000
+
+//Activate NPR measurement.
+NPR:STAT ON
+
+//Specify the channel bandwidth to be used = 72 MHz
+NPR:CHAN:BWID 72000000
+NPR:CHAN:INT:AUTO ON
+//Define the two notches at +/- 12.2 MHz from the CF,
+//with a bandwidth of 3.6 MHz
+NPR:NOTC:COUN 2
+NPR:NOTC1:FREQ:OFFS -12200000
+NPR:NOTC1:BWID 3.600000
+NPR:NOTC2:FREQ:OFFS 12200000
+NPR:NOTC2:BWID:REL 5
+
+
+
+//--------------Performing the Measurement-----
+//Select single sweep mode.
+INIT:CONT OFF
+
+//Initiate a new measurement and wait until the sweep has finished.
+INIT;*WAI
+
+//---------------Retrieving Results-------------
+//Query the noise power ratio for each notch.
+CALC:NPR:RES? ALL
+//Result: 
+//9.38,-51.73,-4685,-61.10,-56.26
+
+//Query the measured power in each trace point
+TRAC:DATA? TRACe1
+//Returns 1001 power values
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

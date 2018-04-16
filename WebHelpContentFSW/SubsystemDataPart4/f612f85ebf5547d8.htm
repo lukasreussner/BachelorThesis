@@ -1,0 +1,224 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Determining the EVM</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e86c7d4646743a2c0a00201901f646a7-77b9ab8e46743a2c0a00201901988934-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="3e7805cc034747fd.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Programming Example: Determining the EVM</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1012">
+</a><a name="kanchor1013">
+</a><div class="chm-chaptertitle">Programming Example: Determining the EVM</div><p>This example demonstrates how to configure an EVM measurement in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//---------- Preparing the application ------------
+// Preset the instrument
+*RST
+// Enter the GSM option K10
+INSTrument:SELect GSM
+// Switch to single sweep mode and stop sweep
+INITiate:CONTinuous OFF;:ABORt
+
+
+//---------- Frequency and Level ---------------------
+// Set center frequency to 935 MHz
+SENSe:FREQuency:CENTer 935 MHZ
+
+// Set Ref. Level to 10 dBm
+DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:RF 10 DBM
+
+
+//---------- Trigger settings --------------------
+// Use these settings only if an external trigger is connected
+// to the TRIGGER INPUT connector of the analyzer.
+// Otherwise ignore these commands.
+// Define the use of an external trigger.
+TRIGger:SOURce EXT
+// Determine the offset from the trigger event to the frame start
+// (start of active part of slot 0).
+// Define a trigger offset of 2 µs.
+TRIGger:HOLD 2us
+
+
+//---------- Configuring Data Acquisition ---------------------
+// Define a capture time of 1 second (&gt;200 GSM frames)
+SENSe:SWEep:TIME 1 s
+// Define a statistic count of 200, i.e. 200 GSM frames are evaluated statistically.
+SENSe:SWEep:COUNt 200
+
+
+//---------- Configuring the result display ------------
+// Delete result display 3 and 4 and
+// activate the following result displays:
+// 1: Magnitude Capture (default, upper left)
+// 2: PvT Full burst (default, below Mag Capt)
+// 3: Modulation Accuracy (next to Mag Capt)
+// 4: Modulation Spectrum Table (next to PvT)
+// 5: EVM vs Time measurement (full width, bottom)
+LAYout:REMove '3'
+LAYout:REMove '4'
+LAYout:ADD:WINDow? '1',RIGH,MACC
+LAYout:ADD:WINDow? '2',RIGH,MST
+LAYout:ADD:WINDow? '2',BEL,ETIMe
+
+//---------- Signal Description ------------
+// Configure a base station DUT with normal power class 1
+CONFigure:MS:DEV:TYPE BTSNormal
+CONFigure:MS:NETWORK PGSM
+CONFigure:MS:NETWORK:FREQ:BAND 900
+CONFigure:MS:POW:CLAS 1
+
+//---------- Frame/slot configuration ------------
+CONFigure:MS:CHANnel:FRAM:EQU OFF
+// Set slot 1: On, Higher Symbol Rate burst, 16QAM, Wide Pulse, TSC 0
+CONFigure:MS:CHANnel:SLOT1:STATe ON
+CONFigure:MS:CHANnel:SLOT1:TYPE HB
+CONFigure:MS:CHANnel:SLOT1:MTYPe QAM16
+CONFigure:MS:CHANnel:SLOT1:FILTer WIDE
+CONFigure:MS:CHANnel:SLOT1:TSC 0
+
+// Set slot 2: On, Normal burst, GMSK modulation, TSC 3 (Set 1)
+CONFigure:MS:CHANnel:SLOT2:STATe ON
+CONFigure:MS:CHANnel:SLOT2:TYPE NB
+CONFigure:MS:CHANnel:SLOT2:MTYPe GMSK
+CONFigure:MS:CHANnel:SLOT2:TSC 3,1
+// Query TSC number
+CONFigure:MS:CHANnel:SLOT2:TSC? TSC
+// -&gt; 3
+// Query Set number
+CONFigure:MS:CHANnel:SLOT2:TSC? SET
+// -&gt; 1
+
+// Set slot 3: On, Normal burst, GMSK modulation, User-defined TSC
+CONFigure:MS:CHANnel:SLOT3:STATe ON
+CONFigure:MS:CHANnel:SLOT3:TYPE NB
+CONFigure:MS:CHANnel:SLOT3:MTYPe GMSK
+CONFigure:MS:CHANnel:SLOT3:TSC USER
+CONFigure:MS:CHANnel:SLOT3:TSC?
+// -&gt; USER
+// Set User TSC bits
+CONFigure:MS:CHANnel:SLOT3:TSC:USER '10111101100110010000100001'
+// Query User TSC bits
+CONFigure:MS:CHANnel:SLOT3:TSC:USER?
+// -&gt; 10111101100110010000100001
+
+// Set slot 4: Off
+CONFigure:MS:CHANnel:SLOT4:STATe OFF
+
+// Set slot 5: Off
+CONFigure:MS:CHANnel:SLOT5:STATe OFF
+
+// Set slot 6: Off
+CONFigure:MS:CHANnel:SLOT6:STATe OFF
+
+// Set slot 7: Off
+CONFigure:MS:CHANnel:SLOT7:STATe OFF
+
+
+//---------- Demodulation and Slot Scope------------
+// Configure slot 1 (slot to measure) for single-slot measurements,
+// (e.g. EVM, modulation spectrum).
+CONFigure:MS:CHANnel:MSLots:MEASure 1
+// Configure slots 0-3 for multi-slot measurements
+// (e.g. PvT, transient spectrum).
+// Set First slot to measure = 0
+// Set No. of slots to measure = 4
+CONFigure:MS:CHANnel:MSLots:NOFSlots 4
+CONFigure:MS:CHANnel:MSLots:OFFSet 0
+// Use 'sequence estimator' for the symbol decision
+CONFigure:MS:DEMod:DECision SEQuence
+// Replace detected Tail &amp; TSC bits by the standard bits
+CONFigure:MS:DEMod:STDBits STD
+
+//---------- PvT Measurement settings -----------------
+// Use Gaussian PvT filter with 500 kHz for single-carrier BTS
+CONFigure:BURSt:PTEMplate:FILTer G500
+// Align the limit line to mid of TSC for each slot.
+CONFigure:BURSt:PTEMplate:TALign PSL
+
+//---------- Spectrum Measurement settings -----------------
+// Absolute power and limit (remote) results in dBm
+CONFigure:SPECtrum:MODulation:LIMit ABSolute
+// Use compact version of narrow frequency list to save time
+CONFigure:WSPectrum:MODulation:LIST:SELect NSParse
+
+
+//---------- Performing the Measurements-----
+INITiate:IMMediate;*WAI
+
+//---------- Retrieving Results-------------
+
+// Read trace data in binary format
+FORMat:DATA REAL,32
+
+// Query current magnitude capture trace data
+TRACe1:DATA? TRACe1
+//-&gt; trace data
+
+// Query the current power vs time trace
+TRACe2:DATA? TRACe4
+//-&gt; trace data
+
+// Query the result of the power vs time limit check for max trace
+CALCulate2:LIMit1:FAIL?
+// -&gt; 1
+
+// Query max EVM trace data
+TRACe5:DATA? TRACe2
+//-&gt; trace data
+
+// Query the maximum EVM value for slot 1 (slot to measure) in current measurement
+FETCh:BURSt:MACCuracy:EVM:PEAK:CURR?
+// -&gt; 0.62063819169998169
+
+// Query the maximum EVM value for slot 1 (slot to measure) in all 200
+// measured GSM frames
+FETCh:BURSt:MACCuracy:EVM:PEAK:MAX?
+// -&gt; 0.76938760280609131
+
+// Query the averaged EVM RMS value for slot 1 (slot to measure) in all 200
+// measured GSM frames
+FETCh:BURSt:MACCuracy:EVM:RMS:AVERage?
+// -&gt; 0.19639170169830322
+
+// Query the absolute mod spectrum table results
+FETCH:SPECtrum:MODulation:ALL?
+// -&gt; 00,933200000,933200000,-86.36,-70.23,ABS,PASSED, ...
+// Query the reference power of the mod spectrum
+FETCh:SPECtrum:MODulation:REFerence?
+// -&gt; -11.13,-11.13,30000
+
+//---------- Exporting Captured I/Q Data-------------
+
+// Query the sample rate for the captured I/Q data
+// Note: The returned value depends on
+// - Capture time: SENSe:SWEep:TIME?
+// - Mod frequency list: CONFigure:WSPectrum:MODulation:LIST:SELect?
+// Therefore only query the sample rate afterwards.
+TRACe:IQ:SRATe?
+// -&gt; 6500000
+
+// The number of samples can be calculated as follows
+// floor((CaptureTime + 577 us) * SampleRate) = 
+// = floor((1s + 577 us) * 6.5 MHz)
+// = floor(6503750.5)
+// = 6503750 samples
+// Query the captured I/Q data
+TRACe1:IQ:DATA:MEMory? 0,6503750
+
+// Alternatively store the captured I/Q data to a file.
+MMEMory:STORe:IQ:STATe 1, 'C:\R_S\Instr\user\data.iq.tar'
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

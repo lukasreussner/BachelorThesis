@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the Spectrum Emission Mask|Configuring the Power Classes" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ESPectrum&lt;sb&gt;:PCLass&lt;PClass&gt;[:EXCLusive]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ab7e61db2f3c9be90a00206a0048101c-0e44778e3054ffbd0a00206a01dc5b97-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="78e7a05f14ff4aa7.htm">Measuring the Spectrum Emission Mask</a> &gt; <a class="chm-breadcrumb" href="321513aeb57a4a9c.htm">Configuring the Power Classes</a> &gt; <span class="chm-breadcrumb">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ESPectrum&lt;sb&gt;:PCLass&lt;PClass&gt;[:EXCLusive]</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_ab7e61db2f3c9be90a00206a0048101c-0e44778e3054ffbd0a00206a01dc5b97-en-US">
+</a><span class="bold">CALCulate&lt;n&gt;:LIMit&lt;k&gt;:ESPectrum&lt;sb&gt;:PCLass&lt;PClass&gt;[:EXCLusive] </span>&lt;State&gt;<br/></div><div class="rcdescription"><p>This command selects the power class used by the measurement if <a class="xref" href="778f761eac554694.htm#ID_7231947125dfddc90a00206a012d0f23-9903b0e715549cec0a00206a01f29001-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;k&gt;:</nobr>​<nobr>ESPectrum&lt;sb&gt;:</nobr>​<nobr>MODE</nobr></a> is set to manual.</p><p>Note that:</p><div class="block"><ul class="list"><li value="1">You can only use power classes for which limits are defined.</li></ul></div></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;, &lt;k&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>irrelevant</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;sb&gt;<br/></td><td class="rc_col_content_left" colspan="2">1 | 2 | 3<br/><p>Sub block in a Multi-SEM measurement</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;PClass&gt;<br/></td><td class="rc_col_content_left" colspan="2">1...4<br/><p>power class</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>ON |</nobr> <nobr> OFF |</nobr> <nobr> 1 |</nobr> <nobr> 0</nobr><br/><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">0</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">CALC:LIM:ESP:PCL1 ON</span><br/><p>Activates the first defined power class.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="0a87e0b3b59849fd.htm#shiv_7_remote_examples_0300-07b00ec83cb43eec0a001ae7179d0ef7-en-US">"Example: SEM Measurement"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="1c00d7f967634452.htm#ID_a3bc8ab555e00f5a0a710a3101ff309f-258ed597e33732360a00206a0157de69-en-US">"Used Power Classes:"</a></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Remote Commands for Analog Demodulation Measurements|Configuring the Measurement|Configuring the Vertical Axis (Amplitude, Scaling)|Configuring a Preamplifier" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>INPut&lt;ip&gt;:GAIN[:VALue]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_18ac0ed7d3ec51230a001ae77c387348-4ddc3fc9d3ec50290a001ae71c1b5b2f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="4777278d10bc498a.htm">Remote Commands for Analog Demodulation Measurements</a> &gt; <a class="chm-breadcrumb" href="981d9d678f1c4fa3.htm">Configuring the Measurement</a> &gt; <a class="chm-breadcrumb" href="307caa35e8b4462a.htm">Configuring the Vertical Axis (Amplitude, Scaling)</a> &gt; <a class="chm-breadcrumb" href="b9435d7fb4b3435b.htm">Configuring a Preamplifier</a> &gt; <span class="chm-breadcrumb">INPut&lt;ip&gt;:GAIN[:VALue]</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_18ac0ed7d3ec51230a001ae77c387348-4ddc3fc9d3ec50290a001ae71c1b5b2f-en-US">
+</a><span class="bold">INPut&lt;ip&gt;:GAIN[:VALue] </span>&lt;Gain&gt;<br/></div><div class="rcdescription"><p>This command selects the gain if the preamplifier is activated (<span class="command">INP:GAIN:STAT ON</span>, see <a class="xref" href="1b3845f360fc4a61.htm#ID_cc01180fd3ec4fac0a001ae70c30c227-5e81a69fd3ec4ed10a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>GAIN:</nobr>​<nobr>STATe</nobr></a>).</p><p>The command requires the additional preamplifier hardware option.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ip&gt;<br/></td><td class="rc_col_content_left" colspan="2">1 | 2<br/><p>irrelevant</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Gain&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>15 dB |</nobr> <nobr> 30 dB</nobr><br/><p>The availability of gain levels depends on the model of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW8/13: 15dB and 30 dB</p><p>R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW26 or higher: 30 dB</p><p>All other values are rounded to the nearest of these two.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>Default unit: </span></td><td class="rc_col_content_right">DB</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">INP:GAIN:STAT ON</span><br/><span class="commandline">INP:GAIN:VAL 30</span><br/><p>Switches on 30 dB preamplification.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="e929a089a35f4bda.htm#ID_f9983a6222fff9d20a00206a01aaeab8-4d9c3ff122fff9d20a00206a0017f295-en-US">"Preamplifier"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

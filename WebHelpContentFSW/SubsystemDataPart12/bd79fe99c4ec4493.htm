@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Measurement Ranges" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Result Range</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f3b9b025c28101e90a00206a0061de00-184c8906411153460a00206a01532735-en-US;ID_c0b7a05ec28101e90a00206a007e168a-184c8906411153460a00206a01532735-en-US;ID_ae021f263abd11e18c5ba7de3c187abf-184c8906411153460a00206a01532735-en-US;ID_a3f6cc30ae2c51930a00206a008ab3f2-184c8906411153460a00206a01532735-en-US;ID_2e0905ffbe7d27ae0a00206a01bf94e4-184c8906411153460a00206a01532735-en-US;ID_c71814cb5a5dc1ca0a720a2b01652020-184c8906411153460a00206a01532735-en-US;ID_388f3cf25a5dc19b0a720a2b00e40293-184c8906411153460a00206a01532735-en-US;ID_8a1eefdbffd7f6cc0a710a3100ad8dbc-184c8906411153460a00206a01532735-en-US;ID_78d3c50355d3e8ca0a00206a016ebd4e-184c8906411153460a00206a01532735-en-US;ID_e20475d255d3e8ca0a00206a01c45fd1-184c8906411153460a00206a01532735-en-US;ID_15cbf31d06a711e4b0e1c3097f602bc9-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="00ee64d254a547d2.htm">Measurement Ranges</a> &gt; <span class="chm-breadcrumb">Result Range</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor334">
+</a><div class="chm-chaptertitle">Result Range</div><p>The result range defines the symbols from the capture buffer that are to be demodulated and analyzed together.</p><p>Sometimes, the data in the capture buffer contains parts that are not relevant for the evaluation task at hand. Thus, you can exclude them from the result range (see <a class="xref" href="d9a0a8ede9fd44f4.htm#ID_d276781d270311e1878ebdc795396de1-98ce8ff6410963710a00206a00a7855c-en-US">"Result Range Configuration"</a>).</p><div class="block"><div class="subtitle"><a name="ID_c0b7a05ec28101e90a00206a007e168a-184c8906411153460a00206a01532735-en-US">
+</a>Result range display</div></div><a name="kanchor335">
+</a><p>The result ranges are indicated by green bars along the time axis of the capture buffer result diagrams.</p><div class="block" id="ID_ae021f263abd11e18c5ba7de3c187abf-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga1ff8071be7748bb0a00206a00fea6d5_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Result ranges for a burst signal</div></div><p>Result displays whose source is not the capture buffer are based on a single result range. Examples are the "EVM vs. Time" display or the data in the "Current" column of the Result Summary. In this case, you can use the capture buffer display to navigate through the available result ranges (<a class="xref" href="bba96ea33b6f4cde.htm#ID_25810d2d09b72cb90a00206a0111acef-7e33062f3089a2790a001ae71fb6fe51-en-US">"Select Result Rng"</a> function), and analyze the individual result ranges in separate windows. The currently displayed result range is indicated by a blue bar in the capture buffer display.</p><p>You can change the position of the result range quickly and easily by dragging the blue bar representing the result range to a different position in the capture buffer.</p><div class="block"><div class="subtitle"><a name="ID_a3f6cc30ae2c51930a00206a008ab3f2-184c8906411153460a00206a01532735-en-US">
+</a>Continuous and discrete result ranges</div></div><p>Depending on the type of signal and your result range definition, the result ranges can be continuous or discrete. Bursted signals commonly have several discrete result ranges at the bursts. They can have intervals during the noise periods which should not be included in the results (see <a class="xref" href="#ID_ae021f263abd11e18c5ba7de3c187abf-184c8906411153460a00206a01532735-en-US">Figure "Result ranges for a burst signal"</a>).</p><p>Continuous signals, however, have result ranges that cover the entire or a specific part of the capture buffer without intervals.</p><div class="block" id="ID_2e0905ffbe7d27ae0a00206a01bf94e4-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgdc565f2dafd843290a00206a009b2954_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Result ranges for a continuous signal</div></div><div class="block"><div class="subtitle"><a name="ID_c71814cb5a5dc1ca0a720a2b01652020-184c8906411153460a00206a01532735-en-US">
+</a>Result Range Length</div></div><a name="kanchor336">
+</a><a name="kanchor337">
+</a><p>The result range length is defined by the number of symbols that are to be demodulated. All traces over time are displayed over the result range. For example, if you have a burst of 100 symbols and you define the result length as 200 symbols, you can examine the burst ramps in detail. Select the alignment "Burst:Center".</p><p>The maximum result length is 64 000 symbols (for a sample rate of 4) or 256 000 samples.</p><div class="block"><div class="subtitle"><a name="ID_388f3cf25a5dc19b0a720a2b00e40293-184c8906411153460a00206a01532735-en-US">
+</a>Result Range Alignment</div></div><a name="kanchor338">
+</a><p>You can define an offset of the x-axis (in addition to the one defined for the signal structure). Define the number of the symbol which marks the beginning of the reference source used for alignment (burst, capture buffer or pattern, see <a class="xref" href="32749e89b3b74106.htm#ID_eee120b5e2f362a30a710a3100ddb49a-98ce8ff6410963710a00206a00a7855c-en-US">"Offset"</a>).</p><p>For example, align the result to the center of the pattern. Set the "Symbol Number at Pattern Start" to "0". Now you can easily find the pattern start in the EVM measurement simply by moving a marker to the symbol number "0".</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>When you define the "Symbol Number at &lt;Reference&gt; Start", remember to take the offset defined for the signal structure into consideration (see <a class="xref" href="32749e89b3b74106.htm#ID_eee120b5e2f362a30a710a3100ddb49a-98ce8ff6410963710a00206a00a7855c-en-US">"Offset"</a>). Assume an offset of the pattern in relation to the useful part of the burst in the signal description. Align the result to the pattern. In this case, the "Symbol Number at Pattern Start" refers to the first symbol of the useful part of the burst, not the first symbol of the pattern.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_78d3c50355d3e8ca0a00206a016ebd4e-184c8906411153460a00206a01532735-en-US">
+</a>Run-In / Run-Out Time</div></div><a name="kanchor339">
+</a><p>The parameter "Run-In/-Out" can be used to influence the range over which the EVM is minimized. The (internal) synchronization range is the overlapping area of the result range and the burst excluding its "Run-In/-Out" areas. The "Run-In/-Out" areas can be used to exclude symbols from influencing the synchronization. Hence, this parameter also allows for demodulation of bursts with mixed modulations, e.g. Bluetooth.</p><div class="block"><div class="subtitle"><a name="ID_e20475d255d3e8ca0a00206a01c45fd1-184c8906411153460a00206a01532735-en-US">
+</a>Useful length</div></div><a name="kanchor340">
+</a><a name="kanchor341">
+</a><p>The burst excluding its Run-In/-Out areas is sometimes referred to as the "useful part". The minimum length of the useful part must be at least 10 symbols.</p><p>RR Length - Run-In - Run-Out<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">≧</span><span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>10</p><div class="block"><div class="subtitle"><a name="ID_15cbf31d06a711e4b0e1c3097f602bc9-184c8906411153460a00206a01532735-en-US">
+</a>Remote commands:</div></div><p>A remote command is provided to determine the position of the current result range within the capture buffer:</p><p><a class="xref" href="20ce7cf1bfbc4e04.htm#ID_fa9f404438836c860a001ae72f676dea-b3d976aa38836b5e0a001ae709e764d3-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>SEARch:</nobr>​<nobr>MBURst:</nobr>​<nobr>STARt[:</nobr>​<nobr>SYMBols]?</nobr></a></p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

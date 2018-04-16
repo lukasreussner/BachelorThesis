@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Output via the Optional Digital Baseband Interface</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_29b4691132fd11e2895089ab14b83382-21cb0fb51d5a73bf0a00201901376412-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="cd12fe88f05c4826.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Output via the Optional Digital Baseband Interface</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Output via the Optional Digital Baseband Interface</div><p>This example demonstrates how to output I/Q data to a connected instrument via the optional Digital Baseband Interface using the I/Q Analyzer in a remote environment. The data to output is taken from the measurement described in <a class="xref" href="d5cd2b58929947da.htm#ID_4efb858b3e1294bf0a00206a01260b58-21cb0fb51d5a73bf0a00201901376412-en-US">"I/Q Analysis with Graphical Evaluation"</a>.</p><pre class="verbatim" xml:space="preserve">//--------------Activating the I/Q Analyzer application ---------------------
+*RST
+//Reset the instrument
+INST:CRE IQ,'IQANALYZER'
+//Creates a new measurement channel named 'IQANALYZER'.
+INIT:CONT OFF
+//Switches to single sweep mode
+
+//--------------Configuring Data Acquisition-------------
+TRAC:IQ:SRAT 32MHZ
+//Defines the sample rate.
+TRAC:IQ:RLEN 1000
+//Sets the record length (number of samples to capture) to 1000 samples.
+TRAC:IQ:BWID?
+//Queries the bandwidth of the resampling filter, determined by the sample rate.
+FORM:DATA REAL,32
+//Formats the data as 32-byte real values.
+TRAC:IQ:DATA:FORM IQBL
+//Lists all I values first, then all Q values in the trace results.
+
+//--------------Configuring the Traces--------------------
+TRAC:IQ:AVER ON
+//Defines averaging for the I/Q trace.
+TRAC:IQ:AVER:COUN 10
+//Defines an average over 10 sweeps.
+
+DISP:TRAC1:MODE WRIT
+DISP:TRAC2:MODE MAXH
+DISP:TRAC3:MODE MINH
+//Changes the trace modes.
+
+//--------------Configuring output--------------------
+OUTP:DIQ ON
+OUTP:DIQ:CDEV?
+//Activates the digital baseband interface for output and queries the
+//detected information of the connected instrument
+
+//--------------Performing the Measurement---------------------
+INIT;*WAI
+//Initiates a new measurement and waits until the sweep has finished.
+//The results are simultaneously sent to the output connector.
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

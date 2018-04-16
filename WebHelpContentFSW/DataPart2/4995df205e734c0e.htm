@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Data Input and Output|Optional External Generator Control|How to Work With External Generator Control" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>How to Compensate for Additional Gain or Attenuation after Calibration</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5c3ea8824ca684be0a00201900139996-71866bec3bf61cd90a00201900eea684-en-US;ID_92996bee3a3211e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US;ID_0bea8cfc3a3311e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US;ID_40b36dde3a3311e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US;ID_8419a2b04ca684be0a002019012cd80e-71866bec3bf61cd90a00201900eea684-en-US;ID_eb11e3ca3a3211e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US;ID_793119603a3311e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US;ID_de5b224f4ca684be0a00201900a0371c-71866bec3bf61cd90a00201900eea684-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="4dc72d92b87a4ee9.htm">Data Input and Output</a> &gt; <a class="chm-breadcrumb" href="7c3d067331744688.htm">Optional External Generator Control</a> &gt; <a class="chm-breadcrumb" href="c61b64e9f7ec4fba.htm">How to Work With External Generator Control</a> &gt; <span class="chm-breadcrumb">How to Compensate for Additional Gain or Attenuation after Calibration</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1537">
+</a><div class="chm-chaptertitle">How to Compensate for Additional Gain or Attenuation after Calibration</div><p>If a gain or an attenuation is inserted in the measurement after calibration, this effect can be reflected in the display of the normalized trace on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Thus, the measured trace and the normalized trace are not so far apart in the display, so that you can zoom into the normalized trace without cropping the measurement trace.</p><div class="block"><a name="ID_92996bee3a3211e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US">
+</a><p>Prerequisite: a calibration has been performed for the original measurement setup, except for the component causing an additional gain or attenuation (as described in <a class="xref" href="acd0e57fe8b2451d.htm#shiv_4a_instrument_functions_09308-71866bec3bf61cd90a00201900eea684-en-US">"How to Calibrate a Measurement Setup using an External Generator"</a>)</p><div><ol class="procedure"><li id="ID_0bea8cfc3a3311e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US" value="1"><p>Insert the additional component in the calibrated measurement setup and perform a new measurement.</p></li><li id="ID_40b36dde3a3311e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US" value="2"><p>Press the INPUT/OUTPUT key and select "External Generator Config".</p></li><li id="ID_8419a2b04ca684be0a002019012cd80e-71866bec3bf61cd90a00201900eea684-en-US" value="3"><p>Switch to the "Source Calibration" subtab.</p></li><li id="ID_eb11e3ca3a3211e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US" value="4"><p>With active normalization, set the "Reference":"Value" to the same value as the gain or attenuation the inserted component causes.</p></li><li id="ID_793119603a3311e29e238f366fe5a3a2-71866bec3bf61cd90a00201900eea684-en-US" value="5"><p>Optionally, shift the reference line further down in the result display by decreasing the "Reference": "Position".</p><p>The normalized reference trace moves to the position of the measured trace.</p></li><li id="ID_de5b224f4ca684be0a00201900a0371c-71866bec3bf61cd90a00201900eea684-en-US" value="6"><p>Optionally, zoom into the measured trace by changing the y-axis scaling (or the range: "AMPT &gt; Scale Config &gt; Range").</p><p>The measured trace is still fully visible, and the absolute values are still valid.</p></li></ol></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

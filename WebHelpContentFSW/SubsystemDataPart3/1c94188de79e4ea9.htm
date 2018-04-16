@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Remote Commands for Analog Demodulation Measurements|Configuring the Measurement|Configuring Demodulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>(Post-processing) AF Filters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_457c4e8107dc11e2b7a3fb9c3f7ce7bf-b84c573177c1270b0a00206a0169ef92-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="4777278d10bc498a.htm">Remote Commands for Analog Demodulation Measurements</a> &gt; <a class="chm-breadcrumb" href="981d9d678f1c4fa3.htm">Configuring the Measurement</a> &gt; <a class="chm-breadcrumb" href="236fdd31e5f24536.htm">Configuring Demodulation</a> &gt; <span class="chm-breadcrumb">(Post-processing) AF Filters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">(Post-processing) AF Filters</div><p>The AF filter reduces the evaluated bandwidth of the demodulated signal and can define a weighting function. AF filters are only available for AM or FM time domain evaluations.</p>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="c6d1f2959c8b4a9e.htm#ID_e62b9a69452b35720a00206a00c29716-3585cb44452b35720a00206a01d37277-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:AWEighted[:STATe]</a><br/><a href="4a511efcf04e4f48.htm#ID_82ff59a0451ae1050a00206a01b1477d-f38fe5ab451ae1050a00206a00e2a494-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:AOFF</a><br/><a href="b71ed66495ef4717.htm#ID_6782494845392c2b0a00206a00d25b6a-298aa99c45392c2b0a00206a00a8815f-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:CCIR:WEIGhted[:STATe]</a><br/><a href="1098cf5621ca4345.htm#ID_ad8cf6d54537a2dd0a00206a0086d658-3a77c13e4537a2dd0a00206a008a2b8f-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:CCIR[:UNWeighted][:STATe]</a><br/><a href="d0c367d11b214706.htm#ID_811d090445363e5c0a00206a0198c190-78b691f145363e5c0a00206a01ac9ed0-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:CCITt</a><br/><a href="66bb80fbdc894e34.htm#ID_3aa82ccd453c9ca70a00206a017a1ff3-959482be453c9ca70a00206a00a03363-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:DEMPhasis:TCONstant</a><br/><a href="a39b8d9053994fa0.htm#ID_fe1d6bc2453a892a0a00206a0071f814-b9d476e2453a892a0a00206a00f0fa70-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:DEMPhasis[:STATe]</a><br/><a href="804a13514f7e4cf6.htm#ID_4b2c499b4540206b0a00206a005bc993-8bee46e94540206b0a00206a01b805d5-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:HPASs:FREQuency[:ABSolute]</a><br/><a href="c42f3547729944ca.htm#ID_4b2c499b4540206b0a00206a005bc993-01ffa77202b574220a002019008b3189-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:HPASs:FREQuency:MANual</a><br/><a href="89f5f591340a4cd2.htm#ID_658cfacb453e52b20a00206a01255af8-32c065cc453e52b20a00206a00630ce5-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:HPASs[:STATe]</a><br/><a href="8acadd5891f54800.htm#ID_4b2c499b4540206b0a00206a005bc993-96669e69454225610a00206a008812c7-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:LPASs:FREQuency[:ABSolute]</a><br/><a href="74a9872689fc4374.htm#ID_4b2c499b4540206b0a00206a005bc993-3ff985cc02b60e730a00201901677786-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:LPASs:FREQuency:MANual</a><br/><a href="a8dd9bb08a534e90.htm#ID_4b2c499b4540206b0a00206a005bc993-8941398c4545b82a0a00206a0130accd-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:LPASs:FREQuency:RELative</a><br/><a href="7ad473071d244172.htm#ID_658cfacb453e52b20a00206a01255af8-f436ac0e45422b9b0a00206a014afa2f-en-US" class="title_toc">[SENSe:]FILTer&lt;n&gt;:LPASs[:STATe]</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

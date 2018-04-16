@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Demodulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]DEMod:FORMat:BANalyze:BTYPe:AUTO:TYPE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f86607992f5a1ce10a00206a00bec4d5-9287fc832f5a14840a00206a00636f5b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="ecabe2eae6a345a6.htm">Demodulation</a> &gt; <span class="chm-breadcrumb">[SENSe:]DEMod:FORMat:BANalyze:BTYPe:AUTO:TYPE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor827">
+</a><a name="kanchor828">
+</a><a name="kanchor829">
+</a><a name="kanchor830">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_f86607992f5a1ce10a00206a00bec4d5-9287fc832f5a14840a00206a00636f5b-en-US">
+</a><span class="bold">[SENSe:]DEMod:FORMat:BANalyze:BTYPe:AUTO:TYPE </span>&lt;PPDUToMeas&gt;<br/></div><div class="rcdescription"><p>This remote control command specifies how signals are analyzed.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;PPDUToMeas&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">FBURst<br/></span><p>The format of the first valid PPDU is detected and subsequent PPDUs are analyzed only if they have the same format (corresponds to "Auto, same type as first PPDU")</p><span class="bold">ALL<br/></span><p>All PPDUs are analyzed regardless of their format (corresponds to "Auto, individually for each PPDU")</p><span class="bold">MNHT<br/></span><p>Only PPDUs with format "Non-HT" are analyzed</p><p><b>IEEE 802.11a, g (OFDM), p</b></p><span class="bold">DNHT<br/></span><p>All PPDUs are assumed to have the PPDU format "Non-HT"</p><p><b>IEEE 802.11a, g (OFDM), p</b></p><span class="bold">MMIX<br/></span><p>Only PPDUs with format "HT-MF" (Mixed) are analyzed</p><p><b>(IEEE 802.11 n)</b></p><span class="bold">MGRF<br/></span><p>Only PPDUs with format "HT-GF" (Greenfield) are analyzed</p><p><b>(IEEE 802.11 n)</b></p><span class="bold">DMIX<br/></span><p>All PPDUs are assumed to have the PPDU format "HT-MF"</p><p><b>(IEEE 802.11 n)</b></p><span class="bold">DGRF<br/></span><p>All PPDUs are assumed to have the PPDU format "HT-GF"</p><p><b>(IEEE 802.11 n)</b></p><span class="bold">MVHT<br/></span><p>Only PPDUs with format "VHT" are analyzed</p><p><b>(IEEE 802.11 ac)</b></p><span class="bold">DVHT<br/></span><p>All PPDUs are assumed to have the PPDU format "VHT"</p><p><b>(IEEE 802.11 ac)</b></p><span class="bold">AIHS<br/></span><p>Only HE Single-User PPDUs are analyzed</p><p><b>(IEEE 802.11 ax)</b></p><span class="bold">AIHM<br/></span><p>Only HE Multi-User PPDUs are analyzed</p><p><b>(IEEE 802.11 ax)</b></p><span class="bold">AIES<br/></span><p>Only HE Extended Range PPDUs are analyzed</p><p><b>(IEEE 802.11 ax)</b></p><span class="bold">AIHT<br/></span><p>Only HE Trigger-based PPDUs are analyzed</p><p><b>(IEEE 802.11 ax)</b></p><span class="bold">DHEP<br/></span><p>All PPDUs are assumed to have HE PPDU format</p><p><b>(IEEE 802.11 ax)</b></p><span class="bold">FMMM<br/></span><p>Only PPDUs with specified format are analyzed (see <a class="xref" href="d4195593931c42d6.htm#ID_5c4384db2f5a04a60a00206a018664ae-911fabe12f59f6ea0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>BANalyze</nobr></a>)</p><p><b>(IEEE 802.11 b, g (DSSS))</b></p><span class="bold">FMMD<br/></span><p>All PPDUs are assumed to have the specified PPDU format (see <a class="xref" href="d4195593931c42d6.htm#ID_5c4384db2f5a04a60a00206a018664ae-911fabe12f59f6ea0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>BANalyze</nobr></a>)</p><p><b>(IEEE 802.11 b, g (DSSS))</b></p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">FBURst</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p><span class="command">SENS:DEM:FORM:BAN:BTYP:AUTO:TYPE FBUR</span></p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="aed3d7e8748c42c6.htm#ID_3b56387a34b411e2aa2aaab3cd47473f-0f9396b02c2cce660a00201901ffd3c2-en-US">"PPDU Format to measure"</a><br/>See <a class="xref" href="6169975577a048d8.htm#ID_3b5d649a34b411e2aa2aaab3cd47473f-6caf2e112c2de7990a00201900cad151-en-US">"PSDU Modulation to use"</a><br/>See <a class="xref" href="42c809275d014163.htm#ID_3b56387a34b411e2aa2aaab3cd47473f-c78ce9f582c2e04a0a001ae7162f5c29-en-US">"PPDU Format to measure"</a><br/>See <a class="xref" href="a456e919c1c941e0.htm#ID_3b56387a34b411e2aa2aaab3cd47473f-d8e006d37c4158750a00201901359a7d-en-US">"PPDU Format to measure[/]PSDU Modulation to use"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

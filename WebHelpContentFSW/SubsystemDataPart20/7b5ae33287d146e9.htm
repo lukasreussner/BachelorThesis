@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="802.11ad measurements application (R&amp;S FSW-K95)|Remote Commands for IEEE 802.11ad Measurements|Configuring SEM Measurements on IEEE 802.11ad Signals" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k95.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]POWer:SEM</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9d52625e2f5c29580a00206a0041989a-db5ccc012f5c20300a00206a00636f5b-en-US;ID_b1f084b4682c31a80a710a3101d17d67-db5ccc012f5c20300a00206a00636f5b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">802.11ad measurements application (R&amp;S FSW-K95)</a> &gt; <a class="chm-breadcrumb" href="1853bfe4be9647e3.htm">Remote Commands for IEEE 802.11ad Measurements</a> &gt; <a class="chm-breadcrumb" href="d897c0dce81740e9.htm">Configuring SEM Measurements on IEEE 802.11ad Signals</a> &gt; <span class="chm-breadcrumb">[SENSe:]POWer:SEM</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_9d52625e2f5c29580a00206a0041989a-db5ccc012f5c20300a00206a00636f5b-en-US">
+</a><span class="bold">[SENSe:]POWer:SEM </span>&lt;Standard&gt;<br/></div><div class="rcdescription"><p>This command sets the Spectrum Emission Mask (SEM) measurement type.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Standard&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>IEEE |</nobr> <nobr> ETSI |</nobr> <nobr> User</nobr><br/><span class="bold">User<br/></span><p>Settings and limits are configured via a user-defined XML file. Load the file using <a class="xref" href="136ef716fe4c45b6.htm#ID_76072f3f2f58eb480a00206a0149ff40-10448aec2f58e3590a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>MMEMory:</nobr>​<nobr>LOAD:</nobr>​<nobr>SEM:</nobr>​<nobr>STATe</nobr></a>.</p><span class="bold">IEEE<br/></span><p>Settings and limits are as specified in the IEEE Std 802.11n™-2009 Figure 20-17—Transmit spectral mask for 20 MHz transmission. For other IEEE standards see the parameter values in the table below.</p><p>After a query, <span class="command">IEEE</span> is returned for all IEEE standards.</p><span class="bold">ETSI<br/></span><p>Settings and limits are as specified in the ETSI standard.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">IEEE</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">POW:SEM ETSI</span><br/></td></tr></table><div class="block"><a name="ID_b1f084b4682c31a80a710a3101d17d67-db5ccc012f5c20300a00206a00636f5b-en-US">
+</a><span class="table-caption">Supported IEEE standards</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Manual operation</p></th><th valign="top"><p>The spectrum emission mask measurement is performed according to the standard</p></th><th valign="top"><p>Parameter value</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>IEEE 802.11n-2009 20M@2.4G</p></td><td valign="top"><p>IEEE Std 802.11n™-2009</p><p>Figure 20-17—Transmit spectral mask for 20 MHz transmission</p></td><td valign="top"><p>IEEE</p><p>or</p><p>'IEEE_2009_20_2_4'</p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11n-2009 40M@2.4G</p></td><td valign="top"><p>IEEE Std 802.11n™-2009</p><p>Figure 20-18—Transmit spectral mask for a 40 MHz channel</p></td><td valign="top"><p>'IEEE_2009_40_2_4'</p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11n-2009 20M@5G</p></td><td valign="top"><p>IEEE Std 802.11n™-2009</p><p>Figure 20-17—Transmit spectral mask for 20 MHz transmission</p></td><td valign="top"><p>'IEEE_2009_20_5'</p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11n-2009 40M@5G</p></td><td valign="top"><p>IEEE Std 802.11n™-2009</p><p>Figure 20-18—Transmit spectral mask for a 40 MHz channel</p></td><td valign="top"><p>'IEEE_2009_40_5'</p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11mb/D08 20M@2.4G</p></td><td valign="top"><p>IEEE Std 802.11n™-2009</p><p>Figure 20-17—Transmit spectral mask for 20 MHz transmission</p><p>IEEE Draft P802.11-REVmb™/D8.0, March 2011</p><p>Figure 19-17—Transmit spectral mask for 20 MHz transmission in the 2.4 GHz band</p></td><td valign="top"><p>'IEEE_D08_20_2_4'</p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11mb/D08 40M@2.4G</p></td><td valign="top"><p>IEEE Std 802.11n™-2009</p><p>Figure 20-18—Transmit spectral mask for a 40 MHz channel</p><p>IEEE Draft P802.11-REVmb™/D8.0, March 2011</p><p>Figure 19-18—Transmit spectral mask for a 40 MHz channel in the 2.4 GHz band</p></td><td valign="top"><p>'IEEE_D08_40_2_4'</p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11mb/D08 20M@5G</p></td><td valign="top"><p>IEEE Draft P802.11-REVmb™/D8.0, March 2011</p><p>Figure 19-19—Transmit spectral mask for 20 MHz transmission in the 5 GHz band</p></td><td valign="top"><p>'IEEE_D08_20_5'</p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11mb/D08 40M@5G</p></td><td valign="top"><p>IEEE Draft P802.11-REVmb™/D8.0, March 2011</p><p>Figure 19-20—Transmit spectral mask for a 40 MHz channel in the 5 GHz band</p></td><td valign="top"><p>'IEEE_D08_40_5'</p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11ac/D1.1 20M@5G</p></td><td valign="top"><p>IEEE P802.11ac™/D1.1, August 2011</p><p>Figure 22-17—Transmit spectral mask for a 20 MHz channel</p></td><td valign="top"><p>'IEEE_AC_D1_1_20_5'</p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11ac/D1.1 40M@5G</p></td><td valign="top"><p>IEEE P802.11ac™/D1.1, August 2011</p><p>Figure 22-18—Transmit spectral mask for a 40 MHz channel</p></td><td valign="top"><p>'IEEE_AC_D1_1_40_5'</p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11ac/D1.1 80M@5G</p></td><td valign="top"><p>IEEE P802.11ac™/D1.1, August 2011</p><p>Figure 22-19—Transmit spectral mask for a 80 MHz channel</p></td><td valign="top"><p>'IEEE_AC_D1_1_80_5'</p></td></tr></tbody></table></div></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

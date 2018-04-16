@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Remote Commands for TD-SCDMA Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Domain Power / Code Domain Error Power</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_aedc3c8aead262690a710a3101012eea-fd3f247dc71862c60a0020190163da0c-en-US;ID_0a9bae9ec79f0e4f0a710a3100d32add-fd3f247dc71862c60a0020190163da0c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="7b571c192e99473d.htm">Remote Commands for TD-SCDMA Measurements</a> &gt; <a class="chm-breadcrumb" href="c4d17178546f4c22.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="7a93c70ea29648d9.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Code Domain Power / Code Domain Error Power</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor643">
+</a><div class="chm-chaptertitle">Code Domain Power / Code Domain Error Power</div><p>When the trace data for this evaluation is queried, 4 values are transmitted for each channel:</p><p><span class="command">&lt;CodeClass&gt;, &lt;CodeNo&gt;, &lt;Level&gt;, &lt;ActiveFlag&gt;</span></p><div class="block"><ul class="list"><li value="1">the code class (&lt;CodeClass&gt;)</li><li value="2">the channel number (&lt;CodeNo&gt;)</li><li value="3">the absolute or relative level (&lt;Level&gt;), depending on <a class="xref" href="d36e43527.htm#shiv_FSV_K72_3085-5331ce58c35625380a00201901e07144-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CDPower:</nobr>​<nobr>PDISplay</nobr></a></li><li value="4">the state of the channel (&lt;ActiveFlag&gt;)</li></ul></div><p>For details on these parameters see <a class="xref" href="69ac6a0ca1c4404e.htm#ID_f18fbf0ae42455960a00206a00dd6c4e-60bfa4ffc39a38550a00201901c7b965-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]?</nobr></a>.</p><p>The query returns a maximum of 16 channels. Channels that consist of more than one code are returned as one channel.</p><div class="block"><span class="bold"><a name="ID_0a9bae9ec79f0e4f0a710a3100d32add-fd3f247dc71862c60a0020190163da0c-en-US">
+</a>Example: </span><p>Consider the following configuration (three active channels out of a total of 12):</p><div class="block"><ul class="list"><li value="1">DPCH, 1.16, (CC4), -7.0 dB</li><li value="2">DPCH, 2.8, (CC3), -7.3 dB</li><li value="3">DPCH, 3.4, (CC2), -8.0 dB</li></ul></div><p>In this example, the command would return the following string (active channels in <b>bold</b>):</p><p><b><span class="command">4, 1, -7.0, 1</span></b><span class="command">, 4, 2, -55.1, 0,</span><b><span class="command">3, 2, -7.3, 1</span></b><span class="command">, 4, 5, -56.3, 0, 4, 6, -55.8, 0, 4, 7, -57.0, 0,</span><b><span class="command">2, 3, -8.0, 1</span></b><span class="command">, 4, 13, -55.8, 0, 4, 14, -56.3, 0, 4, 15, -55.9, 0, 4, 16, -57.3, 0</span></p></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

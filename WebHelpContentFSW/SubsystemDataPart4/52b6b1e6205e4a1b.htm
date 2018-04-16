@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>EVM, Phase Error, Magnitude Error Trace Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3c35e735322a06f30a002019002ab5c7-cdcbde71320742ed0a002019011c981a-en-US;ID_ef2814a0322a06f30a002019015b125f-cdcbde71320742ed0a002019011c981a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="abc2974de9f84382.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="7398b382a8ac4892.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">EVM, Phase Error, Magnitude Error Trace Results</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor954">
+</a><a name="kanchor955">
+</a><a name="kanchor956">
+</a><a name="kanchor957">
+</a><a name="kanchor958">
+</a><a name="kanchor959">
+</a><div class="chm-chaptertitle">EVM, Phase Error, Magnitude Error Trace Results</div><p>The error vector magnitude (EVM), as well as the phase and magnitude errors are calculated and displayed for each symbol. Thus, the <span class="command">TRAC:DATA?</span> query returns one value per symbol. The number of symbols depends on the burst type, modulation and number of carriers used for transmission, as well as the oversampling factor used internally by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW GSM application. The following table provides an overview of the possible number of symbols.</p><div class="block"><a name="ID_ef2814a0322a06f30a002019015b125f-cdcbde71320742ed0a002019011c981a-en-US">
+</a><a name="kanchor960">
+</a><span class="table-caption">Number of trace result values for EVM, Phase Error, Magnitude Error measurements</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p><b>Burst Type</b></p></th><th valign="top"><p><b>Modulation</b></p></th><th valign="top"><p><b>Multicarrier BTS</b></p></th><th valign="top"><p><b>No. of trace points</b></p></th><th valign="top"><p><b>Comment</b></p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>AB</p></td><td valign="top"><p>GMSK</p></td><td valign="top"><p>any</p></td><td valign="top"><p>348 = 87<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>symbols (NSP) * ov</p></td><td valign="top"><p>ov = oversampling factor = 4</p></td></tr><tr class="evenrow"><td valign="top"><p>NB</p></td><td valign="top"><p>GMSK</p></td><td valign="top"><p>OFF</p></td><td valign="top"><p>588 = 147<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>symbols (NSP) * ov</p></td><td valign="top"><p>ov = oversampling factor = 4</p><p>this corresponds to the "useful part" of the burst, see</p><p>3GPP TS 45.004, § "2.2 Start and stop of the burst"</p></td></tr><tr class="oddrow"><td valign="top"><p>NB</p></td><td valign="top"><p>GMSK</p></td><td valign="top"><p>ON</p></td><td valign="top"><p>568 samples = 142<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>symbols (NSP) * ov</p></td><td valign="top"><p>ov = oversampling factor = 4</p><p>This corresponds to the "useful part" of the burst, excluding the tail bits to allow the multicarrier filter to settle.</p></td></tr><tr class="evenrow"><td valign="top"><p>NB</p></td><td valign="top"><p>not GMSK</p></td><td valign="top"><p>any</p></td><td valign="top"><p>142 symbols (NSP)</p></td><td valign="top"><p>only one sample per symbol (ov=1)</p><p>this corresponds to the "useful part" of the burst, excluding tail symbols</p><p>see</p><p>3GPP TS 45.005, § "Annex G (normative): Calculation of Error Vector Magnitude"</p></td></tr><tr class="oddrow"><td valign="top"><p>HSR</p></td><td valign="top"><p>any</p></td><td valign="top"><p>any</p></td><td valign="top"><p>169 symbols (RSP)</p></td><td valign="top"><p>only one sample per symbol (ov=1)</p><p>this corresponds to the "useful part" of the burst, excluding tail symbols</p><p>see</p><p>3GPP TS 45.005, § "Annex G (normative): Calculation of Error Vector Magnitude"</p></td></tr></tbody><tfoot><tr class="oddrow"><th class="tfoot" colspan="5" valign="top"><p>NSP = Normal Symbol Period (= symbol duration for normal symbol rate / normal bursts)</p><p>RSP = Reduced Symbol Period (= symbol duration for higher symbol rate / HSR bursts)</p></th></tr></tfoot></table></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

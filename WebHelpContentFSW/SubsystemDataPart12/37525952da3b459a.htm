@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Examples|Measurement Example 2: Burst GSM EDGE Signals" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Setting the Evaluation Range</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f1ec21672b1e019f0a00206a018225b7-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_8829644daa956c420a00206a009f4026-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_1df84ae760ea11e08c5d9462511f9a3b-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_1deed50660ea11e08c5d9462511f9a3b-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_3d14b868ab1a3ef80a00206a00ceba24-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_d7317646aa956c420a00206a00a4b0d3-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_1e37cf8aab1a3ef80a00206a001eac91-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_2d2ed8a3aa956c420a00206a01f9aaf0-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_ba37f488aa956c420a00206a001eea47-7c60cc67410fd4a60a00206a01c84e65-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ddfa726bcfd3409b.htm">Measurement Examples</a> &gt; <a class="chm-breadcrumb" href="011612b9941d4e61.htm">Measurement Example 2: Burst GSM EDGE Signals</a> &gt; <span class="chm-breadcrumb">Setting the Evaluation Range</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Setting the Evaluation Range</div><p>In some scenarios, such as in <a class="xref" href="b9e44889c89142c5.htm#ID_c19af22e2b1e019f0a00206a018df7b7-7c60cc67410fd4a60a00206a01c84e65-en-US">"Evaluating the Rising and Falling Edges"</a>, the result range contains symbols that are not supposed to be considered for the EVM or other calculated parameters that are displayed in the Result Summary. Thus, you would not include them in the evaluation range.</p><div class="block"><a name="ID_8829644daa956c420a00206a009f4026-7c60cc67410fd4a60a00206a01c84e65-en-US">
+</a><div class="procedure_title">To change the evaluated data</div><div><ol class="procedure"><li id="ID_1df84ae760ea11e08c5d9462511f9a3b-7c60cc67410fd4a60a00206a01c84e65-en-US" value="1"><p>Start from the configuration described in <a class="xref" href="b9e44889c89142c5.htm#ID_c19af22e2b1e019f0a00206a018df7b7-7c60cc67410fd4a60a00206a01c84e65-en-US">"Evaluating the Rising and Falling Edges"</a>.</p></li><li id="ID_1deed50660ea11e08c5d9462511f9a3b-7c60cc67410fd4a60a00206a01c84e65-en-US" value="2"><p>Display the I/Q constellation diagram of the signal in window 1(Source: "Meas&amp;Ref Signal", Result type: "Constellation I/Q", see <a class="xref" href="b7bdaca16a544e2f.htm#ID_acc6f25f2ad5540b0a710a3100c35c97-7c60cc67410fd4a60a00206a01c84e65-en-US">"Changing the Display Configuration"</a>).</p><p>A clear 8PSK constellation is displayed.</p><div class="block" id="ID_3d14b868ab1a3ef80a00206a00ceba24-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img6a79d8b12edda9e90a00206a00e1d8c2_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Evaluation lines properly adjusted</div></div></li><li id="ID_d7317646aa956c420a00206a00a4b0d3-7c60cc67410fd4a60a00206a01c84e65-en-US" value="3"><p>In order to understand the effect of an incorrectly set evaluation range, change the evaluation range to include the entire result range.</p><ol type="a" class="proc2"><li value="1"><p>In the "Overview", select "Evaluation Range".</p></li><li value="2"><p>Enable the "Entire Result Range" option.</p></li></ol><p>The displayed constellation diagram is no longer clear, it contains additional points. This is due to the fact that the constellation diagram now displays symbol instants that are beyond the burst.</p><div class="block" id="ID_1e37cf8aab1a3ef80a00206a001eac91-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img121257502eddda010a00206a0165f840_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Evaluation lines not properly adjusted</div></div></li></ol></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>All measurement windows that consider the evaluation range are marked with two small red lines in the title bar.</p><div class="block" id="ID_ba37f488aa956c420a00206a001eea47-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img3f48e211aa87c5790a00206a00b43c0a_1_--_--_PNG96Small.png" alt="" title=""/></div></div></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

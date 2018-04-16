@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Optimizing and Troubleshooting the Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Optimizing Limit Checks</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1486f0e97b32ec290a710a310078b36f-c03dcfec7d455beb0a00201901c34e02-en-US;ID_3132f544ccb711e19016d375c82ec7e8-c03dcfec7d455beb0a00201901c34e02-en-US;ID_32603ff97f6e28560a710a31013f7810-c03dcfec7d455beb0a00201901c34e02-en-US;ID_1b5be1907f5d01d40a710a3100d62bca-c03dcfec7d455beb0a00201901c34e02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="f85693c62f444661.htm">Optimizing and Troubleshooting the Measurement</a> &gt; <span class="chm-breadcrumb">Optimizing Limit Checks</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor799">
+</a><div class="chm-chaptertitle">Optimizing Limit Checks</div><p>If the limit checks fail unexpectedly, check the following issues.</p><div class="block"><div class="subtitle"><a name="ID_3132f544ccb711e19016d375c82ec7e8-c03dcfec7d455beb0a00201901c34e02-en-US">
+</a>Excluding results from adjacent channels</div></div><a name="kanchor800">
+</a><a name="kanchor801">
+</a><p>In limit checks for multicarrier <b>spectrum measurements</b>, the frequencies from adjacent carriers in the signal may distort the results of the limit check for a single carrier. If you only want to check the frequencies from a single carrier in a <b>multicarrier signal</b>, disable the limit check for frequencies to the left or right of the carrier frequency of interest (see <a class="xref" href="e25d4a05a7e64b7d.htm#ID_99792fd99c4900750a710a3100f9a36a-6de3276a7d447f250a0020190132413b-en-US">"Enable Left Limit/ Enable Right Limit"</a>). This allows you to measure the spectrum of the left or right-most channel while ignoring the side where adjacent channels are located.</p><p>Make sure you select the correct <a class="xref" href="d4e31521.htm#shiv_FSV_K10_1254-7bf83232e9afc5160a002019003c84da-en-US">"Slot to Measure"</a> for <b>Modulation Spectrum</b> results (see <a class="xref" href="2ae1e0f8070f4c0e.htm#ID_01dbfe3f5feb7e7b0a002019005ed08f-6de3276a7d447f250a0020190132413b-en-US">"Slot Scope"</a>).</p><div class="block"><div class="subtitle"><a name="ID_32603ff97f6e28560a710a31013f7810-c03dcfec7d455beb0a00201901c34e02-en-US">
+</a>Calculating limit lines according to the used DUT</div></div><a name="kanchor802">
+</a><a name="kanchor803">
+</a><a name="kanchor804">
+</a><p>For <b>multicarrier</b> measurements, ensure that the <b>DUT</b> is configured correctly (see <a class="xref" href="602da152d83c4650.htm#ID_5010c2125fd17fee0a0020190016fc4b-6de3276a7d447f250a0020190132413b-en-US">"Frame"</a>). The number of active carriers and the specified BTS class affect the calculation of the limits according to the 3GPP standard for the modulation spectrum measurement.</p><div class="block"><div class="subtitle"><a name="ID_1b5be1907f5d01d40a710a3100d62bca-c03dcfec7d455beb0a00201901c34e02-en-US">
+</a>Aligning the limit line correctly</div></div><p>The limit line defined by the standard must be aligned to the measured slots. The alignment can either be determined individually for each slot, or the entire line is aligned according to the <a class="xref" href="d4e31521.htm#shiv_FSV_K10_1254-7bf83232e9afc5160a002019003c84da-en-US">"Slot to Measure"</a> (see <a class="xref" href="36e50062a8144e0e.htm#ID_820aea0bed8636730a00206a006a00f9-6de3276a7d447f250a0020190132413b-en-US">"Limit Line Time Alignment"</a>).</p><p>The <b>standard</b> requires that the entire line be aligned according to the <a class="xref" href="d4e31521.htm#shiv_FSV_K10_1254-7bf83232e9afc5160a002019003c84da-en-US">"Slot to Measure"</a>. However, in this case the "Delta to Sync" value will be identical for all slots in the scope (see <a class="xref" href="fb79a9d1779e4ae1.htm#ID_42fb1759b54811e1ab41e5f5789ef9e4-b55ff752e9ba948f0a00201900953cba-en-US">Table "Measured power values for Power vs Slot results"</a>).</p><p>Note that the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW GSM application assumes that all slots have equal length. If they do not, disable this setting in the "Frame" settings (see <a class="xref" href="7ca1a6fd534e4deb.htm#shiv_FSV_K10_1325-6de3276a7d447f250a0020190132413b-en-US">"Equal Timeslot Length"</a>) so the limit line is aligned to the slots correctly.</p><p>For <b>non-standard</b> signals or if you require more precise delta values, use the "Time Alignment": "Per Slot" setting.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

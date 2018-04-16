@@ -1,0 +1,110 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring Spurious Emissions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Spurious Emissions Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_7_remote_examples_0310-e5c4a3a43cfb8ffa0a001ae77582ecd2-en-US;ID_1b7736740113b73c0a00206a002226bb-e5c4a3a43cfb8ffa0a001ae77582ecd2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="67d3f8caa9b8465c.htm">Measuring Spurious Emissions</a> &gt; <span class="chm-breadcrumb">Programming Example: Spurious Emissions Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Programming Example: Spurious Emissions Measurement</div><a name="kanchor3014">
+</a><a name="kanchor3015">
+</a><p>In the following example, the Spurious Emissions measurement is configured by defining ranges and parameters to create the following sweep list.</p><div class="block" id="ID_1b7736740113b73c0a00206a002226bb-e5c4a3a43cfb8ffa0a001ae77582ecd2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb2a1c06301120bb00a00206a00c7bdde_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>Note that this example is primarily meant to demonstrate the remote control commands, it does not necessarily reflect a useful measurement task.</p><div class="verbatim"><pre class="verbatim_text">//------------Preparing the measurement-------------
+*RST
+//Resets the instrument
+
+SWE:MODE LIST
+//Activates spurious emissions measurement
+
+INIT:CONT OFF
+//Selects single sweep mode.
+
+<b>//Spurious measurement has to be in single sweep mode to be configured 
+//and no sweep operation may be running!
+</b>
+// If required, a sweep stop can be ensured by INIT:IMM;*WAI
+
+//---------------Configuring a Sweep List----------
+
+LIST:RANG:COUNt?
+//Returns the number of measurement ranges in the sweep list.
+LIST:RANG4:DEL
+//Deletes the fourth range.
+LIST:RANG1:STAR 10000000
+//Defines a start frequency of 10 MHz for range 1.
+LIST:RANG1:STOP 100000000
+//Defines a stop frequency of 100 MHz for range 1.
+LIST:RANG1:BAND 500000
+//Defines a resolution bandwidth of 500 kHz in range 1.
+LIST:RANG1:BAND:VID 5000000
+//Defines a video bandwidth of 5 MHz for range 1.
+LIST:RANG1:INP:ATT:AUTO OFF
+//Turns automatic selection of the input attenuation in range 1 off.
+
+LIST:RANG1:INP:ATT 10
+//Defines a input attenuation of 10 dBm for range 1.
+
+
+LIST:RANG1:FILT:TYPE CFILter
+//Selects an Channel filter for range 1.
+LIST:RANG1:DET SAMP
+//Selects a sample detector for range 1.
+LIST:RANG1:POIN 601
+//Defines 601 sweep points for range 1.
+LIST:RANG1:RLEV -20
+//Defines a reference level of -20 dBm for range 1.
+LIST:RANG1:SWE:TIME 5
+//Defines a manual sweep time of 5 second for range 1.
+
+// Create a transducer that can be used.
+// It has to cover the corresponding frequency range
+//
+SENSe1:CORRection:TRANsducer:SELect 'Test'
+SENSe1:CORRection:TRANsducer:UNIT 'DB'
+SENSe1:CORRection:TRANsducer:COMMent 'Test Transducer'
+// Frequency Span 0 MHz to 20 Ghz
+SENSe1:CORRection:TRANsducer:DATA 0e6,5, 20e9,3
+
+SENS:LIST:RANG1:TRAN 'Test'
+//Includes a transducer called 'Test' for range 1.
+
+LIST:RANG1:LIM:STAR 10
+LIST:RANG1:LIM:STOP 10
+//Defines an absolute limit of 10 dBm at the start and stop frequencies of range 1.
+LIST:RANG:LIM:STAT ON
+//Turns the limit check for all ranges on.
+
+//---------------Configuring the List Evaluation----------
+CALC:PSE:MARG 100
+//Sets the threshold to 100 dB.
+CALC:PSE:PSH ON
+//Marks all peaks in the diagram with blue squares.
+CALC:PSE:SUBR 10
+//Sets 10 peaks per range to be stored in the list.
+
+//--------------Performing the Measurement-----
+
+INIT:SPUR; *WAI
+//Performs a spurious emission measurement and waits until the sweep has finished.
+
+//---------------Retrieving Results-------------
+CALC:LIM1:FAIL?
+//Queries the result of the check for limit line 1.
+TRAC? SPUR
+//Queries the peak list of the spurious emission measurement.</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

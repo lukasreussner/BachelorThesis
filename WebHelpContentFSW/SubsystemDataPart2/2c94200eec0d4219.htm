@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Time Sidelobe Analysis</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_61d4f4ec0f1bd9b00a710ade01d538a7-77f58b7b6bc89ad60a00206a008ec9e8-en-US;ID_999e03c1b13511e49c1381783a9c52ef-77f58b7b6bc89ad60a00206a008ec9e8-en-US;ID_499396b98791adee0a71003a010ee389-77f58b7b6bc89ad60a00206a008ec9e8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="6bca5f79d2e8456b.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Time Sidelobe Analysis</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor239">
+</a><a name="kanchor240">
+</a><a name="kanchor241">
+</a><a name="kanchor242">
+</a><a name="kanchor243">
+</a><a name="kanchor244">
+</a><div class="chm-chaptertitle">Time Sidelobe Analysis</div><p>The additional option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K6S allows for time sidelobe (also known as range sidelobe or pulse compression) analysis.</p><p>The purpose of pulse compression in a radar system is to reduce the effective width of a pulse at the receiver end. This allows the transmitted energy to be distributed over a longer time interval (and thus reduces the peak transmitter power requirements) while still maintaining good resolution in the radar receiver.</p><p>Pulse compression can be achieved through correlation of a measured pulse with a stored reference pulse waveform. The reference pulse is often an exact replica of the transmitted pulse, but sometimes it is modified, e.g. via a windowing function, to reduce sidelobes at the correlator output.</p><p>The <a class="xref" href="#ID_999e03c1b13511e49c1381783a9c52ef-77f58b7b6bc89ad60a00206a008ec9e8-en-US">Figure "BPSK pulse (red) vs compressed pulse (yellow)"</a> shows the phase waveform of a BPSK pulse in red and the corresponding correlator output power of the compressed pulse in yellow. Note that the high amplitude portion of the compressed pulse is significantly narrower than the duration of the BPSK waveform.</p><div class="block" id="ID_999e03c1b13511e49c1381783a9c52ef-77f58b7b6bc89ad60a00206a008ec9e8-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgdefd7b247400f68e0a001ae73cbb35bc_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">BPSK pulse (red) vs compressed pulse (yellow)</div></div><p>In theory, you must correlate the sent and the received pulses for this analysis. Where both pulses are identical, strong power levels are measured; where they differ, smaller levels are measured. By analyzing the correlator output, you can determine and quantify the gains and artifacts introduced by a device under test.</p><p>Since the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW itself can measure only the received pulse, the sent pulse must be configured as a reference pulse before the measurement.</p><p>The reference pulse can either be imported to the R&amp;S FSW Pulse application from an I/Q waveform file with measured data, or it can be calculated by the R&amp;S FSW Pulse application according to a specified pulse model. Various models and parameters are available to configure the reference pulse according to your requirements (see <a class="xref" href="bc98d38a0cd349bc.htm#ID_1e0b31ae7aca11e4be98b739bbffb8d0-a24b39e56a7935640a00206a008708a7-en-US">"Reference Signal Description"</a>). In particular, a window function can be applied to the reference pulse. This is useful, for example, if you use a waveform file with measured data, without further editing.</p><p>The measured data is then correlated (or <em>filtered</em>) with the reference I/Q data. Further details about the calculation of the correlator output are given in the following section.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_499396b98791adee0a71003a010ee389-77f58b7b6bc89ad60a00206a008ec9e8-en-US">
+</a>I/Q data from Rohde<span style="font-family: Arial Unicode MS"> </span>&amp;<span style="font-family: Arial Unicode MS"> </span>Schwarz signal generators</div><p>I/Q data for pulses created with Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz signal generators (and stored in <span class="filename">.wv</span> format) can now also be used as reference pulses in the R&amp;S FSW Pulse application. For more information see the Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz application card: <a href="https://www.rohde-schwarz.com/en/applications/simplify-pulse-and-emitter-generation-for-radar-testing-application-card_56279-107459.html" class="link" target="_new">Simplify pulse and emitter generation for radar testing</a>.</p></td></tr></table></div></div><p>As a result of time sidelobe measurements, additional result displays are available showing the correlated pulse magnitude for an individual pulse or the entire capture buffer, as well as frequency and phase errors for individual pulses. Furthermore, characteristic sidelobe parameters are added to the pulse result tables (see <a class="xref" href="a31dc5c8f03844f6.htm#ID_56ca334d104a41040a001ae73287ba7f-78a038206a778ca80a00206a00edc705-en-US">"Time Sidelobe Parameters"</a>).</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>For more detailed information on Time Sidelobe Analysis see the Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz application card <a href="http://www.rohde-schwarz.com/appnote/" class="link" target="_new">Time sidelobe measurements optimize radar system performance</a>.</p></td></tr></table></div></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="64038a407f744de7.htm" class="chapter_title_toc">Keep-out Time</a></li><li value="2"><a href="c0b3349be8724567.htm" class="chapter_title_toc">Pulse Compression Calculation</a></li><li value="3"><a href="c7e3603aab1c4616.htm" class="chapter_title_toc">Reference Waveform</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

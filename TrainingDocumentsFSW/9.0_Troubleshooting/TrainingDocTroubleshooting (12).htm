@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Optimizing and Troubleshooting the Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b4ee623ab73aee8c0a00206a00d8a2a3-afab76cfd7349b540a00206a00bfaa09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <span class="chm-breadcrumb">Optimizing and Troubleshooting the Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor644">
+</a><a name="kanchor645">
+</a><a name="kanchor646">
+</a><div class="chm-chaptertitle">Optimizing and Troubleshooting the Measurement</div><p>If the results do not meet your expectations, or if you want to minimize the measurement duration, try the following methods to optimize the measurement:</p><div class="block"><ul class="list"><li value="1">Only activate as many <b>adjacent channels</b> as necessary to minimize the required span and thus the required measurement time for the measurement.</li><li value="2">Increase the <b>RBW</b> to minimize the measurement time; however, consider the requirements of the standard if you need to measure according to standard! The automatic settings are always according to standard.</li><li value="3">Take advantage of the <b>speed optimization mode</b> in the "Sweep" settings if you do not require the larger dynamic range (see <a class="xref" href="78e185afabe74c32.htm#ID_c5ab4572b75a4ac80a00206a015c02c6-a11320968fe2a24f0a001ae714255656-en-US">"Optimization"</a>).</li><li value="4">Reduce the <b>"Sweep Time"</b> and thus the amount of data to be captured and calculated; however, consider the requirements regarding the standard deviation.</li><li value="5">To improve the <b>stability of the measured results</b>, increase the "Sweep Time", which also leads to more averaging steps.</li><li value="6">Instead of <b>trace averaging</b>, use an RMS detector with a higher "Sweep Time" to obtain better average power results in less time.</li><li value="7">To determine a <b>channel power level</b> quickly, use the <b><a class="xref" href="ff4334048014440c.htm#ID_6a5732bbeba1535e0a00206a0054f7e4-cbe0db7d114b30c50a00206a011a4bee-en-US">"Time Domain Power Measurement"</a></b> (TDP) rather than a Channel Power measurement. The TDP measurement is a zero span measurement where the sweep time determines the measurement time. Due to the FFT measurement, duplicate averaging is performed, providing very stable results very quickly.<br/>Note, however, that for TDP measurements, channel filters are not available and a fixed RBW is used. Thus, the measurement may not be according to standard for some test cases.</li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2017 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

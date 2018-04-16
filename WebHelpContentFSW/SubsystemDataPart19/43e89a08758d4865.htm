@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Demodulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]BANDwidth:CHANnel:AUTO:TYPE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9468afed2f5b14eb0a00206a01b19d3b-71bd1bd42f5b0c9f0a00206a00636f5b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="ecabe2eae6a345a6.htm">Demodulation</a> &gt; <span class="chm-breadcrumb">[SENSe:]BANDwidth:CHANnel:AUTO:TYPE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><a name="kanchor822">
+</a><a name="kanchor823">
+</a><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_9468afed2f5b14eb0a00206a01b19d3b-71bd1bd42f5b0c9f0a00206a00636f5b-en-US">
+</a><span class="bold">[SENSe:]BANDwidth:CHANnel:AUTO:TYPE </span>&lt;Bandwidth&gt;<br/></div><div class="rcdescription"><p>This remote control command specifies the bandwidth in which the PPDUs are analyzed.</p><p>This command is only available for standards <b>IEEE 802.11a, ac, n</b>.</p><p>Note that channel bandwidths larger than 10 MHz require a bandwidth extension option on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, see <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Bandwidth&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>FBURst |</nobr> <nobr> ALL |</nobr> <nobr> MB2_5 |</nobr> <nobr> MB5 |</nobr> <nobr> MB10 |</nobr> <nobr> MB20 |</nobr> <nobr> MB40 |</nobr> <nobr> MB80 |</nobr> <nobr> MB160 |</nobr> <nobr> DB2_5 |</nobr> <nobr> DB5 |</nobr> <nobr> DB10 |</nobr> <nobr> DB20 |</nobr> <nobr> DB40 |</nobr> <nobr> DB80 |</nobr> <nobr> DB160</nobr><br/><span class="bold">FBURSt<br/></span><p>The channel bandwidth of the first valid PPDU is detected and subsequent PPDUs are analyzed only if they have the same channel bandwidth (corresponds to "Auto, same type as first PPDU")</p><span class="bold">ALL<br/></span><p>All PPDUs are analyzed regardless of the channel bandwidth (corresponds to "Auto, individually for each PPDU")</p><span class="bold">MB5<br/></span><p>Only PPDUs within a channel bandwidth of 5MHz are analyzed</p><p>(<b>IEEE 802.11 a, p only</b>)</p><span class="bold">MB10<br/></span><p>Only PPDUs within a channel bandwidth of 10MHz are analyzed</p><p>(<b>IEEE 802.11 a, p only</b>)</p><span class="bold">MB20<br/></span><p>Only PPDUs within a channel bandwidth of 20MHz are analyzed</p><span class="bold">MB40<br/></span><p>Only PPDUs within a channel bandwidth of 40MHz are analyzed</p><p>(<b>IEEE 802.11 n, ac only</b>)</p><span class="bold">MB80<br/></span><p>Only PPDUs within a channel bandwidth of 80MHz are analyzed</p><p>(<b>IEEE 802.11 ac only</b>)</p><span class="bold">MB160<br/></span><p>Only PPDUs within a channel bandwidth of 160MHz are analyzed</p><p>(<b>IEEE 802.11 ac only</b>)</p><span class="bold">DB5<br/></span><p>All PPDUs are analyzed within a channel bandwidth of 5MHz</p><p>(<b>IEEE 802.11 a, p only</b>)</p><span class="bold">DB10<br/></span><p>All PPDUs are analyzed within a channel bandwidth of 10MHz</p><p>(<b>IEEE 802.11 a, p only</b>)</p><span class="bold">DB20<br/></span><p>All PPDUs are analyzed within a channel bandwidth of 20MHz</p><span class="bold">DB40<br/></span><p>All PPDUs are analyzed within a channel bandwidth of 40MHz</p><p>(<b>IEEE 802.11 n, ac only</b>)</p><span class="bold">DB80<br/></span><p>All PPDUs are analyzed within a channel bandwidth of 80MHz</p><p>(<b>IEEE 802.11 n, ac only</b>)</p><span class="bold">DB160<br/></span><p>All PPDUs are analyzed within a channel bandwidth of 160MHz</p><p>(<b>IEEE 802.11 n, ac only</b>)</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">FBURst</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SENS:BAND:CHAN:AUTO:TYPE MB20</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="33194686a1c9467a.htm#ID_3b5af38434b411e2aa2aaab3cd47473f-8d3b40662c2d58e40a00201901859265-en-US">"Channel Bandwidth to measure (CBW)"</a><br/>See <a class="xref" href="ec816803f862490b.htm#ID_3b5af38434b411e2aa2aaab3cd47473f-29f4fb1182f7e0760a001ae736eb7dbd-en-US">"Channel Bandwidth to measure (CBW)"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)|Configuration|Data Acquisition and Detection" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k15.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Demodulation Bandwidth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eAvionicsSkIdDemodBw">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdDemodBwAuto">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdDataAcqDemodBw">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdDataAcqDemodBwAuto">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdBWDemodBw">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdSpanDemodBw">
+</meta>
+        <meta name="topic-id" value="545">
+</meta>
+        <meta name="topic-id" value="546">
+</meta>
+        <meta name="topic-id" value="547">
+</meta>
+        <meta name="topic-id" value="548">
+</meta>
+        <meta name="topic-id" value="549">
+</meta>
+        <meta name="topic-id" value="550">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_682e772a2666ab4a0a00206a012b8b50-ac8f214a8613e8920a001ae71b55551b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k15/Content/7b3d669c0b934964.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)</a> &gt; <a class="chm-breadcrumb" href="ae9af9987e764ade.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="378d2c9ad7844104.htm">Data Acquisition and Detection</a> &gt; <span class="chm-breadcrumb">Demodulation Bandwidth</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor132">
+</a><a name="kanchor133">
+</a><div class="function_heading"><a name="ID_682e772a2666ab4a0a00206a012b8b50-ac8f214a8613e8920a001ae71b55551b-en-US">
+</a><span style="font-weight: bold">Demodulation Bandwidth</span></div><p>The R&amp;S FSW Avionics (VOR/ILS) measurements application captures I/Q data using digital filters with quasi-rectangular amplitude responses. The demodulation bandwidth defines the width of the filter's flat passband.</p><p>For more information, see <a class="xref" href="21e351c0accf47ba.htm#ID_eee335611ba20dec0a001ae70fbc48c7-104e8f4681769d260a001ae737d6243a-en-US">"Demodulation Bandwidth"</a>.</p><p>Depending on the selected DBW mode, the value is either determined automatically or can be defined manually.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto mode"</p></td><td class="function_col_right"><p>(Default) The DBW is determined automatically by the R&amp;S FSW Avionics (VOR/ILS) measurements application.</p><p>For ILS measurements: 12.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz</p><p>For VOR measurements: 25<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Manual mode"</p></td><td class="function_col_right"><p>The user-defined DBW is used. For a list of available demodulation bandwidths, see <a class="xref" href="21e351c0accf47ba.htm#ID_e225da02815611e5bb80a0136eaa9a2a-104e8f4681769d260a001ae737d6243a-en-US">Table "Available demodulation bandwidths and measurement times for ILS measurements"</a> and <a class="xref" href="21e351c0accf47ba.htm#ID_e69b83a3815611e5bb80a0136eaa9a2a-104e8f4681769d260a001ae737d6243a-en-US">Table "Available demodulation bandwidths and measurement times for VOR measurements"</a>.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="0df29e4f0534423d.htm#ID_23c259269444947c0a001ae7517e95a6-a6290c53944493630a001ae763447f36-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]ADEMod:</nobr>​<nobr>BWIDth:</nobr>​<nobr>DEModulation</nobr></a></p><p><a class="xref" href="ae9f91f4fb874bab.htm#ID_596e4160944496be0a001ae72e725467-e059d40e944495180a001ae763447f36-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]ADEMod:</nobr>​<nobr>BWIDth:</nobr>​<nobr>DEModulation:</nobr>​<nobr>AUTO</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

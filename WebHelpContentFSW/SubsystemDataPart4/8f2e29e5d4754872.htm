@@ -1,0 +1,136 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Measuring the Power for  Access Bursts</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ef7a7961469e334e0a710a310023663b-f049b2b347f075a40a002019013377ed-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="3e7805cc034747fd.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Programming Example: Measuring the Power for Access Bursts</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1016">
+</a><a name="kanchor1017">
+</a><div class="chm-chaptertitle">Programming Example: Measuring the Power for Access Bursts</div><p>This example demonstrates how to configure a GSM power measurement of a GMSK modulated signal with access bursts in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//------------ Preparing the application ------------
+// Preset the instrument
+*RST
+// Enter the GSM option K10
+INSTrument:SELect GSM
+// Switch to single sweep mode and stop sweep
+INITiate:CONTinuous OFF;:ABORt
+
+
+//---------- Frequency and Level ---------------------
+// Set center frequency to 935 MHz
+SENSe:FREQuency:CENTer 935 MHZ
+
+// Set Ref. Level to 10 dBm
+DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:RF 10 DBM
+
+
+//----------- Slot 0 configuration ------------
+// Activate slot 0
+CONFigure:MS:CHANnel:SLOT0:STATe ON
+// Normal Burst
+CONFigure:MS:CHANnel:SLOT0:TYPE NB
+// GMSK modulation
+CONFigure:MS:CHANnel:SLOT0:MTYPe GMSK
+// TSC 0 (Set 1)
+CONFigure:MS:CHANnel:SLOT0:TSC 0,1
+
+
+//----------- Slot 1 configuration ------------
+// Activate slot 1
+CONFigure:MS:CHANnel:SLOT1:STATe ON
+// Access Burst
+CONFigure:MS:CHANnel:SLOT1:TYPE AB
+// Set TS0
+CONFigure:MS:CHANnel:SLOT1:TSC TS0
+// Query TS
+CONFigure:MS:CHANnel:SLOT1:TSC?
+// -&gt; TS0
+// Access burst has a timing advance (offset) from slot start of 1 symbol
+CONFigure:MS:CHANnel:SLOT1:TADV 1
+
+
+//----------- Slot 2-7 configuration ------------
+CONFigure:MS:CHANnel:SLOT2:STATe OFF
+CONFigure:MS:CHANnel:SLOT3:STATe OFF
+CONFigure:MS:CHANnel:SLOT4:STATe OFF
+CONFigure:MS:CHANnel:SLOT5:STATe OFF
+CONFigure:MS:CHANnel:SLOT6:STATe OFF
+CONFigure:MS:CHANnel:SLOT7:STATe OFF
+
+
+//---------- Demodulation and Slot Scope------------
+// Configure slot 1 (slot to measure) for single-slot measurements,
+// (e.g. phase error, modulation spectrum).
+CONF:CHAN:MSL:MEAS 1
+// Configure slot 0-1 for multi-slot measurements
+// (e.g. PvT, transient spectrum).
+// Set First slot to measure = 0
+// Set No. of slots to measure = 2
+CONF:CHAN:MSL:NOFS 2
+CONF:CHAN:MSL:OFFS 0
+
+
+//---------- PvT Measurement settings -----------------
+// Check PvT filter
+CONF:BURS:PTEM:FILT?
+// -&gt; G1000
+
+// Align the limit line to mid of TSC/TS for each slot.
+CONF:BURS:PTEM:TAL PSL
+
+
+//--------------Performing the Measurement-----
+// Initiates a new measurement and waits until the sweep has finished.
+INITiate:IMMediate;*WAI
+
+
+//---------------Retrieving Results-------------
+
+// In PvT limits are checked against the max in min traces.
+// Query the max power vs time trace
+TRAC2:DATA? TRACe2
+// Query the result of the power vs time limit check for max trace
+CALCulate2:LIMit1:FAIL?
+// -&gt; 0
+// Query the min power vs time trace
+TRAC2:DATA? TRACe3
+// Query the result of the power vs time limit check for min trace
+CALCulate2:LIMit2:FAIL?
+// -&gt; 0
+// Query the result of the power vs time limit check for slot 0
+FETCh:BURSt:SPOWer:SLOT0:LIM:FAIL?
+// -&gt; 0
+// Query the result of the power vs time limit check for slot 1
+FETCh:BURSt:SPOWer:SLOT1:LIM:FAIL?
+// -&gt; 0
+
+// Query the maximum phase error value for slot 1 (slot to measure) in
+// current GSM frame
+FETCh:BURSt:MACCuracy:PERRor:PEAK:CURR?
+// -&gt; -0.21559642255306244
+// Query the maximum phase error value for slot 1 (slot to measure) in
+// all 200 GSM frames
+FETCh:BURSt:MACCuracy:PERRor:PEAK:MAX?
+// -&gt; 0.35961171984672546
+// Query the averaged phase error RMS value for slot 1 (slot to measure) in
+// all 200 GSM frames
+FETCh:BURSt:MACCuracy:PERRor:RMS:AVERage?
+// -&gt; 0.082186274230480194
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

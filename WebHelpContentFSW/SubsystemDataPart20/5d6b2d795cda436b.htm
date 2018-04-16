@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="802.11ad measurements application (R&amp;S FSW-K95)|Configuration|SEM Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k95.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Spectrum Emission Mask</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWigigSkIdSpectrumEmissionMaskFSPB">
+</meta>
+        <meta name="topic-id" value="767">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K72_2104-848566ac90feda5b0a001ae711c16d7c-en-US;ID_ec7dce787dd4ca260a00206a01ca4723-848566ac90feda5b0a001ae711c16d7c-en-US;ID_c36f443459f4c99a0a00206a00ed6f11-848566ac90feda5b0a001ae711c16d7c-en-US;ID_47d0b49e3bc99f5c0a001ae75863f10c-848566ac90feda5b0a001ae711c16d7c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">802.11ad measurements application (R&amp;S FSW-K95)</a> &gt; <a class="chm-breadcrumb" href="da8852c9d8db4906.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="8e287101b3574e99.htm">SEM Measurements</a> &gt; <span class="chm-breadcrumb">Spectrum Emission Mask</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor288">
+</a><div class="chm-chaptertitle">Spectrum Emission Mask</div><p><b>Access</b>: "Overview" &gt; "Select Measurement" &gt; "SEM"</p><p><b>Or</b>: [MEAS] &gt; "Select Measurement" &gt; "SEM"</p><p>The Spectrum Emission Mask measurement shows the quality of the measured signal by comparing the power values in the frequency range near the carrier against a spectral mask that is defined by the IEEE 802.11ad specifications. Thus, the performance of the DUT can be tested and the emissions and their distance to the limit are identified.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>Note that the IEEE 802.11ad standard does not distinguish between spurious and spectral emissions.</p></td></tr></table></div></div><p>The Result Summary contains a peak list with the values for the largest spectral emissions including their frequency and power.</p><p>The R&amp;S FSW 802.11ad application performs the SEM measurement as in the Spectrum application with the following settings:</p><div class="block"><a name="ID_c36f443459f4c99a0a00206a00ed6f11-848566ac90feda5b0a001ae711c16d7c-en-US">
+</a><span class="table-caption">Predefined settings for IEEE 802.11ad SEM measurements</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Setting</p></th><th valign="top"><p>Default value</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Number of ranges</p></td><td valign="top"><p>7</p></td></tr><tr class="evenrow"><td valign="top"><p>Frequency Span</p></td><td valign="top"><p>+/- 3.06 GHz</p></td></tr><tr class="oddrow"><td valign="top"><p>Fast SEM</p></td><td valign="top"><p>OFF</p></td></tr><tr class="evenrow"><td valign="top"><p>Sweep time</p></td><td valign="top"><p>1 ms to 1.88 ms (depending on range)</p></td></tr><tr class="oddrow"><td valign="top"><p>RBW</p></td><td valign="top"><p>1 MHz</p></td></tr><tr class="evenrow"><td valign="top"><p>Power reference type</p></td><td valign="top"><p>Peak Power</p></td></tr><tr class="oddrow"><td valign="top"><p>Tx Bandwidth</p></td><td valign="top"><p>1.88 MHz</p></td></tr><tr class="evenrow"><td valign="top"><p>Number of power classes</p></td><td valign="top"><p>1</p></td></tr></tbody></table></div><p>For further details about the Spectrum Emission Mask measurements refer to <a class="xref" href="../../../Content/3f144cc620bf4508.htm">Spectrum Emission Mask (SEM) Measurement</a>.</p><div class="block"><div class="listintro">To restore adapted measurement parameters, the following parameters are saved on exiting and are restored on re-entering this measurement:</div><ul class="list"><li value="1">Reference level and reference level offset</li><li value="2">Sweep time</li><li value="3">Span</li></ul></div><p>The main measurement menus for the SEM measurements are identical to the Spectrum application.</p><div class="block"><div class="subtitle"><a name="ID_47d0b49e3bc99f5c0a001ae75863f10c-848566ac90feda5b0a001ae711c16d7c-en-US">
+</a>Remote command:</div></div><p><a class="xref" href="92ff3a54ae5942a7.htm#ID_46e346933a92d4f50a001ae77d3bcade-45a9464c3a92d2450a001ae714fcd4dc-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">SENS:SWE:MODE SEM</a></p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

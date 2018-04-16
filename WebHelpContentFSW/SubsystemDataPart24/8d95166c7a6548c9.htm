@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Remote Commands to Perform Measurements in MSRA Mode</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a5c9fd5077cf84220a00206a01bd1a0c-b807fae432e8ec370a00206a01eafe8b-en-US;ID_21b230b5380d3fbd0a00206a00917657-b807fae432e8ec370a00206a01eafe8b-en-US;ID_c7c0e07f841094ed0a710a3100abf658-b807fae432e8ec370a00206a01eafe8b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <span class="chm-breadcrumb">Remote Commands to Perform Measurements in MSRA Mode</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor339">
+</a><div class="chm-chaptertitle">Remote Commands to Perform Measurements in MSRA Mode</div><p>The following commands are specific to performing measurements in MSRA mode in a remote environment. Generally, the remote commands are identical to those used in Spectrum mode as described in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW User Manual. However, some restrictions or conditions may apply to specific commands (see also <a class="xref" href="7980ab3c417d4f64.htm#ID_e7065d0a3300619d0a00206a017db4d8-b6bd877e3300619d0a00206a01ebf9ad-en-US">"MSRA Basics"</a>).</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>You must always switch to MSRA mode before executing any MSRA-specific commands (using <b><span class="command">INST:MODE MSR</span></b>).</p></td></tr></table></div></div><p>It is assumed that the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW has already been set up for remote control in a network as described in <a class="xref" href="../../../Content/458e4aabc08242c2.htm">How to Set Up a Network and Remote Control</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>Note that basic tasks that are also performed in the base unit in the same way are not described here.</p><p>In particular, this includes:</p><div class="block"><ul class="list"><li value="1">Managing Settings and Results, i.e. storing and loading settings and result data, see <a class="xref" href="../../../Content/0676e691243b42ba.htm">Managing Settings and Results</a></li><li value="2">Basic instrument configuration, e.g. checking the system configuration, customizing the screen layout, or configuring networks and remote operation, see <a class="xref" href="../../../Content/238ee539da9f4d16.htm">Configuring the R&amp;S FSW</a></li><li value="3">Using the common status registers, see <a class="xref" href="../../../Content/ff1bbe99079c4848.htm">Using the Status Register</a></li></ul></div></td></tr></table></div></div><p>The following tasks specific to MSRA mode are described here:</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="11ec3a293ab24051.htm" class="chapter_title_toc">Introduction</a></li><li value="2"><a href="1a92223f6e5a4d5b.htm" class="chapter_title_toc">Common Suffixes</a></li><li value="3"><a href="7d4a60fab9604950.htm" class="chapter_title_toc">Activating MSRA Measurements</a></li><li value="4"><a href="3b134bde49484437.htm" class="chapter_title_toc">Configuring MSRA Measurements</a></li><li value="5"><a href="afb4e2187ef046f0.htm" class="chapter_title_toc">Capturing Data and Performing Sweeps</a></li><li value="6"><a href="6ad1c5be74e54de7.htm" class="chapter_title_toc">Retrieving Results</a></li><li value="7"><a href="0a63b477beb049bb.htm" class="chapter_title_toc">Querying the Status Registers</a></li><li value="8"><a href="0243b4aea2764835.htm" class="chapter_title_toc">Analyzing MSRA Measurements</a></li><li value="9"><a href="a0ccb7eef21d4401.htm" class="chapter_title_toc">Commands Specific to MSRA Slave Applications</a></li><li value="10"><a href="2c095baa26374d04.htm" class="chapter_title_toc">Programming Example: Analyzing MSR Signals</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

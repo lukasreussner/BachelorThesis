@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement|Channel Power Basics|Recommended Common Measurement Parameters" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Sweep Time
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3b74e556d51129850a710a31018a178a-afab76cfd7349b540a00206a00bfaa09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <a class="chm-breadcrumb" href="f37bb1a995864cd8.htm">Channel Power Basics</a> &gt; <a class="chm-breadcrumb" href="c6117526a2f74c9f.htm">Recommended Common Measurement Parameters</a> &gt; <span class="chm-breadcrumb"> Sweep Time </span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor476">
+</a><a name="kanchor477">
+</a><div class="chm-chaptertitle">Sweep Time</div><p>The "Sweep Time" is selected depending on the desired reproducibility of results. Reproducibility increases with "Sweep Time" since power measurement is then performed over a longer time period. As a general approach, approximately 500 non-correlated measured values are required for a reproducibility of 0.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB. (That means: 95 % of the measurements are within 0.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB of the true measured value). Approximately 5000 measured values are required for a reproducibility of 0.1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB (99<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>%). These values are valid for white noise. The measured values are considered as non-correlated if their time interval corresponds to the reciprocal of the measured bandwidth.</p><p>The number of A/D converter values, N, used to calculate the power, is defined by the "Sweep Time". The time per trace pixel for power measurements is directly proportional to the selected "Sweep Time".</p><p>If the sample detector is used, it is best to select the smallest "Sweep Time" possible for a given span and resolution bandwidth. The minimum time is obtained if the setting is coupled, that is: the time per measurement is minimal. Extending the measurement time does not have any advantages. The number of samples for calculating the power is defined by the number of trace points in the channel.</p><p>If the RMS detector is used, the selection of "Sweep Time"s can affect the repeatability of the measurement results. Repeatability is increased at longer "Sweep Time"s.</p><p>If the RMS detector is used, the number of samples can be estimated as follows:</p><p>Since only uncorrelated samples contribute to the RMS value, the number of samples can be calculated from the "Sweep Time" and the resolution bandwidth.</p><p>Samples can be assumed to be uncorrelated if sampling is performed at intervals of 1/RBW. The number of uncorrelated samples is calculated as follows:</p><p>N<sub>decorr</sub> =<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>SWT * RBW</p><p>(N<sub>decorr</sub> means uncorrelated samples)</p><p>The number of uncorrelated samples per trace pixel is obtained by dividing N<sub>decorr</sub> by 1001 (= pixels per trace).</p><p>The "Sweep Time" can be defined using the softkey in the "Ch Power" menu or in the "Sweep" configuration dialog box (see <a class="xref" href="f781be00787e4caa.htm#ID_9ecd98d404ce499e0a00206a01d924b0-afab76cfd7349b540a00206a00bfaa09-en-US">"Sweep Time"</a>).</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

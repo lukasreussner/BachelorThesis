@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring the R&amp;S FSW|Checking the System Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>SYSTem:ERRor:EXTended?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_6b_remote_commands_basic_2653-3144295567489d150a002019009351da-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="238ee539da9f4d16.htm">Configuring the R&amp;S FSW</a> &gt; <a class="chm-breadcrumb" href="f83ec8940c254319.htm">Checking the System Configuration</a> &gt; <span class="chm-breadcrumb">SYSTem:ERRor:EXTended?</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_6b_remote_commands_basic_2653-3144295567489d150a002019009351da-en-US">
+</a><span class="bold">SYSTem:ERRor:EXTended? </span>&lt;MessageType&gt;[, &lt;ChannelName&gt;]<br/></div><div class="rcdescription"><p>This command queries all system messages, or all messages of a defined type, displayed in the status bar for a specific channel (application).</p><p><b>Note:</b> This command queries the strings displayed for manual operation. For remote programs, do not define processing steps depending on these results. Instead, query the results of the <span class="command">STATus:QUEStionable:EXTended:INFO</span> status register, which indicates whether messages of a certain type have occurred (see <a class="xref" href="d360e28991f54d84.htm#ID_3f694d22e932e8970a00206a0171f34a-cf9f3fd9673450c20a0020190100bbb7-en-US">"STATus:QUEStionable:EXTended:INFO Register"</a>).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Query parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;MessageType&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>ALL |</nobr> <nobr> INFO |</nobr> <nobr> WARNing |</nobr> <nobr> ERRor |</nobr> <nobr> FATal |</nobr> <nobr> MESSage</nobr><br/></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ChannelName&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>String containing the name of the channel.</p><p>The parameter is optional. If you omit it, the command works for the currently active channel.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Messages&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>String containing all messages of the selected type for the specified channel. Each message is separated by a comma and inserted in parentheses. If no messages are available, empty parentheses are returned.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SYST:ERR:EXT? ALL</span><br/><p>Returns all messages for the currently active application, e.g. <em>"Message 1","Message 2"</em>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SYST:ERR:EXT? FAT,'Spectrum2'</span><br/><p>Queries fatal errors in the 'Spectrum2' application. If none have occurred, the result is: <em>" <span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>"</em>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

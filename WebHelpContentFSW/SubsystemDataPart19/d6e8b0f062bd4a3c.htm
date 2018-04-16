@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurements and Result Displays|WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)|Evaluation Methods for WLAN IQ Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>AM/AM</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWLANSkIdSmartGridAMAM">
+</meta>
+        <meta name="topic-id" value="18">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_60bc1bd6f4498a580a001ae708e25d66-742b73889d5e5f610a001ae77d4ca6d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3bafe63f00094742.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="57cd9bda6ba64547.htm">WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="072780b9f8404988.htm">Evaluation Methods for WLAN IQ Measurements</a> &gt; <span class="chm-breadcrumb">AM/AM</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor102">
+</a><a name="kanchor103">
+</a><div class="function_heading"><a name="ID_60bc1bd6f4498a580a001ae708e25d66-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a><span style="font-weight: bold">AM/AM</span></div><p>This result display shows the measured and the reference signal in the time domain. For each sample, the x-axis value represents the amplitude of the reference signal and the y-axis value represents the amplitude of the measured signal.</p><p>The reference signal is derived from the measured signal after frequency and time synchronization, channel equalization and demodulation of the signal. The equivalent time domain representation of the reference signal is calculated by reapplying all the impairments that were removed before demodulation.</p><p>The trace is determined by calculating a <em>polynomial regression model</em> of a specified degree (see <a class="xref" href="4b54378692ff4a62.htm#ID_a3c4ac6dfbefb3d40a001ae732f4f347-25fd2778c1f5a5dc0a001ae72c199428-en-US">"Polynomial degree for curve fitting"</a>) for the scattered measurement vs. reference signal data. The resulting regression polynomial is indicated in the window title of the result display.</p><p>Note: The measured signal and reference signal are complex signals.</p><p>This result display is <b>not</b> available for single-carrier measurements (<b>IEEE 802.11b, g (DSSS)</b>).</p>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH,AMAM</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p>Or:</p><p><a class="xref" href="3b2deeedcef14fcd.htm#ID_bfaa1d5bcb64762a0a001ae779f4bf09-ecb44ff1f443e6ca0a001ae756c36923-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>BURSt:</nobr>​<nobr>AM:</nobr>​<nobr>AM[:</nobr>​<nobr>IMMediate]</nobr></a></p><p>Polynomial degree:</p><p><a class="xref" href="24252724d1814b1f.htm#ID_c1b7b45ccb6477920a001ae7338b120b-c12e129dcb6476980a001ae71b489a5a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>BURSt:</nobr>​<nobr>AM:</nobr>​<nobr>AM:</nobr>​<nobr>POLYnomial</nobr></a></p><p>Results:</p><p><a class="xref" href="eb9e0051944d4569.htm#ID_7026e2c92f5d928b0a00206a01d4e7a2-eceb4ba32f5d89c10a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe[:</nobr>​<nobr>DATA]</nobr></a>, see <a class="xref" href="46f5c820f7e84b75.htm#ID_4ddf4dd92bb5457e0a001ae7673d3bd8-e740bb56c9316de40a002019016c0552-en-US">"AM/AM"</a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

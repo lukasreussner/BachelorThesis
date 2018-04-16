@@ -1,0 +1,26 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Troubleshooting|Miscellaneous Troubleshooting Hints" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>The transducer factors/limit lines applied to my measurement are different to those displayed in the Transducer/Lines dialog box</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_09a367d19cf98c360a001ae7672b9471-f8151fc7240e4b6a0a00206a0067db39-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="9d910e570dd84690.htm">Troubleshooting</a> &gt; <a class="chm-breadcrumb" href="5d59c27a1c4a4fca.htm">Miscellaneous Troubleshooting Hints</a> &gt; <span class="chm-breadcrumb">The transducer factors/limit lines applied to my measurement are different to those displayed in the Transducer/Lines dialog box</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_09a367d19cf98c360a001ae7672b9471-f8151fc7240e4b6a0a00206a0067db39-en-US">
+</a>The transducer factors/limit lines applied to my measurement are different to those displayed in the <span style="font-weight: bold">Transducer</span>/<span style="font-weight: bold">Lines</span> dialog box</div><p>If a transducer file was in use when the save set was stored (with the save item "Current Settings" only) it is anticipated that these transducer values should remain valid after every recall of that save set. Thus, even if the transducer file is changed and the original save set file is recalled later, the <em>originally stored</em> transducer values are recalled and applied to the measurement. In the "Transducer" dialog box, however, the <em>changed</em> transducer file values are displayed as no updated transducer file was loaded.</p><p>The same applies to limit line settings.</p><p>If you want to apply the changed transducer values after recalling the save set you must force the application to reload the transducer file. To do so, simply open the "Edit Transducer" dialog box (see <a class="xref" href="275b7b98a93d4a84.htm#ID_fbd2b89d8fde8c9b0a00206a00643b45-0da5c8e9b80e6baa0a001ae7054bbb70-en-US">"Transducer Settings"</a>) and toggle the "X-Axis" option from "lin" to "log" and back. Due to that change, the transducer file is automatically reloaded, and the changed transducer values are applied to the current measurement. Now you can create a new save set with the updated transducer values.</p><p>Similarly, if you want to apply the changed limit values after recalling the save set you must force the application to reload the limit file. To do so, simply open the "Edit Limit Line" dialog box (see <a class="xref" href="5891cc6acef540ad.htm#ID_e3fee96b2b78c5fc0a00206a01d63860-e4804dcc2b78c5fc0a00206a010f36f4-en-US">"Limit Line Settings and Functions"</a>) and toggle the "Y-Axis" unit. Due to that change, the limit line file is automatically reloaded, and the changed limit values are applied to the current measurement. Now a new save set with the updated limit values can be created.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

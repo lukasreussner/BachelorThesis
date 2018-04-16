@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Amplitude and Vertical Axis Configuration|Amplitude Settings|Input Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Impedance
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeInputImpedanceValue">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeInputImpedancePadType">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogBasebandInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogBasebandInputImpedanceValue">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogBasebandInputImpedancePadType">
+</meta>
+        <meta name="topic-id" value="992">
+</meta>
+        <meta name="topic-id" value="993">
+</meta>
+        <meta name="topic-id" value="994">
+</meta>
+        <meta name="topic-id" value="995">
+</meta>
+        <meta name="topic-id" value="996">
+</meta>
+        <meta name="topic-id" value="997">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d844b5a72301285f0a00206a00d10652-8c7fdafdd9a3b37e0a001ae708057e4e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="4dc72d92b87a4ee9.htm">Data Input and Output</a> &gt; <a class="chm-breadcrumb" href="2a84fad068b747b6.htm">Input Source Settings</a> &gt; <a class="chm-breadcrumb" href="54a2d17ac91941d4.htm">Radio Frequency Input</a> &gt; <span class="chm-breadcrumb">Impedance</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1312">
+</a><div class="function_heading"><a name="ID_d844b5a72301285f0a00206a00d10652-8c7fdafdd9a3b37e0a001ae708057e4e-en-US">
+</a>Impedance</div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW has an internal impedance of 50<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>. However, some applications use other impedance values. In order to match the impedance of an external application to the impedance of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, an <em>impedance matching pad</em> can be inserted at the input. If the type and impedance value of the used matching pad is known to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, it can convert the measured units accordingly so that the results are calculated correctly.</p><p>(See <a class="xref" href="6a4e851d0383450a.htm#ID_809bde6205305f050a00206a011056b0-ae4a67e705305f050a00206a01ab427c-en-US">"Reference Level"</a>).</p><p>This function is not available for input from the optional Digital Baseband Interface. Not all settings are supported by all R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW applications.</p><p>The impedance conversion does not affect the level of the output signals (such as IF, video, demod, digital I/Q output)</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"50<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>"</p></td><td class="function_col_right"><p>(Default:) no conversion takes place</p></td></tr><tr><td class="function_col_left" valign="top"><p>"75<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>"</p></td><td class="function_col_right"><p>The 50 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> input impedance is transformed to a higher impedance using a 75 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> adapter of the selected "Pad Type": "Series-R" (default) or "MLP" (Minimum Loss Pad)</p></td></tr><tr><td class="function_col_left" valign="top"><p>"User"</p></td><td class="function_col_right"><p>The 50 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> input impedance is transformed to a user-defined impedance value according to the selected "Pad Type": "Series-R" (default) or "MLP" (Minimum Loss Pad)</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="c3a070bd19534621.htm#ID_00e764d1d3ec3cef0a001ae76ad70806-c76a660fd3ec3c140a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>IMPedance</nobr></a></p><p><a class="xref" href="47f00115456f4231.htm#ID_185e9a51d3ec3e850a001ae760b1cba1-bf79f5f6d3ec3d7c0a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>IMPedance:</nobr>​<nobr>PTYPe</nobr></a></p><p>For Analog Baseband input:</p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

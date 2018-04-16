@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Contents of the Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>STATus:QUEStionable:LIMit Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_955968b2e92826250a00206a01956d1d-88f4982be3f269b30a00206a00ae5091-en-US;ID_ad7655b92f3111de847b9d8bd5a95c88-88f4982be3f269b30a00206a00ae5091-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="20b40c28f6194536.htm">Contents of the Status Registers</a> &gt; <span class="chm-breadcrumb">STATus:QUEStionable:LIMit Register</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">STATus:QUEStionable:LIMit Register</div><a name="kanchor2801">
+</a><p>The STATus:QUEStionable:LIMit register contains information about the results of a limit check when you are working with limit lines.</p><p>A separate LIMit register exists for each active channel and for each window.</p><p>You can read out the register with <a class="xref" href="22bc98dab3d54390.htm#ID_233babd5a0b611e0a7e0c2ad6d046cb6-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>LIMit&lt;n&gt;:</nobr>​<nobr>CONDition?</nobr></a> or <a class="xref" href="7db3e9e591d9410d.htm#ID_7103c228d0c5fa360a710a9201f9eba5-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>LIMit&lt;n&gt;[:</nobr>​<nobr>EVENt]?</nobr></a>.</p><div class="block"><a name="ID_ad7655b92f3111de847b9d8bd5a95c88-88f4982be3f269b30a00206a00ae5091-en-US">
+</a><span class="table-caption">Meaning of the bits used in the STATus:QUEStionable:LIMit register</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>LIMit 1 FAIL</p><p>This bit is set if limit line 1 is violated.</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>LIMit 2 FAIL</p><p>This bit is set if limit line 2 is violated.</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>LIMit 3 FAIL</p><p>This bit is set if limit line 3 is violated.</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>LIMit 4 FAIL</p><p>This bit is set if limit line 4 is violated.</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>LIMit 5 FAIL</p><p>This bit is set if limit line 5 is violated.</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>LIMit 6 FAIL</p><p>This bit is set if limit line 6 is violated.</p></td></tr><tr class="oddrow"><td valign="top"><p>6</p></td><td valign="top"><p>LIMit 7 FAIL</p><p>This bit is set if limit line 7 is violated.</p></td></tr><tr class="evenrow"><td valign="top"><p>7</p></td><td valign="top"><p>LIMit 8 FAIL</p><p>This bit is set if limit line 8 is violated.</p></td></tr><tr class="oddrow"><td valign="top"><p>8 to 14</p></td><td valign="top"><p>Unused</p></td></tr><tr class="evenrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always 0.</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

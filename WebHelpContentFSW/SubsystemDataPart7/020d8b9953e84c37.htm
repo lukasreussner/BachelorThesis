@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Remote Control Commands for Amplifier Measurements|Analyzing Results|Configuring Traces" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:MODE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_bc439427f583a56a0a001ae7334dd6e7-05530a28f583a3f30a001ae77dfe1998-en-US;ID_e6f874c316b4651e0a001ae7779c2ac3-05530a28f583a3f30a001ae77dfe1998-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/020d8b9953e84c37.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="9d0828df6bce4ba4.htm">Remote Control Commands for Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="3ab745574f9f4075.htm">Analyzing Results</a> &gt; <a class="chm-breadcrumb" href="b314f6242231421c.htm">Configuring Traces</a> &gt; <span class="chm-breadcrumb">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:MODE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_bc439427f583a56a0a001ae7334dd6e7-05530a28f583a3f30a001ae77dfe1998-en-US">
+</a><span class="bold">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:MODE </span>&lt;Trace&gt;<br/></div><div class="rcdescription"><p>This command selects the traces to be displayed in the graphical result displays.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;t&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Trace</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Trace&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Available traces depend on the result display. See table below for details.</p><span class="bold">BBI<br/></span><p>Selects the trace showing data recorded on the baseband I channel.</p><span class="bold">BLANk<br/></span><p>Turns off the trace.</p><span class="bold">BBPower<br/></span><p>Selects the trace showing the combined data of the I and Q channel.</p><span class="bold">BBQ<br/></span><p>Selects the trace showing data recorded on the baseband Q channel.</p><span class="bold">MODel<br/></span><p>Selects the trace showing the modeled signal.</p><span class="bold">REFerence<br/></span><p>Selects the trace showing the reference signal.</p><span class="bold">RF<br/></span><p>Selects the trace showing the measured signal recorded on the RF input.</p><span class="bold">WRIT<br/></span><p>Selects the clear write trace.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>e.g. for the AM/AM result display:</p><span class="commandline">DISP:WIND:TRAC1:MODE RF</span><br/><span class="commandline">DISP:WIND:TRAC2:MODE MOD</span><br/><p>Displays the measured and the modeled signal.</p><p>e.g. for the Spectrum EVM result display:</p><span class="commandline">DISP:WIND:TRAC1:MODE RF</span><br/><span class="commandline">DISP:WIND:TRAC2:MODE BLAN</span><br/><p>Displays the measured signal and hides the modeled signal.</p></td></tr></table><div class="block"><a name="ID_e6f874c316b4651e0a001ae7779c2ac3-05530a28f583a3f30a001ae77dfe1998-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Result display</p></th><th valign="top"><p>Supported traces</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>AM/AM</p></td><td valign="top"><p>RF (always trace 1)</p><p>MODel (always trace 2)</p><p>BLANk (for both traces)</p></td></tr><tr class="evenrow"><td valign="top"><p>AM/PM</p></td><td valign="top"><p>RF (always trace 1)</p><p>MODel (always trace 2)</p><p>BLANk (for both traces)</p></td></tr><tr class="oddrow"><td valign="top"><p>Gain Compression</p></td><td valign="top"><p>RF (always trace 1)</p><p>MODel (always trace 2)</p><p>BLANk (for both traces)</p></td></tr><tr class="evenrow"><td valign="top"><p>Magnitude Capture</p><p>(RF, I and Q)</p></td><td valign="top"><p>WRITe (always trace 1)</p></td></tr><tr class="oddrow"><td valign="top"><p>PAE Input Power</p></td><td valign="top"><p>WRITe (always trace 1)</p></td></tr><tr class="evenrow"><td valign="top"><p>PAE Time</p></td><td valign="top"><p>WRITe (always trace 1)</p></td></tr><tr class="oddrow"><td valign="top"><p>Power vs Time</p></td><td valign="top"><p>WRITe (always trace 1)</p></td></tr><tr class="evenrow"><td valign="top"><p>Raw EVM</p></td><td valign="top"><p>REFerence (always trace 1)</p><p>MODel (always trace 2)</p><p>BLANk (for both traces)</p></td></tr><tr class="oddrow"><td valign="top"><p>Spectrum EVM</p></td><td valign="top"><p>REFerence (always trace 1)</p><p>MODel (always trace 2)</p><p>BLANk (for both traces)</p></td></tr><tr class="evenrow"><td valign="top"><p>Spectrum FFT RF</p></td><td valign="top"><p>RF (always trace 1)</p><p>MODel (always trace 2)</p><p>REFerence (always trace 3)</p><p>BLANk (for all three traces)</p></td></tr><tr class="oddrow"><td valign="top"><p>Spectrum FFT I</p></td><td valign="top"><p>WRITe (always trace 1)</p></td></tr><tr class="evenrow"><td valign="top"><p>Spectrum FFT Q</p></td><td valign="top"><p>WRITe (always trace 1)</p></td></tr><tr class="oddrow"><td valign="top"><p>Time Domain</p></td><td valign="top"><p>RF (always trace 1)</p><p>MODel (always trace 2)</p><p>REFerence (always trace 3)</p><p>BBI (always trace 4)</p><p>BBQ (always trace 5)</p><p>BBP (always trace 6)</p><p>BLANk (for all traces)</p></td></tr></tbody></table></div></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

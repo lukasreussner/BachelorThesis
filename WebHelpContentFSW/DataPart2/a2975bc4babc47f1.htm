@@ -1,0 +1,73 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Trace Configuration|Standard Traces|Trace Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Detector
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTraceDetector">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTraceDetector">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTraceDetector">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTraceDetector">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTraceAutoDetector">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTraceDetector">
+</meta>
+        <meta name="topic-id" value="2858">
+</meta>
+        <meta name="topic-id" value="2859">
+</meta>
+        <meta name="topic-id" value="2860">
+</meta>
+        <meta name="topic-id" value="2861">
+</meta>
+        <meta name="topic-id" value="2862">
+</meta>
+        <meta name="topic-id" value="2863">
+</meta>
+        <meta name="topic-id" value="2864">
+</meta>
+        <meta name="topic-id" value="2865">
+</meta>
+        <meta name="topic-id" value="2866">
+</meta>
+        <meta name="topic-id" value="2867">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e78d699b2b6b40710a00206a00b5a86f-b390441f2b6b40710a00206a0045244a-en-US;ID_fe329e744a9c11e2954ab592150b9152-b390441f2b6b40710a00206a0045244a-en-US;ID_6c43b8e1b277d4ec0a710a310099de62-b390441f2b6b40710a00206a0045244a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="449dc0ce4ad74ae0.htm">Trace Configuration</a> &gt; <a class="chm-breadcrumb" href="d5a936460e4d4bf6.htm">Standard Traces</a> &gt; <a class="chm-breadcrumb" href="18e2809c4d044926.htm">Trace Settings</a> &gt; <span class="chm-breadcrumb">Detector</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2205">
+</a><a name="kanchor2206">
+</a><a name="kanchor2207">
+</a><div class="function_heading"><a name="ID_e78d699b2b6b40710a00206a00b5a86f-b390441f2b6b40710a00206a0045244a-en-US">
+</a>Detector</div><p>Defines the trace detector to be used for trace analysis.</p><p>For details see <a class="xref" href="63f5b5bec531405f.htm#ID_d0c00b8b2894a1eb0a710a310159407f-54f401b130098dc30a001ae71efaf589-en-US">"Mapping Samples to sweep Points with the Trace Detector"</a>.</p><p><b><a name="ID_fe329e744a9c11e2954ab592150b9152-b390441f2b6b40710a00206a0045244a-en-US">
+</a>Note:</b> For EMI measurements, the trace detector is used for the initial peak search only, not for the final test. The detector for the final test is configured in the EMI marker settings, see <a class="xref" href="222010c1acce4f5f.htm#ID_897a78cb8f9ab5910a00206a0104bd86-e2264ba9ad4233020a00201901671d4f-en-US">"EMI Marker Configuration"</a>.<br/></p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto"</p></td><td class="function_col_right"><p>Selects the optimum detector for the selected trace and filter mode. This is the default setting.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Type"</p></td><td class="function_col_right"><p>Defines the selected detector type.</p><p><b><a name="ID_6c43b8e1b277d4ec0a710a310099de62-b390441f2b6b40710a00206a0045244a-en-US">
+</a>Note:</b> If the EMI (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K54) measurement option is installed and the filter type "CISPR" is selected, additional detectors are available, even if EMI measurement is not active.<br/>For details see <a class="xref" href="8f883fd0d18d4daa.htm#ID_3cc0c39f768556420a00206a01fb1a24-e2264ba9ad4233020a00201901671d4f-en-US">"Detectors and Dwell Time"</a>.<br/></p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="9a7d3e9a29544192.htm#ID_110f8655336bb4660a00206a00cda1d7-50ba8388062c8ca50a00206a007eed63-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>][WINDow&lt;n&gt;:</nobr>​<nobr>]DETector&lt;t&gt;[:</nobr>​<nobr>FUNCtion]</nobr></a></p><p><a class="xref" href="e026d086721f4dc7.htm#ID_2412c28c336c32500a00206a005dcabe-28841ab5062da50a0a00206a00c5d312-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>][WINDow&lt;n&gt;:</nobr>​<nobr>]DETector&lt;t&gt;[:</nobr>​<nobr>FUNCtion]:</nobr>​<nobr>AUTO</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

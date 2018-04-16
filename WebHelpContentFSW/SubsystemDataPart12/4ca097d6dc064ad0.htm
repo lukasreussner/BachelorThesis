@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>VSA in MSRA/MSRT Operating Mode</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a28fb9cc5e6f49a40a00206a009b64f7-184c8906411153460a00206a01532735-en-US;ID_6348ad7f74968ea70a710a3100b5a25b-184c8906411153460a00206a01532735-en-US;ID_51b5963f74bcb66f0a002019000afc34-184c8906411153460a00206a01532735-en-US;ID_2f6d49e60de45b990a00201900cb5908-184c8906411153460a00206a01532735-en-US;ID_381d69f16d490a250a0020190077e08d-184c8906411153460a00206a01532735-en-US;ID_c8ced0c16814cc2a0a002019014c2ad0-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">VSA in MSRA/MSRT Operating Mode</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor363">
+</a><a name="kanchor364">
+</a><div class="chm-chaptertitle">VSA in MSRA/MSRT Operating Mode</div><p>The R&amp;S FSW VSA application can also be used to analyze data in MSRA and MSRT operating mode. The main difference between the two modes is that in MSRA mode, an I/Q analyzer captures data, while in MSRT mode, a real-time measurement is performed to capture data.</p><p>In MSRA/MSRT operating mode, only the MSRA/MSRT Master actually captures data; the MSRA/MSRT applications receive an extract of the captured data for analysis, referred to as the <b>application data</b>. For the R&amp;S FSW VSA applicationin MSRA/MSRT operating mode, the application data range is defined by the same settings used to define the signal capture in Signal and Spectrum Analyzer mode. In addition, a capture offset can be defined, i.e. an offset from the start of the captured data to the start of the application data for vector signal analysis. The "Capture Buffer" displays show the application data of the R&amp;S FSW VSA application in MSRA/MSRT mode.</p><div class="block"><div class="subtitle"><a name="ID_6348ad7f74968ea70a710a3100b5a25b-184c8906411153460a00206a01532735-en-US">
+</a>Data coverage for each active application</div></div><a name="kanchor365">
+</a><a name="kanchor366">
+</a><a name="kanchor367">
+</a><p>Generally, if a signal contains multiple data channels for multiple standards, separate applications are used to analyze each data channel. Thus, it is of interest to know which application is analyzing which data channel. The MSRA/MSRT Master display indicates the data covered by each application, restricted to the channel bandwidth used by the corresponding standard, by vertical blue lines labeled with the application name. The R&amp;S FSW VSA application supports several standards, but the standard used by the currently analyzed data is not known. Thus, the "Symbol Rate" defined in the "Signal Description" settings is used to approximate the channel bandwidth.</p><div class="block"><div class="subtitle"><a name="ID_51b5963f74bcb66f0a002019000afc34-184c8906411153460a00206a01532735-en-US">
+</a>Analysis interval</div></div><p>However, the individual result displays of the application need not analyze the complete data range. The data range that is actually analyzed by the individual result display is referred to as the <b>analysis interval</b>.</p><p>In the R&amp;S FSW VSA application, the analysis interval is automatically determined according to the evaluation range or result range settings, as in Signal and Spectrum Analyzer mode. The currently used analysis interval (in seconds, related to capture buffer start) is indicated in the window header for each result display.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_2f6d49e60de45b990a00201900cb5908-184c8906411153460a00206a01532735-en-US">
+</a>Exception: Equalizer</div><a name="kanchor368">
+</a><p>In the "Equalizer", displays do not indicate the analysis interval in MSRA/MSRT mode.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_381d69f16d490a250a0020190077e08d-184c8906411153460a00206a01532735-en-US">
+</a>Analysis line</div></div><a name="kanchor369">
+</a><div class="block"><p>A frequent question when analyzing multi-standard signals is how each data channel is correlated (in time) to others. Thus, an analysis line has been introduced. The analysis line is a common time marker for all MSRA slave applications. It can be positioned in any MSRA slave application or the MSRA Master and is then adjusted in all other slave applications. Thus, you can easily analyze the results at a specific time in the measurement in all slave applications and determine correlations.</p><p>If the marked point in time is contained in the analysis interval of the slave application, the line is indicated in all time-based result displays, such as time, symbol, slot or bit diagrams. By default, the analysis line is displayed, however, it can be hidden from view manually. In all result displays, the "AL" label in the window title bar indicates whether the analysis line lies within the analysis interval or not:</p><div class="block"><ul class="list"><li value="1"><b>orange "AL"</b>: the line lies within the interval</li><li value="2"><b>white "AL"</b>: the line lies within the interval, but is not displayed (hidden)</li><li value="3"><b>no "AL"</b>: the line lies outside the interval</li></ul></div></div><div class="block" id="ID_c8ced0c16814cc2a0a002019014c2ad0-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8d8eb6c5680c33dc0a002019003f7832_1_--_--_PNG96Small.png" alt="" title=""/></div></div><p>For details on the MSRA operating mode, see <a class="xref" href="../../fsw_msra_help/Content/e12562f574b74ff8.htm">Applications and Operating Modes</a>. For details on the MSRT operating mode, see <a class="xref" href="../../fsw_real_help/Content/cf8b125396e04a14.htm">Applications and Operating Modes</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

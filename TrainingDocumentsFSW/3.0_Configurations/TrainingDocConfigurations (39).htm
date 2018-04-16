@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Amplitude and Vertical Axis Configuration|Amplitude Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Noise Cancellation
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWCDMASkIdMeasChannelPowerNoiseCore">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdMeasChannelPowerNoiseCoreFSPB">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdMeasChannelPowerNoiseCoreFSPB">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdMeasChannelPowerNoiseCoreFSPB">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerNoiseCore">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdACLRSetupNoiseState">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdACLRSetupNoiseState">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdACLRSetupNoiseState">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdACLRSetupNoiseState">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdMeasChannelPowerNoiseCoreFSPB">
+</meta>
+        <meta name="topic-id" value="257">
+</meta>
+        <meta name="topic-id" value="258">
+</meta>
+        <meta name="topic-id" value="259">
+</meta>
+        <meta name="topic-id" value="260">
+</meta>
+        <meta name="topic-id" value="261">
+</meta>
+        <meta name="topic-id" value="262">
+</meta>
+        <meta name="topic-id" value="263">
+</meta>
+        <meta name="topic-id" value="264">
+</meta>
+        <meta name="topic-id" value="265">
+</meta>
+        <meta name="topic-id" value="266">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c8a7f3630464d0900a00206a00a14770-bc56235d0464d0900a00206a00593471-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <a class="chm-breadcrumb" href="983910f48b5c4015.htm">Channel Power Configuration</a> &gt; <a class="chm-breadcrumb" href="afdc7529544e49ae.htm">General CP/ACLR Measurement Settings</a> &gt; <span class="chm-breadcrumb">Noise Cancellation</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor515">
+</a><a name="kanchor516">
+</a><a name="kanchor517">
+</a><a name="kanchor518">
+</a><a name="kanchor519">
+</a><a name="kanchor520">
+</a><div class="function_heading"><a name="ID_c8a7f3630464d0900a00206a00a14770-bc56235d0464d0900a00206a00593471-en-US">
+</a>Noise Cancellation</div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW can correct the results by removing the inherent noise of the analyzer, which increases the dynamic range.</p><p>In this case, a reference measurement of the inherent noise of the analyzer is carried out. The measured noise power is then subtracted from the power in the channel that is being analyzed (first active trace only).</p><p>The inherent noise of the instrument depends on the selected center frequency, resolution bandwidth and level setting. Therefore, the correction function is disabled whenever one of these parameters is changed. A disable message is displayed on the screen. To enable the correction function after changing one of these settings, activate it again. A new reference measurement is carried out.</p><p>Noise cancellation is also available in zero span.</p><p>Currently, noise cancellation is only available for the following trace detectors (see <a class="xref" href="a2975bc4babc47f1.htm#ID_e78d699b2b6b40710a00206a00b5a86f-b390441f2b6b40710a00206a0045244a-en-US">"Detector"</a>):</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">RMS</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Average</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Sample</li><li style="margin-bottom:0; padding-bottom:0;" value="4">Positive peak</li></ul></div>Remote command: <div class="rcclist_right"><p><a class="xref" href="c48f21143c98481b.htm#ID_f857148e2e2adbc90a00206a008d3aed-045f7b8021059c680a00206a0180c1a6-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>NCORrection</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2017 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

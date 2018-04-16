@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|Annex" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Formats for Returned Values: ASCII Format and Binary Format</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d3cb362553c02aa80a00206a009fa2e9-4bb2538753c02aa80a00206a008089fc-en-US;shiv_6a_remote_commands_8422-4bb2538753c02aa80a00206a008089fc-en-US;shiv_6a_remote_commands_8429-4bb2538753c02aa80a00206a008089fc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="d1718328e36461.htm">Annex</a> &gt; <span class="chm-breadcrumb">Formats for Returned Values: ASCII Format and Binary Format</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor479">
+</a><a name="kanchor480">
+</a><a name="kanchor481">
+</a><div class="chm-chaptertitle">Formats for Returned Values: ASCII Format and Binary Format</div><p>When trace data is retrieved using the <span class="command">TRAC:DATA</span> or <span class="command">TRAC:IQ:DATA</span> command, the data is returned in the format defined using the <a class="xref" href="c9cf34a38c724856.htm#ID_bd36634e7115e30a0a00206a007ce077-ad068e202055e5090a00206a00318951-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>FORMat[:</nobr>​<nobr>DATA]</nobr></a>. The possible formats are described here.</p><div class="block"><ul class="list"><li value="1">ASCII Format (FORMat ASCII):<br/>The data is stored as a list of comma-separated values (CSV) of the measured values in floating point format.</li><li value="2">Binary Format (FORMat REAL,32):<br/>The data is stored as binary data (Definite Length Block Data according to IEEE 488.2), each measurement value being formatted in 32-Bit IEEE 754 Floating-Point-Format.<br/>The schema of the result string is as follows:<br/><span class="command">#41024&lt;value1&gt;&lt;value2&gt;…&lt;value n&gt;</span> with</li></ul></div><div class="block"><a name="shiv_6a_remote_commands_8422-4bb2538753c02aa80a00206a008089fc-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>#4</p></td><td valign="top"><p>Number of digits (= 4 in the example) of the following number of data bytes</p></td></tr><tr class="evenrow"><td valign="top"><p>1024</p></td><td valign="top"><p>Number of following data bytes (= 1024 in the example)</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;Value&gt;</p></td><td valign="top"><p>4-byte floating point value</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>Reading out data in binary format is quicker than in ASCII format. Thus, binary format is recommended for large amounts of data.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

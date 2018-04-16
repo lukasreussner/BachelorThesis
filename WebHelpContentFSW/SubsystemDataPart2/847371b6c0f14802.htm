@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Basics on Input from I/Q Data Files</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b3e65019496b664d0a710a3101a42822-69ef0491496b941f0a002019002ce375-en-US;ID_dec232113929b8a10a710ade00d3b0f8-69ef0491496b941f0a002019002ce375-en-US;ID_61a9a0b63ef6dfb90a710ade001f81b6-69ef0491496b941f0a002019002ce375-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="6bca5f79d2e8456b.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Basics on Input from I/Q Data Files</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor257">
+</a><a name="kanchor258">
+</a><a name="kanchor259">
+</a><div class="chm-chaptertitle">Basics on Input from I/Q Data Files</div><p>The I/Q data to be evaluated in a particular R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW application can not only be captured by the application itself, it can also be loaded from a file, provided it has the correct format. The file is then used as the input source for the application.</p><p>For example, you can capture I/Q data using the I/Q Analyzer application, store it to a file, and then analyze the signal parameters for that data later using the Pulse application (if available).</p><p>The I/Q data must be stored in a format with the file extension <span class="filename">.iq.tar</span>. For a detailed description see <a class="xref" href="093e11648f9c46e1.htm#ID_b8eed8e37ba899de0a00206a00e743a8-2e8d3b527ba899de0a00206a010acc15-en-US">"I/Q Data File Format (iq-tar)"</a>.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>An application note on converting Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz I/Q data files is available from the Rohde &amp; Schwarz website:</p><div class="block"><p><a href="http://www.rohde-schwarz.com/appnote/1EF85" class="link" target="_new">1EF85: Converting R&amp;S I/Q data files</a></p></div></td></tr></table></div></div><p>As opposed to importing data from an I/Q data file using the import functions provided by some R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW applications (e.g. the I/Q Analyzer or the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW VSA application), the data is not only stored temporarily in the capture buffer, where it overwrites the current measurement data and is in turn overwritten by a new measurement. Instead, the stored I/Q data remains available as input for any number of subsequent measurements. Furthermore, the (temporary) data import requires the current measurement settings in the current application to match the settings that were applied when the measurement results were stored (possibly in a different application). When the data is used as an input source, however, the data acquisition settings in the current application (attenuation, center frequency, measurement bandwidth, sample rate) can be ignored. As a result, these settings cannot be changed in the current application. Only the measurement time can be decreased, in order to perform measurements on an extract of the available data (from the beginning of the file) only.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>For I/Q data which was captured as segmented data (see <a class="xref" href="05659574458d424a.htm#ID_9dea3d6b27d1e1fe0a001ae7273e1335-77f58b7b6bc89ad60a00206a008ec9e8-en-US">"Segmented Data Capturing"</a>), the timing information for the captured segments is also stored during export. It can then be retrieved when the I/Q data file is used as an input source in order to reproduce results that are consistent with the original measurement.</p></td></tr></table></div></div><p>When using input from an I/Q data file, the [RUN SINGLE] function starts a single measurement (i.e. analysis) of the stored I/Q data, while the [RUN CONT] function repeatedly analyzes the same data from the file.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><div class="tip_title">Sample iq.tar files</div><p>If you have the optional R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW VSA application (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K70), some sample <span class="filename">iq.tar</span> files are provided in the <span class="filename">C:/R_S/Instr/user/vsa/DemoSignals</span> directory on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_61a9a0b63ef6dfb90a710ade001f81b6-69ef0491496b941f0a002019002ce375-en-US">
+</a>Pre-trigger and post-trigger samples</div></div><p>In applications that use pre-triggers or post-triggers, if no pre-trigger or post-trigger samples are specified in the I/Q data file, or too few trigger samples are provided to satisfy the requirements of the application, the missing pre- or post-trigger values are filled up with zeros. Superfluous samples in the file are dropped, if necessary. For pre-trigger samples, values are filled up or omitted at the beginning of the capture buffer, for post-trigger samples, values are filled up or omitted at the end of the capture buffer.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

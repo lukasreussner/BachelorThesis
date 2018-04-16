@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Processing Data from the Analog Baseband Interface" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Average Power Consumption</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ebffc899e8398efc0a001ae722e11052-047f705f96372d670a0020190131cbaa-en-US;ID_e19bf381e8398efc0a001ae71cb57393-047f705f96372d670a0020190131cbaa-en-US;ID_787231dee844b90d0a001ae7181bbbe0-047f705f96372d670a0020190131cbaa-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="e991833b0aad4467.htm">Processing Data from the Analog Baseband Interface</a> &gt; <span class="chm-breadcrumb">Average Power Consumption</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Average Power Consumption</div><p>The Analog Baseband interface can be used to capture two different signals: one proportional to the voltage and one proportional to the current of a DUT. The <em>average power consumption</em> can then be calculated from the captured I/Q signal. To avoid processing large amounts of I/Q data, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW provides an internal calculation of the average power consumption for remote operation according to the following equation:</p><div class="block" id="ID_e19bf381e8398efc0a001ae71cb57393-047f705f96372d670a0020190131cbaa-en-US"><div class="graphic"><img border="0" src="Resources/Images/img01a8f10be82e886f0a001ae76659554a_1_--_--_PNG96.png" alt="" title=""/></div></div><p><em>P(n) = A * V(n) * I(n) - B * V(n) * V(n)</em></p><p>with:</p><div class="block"><ul class="list"><li value="1">V(n): I data of the instrument</li><li value="2">I(n): Q data of the instrument</li><li value="3">A: conversion factor A</li><li value="4">B: conversion factor B</li></ul></div><div class="block"><div class="subtitle"><a name="ID_787231dee844b90d0a001ae7181bbbe0-047f705f96372d670a0020190131cbaa-en-US">
+</a>Remote commands:</div></div><p><a class="xref" href="0cb88101c3e04620.htm#ID_1de6eef5e81f38620a001ae77b530dba-ca02e166e81f38620a001ae709aa6d97-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>APCon[:</nobr>​<nobr>STATe]</nobr></a></p><p><a class="xref" href="19a811bb460146dc.htm#ID_1de6eef5e81f38620a001ae77b530dba-3b027d58e83a7fe70a001ae7693b6143-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>APCon:</nobr>​<nobr>A</nobr></a></p><p><a class="xref" href="9909a7d8c7494a35.htm#ID_1de6eef5e81f38620a001ae77b530dba-42589b89e83dcac40a001ae737d3e741-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>APCon:</nobr>​<nobr>B</nobr></a></p><p><a class="xref" href="3e5d564835234f46.htm#ID_1de6eef5e81f38620a001ae77b530dba-15783676e83eb0a10a001ae730eef506-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>APCon:</nobr>​<nobr>RESult?</nobr></a></p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

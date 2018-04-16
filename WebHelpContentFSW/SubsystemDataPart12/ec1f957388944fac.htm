@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Examples|Measurement Example 1: Continuous QPSK Signal" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Averaging Several Evaluations</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_25a5f0752ad553bd0a710a3101a6eeb3-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_752d7126a9ee0fbf0a00206a00aa2b4a-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_fb1dd646a9ee0fbf0a00206a00000ecb-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_f6675f20a9ee0fbf0a00206a004f1549-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_d3738e4da9ee0fbf0a00206a0055fabe-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_7442c6d52b1e08080a00206a01662a4b-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_18cb588ea9ee0fbf0a00206a01832018-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_2c1d40b7a9ee0fbf0a00206a00b95f3d-7c60cc67410fd4a60a00206a01c84e65-en-US;ID_445a2cf2a9ee0fbf0a00206a001bb1a7-7c60cc67410fd4a60a00206a01c84e65-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ddfa726bcfd3409b.htm">Measurement Examples</a> &gt; <a class="chm-breadcrumb" href="c1ef7c4cdf114587.htm">Measurement Example 1: Continuous QPSK Signal</a> &gt; <span class="chm-breadcrumb">Averaging Several Evaluations</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Averaging Several Evaluations</div><p>By default, all measurement windows are displayed with a single trace, which is the Clear/Write trace. This trace displays the result of the current evaluation, i.e. the highlighted blue area from the example in <a class="xref" href="c4429afeb5dd4b68.htm#ID_4441f1022ad553ec0a710a3100814c78-7c60cc67410fd4a60a00206a01c84e65-en-US">"Navigating Through the Capture Buffer"</a>. However, for most real-world measurement tasks, you need to obtain a result that is averaged over a certain number of evaluations, or a worst-case result of a certain number of evaluations. This section explains how to achieve this.</p><div class="block"><a name="ID_752d7126a9ee0fbf0a00206a00aa2b4a-7c60cc67410fd4a60a00206a01c84e65-en-US">
+</a><div class="procedure_title">To evaluate EVM vs. Time</div><div><ol class="procedure"><li id="ID_fb1dd646a9ee0fbf0a00206a00000ecb-7c60cc67410fd4a60a00206a01c84e65-en-US" value="1"><p>Configure window 1 such that it displays the EVM versus time measurement (Source: "Error Vector", Result Type: "EVM", see <a class="xref" href="b7bdaca16a544e2f.htm#ID_acc6f25f2ad5540b0a710a3100c35c97-7c60cc67410fd4a60a00206a01c84e65-en-US">"Changing the Display Configuration"</a>). Select the window to set the focus on it.</p></li><li id="ID_f6675f20a9ee0fbf0a00206a004f1549-7c60cc67410fd4a60a00206a01c84e65-en-US" value="2"><p>To display the trace averaged over several measurements, or the maximum hold trace over several measurements, press the [TRACE] key.</p></li><li id="ID_d3738e4da9ee0fbf0a00206a0055fabe-7c60cc67410fd4a60a00206a01c84e65-en-US" value="3"><p>Add further traces by pressing the [TRACE] key and then either using the "Trace 2/3..." or the "Trace Config" softkeys.</p><p>Set the second trace to "Average" and the third trace to "Max Hold".</p><p>Note that the configured traces appear in the window title.</p><div class="block" id="ID_7442c6d52b1e08080a00206a01662a4b-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img5c8a3c6a2b0f26ab0a00206a00c925b6_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Several traces in one window</div></div></li><li id="ID_18cb588ea9ee0fbf0a00206a01832018-7c60cc67410fd4a60a00206a01c84e65-en-US" value="4"><p>Press [Run Single] again.</p><p>The current capture buffer is evaluated for this trace setup. In the channel information bar you can see the number of completed evaluations ("Stat Count").</p><div class="block" id="ID_2c1d40b7a9ee0fbf0a00206a00b95f3d-7c60cc67410fd4a60a00206a01c84e65-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8e532e4ca9eb2cae0a00206a01de8782_1_--_--_PNG96Small.png" alt="" title=""/></div></div></li><li id="ID_445a2cf2a9ee0fbf0a00206a001bb1a7-7c60cc67410fd4a60a00206a01c84e65-en-US" value="5"><p>To change the number of evaluations, press the [SWEEP] key and select "Statistic Count Config".</p><p>Select "Manual" and enter the desired number of evaluations, e.g. 12. When you press [Run Single], the VSA application will capture I/Q data until 12 evaluations are completed.</p></li></ol></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

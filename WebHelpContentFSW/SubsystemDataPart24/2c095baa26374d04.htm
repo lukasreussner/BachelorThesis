@@ -1,0 +1,118 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|Remote Commands to Perform Measurements in MSRA Mode" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Analyzing MSR Signals</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b33464f94f4a53670a00201901313bf7-7a1157c44f4a53670a0020190157e106-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="8d95166c7a6548c9.htm">Remote Commands to Perform Measurements in MSRA Mode</a> &gt; <span class="chm-breadcrumb">Programming Example: Analyzing MSR Signals</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor474">
+</a><div class="chm-chaptertitle">Programming Example: Analyzing MSR Signals</div><p>The following programming example demonstrates the use of the most important remote commands in MSRA mode. The example is based on the measurement example for manual operation described in <a class="xref" href="2343778ab93b4412.htm#ID_fa130b386721c4b60a00206a00da913c-eaf613766721c4b60a00206a01752cd7-en-US">"Measurement Example: Analyzing MSR Signals"</a>.</p><pre class="verbatim" xml:space="preserve">//Preset
+*RST
+
+//Select Trace data output format: ASCII
+FORM ASCII
+
+//Switch to MSRA mode
+INST:MODE MSR
+
+//Set Sequencer in single mode
+INIT:SEQ:MODE SING
+
+//Preconfigure MSRA Master for general I/Q data acquisition
+
+//Set initial center frequency
+FREQ:CENT 1000MHz
+
+//Set Level
+DISP:WIND:TRAC:Y:SCAL:RLEV 10 dBm
+
+//Set Trigger to External 1
+:TRIG:SOUR EXT
+
+//Set Sample Rate to 15MHz
+:TRACe:IQ:SRATe 15E6
+
+//Set Record Length to 1Msample -&gt; AQT 21 ms
+:TRACe:IQ:RLENgth 315000
+
+//Create new measurement channel for I/Q Analyzer
+INST:CRE IQ, 'IQ Analyzer'
+
+//Set initial center frequency
+FREQ:CENT 994.9 MHz
+
+//Set Sample Rate to 1MHz
+:TRACe:IQ:SRATe 1E6
+
+//Set Record Length to 1Msample -&gt; AQT 5 ms
+:TRACe:IQ:RLENgth 5000
+
+//Create measurement channel for 3GPP FDD BTS application
+INST:CRE BWCD, '3GPP FDD BTS'
+
+//Set initial center frequency
+FREQ:CENT 997.5MHz
+
+//Select Composite EVM vs slot in Window 1, EVM vs Chip in Window 3
+//Result Summary remains in Window 2 as default
+LAY:REPL:WIND '1',CEVM
+LAY:ADD:WIND? '2',BEL,EVMC
+//Result: new window is '5'
+
+//Meas all tabs with synchronisation in MSRA mode
+INIT:SEQ:IMM;*OPC?
+
+//Retrieve Results of IQ Analyzer
+INST:SEL 'IQ Analyzer'
+
+//Check for Rising edge
+:CALCulate:MARKer:X 1.14ms
+:CALCulate:MARKer:Y?
+:CALCulate:MARKer:X 1.156ms
+:CALCulate:MARKer:Y?
+
+//Retrieve Results from WCMDA
+INST:SEL '3GPP FDD BTS'
+
+//Retrieve Composite EVM results
+TRAC1:DATA? TRACe1
+
+//Select Slot No 1
+CDP:SLOT 1
+
+//Search Peak value of Marker in EVM vs Chip
+:CALC5:MARK1 ON
+:CALC5:MARK1:MAX:PEAK
+
+//Retrieve Chip and max EVM value
+:CALC5:MARK1:X?;Y?
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

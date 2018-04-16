@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Configuration|WLAN I/Q Measurement Configuration|Result Configuration|AM/AM Configuration|Scaling AM Result Displays" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Hysteresis Interval Upper/Lower</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDocsisSkIdYScalingHIUInner">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdYScalingHIUOuter">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdYScalingHILOuter">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdYScalingHILInner">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAMScalingHIUInner">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAMScalingHIUOuter">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAMScalingHILInner">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAMScalingHILOuter">
+</meta>
+        <meta name="topic-id" value="762">
+</meta>
+        <meta name="topic-id" value="764">
+</meta>
+        <meta name="topic-id" value="766">
+</meta>
+        <meta name="topic-id" value="768">
+</meta>
+        <meta name="topic-id" value="770">
+</meta>
+        <meta name="topic-id" value="772">
+</meta>
+        <meta name="topic-id" value="774">
+</meta>
+        <meta name="topic-id" value="776">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3ff49b3a07261fdd0a001ae7175fad84-56b301dd72fdaf7a0a001ae73513fd5d-en-US;ID_8b6162be72da25470a001ae779c68e41-56b301dd72fdaf7a0a001ae73513fd5d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3a844e7770fd4a7a.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2e3336f147004a28.htm">WLAN I/Q Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="4953073a1d22411d.htm">Result Configuration</a> &gt; <a class="chm-breadcrumb" href="19a43ae68861415a.htm">AM/AM Configuration</a> &gt; <a class="chm-breadcrumb" href="44acc66886634035.htm">Scaling AM Result Displays</a> &gt; <span class="chm-breadcrumb">Hysteresis Interval Upper/Lower</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_3ff49b3a07261fdd0a001ae7175fad84-56b301dd72fdaf7a0a001ae73513fd5d-en-US">
+</a><span style="font-weight: bold">Hysteresis Interval Upper/Lower</span></div><p>For automatic scaling based on hysteresis, the hysteresis intervals are defined here. Depending on whether either of the limits are fixed or not (see <a class="xref" href="7fd3eb5565f8483e.htm#ID_084878bc3540576f0a001ae779bbb4ab-98e0821472fd42b60a001ae724825f88-en-US">"Auto Fix Range"</a>), one or both limits are defined by a hysteresis value range.</p><p>This command is currently only supported for Amplitude Modulation measurements.</p><p>The hysteresis range is defined as a percentage of the currently displayed value range on the x-axis or y-axis.</p><div class="block"><span class="bold"><a name="ID_8b6162be72da25470a001ae779c68e41-56b301dd72fdaf7a0a001ae73513fd5d-en-US">
+</a>Example: </span><p>The currently displayed value range on the y-axis is 0 to 100. The upper limit is fixed by a maximum of 100. The lower hysteresis range is defined as -10% to +10%. If the minimum value in the current measurement drops below -10 or exceeds +10, the y-axis will be rescaled automatically, for example to [-10..+100] or [+10..+100], respectively.</p></div><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Upper"[(HIU)]</p></td><td class="function_col_right"><p>If the maximum value in the current measurement exceeds the specified range, the x-axis or y-axis is rescaled automatically.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Lower"[(HIL)]</p></td><td class="function_col_right"><p>If the minimum value in the current measurement exceeds the specified range, the x-axis or y-axis is rescaled automatically.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="f576085110484016.htm#ID_f9d1332cdd8219570a001ae7780f0e97-4b1ddc25dd8217730a001ae75c84d48a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;N&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>AUTO:</nobr>​<nobr>HYSTeresis:</nobr>​<nobr>LOWer:</nobr>​<nobr>UPPer </nobr></a></p><p><a class="xref" href="3eac5a15357f4e1e.htm#ID_6c54cdb9dd821b990a001ae70e2c79ad-8601e6b7dd8219f30a001ae75c84d48a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>AUTO:</nobr>​<nobr>HYSTeresis:</nobr>​<nobr>LOWer:</nobr>​<nobr>LOWer</nobr></a></p><p><a class="xref" href="8dadb4f84a6e4a94.htm#ID_2fa972b3dd821ddb0a001ae770661af5-28cdfbe5dd821c640a001ae75c84d48a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>AUTO:</nobr>​<nobr>HYSTeresis:</nobr>​<nobr>UPPer:</nobr>​<nobr>LOWer</nobr></a></p><p><a class="xref" href="4150b1d328cf4cc8.htm#ID_a1b03793dd82209b0a001ae730c20598-57e144e7dd821e970a001ae75c84d48a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>AUTO:</nobr>​<nobr>HYSTeresis:</nobr>​<nobr>UPPer:</nobr>​<nobr>UPPer</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

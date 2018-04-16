@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Remote Commands for TD-SCDMA Measurements|Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>STATus:QUEStionable:SYNC Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9be94381e13411e1bfcfc3aec8d7c1bc-c19c33856b7552fb0a00201900644fad-en-US;ID_9be94384e13411e1bfcfc3aec8d7c1bc-c19c33856b7552fb0a00201900644fad-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="7b571c192e99473d.htm">Remote Commands for TD-SCDMA Measurements</a> &gt; <a class="chm-breadcrumb" href="0a1f229fd36446c3.htm">Status Registers</a> &gt; <span class="chm-breadcrumb">STATus:QUEStionable:SYNC Register</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor681">
+</a><div class="chm-chaptertitle">STATus:QUEStionable:SYNC Register</div><p>The <span class="command">STATus:QUEStionable:SYNC</span> register contains application-specific information about synchronization errors or errors during pilot symbol detection.</p><div class="block"><a name="ID_9be94384e13411e1bfcfc3aec8d7c1bc-c19c33856b7552fb0a00201900644fad-en-US">
+</a><span class="table-caption">Status error bits in STATus:QUEStionable:SYNC register for TD-SCDMA applications</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit</p></th><th valign="top"><p>Definition</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>Not used.</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>Frame Sync failed</p><p>This bit is set when synchronization is not possible within the application.</p><p>Possible reasons:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Invalid frequency</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Invalid level</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Invalid scrambling code</li><li style="margin-bottom:0; padding-bottom:0;" value="4">Invalid max. number of MA shift cell</li><li style="margin-bottom:0; padding-bottom:0;" value="5">Invalid values for INVERT Q</li><li style="margin-bottom:0; padding-bottom:0;" value="6">Invalid signal at input</li></ul></div></td></tr><tr class="oddrow"><td valign="top"><p>2 to 14</p></td><td valign="top"><p>Not used.</p></td></tr><tr class="evenrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always 0.</p></td></tr></tbody></table></div><div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="7061331afea54037.htm#ID_50882eadc370eccd0a00206a00c253c5-296f17bd72e27b320a00206a0116d18c-en-US" class="title_toc">STATus:QUEStionable:SYNC[:EVENt]?</a><br/><a href="509cec79f1e34d2c.htm#ID_c57bf580c36dad920a00206a009d1a82-22d833b572e225040a00206a00f99bbc-en-US" class="title_toc">STATus:QUEStionable:SYNC:CONDition?</a><br/><a href="87bc5aed293d4a6d.htm#shiv_6a_remote_commands_7784-b51e79cd72e629040a00206a00d239a3-en-US" class="title_toc">STATus:QUEStionable:SYNC:ENABle</a><br/><a href="82a50cee86734caa.htm#shiv_6a_remote_commands_7794-5ee208a572e6950c0a00206a01f4b6ef-en-US" class="title_toc">STATus:QUEStionable:SYNC:NTRansition</a><br/><a href="357e7ef66ced4a6e.htm#shiv_6a_remote_commands_7804-b11483f372e6e6e50a00206a01e4eefc-en-US" class="title_toc">STATus:QUEStionable:SYNC:PTRansition</a><br/></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

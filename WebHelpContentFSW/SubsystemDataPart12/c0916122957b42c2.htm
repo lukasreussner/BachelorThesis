@@ -1,0 +1,81 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Annex" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Known Data File Syntax Description</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3e40bebc89b8fb310a00206a01f5a96e-9150d46489b8fb310a00206a01468940-en-US;ID_c79b3d1221705c800a00206a00277bf7-9150d46489b8fb310a00206a01468940-en-US;ID_9a2058f221b674340a00206a01b0b4bd-9150d46489b8fb310a00206a01468940-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="d1017492e81377.htm">Annex</a> &gt; <span class="chm-breadcrumb">Known Data File Syntax Description</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1211">
+</a><a name="kanchor1212">
+</a><div class="chm-chaptertitle">Known Data File Syntax Description</div><p>When you load a Known Data file, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K70 application checks whether the file complies with the following syntax:</p><div class="block"><a name="ID_c79b3d1221705c800a00206a00277bf7-9150d46489b8fb310a00206a01468940-en-US">
+</a><span class="table-caption">Known Data File Syntax</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Syntax</p></th><th valign="top"><p>Possible Values</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>&lt;RS_VSA_KNOWN_DATA_FILE Version="01.00"&gt;</p></td><td valign="top"><p>as specified</p></td><td valign="top"><p>File Header</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;Comment&gt;&lt;/Comment&gt;</p></td><td valign="top"><p>arbitrary</p></td><td valign="top"><p>Optional file description</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;Base&gt;&lt;/Base&gt;</p></td><td valign="top"><p>2 | 16</p></td><td valign="top"><p>The base used to specify the &lt;Data&gt; values (binary or hexadecimal)</p><p>For &lt;ModulationOrder&gt; values <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≥</span>32, use binary (2).</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;ModulationOrder&gt;&lt;/ModulationOrder&gt;</p></td><td valign="top"><p>2 | 4 | 8 | 16 | 32 | 64 | 128 | 256</p></td><td valign="top"><p>Number of values each symbol can represent (order of modulation), e.g. 8 for 8-PSK</p><p>For &lt;ModulationOrder&gt; values <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≥</span>32, use &lt;Base&gt; = 2.</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;ResultLength&gt;&lt;/ResultLength&gt;</p></td><td valign="top"><p>1 ... up to 2000<b><sup>*)</sup></b></p></td><td valign="top"><p>Number of symbols in each &lt;Data&gt; element</p><p>The number must be identical to the "Result Length" setting in the "Result Range" dialog box, i.e. the number of symbols to be demodulated.</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;Data&gt;&lt;/Data&gt;</p></td><td valign="top"><p>One character per symbol in the sequence</p><p>Possible characters are:</p><p>0 to n-1, where n is the &lt;ModulationOrder&gt;</p><p>Spaces, tabs and line breaks are ignored</p></td><td valign="top"><p>One possible sequence of symbols that can be demodulated from the input signal</p><p>Up to 6000<b><sup>*)</sup></b> different sequences, i.e. &lt;Data&gt;-elements, can be defined in total</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;/RS_VSA_KNOWN_DATA_FILE&gt;</p></td><td valign="top"><p>as specified</p></td><td valign="top"><p>File End</p></td></tr></tbody><tfoot><tr class="oddrow"><th class="tfoot" colspan="3" valign="top"><p><b><sup>*)</sup></b> the exact number also depends on available memory space</p></th></tr></tfoot></table></div><div class="block"><div class="subtitle"><a name="ID_9a2058f221b674340a00206a01b0b4bd-9150d46489b8fb310a00206a01468940-en-US">
+</a>Sample xml file for known data</div></div><pre class="verbatim" xml:space="preserve">&lt;RS_VSA_KNOWN_DATA_FILE Version="01.00"&gt;    
+
+&lt;Comment&gt;  Standard EDGE_8PSK  &lt;/Comment&gt;
+&lt;Base&gt;             16          &lt;/Base&gt;     
+&lt;ModulationOrder&gt;   8          &lt;/ModulationOrder&gt;    
+&lt;ResultLength&gt;    148          &lt;/ResultLength&gt;
+
+&lt;Data&gt;    777 511 727 242 206 341 366 632 073 607 
+          770 173 705 631 011 235 507 476 330 522 
+          177 177 171 117 777 177 717 717 111 615   
+          527 046 104 004 106 047 125 415 723 344   
+          241 264 773 111 337 446 514 600 677 7       &lt;/Data&gt;
+
+&lt;Data&gt;     77 511 727 242 206 341 366 632 073 607   
+          770 173 705 631 011 235 507 476 330 522   
+          177 177 171 117 777 177 717 717 111 615   
+          527 046 104 004 106 047 125 415 723 344   
+          241 264 773 111 337 446 514 600 677 7    7  &lt;/Data&gt;
+
+&lt;Data&gt;      7 511 727 242 206 341 366 632 073 607   
+          770 173 705 631 011 235 507 476 330 522   
+          177 177 171 117 777 177 717 717 111 615   
+          527 046 104 004 106 047 125 415 723 344   
+          241 264 773 111 337 446 514 600 677 7    77 &lt;/Data&gt;
+
+&lt;Data&gt;  7 777 511 727 242 206 341 366 632 073 607 
+          770 173 705 631 011 235 507 476 330 522 
+          177 177 171 117 777 177 717 717 111 615   
+          527 046 104 004 106 047 125 415 723 344     
+          241 264 773 111 337 446 514 600 677        &lt;/Data&gt;
+
+&lt;Data&gt; 77 777 511 727 242 206 341 366 632 073 607 
+          770 173 705 631 011 235 507 476 330 522 
+          177 177 171 117 777 177 717 717 111 615     
+          527 046 104 004 106 047 125 415 723 344     
+          241 264 773 111 337 446 514 600 67         &lt;/Data&gt;
+&lt;/RS_VSA_KNOWN_DATA_FILE&gt;    
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

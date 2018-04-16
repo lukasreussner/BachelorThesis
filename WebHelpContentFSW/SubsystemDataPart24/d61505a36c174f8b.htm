@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|MSRA Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Restrictions for Slave Applications</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0b38339c580fe0640a00206a0084a58e-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_55f042d8f7e0aa270a00206a006755dd-b6bd877e3300619d0a00206a01ebf9ad-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="7980ab3c417d4f64.htm">MSRA Basics</a> &gt; <span class="chm-breadcrumb">Restrictions for Slave Applications</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor114">
+</a><a name="kanchor115">
+</a><a name="kanchor116">
+</a><div class="chm-chaptertitle">Restrictions for Slave Applications</div><p>As mentioned in various contexts before, the MSRA slave applications themselves are identical to Signal and Spectrum operating mode, however, the correlation between slave applications and the MSRA Master require some restrictions. Principally, you are not restricted in setting parameters. However, if any contradictions occur between the configured capture settings and the analysis settings, error messages are displayed in the status bar of the slave application and an icon (<img border="0" src="Resources/Images/img8689effd44366a6a0a00206a00e82f8d_1_--_--_PNG96.png" alt="" title=""/>) is displayed next to the channel label. However, it does not matter in which order you configure the settings - you will not be prevented from doing so.</p><p>In particular, the following restrictions apply to slave applications in MSRA mode:</p><div class="block"><ul class="list"><li value="1"><b>Data acquisition</b>: parameters related to data acquisition can only be configured by the MSRA Master</li><li value="2"><b>Slave application data</b>: only data contained in the capture buffer can be analyzed by the slave application; this implies the following restrictions:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;"><b>Center frequency</b>: must lie within the captured data bandwidth</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;"><b>Measurement time/Record length</b>: must be smaller than or equal to the values of the MSRA Master</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;"><b>Capture offset</b>: must be smaller than the record length of the MSRA Master</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;"><b>Trace averaging</b>: only for sweep count = 0</td></tr></table></li><li value="3"><b>AUTO SET functions</b>: in slave applications, only the frequency can be adjusted automatically; all other adjustment functions require a new data acquisition</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>General restrictions concerning sample rates and maximum usable I/Q bandwidths for I/Q data also apply in MSRA mode; see the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW I/Q Analyzer User Manual for details.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|Remote Commands to Perform Measurements in MSRA Mode" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Capturing Data and Performing Sweeps</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_09fe1303531421ad0a720a2b00f50903-b807fae432e8ec370a00206a01eafe8b-en-US;ID_eaddeab078a920cc0a00201900674a4c-b807fae432e8ec370a00206a01eafe8b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="8d95166c7a6548c9.htm">Remote Commands to Perform Measurements in MSRA Mode</a> &gt; <span class="chm-breadcrumb">Capturing Data and Performing Sweeps</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor438">
+</a><a name="kanchor439">
+</a><div class="chm-chaptertitle">Capturing Data and Performing Sweeps</div><p>The only true measurement in MSRA mode in which I/Q data from the input signal is captured and stored is performed by the MSRA Master. This data acquisition is performed as in the I/Q Analyzer application, i.e. a specified frequency span of the input signal is swept for a specified measurement time.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>As soon as data has been stored to the capture buffer successfully, a status bit (#9) in the <span class="command">STAT:OPER</span> register is set (see <a class="xref" href="6ae944e28e5a414e.htm#ID_d4123fadecd3f71d0a00206a00310598-11e9ec2ee3f24b7d0a00206a00b472bc-en-US">"STATus:OPERation Register"</a>. Once the bit has been set, the device under test can already be reconfigured while the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW performs analysis on the captured data. For measurements that require long measurement times and comprehensive analysis tasks, using the "capture finished" information can reduce the overall measurement time significantly.</p></td></tr></table></div></div><div class="block"><div class="listintro">See also:</div><ul class="list"><li value="1"><a class="xref" href="38976cbad66d4086.htm#ID_12648fa09f56982b0a00206a00bc6d42-6868475a5cbf2ddc0a00206a0132b776-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INITiate&lt;n&gt;:</nobr>​<nobr>REFResh</nobr></a></li></ul></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="76f7b105d83940f7.htm#ID_200b6bdf2e6085de0a00206a01eb3264-72c9d11620b0412a0a00206a00ce8d97-en-US" class="title_toc">ABORt</a><br/><a href="bef0981724ce4335.htm#ID_2dfd45e42e5479060a00206a002fda0b-109cecc92a0442d90a00206a0005fd8a-en-US" class="title_toc">INITiate&lt;n&gt;:CONMeas</a><br/><a href="380afb37cb0f4960.htm#ID_9eb251022e54f3470a00206a00a5ac5d-2f2822882a047e3c0a00206a01cd19f9-en-US" class="title_toc">INITiate&lt;n&gt;:CONTinuous</a><br/><a href="1bed99d5b5ab4bd4.htm#ID_12648fa09f56982b0a00206a00bc6d42-76b5c4ec2a04a7110a00206a015229a7-en-US" class="title_toc">INITiate&lt;n&gt;[:IMMediate]</a><br/><a href="5c938c4362c04926.htm#ID_b6c6328e48d6046e0a00206a000f661f-bc9c60b048e4f2e40a00206a01417839-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:ABORt</a><br/><a href="1770dab869414c00.htm#ID_b6c6328e48d6046e0a00206a000f661f-0d99028d48e05e0e0a00206a01b7c652-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:IMMediate</a><br/><a href="cbc213560f5f486a.htm#ID_b6c6328e48d6046e0a00206a000f661f-d00a92dc48d6047d0a00206a007bd690-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:MODE</a><br/><a href="7af7fa8bc0ff4fbd.htm#ID_12648fa09f56982b0a00206a00bc6d42-995790ec5ccd3c470a00206a0149bac2-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:REFResh[:ALL]</a><br/><a href="6e13d7544987492e.htm#ID_e0ff1a1b2e430e110a00206a014dca13-41eb792c29fe0cb60a00206a01b90eff-en-US" class="title_toc">[SENSe:]SWEep:POINts</a><br/><a href="b591a8f9fe9c4f48.htm#ID_7ca1f2a42e3a7e940a00206a01dfeab3-52f0715cddf01d6c0a00206a01b26546-en-US" class="title_toc">[SENSe:]SWEep:TIME</a><br/><a href="057de8165b46416d.htm#ID_cb2fce9f48d2e87b0a00206a00019770-5d351f7648d2e87b0a00206a00c27de8-en-US" class="title_toc">SYSTem:SEQuencer</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

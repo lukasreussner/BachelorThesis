@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|Annex" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Sample Rate and Maximum Usable I/Q Bandwidth for RF Input</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US;ID_1c930536aec519450a00206a014d2248-8e04a654c18363970a00206a018bc2d1-en-US;ID_3cb382f09ac6feb40a00206a018db874-8e04a654c18363970a00206a018bc2d1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="d1718328e36461.htm">Annex</a> &gt; <span class="chm-breadcrumb">Sample Rate and Maximum Usable I/Q Bandwidth for RF Input</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor482">
+</a><a name="kanchor483">
+</a><a name="kanchor484">
+</a><a name="kanchor485">
+</a><div class="chm-chaptertitle">Sample Rate and Maximum Usable I/Q Bandwidth for RF Input</div><div class="block"><div class="subtitle"><a name="ID_1c930536aec519450a00206a014d2248-8e04a654c18363970a00206a018bc2d1-en-US">
+</a>Definitions</div></div><a name="kanchor486">
+</a><a name="kanchor487">
+</a><a name="kanchor488">
+</a><a name="kanchor489">
+</a><a name="kanchor490">
+</a><a name="kanchor491">
+</a><a name="kanchor492">
+</a><div class="block"><ul class="list"><li value="1"><b>Input sample rate (ISR)</b>: the sample rate of the useful data provided by the device connected to the input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW</li><li value="2">(User, Output) <b>Sample rate (SR)</b>: the user-defined sample rate (e.g. in the "Data Acquisition" dialog box in the "I/Q Analyzer" application) which is used as the basis for analysis or output</li><li value="3"><b>Usable I/Q (Analysis) bandwidth</b>: the bandwidth range in which the signal remains undistorted in regard to amplitude characteristic and group delay; this range can be used for accurate analysis by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW</li><li value="4"><b>Record length</b>: Number of I/Q samples to capture during the specified measurement time; calculated as the measurement time multiplied by the sample rate</li></ul></div><p>For the I/Q data acquisition, digital decimation filters are used internally in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. The passband of these digital filters determines the <em>maximum usable I/Q bandwidth</em>. In consequence, signals within the usable I/Q bandwidth (passband) remain unchanged, while signals outside the usable I/Q bandwidth (passband) are suppressed. Usually, the suppressed signals are noise, artifacts, and the second IF side band. If frequencies of interest to you are also suppressed, try to increase the output sample rate, which increases the maximum usable I/Q bandwidth.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_3cb382f09ac6feb40a00206a018db874-8e04a654c18363970a00206a018bc2d1-en-US">
+</a>Bandwidth extension options</div><a name="kanchor493">
+</a><a name="kanchor494">
+</a><p>You can extend the maximum usable I/Q bandwidth provided by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW in the basic installation by adding options. These options can either be included in the initial installation (B-options) or updated later (U-options). The maximum bandwidth provided by the individual option is indicated by its number, for example, B40 extends the bandwidth to 40<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p><p>Note that the U-options as of U40 always require all lower-bandwidth options as a prerequisite, while the B-options already include them.</p></td></tr></table></div></div><p>As a rule, the usable I/Q bandwidth is proportional to the output sample rate. Yet, when the I/Q bandwidth reaches the bandwidth of the analog IF filter (at very high output sample rates), the curve breaks.</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="0dac4a5f9e074360.htm" class="chapter_title_toc">Bandwidth Extension Options</a></li><li value="2"><a href="2d326ea6c4e44f8d.htm" class="chapter_title_toc">Relationship Between Sample Rate, Record Length and Usable I/Q Bandwidth</a></li><li value="3"><a href="2cf30b92bc314925.htm" class="chapter_title_toc">R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW Without Additional Bandwidth Extension Options</a></li><li value="4"><a href="888bd67286ef4d5e.htm" class="chapter_title_toc">R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW with I/Q Bandwidth Extension Options B28 or U28</a></li><li value="5"><a href="0cd36fcf09fe4392.htm" class="chapter_title_toc">R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW with I/Q Bandwidth Extension Option B40 or U40</a></li><li value="6"><a href="388b73033a5e493a.htm" class="chapter_title_toc">R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW with I/Q Bandwidth Extension Option B80 or U80</a></li><li value="7"><a href="5c89aa79b1734abe.htm" class="chapter_title_toc">R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW with Activated I/Q Bandwidth Extension Option B160 or U160</a></li><li value="8"><a href="947610d9d1e04f01.htm" class="chapter_title_toc">R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW with Activated I/Q Bandwidth Extension Option B320/U320</a></li><li value="9"><a href="a18be6753f5a41c6.htm" class="chapter_title_toc">R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW with Activated I/Q Bandwidth Extension Option -B512</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

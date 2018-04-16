@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|SCPI Command Structure|SCPI Parameters" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Numeric Values</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_57ade1d569e9c5fa0a001ae72d37371f-73f249836105f78d0a00206a00818609-en-US;ID_7f08199d69e9c5fa0a001ae71d547e35-73f249836105f78d0a00206a00818609-en-US;ID_8d91decc6f7e9aae0a71014a009ae03a-73f249836105f78d0a00206a00818609-en-US;ID_6b47f44e6638dbc00a00206a00177d1d-73f249836105f78d0a00206a00818609-en-US;ID_2683659a6638dbc00a00206a007bd06f-73f249836105f78d0a00206a00818609-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="6aed0083cd0e4cbd.htm">SCPI Command Structure</a> &gt; <a class="chm-breadcrumb" href="7af49512045e436a.htm">SCPI Parameters</a> &gt; <span class="chm-breadcrumb">Numeric Values</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2702">
+</a><a name="kanchor2703">
+</a><div class="chm-chaptertitle">Numeric Values</div><p>Numeric values can be entered in any form, i.e. with sign, decimal point and exponent. Values exceeding the resolution of the instrument are rounded up or down. The mantissa may comprise up to 255 characters, the exponent must lie inside the value range -32000 to 32000. The exponent is introduced by an "E" or "e". Entry of the exponent alone is not allowed.</p><div class="block"><span class="bold"><a name="ID_7f08199d69e9c5fa0a001ae71d547e35-73f249836105f78d0a00206a00818609-en-US">
+</a>Example: </span><p><span class="command">SENS:FREQ:STOP 1500000</span> = <span class="command">SENS:FREQ:STOP 1.5E6</span></p></div><div class="block"><div class="subtitle"><a name="ID_8d91decc6f7e9aae0a71014a009ae03a-73f249836105f78d0a00206a00818609-en-US">
+</a>Units</div></div><div class="block"><div class="listintro">For physical quantities, the unit can be entered. If the unit is missing, the basic unit is used. Allowed unit prefixes are:</div><ul class="list"><li value="1">G (giga)</li><li value="2">MA (mega), MOHM, MHZ</li><li value="3">K (kilo)</li><li value="4">M (milli)</li><li value="5">U (micro)</li><li value="6">N (nano)</li></ul></div><div class="block"><span class="bold"><a name="ID_6b47f44e6638dbc00a00206a00177d1d-73f249836105f78d0a00206a00818609-en-US">
+</a>Example: </span><p><span class="command">SENSe:FREQ:STOP 1.5GHz</span> = <span class="command">SENSe:FREQ:STOP 1.5E9</span></p></div><p>Some settings allow relative values to be stated in percent. According to SCPI, this unit is represented by the <span class="command">PCT</span> string.</p><div class="block"><span class="bold"><a name="ID_2683659a6638dbc00a00206a007bd06f-73f249836105f78d0a00206a00818609-en-US">
+</a>Example: </span><p><span class="command">HCOP:PAGE:SCAL 90PCT</span></p></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

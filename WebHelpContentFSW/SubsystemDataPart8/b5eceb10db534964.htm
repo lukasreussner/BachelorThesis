@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Remote Control Commands for Noise Figure Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Performing Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a0a93c662a3ea6220a00206a01e202c8-b7b6a2202a3ea6220a00206a0124d5f5-en-US;ID_99aaef5f1ee5277a0a00206a00918d69-b7b6a2202a3ea6220a00206a0124d5f5-en-US;ID_b63662eb794375850a710a31005cb45d-b7b6a2202a3ea6220a00206a0124d5f5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="8df071f8ae8c45f0.htm">Remote Control Commands for Noise Figure Measurements</a> &gt; <span class="chm-breadcrumb">Performing Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Performing Measurements</div><p>The following commands are necessary to perform noise figure measurements.</p><div class="block"><div class="subtitle"><a name="ID_99aaef5f1ee5277a0a00206a00918d69-b7b6a2202a3ea6220a00206a0124d5f5-en-US">
+</a>Example: perform calibration and subsequent single sweep measurement</div></div><pre class="verbatim" xml:space="preserve">//Perform calibration:
+CONF:CORR
+INIT;*OPC?
+//Perform single sweep measurement and use 2nd stage correction:
+CORR:STAT ON
+CONF:LIST:SING
+INIT</pre><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>You can also perform a sequence of measurements using the Sequencer (see <a class="xref" href="510c5541e7d7463f.htm#ID_a8b44b0b404311e1a0fb9ef8dd31fb16-ad23635f20989ddd0a00206a00ec024e-en-US">"Multiple Channels and Sequencer Function"</a>).</p></td></tr></table></div></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="76f7b105d83940f7.htm#ID_200b6bdf2e6085de0a00206a01eb3264-72c9d11620b0412a0a00206a00ce8d97-en-US" class="title_toc">ABORt</a><br/><a href="380afb37cb0f4960.htm#ID_9eb251022e54f3470a00206a00a5ac5d-2f2822882a047e3c0a00206a01cd19f9-en-US" class="title_toc">INITiate&lt;n&gt;:CONTinuous</a><br/><a href="1bed99d5b5ab4bd4.htm#ID_12648fa09f56982b0a00206a00bc6d42-76b5c4ec2a04a7110a00206a015229a7-en-US" class="title_toc">INITiate&lt;n&gt;[:IMMediate]</a><br/><a href="5c938c4362c04926.htm#ID_b6c6328e48d6046e0a00206a000f661f-bc9c60b048e4f2e40a00206a01417839-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:ABORt</a><br/><a href="1770dab869414c00.htm#ID_b6c6328e48d6046e0a00206a000f661f-0d99028d48e05e0e0a00206a01b7c652-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:IMMediate</a><br/><a href="cbc213560f5f486a.htm#ID_b6c6328e48d6046e0a00206a000f661f-d00a92dc48d6047d0a00206a007bd690-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:MODE</a><br/><a href="3d51f20a55df43ce.htm#ID_6f5407b73a5f956f0a001ae75b7b2b2c-274de8a63a5f956f0a001ae7734f849f-en-US" class="title_toc">[SENSe:]CONFigure:CONTrol</a><br/><a href="f48b7fcadd364886.htm#ID_219efe193a60038c0a001ae7573c991f-8448c5553a60038c0a001ae74b68eef7-en-US" class="title_toc">[SENSe:]CONFigure:MEASurement</a><br/><a href="057de8165b46416d.htm#ID_cb2fce9f48d2e87b0a00206a00019770-5d351f7648d2e87b0a00206a00c27de8-en-US" class="title_toc">SYSTem:SEQuencer</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

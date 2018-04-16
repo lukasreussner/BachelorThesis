@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Remote Control Commands for Noise Figure Measurements|Configuring Triggered and Gated Measurements|Configuring Gated Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]SWEep:EGATe</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_446adba02e1544000a00206a01b33577-ef99aba0e2813df60a00206a0192d503-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="8df071f8ae8c45f0.htm">Remote Control Commands for Noise Figure Measurements</a> &gt; <a class="chm-breadcrumb" href="e62e07c0b6034083.htm">Configuring Triggered and Gated Measurements</a> &gt; <a class="chm-breadcrumb" href="9c5d52e30c9d4c46.htm">Configuring Gated Measurements</a> &gt; <span class="chm-breadcrumb">[SENSe:]SWEep:EGATe</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_446adba02e1544000a00206a01b33577-ef99aba0e2813df60a00206a0192d503-en-US">
+</a><span class="bold">[SENSe:]SWEep:EGATe </span>&lt;State&gt;<br/></div><div class="rcdescription"><p>This command turns gated measurements on and off.</p><p>In case of measurements with an external gate, the measured values are recorded as long as the gate is opened. During a sweep the gate can be opened and closed several times. The synchronization mechanisms with *OPC, *OPC? and *WAI remain completely unaffected.</p><p>The measurement ends when a particular number of measurement points has been recorded.</p><p>See <a class="xref" href="f4a54753b4594138.htm#ID_6158745b016ea1a20a00206a015ee0c8-1169e04500553cb10a00206a01dece2f-en-US">"(Measurement) Points"</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>ON |</nobr> <nobr> OFF |</nobr> <nobr> 1 |</nobr> <nobr> 0</nobr><br/><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">0</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SWE:EGAT ON</span><br/><p>Switches on the external gate mode.</p><span class="commandline">SWE:EGAT:TYPE EDGE</span><br/><p>Switches on the edge-triggered mode.</p><span class="commandline">SWE:EGAT:HOLD 100US</span><br/><p>Sets the gate delay to 100 <span style="font-family: arial; font-size: 10.5pt">μ</span>s.</p><span class="commandline">SWE:EGAT:LEN 500US</span><br/><p>Sets the gate opening time to 500 <span style="font-family: arial; font-size: 10.5pt">μ</span>s.</p><span class="commandline">INIT;*WAI</span><br/><p>Starts a sweep and waits for its end.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="../../../Content/154b1387b81e4b54.htm">Programming Example: Performing a Basic Frequency Sweep</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="7ece96feab494499.htm#ID_d3a9616c10199b150a710a31014b320d-2b811959986288c50a001ae729193174-en-US">"Gated Trigger"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

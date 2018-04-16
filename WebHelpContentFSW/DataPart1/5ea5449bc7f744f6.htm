@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|SCPI Command Structure|SCPI Parameters" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Special Numeric Values</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_eaa7ff5469e9c60a0a001ae74f770bfc-73f249836105f78d0a00206a00818609-en-US;ID_413a566b622cc8c60a00206a00d702e0-73f249836105f78d0a00206a00818609-en-US;ID_01463359622cc8c60a00206a0114d6f9-73f249836105f78d0a00206a00818609-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="6aed0083cd0e4cbd.htm">SCPI Command Structure</a> &gt; <a class="chm-breadcrumb" href="7af49512045e436a.htm">SCPI Parameters</a> &gt; <span class="chm-breadcrumb">Special Numeric Values</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2704">
+</a><a name="kanchor2705">
+</a><a name="kanchor2706">
+</a><a name="kanchor2707">
+</a><a name="kanchor2708">
+</a><a name="kanchor2709">
+</a><a name="kanchor2710">
+</a><a name="kanchor2711">
+</a><a name="kanchor2712">
+</a><a name="kanchor2713">
+</a><div class="chm-chaptertitle">Special Numeric Values</div><p>The following mnemonics are special numeric values. In the response to a query, the numeric value is provided.</p><div class="block"><ul class="list"><li value="1"><b>MIN and MAX</b>: denote the minimum and maximum value.</li><li value="2"><b>DEF</b>: denotes a preset value which has been stored in the EPROM. This value conforms to the default setting, as it is called by the *RST command.</li><li value="3"><b>UP and DOWN</b>: increases or reduces the numeric value by one step. The step width can be specified via an allocated step command for each parameter which can be set via UP and DOWN.</li><li value="4"><b>INF and NINF</b>: INFinity and negative INFinity (NINF) represent the numeric values 9.9E37 or -9.9E37, respectively. INF and NINF are only sent as instrument responses.</li><li value="5"><b>NAN</b>: Not A Number (NAN) represents the value 9.91E37. NAN is only sent as a instrument response. This value is not defined. Possible causes are the division of zero by zero, the subtraction of infinite from infinite and the representation of missing values.</li></ul></div><div class="block"><span class="bold"><a name="ID_413a566b622cc8c60a00206a00d702e0-73f249836105f78d0a00206a00818609-en-US">
+</a>Example: </span><p>Setting command: <span class="command">SENSe:LIST:FREQ MAXimum</span></p><p>Query: <span class="command">SENS:LIST:FREQ?</span></p><p>Response: <span class="command">3.5E9</span></p></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_01463359622cc8c60a00206a0114d6f9-73f249836105f78d0a00206a00818609-en-US">
+</a>Queries for special numeric values</div><p>The numeric values associated to <span class="command">MAXimum/MINimum/DEFault</span> can be queried by adding the corresponding mnemonic after the quotation mark.</p><p>Example: <span class="command">SENSe:LIST:FREQ? MAXimum</span></p><p>Returns the maximum numeric value as a result.</p></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

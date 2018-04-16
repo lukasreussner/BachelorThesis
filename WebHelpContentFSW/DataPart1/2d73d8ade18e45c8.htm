@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Trace Configuration|Standard Traces|Basics on Setting up Traces" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>How Trace Data is Averaged - the Averaging Mode</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b66ce0732894a0930a710a3101060948-a27440817078f3490a001ae72097e20a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="449dc0ce4ad74ae0.htm">Trace Configuration</a> &gt; <a class="chm-breadcrumb" href="d5a936460e4d4bf6.htm">Standard Traces</a> &gt; <a class="chm-breadcrumb" href="6c4dadf0708945cd.htm">Basics on Setting up Traces</a> &gt; <span class="chm-breadcrumb">How Trace Data is Averaged - the Averaging Mode</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">How Trace Data is Averaged - the Averaging Mode</div><a name="kanchor2198">
+</a><a name="kanchor2199">
+</a><p>When the trace is averaged over several sweeps (Trace mode: "Average"), different methods are available to determine the trace average.</p><p>With logarithmic averaging, the dB values of the display voltage are averaged or subtracted from each other with trace mathematical functions.</p><p>With linear averaging, the level values in dB are converted into linear voltages or powers before averaging. Voltage or power values are averaged or offset against each other and reconverted into level values.</p><p>For stationary signals, the two methods yield the same result.</p><p>Logarithmic averaging is recommended if sinewave signals are to be clearly visible against noise since with this type of averaging noise suppression is improved while the sinewave signals remain unchanged.</p><p>For noise or pseudo-noise signals, the positive peak amplitudes are decreased in logarithmic averaging due to the characteristic involved. The negative peak values are increased relative to the average value. If the distorted amplitude distribution is averaged, a value is obtained that is smaller than the actual average value. The difference is -2.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB.</p><p>This low average value is usually corrected in noise power measurements by a 2.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB factor. Therefore the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW offers the selection of linear averaging. The trace data is linearized before averaging, then averaged and logarithmized again for display on the screen. The average value is always displayed correctly irrespective of the signal characteristic.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

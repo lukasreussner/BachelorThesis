@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurements and Result Displays|WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)|Evaluation Methods for WLAN IQ Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Unused Tone Error Summary</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWLANSkIdSmartGridUnusedToneErrorSummary">
+</meta>
+        <meta name="topic-id" value="46">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ae69ed242f3111e7ac0f80f55b9442c1-742b73889d5e5f610a001ae77d4ca6d8-en-US;ID_23511b16ce5dd8750a001ae718fea0d6-742b73889d5e5f610a001ae77d4ca6d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3bafe63f00094742.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="57cd9bda6ba64547.htm">WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="072780b9f8404988.htm">Evaluation Methods for WLAN IQ Measurements</a> &gt; <span class="chm-breadcrumb">Unused Tone Error Summary</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor163">
+</a><a name="kanchor164">
+</a><div class="function_heading"><a name="ID_ae69ed242f3111e7ac0f80f55b9442c1-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a><span style="font-weight: bold">Unused Tone Error Summary</span></div><p>The unused tone error summary determines the error vector magnitude, relative to the original RU, for unoccupied subcarriers, also referred to as <em>unused tones</em>. For details on this parameter, see <a class="xref" href="9c8ca987370249ad.htm#ID_8c343075fc7007390a71003a00b95380-742b73889d5e5f610a001ae77d4ca6d8-en-US">"Unused Tone Error"</a>.</p><p>This result is required by the <b>IEEE 802.11ax</b> standard for HE trigger-based PPDUs with a maximum channel bandwidth of 80<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p><p><b><a name="ID_23511b16ce5dd8750a001ae718fea0d6-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a>Note:</b> For an overview of the unused tone error results of an entire channel at a glance, use the <a class="xref" href="24637f1586b34312.htm#ID_0d8151f2c91a062a0a71003a00ee0abb-742b73889d5e5f610a001ae77d4ca6d8-en-US">"Unused Tone Error"</a> diagram.<br/></p><p>The "Unused Tone Error Summary" provides the following information for up to 9 RU groups. Which subcarriers are evaluated in which RU group depends on the size and index of the resource unit to be checked. For details, see <a class="xref" href="9c8ca987370249ad.htm#ID_8c343075fc7007390a71003a00b95380-742b73889d5e5f610a001ae77d4ca6d8-en-US">"Unused Tone Error"</a>.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"RU group"</p></td><td class="function_col_right"><p>Set of subcarriers for which a limit is specified in the standard</p></td></tr><tr><td class="function_col_left" valign="top"><p>"RU size"</p></td><td class="function_col_right"><p>Size of the RU, indicated as a factor of 26 (RU26 unit)</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Min"</p></td><td class="function_col_right"><p>Minimum unused tone error measured in the RU group</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Mean"</p></td><td class="function_col_right"><p>Mean unused tone error measured in the RU group</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Max"</p></td><td class="function_col_right"><p>Maximum unused tone error measured in the RU group</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Limit"</p></td><td class="function_col_right"><p>Limit for unused tone error, relative to the original RU, as specified by the IEEE 802.11ax standard</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Delta"</p></td><td class="function_col_right"><p>Limit - Max = distance of maximum value to limit for the RU group</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Max RU26 Idx"</p></td><td class="function_col_right"><p>Index of the subcarrier with the maximum value, based on an RU size of 26</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Limit check"</p></td><td class="function_col_right"><p>Result of the limit check for the individual RU group</p></td></tr></table>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH,UTES</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p>Querying results:</p><p><a class="xref" href="ddad051009334bbf.htm#ID_d5b183dbc92ebf5b0a001ae70fc5b3f7-55736c44c92ebe900a001ae704638ba5-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>FETCh:</nobr>​<nobr>UTESummary:</nobr>​<nobr>ALL?</nobr></a></p><p>Querying limit results:</p><p><a class="xref" href="a1a78dbf598545bf.htm#ID_daea16a3df20b3570a001ae73c5f0ecb-9be68240df20b28c0a001ae71b489a5a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;li&gt;:</nobr>​<nobr>CONTrol[:</nobr>​<nobr>DATA]?</nobr></a></p><p><a class="xref" href="87f94d56f99e4fa0.htm#ID_3fa6c378df20b82a0a001ae710acd71f-e2a1dbd4df20b7110a001ae71b489a5a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;li&gt;:</nobr>​<nobr>UPPer[:</nobr>​<nobr>DATA]?</nobr></a></p><p><a class="xref" href="f8681bf08d1f4b4d.htm#ID_f399e7eccadf3c180a001ae705408116-5bc66e1acadf3b7c0a001ae71b489a5a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;li&gt;:</nobr>​<nobr>FAIL?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|I/Q Analysis|Using Markers|Measuring the Time Domain Power|Retrieving Measurement Results|Measuring the RMS Power" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CALCulate&lt;n&gt;:MARKer&lt;m&gt;:FUNCtion:SUMMary:RMS:PHOLd:RESult?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_6a_remote_commands_3686-8a245a28b6c278250a00206a00d3918f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="072da6b77b7f44e2.htm">I/Q Analysis</a> &gt; <a class="chm-breadcrumb" href="400baccca59d4218.htm">Using Markers</a> &gt; <a class="chm-breadcrumb" href="9c61a44559ab4db8.htm">Measuring the Time Domain Power</a> &gt; <a class="chm-breadcrumb" href="5f65691989474829.htm">Retrieving Measurement Results</a> &gt; <a class="chm-breadcrumb" href="8ae618eff9e54edf.htm">Measuring the RMS Power</a> &gt; <span class="chm-breadcrumb">CALCulate&lt;n&gt;:MARKer&lt;m&gt;:FUNCtion:SUMMary:RMS:PHOLd:RESult?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_6a_remote_commands_3686-8a245a28b6c278250a00206a00d3918f-en-US">
+</a><span class="bold">CALCulate&lt;n&gt;:MARKer&lt;m&gt;:FUNCtion:SUMMary:RMS:PHOLd:RESult? </span></div><div class="rcdescription"><p>This command queries the maximum RMS of the time domain power. The query is only possible if the peak hold function has been activated previously using <a class="xref" href="5b5df0d03c0149c0.htm#ID_f700ccfbf09d95210a00206a00ff4cb6-b217d1d2f09d95210a00206a01656d5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>SUMMary:</nobr>​<nobr>PHOLd</nobr></a>.</p><div class="block"><p>To get a valid result, you have to perform a complete measurement with synchronization to the end of the measurement before reading out the result. This is only possible for single sweep mode.</p><p>See also <a class="xref" href="380afb37cb0f4960.htm#ID_9eb251022e54f3470a00206a00a5ac5d-2f2822882a047e3c0a00206a01cd19f9-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INITiate&lt;n&gt;:</nobr>​<nobr>CONTinuous</nobr></a>.</p></div></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;m&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Marker</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;RMSPower&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>RMS power of the signal during the measurement time.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

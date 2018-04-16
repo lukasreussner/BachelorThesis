@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Data Management" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Restoring the Default Instrument Configuration (Preset)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaveRecallSkIdPreset">
+</meta>
+        <meta name="topic-id" value="3111">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_98f3b182c8b76cd10a00206a00b5ce3e-b68fd0ffc8b76cd10a00206a01f77905-en-US;ID_258f1876e989162d0a00206a01669111-b68fd0ffc8b76cd10a00206a01f77905-en-US;ID_cefb1231e989162d0a00206a00be1ee4-b68fd0ffc8b76cd10a00206a01f77905-en-US;shiv_4a_instrument_functions_00132-b68fd0ffc8b76cd10a00206a01f77905-en-US;ID_cf4d1095c8d09c6d0a00206a01acd9b7-b68fd0ffc8b76cd10a00206a01f77905-en-US;ID_9826443ce989163d0a00206a01de2bf1-b68fd0ffc8b76cd10a00206a01f77905-en-US;ID_5e4a1ab0e989163d0a00206a00c2d1ca-b68fd0ffc8b76cd10a00206a01f77905-en-US;ID_6a73b1757d4f11e09238b0fdea77f452-b68fd0ffc8b76cd10a00206a01f77905-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="eeac49b666d249c9.htm">Data Management</a> &gt; <span class="chm-breadcrumb">Restoring the Default Instrument Configuration (Preset)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2312">
+</a><a name="kanchor2313">
+</a><a name="kanchor2314">
+</a><div class="chm-chaptertitle">Restoring the Default Instrument Configuration (Preset)</div><p>When delivered, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW has a default configuration. You can restore this defined initial state at any time as a known starting point for measurements. This is often recommendable as a first step in troubleshooting when unusual measurement results arise.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img">
+</img></td><td><div class="tip_title">Factory default configuration</div><p>The factory default configuration is selected such that the RF input is always protected against overload, provided that the applied signal levels are in the allowed range for the instrument.</p><p>Alternatively to the factory default settings, you can define user-specific recall settings to be restored after a preset or reboot, see <a class="xref" href="16619322e8f04e3a.htm#ID_ce0b015dc38a7d0a0a00206a0196af7f-f6fe6a3936462c370a001ae76bfa0bb1-en-US">"To recall settings automatically after preset or reboot"</a>.</p></td></tr></table></div></div><div class="block"><a name="ID_258f1876e989162d0a00206a01669111-b68fd0ffc8b76cd10a00206a01f77905-en-US">
+</a><div class="procedure_title">To restore the default instrument configuration for all channels at once</div><div><table border="0"><tr><td align="left" valign="top" width="24px" class="procedure_table"><font face="Arial">►</font> </td><td class="procedure_table"><p>Press the PRESET key.</p></td></tr></table></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>After you use the PRESET function, the history of previous actions is deleted, i.e. any actions performed previously cannot be undone or redone using the UNDO/REDO keys.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_cf4d1095c8d09c6d0a00206a01acd9b7-b68fd0ffc8b76cd10a00206a01f77905-en-US">
+</a>Remote command:</div></div><p><span class="command">*RST</span> or <span class="command">SYSTem:PRESet</span></p><div class="block"><a name="ID_9826443ce989163d0a00206a01de2bf1-b68fd0ffc8b76cd10a00206a01f77905-en-US">
+</a><div class="procedure_title">To restore the default configuration for a single channel</div><a name="kanchor2315">
+</a><a name="kanchor2316">
+</a><p>The default measurement settings can also be reset for an individual channel only, rather than resetting the entire instrument.</p><div><table border="0"><tr><td align="left" valign="top" width="24px" class="procedure_table"><font face="Arial">►</font> </td><td class="procedure_table"><p>In the "Overview", select the "Preset Channel" button.</p></td></tr><tr><td align="left" valign="top" width="24px" style="padding-top:5px" class="procedure_table"> </td><td style="padding-top:5px" class="procedure_table"><p>The factory default settings are restored to the current channel. Note that a user-defined recall settings file is <b>NOT</b> restored.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_6a73b1757d4f11e09238b0fdea77f452-b68fd0ffc8b76cd10a00206a01f77905-en-US">
+</a>Remote command:</div></div><p><a class="xref" href="94db68c38d6b4873.htm#ID_4e7b2f78e90424cc0a00206a0039df2f-d9f271e0e90424dc0a00206a00df3149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SYSTem:</nobr>​<nobr>PRESet:</nobr>​<nobr>CHANnel[:</nobr>​<nobr>EXEC]</nobr></a></p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

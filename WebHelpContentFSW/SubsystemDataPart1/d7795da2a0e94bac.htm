@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Alignment</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b19221b04a3798c80a001ae76529a975-3e7f60c551b212130a001ae729483b02-en-US;ID_514fb37133e6eb610a001ae763854a17-3e7f60c551b212130a001ae729483b02-en-US;ID_24f834a84f4009d20a001ae7580168f9-3e7f60c551b212130a001ae729483b02-en-US;ID_047184cb33e6eb610a001ae74b670804-3e7f60c551b212130a001ae729483b02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="688f35c556f04d25.htm">Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)</a> &gt; <span class="chm-breadcrumb">Alignment</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor254">
+</a><a name="kanchor255">
+</a><a name="kanchor256">
+</a><a name="kanchor257">
+</a><a name="kanchor258">
+</a><a name="kanchor259">
+</a><a name="kanchor260">
+</a><a name="kanchor261">
+</a><a name="kanchor262">
+</a><div class="chm-chaptertitle">Alignment</div><p>An initial alignment of the output to the oscilloscope and the oscilloscope itself is required once after setup. The alignment data is stored on the oscilloscope.</p><div class="block"><div class="listintro">Thus, alignment need only be repeated if one of the following applies:</div><ul class="list"><li value="1">A new oscilloscope is connected to the [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW</li><li value="2">A new cable is used between the [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and the oscilloscope</li><li value="3">A power splitter is inserted between the [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and the oscilloscope</li><li value="4">New firmware is installed on the oscilloscope or the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW</li></ul></div><p>If the oscilloscope is detected to be uncalibrated, a self-alignment is performed on the oscilloscope before the actual B2000/B5000 alignment starts. In addition, it is useful to perform an alignment on the oscilloscope manually in the following cases:</p><div class="block"><ul class="list"><li value="1">Major temperature changes occur (&gt; 5 °C)</li><li value="2">The last alignment on the oscilloscope is significantly longer than 1 week ago</li></ul></div><p>A self-alignment on the oscilloscope can be started directly from the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, together with the B2000/B5000 alignment.</p><div class="block"><div class="subtitle"><a name="ID_514fb37133e6eb610a001ae763854a17-3e7f60c551b212130a001ae729483b02-en-US">
+</a>General alignment process</div></div><p>The alignment process between the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and the oscilloscope is performed by selecting a button on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Successful alignment of the oscilloscope and the oscilloscope ADC are indicated in a dialog box on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>If alignment was performed successfully, the alignment data is stored on the oscilloscope, and the date it was performed is indicated in the dialog box on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>If necessary, in particular after the firmware on the oscilloscope has been updated, a self-alignment is performed on the oscilloscope before the actual B2000/B5000 alignment starts. This may take a few minutes.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_047184cb33e6eb610a001ae74b670804-3e7f60c551b212130a001ae729483b02-en-US">
+</a>Alignment of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000 option</div></div><p>Alignment of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000 option consists of two steps. The first step requires a (temporary) connection from the [REF OUTPUT 640<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHZ] connector on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to the [CH1] input on the oscilloscope, in addition to the reference and trigger connections described above.</p><p>For the second alignment step, the connector must be disconnected from the [REF OUTPUT 640<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHZ] connector and instead connected to the [FSW B2000 Alignment Signal Source] input connector on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Then the alignment process can be continued in the dialog box.</p><p>If both alignment steps were performed successfully, the alignment data is stored on the oscilloscope, and the date it was performed is indicated in the B2000 dialog box on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. For a description of possible errors see <a class="xref" href="c53e527ec0fb4ebb.htm#ID_21da72a15e7b11e4a4fcdeed687e1889-ea5df50c8eec2fdc0a001ae717cdbdf8-en-US">Table "Errors using the optional 2 GHz / 5 GHz bandwidth extension (R&amp;S FSW-B2000/B5000) and possible solutions"</a>.</p><p>After alignment, the cable from the [Alignment signal source input] can be disconnected and instead connected to the [IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz] connector on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

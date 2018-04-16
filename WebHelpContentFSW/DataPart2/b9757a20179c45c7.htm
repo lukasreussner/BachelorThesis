@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System|Contents of the Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>STATus:QUEStionable:ACPLimit Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0d7b6e4be924f5550a00206a00c2dd4e-1a579609e3f25b7a0a00206a01e2492e-en-US;ID_acbec5752f3111de847b9d8bd5a95c88-1a579609e3f25b7a0a00206a01e2492e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <a class="chm-breadcrumb" href="20b40c28f6194536.htm">Contents of the Status Registers</a> &gt; <span class="chm-breadcrumb">STATus:QUEStionable:ACPLimit Register</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">STATus:QUEStionable:ACPLimit Register</div><a name="kanchor2797">
+</a><p>The STATus:QUEStionable:ACPLimit register contains information about the results of a limit check during ACLR measurements. A separate ACPLimit register exists for each active channel.</p><p>You can read out the register with<a class="xref" href="22bc98dab3d54390.htm#ID_233961e1a0b611e0a7e0c2ad6d046cb6-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>ACPLimit:</nobr>​<nobr>CONDition?</nobr></a> or <a class="xref" href="7db3e9e591d9410d.htm#ID_f36c6208d0c5faa40a710a920067a769-e692d0ca718142250a00206a00d55f87-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>ACPLimit[:</nobr>​<nobr>EVENt]?</nobr></a></p><div class="block"><a name="ID_acbec5752f3111de847b9d8bd5a95c88-1a579609e3f25b7a0a00206a01e2492e-en-US">
+</a><span class="table-caption">Meaning of the bits used in the STATus:QUEStionable:ACPLimit register</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>ADJ UPPer FAIL</p><p>This bit is set if the limit is exceeded in the <b>upper adjacent</b> channel</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>ADJ LOWer FAIL</p><p>This bit is set if the limit is exceeded in the <b>lower adjacent</b> channel.</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>ALT1 UPPer FAIL</p><p>This bit is set if the limit is exceeded in the <b>upper 1st alternate</b> channel.</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>ALT1 LOWer FAIL</p><p>This bit is set if the limit is exceeded in the <b>lower 1st alternate</b> channel.</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>ALT2 UPPer FAIL</p><p>This bit is set if the limit is exceeded in the <b>upper 2nd alternate</b> channel.</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>ALT2 LOWer FAIL</p><p>This bit is set if the limit is exceeded in the <b>lower 2nd alternate</b> channel.</p></td></tr><tr class="oddrow"><td valign="top"><p>6</p></td><td valign="top"><p>ALT3 … 11 LOWer/UPPer FAIL</p><p>This bit is set if the limit is exceeded in one of the lower or upper alternate channels 3 … 11.</p></td></tr><tr class="evenrow"><td valign="top"><p>7</p></td><td valign="top"><p>CACLR FAIL</p><p>This bit is set if the CACLR limit is exceeded in one of the gap channels.</p></td></tr><tr class="oddrow"><td valign="top"><p>8</p></td><td valign="top"><p>GAP ACLR FAIL</p><p>This bit is set if the ACLR limit is exceeded in one of the gap channels.</p></td></tr><tr class="evenrow"><td valign="top"><p>9 to 14</p></td><td valign="top"><p>Unused</p></td></tr><tr class="oddrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always 0.</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics|Signal Processing for MIMO Measurements (IEEE 802.11ac, n)|Capturing Data from MIMO Antennas" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Sequential MIMO Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_40226fb528be6b090a001ae737186d3a-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_4095ec9f461d11e3963d8818b6e809de-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="6dff20d6bdc14ea6.htm">Signal Processing for MIMO Measurements (IEEE 802.11ac, n)</a> &gt; <a class="chm-breadcrumb" href="6e630af17008464d.htm">Capturing Data from MIMO Antennas</a> &gt; <span class="chm-breadcrumb">Sequential MIMO Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Sequential MIMO Measurement</div><p>Sequential MIMO measurement allows for MIMO analysis with a single analyzer by capturing the receive antennas one after another (sequentially). However, sequential MIMO measurement requires each Tx antenna to transmit <b><em>the same PPDU over time</em></b>. (The PPDU <em>content</em> from different Tx antennas, on the other hand, may be different.) If this requirement can not be fulfilled, use the simultaneous MIMO capture method (see <a class="xref" href="6e630af17008464d.htm#ID_894a062828be6af90a001ae75578b6ac-a152f5e2a64dafbf0a002019017fdb4d-en-US">"Capturing Data from MIMO Antennas"</a>).</p><div class="block"><div class="listintro">In addition, the following <b>PPDU attributes must be identical for ALL antennas</b>:</div><ul class="list"><li value="1">PPDU length</li><li value="2">PPDU type</li><li value="3">Channel bandwidth</li><li value="4">MCS Index</li><li value="5">Guard Interval Length</li><li value="6">Number of STBC Streams</li><li value="7">Number of Extension Streams</li></ul></div><p>Thus, for each PPDU the Signal Field bit vector has to be identical for ALL antennas!</p><div class="block" id="ID_4095ec9f461d11e3963d8818b6e809de-a152f5e2a64dafbf0a002019017fdb4d-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgc5fa9ede285d814e0a001ae767d21fe2_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Basic principle of “Sequential MIMO Measurement” with 2 receive antennas</div></div><p>Note that, additionally, the data contents of the sent PPDU <em>payloads</em> must also be the same for each Tx antenna, but this is not checked. Thus, useless results are returned if different data was sent.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>To provide identical PPDU content for each Tx antenna in the measurement, you can use the same pseudo-random bit sequence (PRBS) with the same PRBS seed (initial bit sequence), for example, when generating the useful data for the PPDU.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

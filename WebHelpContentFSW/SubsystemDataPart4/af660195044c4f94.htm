@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Configuration|Modulation Accuracy Measurement Configuration|Measurement Settings|Power vs Time" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Power vs Time Filter</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGSMSkIdPowerTimeConfigSingleCarrierFilter">
+</meta>
+        <meta name="topic-id" value="604">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_bc714b819c4901010a710a31016529f8-6de3276a7d447f250a0020190132413b-en-US;ID_bc41312c7dcd6bd90a00206a017d8a0a-6de3276a7d447f250a0020190132413b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="1a64fe887be64f22.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="e90423ae33184d9a.htm">Modulation Accuracy Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="baf81276a8374be1.htm">Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="a79741b1b7db4945.htm">Power vs Time</a> &gt; <span class="chm-breadcrumb">Power vs Time Filter</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor599">
+</a><a name="kanchor600">
+</a><div class="function_heading"><a name="ID_bc714b819c4901010a710a31016529f8-6de3276a7d447f250a0020190132413b-en-US">
+</a><span style="font-weight: bold">Power vs Time Filter</span></div><p>The PvT filter controls the filter used to reduced the measurement bandwidth in "Power vs Time" measurements.</p><p><b><a name="ID_bc41312c7dcd6bd90a00206a017d8a0a-6de3276a7d447f250a0020190132413b-en-US">
+</a>Note:</b> The PvT filter is optimized to get smooth edges after filtering burst signals and to suppress adjacent, active channels.<br/></p><p>Depending on the <a class="xref" href="ee39c4c41bf04697.htm#ID_96b646e6db1f3af80a00206a01dc4a16-2eb050249c5b7b2f0a001ae75764b054-en-US">"Device Type"</a> (single carrier or multicarrier), different PvT filters are supported:</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"1 MHz Gauss"</p></td><td class="function_col_right"><p>default for single carrier device</p></td></tr><tr><td class="function_col_left" valign="top"><p>"600 kHz"</p></td><td class="function_col_right"><p>(single carrier only) for backwards compatibility to FS-K5</p></td></tr><tr><td class="function_col_left" valign="top"><p>"500 kHz Gauss"</p></td><td class="function_col_right"><p>(single carrier only) for backwards compatibility to FS-K5</p></td></tr><tr><td class="function_col_left" valign="top"><p>"400 kHz (multicarrier)"</p></td><td class="function_col_right"><p>(default for multicarrier device) Recommended for measurements with multi channels of equal power.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"300 kHz (multicarrier)"</p></td><td class="function_col_right"><p>Recommended for multicarrier measurement scenarios where a total of six channels is active and the channel to be measured has a reduced power (e.g. 30 dB) compared to its adjacent channels.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="63c0656878e04d29.htm#ID_fc4d0836a0fe707b0a00206a011d11ee-ad3dc35f7edb9e460a00201901d7d979-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>BURSt:</nobr>​<nobr>PTEMplate:</nobr>​<nobr>FILTer</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

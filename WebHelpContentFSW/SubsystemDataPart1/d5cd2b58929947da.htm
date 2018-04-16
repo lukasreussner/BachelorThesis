@@ -1,0 +1,96 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>I/Q Analysis with Graphical Evaluation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4efb858b3e1294bf0a00206a01260b58-21cb0fb51d5a73bf0a00201901376412-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="cd12fe88f05c4826.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">I/Q Analysis with Graphical Evaluation</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1204">
+</a><a name="kanchor1205">
+</a><div class="chm-chaptertitle">I/Q Analysis with Graphical Evaluation</div><p>This example demonstrates how to configure and perform a basic I/Q data acquisition and analyze the data using the I/Q Analyzer in a remote environment.</p><pre class="verbatim" xml:space="preserve">//--------------Activating the I/Q Analyzer application ---------------------
+*RST
+//Reset the instrument
+INST:CRE IQ,'IQANALYZER'
+//Creates a new measurement channel named 'IQANALYZER'.
+INIT:CONT OFF
+//Switches to single sweep mode
+
+//--------------Configuring Data Acquisition-------------
+TRAC:IQ:SRAT 32MHZ
+//Defines the sample rate.
+TRAC:IQ:RLEN 1000
+//Sets the record length (number of samples to capture) to 1000 samples.
+TRAC:IQ:BWID?
+//Queries the bandwidth of the resampling filter, determined by the sample rate
+FORM:DATA REAL,32
+//Formats the data as 32-byte real values.
+TRAC:IQ:DATA:FORM IQBL
+//Lists all I values first, then all Q values in the trace results.
+
+//--------------Configuring the Trace--------------------
+TRAC:IQ:AVER ON
+//Defines averaging for the I/Q trace.
+TRAC:IQ:AVER:COUN 10
+//Defines an average over 10 sweeps.
+
+DISP:TRAC1:MODE WRIT
+DISP:TRAC2:MODE MAXH
+DISP:TRAC3:MODE MINH
+//Changes the trace modes.
+
+//--------------Performing the Measurement---------------------
+INIT;*WAI
+//Initiates a new measurement and waits until the sweep has finished.
+
+//---------------Retrieving Results----------------------------
+
+TRAC:DATA? TRACE1
+TRAC:DATA? TRACE2
+TRAC:DATA? TRACE3
+//Returns the magnitude for each sweep point
+
+LAY:REPL:WIND '1',RIMAG
+//Changes the result display to Real/Imag (I/Q)
+
+CALC:MARK:SEAR MAGN
+//Configures searches to search both I and Q branches.
+CALC:MARK:Y?
+//Queries the result of the peak search on both branches.
+
+TRAC:IQ:DATA:MEM? 0,500
+//Returns the first 500 samples of the stored I/Q data for the measurement.
+//For each sample, first the I-value, then the Q-value is listed.
+
+TRAC:IQ:DATA:MEM? 500,500
+//Returns the second half of the 1000 captured sample values.
+
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

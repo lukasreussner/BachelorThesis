@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Phase Noise (R&amp;S FSW-K40)|Remote Control Commands for Phase Noise Measurements|Using the Status Register" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k40.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Status Registers for Phase Noise Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8fb34ad845e80e620a00206a01fb5ca6-e9159ab045b8336d0a00206a010c62c5-en-US;ID_69fc8cd6931b6b300a001ae72c452bd0-e9159ab045b8336d0a00206a010c62c5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k40/Content/5c795ab1b0524d97.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Phase Noise (R&amp;S FSW-K40)</a> &gt; <a class="chm-breadcrumb" href="a8179e7c78fd4546.htm">Remote Control Commands for Phase Noise Measurements</a> &gt; <a class="chm-breadcrumb" href="ee35d5d9cc314bfe.htm">Using the Status Register</a> &gt; <span class="chm-breadcrumb">Status Registers for Phase Noise Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Status Registers for Phase Noise Measurements</div><p>The figure below shows the status registers of the phase noise application.</p><div class="block" id="ID_69fc8cd6931b6b300a001ae72c452bd0-e9159ab045b8336d0a00206a010c62c5-en-US"><div class="graphic"><img border="0" src="Resources/Images/img5184f7ba9319e4000a001ae7488418e7_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Status registers for phase noise measurements</div></div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW structures the information hierarchically, with the Status Byte register (STB) and the Service Request Enable mask register (SRE) being on the highest level. The STB gets its information from the standard Event Status Register (ESR) and the Event Status Enable mask register (ESE). The STB and ESR are both defined by IEEE 488.2. In addition to the ESR, the STB also gets information from the STATus:OPERation and STATus:QUEStionable registers. These are the link to the lower levels of the status register and are defined by SCPI. They contain information about the state of the instrument.</p><p>For a more comprehensive description of the status registers not mentioned here and status register functionality in general see the manual of the base unit.</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="58ce4ab706c84d3b.htm" class="chapter_title_toc">STATus:QUEStionable Register</a></li><li value="2"><a href="86595d3901b34059.htm" class="chapter_title_toc">STATus:QUEStionable:POWer Register</a></li><li value="3"><a href="ca18514bb15040f9.htm" class="chapter_title_toc">STATus:QUEStionable:LIMit Register</a></li><li value="4"><a href="b9366046f12f4f8c.htm" class="chapter_title_toc">STATus:QUEStionable:PNOise Register</a></li><li value="5"><a href="15d237fec2794dc1.htm" class="chapter_title_toc">Status Register Remote Commands</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

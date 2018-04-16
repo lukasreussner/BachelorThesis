@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Configuration|Configuring I/Q Measurements|Trigger|Triggering Multiple Data Streams (MIMO Measurements)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring the Trigger</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdTriggerSourceMIMO">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdTriggerMIMO">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdTriggerZ11MIMO">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdTriggerSlopeMIMO">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdTriggerPortMIMO">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdTriggerLevelMIMO">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdTriggerOffsetMIMO">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdTriggerSameAsMasterSettingMIMO">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdTriggerInpChannelMIMO">
+</meta>
+        <meta name="topic-id" value="13015">
+</meta>
+        <meta name="topic-id" value="13016">
+</meta>
+        <meta name="topic-id" value="13017">
+</meta>
+        <meta name="topic-id" value="13018">
+</meta>
+        <meta name="topic-id" value="13019">
+</meta>
+        <meta name="topic-id" value="13020">
+</meta>
+        <meta name="topic-id" value="13021">
+</meta>
+        <meta name="topic-id" value="13022">
+</meta>
+        <meta name="topic-id" value="13023">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a0cff4de093082e90a00206a01b6a0ef-d9ea0d9effd399910a001ae7235128ae-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/97347999a1b44bc5.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="815a65ace54b46f5.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="b9dea6be44534e0a.htm">Configuring I/Q Measurements</a> &gt; <a class="chm-breadcrumb" href="9c91344fdb104e08.htm">Trigger</a> &gt; <a class="chm-breadcrumb" href="6f89a5516425463c.htm">Triggering Multiple Data Streams (MIMO Measurements)</a> &gt; <span class="chm-breadcrumb">Configuring the Trigger</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor177">
+</a><a name="kanchor178">
+</a><a name="kanchor179">
+</a><a name="kanchor180">
+</a><a name="kanchor181">
+</a><a name="kanchor182">
+</a><div class="function_heading"><a name="ID_a0cff4de093082e90a00206a01b6a0ef-d9ea0d9effd399910a001ae7235128ae-en-US">
+</a><span style="font-weight: bold">Configuring the Trigger</span></div><p>The trigger settings for MIMO measurements contain some extra functionality not supported for single stream data capture.</p><p>While the application runs freely and analyzes all signal data in its default state, no matter if the signal contains information or not, a trigger initiates a measurement only under certain circumstances (the trigger event).</p><p><b>General trigger settings</b></p><p>The application supports several <b>trigger sources</b>.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Free Run<br/>Starts the measurement immediately and measures continuously.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">External<br/>The trigger event is the level of an external trigger signal. The measurement starts when this signal meets or exceeds a specified trigger level at the "Ext Trigger/Gate" input.<br/>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW has three trigger ports ("External 1 to 3"). The trigger source you select for the controlling analyzer (master) corresponds to the trigger port you are using ("External 1", for example is always on trigger port 1).</li></ul></div><p>If you are using a trigger, you can select the <b>trigger slope</b>. The trigger slope defines whether triggering occurs when the signal rises to the trigger level or falls down to it.</p><p><b>Trigger unit</b></p><p>The trigger unit <b>R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FS-Z11</b> is a device that controls the analyzers in the MIMO test setup. It makes sure that all data streams are captured simultaneously. When you turn it on, the application takes the trigger unit into account during measurements.</p><p>The diagram next to the trigger settings visualizes the connections and cabling necessary to use the trigger unit. It is displayed in color when you turn on the trigger unit. For more information, see <a class="xref" href="ff945ff9c9ed4443.htm#ID_2e16f609ff1b2c330a001ae7082d2b67-f027d3e70a0789030a00206a01bcf55b-en-US">"Measurements with the R&amp;S FS-Z11 trigger unit"</a>.</p><p><b>Trigger settings for individual analyzers:</b></p><p>The LTE measurement application allows you to assign several trigger settings for each analyzer individually.</p><p>In the "Trigger" tab, this is represented by the "Source 1" to "Source 4" tabs. In the default state, all analyzers use the same settings as the first analyzer ("Same as Master Setting" is on).</p><p>If the analyzer you use has more than one <b>trigger port</b>, you can use different one than on the master analyzer.</p><p>In addition, the power level, you can also define a custom trigger offset for all analyzers in the setup.</p><p>The measurement starts as soon as the trigger event happens. For external triggers, this is the voltage that the signal must exceed.</p><p>For simultaneous data capture, it can become necessary to start the measurement some time after the trigger event. In that case, define a <b>trigger offset</b>. The trigger offset is the time that should pass between the trigger event and the start of the measurement.</p><p>The trigger offset can be a negative time. The trigger offset is then called a <b>pretrigger</b>.</p>Remote command: <div class="rcclist_right"><p>Trigger source: <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SOURce</nobr></a></p><p>Trigger slope: <a class="xref" href="9c455006f73748d5.htm#ID_ce81cfc82e5928870a00206a00ed43ad-3ae6891f3007d3640a00206a0000c25e-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SLOPe</nobr></a></p><p>Trigger port: <a class="xref" href="fedc2b85cdfa4d5d.htm#ID_0b186114d11c22080a00201901716938-77281cd9d11c20c00a00201900218678-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>PORT&lt;in&gt;</nobr></a></p><p>Trigger level: <a class="xref" href="d6efe475310f4c41.htm#ID_6b9c84dbe2a342740a00206a01106977-36c1e46ee2a33d050a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>LEVel&lt;in&gt;[:</nobr>​<nobr>EXTernal]</nobr></a></p><p>Trigger offset: <a class="xref" href="5eb3327e2b5c41d3.htm#ID_880f6038e2a337680a00206a00b802bf-ba3367cce2a337680a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>HOLDoff&lt;in&gt;</nobr></a></p><p>Trigger configuration for slave analyzer: <a class="xref" href="7aa22c748f6a4652.htm#ID_c703255b892346bf0a001ae776601b4c-3c232a85892346bf0a001ae71fa0574b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SMSetting&lt;in&gt;</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

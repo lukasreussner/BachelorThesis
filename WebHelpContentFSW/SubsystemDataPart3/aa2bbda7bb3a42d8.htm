@@ -1,0 +1,98 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Configuration|Input and Frontend Settings|Amplitude Settings for RF Input|Reference Level" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Shifting the Display
+	 (
+		Offset
+	)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeRefLevelOffset">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudeRefLevelOffsetCDA">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudeRefLevelOffset">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudeRefLevelOffsetCDA">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudeRefLevelOffsetCDA">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudeRefLevelOffsetRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudeRefLevelOffsetRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudeRefLevelOffsetPVT">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdAmpRefLevelOffset">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudeRefLevelOffsetCDA">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudeRefLevelOffsetPVT">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudeRefLevelOffsetRf">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdAmplitudeRefLevelOffset">
+</meta>
+        <meta name="topic-id" value="187">
+</meta>
+        <meta name="topic-id" value="189">
+</meta>
+        <meta name="topic-id" value="191">
+</meta>
+        <meta name="topic-id" value="193">
+</meta>
+        <meta name="topic-id" value="195">
+</meta>
+        <meta name="topic-id" value="197">
+</meta>
+        <meta name="topic-id" value="199">
+</meta>
+        <meta name="topic-id" value="201">
+</meta>
+        <meta name="topic-id" value="203">
+</meta>
+        <meta name="topic-id" value="205">
+</meta>
+        <meta name="topic-id" value="207">
+</meta>
+        <meta name="topic-id" value="209">
+</meta>
+        <meta name="topic-id" value="211">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_216cdcf206c927ab0a00206a001ac4e6-ae4a67e705305f050a00206a01ab427c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="adce0676b09b40a7.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="1b92da4b6c5d480f.htm">Input and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="cc917947bc894c2d.htm">Amplitude Settings for RF Input</a> &gt; <a class="chm-breadcrumb" href="6a4e851d0383450a.htm">Reference Level</a> &gt; <span class="chm-breadcrumb">Shifting the Display ( Offset )</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor144">
+</a><a name="kanchor145">
+</a><a name="kanchor146">
+</a><a name="kanchor147">
+</a><div class="function_heading"><a name="ID_216cdcf206c927ab0a00206a001ac4e6-ae4a67e705305f050a00206a01ab427c-en-US">
+</a><span style="font-weight: bold">Shifting the Display</span> ( <span style="font-weight: bold">Offset</span> )</div><p>Defines an arithmetic level offset. This offset is added to the measured level. In some result displays, the scaling of the y-axis is changed accordingly.</p><p>Define an offset if the signal is attenuated or amplified before it is fed into the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW so the application shows correct power results. All displayed power level results are shifted by this value.</p><p>The setting range is <span style="font-family: arial; font-size: 10.5pt">±</span>200 dB in 0.01 dB steps.</p><p>Note, however, that the <em>internal</em> reference level (used to adjust the hardware settings to the expected signal) ignores any "Reference Level Offset" . Thus, it is important to keep in mind the actual power level the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW must handle. Do not rely on the displayed reference level (internal reference level = displayed reference level - offset).</p><p>For details, see <a class="xref" href="../../../Content/b1e5f8c47c084326.htm#ID_78fcae777d5cad8d0a001ae7397b2663-cc2a35377021cfde0a001ae70e4d4cb4-en-US">Reference Level</a>.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="cf4c6086b8c642d2.htm#ID_a0ff9fd42dd0b80f0a00206a01f33ccc-1d463083e2e0f4d00a00206a015fda02-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>RLEVel:</nobr>​<nobr>OFFSet</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

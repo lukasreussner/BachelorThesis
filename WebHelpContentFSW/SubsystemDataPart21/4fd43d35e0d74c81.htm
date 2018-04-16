@@ -1,0 +1,88 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Trigger Settings|Trigger 2/3|Output Type" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Send Trigger
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTriggerInOutSendTrigger1">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTriggerInOutSendTrigger2">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTriggerInOutSendTrigger3">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTriggerInOutSendTrigger1">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTriggerInOutSendTrigger2">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTriggerInOutSendTrigger3">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTriggerInOutSendTrigger2">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTriggerInOutSendTrigger3">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerInOutSendTrigger2">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerInOutSendTrigger3">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdTriggerInOutSendTrigger1">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdTriggerInOutSendTrigger2">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdTriggerInOutSendTrigger3">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerInOutSendTrigger2">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerInOutSendTrigger3">
+</meta>
+        <meta name="topic-id" value="695">
+</meta>
+        <meta name="topic-id" value="696">
+</meta>
+        <meta name="topic-id" value="697">
+</meta>
+        <meta name="topic-id" value="698">
+</meta>
+        <meta name="topic-id" value="699">
+</meta>
+        <meta name="topic-id" value="700">
+</meta>
+        <meta name="topic-id" value="701">
+</meta>
+        <meta name="topic-id" value="702">
+</meta>
+        <meta name="topic-id" value="703">
+</meta>
+        <meta name="topic-id" value="704">
+</meta>
+        <meta name="topic-id" value="705">
+</meta>
+        <meta name="topic-id" value="706">
+</meta>
+        <meta name="topic-id" value="707">
+</meta>
+        <meta name="topic-id" value="708">
+</meta>
+        <meta name="topic-id" value="709">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c6937000fd46f2b00a00206a004dec08-999f08a7232ee05a0a00206a017b283a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="7ac74f2400584762.htm">Trigger Settings</a> &gt; <a class="chm-breadcrumb" href="6466327d4749428e.htm">Trigger 2/3</a> &gt; <a class="chm-breadcrumb" href="9138448d58b44e62.htm">Output Type</a> &gt; <span class="chm-breadcrumb">Send Trigger</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_c6937000fd46f2b00a00206a004dec08-999f08a7232ee05a0a00206a017b283a-en-US">
+</a>Send Trigger</div><p>Sends a user-defined trigger to the output connector immediately.</p><p>Note that the trigger pulse level is always opposite to the constant signal level defined by the output <a class="xref" href="068bdb6068144f1b.htm#ID_4f1a9561fd46f2b00a00206a012b7978-999f08a7232ee05a0a00206a017b283a-en-US">"Level"</a> setting. For example, for "Level" = "High", a constant high signal is output to the connector until you select the "Send Trigger" function. Then, a low pulse is sent.</p><p>Which pulse level will be sent is indicated by a graphic on the button.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="2c6e59a03bf847cc.htm#ID_3dabc8067a3d712c0a00206a01193fb2-714294bd7a3d712c0a00206a00c62416-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>OUTPut:</nobr>​<nobr>TRIGger&lt;port&gt;:</nobr>​<nobr>PULSe:</nobr>​<nobr>IMMediate</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>About Channel Power Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1e03a503d01e0bf10a710a3101257498-afab76cfd7349b540a00206a00bfaa09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <span class="chm-breadcrumb">About Channel Power Measurements</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor463">
+</a><a name="kanchor464">
+</a><div class="chm-chaptertitle">About Channel Power Measurements</div><p>Measuring channel power and adjacent channel power is one of the most important tasks during signal analysis with the necessary test routines in the field of digital transmission. Theoretically, a power meter could be used to measure channel power at highest accuracy. However, its low selectivity means that it is not suitable for measuring adjacent channel power as an absolute value or relative to the transmit channel power. Only a selective power meter can measure the power in the adjacent channels.</p><p>A signal analyzer cannot be classified as a true power meter, because it displays the IF envelope voltage. However, it is calibrated such as to display the power of a pure sine wave signal correctly, irrespective of the selected detector. This calibration cannot be applied for non-sinusoidal signals. Assuming that the digitally modulated signal has a Gaussian amplitude distribution, the signal power within the selected resolution bandwidth can be obtained using correction factors. The internal power measurement routines in a signal analyzer normally use these correction factors to determine the signal power from IF envelope measurements. These factors apply if and only if the assumption of a Gaussian amplitude distribution is correct.</p><p>Apart from this common method, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW also has a true power detector, i.e. an RMS detector. It displays the power of the test signal within the selected resolution bandwidth correctly, irrespective of the amplitude distribution, without additional correction factors being required.</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW software allows you to perform ACLR measurements on input containing multiple signals for different communication standards. A measurement standard is provided that allows you to define multiple discontiguous transmit channels at specified frequencies, independent from the selected center frequency. The ACLR measurement determines the power levels of the individual transmit, adjacent, and gap channels, as well as the total power for each sub block of transmit channels.</p><p>A detailed measurement example is provided in <a class="xref" href="4818a9698b944a3a.htm#ID_818bbbedd5ca42120a00206a003a039d-afab76cfd7349b540a00206a00bfaa09-en-US">"Measurement Examples"</a>.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

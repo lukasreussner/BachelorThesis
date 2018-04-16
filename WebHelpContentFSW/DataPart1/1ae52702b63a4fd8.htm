@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Marker Usage|Marker (Measurement) Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measuring Characteristic Bandwidths (n dB Down Marker)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMarkerNDbDownConfig">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdMarkerNDbDownConfig">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdMarkerNDbDownConfig">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdMarkerNDbDownConfig">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdMarkerNDbDownConfig">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerNDbDown">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdMarkerNDbDown">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdMarkerNDbDown">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdMarkerNDbDown">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdMarkerNDbDown">
+</meta>
+        <meta name="topic-id" value="2512">
+</meta>
+        <meta name="topic-id" value="2513">
+</meta>
+        <meta name="topic-id" value="2514">
+</meta>
+        <meta name="topic-id" value="2515">
+</meta>
+        <meta name="topic-id" value="2516">
+</meta>
+        <meta name="topic-id" value="2517">
+</meta>
+        <meta name="topic-id" value="2518">
+</meta>
+        <meta name="topic-id" value="2519">
+</meta>
+        <meta name="topic-id" value="2520">
+</meta>
+        <meta name="topic-id" value="2521">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_756974232b83e9360a00206a0084f8a4-53faacd52b83e9360a00206a01e00463-en-US;ID_32ce5859d4e111e2ba0ed4c419c184f7-53faacd52b83e9360a00206a01e00463-en-US;ID_32ce585bd4e111e2ba0ed4c419c184f7-53faacd52b83e9360a00206a01e00463-en-US;ID_8ea6bc1b4d6e87040a710a310137d9b1-53faacd52b83e9360a00206a01e00463-en-US;ID_7ae4fe6f726fd3ca0a001ae74316024b-53faacd52b83e9360a00206a01e00463-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="40f2068ca727484b.htm">Marker Usage</a> &gt; <a class="chm-breadcrumb" href="f6177c1e3ac2436e.htm">Marker (Measurement) Functions</a> &gt; <span class="chm-breadcrumb">Measuring Characteristic Bandwidths (n dB Down Marker)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Measuring Characteristic Bandwidths (n dB Down Marker)</div><p><b>Access</b>: "Overview" &gt; "Analysis" &gt; "Marker Functions" &gt; "n dB down" &gt; "n dB Down Config"</p><p><b>Or</b>: MKR FUNC &gt; "Select Marker Function" &gt; "n dB down" &gt; "n dB Down Config"</p><p>When characterizing the shape of a signal, the bandwidth at a specified offset from its peak level is often of interest. The offset is specified as a relative decrease in amplitude of n dB. To measure this bandwidth, you could use several markers and delta markers and determine the bandwidth manually. However, using the n dB down marker function makes the task very simple and quick.</p><p>The n dB down marker function uses the current value of marker 1 as the reference point. It activates two temporary markers T1 and T2 located on the signal, whose level is n dB below the level of the reference point. Marker T1 is placed to the left and marker T2 to the right of the reference marker. The default setting for n is 3 dB, but it can be changed.</p><p>If a positive offset is entered, the markers T1 and T2 are placed below the active reference point. If a negative value is entered (for example for notch filter measurements), the markers T1 and T2 are placed above the active reference point.</p><div class="block" id="ID_32ce5859d4e111e2ba0ed4c419c184f7-53faacd52b83e9360a00206a01e00463-en-US"><div class="graphic"><img border="0" src="Resources/Images/img0aae06e4b632e6150a00206a01dcdadf_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">n dB down marker function</div></div><p>The following marker function results are displayed:</p><div class="block"><a name="ID_32ce585bd4e111e2ba0ed4c419c184f7-53faacd52b83e9360a00206a01e00463-en-US">
+</a><span class="table-caption">n dB down marker function results</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Label</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>M1</p></td><td valign="top"><p>Current position and level of marker 1</p></td></tr><tr class="evenrow"><td valign="top"><p>ndB</p></td><td valign="top"><p>Offset value (n dB down)</p></td></tr><tr class="oddrow"><td valign="top"><p>ndB down Bw / PWid</p></td><td valign="top"><p>Determined bandwidth or pulse width (zero span) at the offset</p></td></tr><tr class="evenrow"><td valign="top"><p>Q-factor</p></td><td valign="top"><p>Quality factor of the determined bandwidth (characteristic of damping or resonance)</p></td></tr><tr class="oddrow"><td valign="top"><p>T1, T2</p></td><td valign="top"><p>Current position and level of the temporary markers</p></td></tr></tbody></table></div><p>If the required position for the temporary markers cannot be determined uniquely, for example due to noise, dashes are displayed as a result.</p><div class="block" id="ID_8ea6bc1b4d6e87040a710a310137d9b1-53faacd52b83e9360a00206a01e00463-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7e1dfa964d17e4830a00206a010288cc_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="block"><div class="subtitle"><a name="ID_7ae4fe6f726fd3ca0a001ae74316024b-53faacd52b83e9360a00206a01e00463-en-US">
+</a>Remote commands:</div></div><p><a class="xref" href="680c933efa064506.htm#ID_c806713c2dc44edf0a00206a0000b456-aa0ec5b12aa835870a00206a00a70d7f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>NDBDown:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="ed29e0c270ca460f.htm#ID_88ba45d32dc3aaf00a00206a01ea7119-bd1a7a002aa830090a00206a00c49508-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>NDBDown:</nobr>​<nobr>RESult?</nobr></a></p><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="55454d9b927d41f9.htm#ID_ba5829f14df838f10a710a310053ca8a-53faacd52b83e9360a00206a01e00463-en-US" class="title_toc">n dB down Marker State</a></div><div class="function_block"><font face="Arial">└</font> <a href="0233fb444d8f4291.htm#ID_ae4dbb144df8375b0a710a31016dcd37-53faacd52b83e9360a00206a01e00463-en-US" class="title_toc">n dB down Delta Value</a></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

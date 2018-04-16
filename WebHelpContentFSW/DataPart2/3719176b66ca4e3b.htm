@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Hierarchy of Status Registers</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3a0a7847674af3890a00206a00535ead-89ebf481c0ad4d200a001ae71413c094-en-US;ID_25f2543c6ab36d850a710a3100b89bc5-89ebf481c0ad4d200a001ae71413c094-en-US;ID_6fae4b35674af3990a00206a004a1027-89ebf481c0ad4d200a001ae71413c094-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <span class="chm-breadcrumb">Hierarchy of Status Registers</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Hierarchy of Status Registers</div><p>As shown in the following figure, the status information is of hierarchical structure.</p><div class="block" id="ID_25f2543c6ab36d850a710a3100b89bc5-89ebf481c0ad4d200a001ae71413c094-en-US"><div class="graphic"><img border="0" src="Resources/Images/img61e9764df805a1200a00206a011f312e_8_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Graphical overview of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW status registers hierarchy</div></div><a name="kanchor2755">
+</a><a name="kanchor2756">
+</a><a name="kanchor2757">
+</a><a name="kanchor2758">
+</a><a name="kanchor2759">
+</a><a name="kanchor2760">
+</a><a name="kanchor2761">
+</a><a name="kanchor2762">
+</a><a name="kanchor2763">
+</a><div class="block"><ul class="list"><li value="1"><b>STB, SRE</b><br/>The STatus Byte (<span class="command">STB</span>) register and its associated mask register Service Request Enable (<span class="command">SRE</span>) form the highest level of the status reporting system. The <span class="command">STB</span> provides a rough overview of the instrument status, collecting the information of the lower-level registers.</li><li value="2"><b>ESR, SCPI registers</b><br/>The STB receives its information from the following registers:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The Event Status Register (<span class="command">ESR</span>) with the associated mask register standard Event Status Enable (<span class="command">ESE</span>).</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The <span class="command">STATus:OPERation</span> and <span class="command">STATus:QUEStionable</span> registers which are defined by SCPI and contain detailed information on the instrument.</td></tr></table></li><li value="3"><b>IST, PPE</b><br/>The <span class="command">IST</span> flag ("Individual STatus"), like the <span class="command">SRQ</span>, combines the entire instrument status in a single bit. The <span class="command">PPE</span> fulfills the same function for the <span class="command">IST</span> flag as the <span class="command">SRE</span> for the service request.</li><li value="4"><b>Output buffer</b><br/>The output buffer contains the messages the instrument returns to the controller. It is not part of the status reporting system but determines the value of the <span class="command">MAV</span> bit in the <span class="command">STB</span> and thus is represented in the overview.</li></ul></div><p>All status registers have the same internal structure.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_6fae4b35674af3990a00206a004a1027-89ebf481c0ad4d200a001ae71413c094-en-US">
+</a>SRE, ESE</div><p>The service request enable register <span class="command">SRE</span> can be used as <span class="command">ENABle</span> part of the <span class="command">STB</span> if the <span class="command">STB</span> is structured according to SCPI. By analogy, the <span class="command">ESE</span> can be used as the <span class="command">ENABle</span> part of the <span class="command">ESR.</span></p></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Display and Sort Order</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6e110a40b1549a850a00206a018f1257-b7f661756d7580e80a00206a010113c9-en-US;ID_3c514976acdbe3720a00206a01bf6eb4-b7f661756d7580e80a00206a010113c9-en-US;ID_5986442106ee11e1a419aaa473ad6f6e-b7f661756d7580e80a00206a010113c9-en-US;ID_eee44836acdbe3720a00206a00e345c6-b7f661756d7580e80a00206a010113c9-en-US;ID_598fba0206ee11e1a419aaa473ad6f6e-b7f661756d7580e80a00206a010113c9-en-US;ID_d4028bc5b6086bbc0a00206a003e1882-b7f661756d7580e80a00206a010113c9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="2555a026cc2a4d0c.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Code Display and Sort Order</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Code Display and Sort Order</div><a name="kanchor203">
+</a><a name="kanchor204">
+</a><a name="kanchor205">
+</a><a name="kanchor206">
+</a><a name="kanchor207">
+</a><p>In the result displays that refer to codes, the currently selected code is highlighted in the diagram. You select a code by entering a code number in the "Evaluation Range" settings.</p><p>By default, codes are displayed in ascending order of the code number (<b>Hadamard</b> order). The currently selected code number is highlighted. If the code belongs to a detected active channel, the entire channel is highlighted. (For details on active channels and channel detection see <a class="xref" href="ac63e917acc146b1.htm#ID_dfc899a9fa11073a0a710a310022ca71-b7f661756d7580e80a00206a010113c9-en-US">"Channel Detection and Channel Types"</a>.)</p><p>However, in CDMA2000 signals, the codes that belong to the same channel need not lie next to each other in the code domain, they can be distributed.</p><div class="block"><span class="bold"><a name="ID_3c514976acdbe3720a00206a01bf6eb4-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Example: Example for Hadamard order</span><p>For a base spreading factor of 64, the following code order is displayed:</p><p>0.64, 1.64, 2.64, …, 63.64.</p><div class="block" id="ID_5986442106ee11e1a419aaa473ad6f6e-b7f661756d7580e80a00206a010113c9-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgde1c24d07d5e67ac0a00206a01bfbeae_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Code Domain Error Power result display in Hadamard code sorting order</div></div></div><p>To compare all codes in the same channel visually, a <b>Bit-Reverse</b> sorting order is provided. In this case, all codes of a channel are displayed next to each other.</p><div class="block"><span class="bold"><a name="ID_eee44836acdbe3720a00206a00e345c6-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Example: Example for Bit-Reverse order</span><p>For a base spreading factor of 64, the following code order can be displayed:</p><p>0.64, 32.64, 16.64, 48.64, 8.64, 40.64, …, 15.64, 47.64,31.64, 63.64</p><div class="block" id="ID_598fba0206ee11e1a419aaa473ad6f6e-b7f661756d7580e80a00206a010113c9-en-US"><div class="graphic"><img border="0" src="Resources/Images/img80d234c77e2af5e60a00206a00354c42_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Code Domain Error Power result display in BitReverse code sorting order</div></div></div><a name="kanchor208">
+</a><p>For the display in the CDMA2000 BTS application, the scale for code-based diagrams displays 64 codes by default (32 in the MS application). However, you can change the <b>base spreading factor</b> for the display, and thus the number of displayed codes.</p><a name="kanchor209">
+</a><a name="kanchor210">
+</a><div class="block"><div class="subtitle"><a name="ID_d4028bc5b6086bbc0a00206a003e1882-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Alias power</div></div><p>Note, however, that if you select a base spreading factor that is lower than the actual spreading factor used by the channel (e.g. 64 for channels with a base spreading factor of 128), the results are distorted. This is due to the fact that a wider area of the code domain is considered than the code actually occupies, for example when calculating the power level. The excess power calculated due to a false spreading factor is referred to as <b>alias power</b>.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

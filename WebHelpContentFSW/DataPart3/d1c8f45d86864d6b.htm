@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements|Measuring the Occupied Bandwidth" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: OBW Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_bf465e91fab8b8300a710a31000b6585-dd2651f33ca87d520a001ae72ec1ec08-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <a class="chm-breadcrumb" href="2b78bf5f61ad42ec.htm">Measuring the Occupied Bandwidth</a> &gt; <span class="chm-breadcrumb">Programming Example: OBW Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Programming Example: OBW Measurement</div><p>This programming example demonstrates the measurement example described in <a class="xref" href="ddf0dbe7ee1d48dd.htm#ID_096dd7b3eba4273b0a00206a00877284-216dedebe1fc31bd0a00206a01a4cad1-en-US">"Measurement Example"</a> in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//-----------Preparing the measurement ------------
+//Reset the instrument
+*RST
+</pre></div><div class="verbatim"><pre class="verbatim_text">//-------------Configuring the Measurement-----------------------
+//Set the center frequency to 800 MHz.
+FREQ:CENT 800MHz
+//Set the reference level to -10 dBm.
+DISP:TRAC:Y:RLEV -10dBm
+//Activate occupied bandwidth measurement.
+CALC:MARK:FUNC:POW:SEL OBW
+//Set the percentage of power to 99%.
+POW:BWID 99PCT
+//Set the channel bandwidth to 21 kHz.
+POW:ACH:BAND 21kHz
+//Optimize the instrument settings according to the channel bandwidth.
+POW:ACH:PRES OBW
+//Determine the ideal reference level for the measurement.
+POW:ACH:PRES:RLEV
+//Set the trace detector to positive peak.
+DET APE
+
+//--------------Performing the Measurement-----
+//Select single sweep mode.INIT:CONT OFF
+
+//Initiate a new measurement and waits until the sweep has finished.
+INIT;*WAI
+
+//---------------Retrieving Results-------------
+//Return the occupied bandwidth.
+CALC:MARK:FUNC:POW:RES? OBW
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

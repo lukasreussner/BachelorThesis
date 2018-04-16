@@ -1,0 +1,81 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Configuration|Using the Uncertainty Calculator" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring Noise Source Characteristics</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_NoiseSourceOutputMatch">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_NoiseSourceOutputMatchSelection">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ENRUncert">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_CalValuesSelection">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_CalNoiseSourceOutputMatch">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_CalNoiseSourceOutputMatchSelection">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_CalENRUncert">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ENRThotUncert">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ENRTcoldUncert">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_CalENRThotUncert">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_CalENRTcoldUncert">
+</meta>
+        <meta name="topic-id" value="201">
+</meta>
+        <meta name="topic-id" value="203">
+</meta>
+        <meta name="topic-id" value="205">
+</meta>
+        <meta name="topic-id" value="207">
+</meta>
+        <meta name="topic-id" value="209">
+</meta>
+        <meta name="topic-id" value="211">
+</meta>
+        <meta name="topic-id" value="213">
+</meta>
+        <meta name="topic-id" value="215">
+</meta>
+        <meta name="topic-id" value="217">
+</meta>
+        <meta name="topic-id" value="219">
+</meta>
+        <meta name="topic-id" value="221">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_79fc3f38002f08c20a00201900a4d382-0fca6040001083b80a0020190143e16f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="6f413a5358b94877.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="112d0d5ae3ab4748.htm">Using the Uncertainty Calculator</a> &gt; <span class="chm-breadcrumb">Configuring Noise Source Characteristics</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Configuring Noise Source Characteristics</div><p><b>Access</b>: [MEAS CONFIG] &gt; "Uncertainty Calculation"</p><p>The Uncertainty Calculator supports individual characteristics for a noise source used during calibration and the measurement.</p><p>If you are using a Common ENR, the application assumes that the <a class="xref" href="d4a6072f5658462f.htm#ID_443045ba002f08c20a002019013a2a4b-0fca6040001083b80a0020190143e16f-en-US">Output Match</a> and <a class="xref" href="83c1fd491baf4243.htm#ID_f55d8f3c002f08c20a00201901121b6e-0fca6040001083b80a0020190143e16f-en-US">ENR Uncert(ainty)</a> are the same during calibration and measurement. Only the "Measurement Noise Source" parameters are displayed.</p><p>If you are using a different noise source during calibration and measurement, the Uncertainty Calculator adds an additional <a class="xref" href="d4a6072f5658462f.htm#ID_443045ba002f08c20a002019013a2a4b-0fca6040001083b80a0020190143e16f-en-US">Output Match</a> and <a class="xref" href="83c1fd491baf4243.htm#ID_f55d8f3c002f08c20a00201901121b6e-0fca6040001083b80a0020190143e16f-en-US">ENR Uncert(ainty)</a> required for uncertainty calculation during calibration.</p><p>Note that you have to turn off the <a class="xref" href="5ba3a1613cf0442a.htm#ID_9c89f8adfb2e55dc0a710a920128b33a-26df8e04fae9ed6e0a00206a001eaa10-en-US">Common Noise Source</a> if you have to define the values of the noise source used during calibration.</p>
+						<div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="b8f0173b3e2246d2.htm#ID_e7ae6c3d02b923350a710b9a014cb976-0fca6040001083b80a0020190143e16f-en-US" class="title_toc">Common Source for Meas and Cal</a></div><div class="function_block"><font face="Arial">└</font> <a href="d4a6072f5658462f.htm#ID_443045ba002f08c20a002019013a2a4b-0fca6040001083b80a0020190143e16f-en-US" class="title_toc">Output Match</a></div><div class="function_block"><font face="Arial">└</font> <a href="83c1fd491baf4243.htm#ID_f55d8f3c002f08c20a00201901121b6e-0fca6040001083b80a0020190143e16f-en-US" class="title_toc">ENR Uncert(ainty)</a></div><div class="function_block"><font face="Arial">└</font> <a href="34cdcc0523994b45.htm#ID_ff4473240cd911e4b35db6a123cf2e85-0fca6040001083b80a0020190143e16f-en-US" class="title_toc">Temperature Uncert(ainty)</a></div></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

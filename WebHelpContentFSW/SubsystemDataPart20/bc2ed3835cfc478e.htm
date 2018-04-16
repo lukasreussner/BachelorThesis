@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="802.11ad measurements application (R&amp;S FSW-K95)|Remote Commands for IEEE 802.11ad Measurements|Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k95.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>The STATus:QUEStionable:SYNC Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d9e951567e5211e1ad2f80fd99402963-76d6e93a910061a90a001ae719d6d196-en-US;ID_0bd497ecf8d8e93b0a00206a003b1733-76d6e93a910061a90a001ae719d6d196-en-US;ID_97585bb7dab511dfb1a8e6754d1ca1e4-76d6e93a910061a90a001ae719d6d196-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">802.11ad measurements application (R&amp;S FSW-K95)</a> &gt; <a class="chm-breadcrumb" href="1853bfe4be9647e3.htm">Remote Commands for IEEE 802.11ad Measurements</a> &gt; <a class="chm-breadcrumb" href="004edd864d3e4003.htm">Status Registers</a> &gt; <span class="chm-breadcrumb">The STATus:QUEStionable:SYNC Register</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor556">
+</a><a name="kanchor557">
+</a><a name="kanchor558">
+</a><a name="kanchor559">
+</a><a name="kanchor560">
+</a><div class="chm-chaptertitle">The STATus:QUEStionable:SYNC Register</div><p>The <span class="command">STATus:QUEStionable:SYNC</span> register contains application-specific information about synchronization errors or errors during pilot symbol detection. If any errors occur in this register, the status bit #11 in the <span class="command">STATus:QUEStionable</span> register is set to 1.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>Each active channel uses a separate <span class="command">STATus:QUEStionable:SYNC</span> register. Thus, if the status bit #11 in the <span class="command">STATus:QUEStionable</span> register indicates an error, the error may have occurred in any of the channel-specific <span class="command">STATus:QUEStionable:SYNC</span> registers. In this case, you must check the register of each channel to determine which channel caused the error. By default, querying the status of a register always returns the result for the currently selected channel. However, you can specify any other channel name as a query parameter.</p></td></tr></table></div></div><div class="block"><a name="ID_97585bb7dab511dfb1a8e6754d1ca1e4-76d6e93a910061a90a001ae719d6d196-en-US">
+</a><span class="table-caption">Meaning of the bits used in the STATus:QUEStionable:SYNC register</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>PPDU not found</p><p>This bit is set if an I/Q measurement is performed and no PPDUs are detected</p></td></tr><tr class="evenrow"><td valign="top"><p>1 - 14</p></td><td valign="top"><p>These bits are not used.</p></td></tr><tr class="oddrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always 0.</p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

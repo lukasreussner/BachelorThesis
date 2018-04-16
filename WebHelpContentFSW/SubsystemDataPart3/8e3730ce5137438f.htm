@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Analysis|Working with Markers in the R&amp;S FSW Analog Demodulation application|Marker Function Configuration|Measuring the Power in a Channel (Band Power Marker)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Power Mode
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMarkerBandPowerMode">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerBandPowerPower">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerBandPowerDensity">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerBandPowerRelPower">
+</meta>
+        <meta name="topic-id" value="1536">
+</meta>
+        <meta name="topic-id" value="1538">
+</meta>
+        <meta name="topic-id" value="1540">
+</meta>
+        <meta name="topic-id" value="1542">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_de84f1b44de4cea50a710a3101ad4a49-2f05d78a2b851cc40a00206a01b8de23-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="422a06cbc46241ee.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="00e11ae7b6f24a0c.htm">Working with Markers in the R&amp;S FSW Analog Demodulation application</a> &gt; <a class="chm-breadcrumb" href="6c8368f26b154fa5.htm">Marker Function Configuration</a> &gt; <a class="chm-breadcrumb" href="5741ed67a8244190.htm">Measuring the Power in a Channel (Band Power Marker)</a> &gt; <span class="chm-breadcrumb">Power Mode</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor575">
+</a><a name="kanchor576">
+</a><div class="function_heading"><a name="ID_de84f1b44de4cea50a710a3101ad4a49-2f05d78a2b851cc40a00206a01b8de23-en-US">
+</a><span style="font-weight: bold">Power Mode</span></div><p>Defines the mode of the power measurement result.</p><p>For analog demodulation measurements, the power mode is not editable for AM, FM, or PM spectrum results. In this case, the marker function does not determine a power value, but rather the deviation within the specified span.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Power"</p></td><td class="function_col_right"><p>The result is an absolute power level.</p><p>The power unit depends on the <a class="xref" href="7eb3e15916f14ffd.htm#ID_0640825a1cdb20f10a710a310175415e-ea8e427e3e44f4c70a001ae74d577203-en-US">"Units"</a> setting.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Relative Power"</p></td><td class="function_col_right"><p>This setting is only available for a delta band power marker.</p><p>The result is the difference between the absolute power in the band around the delta marker and the absolute power for the reference marker (see <a class="xref" href="bd64e8332ca842d2.htm#ID_86bc62524849daaf0a00206a0195ccdb-2b71360c4849daaf0a00206a01bc72fe-en-US">"Reference Marker"</a>). The powers are subtracted logarithmically, so the result is a dB value.</p><p><em>[Relative band power (Delta2) in dB] = [absolute band power (Delta2) in dBm] - [absolute (band) power of reference marker in dBm]</em></p><p>For details see <a class="xref" href="5741ed67a8244190.htm#ID_cecb4186721500df0a71003a00aa4b83-2f05d78a2b851cc40a00206a01b8de23-en-US">"Relative band power markers"</a></p></td></tr><tr><td class="function_col_left" valign="top"><p>"Density"</p></td><td class="function_col_right"><p>The result is a power level in relation to the bandwidth, displayed in dBm/Hz.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="e2c368f4a3634bfe.htm#ID_c69d86b9b3458b5b0a710a31009b8c6c-ff675ab1677e6beb0a00206a016a21eb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>BPOWer:</nobr>​<nobr>MODE</nobr></a></p><p><a class="xref" href="d00e592a9e8e4847.htm#ID_c69d86b9b3458b5b0a710a31009b8c6c-7b7e9c29b68ace440a00206a017aa481-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>DELTamarker&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>BPOWer:</nobr>​<nobr>MODE</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

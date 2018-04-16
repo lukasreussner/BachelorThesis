@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Signal Capturing|MIMO Capture Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CONFigure:WLAN:ANTMatrix:SOURce:ROSCillator:SOURce</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6696c13ccb645a840a001ae70df57331-da25fad5cb64598a0a001ae71b489a5a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="7a0dc53bea234e7c.htm">Signal Capturing</a> &gt; <a class="chm-breadcrumb" href="c9385d29c26b470e.htm">MIMO Capture Settings</a> &gt; <span class="chm-breadcrumb">CONFigure:WLAN:ANTMatrix:SOURce:ROSCillator:SOURce</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_6696c13ccb645a840a001ae70df57331-da25fad5cb64598a0a001ae71b489a5a-en-US">
+</a><span class="bold">CONFigure:WLAN:ANTMatrix:SOURce:ROSCillator:SOURce </span>&lt;Coupling&gt;<br/></div><div class="rcdescription"><p>This remote control command determines whether the reference frequency for the master and slave devices in a simultaneous MIMO setup are coupled or not.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Coupling&gt;<br/></td><td class="rc_col_content_left" colspan="2"><p>Coupling mode</p><span class="bold">AUTO<br/></span><p>Slaves set to the same external reference source as master.</p><p>Use an R&amp;S Z11 trigger box to send to the same trigger to all devices (see <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRIG:SEQ:SOUR TUN</a>.</p><span class="bold">EXTernal<br/></span><p>Slaves' reference source is set to external.</p><p>Configure a trigger output from the master (see <a class="xref" href="ce73f41bfe8c417c.htm#ID_824270b37a3cbe380a00206a007fbb78-c4e48eb27a3cbe380a00206a0040efcb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>OUTPut:</nobr>​<nobr>TRIGger&lt;port&gt;:</nobr>​<nobr>OTYPe</nobr></a>).</p><span class="bold">OFF<br/></span><p>Slaves' reference source is set to internal.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">EXT</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">CONF:WLAN:ANTM:SOUR:ROSC:SOUR AUTO</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="c0e401f93a2c428f.htm#ID_cb86d4e804f5d7eb0a001ae74d182476-831aa3c4132388510a001ae740425ea1-en-US">"Reference Frequency Coupling"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

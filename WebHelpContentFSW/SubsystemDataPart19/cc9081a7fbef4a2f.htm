@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)|Demodulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>CONFigure:WLAN:RUConfig:SEGMent&lt;seg&gt;:CHANnel&lt;ch&gt;:RULocation&lt;rui&gt;:USER&lt;mu&gt;:DELete</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8caa5ab182794f850a001ae75c690f33-b04a109e82794eba0a001ae74cda8b00-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="213de64edb964089.htm">Configuring the WLAN IQ Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="ecabe2eae6a345a6.htm">Demodulation</a> &gt; <span class="chm-breadcrumb">CONFigure:WLAN:RUConfig:SEGMent&lt;seg&gt;:CHANnel&lt;ch&gt;:RULocation&lt;rui&gt;:USER&lt;mu&gt;:DELete</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_8caa5ab182794f850a001ae75c690f33-b04a109e82794eba0a001ae74cda8b00-en-US">
+</a><span class="bold">CONFigure:WLAN:RUConfig:SEGMent&lt;seg&gt;:CHANnel&lt;ch&gt;:RULocation&lt;rui&gt;:USER&lt;mu&gt;:DELete</span><br/></div><div class="rcdescription"><p>Deletes the selected user (station) from the HE Multi-User Downlink PPDU configuration table (for <b>MIMO</b> configuration only).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;seg&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>80-MHz-Segment to be configured</p><p>Segment 1: first 242 subcarriers of the channel</p><p>Segment 2: last 242 subcarriers of the channel (for <b>160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz</b> channels and <b>MU-PPDU (DL)</b> only)</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;ch&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>20-MHz-subchannel that RU allocation applies to</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;rui&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>Index of the entry in the RU allocation table</p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;mu&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>User index for RU in MIMO mode</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">CONFigure:WLAN:RUConfig:SEGMent1:CHANnel1:RULocation1:USER1:DELete</span><br/><p>Deletes User 1 for the RU 1.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Event<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="f0f13bd990c24f5c.htm#ID_4ed99977cf42123e0a001ae77f9b0791-d8e006d37c4158750a00201901359a7d-en-US">"Delete User"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

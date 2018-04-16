@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement|Channel Power Basics|Recommended Common Measurement Parameters" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Detector</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_79e3e422d53f92580a00206a019ec030-afab76cfd7349b540a00206a00bfaa09-en-US;ID_8bc6090fdd00daea0a00206a001e00c6-afab76cfd7349b540a00206a00bfaa09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <a class="chm-breadcrumb" href="f37bb1a995864cd8.htm">Channel Power Basics</a> &gt; <a class="chm-breadcrumb" href="c6117526a2f74c9f.htm">Recommended Common Measurement Parameters</a> &gt; <span class="chm-breadcrumb">Detector</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor485">
+</a><a name="kanchor486">
+</a><div class="chm-chaptertitle">Detector</div><p>The RMS detector correctly indicates the power irrespective of the characteristics of the signal to be measured. The whole IF envelope is used to calculate the power for each measurement point. The IF envelope is digitized using a sampling frequency which is at least five times the resolution bandwidth which has been selected. Based on the sample values, the power is calculated for each measurement point using the following formula:</p><div class="block" id="ID_8bc6090fdd00daea0a00206a001e00c6-afab76cfd7349b540a00206a00bfaa09-en-US"><div class="graphic"><img border="0" src="Resources/Images/img45696ad0dcdc50f70a00206a00d16c98_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><p>Where:</p><p>s<sub>i</sub> = linear digitized video voltage at the output of the A/D converter</p><p>N = number of A/D converter values per measurement point</p><p>P<sub>RMS</sub> = power represented by a measurement point</p><p>When the power has been calculated, the power units are converted into decibels and the value is displayed as a measurement point.</p><p>In principle, the sample detector would be possible as well. Due to the limited number of measurement points used to calculate the power in the channel, the sample detector would yield less stable results.</p><p>The RMS detector can be set for the defined channel settings automatically. Use the "Adjust Settings" function in the "Ch Power" menu or the "General Settings" tab of the "ACLR Setup" dialog box (see <a class="xref" href="b237c36818f941b1.htm#ID_dbeddaa15ba50bf50a00206a01fbfec9-df226f4d0cf817fd0a00201901038448-en-US">"Optimized Settings (Adjust Settings)"</a>). You can set the detector manually in the "Traces" configuration dialog box, see <a class="xref" href="a2975bc4babc47f1.htm#ID_e78d699b2b6b40710a00206a00b5a86f-b390441f2b6b40710a00206a0045244a-en-US">"Detector"</a>.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

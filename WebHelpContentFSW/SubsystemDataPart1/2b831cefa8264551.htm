@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Basics on FFT" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Window Functions</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ba7f5ff4a69d6c670a710a3101fb4b43-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_34a4c09fb1b773900a00201900987a65-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_da53c393a5cfe7e10a00206a0063b53f-03e72dbd6b54d8ef0a001ae70832b793-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="80556469d0ef4efb.htm">Basics on FFT</a> &gt; <span class="chm-breadcrumb">Window Functions</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor297">
+</a><a name="kanchor298">
+</a><div class="chm-chaptertitle">Window Functions</div><p>The Fourier transformation is not performed on the entire captured data in one step. Only a limited number of samples is used to calculate an individual result. This process is called windowing.</p><p>After sampling in the time domain, each window is multiplied with a specific window function. Windowing helps minimize the discontinuities at the end of the measured signal interval and thus reduces the effect of spectral leakage, increasing the frequency resolution.</p><p>Various different window functions are provided in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to suit different input signals. Each of the window functions has specific characteristics, including some advantages and some trade-offs. Consider these characteristics to find the optimum solution for the measurement task.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_34a4c09fb1b773900a00201900987a65-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a>Ignoring the window function - rectangular window</div><p>The rectangular window function is in effect not a function at all, it maintains the original sampled data. This may be useful to minimize the required bandwidth. However, be aware that if the window does not contain exactly one period of your signal, heavy sidelobes may occur, which do not exist in the original signal.</p></td></tr></table></div></div><div class="block"><a name="ID_da53c393a5cfe7e10a00206a0063b53f-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a><a name="kanchor299">
+</a><span class="table-caption">Characteristics of typical FFT window functions</span><table border="1"><colgroup><col width="68.04">
+</col><col width="56.7">
+</col><col width="56.7">
+</col><col width="85.78500000000001">
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Window type</p></th><th valign="top"><p>Frequency resolution</p></th><th valign="top"><p>Magnitude resolution</p></th><th valign="top"><p>Sidelobe suppression</p></th><th valign="top"><p>Measurement recommendation</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Rectangular</p></td><td valign="top"><p>Best</p></td><td valign="top"><p>Worst</p></td><td valign="top"><p>Worst</p></td><td valign="top"><p>No function applied.</p><p>Separation of two tones with almost equal amplitudes and a small frequency distance</p></td></tr><tr class="evenrow"><td valign="top"><p>Blackman-Harris (default)</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Harmonic detection and spurious emission detection</p></td></tr><tr class="oddrow"><td valign="top"><p>Gauss (Alpha = 0.4)</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Weak signals and short duration</p></td></tr><tr class="evenrow"><td valign="top"><p>Flattop</p></td><td valign="top"><p>Worst</p></td><td valign="top"><p>Best</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Accurate single tone measurements</p></td></tr><tr class="oddrow"><td valign="top"><p>5-Term</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Good</p></td><td valign="top"><p>Best</p></td><td valign="top"><p>Measurements with very high dynamic range</p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

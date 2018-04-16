@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Managing Settings and Results|Examples: Managing Data" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Storing Multiple Graphical Measurement Results to a PDF File</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7ab9e22615a0e1ba0a71003a004e9c65-893708fa29701e230a00206a01343a01-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="0676e691243b42ba.htm">Managing Settings and Results</a> &gt; <a class="chm-breadcrumb" href="98a3111eaf4a465b.htm">Examples: Managing Data</a> &gt; <span class="chm-breadcrumb">Storing Multiple Graphical Measurement Results to a PDF File</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3271">
+</a><a name="kanchor3272">
+</a><div class="chm-chaptertitle">Storing Multiple Graphical Measurement Results to a PDF File</div><p>This example demonstrates how to store graphical results from measurements in the Spectrum application and the I/Q Analyzer to a single PDF file. It assumes the Spectrum and I/Q Analyzer measurements have already been configured and performed, with the following screen layout:</p><p>'Spectrum': 1 Frequency Sweep</p><p>'Spectrum': 2 Spectrogram</p><p>'IQ Analyzer': 1 Magnitude</p><p>'IQ Analyzer': 2 Spectrum</p><div class="verbatim"><pre class="verbatim_text">//Switch to MultiView tab
+DISP:ATAB ON
+
+//Select windows to be stored to file
+HCOP:CONT WIND
+HCOP:PAGE:WIND:STAT 'Spectrum','1',ON
+HCOP:PAGE:WIND:STAT 'Spectrum','2',ON
+HCOP:PAGE:WIND:STAT 'IQ Analyzer','1',ON
+HCOP:PAGE:WIND:STAT 'IQ Analyzer','2',ON
+
+//Define contents to be printed on each page (logo, timestamp, page count)
+DISP:LOGO ON
+HCOP:TDST:STAT ON
+HCOP:PAGE:COUN:STAT ON
+//Define comment to be printed on each page
+HCOP:ITEM:WIND:TEXT 'Measurement Test Report'
+
+//Configure page layout (landscape, 1 display per page, margins 2cm on each side)
+HCOP:PAGE:ORI1 LAND
+HCOP:PAGE:WIND1:COUN 1
+HCOP:PAGE:WIND1:SCAL 1
+HCOP:PAGE:MARG1:BOTT 20
+HCOP:PAGE:MARG1:LEFT 20
+HCOP:PAGE:MARG1:RIGH 20
+HCOP:PAGE:MARG1:TOP 20
+
+//Configure the use of optimized colors for printout
+HCOP:CMAP:DEF2
+
+//Set destination of printout to file for printing device 1
+HCOP:DEST1 'MMEM'
+//Define file name of printout
+MMEM:NAME 'C:\R_S\instr\user\MeasurementTestReport.pdf'
+//Set format of printout to PDF.
+HCOP:DEV:LANG1 PDF
+
+//Store pdf of printout to file
+HCOP:IMM
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

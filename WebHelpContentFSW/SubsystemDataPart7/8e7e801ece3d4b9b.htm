@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Remote Control Commands for Amplifier Measurements|Configuring Amplifier Measurements|Estimating and Compensating Signal Errors" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Error Estimation and Compensation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_936461e2d654aa920a001ae7540c0123-6b316710d3f4cee40a001ae77bdaab11-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/8e7e801ece3d4b9b.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="9d0828df6bce4ba4.htm">Remote Control Commands for Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="194c10c98f69418e.htm">Configuring Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="dcf9b7eb27e94635.htm">Estimating and Compensating Signal Errors</a> &gt; <span class="chm-breadcrumb">Error Estimation and Compensation</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Error Estimation and Compensation</div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="f4703b7462824a34.htm#ID_7627821cf58374d40a001ae74b0bad05-9840d806f583739c0a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:COMPensation:ADRoop[:STATe]</a><br/><a href="35e7a7f1d8314d75.htm#ID_5e5e1be0f583767a0a001ae748bb0976-c292cc4cf58375510a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:COMPensation:FOFFset:[STATe]</a><br/><a href="0440d11e522f4b09.htm#ID_7fa190e9f58378ad0a001ae758b755af-d0e34060f58377070a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:COMPensation:IQIMbalance[:STATe]</a><br/><a href="28b9a8bbce8b48d5.htm#ID_5a75cb15f5837baa0a001ae7427c8260-70702ff7f58379490a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:COMPensation:IQOFfset:[STATe]</a><br/><a href="d254349a3bea4108.htm#ID_cbb6d9ecf5837d7f0a001ae77bcb2eda-f42d9045f5837c460a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:COMPensation:SRATe[:STATe]</a><br/><a href="2d2f9305f7df47c6.htm#ID_da73ce11f5837f830a001ae7649dd881-512c1040f5837e0c0a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:ESTimation:ADRoop[:STATe]</a><br/><a href="04e285f1ffc0456a.htm#ID_d1a5e11af58381190a001ae70f30684d-6b2d1996f58380000a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:ESTimation:FOFFset:[STATe]</a><br/><a href="eacfccf9f2d74f13.htm#ID_74b06d69f58383c80a001ae7401e7fce-a9d42792f58381e40a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:ESTimation:IQIMbalance[:STATe]</a><br/><a href="adc046b122114d66.htm#ID_6aae533df583854f0a001ae721c0714c-e8e6ee3df58384450a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:ESTimation:IQOFfset:[STATe]</a><br/><a href="8b12fbc3b2d9415e.htm#ID_14e37b74f58387720a001ae7764ff2e0-cd2e6997f58385dc0a001ae77dfe1998-en-US" class="title_toc">CONFigure:SIGNal:ERRor:ESTimation:SRATe[:STATe]</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

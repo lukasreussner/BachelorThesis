@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Remote Commands for DOCSIS 3.1 Measurements|Programming Examples for DOCSIS 3.1 Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 2: Determining the Occupied Bandwidth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0130-0dd11ef0107d77cf0a001ae760ecd65e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="12ebb6581ee04ea4.htm">Remote Commands for DOCSIS 3.1 Measurements</a> &gt; <a class="chm-breadcrumb" href="8674fd297c1342c6.htm">Programming Examples for DOCSIS 3.1 Measurements</a> &gt; <span class="chm-breadcrumb">Measurement 2: Determining the Occupied Bandwidth</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor560">
+</a><a name="kanchor561">
+</a><div class="chm-chaptertitle">Measurement 2: Determining the Occupied Bandwidth</div><p>This example demonstrates how to determine the occupied bandwidth for the DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 channel.</p><div class="verbatim"><pre class="verbatim_text">//---------- Preparing the application ------------
+//Reset the instrument
+*RST
+//Activate a DOCSIS measurement channel named "OBWMeasurement"
+INST:CRE:NEW DOCS,'OBWMeasurement'
+
+//---------- Configuring the measurement ------------
+
+//Select the OBW measurement
+CALC:MARK:FUNC:POW:SEL OBW
+
+//---------- Performing the Measurement ----
+//Stop continuous sweep
+INIT:CONT OFF
+//Set the number of sweeps to be performed to 100
+SWE:COUN 100
+//Start a new measurement with 100 sweeps and wait for the end
+INIT;*WAI
+
+//-------------- Retrieving Results ------------
+//Query the occupied bandwidth.
+CALC:MARK:FUNC:POW:RES? OBW
+
+//-------------- Returning to DOCSIS I/Q measurement --------
+//Stop power (OBW) measurement
+CALC:MARK:FUNC:POW:STAT OFF</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,84 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Configuring Display and Limit Lines|Defining Limit Checks|Programming Example: Using Limit Lines" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Performing a Limit Check</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_20a75579389ee9010a00201900d87220-425d23d33d3170070a00201901870244-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="fabe0363fd96477f.htm">Configuring Display and Limit Lines</a> &gt; <a class="chm-breadcrumb" href="3420c23676244c14.htm">Defining Limit Checks</a> &gt; <a class="chm-breadcrumb" href="002a9d8730ff497d.htm">Programming Example: Using Limit Lines</a> &gt; <span class="chm-breadcrumb">Example: Performing a Limit Check</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3263">
+</a><a name="kanchor3264">
+</a><div class="chm-chaptertitle">Example: Performing a Limit Check</div><p>This example demonstrates how to perform a limit check during a basic frequency sweep measurement in a remote environment. The limit lines configured in <a class="xref" href="cdf9367f33dd476d.htm#ID_a4985bbad35711e28c55fa87ba57cc71-425d23d33d3170070a00201901870244-en-US">"Example: Configuring Limit Lines"</a> are assumed to exist and be active.</p><div class="verbatim"><pre class="verbatim_text">//--------------Preparing the instrument ---------------------
+*RST
+//Resets the instrument
+INIT:CONT OFF
+//Selects single sweep mode.
+
+//--------------Configuring the measurement -------------
+FREQ:CENT 100MHz
+//Defines the center frequency
+FREQ:SPAN 200MHz
+//Sets the span to 100 MHz on either side of the center frequency.
+SENS:SWE:COUN 10
+//Defines 10 sweeps to be performed in each measurement.
+DISP:TRAC1:Y:RLEV 0dBm
+//Sets the reference level to 0 dBm.
+TRIG:SOUR IFP
+TRIG:LEV:IFP -10dBm
+//Defines triggering when the second intermediate frequency rises to a level
+//of -10 dBm.
+
+//--------------Configuring the Trace--------------------------
+DISP:TRAC2 ON
+DISP:TRAC2:MODE AVER
+DISP:TRAC3 ON
+DISP:TRAC3:MODE MAXH
+//Configures 3 traces: 1 (default): clear/write; 2: average; 3: max hold
+
+//------------- Configuring the limit check -------------------
+MMEM:LOAD:TYPE REPL
+MMEM:LOAD:STAT 1,'LimitLines_FM1_FM3'
+//Loads the limit lines stored in 'LimitLines_FM1_FM3'
+CALC:LIM1:NAME 'FM1'
+CALC:LIM1:UPP:STAT ON
+//Activates upper limit FM1 as line 1.
+CALC:LIM3:NAME 'FM3'
+CALC:LIM3:LOW:STAT ON
+//Activates lower limit line FM3 as line 3.
+CALC:LIM:ACT?
+//Queries the names of all active limit lines
+//Result: 'FM1,FM3'
+CALC:LIM1:TRAC3:CHEC ON
+//Activates the upper limit to be checked against trace3 (maxhold trace)
+CALC:LIM3:TRAC2:CHEC ON
+//Activates the upper limit to be checked against trace2 (average trace)
+CALC:LIM:CLE
+//Clears the previous limit check results
+
+//------------- Performing the measurement---------------------
+INIT;*WAI
+//Initiates a new measurement and waits until the last sweep has finished.
+
+//-------------- Retrieving limit check results----------------------------
+
+CALC:LIM1:FAIL?
+//Queries the result of the upper limit line check
+CALC:LIM3:FAIL?
+//Queries the result of the lower limit line check
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

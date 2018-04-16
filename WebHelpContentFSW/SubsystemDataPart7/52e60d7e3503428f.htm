@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Performing Amplifier Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Magnitude Capture</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_904b2fac1001c89e0a001ae77923d3f0-189283e11001c89e0a001ae71f2f6fb2-en-US;ID_02dbd1c26398e3fb0a001ae723ff4c5b-189283e11001c89e0a001ae71f2f6fb2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/52e60d7e3503428f.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="8689c951b7b94bef.htm">Performing Amplifier Measurements</a> &gt; <span class="chm-breadcrumb">Magnitude Capture</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor40">
+</a><a name="kanchor41">
+</a><a name="kanchor42">
+</a><a name="kanchor43">
+</a><a name="kanchor44">
+</a><div class="function_heading"><a name="ID_904b2fac1001c89e0a001ae77923d3f0-189283e11001c89e0a001ae71f2f6fb2-en-US">
+</a>Magnitude Capture</div><p><b>(RF, I and Q)</b></p><p><b>Note</b>: The Magnitude Capure I and Q results displays require you to turn on the <a class="xref" href="92b164f40376467d.htm#ID_6b567aa2c9838b8c0a001ae7336a42dd-ab965eaac9838b8c0a001ae7054bd58a-en-US">baseband input</a>.</p><p>The Magnitude Capture result display contains the raw data that has been recorded and thus represents the characteristics of the DUT.</p><p>It is available for the data recorded on the RF input and both baseband inputs (I and Q channels). (Note that the I and Q channel capture buffers are only available when <a class="xref" href="1b66df0412d84cd3.htm#ID_d3a5c830cd3921ab0a001ae70f818c17-1ee1ce46cd3921ab0a001ae7021441f5-en-US">parallel baseband capture</a> has been turned on.)</p><p>The capture buffer shows the signal level over time. The unit is either dBm (RF capture), V or A (baseband capture).</p><p>In case of the baseband capture, all <a class="xref" href="df3b422f3d204b56.htm#ID_d2fd55d5dd5192b50a001ae7075fe27f-88c66d56dd5192b50a001ae7280f03a1-en-US">multipliers and offsets</a> are already included in the results.</p><p>The raw data is source for all further evaluations. You can also use the data in the capture buffer to identify the causes for possible unexpected results.</p><p>When you synchronize the reference signal and the measured signal, the synchronized area is indicated by a horizontal green bar on the bottom of the diagram.</p><p>The current reference level is indicated by a red horizontal line.</p><div class="block" id="ID_02dbd1c26398e3fb0a001ae723ff4c5b-189283e11001c89e0a001ae71f2f6fb2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgd1fba00c63954a440a001ae73d18bd48_2_--_--_PNG96Small.png" alt="" title=""/></div></div>Remote command: <div class="rcclist_right"><p>Selection (RF): <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD RFM</a></p><p>Selection (I): <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD IMAG</a></p><p>Selection (Q): <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD QMAG</a></p><p>Result query: <a class="xref" href="24ac3b48142146eb.htm#ID_49734d02f582e0e00a001ae7405fdea2-1f2d33dff582deec0a001ae77dfe1998-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;t&gt;[:</nobr>​<nobr>DATA]?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

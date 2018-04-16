@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Automatic Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Auto Detection &amp; Run (upstream only)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDocsisSkIdSweepAutoDetectUS">
+</meta>
+        <meta name="topic-id" value="891">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c9635e5a092da66a0a001ae7529bb66d-f2ebd9c6ddad6fb70a001ae77c050122-en-US;ID_30f2698ffec0c0140a001ae727710e12-f2ebd9c6ddad6fb70a001ae77c050122-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="a55d6753347942be.htm">Automatic Settings</a> &gt; <span class="chm-breadcrumb">Auto Detection &amp; Run (upstream only)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor315">
+</a><div class="function_heading"><a name="ID_c9635e5a092da66a0a001ae7529bb66d-f2ebd9c6ddad6fb70a001ae77c050122-en-US">
+</a><span style="font-weight: bold">Auto Detection &amp; Run</span> (upstream only)</div><p>Performs an initial measurement in order to determine the required signal description settings automatically from the detected signal characteristics before starting (or continuing) the actual Modulation Accuracy measurement.</p><p>This function is <b>only</b> available for <b>upstream</b> DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 signals.</p><p><b><a name="ID_30f2698ffec0c0140a001ae727710e12-f2ebd9c6ddad6fb70a001ae77c050122-en-US">
+</a>Note:</b> As opposed to the <a class="xref" href="e3584df533534abc.htm#ID_af617abf024489400a710ade01e6f4b2-f2ebd9c6ddad6fb70a001ae77c050122-en-US">Auto Detection</a> function in the "Demodulation" settings, the "Auto Detection &amp; Run" function only performs an initial measurement to detect the required parameters <em>once</em>. For subsequent measurements, in particular if the input signal changes, you must activate this function again to adapt the parameters accordingly.<br/></p><div class="block"><div class="listintro-in-compact-list">The following parameters are determined automatically:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><a class="xref" href="2d0a0ce86fe14101.htm#ID_007b59bf2c5e11e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"N<sub>FFT</sub> (FFT length)"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="2"><a class="xref" href="9cb6cb4364be4b61.htm#ID_5a668ccb2c6411e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"Cyclic Prefix CP"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="3"><a class="xref" href="66bfdcb10cae4e78.htm#ID_298d2c652c5811e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"Symbols Per Frame (K)"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="4"><a class="xref" href="99b870bed36c440d.htm#ID_2992f8f92c5811e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"Excluded Subcarrier Assignment"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="5"><a class="xref" href="9ff14042ea184da2.htm#ID_f8ff5f186d9af17d0a001ae77f2b4c77-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"Profile Configuration (Upstream)"</a></li></ul></div><p>The <a class="xref" href="3cc1fea3b6e54412.htm#ID_206ba1440eb5456f0a00206a0067c041-fa1277eb0eb5456f0a00206a017f043a-en-US">"Center Frequency"</a> and therefore <a class="xref" href="dd3aaa63712f4241.htm#ID_2983b63b2c5811e5ae8ad6633b8bfb81-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"OFDM Spectrum Location"</a> are corrected.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="8d2c185214d7492c.htm#ID_9ed54cc38743a4550a001ae70a98bb84-b92457e9087876ad0a001ae71e8b4901-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>US:</nobr>​<nobr>AUTO</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

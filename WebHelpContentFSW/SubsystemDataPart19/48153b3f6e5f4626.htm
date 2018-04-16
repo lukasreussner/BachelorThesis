@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Optimizing and Troubleshooting the Measurement|Optimizing the Measurement Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Improving Performance </title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7dcf01eba494d13c0a710a31010f90df-8a1a0eeba64b98580a002019018ac917-en-US;ID_1f832e1aa49982f30a710a31010ab703-8a1a0eeba64b98580a002019018ac917-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="dd6a1159c95742f1.htm">Optimizing and Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="72bce559860040ab.htm">Optimizing the Measurement Results</a> &gt; <span class="chm-breadcrumb">Improving Performance </span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Improving Performance</div><div class="block"><div class="subtitle"><a name="ID_1f832e1aa49982f30a710a31010ab703-8a1a0eeba64b98580a002019018ac917-en-US">
+</a>Performing a coarse burst search</div></div><p>For signals with <b>low duty cycle rates</b>, enable the "Power Interval Search" for synchronization (see <a class="xref" href="cfb19274c69645f8.htm#ID_a5cc671ba15952d40a0020190028c32e-39f35f761337dc010a001ae72f98605e-en-US">"Power Interval Search"</a>). In this case, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW WLAN application initially performs a coarse burst search on the input signal in which increases in the power vs time trace are detected. Further time-consuming processing is then only performed where bursts are assumed. This improves the measurement speed.</p><p>However, for signals in which the PPDU power levels differ significantly, this option should be disabled as otherwise some PPDUs may not be detected.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

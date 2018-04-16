@@ -1,0 +1,79 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Analysis|Working with Markers in the R&amp;S FSW Analog Demodulation application|Marker Function Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Marker Peak List</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMarkerList">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdMarkerList">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdMarkerList">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdMarkerList">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdMarkerList">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerFunctionPeakList">
+</meta>
+        <meta name="topic-id" value="1573">
+</meta>
+        <meta name="topic-id" value="1575">
+</meta>
+        <meta name="topic-id" value="1577">
+</meta>
+        <meta name="topic-id" value="1579">
+</meta>
+        <meta name="topic-id" value="1581">
+</meta>
+        <meta name="topic-id" value="1583">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a852fadc2b86ec820a00206a00ca92ec-3ee55a272b86ec820a00206a0173fbc0-en-US;ID_aa77114c5be9a7980a00206a0195be52-3ee55a272b86ec820a00206a0173fbc0-en-US;ID_dc5c24565be9a7980a00206a0193f824-3ee55a272b86ec820a00206a0173fbc0-en-US;ID_f96ecef0583f0aa90a00206a01d446cf-3ee55a272b86ec820a00206a0173fbc0-en-US;shiv_4a_instrument_functions_04373-3ee55a272b86ec820a00206a0173fbc0-en-US;shiv_4a_instrument_functions_04375-3ee55a272b86ec820a00206a0173fbc0-en-US;ID_cc99a9d95be9a7980a00206a01883067-3ee55a272b86ec820a00206a0173fbc0-en-US;ID_1c443ff35be9a7980a00206a0021d49f-3ee55a272b86ec820a00206a0173fbc0-en-US;ID_7bbb4b8c5be9a7980a00206a018751e8-3ee55a272b86ec820a00206a0173fbc0-en-US;ID_2227432e477a03130a710a3100ee90e9-3ee55a272b86ec820a00206a0173fbc0-en-US;ID_2d753eec4b1d40750a001ae74a883838-3ee55a272b86ec820a00206a0173fbc0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="422a06cbc46241ee.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="00e11ae7b6f24a0c.htm">Working with Markers in the R&amp;S FSW Analog Demodulation application</a> &gt; <a class="chm-breadcrumb" href="6c8368f26b154fa5.htm">Marker Function Configuration</a> &gt; <span class="chm-breadcrumb">Marker Peak List</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor585">
+</a><a name="kanchor586">
+</a><div class="chm-chaptertitle">Marker Peak List</div><p><b>Access</b>: "Overview" &gt; "Analysis" &gt; "Marker Functions" &gt; "Marker Peak List"</p><p><b>Or</b>: [MKR FUNC] &gt; "Marker Peak List"</p><p>A common measurement task is to determine peak values, i.e. maximum or minimum signal levels. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW provides various peak search functions and applications:</p><div class="block"><ul class="list"><li value="1">Setting a marker to a peak value once (Peak Search)</li><li value="2">Searching for a peak value within a restricted search area (Search Limits)</li><li value="3">Creating a marker table with all or a defined number of peak values for one sweep (Marker Peak List)</li><li value="4">Updating the marker position to the current peak value automatically after each sweep (Auto Peak Search)</li><li value="5">Creating a fixed reference marker at the current peak value of a trace (Fixed Reference)</li></ul></div><div class="block"><div class="subtitle"><a name="ID_aa77114c5be9a7980a00206a0195be52-3ee55a272b86ec820a00206a0173fbc0-en-US">
+</a>Peak search limits</div></div><a name="kanchor587">
+</a><p>The peak search can be restricted to a search area. The search area is defined by limit lines which are also indicated in the diagram. In addition, a minimum value (threshold) can be defined as a further search condition.</p><div class="block"><div class="subtitle"><a name="ID_dc5c24565be9a7980a00206a0193f824-3ee55a272b86ec820a00206a0173fbc0-en-US">
+</a>When is a peak a peak? - Peak excursion</div></div><a name="kanchor588">
+</a><a name="kanchor589">
+</a><p>During a peak search, for example when a marker peak table is displayed, noise values may be detected as a peak if the signal is very flat or does not contain many peaks. Therefore, you can define a relative threshold ( "Peak Excursion" ). The signal level must increase by the threshold value before falling again before a peak is detected. To avoid identifying noise peaks as maxima or minima, enter a peak excursion value that is higher than the difference between the highest and the lowest value measured for the displayed inherent noise.</p><div class="block"><div class="subtitle"><a name="ID_f96ecef0583f0aa90a00206a01d446cf-3ee55a272b86ec820a00206a0173fbc0-en-US">
+</a>Effect of peak excursion settings (example)</div></div><p>The following figure shows a trace to be analyzed.</p><div class="block" id="shiv_4a_instrument_functions_04373-3ee55a272b86ec820a00206a0173fbc0-en-US"><div class="graphic"><img border="0" src="Resources/Images/img78c24abafa9f307f0a00206a001210b3_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Trace example</div></div><p>The following table lists the peaks as indicated by the marker numbers in the diagram above, as well as the minimum decrease in amplitude to either side of the peak:</p><div class="block"><a name="shiv_4a_instrument_functions_04375-3ee55a272b86ec820a00206a0173fbc0-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Marker #</p></th><th valign="top"><p>Min. amplitude decrease to either side of the signal</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1</p></td><td valign="top"><p>30 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>2</p></td><td valign="top"><p>29.85 dB</p></td></tr><tr class="oddrow"><td valign="top"><p>3</p></td><td valign="top"><p>20 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>4</p></td><td valign="top"><p>10 dB</p></td></tr><tr class="oddrow"><td valign="top"><p>5</p></td><td valign="top"><p>18 dB</p></td></tr></tbody></table></div><p>In order to eliminate the smaller peaks M3,M4 and M5 in the example above, a peak excursion of at least 20 dB is required. In this case, the amplitude must rise at least 20 dB before falling again before a peak is detected.</p><div class="block"><div class="subtitle"><a name="ID_cc99a9d95be9a7980a00206a01883067-3ee55a272b86ec820a00206a0173fbc0-en-US">
+</a>Marker peak list</div></div><a name="kanchor590">
+</a><a name="kanchor591">
+</a><p>The marker peak list determines the frequencies and levels of peaks in the spectrum. It is updated automatically after each sweep. How many peaks are displayed can be defined, as well as the sort order. In addition, the detected peaks can be indicated in the diagram. The peak list can also be exported to a file for analysis in an external application.</p><div class="block"><div class="subtitle"><a name="ID_1c443ff35be9a7980a00206a0021d49f-3ee55a272b86ec820a00206a0173fbc0-en-US">
+</a>Automatic peak search</div></div><a name="kanchor592">
+</a><p>A peak search can be repeated automatically after each sweep in order to keep the maximum value as the reference point for a phase noise measurement. This is useful to track a drifting source. The delta marker 2, which shows the phase noise measurement result, keeps the delta frequency value. Therefore the phase noise measurement leads to reliable results in a certain offset although the source is drifting.</p><div class="block"><div class="subtitle"><a name="ID_7bbb4b8c5be9a7980a00206a018751e8-3ee55a272b86ec820a00206a0173fbc0-en-US">
+</a>Using a peak as a fixed reference marker</div></div><p>Some results are analyzed in relation to a peak value, for example a carrier frequency level. In this case, the maximum level can be determined by an initial peak search and then be used as a reference point for further measurement results.</p><p>In the Analog Demodulation application the search limits are not available.</p><div class="block" id="ID_2227432e477a03130a710a3100ee90e9-3ee55a272b86ec820a00206a0173fbc0-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgfe577b034775eec50a00206a0005bf5c_1_--_--_PNG96Small.png" alt="" title=""/></div></div><div class="block"><div class="subtitle"><a name="ID_2d753eec4b1d40750a001ae74a883838-3ee55a272b86ec820a00206a0173fbc0-en-US">
+</a>Remote commands:</div></div><p><a class="xref" href="008dccdecf0141ce.htm#ID_df894f882dbc53170a00206a00ad60b3-4d4d34922ab9f5cf0a00206a01e8a390-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>FPEaks:</nobr>​<nobr>STATe</nobr></a></p><p><span class="command">TRAC? LIST</span>, see <a class="xref" href="ec30cb9122d5466b.htm#ID_a01c6d2f2f4ad9ee0a00206a016e96f1-a93672d2211b70620a00206a010caf3b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]</nobr></a></p>
+						<div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="ff072f5f3b5040e5.htm#ID_a30eaa704d33bbb30a710a31010e443f-3ee55a272b86ec820a00206a0173fbc0-en-US" class="title_toc">Peak List State</a></div><div class="function_block"><font face="Arial">└</font> <a href="020371417c824e8f.htm#ID_c44753a44d33bae80a710a3101289697-3ee55a272b86ec820a00206a0173fbc0-en-US" class="title_toc">Sort Mode</a></div><div class="function_block"><font face="Arial">└</font> <a href="7b0a0e6c6ee24885.htm#ID_995909ff4d33ba2c0a710a3100faa1a4-3ee55a272b86ec820a00206a0173fbc0-en-US" class="title_toc">Maximum Number of Peaks</a></div><div class="function_block"><font face="Arial">└</font> <a href="08ace53ef3014a89.htm#ID_c3820dbb51ea94050a00206a003877c5-74602f0151ea94050a00206a013f34fc-en-US" class="title_toc">Peak Excursion</a></div><div class="function_block"><font face="Arial">└</font> <a href="f2bee8c5aeb1422f.htm#ID_583dc38a4d41d75e0a710a31003a6e15-3ee55a272b86ec820a00206a0173fbc0-en-US" class="title_toc">Display Marker Numbers</a></div><div class="function_block"><font face="Arial">└</font> <a href="1ea5a7aca4374f18.htm#ID_ebd2a4c04d3d7eac0a00206a00885b7d-73abb4d44d3d7eac0a00206a002e6ee4-en-US" class="title_toc">Search Limits ( Left / Right )</a></div><div class="function_block"><font face="Arial">└</font> <a href="5c3a04e5f38440e8.htm#ID_5f9b88dd4d3d00350a00206a01ff5b35-e4f482354d3d00350a00206a01bd2f0b-en-US" class="title_toc">Search Threshold</a></div><div class="function_block"><font face="Arial">└</font> <a href="1df1c8264d024359.htm#ID_4cb8edce51dd11910a00206a010bb805-490e756f51dd11910a00206a005e53e0-en-US" class="title_toc">Use Zoom Limits</a></div><div class="function_block"><font face="Arial">└</font> <a href="25c488164cf44e76.htm#ID_2c5f390251ddb15b0a00206a01a0b6d5-ce07e31f51ddb15b0a00206a00439855-en-US" class="title_toc">Deactivating All Search Limits</a></div><div class="function_block"><font face="Arial">└</font> <a href="12c1e436b31946f6.htm#ID_24985def4d41d6160a710a3101942912-3ee55a272b86ec820a00206a0173fbc0-en-US" class="title_toc">Export Peak List</a><div class="function_block"><font face="Arial">└</font> <a href="e334501bc549408e.htm#ID_d7730bd92959615f0a00206a00e5c849-1e4bafc52959615f0a00206a01c048ac-en-US" class="title_toc">Decimal Separator</a></div></div></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

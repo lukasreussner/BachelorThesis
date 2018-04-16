@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Status Reporting System" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reset Values of the Status Reporting System</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_50443ed06b6805e70a00206a004d1217-89ebf481c0ad4d200a001ae71413c094-en-US;ID_3e14d8cf6c0c5ada0a00206a01a3c6b0-89ebf481c0ad4d200a001ae71413c094-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="abd8c6112e0c47e5.htm">Status Reporting System</a> &gt; <span class="chm-breadcrumb">Reset Values of the Status Reporting System</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Reset Values of the Status Reporting System</div><p>The following table contains the different commands and events causing the status reporting system to be reset. None of the commands, except <span class="command">*RST</span> and <span class="command">SYSTem:PRESet</span>, influence the functional instrument settings. In particular, <span class="command">DCL</span> does not change the instrument settings.</p><div class="block"><a name="ID_3e14d8cf6c0c5ada0a00206a01a3c6b0-89ebf481c0ad4d200a001ae71413c094-en-US">
+</a><span class="table-caption">Resetting the status reporting system</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow" valign="top"><th valign="top"><p>Event</p></th><th colspan="2" valign="top"><p>Switching on supply voltage</p><p>Power-On-Status-Clear</p></th><th rowspan="2" valign="top"><p>DCL, SDC</p><p>(Device Clear, Selected Device Clear)</p></th><th rowspan="2" valign="top"><p>*RST or SYSTem:PRESet</p></th><th rowspan="2" valign="top"><p>STATus:PRESet</p></th><th rowspan="2" valign="top"><p>*CLS</p></th></tr><tr class="evenrow" valign="middle"><th valign="middle"><p>Effect</p></th><th valign="middle"><p>0</p></th><th valign="middle"><p>1</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Clear STB, ESR</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td></tr><tr class="evenrow"><td valign="top"><p>Clear SRE, ESE</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td></tr><tr class="oddrow"><td valign="top"><p>Clear PPE</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td></tr><tr class="evenrow"><td valign="top"><p>Clear EVENt parts of the registers</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td></tr><tr class="oddrow"><td valign="top"><p>Clear ENABle parts of all OPERation and QUEStionable registers;</p><p>Fill ENABle parts of all other registers with "1".</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td></tr><tr class="evenrow"><td valign="top"><p>Fill PTRansition parts with "1";</p><p>Clear NTRansition parts</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td></tr><tr class="oddrow"><td valign="top"><p>Clear error queue</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>yes</p></td></tr><tr class="evenrow"><td valign="top"><p>Clear output buffer</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>1)</p></td><td valign="top"><p>1)</p></td><td valign="top"><p>1)</p></td></tr><tr class="oddrow"><td valign="top"><p>Clear command processing and input buffer</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>yes</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td><td valign="top"><p>-</p></td></tr><tr class="evenrow"><td colspan="7" valign="top"><p>1) The first command in a command line that immediately follows a &lt;PROGRAM MESSAGE TERMINATOR&gt; clears the output buffer.</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Phase Noise (R&amp;S FSW-K40)|Measurements and Result Displays" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k40.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Spur List</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_2bb0faf8e925b50a0a0020190058099a-9b5aeecfe925b50a0a00201901de66de-en-US;ID_86b08341e94284370a710a9200680675-9b5aeecfe925b50a0a00201901de66de-en-US;ID_8c46ab66e94284080a710a92015df79c-9b5aeecfe925b50a0a00201901de66de-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k40/Content/751c5c4fa5fe4e8f.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Phase Noise (R&amp;S FSW-K40)</a> &gt; <a class="chm-breadcrumb" href="631e34b2b75d4de2.htm">Measurements and Result Displays</a> &gt; <span class="chm-breadcrumb">Spur List</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_2bb0faf8e925b50a0a0020190058099a-9b5aeecfe925b50a0a00201901de66de-en-US">
+</a><span style="font-weight: bold">Spur List</span></div><p>Spurs are peak levels at one or more offset frequencies and are caused mostly by interfering signals. The application shows the location of all detected spurs in a table.</p><div class="block" id="ID_86b08341e94284370a710a9200680675-9b5aeecfe925b50a0a00201901de66de-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgecdcc7afe93c21170a002019012adfe7_2_--_--_PNG96Small.png" alt="" title=""/></div></div><p>The table consists of a variable number of rows. For each detected spur, the table shows several results.</p><div class="block"><a name="ID_8c46ab66e94284080a710a92015df79c-9b5aeecfe925b50a0a00201901de66de-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p><b>Number</b></p></td><td valign="top"><p>Shows the spur number. Spurs are sorted by their frequency, beginning with the spur with the lowest frequency.</p></td></tr><tr class="evenrow"><td valign="top"><p><b>Offset Frequency</b></p></td><td valign="top"><p>Shows the position (offset frequency) of the spur.</p></td></tr><tr class="oddrow"><td valign="top"><p><b>Power</b></p></td><td valign="top"><p>Shows the power level of the spur in dBc.</p></td></tr><tr class="evenrow"><td valign="top"><p><b>Jitter</b></p></td><td valign="top"><p>Shows the jitter value of the spur in s.</p><p>In addition to the jitter for each spur, the result display also shows the <b>Discrete Jitter</b> and the <b>Random Jitter</b> at the end of the table.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">The Discrete Jitter is the RMS value of all individual jitter values.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">The Random Jitter is the difference of the overall jitter (as shown in the <a class="xref" href="954fe071f9fb469e.htm#ID_0669ee37e2e7f4860a00206a00d0b4ce-27b80f7be2e7f4860a00206a000e5344-en-US">Residual Noise</a> result display) and the Discrete Jitter.<br/>The result is an RMS value: RandomJitter<sup>2</sup> = Jitter<sup>2</sup> - DiscreteJitter<sup>2</sup></li></ul></div></td></tr></tbody></table></div><p>For more information see <a class="xref" href="e676f26ee5714d14.htm#ID_99401eb7e1c127330a00206a01f271dd-33d91772477980780a001ae7103b172c-en-US">"Spurs and Spur Removal"</a>.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="d43657e33431.htm#ID_03f62a86e92001720a0020190042c10e-2ab76914e92001720a0020190090a332-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>FETCh:</nobr>​<nobr>PNOise:</nobr>​<nobr>SPURs?</nobr></a></p><p><a class="xref" href="d43657e33451.htm#ID_9b77fb810edb7fbb0a00201901b1520e-0d56399e0edb173c0a00201901758861-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>FETCh:</nobr>​<nobr>PNOise:</nobr>​<nobr>SPURs:</nobr>​<nobr>DISCrete?</nobr></a></p><p><a class="xref" href="d43657e33470.htm#ID_9b77fb810edb7fbb0a00201901b1520e-7dd426d60edb7fbb0a00201900821b21-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>FETCh:</nobr>​<nobr>PNOise:</nobr>​<nobr>SPURs:</nobr>​<nobr>RANDom?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

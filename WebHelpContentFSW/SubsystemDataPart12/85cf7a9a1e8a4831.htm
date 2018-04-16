@@ -1,0 +1,56 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Retrieving Results|Retrieving Trace Data and Marker Values" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe&lt;n&gt;[:DATA]</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5a71ecfa45ba2f470a00206a01a04c30-4a7ea8b245ba23dd0a00206a014baccb-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="673f84be7f234710.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="2eb362dd04bc439f.htm">Retrieving Trace Data and Marker Values</a> &gt; <span class="chm-breadcrumb">TRACe&lt;n&gt;[:DATA]</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_5a71ecfa45ba2f470a00206a01a04c30-4a7ea8b245ba23dd0a00206a014baccb-en-US">
+</a><span class="bold">TRACe&lt;n&gt;[:DATA] </span>&lt;Trace&gt;<br/></div><div class="rcdescription"><p>This command queries the trace data.</p><p>Which data is returned depends on the result display in the window specified by the suffix &lt;n&gt;.</p><p>For details see <a class="xref" href="3cfd556346bb45bd.htm#ID_1c270258389f30100a710ade0070edc9-00d6486d389f6b7d0a001ae7386bb539-en-US">"Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;"</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Setting parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Trace&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>TRACe1 |</nobr> <nobr> TRACe2 |</nobr> <nobr> TRACe3 |</nobr> <nobr> TRACe4 |</nobr> <nobr> TRACe5 |</nobr> <nobr> TRACe6 |</nobr> <nobr> TRACe1R |</nobr> <nobr> TRACe1I |</nobr> <nobr> TRACe2R |</nobr> <nobr> TRACe2I |</nobr> <nobr> TRACe3R |</nobr> <nobr> TRACe3I |</nobr> <nobr> STRace |</nobr> <nobr> MSTRace |</nobr> <nobr> PSTRace</nobr><br/><span class="bold">TRACe1/2/3/4/5/6<br/></span><p>The complete data from the corresponding trace.</p><span class="bold">TRACe1R/TRACe2R/TRACe3R<br/></span><p>The real data from the corresponding trace. The parameters are available for the Real/Imaginary result types.</p><span class="bold">TRACe1I/TRACe2I/TRACe3I<br/></span><p>The imaginary data from the corresponding trace. The parameters are available for the Real/Imaginary result types.</p><span class="bold">STRace<br/></span><p>The symbols are returned in the currently defined symbol format (see <a class="xref" href="1521f543fefc41db.htm#ID_ff06f60045a7189f0a00206a01f4b460-91cc306f45a710ee0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>FORMat</nobr></a>. (If no parameter is specified, the command always returns the values in the decimal format.)</p><span class="bold">MSTR<br/></span><p>Returns a list of boolean values, one for each symbol, indicating whether the symbol matches the corresponding symbol in the known data (1) or not (0).</p><p>This setting requires a known data file to be loaded, or a PRBS definition.</p><span class="bold">PSTR<br/></span><p>Returns a list of boolean values, one for each symbol in the pattern, indicating whether the symbol matches the corresponding pattern symbol (1) or not (0).</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="3010c5462d0d4005.htm#ID_f7248af7155d5b0a0a00206a004d606f-cd97fd15ad6093a50a00206a01f17c35-en-US">"Measurement Example 3: User-Defined Pattern Search and Limit Check"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><pre class="verbatim" xml:space="preserve">CALC4:FORM BINary
+TRAC4:DATA? STR 
+//Queries data from symbol table in binary format 
+//Result : 
+//0001,1110,0011,0010,0100,0111,1101,0001,1010,0101,
+//0010,0010,0100,1111,...</pre></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><pre class="verbatim" xml:space="preserve">TRAC4:DATA? PSTR 
+//Queries the pattern symbol errors (for a pattern with
+// 7 symbols, the third symbol does not match) 
+//Result : 
+//1,1,0,1,1,1,1
+</pre></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><pre class="verbatim" xml:space="preserve">//Load a known data file and activate it
+DDEM:KDAT:STAT ON
+DDEM:KDAT 'C:\TEMP\KNOWNDATA'
+TRAC4:DATA? MSTR 
+//Queries the symbol errors compared to known data:
+//3 symbol errors occurred 
+//Result : 
+//1,0,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</pre></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="d52db5f43ce74e1d.htm#ID_ab650f3c856cf65b0a001ae76bac5c73-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">"Question: How can I demodulate an FSK modulated signal using the "Manchester" code?"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

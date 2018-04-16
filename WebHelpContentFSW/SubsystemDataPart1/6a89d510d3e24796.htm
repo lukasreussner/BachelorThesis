@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>External Mixers and B2000/B5000</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_34e6f9ceb04211e4881cadb71356f136-3e7f60c551b212130a001ae729483b02-en-US;ID_ad37e8a79fcde2280a71003a017c1daa-3e7f60c551b212130a001ae729483b02-en-US;ID_4fcfd8886e23fcee0a001ae73f5ba0f6-3e7f60c551b212130a001ae729483b02-en-US;ID_f966d7376e23fcee0a001ae75db3c212-3e7f60c551b212130a001ae729483b02-en-US;ID_7f91f3f16e23fcee0a001ae70969e4f6-3e7f60c551b212130a001ae729483b02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="688f35c556f04d25.htm">Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)</a> &gt; <span class="chm-breadcrumb">External Mixers and B2000/B5000</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor281">
+</a><a name="kanchor282">
+</a><div class="chm-chaptertitle">External Mixers and B2000/B5000</div><p>(Optional) External mixers can be used together with the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000).</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz bandwidth extension option (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B5000) does <b>not</b> support external mixers.</p></td></tr></table></div></div><p>However, B2000 requires special conversion loss tables, with a <span class="filename">.b2g</span> file extension. While the common <span class="filename">.acl</span> files can be used, data acquisition with the B2000 option using such conversion loss tables will lead to substantial inaccuracy. Using an average conversion loss for the entire range (instead of a conversion loss table) during data acquisition with the B2000 option will cause even more inaccuracy. In both cases, the <span class="command">UNCAL</span> status message indicates that the measurement may have inaccurate results.</p><p>Special B2000 tables (in <span class="filename">b2g</span> files) cannot be edited within the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW firmware; they can only be imported and deleted.</p><p>For details on external mixers see <a class="xref" href="../../../Content/40415c05f5614879.htm">Optional External Mixers</a>.</p><div class="block"><div class="subtitle"><a name="ID_4fcfd8886e23fcee0a001ae73f5ba0f6-3e7f60c551b212130a001ae729483b02-en-US">
+</a>B2000-specific conversion loss tables</div></div><p>A B2000 conversion loss table consists of 41 magnitude correction values per frequency (as opposed to 1 for <span class="filename">.acl</span> files). To each side of the specific frequency, 20 reference values are defined. Thus, correction levels are measured with a spacing of 50<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p><div class="block"><span class="bold"><a name="ID_f966d7376e23fcee0a001ae75db3c212-3e7f60c551b212130a001ae729483b02-en-US">
+</a>Example: </span><div class="block"><div class="listintro">For example, for the level measured at the frequency 50<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, 41 correction levels are defined:</div><ul class="list"><li value="1">20 for the frequencies 49<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, 49.05<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, 49.1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, ..., 49.95<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz</li><li value="2">1 for the frequency 50<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz</li><li value="3">20 for the frequencies 50.05<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, 50.1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, 50.15<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz, ..., 51<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz</li></ul></div></div><div class="block"><div class="subtitle"><a name="ID_7f91f3f16e23fcee0a001ae70969e4f6-3e7f60c551b212130a001ae729483b02-en-US">
+</a>Phase correction tables</div></div><p>In addition to the magnitude correction tables, B2000 phase correction tables with the same layout are defined in a separate file. Both files are always delivered as a pair by the manufacturer of the external mixer. Currently, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW uses only the magnitude correction files for external mixers; the phase is assumed to be ideal.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

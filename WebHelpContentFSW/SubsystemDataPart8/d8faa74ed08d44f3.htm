@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Configuration|Configuring the Noise Source|Defining the Noise Source Characteristics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Noise Source</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eNoiseSkIdENRSettings_MeasurementNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdENRSettings_CalibrationNoiseSource">
+</meta>
+        <meta name="topic-id" value="127">
+</meta>
+        <meta name="topic-id" value="129">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5b361d611a7dd9d80a001ae73470f39f-26df8e04fae9ed6e0a00206a001eaa10-en-US;ID_94fb3e2e2616956e0a001ae700ab4bbf-26df8e04fae9ed6e0a00206a001eaa10-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="6f413a5358b94877.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="ab30b490c42c422d.htm">Configuring the Noise Source</a> &gt; <a class="chm-breadcrumb" href="c29ed64883314f63.htm">Defining the Noise Source Characteristics</a> &gt; <span class="chm-breadcrumb">Noise Source</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_5b361d611a7dd9d80a001ae73470f39f-26df8e04fae9ed6e0a00206a001eaa10-en-US">
+</a><span style="font-weight: bold">Noise Source</span></div><p><b>Access</b>: "Overview" &gt; "Noise Source" &gt; "ENR / Temp Settings" &gt; "Noise Source"</p><p>You can select the type of noise source and its characteristics independently for the <a class="xref" href="b79a8bc0d1444b5c.htm#ID_62f0ee5ffb2e55cd0a710a920024d858-26df8e04fae9ed6e0a00206a001eaa10-en-US">Calibration</a> and the <a class="xref" href="c83494959a924b22.htm#ID_24685e66fb0c91610a710a9200bf7b3e-26df8e04fae9ed6e0a00206a001eaa10-en-US">Measurement</a>. When you select the resistor noise source, the application automatically starts the manual measurement mode and communicates that fact with a message at the bottom of the dialog box.</p><div class="block" id="ID_94fb3e2e2616956e0a001ae700ab4bbf-26df8e04fae9ed6e0a00206a001eaa10-en-US"><div class="graphic"><img border="0" src="Resources/Images/img54a9ee3b26159fe10a001ae75ebccae4_1_--_--_PNG96Small.png" alt="" title=""/></div></div><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Diode"</p></td><td class="function_col_right"><p>Selects a noise source with diode characteristics. The frequency characteristics of the noise source are defined by the Excess Noise ratio (ENR).</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Resistor"</p></td><td class="function_col_right"><p>Selects a test setup that uses two resistors which act as a noise source. One of the resistors has a low noise or ambient temperature (a cold resistor), the other has a high noise or ambient temperature (a hot resistor). The noise characteristics of the resistor are defined by its noise temperatures T<sub>hot</sub> and T<sub>cold</sub>.</p></td></tr></table>Remote command: <div class="rcclist_right"><p>Measurement: <a class="xref" href="15629cba9457453a.htm#ID_6c37d6b324ffc8be0a001ae71cbc1c48-21a2f6a724ffc8be0a001ae701e4c9b5-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CORRection:</nobr>​<nobr>ENR[:</nobr>​<nobr>MEASurement]:</nobr>​<nobr>TYPE</nobr></a></p><p>Calibration: <a class="xref" href="69b9d0dbc6964b1b.htm#ID_ff92f23325000e9a0a001ae77e04338e-2e6b981a25000e9a0a001ae745d4f044-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CORRection:</nobr>​<nobr>ENR:</nobr>​<nobr>CALibration:</nobr>​<nobr>TYPE</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

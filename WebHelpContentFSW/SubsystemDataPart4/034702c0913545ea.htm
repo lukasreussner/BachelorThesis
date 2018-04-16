@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Status Reporting System" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>STATus:QUEStionable:LIMit Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d73b01e07f7f11e4ae1fc136f555e6ad-1bb9e6897d45852e0a00201901d7352d-en-US;ID_d73bc5377f7f11e4ae1fc136f555e6ad-1bb9e6897d45852e0a00201901d7352d-en-US;ID_d73c13597f7f11e4ae1fc136f555e6ad-1bb9e6897d45852e0a00201901d7352d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="117616e3da604485.htm">Status Reporting System</a> &gt; <span class="chm-breadcrumb">STATus:QUEStionable:LIMit Register</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor997">
+</a><a name="kanchor998">
+</a><a name="kanchor999">
+</a><a name="kanchor1000">
+</a><a name="kanchor1001">
+</a><div class="chm-chaptertitle">STATus:QUEStionable:LIMit Register</div><p>The <span class="command">STATus:QUEStionable:LIMit</span> register contains application-specific information about limit line checks. Various bits are set based on the measurement result configured for a window. If any errors occur in this register, the status bit #9 in the <span class="command">STATus:QUEStionable</span> register is set to 1.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Each active channel uses a separate <span class="command">STATus:QUEStionable:LIMit</span> register. Thus, if the status bit #9 in the <span class="command">STATus:QUEStionable</span> register indicates an error, the error may have occurred in any of the channel-specific <span class="command">STATus:QUEStionable:LIMit</span> registers. In this case, you must check the register of each channel to determine which channel caused the error. By default, querying the status of a register always returns the result for the currently selected channel. However, you can specify any other channel name as a query parameter.</p></td></tr></table></div></div><div class="block"><a name="ID_d73c13597f7f11e4ae1fc136f555e6ad-1bb9e6897d45852e0a00201901d7352d-en-US">
+</a><span class="table-caption">Meaning of the bits used in the STATus:QUEStionable:LIMit register</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p><b>For PvT, Modulation and Transient</b> measurement results: indicates the upper limit check result (pass/failure)</p><p>For <b>MCWN Spectrum</b> measurement result: wideband noise limit line check (including exceptions if activated)</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>For <b>PvT</b> measurement result: indicates the lower limit check result (pass/failure)</p><p>For <b>MCWN Spectrum</b> measurement result: IM 100 kHz limit line (including exceptions if activated)</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>For <b>MCWN Spectrum</b> measurement result: IM 300 kHz limit line</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>For <b>MCWN Spectrum</b> measurement result: Narrowband Noise limit line</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>For <b>MCWN Spectrum</b> measurement result: Exception Range A (only <span class="command">FAIL?</span> result, no limit line)</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>For <b>MCWN Spectrum</b> measurement result: Exception Range B (only <span class="command">FAIL?</span> result, no limit line)</p></td></tr><tr class="oddrow"><td valign="top"><p>6 to 14</p></td><td valign="top"><p>These bits are not used</p></td></tr><tr class="evenrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always 0</p></td></tr></tbody></table></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

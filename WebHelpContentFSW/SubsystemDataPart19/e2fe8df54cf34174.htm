@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics|Signal Processing for MIMO Measurements (IEEE 802.11ac, n)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Crosstalk and Spectrum Flatness</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1eada6fa2cd4a25b0a710ade00627d6f-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="6dff20d6bdc14ea6.htm">Signal Processing for MIMO Measurements (IEEE 802.11ac, n)</a> &gt; <span class="chm-breadcrumb">Crosstalk and Spectrum Flatness</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Crosstalk and Spectrum Flatness</div><p>In contrast to the SISO measurements in previous Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz signal and spectrum analyzers, the spectrum flatness trace is no longer normalized to 0 dB (scaled by the mean gain of all carriers).</p><p>For MIMO there may be different gains in the transmission paths and you do not want to lose the relation between these transmission paths. For example, in a MIMO transmission path matrix we have paths carrying power (usually the diagonal elements for the transmitted streams), but also elements with only residual crosstalk power. The power distribution of the transmission matrix depends on the spatial mapping of the transmitted streams. But even if all matrix elements carry power, the gains may be different. This is the reason why the traces are no longer scaled to 0 dB. Although the absolute gain of the Spectrum Flatness is not of interrest, it is now maintained in order to show the different gains in the transmission matrix elements. Nevertheless, the limit lines are still symmetric to the mean trace, individually for each element of the transmission matrix.
+</p><p>By default,  full MIMO equalizing is performed by the R&amp;S FSW WLAN application. However, you can deactivate  compensation for crosstalk (see <a class="xref" href="29a549645a5c446b.htm#ID_08e8a01427be4a7b0a710ade003a32dc-78b01623134da1730a001ae77ad65a4c-en-US">"Compensate Crosstalk(MIMO only)"</a>). In this case, simple main path equalizing is performed only for direct connections between Tx and Rx antennas, disregarding ancillary transmission between the main paths (crosstalk). This is useful to investigate the effects of crosstalk on results such as EVM.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

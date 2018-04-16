@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|MSRA Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Data Acquisition</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ccb1dc20580fe0640a00206a0107248d-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_5751c0636219c0370a00206a003f06fc-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_fb4ad7fe6219c0370a00206a00c1ed5d-b6bd877e3300619d0a00206a01ebf9ad-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="7980ab3c417d4f64.htm">MSRA Basics</a> &gt; <span class="chm-breadcrumb">Data Acquisition</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor99">
+</a><div class="chm-chaptertitle">Data Acquisition</div><p>As mentioned before, only the MSRA Master performs a data acquisition. Thus, the MSRA Master defines the center frequency, sample rate and record length of the captured I/Q data. It also defines the trigger event, thus all slave applications have the same trigger. However, an offset from the trigger can be defined by the individual slave applications (see <a class="xref" href="d086612dd0a44c20.htm#ID_10b956506219c0470a00206a00aea32a-b6bd877e3300619d0a00206a01ebf9ad-en-US">"Trigger offset vs. capture offset"</a>).</p><div class="block"><div class="subtitle"><a name="ID_5751c0636219c0370a00206a003f06fc-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Performing sweeps</div></div><a name="kanchor100">
+</a><a name="kanchor101">
+</a><a name="kanchor102">
+</a><p>When you switch to MSRA mode, the Sequencer is automatically activated in continuous mode. The MSRA Master continuously performs a data acquisition. If any slave applications are activated, then after each measurement, the data in the active slave applications is evaluated one after the other. The MSRA Master will then repeat the data acquisition and evaluate the new data etc. The channel displays are updated after each measurement or evaluation.</p><p>Alternatively, you can perform measurements manually. You can start a single or continuous sweep from any slave application, which updates the data in the capture buffer and the results in the current slave application. The results in the other slave applications, however, remain unchanged. You must refresh them manually, either individually or all at once, using a <b>"Refresh"</b> function.</p><p>Note that in <b>continuous sweep mode</b>, sweeping is aborted when you switch to a different slave application. You can then continue sweeping from there. This is necessary in order to evaluate the same data in different slave applications without overwriting the data in the capture buffer.</p><p>In <b>single sweep mode</b>, only one sweep is performed; a sweep count is not available - neither for the MSRA Master, nor for the slave applications. However, depending on the slave application, a statistics count may be available for statistics based on a single data acquisition. Trace averaging is performed as usual for sweep count = 0, the current trace is averaged with the previously stored averaged trace.</p><div class="block"><div class="subtitle"><a name="ID_fb4ad7fe6219c0370a00206a00c1ed5d-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Data availability</div></div><a name="kanchor103">
+</a><a name="kanchor104">
+</a><a name="kanchor105">
+</a><p>The slave applications can only receive data that is available in the capture buffer. As soon as data has been stored to the capture buffer successfully, a status bit (#9) in the <span class="command">STAT:OPER</span> register is set. If the required slave application data is not available, an error message is displayed. Details on restrictions are described in <a class="xref" href="d61505a36c174f8b.htm#ID_0b38339c580fe0640a00206a0084a58e-b6bd877e3300619d0a00206a01ebf9ad-en-US">"Restrictions for Slave Applications"</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

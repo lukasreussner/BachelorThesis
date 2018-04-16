@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|Configuration|Data Acquisition and Bandwidth Settings|Data Acquisition" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Maximum Bandwidth
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdIqDataAquisitionMaximumBandwidth">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdMaxBandwidth">
+</meta>
+        <meta name="topic-id" value="533">
+</meta>
+        <meta name="topic-id" value="535">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_dd04af84858417880a00206a017068bc-e9790ae8858417880a00206a00ec41a4-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="1329729954df41f9.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="114f714377fc4de8.htm">Data Acquisition and Bandwidth Settings</a> &gt; <a class="chm-breadcrumb" href="187556cffada442c.htm">Data Acquisition</a> &gt; <span class="chm-breadcrumb">Maximum Bandwidth</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor250">
+</a><a name="kanchor251">
+</a><a name="kanchor252">
+</a><a name="kanchor253">
+</a><a name="kanchor254">
+</a><div class="function_heading"><a name="ID_dd04af84858417880a00206a017068bc-e9790ae8858417880a00206a00ec41a4-en-US">
+</a><span style="font-weight: bold">Maximum Bandwidth</span></div><p>Defines the maximum bandwidth to be used by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW for I/Q data acquisition.</p><p>This setting is only available if a bandwidth extension option greater than 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz is installed on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Otherwise the maximum bandwidth is determined automatically.</p><p>For details on the maximum bandwidth see <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a>.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto"</p></td><td class="function_col_right"><p>(Default) All installed bandwidth extension options are activated. The currently available maximum bandwidth is allowed.</p><p>(See <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a>).</p><p>Note that using bandwidth extension options  greater than 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz may cause more spurious effects.</p><p>(See <a class="xref" href="5c89aa79b1734abe.htm#ID_efb670f01f7a89bc0a710ade009bb60b-8e04a654c18363970a00206a018bc2d1-en-US">"Restricting the maximum bandwidth manually"</a>)</p></td></tr><tr><td class="function_col_left" valign="top"><p>"80 MHz"</p></td><td class="function_col_right"><p>Restricts the analysis bandwidth to a maximum of 80 MHz.</p><p>The bandwidth extension options greater than 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz are deactivated.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"160 MHz"</p></td><td class="function_col_right"><p>Restricts the analysis bandwidth to a maximum of 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz. The bandwidth extension option for 320<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz is deactivated.</p><p>(Not available or required if bandwidth extension option for 512<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz is installed.)</p></td></tr><tr><td class="function_col_left" valign="top"><p>"512<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz"</p></td><td class="function_col_right"><p>Restricts the analysis bandwidth to a maximum of 512<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz. The bandwidth extension option for 1200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz is deactivated.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"1200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz"</p></td><td class="function_col_right"><p>Restricts the analysis bandwidth to a maximum of 1200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz. The bandwidth extension option for 2000<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz (B2001) is deactivated.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="a46cdc224a6049bd.htm#ID_0ef74a2ec7a640660a00206a005380a0-1650ab67c7a640660a00206a004ed53d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>WBANd[:</nobr>​<nobr>STATe]</nobr></a></p><p><a class="xref" href="7d4020892d5b4329.htm#ID_0ef74a2ec7a640660a00206a005380a0-8a9dbd3940052bb70a00201901628666-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>WBANd:</nobr>​<nobr>MBWidth</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

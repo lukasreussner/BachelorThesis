@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Result Configuration|Synchronous Band Power Settings|General Settings/ Auto Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Auto Configuration per Continuous Minislot Block</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDocsisSkIdSynchronousACP_ContMinislotBlock">
+</meta>
+        <meta name="topic-id" value="876">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6d075f74f4f9a13a0a001ae701053ad0-f2ebd9c6ddad6fb70a001ae77c050122-en-US;ID_c003fbc8f933b9300a001ae74efd3a0e-f2ebd9c6ddad6fb70a001ae77c050122-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="b4f87dbb278b4001.htm">Result Configuration</a> &gt; <a class="chm-breadcrumb" href="ee47a6fda6f64a0b.htm">Synchronous Band Power Settings</a> &gt; <a class="chm-breadcrumb" href="a240852b565943d2.htm">General Settings/ Auto Configuration</a> &gt; <span class="chm-breadcrumb">Auto Configuration per Continuous Minislot Block</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_6d075f74f4f9a13a0a001ae701053ad0-f2ebd9c6ddad6fb70a001ae77c050122-en-US">
+</a><span style="font-weight: bold">Auto Configuration per Continuous Minislot Block</span></div><p>Determines how the bands to be measured are configured - automatically by the R&amp;S FSW DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 application, or manually by the user.</p><p>If enabled, the R&amp;S FSW DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 application calculates the lower and upper band power for each continuous block of minislots (which is assumed to be the actual upstream transmission signal). Each block is detected by its rising and falling edges. It then applies an offset to each side of the block, and measures the power in a specific bandwidth from there. Up to 40 auto bands are calculated.</p><div class="block" id="ID_c003fbc8f933b9300a001ae74efd3a0e-f2ebd9c6ddad6fb70a001ae77c050122-en-US"><div class="graphic"><img border="0" src="Resources/Images/img3511afedf90d3be70a001ae770b53e82_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><p>If disabled, you can define up to 20 independent frequency bands manually (see <a class="xref" href="26d3008baa93473d.htm#ID_a74d1d4aefc1e2b70a001ae712cff84d-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"User Configuration"</a>). For each band, the R&amp;S FSW DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 application calculates the band power from the Power vs. Carrier trace.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="f10402c29a714589.htm#ID_27292eb6ef93af7e0a001ae745d8030c-414aa133ef93ae740a001ae70ff998b5-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>US:</nobr>​<nobr>CHANnel:</nobr>​<nobr>SBPower:</nobr>​<nobr>CONFigure:</nobr>​<nobr>AUTO[:</nobr>​<nobr>STATe]</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

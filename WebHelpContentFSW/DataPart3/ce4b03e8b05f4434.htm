@@ -1,0 +1,116 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Selecting the Operating Mode and Application" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Performing a Sequence of Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_908eba7705d88b0a0a710a31001bc965-00eefb6561ab74de0a001ae76f8ff623-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="b6ef0d4006f045f9.htm">Selecting the Operating Mode and Application</a> &gt; <span class="chm-breadcrumb">Programming Example: Performing a Sequence of Measurements</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2969">
+</a><a name="kanchor2970">
+</a><div class="chm-chaptertitle">Programming Example: Performing a Sequence of Measurements</div><p>This example demonstrates how to perform several measurements in a sequence in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">
+//2xSpectrumanalyzer + 2xIQ, start Sequencer at the end, test OPC?
+// ------------------------------------------------------------------------
+
+
+//------Preparing the instrument and first channel -----------
+*RST
+//Activate new IQ channel
+INSTrument:CREate:NEW IQ,'IQ 1'
+//Set sweep count for new IQ channel
+SENS:SWEEP:COUNT 6
+//Change trace modes for IQ channel
+DISP:TRAC1:MODE BLANK
+DISP:TRAC2:MODE MAXH
+DISP:TRAC3:MODE MINH
+//Switch to single sweep mode
+INIT:CONT OFF
+//switch back to first (default) analyzer channel
+INST:SEL 'Spectrum';*WAI
+//Switch into SEM
+SENSe:SWEep:MODE ESPectrum
+//Load Sem standard file for W-CDMA
+SENSe:ESPectrum:PRESet:STANdard 'WCDMA\3GPP\DL\3GPP_DL.xml'
+//Set sweep count in Spectrum channel
+SENS:SWEEP:COUNT 5
+
+//----------Creating a second measurement channel ----------------
+
+//Create second IQ channel
+INSTrument:CREate:NEW IQ,'IQ 2'
+//Set sweep count
+SENS:SWEEP:COUNT 2
+//Change trace modes
+DISP:TRAC1:MODE MAXH
+DISP:TRAC2:MODE MINH
+//Create new analyzer channel
+INSTrument:CREate:NEW SANalyzer,'Spectrum 2'
+//Activate ACLR measurement in channel 'Spectrum 2'
+CALCulate:MARKer:FUNCtion:POWer:SELect ACPower
+//Load W-CDMA Standard
+CALCulate:MARKer:FUNCtion:POWer:PRESet FW3Gppcdma
+//Change trace modes
+DISP:TRAC2:MODE MAXH
+DISP:TRAC1:MODE MINH
+
+//--------Performing a sweep and retrieving results----------------
+
+//Change sweep count
+SENS:SWEep:COUNt 7
+//Single Sweep mode
+INIT:CONT OFF
+//Switch back to first IQ channel
+INST:SEL 'IQ 1';*WAI
+//Perform a measurement
+INIT:IMM;*OPC?
+//Retrieve results    
+CALC:MARK:Y?
+//Activate Multiview
+DISPlay:ATAB     ON
+
+//---------Performing a sequence of measurements with the Sequencer------------
+//Activate Sequencer
+SYSTem:SEQuencer ON
+//Start sweep in Sequencer
+INITiate:SEQuencer:IMMediate;*OPC?
+//Switch into first IQ channel to get results
+INST:SEL 'IQ 1';*WAI
+CALCulate:MARKer:MAXimum
+CALC:MARK:Y?  
+//Change sweep time in IQ
+SENS:SWE:TIME 300us
+//Switch to single Sequencer mode
+INITiate:SEQuencer:MODE SINGle
+//Sweep all channels once, taking the sweep count in each channel into account
+INITiate:SEQuencer:IMMediate;*OPC?
+//Set marker to maximum in IQ1 and query result
+CALCulate:MARKer:MAXimum
+CALC:MARK:Y? 
+//Switch to second IQ channel and retrieve results
+INST:SEL 'IQ 2';*WAI 
+CALCulate:MARKer:MIN
+CALC:MARK:Y?  
+//Switch to first Spectrum channel
+INST:SEL 'Spectrum';*WAI
+//Query one of the SEM results
+CALCulate:MARKer:FUNCtion:POWer:RESult? CPOWer
+//Switch to second Spectrum channel
+INST:SEL 'Spectrum 2';*WAI
+//Query channel power result
+CALCulate:MARKer:FUNCtion:POWer:RESult? ACPower</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

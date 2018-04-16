@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Optimizing and Troubleshooting the Measurement|Optimizing the Measurement Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Improving Channel Estimation and EVM Accuracy</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_96378e82a494d0a00a710a3100465701-8a1a0eeba64b98580a002019018ac917-en-US;ID_0f57f029a49982d30a710a31012eda7e-8a1a0eeba64b98580a002019018ac917-en-US;ID_7f33a4dfa4a5933c0a710a3101392289-8a1a0eeba64b98580a002019018ac917-en-US;ID_28e3635da4b149b00a710a31002c132f-8a1a0eeba64b98580a002019018ac917-en-US;ID_4c2d3a2ca4a5931d0a710a3100f5018e-8a1a0eeba64b98580a002019018ac917-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="dd6a1159c95742f1.htm">Optimizing and Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="72bce559860040ab.htm">Optimizing the Measurement Results</a> &gt; <span class="chm-breadcrumb">Improving Channel Estimation and EVM Accuracy</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Improving Channel Estimation and EVM Accuracy</div><p>The channels in the WLAN signal are estimated based on the expected input signal description and the information provided by the PPDUs themselves. The more accurate the channel estimation, the more accurate the EVM based on these channels can be calculated.</p><div class="block"><div class="subtitle"><a name="ID_0f57f029a49982d30a710a31012eda7e-8a1a0eeba64b98580a002019018ac917-en-US">
+</a>Increasing the basis for channel estimation</div></div><p>The more information that can be used to estimate the channels, the more accurate the results. For measurements that need not be performed strictly according to the WLAN 802.11 standard, set the "Channel Estimation Range" to "Payload" (see <a class="xref" href="8215c272ff7a46bd.htm#shiv_FSV_K91n_1145-cfb9ec3a13399c510a001ae72db100b6-en-US">"Channel Estimation Range"</a>).</p><p>The channel estimation is performed in the preamble and the payload. The EVM results can be calculated more accurately.</p><div class="block"><div class="subtitle"><a name="ID_7f33a4dfa4a5933c0a710a3101392289-8a1a0eeba64b98580a002019018ac917-en-US">
+</a>Accounting for phase drift in the EVM</div></div><p>According to the WLAN 802.11 standards, the common phase drift must be estimated and compensated from the pilots. Thus, these deviations are not included in the EVM. To include the phase drift, disable "Phase Tracking" (see <a class="xref" href="14ec3a0ac2a44338.htm#shiv_FSV_K91n_1165-d812af2f133a69280a001ae7157c0c1b-en-US">"Phase Tracking"</a>).</p><div class="block"><div class="subtitle"><a name="ID_28e3635da4b149b00a710a31002c132f-8a1a0eeba64b98580a002019018ac917-en-US">
+</a>Analyzing time jitter</div></div><p>Normally, a symbol-wise timing jitter is negligible and not required by the IEEE 802.11a measurement standard [6], and thus not considered in channel estimation. However, there may be situations where the timing drift has to be taken into account.</p><p>However, to analyze the time jitter per symbol, enable "Timing Tracking" (see <a class="xref" href="0124832a61914c1b.htm#shiv_FSV_K91n_1168-8b2a1708133b1a780a001ae762b8337f-en-US">"Timing Error Tracking"</a>).</p><div class="block"><div class="subtitle"><a name="ID_4c2d3a2ca4a5931d0a710a3100f5018e-8a1a0eeba64b98580a002019018ac917-en-US">
+</a>Compensating for non-standard-conform pilot sequences</div></div><p>In case the pilot generation algorithm of the device under test (DUT) has a problem, the non-standard-conform pilot sequence might affect the measurement results, or the WLAN application might not synchronize at all onto the signal generated by the DUT.</p><p>In this case, set the "Pilots for Tracking" to "Detected" (see <a class="xref" href="95e5757208584452.htm#ID_f67dd8f44bd311e0a33fed29ed75bdb2-a1d44d81133c1b9e0a001ae72d9995b7-en-US">"Pilots for Tracking"</a>), so that the pilot sequence detected in the signal is used instead of the sequence defined by the standard.</p><p>However, if the pilot sequence generated by the DUT is correct, it is recommended that you use the "According to Standard" setting because it generates more accurate measurement results.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

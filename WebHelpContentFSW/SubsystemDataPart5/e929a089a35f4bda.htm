@@ -1,0 +1,88 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)|Configuration|Input, Output and Frontend Settings|Amplitude Settings|Input Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k15.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Preamplifier
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudePreamp">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudePreamp">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudePreamp">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudePreamp">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudePreampRf">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudePreampRf">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdPreamp">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdRadioFrequencyPreamplifier">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdAmplitudePreamp">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAmplitudePreamp">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdAmplitudeConfigPreamp">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudePreamp">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudePreampRf">
+</meta>
+        <meta name="topic-keyword" value="ePNoiseSkIdMeasSettingsFrontend_Preamplifier">
+</meta>
+        <meta name="topic-id" value="289">
+</meta>
+        <meta name="topic-id" value="290">
+</meta>
+        <meta name="topic-id" value="291">
+</meta>
+        <meta name="topic-id" value="292">
+</meta>
+        <meta name="topic-id" value="293">
+</meta>
+        <meta name="topic-id" value="294">
+</meta>
+        <meta name="topic-id" value="295">
+</meta>
+        <meta name="topic-id" value="296">
+</meta>
+        <meta name="topic-id" value="297">
+</meta>
+        <meta name="topic-id" value="298">
+</meta>
+        <meta name="topic-id" value="299">
+</meta>
+        <meta name="topic-id" value="300">
+</meta>
+        <meta name="topic-id" value="301">
+</meta>
+        <meta name="topic-id" value="302">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f9983a6222fff9d20a00206a01aaeab8-4d9c3ff122fff9d20a00206a0017f295-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k15/Content/e929a089a35f4bda.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)</a> &gt; <a class="chm-breadcrumb" href="ae9af9987e764ade.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="ada8a233e87844a7.htm">Input, Output and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="b01991afdead4c41.htm">Amplitude Settings</a> &gt; <a class="chm-breadcrumb" href="6393bca203cb4d8a.htm">Input Settings</a> &gt; <span class="chm-breadcrumb">Preamplifier</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor92">
+</a><a name="kanchor93">
+</a><a name="kanchor94">
+</a><a name="kanchor95">
+</a><div class="function_heading"><a name="ID_f9983a6222fff9d20a00206a01aaeab8-4d9c3ff122fff9d20a00206a0017f295-en-US">
+</a>Preamplifier</div><p>If the (optional) internal preamplifier hardware is installed, a preamplifier can be activated for the RF input signal.</p><p>You can use a preamplifier to analyze signals from DUTs with low output power.</p><p>Note that if an optional external preamplifier is activated, the internal preamplifier is automatically disabled, and vice versa.</p><p>For R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW26 or higher models, the input signal is amplified by 30 dB if the preamplifier is activated.</p><p>For R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW8 or 13 models, the following settings are available:</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Off"</p></td><td class="function_col_right"><p>Deactivates the preamplifier.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"15 dB"</p></td><td class="function_col_right"><p>The RF input signal is amplified by about 15 dB.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"30 dB"</p></td><td class="function_col_right"><p>The RF input signal is amplified by about 30 dB.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="1b3845f360fc4a61.htm#ID_cc01180fd3ec4fac0a001ae70c30c227-5e81a69fd3ec4ed10a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>GAIN:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="8f6cc398da5b408c.htm#ID_18ac0ed7d3ec51230a001ae77c387348-4ddc3fc9d3ec50290a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>GAIN[:</nobr>​<nobr>VALue]</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Remote Control Commands for Amplifier Measurements|Configuring Amplifier Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Controlling a Signal Generator</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3ba73a84cdca198d0a001ae7404b4ee2-2510ac80cdca198d0a001ae71027f868-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/a77c339cf6fc43c1.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="9d0828df6bce4ba4.htm">Remote Control Commands for Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="194c10c98f69418e.htm">Configuring Amplifier Measurements</a> &gt; <span class="chm-breadcrumb">Controlling a Signal Generator</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Controlling a Signal Generator</div><p>When you configure the signal generator, make sure to synchronize with <span class="command">*OPC?</span> or <span class="command">*WAI</span> to make sure that the command was successfully applied on the generator before sending the next command.</p>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="2c52f128cf984c83.htm#ID_20ba1ccbbe1f56350a001ae76783b82f-e8bf3519be1f54cf0a001ae7241d9c33-en-US" class="title_toc">CONFigure:DUT:STIMe</a><br/><a href="abf20d44565840df.htm#ID_76e86080f5834ab70a001ae74820b87e-4b8a3bf5f58349400a001ae77dfe1998-en-US" class="title_toc">CONFigure:GENerator:EXTernal:ROSCillator</a><br/><a href="2f1efc0f07614993.htm#ID_2f2db47a49c021a70a001ae7219983cf-e328423449c020010a001ae7070d7041-en-US" class="title_toc">CONFigure:GENerator:EXTernal:ROSCillator:LEDState?</a><br/><a href="03ada7e92b684845.htm#ID_d2af56a6c920a0130a001ae745c90bd1-a0968ff9c9209eea0a001ae77a485e0d-en-US" class="title_toc">CONFigure:GENerator:FREQuency:CENTer</a><br/><a href="bb4ec69fb0bb4ed9.htm#ID_480c53d8c920a1990a001ae72f473287-ccd0e676c920a0900a001ae77a485e0d-en-US" class="title_toc">CONFigure:GENerator:FREQuency:CENTer:LEDState?</a><br/><a href="b1bb0f399fea4ddc.htm#ID_0dc5d51fc920a33f0a001ae76170703c-be70bb1dc920a2260a001ae77a485e0d-en-US" class="title_toc">CONFigure:GENerator:FREQuency:CENTer:SYNC[:STATe]</a><br/><a href="f28fbfb277ba4735.htm#ID_3aa0a35949c024180a001ae75382663c-1b1fa70849c022530a001ae7070d7041-en-US" class="title_toc">CONFigure:GENerator:IPConnection:ADDRess</a><br/><a href="0190c18943f24c94.htm#ID_b0056d8ac920a6aa0a001ae74d9267d6-5a1cc788c920a5720a001ae77a485e0d-en-US" class="title_toc">CONFigure:GENerator:IPConnection:LEDState?</a><br/><a href="1ac4d3c4ec534bfd.htm#ID_df14b27af5834fa80a001ae75ea5d0f0-4809baf6f5834df30a001ae77dfe1998-en-US" class="title_toc">CONFigure:GENerator:POWer:LEVel</a><br/><a href="56355a31b25c4686.htm#ID_c9477257729f39110a001ae71ae79d03-6c1ef743729f36ee0a001ae7530a1526-en-US" class="title_toc">CONFigure:GENerator:POWer:LEVel:ATTenuation</a><br/><a href="3d2273d2949342b6.htm#ID_852a9e66729f3e220a001ae724ccf0b8-6506109f729f3a4a0a001ae7530a1526-en-US" class="title_toc">CONFigure:GENerator:POWer:LEVel:ATTenuation:LEDState?</a><br/><a href="b65c5dca712541b7.htm#ID_e353bc26c920a88f0a001ae75cd7aa38-39fda5c9c920a7950a001ae77a485e0d-en-US" class="title_toc">CONFigure:GENerator:POWer:LEVel:LEDState?</a><br/><a href="ca5fd31672c24c91.htm#ID_12aa8f6758635eea0a001ae74a459790-c545a20c58635b210a001ae735e62b8f-en-US" class="title_toc">CONFigure:GENerator:POWer:LEVel:OFFSet</a><br/><a href="98434b68b4f1494d.htm#ID_7f4417c05863633f0a001ae74c10dbdd-000a3b00586360be0a001ae735e62b8f-en-US" class="title_toc">CONFigure:GENerator:POWer:LEVel:OFFSet:LEDState?</a><br/><a href="412de34f0dd04c7e.htm#ID_bdf3b2220d3c5e760a001ae74d787505-aa7589ec0d3c5d0f0a001ae77470caac-en-US" class="title_toc">CONFigure:GENerator:RFOutput:LEDState?</a><br/><a href="7541183ddbe847e8.htm#ID_f5c4622e0d3c5c250a001ae71d3d3f38-2dd6e31b0d3c5adc0a001ae77470caac-en-US" class="title_toc">CONFigure:GENerator:RFOutput[:STATe]</a><br/><a href="ffe342fd162a480d.htm#ID_4aaa8cde0c6df2720a001ae720fdff6f-9ed198ae0c6df03f0a001ae740193c35-en-US" class="title_toc">CONFigure:GENerator:SEGMent</a><br/><a href="90662ff9114043e1.htm#ID_b3c806cf0c6df5bd0a001ae753a31b12-f64c0dda0c6df34c0a001ae740193c35-en-US" class="title_toc">CONFigure:GENerator:SEGMent:LEDState?</a><br/><a href="45a0528b16a84bde.htm#ID_c8cef18949c0265a0a001ae779941006-93711b5449c024c40a001ae7070d7041-en-US" class="title_toc">CONFigure:GENerator:SETTings:UPDate</a><br/><a href="0ab044bd8560425e.htm#ID_6a96099849c0289c0a001ae779f818fc-5062142d49c027350a001ae7070d7041-en-US" class="title_toc">CONFigure:GENerator:TARGet:PATH:BB?</a><br/><a href="3671c946e2c04231.htm#ID_d740256749c02bd80a001ae746d53aba-c2d66c2049c029670a001ae7070d7041-en-US" class="title_toc">CONFigure:GENerator:TARGet:PATH:RF</a><br/><a href="b21408b8db7a4d9b.htm#ID_ceccd1a70d3c79de0a001ae70c05d6d5-bd167f2f0d3c78a60a001ae77470caac-en-US" class="title_toc">CONFigure:SETTings</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

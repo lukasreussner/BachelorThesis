@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuration</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3056be286a7935640a00206a011cc7e3-5e1f79de32e6a0c40a00206a01a7a254-en-US;ID_2dc8e7b7758298440a710a3100fe6b32-5e1f79de32e6a0c40a00206a01a7a254-en-US;ID_4eddeae83e5f3e140a00206a004ddfa2-5e1f79de32e6a0c40a00206a01a7a254-en-US;ID_4daf17a157d0e0d00a00206a00b38585-5e1f79de32e6a0c40a00206a01a7a254-en-US;ID_5e9118483009c2ad0a00201900c6f635-5e1f79de32e6a0c40a00206a01a7a254-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <span class="chm-breadcrumb">Configuration</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Configuration</div><a name="kanchor118">
+</a><p><b>Access</b>: [MODE] &gt; "Multi Standard Radio Analyzer" tab</p><p>MSRA is a special operating mode on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>For details see <a class="xref" href="../../../Content/af72ee10fce347e5.htm">Applications, Measurement Channels, and Operating Modes</a>.</p><p>When you switch the operating mode of a measurement channel to MSRA mode the first time, the Sequencer is automatically activated in continuous mode (see <a class="xref" href="95085f56a13a40e4.htm#ID_eb6ea3e6030050610a00206a0193e9a9-78000cd532feb6420a00206a01f8ddcb-en-US">"Using the Sequencer in MSRA Mode"</a>), starting an I/Q Analyzer data acquisition with the default settings (but with a "Spectrum" result display). The "I/Q Analyzer" menu is displayed, providing access to the most important configuration functions.</p><a name="kanchor119">
+</a><div class="block"><div class="listintro">For a description see</div><ul class="list"><li value="1"><a class="xref" href="114f714377fc4de8.htm#ID_d7325a54851a11e0af248f3df084418e-5e1f79de32e6a0c40a00206a01a7a254-en-US">"Data Acquisition and Bandwidth Settings"</a></li><li value="2"><a class="xref" href="472e3f43c48a4432.htm#ID_e5acd96a77f418930a00206a001f8dae-5e1f79de32e6a0c40a00206a01a7a254-en-US">"Display Configuration"</a></li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The [LINES] menu is not available.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_4eddeae83e5f3e140a00206a004ddfa2-5e1f79de32e6a0c40a00206a01a7a254-en-US">
+</a>Configuring the MSRA Master</div></div><a name="kanchor120">
+</a><p>The MSRA Master is the only channel that captures data. It also controls global configuration settings for all slave applications. Thus, all settings that refer to data acquisition can only be configured in the MSRA Master tab. These settings are deactivated in the configuration overviews and dialog boxes for all slave application channels. All other settings, e.g. concerning the evaluated data range, the display configuration or analysis, can be configured individually for each slave application and the Master.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_4daf17a157d0e0d00a00206a00b38585-5e1f79de32e6a0c40a00206a01a7a254-en-US">
+</a>Restrictions</div><p>Note that although some restrictions apply to parameters that affect both the MSRA Master and slave applications (see <a class="xref" href="d61505a36c174f8b.htm#ID_0b38339c580fe0640a00206a0084a58e-b6bd877e3300619d0a00206a01ebf9ad-en-US">"Restrictions for Slave Applications"</a>), it does not matter in which order you configure them. If any contradictions occur between the captured data and the data to be evaluated, error messages are displayed in the status bar of the slave application and an icon (<img border="0" src="Resources/Images/img5ef34fbf60391ee90a00206a00f678df_1_--_--_PNG96.png" alt="" title=""/> or <img border="0" src="Resources/Images/img8689effd44366a6a0a00206a00e82f8d_1_--_--_PNG96.png" alt="" title=""/>) is displayed next to the channel label. However, you will not be prevented from configuring contradictory settings.</p></td></tr></table></div></div><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><div class="tip_title">Importing and Exporting I/Q Data</div><a name="kanchor121">
+</a><a name="kanchor122">
+</a><a name="kanchor123">
+</a><a name="kanchor124">
+</a><p>The I/Q data to be evaluated in the I/Q Analyzer application can not only be captured by the MSRA Master itself, it can also be imported to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, provided it has the correct format. Furthermore, the captured I/Q data from the MSRA Master can be exported for further analysis in external applications.</p><p>For details see <a class="xref" href="../../fsw_iqanalyzer/Content/2b759318b3654a88.htm">I/Q Data Import and Export</a>.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_5e9118483009c2ad0a00201900c6f635-5e1f79de32e6a0c40a00206a01a7a254-en-US">
+</a>Configuring an I/Q Analyzer as an MSRA slave application</div></div><p><b>Access</b>: [MODE] &gt; "Multi Standard Radio Analyzer" tab &gt; "Select Meas"</p><p>In principle, the I/Q Analyzer in MSRA mode is configured as in Signal and Spectrum Analyzer mode.</p><p>However, the I/Q Analyzer slave application (<em>not Master</em>) in MSRA mode can also perform measurements on the captured I/Q data in the time and frequency domain (see also <a class="xref" href="e0dbcecd6b4d41af.htm#ID_f1b7477d0ec611e2839ab79820e44bcd-33d474f14414ad4a0a002019001331f5-en-US">"Measurements in the Time and Frequency Domain"</a>). You can select which type of measurement is to be performed: conventional I/Q data analysis or a time or frequency domain measurement.</p><p>The common measurements as in the Spectrum application are available. In addition, "IQ Analyzer" is provided under "Basic Measurements" to return to the default I/Q Analysis functions.</p><p>The time and frequency domain measurements and the required settings are described in detail in <a class="xref" href="../../../Content/e411382c530e4663.htm">Measurements and Results</a>. Further configuration of the I/Q Analyzer slave application is described in <a class="xref" href="../../fsw_iqanalyzer/Content/c29ac284be8f4c1b.htm">Configuration</a>.</p><p>The following chapters describe configuration for the MSRA Master.</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="81e5588b53ae4d86.htm" class="chapter_title_toc">Configuration Overview</a></li><li value="2"><a href="2a84fad068b747b6.htm" class="chapter_title_toc">Input Source Settings</a></li><li value="3"><a href="01fcff439e554169.htm" class="chapter_title_toc">Amplitude</a></li><li value="4"><a href="6982319749204461.htm" class="chapter_title_toc">Frequency Settings</a></li><li value="5"><a href="c30d3a85273c41f8.htm" class="chapter_title_toc">Trigger Settings</a></li><li value="6"><a href="114f714377fc4de8.htm" class="chapter_title_toc">Data Acquisition and Bandwidth Settings</a></li><li value="7"><a href="6ac935994e714905.htm" class="chapter_title_toc">Output Settings</a></li><li value="8"><a href="472e3f43c48a4432.htm" class="chapter_title_toc">Display Configuration</a></li><li value="9"><a href="5bcbc90cc6734b7d.htm" class="chapter_title_toc">Automatic Settings</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

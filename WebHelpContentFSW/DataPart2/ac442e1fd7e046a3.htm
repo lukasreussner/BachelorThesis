@@ -1,0 +1,27 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Remote Control Interfaces and Protocols|LAN Interface" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>HiSLIP Protocol</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1571947ebdd1c8c50a00206a00e63b03-6ecbe5d6bdd1c8c50a00206a01868f4b-en-US;ID_52a27f90af6995f20a00206a00d8de56-6ecbe5d6bdd1c8c50a00206a01868f4b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="b6c17eb98ccb482e.htm">Remote Control Interfaces and Protocols</a> &gt; <a class="chm-breadcrumb" href="afa437a9773942c5.htm">LAN Interface</a> &gt; <span class="chm-breadcrumb">HiSLIP Protocol</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2654">
+</a><div class="chm-chaptertitle">HiSLIP Protocol</div><p>The HiSLIP (<b>Hi</b>gh <b>S</b>peed <b>L</b>AN <b>I</b>nstrument <b>P</b>rotocol) is the successor protocol for VXI-11 for TCP-based instruments specified by the IVI foundation. The protocol uses two TCP sockets for a single connection - one for fast data transfer, the other for non-sequential control commands (e.g. <span class="command">Device Clear</span> or <span class="command">SRQ</span>).</p><p>HiSLIP has the following characteristics:</p><div class="block"><ul class="list"><li value="1">High performance as with raw socket network connections</li><li value="2">Compatible IEEE 488.2 support for Message Exchange Protocol, Device Clear, Serial Poll, Remote/Local, Trigger, and Service Request</li><li value="3">Uses a single IANA registered port (4880), which simplifies the configuration of firewalls</li><li value="4">Supports simultaneous access of multiple users by providing versatile locking mechanisms</li><li value="5">Usable for IPv6 or IPv4 networks</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Using VXI-11, each operation is blocked until a VXI-11 device handshake returns. However, using HiSLIP, data is sent to the device using the "fire and forget" method with immediate return. Thus, a successful return of a VISA operation such as <span class="command">viWrite()</span> does not guarantee that the instrument has finished or started the requested command, but is delivered to the TCP/IP buffers.</p></td></tr></table></div></div><p>For more information see also the application note:</p><div class="block"><p><a href="http://www.rohde-schwarz.com/appnote/1MA208" class="link" target="_new">1MA208: Fast Remote Instrument Control with HiSLIP</a></p></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

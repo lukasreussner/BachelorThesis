@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Configuring Amplifier Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring the Parameter Sweep</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eETSkIdParamSweep">
+</meta>
+        <meta name="topic-id" value="481">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_293dd0f970e01dcf0a001ae70784fe98-22f3483d70e01dcf0a001ae72c66b103-en-US;ID_811e01d9711c2fd90a710b9a001367b3-22f3483d70e01dcf0a001ae72c66b103-en-US;ID_66547e8a72391bee0a001ae7694c2340-22f3483d70e01dcf0a001ae72c66b103-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/670b9fcbc52b4bfa.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="514ce2c6787d4307.htm">Configuring Amplifier Measurements</a> &gt; <span class="chm-breadcrumb">Configuring the Parameter Sweep</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Configuring the Parameter Sweep</div><a name="kanchor325">
+</a><p><b>Access</b>: "Overview" &gt; "Measurements" &gt; "Meas Modes" &gt; "Parameter Sweep"</p><p>The Parameter Sweep is a measurement that allows you to compare a result (that you can select arbitrarily) against two other parameters. The advantage of the Parameter Sweep is that it controls the signal generator and the analyzer, and automatically changes the signal characteristics (for example the frequency) without you having to do those changes manually. In addition, it combines the results in a single and well arranged diagram and / or numerical result display (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">➙</span>    <a class="xref" href="1c5bef6df308474a.htm#ID_167588b270c23e4a0a001ae7219e149b-db2ecf1b70c23e4a0a001ae7115add5b-en-US">Parameter Sweep</a>).</p><div class="block"><span class="bold"><a name="ID_811e01d9711c2fd90a710b9a001367b3-22f3483d70e01dcf0a001ae72c66b103-en-US">
+</a>Example: </span><p>In the default state, the application compares the EVM against the frequency and the generator power.</p><p>In that case, the application first performs a measurement on the first frequency for each generator output level in the defined range. When this is done, the measurement continues to measure all power levels on the second frequency and so on.</p><div class="block"><div class="listintro">Frequency range: 10 MHz to 20 MHz, stepsize 1 MHz. Output level range: -10 dBm to 0 dBm, stepsize: 1 dB.</div><ul class="list"><li value="1">1st measurement: 10 MHz with a generator output level of -10 dBm.</li><li value="2">(...)</li><li value="3">11th measurement: 10 MHz with a generator output level of 0 dBm.</li><li value="4">12th measurement: 11 MHz with a generator output level of -10 dBm.</li><li value="5">(...)</li><li value="6">22nd measurement: 11 MHz with a generator output level of 0 dBm.</li><li value="7">(...)</li><li value="8">nth measurement: 20 MHz with a generator output level of 0 dBm.</li></ul></div></div><p>The configuration you have made affects the number of measurements that will be performed. This also has an effect on the overall measurement time of the parameter sweep.</p><div class="block" id="ID_66547e8a72391bee0a001ae7694c2340-22f3483d70e01dcf0a001ae72c66b103-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge6049526590c80200a001ae77d90e8d0_3_--_--_PNG96Small.png" alt="" title=""/></div></div><p>The remote commands required to configure the parameter sweep are described in <a class="xref" href="810dac9f7aec47b2.htm#ID_6f205b757222c4440a001ae70164c0c3-73d6ab4e7222c4440a001ae77dab42eb-en-US">"Configuring Parameter Sweeps"</a>.</p>
+						<div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="9fd5a9ef758b491a.htm#ID_c9c54e4a7128ec060a001ae7069a24e5-68db75c07128ec060a001ae771ec39c5-en-US" class="title_toc">Turning the parameter sweep on and off</a></div><div class="function_block"><font face="Arial">└</font> <a href="4254d70c0e204f30.htm#ID_864fe0027129b94d0a001ae7381b8693-1c48d9bd7129b94d0a001ae7172039ac-en-US" class="title_toc">Selecting the data to be evaluated during the Parameter Sweep</a></div><div class="function_block"><font face="Arial">└</font> <a href="8c192ae5d7d5495a.htm#ID_ccb1e64c712b1cec0a001ae76baa5a37-b9ada80d712b1cec0a001ae77d090819-en-US" class="title_toc">Synchronizing the levels of signal generator and analyzer</a></div></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Spurious Measurements application (R&amp;S FSW-K50)|Remote Commands to Perform Spurious Measurements|Programming Examples: Spurious Emissions Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k50.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Performing a Directed Search Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b46d763557f071800a001ae72b4f6b7c-ded60269577122d20a001ae74c480996-en-US;ID_f025148f5bea59d20a001ae71e27f8ac-ded60269577122d20a001ae74c480996-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Spurious Measurements application (R&amp;S FSW-K50)</a> &gt; <a class="chm-breadcrumb" href="452b678315694dcc.htm">Remote Commands to Perform Spurious Measurements</a> &gt; <a class="chm-breadcrumb" href="d82c72080cfd45ac.htm">Programming Examples: Spurious Emissions Measurements</a> &gt; <span class="chm-breadcrumb">Performing a Directed Search Measurement</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Performing a Directed Search Measurement</div><p>This example demonstrates how to perform a directed measurement in a remote environment.</p><p>Note that some of the used commands may not be necessary as they define default values, but are included to demonstrate their use.</p><p>The following search settings are used:</p><div class="block" id="ID_f025148f5bea59d20a001ae71e27f8ac-ded60269577122d20a001ae74c480996-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb15d198f5be99a0b0a001ae77e7117af_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="verbatim"><pre class="verbatim_text">//----------- Preparing the measurement ------------
+//Reset the instrument
+*RST
+//Activate the spurious measurement application
+INST:SEL 'SPUR'
+
+//Configure the carrier reference level as -50dBm
+CREF:VAL -50DBM
+//Define power results as relative to the carrier power
+CREF:PREF REL
+
+//---------------Configuring a Directed Search Measurement ----------
+//Select the wide search measurement
+SSE:STYP DIR
+//Mark residual spurs in the spur table
+SSE:RMAR ON
+//Define a limit offset of 10 dB
+DIR:LOFF 10DB
+//Define a peak excursion of 3 dB
+DIR:PEXC 3DB
+//Define a reference level of -20 dBm.
+DIR:RLEV -20
+//Define an attenuation level of 10 dB
+DIR:INP:ATT 10
+
+//Define three frequency spans to be searched with the settings shown above:
+// 1.0 GHz, 1.2 GHz, 1.4 GHz
+SENS:DIR:SETT 1.0000000000,10000000,-120,10,
+1.2000000000,20000000,-110,15,
+1.4000000000,15000000,-120,10
+
+//Save the list to repeat the measurement with same configuration
+DIR:SAVE 'C:\R_S\USER\SPURIOUS_DIRMEAS.csv'
+
+//Add a result display for the noise floor estimation diagram
+LAY:ADD:WIND? '3',BEL,NEST
+
+//--------------Performing the Measurement-----
+
+//Perform a spurious emission measurement and wait until the measurement has finished.
+INIT:IMM; *WAI
+
+//---------------Retrieving Results-------------
+//Query the spurious detection spectrum of the measurement
+TRAC2?
+//Query the result of the limit check in the spurious detection spectrum
+CALC2:LIM:FAIL?
+//Store all meaasurement results to a file
+MMEM:STOR:SPUR:MEAS 'C:\R_S\USER\SPURIOUS_DIRMEAS_RESULTS.csv'</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

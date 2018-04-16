@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Channels, Codes and Symbols</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_eb2017d8b1549a760a00206a01eda349-b7f661756d7580e80a00206a010113c9-en-US;ID_112e9aae11e711e195318cfdc899e22d-b7f661756d7580e80a00206a010113c9-en-US;ID_e1b45628acdbe3620a00206a01e045a9-b7f661756d7580e80a00206a010113c9-en-US;ID_159be132280185e20a00206a00fde64b-b7f661756d7580e80a00206a010113c9-en-US;ID_6cd49f86104f11e18e06993eae0b40a4-b7f661756d7580e80a00206a010113c9-en-US;ID_e11804d3b1549a850a00206a007b4f3c-b7f661756d7580e80a00206a010113c9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="2555a026cc2a4d0c.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Channels, Codes and Symbols</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Channels, Codes and Symbols</div><a name="kanchor174">
+</a><a name="kanchor175">
+</a><a name="kanchor176">
+</a><a name="kanchor177">
+</a><a name="kanchor178">
+</a><a name="kanchor179">
+</a><a name="kanchor180">
+</a><a name="kanchor181">
+</a><a name="kanchor182">
+</a><a name="kanchor183">
+</a><a name="kanchor184">
+</a><p>In CDMA2000 applications, the data is transmitted in <b>channels</b>. These channels are based on orthogonal <b>codes</b> and can have different <b>symbol rates</b>. The symbol rate depends on the used modulation type and the spreading factor of the channel.</p><div class="block"><div class="subtitle"><a name="ID_112e9aae11e711e195318cfdc899e22d-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Spreading factors</div></div><a name="kanchor185">
+</a><a name="kanchor186">
+</a><p><b>Spreading factors</b> determine whether the transmitted data is sent in short or long sequences. The spreading factor is re-assigned dynamically in certain time intervals according to the current demand of users and data to be transmitted. The higher the spreading factor, the lower the data rate; the lower the spreading factor, the higher the data rate.</p><p>A channel with a lower spreading factor consists of several combined codes. That means a channel can be described by its number and its spreading factor.</p><p>The spread bits are called <b>chips</b>.</p><p>Since a PCG is a fixed time unit, knowing the symbol rate you can calculate how many symbols are transmitted for each PCG.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>For evaluations which display symbols on the x–axis, the maximum number of symbols varies according to the symbol rate of the selected code channel. With transmit diversity signals, the symbols of the signal are distributed on two antennas (see <a class="xref" href="5953245e2eed45a8.htm#ID_6136d366141f11e18533c1df9669c7a5-b7f661756d7580e80a00206a010113c9-en-US">"Antenna Diversity"</a>). Therefore the symbol number is reduced to half.</p></td></tr></table></div></div><p>The following table shows the relationship between the code class, the spreading factor, the number of codes per channel, and the symbol rate.</p><div class="block"><a name="ID_159be132280185e20a00206a00fde64b-b7f661756d7580e80a00206a010113c9-en-US">
+</a><a name="kanchor187">
+</a><a name="kanchor188">
+</a><a name="kanchor189">
+</a><a name="kanchor190">
+</a><a name="kanchor191">
+</a><a name="kanchor192">
+</a><a name="kanchor193">
+</a><span class="table-caption">Relationship between various code parameters for CDMA2000 BTS signals</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p><b>Code class</b></p></th><th valign="top"><p><b>Spreading factor</b></p></th><th valign="top"><p><b>No. codes / channel</b></p></th><th valign="top"><p><b>Symbol rate</b> [ksps]</p></th><th valign="top"><p><b>Symbols per PCG (no transmit diversity)</b></p></th><th valign="top"><p><b>Symbols per PCG (transmit diversity)</b></p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>4</p></td><td valign="top"><p>128</p></td><td valign="top"><p>307.2</p></td><td valign="top"><p>384</p></td><td valign="top"><p>192</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>8</p></td><td valign="top"><p>64</p></td><td valign="top"><p>153.6</p></td><td valign="top"><p>192</p></td><td valign="top"><p>96</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>16</p></td><td valign="top"><p>32</p></td><td valign="top"><p>76.8</p></td><td valign="top"><p>96</p></td><td valign="top"><p>48</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>32</p></td><td valign="top"><p>16</p></td><td valign="top"><p>38.4</p></td><td valign="top"><p>48</p></td><td valign="top"><p>24</p></td></tr><tr class="oddrow"><td valign="top"><p>6</p></td><td valign="top"><p>64</p></td><td valign="top"><p>8</p></td><td valign="top"><p>19.2</p></td><td valign="top"><p>24</p></td><td valign="top"><p>12</p></td></tr><tr class="evenrow"><td valign="top"><p>7</p></td><td valign="top"><p>128</p></td><td valign="top"><p>4</p></td><td valign="top"><p>9.6</p></td><td valign="top"><p>12</p></td><td valign="top"><p>6</p></td></tr></tbody></table></div><div class="block"><a name="ID_6cd49f86104f11e18e06993eae0b40a4-b7f661756d7580e80a00206a010113c9-en-US">
+</a><a name="kanchor194">
+</a><a name="kanchor195">
+</a><a name="kanchor196">
+</a><a name="kanchor197">
+</a><a name="kanchor198">
+</a><a name="kanchor199">
+</a><a name="kanchor200">
+</a><span class="table-caption">Relationship between various code parameters for CDMA2000 MS signals</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p><b>Code class</b></p></th><th valign="top"><p><b>Spreading factor</b></p></th><th valign="top"><p><b>No. codes / channel</b></p></th><th valign="top"><p><b>Symbol rate</b> [ksps]</p></th><th valign="top"><p><b>Symbols per PCG</b></p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1</p></td><td valign="top"><p>2</p></td><td valign="top"><p>128</p></td><td valign="top"><p>614.4</p></td><td valign="top"><p>768</p></td></tr><tr class="evenrow"><td valign="top"><p>2</p></td><td valign="top"><p>4</p></td><td valign="top"><p>64</p></td><td valign="top"><p>307.2</p></td><td valign="top"><p>384</p></td></tr><tr class="oddrow"><td valign="top"><p>3</p></td><td valign="top"><p>8</p></td><td valign="top"><p>32</p></td><td valign="top"><p>153.6</p></td><td valign="top"><p>192</p></td></tr><tr class="evenrow"><td valign="top"><p>4</p></td><td valign="top"><p>16</p></td><td valign="top"><p>16</p></td><td valign="top"><p>76.8</p></td><td valign="top"><p>96</p></td></tr><tr class="oddrow"><td valign="top"><p>5</p></td><td valign="top"><p>32</p></td><td valign="top"><p>8</p></td><td valign="top"><p>38.4</p></td><td valign="top"><p>48</p></td></tr><tr class="evenrow"><td valign="top"><p>6</p></td><td valign="top"><p>64</p></td><td valign="top"><p>4</p></td><td valign="top"><p>19.2</p></td><td valign="top"><p>24</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_e11804d3b1549a850a00206a007b4f3c-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Number of bits per symbol</div></div><a name="kanchor201">
+</a><p>Depending on the modulation type, a symbol consists of the following number of bits:</p><div class="block"><ul class="list"><li value="1"><b>BPSK</b>: 1 bit (for BTS signals, only the I-component is assigned)</li><li value="2"><b>QPSK</b>: 2 bits (I-component followed by the Q-component)</li><li value="3"><b>8PSK</b>: 3 bits</li><li value="4"><b>16QAM</b>: 4 bits</li></ul></div><a name="kanchor202">
+</a><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Performing Amplifier Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Gain Compression</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1e9c73b81025308c0a001ae747a62dda-ed2dc5911025308c0a001ae76f0c67f5-en-US;ID_4aeabc4863990ca10a001ae759a06e38-ed2dc5911025308c0a001ae76f0c67f5-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/743d1a4fa28a4fa1.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="8689c951b7b94bef.htm">Performing Amplifier Measurements</a> &gt; <span class="chm-breadcrumb">Gain Compression</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor33">
+</a><a name="kanchor34">
+</a><a name="kanchor35">
+</a><div class="function_heading"><a name="ID_1e9c73b81025308c0a001ae747a62dda-ed2dc5911025308c0a001ae76f0c67f5-en-US">
+</a>Gain Compression</div><p>The Gain Compression result display shows the gain and error effects of the DUT against the DUT input or output power.</p><p>The gain is the ratio of the input and output power of the DUT.</p><p>The x-axis shows the levels of all samples of the reference signal (input power) or the measurement signal (output power) in dBm. You can select the reference of the x-axis (input or output power) in the "Result Configuration" dialog box.</p><p>The y-axis shows the gain in dB.</p><p>The ideal Gain Compression curve would be a straight horizontal line. However, nonlinear effects result in a measurement curve that does not follow the ideal curve. In addition, the curve widens at very low input levels due to noise influence.</p><p>The width of the Gain Compression trace is an indicator of memory effects: the larger the width of the trace, the more memory effects occur.</p><p>You can analyze the gain characteristics of the measured signal and the modeled signal.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Measured signal<br/>Shows the gain characteristics of the DUT.<br/>The software uses the reference signal in combination with the synchronized measurement signal to calculate a software model that describes the characteristics of the device under test.<br/>The measured gain is represented by a colored cloud of values. The cloud is based on the recorded samples. In case of samples that have the same values (and would thus be superimposed), colors represent the statistical frequency with which a certain input / output level combination occurs in recorded samples. Blue pixels represent low statistical frequencies, red pixels high statistical frequencies. A color map is provided within the result display.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Modeled signal<br/>Shows the gain characteristics of the model that has been calculated. The modeled signal is calculated by applying the <a class="xref" href="539c8debe7d94c30.htm#ID_fe76e34dd3f8781d0a001ae72d2136bb-d2349ce0d3f8781d0a001ae75f904622-en-US">DUT model</a> to the reference signal.<br/>When the model matches the characteristics of the DUT, the characteristics of the model signal are the same as those of the measured signal (minus noise).<br/>The modeled signal is represented by a line trace.<br/>When system modeling has been turned off, this trace is not displayed.</li></ul></div><div class="block"><div class="listintro-in-compact-list">In addition, one or more horizontal lines can appear in the result display.</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">One line to indicate each compression point (1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB, 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB and 3<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB).</li><li style="margin-bottom:0; padding-bottom:0;" value="2">One line to indicate the reference point (0<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB compression) that the compression points refer to.</li></ul></div><div class="block" id="ID_4aeabc4863990ca10a001ae759a06e38-ed2dc5911025308c0a001ae76f0c67f5-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8532b7ee63958ac80a001ae70570d55a_2_--_--_PNG96Small.png" alt="" title=""/></div></div>Remote command: <div class="rcclist_right"><p>Selection: <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD GC</a></p><p>Result query: <a class="xref" href="24ac3b48142146eb.htm#ID_49734d02f582e0e00a001ae7405fdea2-1f2d33dff582deec0a001ae77dfe1998-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;t&gt;[:</nobr>​<nobr>DATA]?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

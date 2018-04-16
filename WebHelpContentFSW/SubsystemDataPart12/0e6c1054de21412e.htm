@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Troubleshooting the Measurement|Explanation of Status Bar Messages" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Message: Short Pattern: Pattern Search Might Fail</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a407be0970ebe8880a710a92000f5f97-5ec6da20410e46660a00206a009c64d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1c0026aadac1410a.htm">Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="dbc22b75b920431a.htm">Explanation of Status Bar Messages</a> &gt; <span class="chm-breadcrumb">Message: Short Pattern: Pattern Search Might Fail</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_a407be0970ebe8880a710a92000f5f97-5ec6da20410e46660a00206a009c64d8-en-US">
+</a>Message: <span style="font-weight: bold">Short Pattern: Pattern Search Might Fail</span></div><div class="block"><div class="listintro-in-compact-list">The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW performs the pattern search in two stages.</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Stage 1 involves the generation of an I/Q pattern waveform by modulating the pattern symbol sequence. The I/Q pattern is then correlated with the measured signal. At positions where the correlation metric exceeds the "I/Q Correlation Threshold" the I/Q pattern is found.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Stage 2 demodulates the measured signal at the I/Q pattern location and the transmitted symbols are checked for correctness against the pattern symbol sequence.</li></ul></div><div class="block"><div class="listintro-in-compact-list">In case of a very short pattern, i.e. a pattern length in the order of the inter-symbol interference (ISI) duration, a number of issues can arise:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">False positive<br/>The I/Q pattern is found at positions where the transmitted symbols differ from the pattern symbols.<div class="listintro2-in-compact-list">Solution: Try one of the following:</div><table border="0" cellpadding="0" cellspacing="0" class="list2-in-compact-list" style="border:0px solid #FFFFFF; margin-bottom:0;"><tr><td valign="baseline" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; border:0px solid #FFFFFF;">Activate "Meas only if Pattern Symbols Correct".</td></tr><tr><td valign="baseline" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; border:0px solid #FFFFFF;">Increase the "I/Q Correlation Threshold"<br/>(see <a class="xref" href="88c2d16d5cdd4cb5.htm#ID_f1b4df11472f3d180a00206a00ed20c6-98ce8ff6410963710a00206a00a7855c-en-US">"Pattern Search"</a>).</td></tr></table></li><li style="margin-bottom:0; padding-bottom:0;" value="2">False negative<br/>The I/Q pattern search misses a position where transmitted symbols match the pattern symbols.<div class="listintro2-in-compact-list">Solution:</div><table border="0" cellpadding="0" cellspacing="0" class="list2-in-compact-list" style="border:0px solid #FFFFFF; margin-bottom:0;"><tr><td valign="baseline" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; border:0px solid #FFFFFF;">Decrease the "I/Q Correlation Threshold"<br/>(see <a class="xref" href="88c2d16d5cdd4cb5.htm#ID_f1b4df11472f3d180a00206a00ed20c6-98ce8ff6410963710a00206a00a7855c-en-US">"Pattern Search"</a>).</td></tr></table><br/>In case of bursted signals the pattern search finds only the first occurrence of the I/Q pattern within each burst. If a false positive occurs in this situation (cf. case 1.) the use of "Meas only if pattern symbols correct" will not provide a satisfactory solution.<div class="listintro2-in-compact-list">In this case do the following:</div><table border="0" cellpadding="0" cellspacing="0" class="list2-in-compact-list" style="border:0px solid #FFFFFF; margin-bottom:0;"><tr><td valign="baseline" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; border:0px solid #FFFFFF;">Increase the "I/Q Correlation Threshold".</td></tr><tr><td valign="baseline" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:0px; ; margin-top:0; margin-bottom:0; padding-bottom:0; border:0px solid #FFFFFF;">Specify the expected position of the pattern within the burst by adjusting the "Offset" parameter.</td></tr></table></li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|MSRA Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Multi-Standard Analysis</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a2980bb8580fe0640a00206a01f0c448-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_0ea049c466c844e10a00206a01189f33-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_6359ce0d580fe0640a00206a01e66359-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_838351296219c0370a00206a01840c70-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_7cae6bff78cd11e18d878b46abfbdd8c-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_10b956506219c0470a00206a00aea32a-b6bd877e3300619d0a00206a01ebf9ad-en-US;ID_9735d7976cefc4a40a002019018c8b59-b6bd877e3300619d0a00206a01ebf9ad-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="7980ab3c417d4f64.htm">MSRA Basics</a> &gt; <span class="chm-breadcrumb">Multi-Standard Analysis</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Multi-Standard Analysis</div><a name="kanchor106">
+</a><a name="kanchor107">
+</a><div class="block"><div class="subtitle"><a name="ID_0ea049c466c844e10a00206a01189f33-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Slave application data</div></div><p>The slave applications receive data for analysis from the capture buffer, if necessary resampled or with filters applied. The slave applications can define their own center frequency, sample rate and record length for their <b>slave application data</b>, which is an <b>extract of the capture buffer data</b>. The slave applications may not request more sample points than the captured data contains, or samples from a frequency outside the range of the capture buffer, for example.</p><p>Generally, if a signal contains data channels for multiple standards, the individual slave applications are used to analyze the channel for the corresponding standard. Thus, it is of interest to know which slave application, or more precisely: which data channel is analyzing which part of the captured data and how each data channel is correlated (in time) to others.</p><p>The MSRA Master display indicates the data covered by each slave application, restricted to the channel bandwidth used by the corresponding standard, by vertical blue lines labeled with the slave application name. For slave applications that support several standards (e.g. VSA, LTE) an estimated or user-defined bandwidth is indicated.</p><div class="block" id="ID_6359ce0d580fe0640a00206a01e66359-b6bd877e3300619d0a00206a01ebf9ad-en-US"><div class="graphic"><img border="0" src="Resources/Images/img98d74730523802180a00206a01371d74_2_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">MSRA Master indicating covered bandwidth for 4 slave applications</div></div><a name="kanchor108">
+</a><div class="block"><div class="subtitle"><a name="ID_838351296219c0370a00206a01840c70-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Analysis interval</div></div><p>Each slave application receives an extract of the data from the capture buffer. However, the individual evaluation methods of the slave application need not analyze the complete data range. Some slave applications allow you to select a specific part of the data for analysis, e.g. an individual frame, burst or pulse, or to use an offline trigger that defines an additional offset to the capture offset. The data range that is actually analyzed is referred to as the <b>analysis interval</b>.</p><p>The analysis interval is indicated in the window title bar for each evaluation, and can be queried via remote control.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>For slave applications that do not allow you to restrict the evaluation range (e.g. I/Q Analyzer, Analog Demodulation), the analysis interval is identical to the slave application data extract.</p></td></tr></table></div></div><a name="kanchor109">
+</a><a name="kanchor110">
+</a><a name="kanchor111">
+</a><a name="kanchor112">
+</a><div class="block"><div class="subtitle"><a name="ID_10b956506219c0470a00206a00aea32a-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Trigger offset vs. capture offset</div></div><p>The beginning of the capture buffer is defined by the trigger event and the trigger offset. The trigger source is defined by the MSRA Master, which means that all channels use the same trigger. However, each slave application might need a different trigger offset or a different number of pretrigger samples. Instead of a trigger offset, the slave applications define a <b>capture offset</b>. The capture offset is defined as an <b>offset to the beginning of the capture buffer</b>.</p><p>Thus, the beginning of the slave application data extract is calculated as:</p><p>[time of trigger event] + [trigger offset] + [capture offset]</p><p>Note that while the trigger offset value may be negative, thus starting before the trigger event, the capture offset may not. A negative capture offset would mean the slave application data would start before the first sample of the capture buffer. The (pre-)trigger offset in the MSRA Master must be configured such that the required number of pre-trigger samples for the slave applications are available.</p><div class="block"><div class="subtitle"><a name="ID_9735d7976cefc4a40a002019018c8b59-b6bd877e3300619d0a00206a01ebf9ad-en-US">
+</a>Analysis line</div></div><a name="kanchor113">
+</a><p>A frequent question when analyzing multi-standard radio signals is how each data channel is correlated (in time) to others. Thus, an analysis line has been introduced. The analysis line is a common time marker for all MSRA slave applications. It can be positioned in any MSRA slave application or the MSRA Master and is then adjusted in all other slave applications. Thus, you can easily analyze the results at a specific time in the measurement in all slave applications and determine correlations (e.g. cross-talk).</p><p>If the marked point in time is contained in the analysis interval of the slave application, the line is indicated in all time-based result displays, such as time, symbol, slot or bit diagrams. By default, the analysis line is displayed, however, it can be hidden from view manually. In all result displays, the "AL" label in the window title bar indicates whether or not the analysis line lies within the analysis interval or not:</p><div class="block"><ul class="list"><li value="1"><b>orange "AL"</b>: the line lies within the interval</li><li value="2"><b>white "AL"</b>: the line lies within the interval, but is not displayed (hidden)</li><li value="3"><b>no "AL"</b>: the line lies outside the interval</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

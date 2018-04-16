@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics|Signal Processing for MIMO Measurements (IEEE 802.11ac, n)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Physical vs Effective Channels</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7a6ee1f87e2b02db0a710a3100ec0576-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_096db8e2a089647e0a00206a00ff6913-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_41668f4c2de47a4d0a001ae7467e3f69-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="6dff20d6bdc14ea6.htm">Signal Processing for MIMO Measurements (IEEE 802.11ac, n)</a> &gt; <span class="chm-breadcrumb">Physical vs Effective Channels</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor238">
+</a><a name="kanchor239">
+</a><a name="kanchor240">
+</a><div class="chm-chaptertitle">Physical vs Effective Channels</div><p>The <b>effective channel</b> refers to the transmission path starting from the space-time stream and ending at the receive antenna. It is the product of the following components:</p><div class="block"><ul class="list"><li value="1">the spatial mapping</li><li value="2">the crosstalk inside the device under test (DUT) transmission paths</li><li value="3">the crosstalk of the channel between the transmit antennas and the receive antennas</li></ul></div><p>For each space-time stream, at least one training field (the (V)HT-LTF) is included in every PPDU preamble (see <a class="xref" href="#ID_096db8e2a089647e0a00206a00ff6913-a152f5e2a64dafbf0a002019017fdb4d-en-US">Figure "Training fields (TF) in the preamble of PPDUs in  IEEE 802.11n standard"</a>). Each sender antenna transmits these training fields, which are known by the receive antenna. The effective channel can be calculated from the received (and known) (V)HT-LTF symbols of the preamble, without knowledge of the spatial mapping matrix or the physical channel. Thus, the effective channel can always be calculated.</p><div class="block" id="ID_096db8e2a089647e0a00206a00ff6913-a152f5e2a64dafbf0a002019017fdb4d-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7d553ff2a07e3b690a00206a00ee5fa6_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Training fields (TF) in the preamble of PPDUs in IEEE 802.11n standard</div></div><p>The effective channel is sufficient to calculate the EVM, the constellation diagram and the bitstream results of the measured signal, so these results are always available.</p><p>The <b>physical channel</b> refers to the transmission path starting from the transmit antenna streams and ending at the receive antenna. It is the product of the following components:</p><div class="block"><ul class="list"><li value="1">the crosstalk inside the device under test (DUT) transmission paths</li><li value="2">the crosstalk of the channel between the transmit antennas and the receive antennas</li></ul></div><p>The physical channel is derived from the effective channel using the inverted spatial mapping matrix Q:</p><p>H<sub>phy</sub> = H<sub>eff</sub>Q<sup>-1</sup></p><p>Thus, if the spatial mapping matrix cannot be inverted, the physical channel cannot be calculated. This may be the case, for example, if the signal contains fewer streams than Rx antenna signals, or if the spatial matrix is close to numerical singularity.</p><p>In this case, results that are based on the transmit antenna such as I/Q offset, gain imbalance and quadrature offset are not available.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_41668f4c2de47a4d0a001ae7467e3f69-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a>Crosstalk in estimated channels</div><div class="block"><div class="listintro">Note that the estimated channel transfer function contains crosstalk from various sources, for example:</div><ul class="list"><li value="1">from the transmission paths inside the DUT</li><li value="2">from the connection between the analyzer and the DUT</li><li value="3">from the analyzer itself</li></ul></div><p>The crosstalk from the analyzer can be neglected. If the analyzer and DUT are connected by cable, this source of crosstalk can also be neglected. For further information on crosstalk see <a class="xref" href="e2fe8df54cf34174.htm#ID_1eada6fa2cd4a25b0a710ade00627d6f-a152f5e2a64dafbf0a002019017fdb4d-en-US">"Crosstalk and Spectrum Flatness"</a>.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

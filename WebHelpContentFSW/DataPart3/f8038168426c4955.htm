@@ -1,0 +1,115 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Programming Examples|Service Request" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Initiate Service Request</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_7_remote_examples_0015-c4d287679ff906f90a00206a019f27ff-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9cd40c31930e4200.htm">Programming Examples</a> &gt; <a class="chm-breadcrumb" href="08bab3c56ea044fc.htm">Service Request</a> &gt; <span class="chm-breadcrumb">Initiate Service Request</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Initiate Service Request</div><div class="verbatim"><pre class="verbatim_text">REM ---- Example of initialization of the SRQ in the case
+' of errors -------
+PUBLIC SUB SetupSRQ()
+CALL InstrWrite (analyzer, "*CLS") 'Reset status reporting system
+CALL InstrWrite (analyzer, "*SRE 168") 'Enable service request for
+'STAT:OPER, STAT:QUES and ESR
+'register
+CALL InstrWrite (analyzer, "*ESE 60") 'Set event enable bit for
+'command, execution, device-
+'dependent and query error
+CALL InstrWrite (analyzer, "STAT:OPER:ENAB 32767")
+'Set OPERation enable bit for
+'all events
+CALL InstrWrite (analyzer, "STAT:OPER:PTR 32767")
+'Set appropriate OPERation
+'Ptransition bits
+CALL InstrWrite (analyzer, "STAT:QUES:ENAB 32767")
+'Set questionable enable bits
+'for all events
+CALL InstrWrite (analyzer, "STAT:QUES:PTR 32767")
+'Set appropriate questionable
+'Ptransition bits
+CALL viEnableEvent(analyzer, VI_EVENT_SERVICE_REQ, VI_QUEUE, 0)
+'Enable the event for service
+'request
+Status = viWaitOnEvent(analyzer, VI_EVENT_SERVICE_REQ, SRQWaitTimeout, VI_NULL,
+ VI_NULL)
+IF (status = VI_SUCCESS) THEN CALL Srq
+'If SRQ is recognized =&gt;
+'subroutine for evaluation
+END SUB
+REM ***********************************************************************</pre></div><div class="verbatim"><pre class="verbatim_text">Private mbSession As MessageBasedSession
+
+Sub Main()
+    Console.WriteLine("Example of initialization    _
+                of the SRQ in the case of errors.")
+    Dim SRQWaitTimeout = 4000 ' Timeout As Integer for WaitOnEvent
+    'Opening session
+    Try
+        'FSW is alias, instead of use resource string.
+                'For example on TCP use TCPIP0::192.168.1.2::inst0::INSTR
+        mbSession = CType(ResourceManager.GetLocalManager().Open("FSW"), _
+                                      MessageBasedSession)
+        mbSession.TerminationCharacterEnabled = True
+        Try
+            mbSession.Write("*CLS") 'Reset status reporting system
+            mbSession.Write("*SRE 168") 'Enable service request for
+            'STAT:OPER, STAT:QUES and ESR register
+            mbSession.Write("*ESE 60") 'Set event enable bit for
+            'command, execution, device-dependent and query error
+            mbSession.Write("STAT:OPER:ENAB 32767")
+            'Set OPERation enable bit for all events
+            mbSession.Write("STAT:OPER:PTR 32767")
+            'Set appropriate OPERation Ptransition bits
+            mbSession.Write("STAT:QUES:ENAB 32767")
+            'Set questionable enable bits for all events
+            mbSession.Write("STAT:QUES:PTR 32767")
+            'Set appropriate questionable Ptransition bits
+            Console.WriteLine("Wait on event - Blocking")
+            mbSession.EnableEvent(MessageBasedSessionEventType.ServiceRequest, _
+                                                EventMechanism.Queue)
+            'Enable the event for service request
+
+            '------------------------------------------------
+            ' Your command plase use here
+            ' mbSession.Write("Your command")
+            '------------------------------------------------
+
+            Dim Status = mbSession.WaitOnEvent( _
+                                MessageBasedSessionEventType.ServiceRequest, SRQWaitTimeout)
+            If (Status.EventType() = _
+                                MessageBasedSessionEventType.ServiceRequest) Then
+                Console.WriteLine("SRQ is recognized")
+                'If SRQ is recognized =&gt; subroutine for evaluation
+                Srq()
+            End If
+        Catch exp As Exception
+            Console.WriteLine(exp.Message)
+        End Try
+    Catch exp As InvalidCastException
+        Console.WriteLine("Resource selected must be a message-based session")
+    Catch exp As Exception
+        Console.WriteLine(exp.Message)
+    End Try
+
+    ' Close session
+    mbSession.Dispose()
+    ' Wait for end
+    Console.WriteLine("Press any key to end")
+    Console.ReadKey()
+End Sub</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

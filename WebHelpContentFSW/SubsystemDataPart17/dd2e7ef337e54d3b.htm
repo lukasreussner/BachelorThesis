@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="1xEV-DO Measurements (R&amp;S FSW-K84/-K85)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k84_k85.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Scrambling via PN Offsets and Long Codes</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_79ab0795b1549a850a00206a01edd628-67698f60f4ad5da30a00206a0051b8a0-en-US;ID_cdd3d0bdc56a711b0a00206a0013aab7-67698f60f4ad5da30a00206a0051b8a0-en-US;ID_9d6699bcc56a711b0a00206a012cdc9f-67698f60f4ad5da30a00206a0051b8a0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">1xEV-DO Measurements (R&amp;S FSW-K84/-K85)</a> &gt; <a class="chm-breadcrumb" href="47b6236f95dd45f9.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Scrambling via PN Offsets and Long Codes</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor181">
+</a><a name="kanchor182">
+</a><a name="kanchor183">
+</a><a name="kanchor184">
+</a><a name="kanchor185">
+</a><div class="chm-chaptertitle">Scrambling via PN Offsets and Long Codes</div><div class="block"><div class="subtitle"><a name="ID_cdd3d0bdc56a711b0a00206a0013aab7-67698f60f4ad5da30a00206a0051b8a0-en-US">
+</a>Short code scrambling</div></div><p><b>Base stations</b> use a pseudo noise (PN) sequence (also referred to as short code sequence) to scramble the data during transmission. The used PN sequence is circulated in fixed time intervals. A specified <b>PN offset</b> value determines the start phase for the short code sequence.</p><p>The PN parameter is unique for each base station. Thus, the 1xEV-DO BTS application can distinguish the signals from different base stations quickly, if both of the following conditions apply:</p><div class="block"><ul class="list"><li value="1">Tthe "PN Offset" is defined in the signal description</li><li value="2">An external trigger is used to provide a reference for the start phase</li></ul></div><p>If no offset is specified or no external trigger is available, calculation is much slower as the correct PN must be determined from all possible positions.</p><p>During short code scrambling, the channel data is split up into I and Q components.</p><div class="block"><div class="subtitle"><a name="ID_9d6699bcc56a711b0a00206a012cdc9f-67698f60f4ad5da30a00206a0051b8a0-en-US">
+</a>Long code scrambling</div></div><a name="kanchor186">
+</a><a name="kanchor187">
+</a><a name="kanchor188">
+</a><a name="kanchor189">
+</a><p><b>Mobile stations</b> also use a PN short code, but with a fixed or no offset. Additionally, a complex <b>long code</b> is used for scrambling, making the data less susceptible to interference. The long code used by a mobile station is defined by a mask on either branch. The 1xEV-DO MS application requires these masks to distinguish the senders. The masks are defined in the signal description.</p><p>During long code scrambling, the channel data is mapped either to the I or to the Q branch of the complex input signal.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

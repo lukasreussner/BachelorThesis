@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Trace Configuration|Spectrograms" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Working with Spectrograms</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eRECSkIdSmartGridScanSpectrogram">
+</meta>
+        <meta name="topic-keyword" value="eRECSkIdSmartGridIfAnalysisSpectrogram">
+</meta>
+        <meta name="topic-id" value="2979">
+</meta>
+        <meta name="topic-id" value="2980">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_704f4e8b28a41aa80a710a3100290049-aa3aadc75a88fa710a002019003b372d-en-US;ID_28ddef999b9e98f40a7c00a0012fe12e-aa3aadc75a88fa710a002019003b372d-en-US;ID_3499930d2ee7e1920a710a31012c4d93-aa3aadc75a88fa710a002019003b372d-en-US;ID_ad8976942ee7e1630a710a31010a5c37-aa3aadc75a88fa710a002019003b372d-en-US;ID_066813012f079e6e0a00206a00e8523f-aa3aadc75a88fa710a002019003b372d-en-US;ID_7e9e5e5bb6d6f74b0a001ae75384a3eb-aa3aadc75a88fa710a002019003b372d-en-US;ID_f885deeb401c143f0a001ae7729c6108-aa3aadc75a88fa710a002019003b372d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="449dc0ce4ad74ae0.htm">Trace Configuration</a> &gt; <a class="chm-breadcrumb" href="26e9352882e946ea.htm">Spectrograms</a> &gt; <span class="chm-breadcrumb">Working with Spectrograms</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2222">
+</a><div class="chm-chaptertitle">Working with Spectrograms</div><p>In addition to the standard "level versus frequency" or "level versus time" traces, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW also provides a spectrogram display of the measured data.</p><p>A spectrogram shows how the spectral density of a signal varies over time. The x-axis shows the frequency, the y-axis shows the time. A third dimension, the power level, is indicated by different colors. Thus you can see how the strength of the signal varies over time for different frequencies.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Three-dimensional spectrograms are also available and are described in <a class="xref" href="73c605283e2a4a16.htm#ID_59dd196f815b51070a7c00a000e87978-aa3aadc75a88fa710a002019003b372d-en-US">"Three-Dimensional Spectrograms"</a>. Most basic information described in the following sections applies similarly to both two- and three-dimensional spectrograms.</p></td></tr></table></div></div><div class="block"><span class="bold"><a name="ID_3499930d2ee7e1920a710a31012c4d93-aa3aadc75a88fa710a002019003b372d-en-US">
+</a>Example: </span><div class="block" id="ID_ad8976942ee7e1630a710a31010a5c37-aa3aadc75a88fa710a002019003b372d-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgd3dd6e192ee158370a00206a01301719_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>In this example, you see the spectrogram for the calibration signal of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, compared to the standard spectrum display. Since the signal does not change over time, the color of the frequency levels does not change over time, i.e. vertically. The legend above the spectrogram display describes the power levels the colors represent.</p></div><div class="block"><div class="subtitle"><a name="ID_066813012f079e6e0a00206a00e8523f-aa3aadc75a88fa710a002019003b372d-en-US">
+</a>Result display</div></div><p>The spectrogram result can consist of the following elements:</p><div class="block" id="ID_7e9e5e5bb6d6f74b0a001ae75384a3eb-aa3aadc75a88fa710a002019003b372d-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgbd7b3d92b6d3bb380a001ae7152f9968_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Screen layout of the spectrogram result display</div><div class="legend"><div class="legentry">1 = Spectrum result display</div><div class="legentry">2 = Spectrogram result display</div><div class="legentry">3 = Marker list</div><div class="legentry">4 = Marker</div><div class="legentry">5 = Delta marker</div><div class="legentry">6 = Color map</div><div class="legentry">7 = Timestamp / frame number</div><div class="legentry">8 = Current frame indicator</div></div></div><p>For more information about spectrogram configuration, see <a class="xref" href="fb97c5e499e742d6.htm#ID_6fab01fa2b55e10d0a00206a01ce3a73-64203ca82b55e10d0a00206a005f7f01-en-US">"Spectrogram Settings"</a>.</p><div class="block"><div class="subtitle"><a name="ID_f885deeb401c143f0a001ae7729c6108-aa3aadc75a88fa710a002019003b372d-en-US">
+</a>Remote commands:</div></div><p>Activating and configuring spectrograms:</p><p><a class="xref" href="ab166f5b082b4eb2.htm#ID_681f165c28770acf0a00206a00b41c17-f71820156a66643f0a001ae71cdbd9f2-en-US">"Configuring Spectrograms"</a></p><p>Storing results:</p><p><a class="xref" href="2f67784512e746a7.htm#ID_a570a52cd3c1e8820a00206a01762f3b-d811a9c02a3dba0f0a00206a00bd7848-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>MMEMory:</nobr>​<nobr>STORe&lt;n&gt;:</nobr>​<nobr>SPECtrogram</nobr></a></p><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="cc79cd5b4fda4fec.htm" class="chapter_title_toc">Time Frames</a></li><li value="2"><a href="4e8be7f563604bc7.htm" class="chapter_title_toc">Markers in the Spectrogram</a></li><li value="3"><a href="73c605283e2a4a16.htm" class="chapter_title_toc">Three-Dimensional Spectrograms</a></li><li value="4"><a href="f3eb01ece0b94294.htm" class="chapter_title_toc">Color Maps</a></li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

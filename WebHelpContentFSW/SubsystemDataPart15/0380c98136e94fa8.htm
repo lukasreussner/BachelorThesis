@@ -1,0 +1,69 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Measurements and Result Displays|Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Domain Parameters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b8017c09a6f811e0bd7d9ca521cdb013-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_20b4f1196e680a010a00206a014de100-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_288f2c6d6e680a010a00206a01329601-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_f261dd1092b9f5600a710a3101348e2f-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_ca43104b6e680a010a00206a00b6b34a-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_3b22ff8e92b9f5400a710a3101ea2543-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_68aa8e286e680a300a00206a00dc66b4-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_2c8ef09d6f0a962a0a00206a0042d134-19ac4e2868392f9f0a00206a00098ad6-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="21ffee03ea97435e.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="d0293aa9fc8844a2.htm">Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Code Domain Parameters</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor32">
+</a><a name="kanchor33">
+</a><a name="kanchor34">
+</a><div class="chm-chaptertitle">Code Domain Parameters</div><p>In the Result Summary, three different types of measurement results are determined and displayed:</p><div class="block"><ul class="list"><li value="1">General results for the current set</li><li value="2">PCG results for the current set and PCG</li><li value="3">Channel results for the selected channel</li></ul></div><p>In the Channel Table, channel results for <span class="input">all</span> channels are displayed.</p><div class="block"><div class="subtitle"><a name="ID_20b4f1196e680a010a00206a014de100-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a>General Results</div></div><a name="kanchor35">
+</a><p>Under "General Results", the measurement results that concern the total signal (that is, all channels) for the entire period of observation (that is, all PCGs) are displayed:</p><div class="block"><a name="ID_288f2c6d6e680a010a00206a01329601-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a><a name="kanchor36">
+</a><a name="kanchor37">
+</a><a name="kanchor38">
+</a><a name="kanchor39">
+</a><a name="kanchor40">
+</a><span class="table-caption">General code domain power results for the current set</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Carrier Frequency Error</p></td><td valign="top"><p>Shows the frequency error referred to the center frequency of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. The absolute frequency error is the sum of the frequency error of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and that of the device under test. Frequency differences between the transmitter and receiver of more than 1.0<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz impair synchronization of the Code Domain Power measurement. It is strongly recommended that you synchronize the transmitter and the receiver.</p><p>The frequency error is available in the units Hz or ppm referred to the carrier frequency.</p></td></tr><tr class="evenrow"><td valign="top"><p>Chip Rate Error</p></td><td valign="top"><p>Shows the chip rate error (1.2288 Mcps) in ppm. A large chip rate error results in symbol errors and, therefore, in possible synchronization errors for Code Domain Power measurements. This measurement result is also valid if the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW could not synchronize to the CDMA2000 signal.</p></td></tr><tr class="oddrow"><td valign="top"><p>Trigger to Frame</p></td><td valign="top"><p>Reflects the time offset from the beginning of the recorded signal section to the start of the first PCG. In case of triggered data recording, this corresponds to the timing offset:</p><p><span class="input">timing offset = frame trigger (+ trigger offset) – start of first PCG</span></p><p>If it was not possible to synchronize the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to the CDMA2000 signal, this measurement result is meaningless. For the "Free Run" trigger mode, dashes are displayed.</p></td></tr><tr class="evenrow"><td valign="top"><p>Active Channels</p></td><td valign="top"><p>Specifies the number of active channels found in the signal. Detected data channels as well as special channels are regarded as active. With transmit diversity, the result applies to the selected <a class="xref" href="8f18d9ee1ae9459d.htm#shiv_FSV_K82_1011-b71653034984aa290a00206a0052ec9d-en-US">"Antenna Diversity - Antenna Number"</a>.</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_f261dd1092b9f5600a710a3101348e2f-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a>PCG Results</div></div><a name="kanchor41">
+</a><a name="kanchor42">
+</a><p>PCG results concern the total signal (that is, all channels) for the selected PCG.</p><div class="block"><a name="ID_ca43104b6e680a010a00206a00b6b34a-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a><a name="kanchor43">
+</a><a name="kanchor44">
+</a><a name="kanchor45">
+</a><a name="kanchor46">
+</a><a name="kanchor47">
+</a><a name="kanchor48">
+</a><a name="kanchor49">
+</a><span class="table-caption">Code domain power results for the current PCG</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Total Power</p></td><td valign="top"><p>Shows the total power of the signal.</p></td></tr><tr class="evenrow"><td valign="top"><p>Pilot Power</p></td><td valign="top"><p>Shows the power of the pilot channel. If antenna 2 is selected, the power of the F-TDPICH is displayed, in all other cases that of the F-PICH. For details on antenna selection, refer to <a class="xref" href="8f18d9ee1ae9459d.htm#shiv_FSV_K82_1011-b71653034984aa290a00206a0052ec9d-en-US">"Antenna Diversity - Antenna Number"</a>.</p></td></tr><tr class="oddrow"><td valign="top"><p>RHO</p></td><td valign="top"><p>Shows the quality parameter RHO. According to the CDMA2000 standard, RHO is the normalized, correlated power between the measured and the ideally generated reference signal. When RHO is measured, the CDMA2000 standard requires that only the pilot channel be supplied.</p></td></tr><tr class="evenrow"><td valign="top"><p>Composite EVM</p></td><td valign="top"><p>The composite EVM is the difference between the test signal and the ideal reference signal. For further details, refer to the <a class="xref" href="a161b7e92c924020.htm#ID_dc804f65b6f10f840a00206a00d67bef-19ac4e2868392f9f0a00206a00098ad6-en-US">"Composite EVM"</a> result display.</p></td></tr><tr class="oddrow"><td valign="top"><p>IQ Imbalance</p></td><td valign="top"><p>Shows the IQ imbalance of the signal in %.</p></td></tr><tr class="evenrow"><td valign="top"><p>Offset</p></td><td valign="top"><p>Shows the IQ offset of the signal in %.</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_3b22ff8e92b9f5400a710a3101ea2543-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a>Channel results</div></div><a name="kanchor50">
+</a><a name="kanchor51">
+</a><a name="kanchor52">
+</a><p>In the Result Summary, channel results of the selected channel and the selected PCG are displayed.</p><p>In the Channel Table, channel results for <span class="input">all</span> channels are displayed. For details, see <a class="xref" href="e1635261d5ec4442.htm#ID_3a0c6e19b68b8f510a00206a00e2adc7-19ac4e2868392f9f0a00206a00098ad6-en-US">"Channel Table"</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>Not all channel results displayed in the Result Summary are also displayed in the Channel Table and vice versa.</p></td></tr></table></div></div><div class="block"><a name="ID_2c8ef09d6f0a962a0a00206a0042d134-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a><a name="kanchor53">
+</a><a name="kanchor54">
+</a><a name="kanchor55">
+</a><a name="kanchor56">
+</a><a name="kanchor57">
+</a><a name="kanchor58">
+</a><a name="kanchor59">
+</a><a name="kanchor60">
+</a><a name="kanchor61">
+</a><a name="kanchor62">
+</a><span class="table-caption">Channel-specific parameters</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Channel</p></td><td valign="top"><p>Channel number including the spreading factor (in the form &lt;Channel&gt;.&lt;SF&gt;)</p></td></tr><tr class="evenrow"><td valign="top"><p>Modulation Type</p></td><td valign="top"><p><b>(BTS application only):</b></p><p>Displays the modulation type of the channel and PCG: BPSK, QPSK, 8PSK, or 16QAM</p></td></tr><tr class="oddrow"><td valign="top"><p>Mapping</p></td><td valign="top"><p><b>(MS application only):</b></p><p>Indicates the selected branch (I or Q)</p></td></tr><tr class="evenrow"><td valign="top"><p>Phase Offset</p></td><td valign="top"><p>Phase offset between the selected channel and the pilot channel</p><p>If enabled (see <a class="xref" href="d4e30914.htm#ID_30add530f92a4f2c0a00206a01b5574d-bc37e51ff92a4f2c0a00206a0076a609-en-US">"Timing and phase offset calculation"</a>), the maximum value of the phase offset is displayed together with the associated channel in the last two lines. Since the phase offset values of each active channel can be either negative or positive, the absolute values are compared and the maximum is displayed with the original sign.</p></td></tr><tr class="oddrow"><td valign="top"><p>Power Absolute</p></td><td valign="top"><p>Absolute (dBm) power of the channel</p></td></tr><tr class="evenrow"><td valign="top"><p>Power Relative</p></td><td valign="top"><p>Relative (dB) power of the channel (refers either to the pilot channel or the total power of the signal)</p></td></tr><tr class="oddrow"><td valign="top"><p>Symbol EVM</p></td><td valign="top"><p>Peak or mean value of the EVM measurement result</p><p>For further details, refer to the result display <a class="xref" href="8f1b2cab2d554353.htm#ID_c38c5cd8b6f10f840a00206a00c962fc-19ac4e2868392f9f0a00206a00098ad6-en-US">"Symbol EVM"</a>.</p></td></tr><tr class="evenrow"><td valign="top"><p>Timing Offset</p></td><td valign="top"><p>Timing offset between the selected channel and the pilot channel</p><p>If enabled (see <a class="xref" href="d4e30914.htm#ID_30add530f92a4f2c0a00206a01b5574d-bc37e51ff92a4f2c0a00206a0076a609-en-US">"Timing and phase offset calculation"</a>), the maximum value of the timing offset is displayed together with the associated channel in the last two lines. Since the timing offset values of each active channel can be either negative or positive, the absolute values are compared and the maximum is displayed with the original sign.</p></td></tr></tbody></table></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

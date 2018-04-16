@@ -1,0 +1,81 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Remote Commands for Pulse Measurements|Retrieving Results|Retrieving Information on Data Segments" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe&lt;n&gt;:IQ:SCAPture:TSTamp:SSTart?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_62229aaa6476526c0a001ae74fe88018-8d999962647651330a001ae712e10680-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="2a19c26881ae4bad.htm">Remote Commands for Pulse Measurements</a> &gt; <a class="chm-breadcrumb" href="573fbd4ad7fe43bc.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="28767ef98a1f4c31.htm">Retrieving Information on Data Segments</a> &gt; <span class="chm-breadcrumb">TRACe&lt;n&gt;:IQ:SCAPture:TSTamp:SSTart?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_62229aaa6476526c0a001ae74fe88018-8d999962647651330a001ae712e10680-en-US">
+</a><span class="bold">TRACe&lt;n&gt;:IQ:SCAPture:TSTamp:SSTart? </span></div><div class="rcdescription"><p>This remote control command returns an array of timestamps for each segment start in the captured data. The length of the array depends on the number of trigger events specified by <a class="xref" href="3c1c93a6eef04895.htm#ID_ca42f0f664764a7c0a001ae754023b4e-1b8cd9b0647649820a001ae712e10680-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>SCAPture:</nobr>​<nobr>EVENts</nobr></a>. For details see <a class="xref" href="05659574458d424a.htm#ID_47088b0469621f570a001ae73ce1868f-77f58b7b6bc89ad60a00206a008ec9e8-en-US">"Timestamps vs. sample number"</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Data&gt;<br/></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><pre class="verbatim" xml:space="preserve">//Configure a power trigger at -20dBm
+TRIG:SOUR RFP
+TRIG:LEV:RFP -20dBm
+//Activate segmented capture
+SENS:SWE:SCAP ON
+//Define a pretrigger offset of 5 us
+SENS:SWE:SCAP:OFFS -5 us
+//Capture data for 25us for 10 trigger events
+SENS:SWE:SCAP:EVEN 10
+SENS:SWE:SCAP:LENG 25 us
+//Query the sample rate
+SRATE?
+//Result: 200 MHz
+//Measurement time = 10 Events * Segment Len (25 us) = 250 us
+//Record length = Sample Rate(200 MHz)*Meas Time(250us)=50000
+
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and wait until the sweep
+//has finished.
+INIT;*WAI
+
+//Query the sample indices at which segments start
+TRAC:IQ:SCAP:BOUN?
+//Result: 
+//0,5000,10000,15000,20000,25000,30000,35000,40000,45000
+
+//Query the timestamps at which segments were captured
+TRAC:IQ:SCAP:TST:SST?
+//Result: 
+//-4.999999874E-006,+7.450049743E-004,+1.494999975E-003,
+//+2.245004987E-003,+2.994999988E-003,+3.745000111E-003,
+//+4.495000001E-003,+5.245004781E-003,+5.994999781E-003,
+//+6.745005026E-003
+
+//Query the timestamps at which trigger events occured
+TRAC:IQ:SCAP:TST:TRIG?
+//Result:
+//+0.000000000,+7.500050124E-004,+1.500000013E-003,
+//+2.250005025E-003,+3.000000026E-003,+3.749999916E-003,
+//+4.499999806E-003,+5.250005051E-003,+6.000000052E-003,
+//+6.750004832E-003</pre></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="a9dc02cf487845c7.htm#ID_45fa0df36ace593d0a00206a00279790-78a038206a778ca80a00206a00edc705-en-US">"Magnitude Capture"</a><br/>See <a class="xref" href="c54d6ab92b714041.htm#ID_5858a4d127d1e3d20a001ae714985a37-a24b39e56a7935640a00206a008708a7-en-US">"Trigger Offset"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

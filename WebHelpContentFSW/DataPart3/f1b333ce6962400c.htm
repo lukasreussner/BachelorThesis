@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Messages</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a036c683c2da0d1c0a00206a000460e0-a6f10840c2da0d1c0a00206a017431ef-en-US;ID_3bb57dc780a8ce940a710a310126df42-a6f10840c2da0d1c0a00206a017431ef-en-US;ID_6f1bbfc480a8cd3c0a710a310091ea7d-a6f10840c2da0d1c0a00206a017431ef-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <span class="chm-breadcrumb">Messages</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Messages</div><p>The messages transferred on the data lines are divided into the following categories:</p><a name="kanchor2679">
+</a><a name="kanchor2680">
+</a><a name="kanchor2681">
+</a><a name="kanchor2682">
+</a><div class="block"><ul class="list"><li value="1">Interface messages<br/>Interface messages are transmitted to the instrument on the data lines, with the attention line being active (LOW). They are used to communicate between the controller and the instrument. Interface messages can only be sent by instruments that have GPIB bus functionality. For details see the sections for the required interface.</li><li value="2">Instrument messages<br/>Instrument messages are employed in the same way for all interfaces, if not indicated otherwise in the description. Structure and syntax of the instrument messages are described in <a class="xref" href="6aed0083cd0e4cbd.htm#ID_6464a8846105f78d0a00206a001fb093-73f249836105f78d0a00206a00818609-en-US">"SCPI Command Structure"</a>. A detailed description of all messages available for the instrument is provided in the chapter "Remote Control Commands".<br/>There are different types of instrument messages, depending on the direction they are sent:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">Commands</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">Instrument responses</td></tr></table></li></ul></div><div class="block"><div class="subtitle"><a name="ID_3bb57dc780a8ce940a710a310126df42-a6f10840c2da0d1c0a00206a017431ef-en-US">
+</a>Commands</div></div><a name="kanchor2683">
+</a><a name="kanchor2684">
+</a><a name="kanchor2685">
+</a><a name="kanchor2686">
+</a><a name="kanchor2687">
+</a><a name="kanchor2688">
+</a><a name="kanchor2689">
+</a><a name="kanchor2690">
+</a><a name="kanchor2691">
+</a><div class="block"><div class="listintro">Commands (program messages) are messages the controller sends to the instrument. They operate the instrument functions and request information. The commands are subdivided according to two criteria:</div><ul class="list"><li value="1">According to the effect they have on the instrument:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;"><b>Setting commands</b> cause instrument settings such as a reset of the instrument or setting the frequency.</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;"><b>Queries</b> cause data to be provided for remote control, e.g. for identification of the instrument or polling a parameter value. Queries are formed by directly appending a question mark to the command header.</td></tr></table></li><li value="2">According to their definition in standards:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;"><b>Common commands</b>: their function and syntax are precisely defined in standard IEEE 488.2. They are employed identically on all instruments (if implemented). They refer to functions such as management of the standardized status registers, reset and self-test.</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;"><b>Instrument control commands</b> refer to functions depending on the features of the instrument such as frequency settings. Many of these commands have also been standardized by the SCPI committee. These commands are marked as "SCPI confirmed" in the command reference chapters. Commands without this SCPI label are device-specific; however, their syntax follows SCPI rules as permitted by the standard.</td></tr></table></li></ul></div><div class="block"><div class="subtitle"><a name="ID_6f1bbfc480a8cd3c0a710a310091ea7d-a6f10840c2da0d1c0a00206a017431ef-en-US">
+</a>Instrument responses</div></div><a name="kanchor2692">
+</a><p>Instrument responses (response messages and service requests) are messages the instrument sends to the controller after a query. They can contain measurement results, instrument settings and information on the instrument status.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

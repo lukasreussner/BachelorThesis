@@ -1,0 +1,69 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Measurements and Result Display|Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Domain Parameters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b8017c09a6f811e0bd7d9ca521cdb013-a17c8fff6b754c540a0020190052c5dc-en-US;ID_5dc307effe23c0f40a710a31017f4804-a17c8fff6b754c540a0020190052c5dc-en-US;ID_e75bfee29be2f8120a001ae722abc4eb-a17c8fff6b754c540a0020190052c5dc-en-US;ID_b80b197aa6f811e0bd7d9ca521cdb013-a17c8fff6b754c540a0020190052c5dc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="b393a5dcefed4a8f.htm">Measurements and Result Display</a> &gt; <a class="chm-breadcrumb" href="f45f82e563d440e5.htm">Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Code Domain Parameters</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor29">
+</a><a name="kanchor30">
+</a><div class="chm-chaptertitle">Code Domain Parameters</div><p>Two different types of measurement results are determined and displayed in the Result Summary: global results and channel results (for the selected channel).</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img">
+</img></td><td><p>The number of the slot and channel (code) at which the measurement is performed is indicated globally for the measurement in the channel bar.</p><p>The spreading code of the selected channel is indicated with the channel number in the channel bar and above the channel-specific results in the Result Summary.</p></td></tr></table></div></div><p>In the Channel Table, the analysis results for all (active) channels are displayed individually.</p><div class="block"><a name="ID_5dc307effe23c0f40a710a31017f4804-a17c8fff6b754c540a0020190052c5dc-en-US">
+</a><a name="kanchor31">
+</a><a name="kanchor32">
+</a><a name="kanchor33">
+</a><a name="kanchor34">
+</a><a name="kanchor35">
+</a><a name="kanchor36">
+</a><a name="kanchor37">
+</a><a name="kanchor38">
+</a><a name="kanchor39">
+</a><a name="kanchor40">
+</a><a name="kanchor41">
+</a><a name="kanchor42">
+</a><a name="kanchor43">
+</a><a name="kanchor44">
+</a><a name="kanchor45">
+</a><a name="kanchor46">
+</a><span class="table-caption">General and slot-specific code domain power results in the Result Summary</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Chip Rate Error</p></td><td valign="top"><p>The chip rate error in ppm. A large chip rate error results in symbol errors and, therefore, in possible synchronization errors for code domain measurements. This measurement result is also valid if the application could not synchronize to the TD-SCDMA signal.</p></td></tr><tr class="evenrow"><td valign="top"><p>Trigger to Frame</p></td><td valign="top"><p>The time difference between the beginning of the recorded signal section to the start of the first slot.</p><p>For triggered measurements, this difference is identical with the time difference of frame trigger (+ trigger offset) and the start of the first slot. If synchronization of the analyzer and input signal fails, the value of "Trigger to Frame" is not significant.</p><p>For non-triggered measurements, no result is available.</p></td></tr><tr class="oddrow"><td valign="top"><p>P Data</p></td><td valign="top"><p>Average power of the slot's data parts (total and for each data part)</p></td></tr><tr class="evenrow"><td valign="top"><p>P Midamble</p></td><td valign="top"><p>Power of the slot's midamble</p></td></tr><tr class="oddrow"><td valign="top"><p>Carrier Freq Error</p></td><td valign="top"><p>The frequency error relative to the center frequency of the analyzer. The absolute frequency error is the sum of the analyzer and DUT frequency error. The specified value is averaged for one slot (see also <a class="xref" href="4273b3ac04834d82.htm#ID_c6d31342e26463dd0a0020190007bb7c-322c91766b7551e20a00201900e92ace-en-US">"Synchronization fails"</a>)</p></td></tr><tr class="evenrow"><td valign="top"><p>IQ Offset</p></td><td valign="top"><p>DC offset of the signal in the selected slot in %</p></td></tr><tr class="oddrow"><td valign="top"><p>IQ Imbalance</p></td><td valign="top"><p>I/Q imbalance of signals in the selected slot in %</p></td></tr><tr class="evenrow"><td valign="top"><p>Active Channels</p></td><td valign="top"><p>The number of active channels detected in the signal in the selected slot. Both the detected data channels and the control channels are considered active channels.</p></td></tr><tr class="oddrow"><td valign="top"><p>RHO</p></td><td valign="top"><p>Quality parameter RHO for each slot.</p><p>According to the TD-SCDMA standard, Rho is the normalized, correlated power between the measured and the ideally generated reference signal.</p></td></tr><tr class="evenrow"><td valign="top"><p>Average RCDE</p></td><td valign="top"><p>Average Relative Code Domain Error over all channels. The Average RCDE is calculated according to release 8 of the standard.</p></td></tr><tr class="oddrow"><td valign="top"><p>Composite EVM</p></td><td valign="top"><p>The error vector magnitude (EVM) over the total signal in the selected slot. The EVM is the root of the ratio of the mean error power to the power of an ideally generated reference signal.</p><p>See also <a class="xref" href="31e9d5fb3ece4b54.htm#ID_dc804f65b6f10f840a00206a00d67bef-a17c8fff6b754c540a0020190052c5dc-en-US">"Composite EVM"</a></p></td></tr><tr class="evenrow"><td valign="top"><p>Pk CDE (15 ksps)</p></td><td valign="top"><p>The Peak Code Domain Error projects the difference between the measured signal and the ideal reference signal onto the spreading factor in the selected slot (see <a class="xref" href="04a1136a3e994ddb.htm#ID_52dd3e2eb6f10f840a00206a003ae45d-a17c8fff6b754c540a0020190052c5dc-en-US">"Peak Code Domain Error"</a>). The symbol rate, from which the spreading factor can be determined, is indicated in brackets.</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_e75bfee29be2f8120a001ae722abc4eb-a17c8fff6b754c540a0020190052c5dc-en-US">
+</a>DwPTS/UpPTS parameters</div><a name="kanchor47">
+</a><div class="block"><div class="listintro">Optionally, the following parameters determined for the "Downlink Pilot Time Slot" (DwPTS) or the "Uplink Pilot Time Slot" (UpPTS, see also <a class="xref" href="06cb05fac0b24121.htm#ID_a1e6879d44248e300a002019019cddc2-817e14ba6b7549660a0020190123ea90-en-US">"Frames, Subframes and Slots"</a>) can be displayed in the Result Summary.</div><ul class="list"><li value="1">"Subframe Number": Subframe the slot belongs to</li><li value="2">"DwPTS/UpPTS Active": Indicates whether DwPTS/UpPTS slot is active</li><li value="3">"DwPTS/UpPTS Power": Power in the DwPTS/UpPTS slot</li><li value="4">"DwPTS/UpPTS Rho": RHO for the DwPTS/UpPTS slot</li><li value="5">"DwPTS/UpPTS EVM(RMS)": EVM (RMS) for the DwPTS/UpPTS slot</li><li value="6">"DwPTS/UpPTS EVM(Peak)": EVM (Peak) for the DwPTS/UpPTS slot</li></ul></div></td></tr></table></div></div><p>The channel-specific results are displayed in the <a class="xref" href="030fd7263a174892.htm#ID_88be73f1b6f10f740a00206a00a2a004-a17c8fff6b754c540a0020190052c5dc-en-US">"Result Summary"</a>, the <a class="xref" href="71081c30f7594073.htm#ID_3a0c6e19b68b8f510a00206a00e2adc7-a17c8fff6b754c540a0020190052c5dc-en-US">"Channel Table"</a>, or both.</p><div class="block"><a name="ID_b80b197aa6f811e0bd7d9ca521cdb013-a17c8fff6b754c540a0020190052c5dc-en-US">
+</a><a name="kanchor48">
+</a><a name="kanchor49">
+</a><a name="kanchor50">
+</a><a name="kanchor51">
+</a><a name="kanchor52">
+</a><a name="kanchor53">
+</a><a name="kanchor54">
+</a><a name="kanchor55">
+</a><a name="kanchor56">
+</a><a name="kanchor57">
+</a><a name="kanchor58">
+</a><a name="kanchor59">
+</a><a name="kanchor60">
+</a><a name="kanchor61">
+</a><span class="table-caption">Channel-specific code domain power results</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Channel Type</p></td><td valign="top"><p>Detected type of channel (see <a class="xref" href="311fc64ba4e44dbc.htm#ID_717bdf4544248e300a00201901292a14-817e14ba6b7549660a0020190123ea90-en-US">Table "Available channel types in TD-SCDMA signals"</a>)</p></td></tr><tr class="evenrow"><td valign="top"><p>Ch.SF</p></td><td valign="top"><p>Channel number including the spreading factor (in the form &lt;Channel&gt;.&lt;SF&gt;).</p></td></tr><tr class="oddrow"><td valign="top"><p>SymRate[ksps]</p></td><td valign="top"><p>Symbol rate at which the data in the channel is transmitted (in ksps)</p></td></tr><tr class="evenrow"><td valign="top"><p>Symbol EVM</p></td><td valign="top"><p>RMS and peak EVM values per symbol (see <a class="xref" href="e4ba37db9dc0496a.htm#ID_c38c5cd8b6f10f840a00206a00c962fc-a17c8fff6b754c540a0020190052c5dc-en-US">"Symbol EVM"</a>)</p></td></tr><tr class="oddrow"><td valign="top"><p>Mod</p></td><td valign="top"><p>Modulation type (QPSK, 8PSK, 16QAM or 64QAM)</p></td></tr><tr class="evenrow"><td valign="top"><p>Power [dBm]</p></td><td valign="top"><p>Channel power, absolute</p></td></tr><tr class="oddrow"><td valign="top"><p>Power [dB]</p></td><td valign="top"><p>Channel power, relative to total power of the data parts of the signal</p></td></tr><tr class="evenrow"><td valign="top"><p>MA.shift</p><a name="kanchor62">
+</a></td><td valign="top"><p>Midamble shift</p><p>For channels, this is the shift of the associated midamble if a common or default midamble assignment is detected (see <a class="xref" href="d4e78310eeaf4b02.htm#ID_fb305502d80759a00a0020190135bbc8-817e14ba6b7549660a0020190123ea90-en-US">"Data Fields and Midambles"</a>)</p></td></tr><tr class="oddrow"><td valign="top"><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Δ</span>Mid1/2</p><a name="kanchor63">
+</a></td><td valign="top"><p>The power offset between the midamble and the sum power of its channels in data part 1 or 2, respectively.</p><p>The TD-SCDMA specifications require that the midamble and its channels must have the same power. These parameters show if a common or default midamble assignment is detected (see <a class="xref" href="d4e78310eeaf4b02.htm#ID_fb305502d80759a00a0020190135bbc8-817e14ba6b7549660a0020190123ea90-en-US">"Data Fields and Midambles"</a>).</p></td></tr></tbody></table></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

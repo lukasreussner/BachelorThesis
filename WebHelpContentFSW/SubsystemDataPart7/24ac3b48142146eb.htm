@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Remote Control Commands for Amplifier Measurements|Performing Amplifier Measurements|Retrieving Graphical Measurement Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe&lt;t&gt;[:DATA]?</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_49734d02f582e0e00a001ae7405fdea2-1f2d33dff582deec0a001ae77dfe1998-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/24ac3b48142146eb.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="9d0828df6bce4ba4.htm">Remote Control Commands for Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="7c7234e4598a4393.htm">Performing Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="70123d27d7784a13.htm">Retrieving Graphical Measurement Results</a> &gt; <span class="chm-breadcrumb">TRACe&lt;t&gt;[:DATA]?</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_49734d02f582e0e00a001ae7405fdea2-1f2d33dff582deec0a001ae77dfe1998-en-US">
+</a><span class="bold">TRACe&lt;t&gt;[:DATA]? </span>&lt;Trace&gt;<br/></div><div class="rcdescription"><p>This command queries the measurement results in the graphical result displays. Usually, the measurement results are either displayed on the y-axis (two-dimensional diagrams) or the z-axis (three-dimensional diagrams).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;t&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Query parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Trace&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>TRACE1 |</nobr> <nobr> ... |</nobr> <nobr> TRACE6</nobr><br/><p>Selects the trace to be queried.</p><p>Note that the available number of traces depends on the result display.</p><p>For example, the Magnitude Capture result display only supports TRACE1, while the Time Domain result display supports TRACE1 to TRACE6.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Return values: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Result&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>&lt;numeric value&gt;</nobr><br/><p>Values of the captured samples in chronological order.</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">TRAC:DATA TRACE1</span><br/><p>Queries the results displayed on trace 1.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Query only<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="e68ba4f571d04680.htm#ID_4ab037671024dd4b0a001ae72283af54-9479754b1024dd4b0a001ae7736bc57f-en-US">"AM/AM"</a><br/>See <a class="xref" href="f4bbe2e8a2c84387.htm#ID_c30a24fe1024fefc0a001ae7242c2978-c3a478231024fefc0a001ae74f5697d5-en-US">"AM/PM"</a><br/>See <a class="xref" href="abe5e5a30be349c2.htm#ID_19fec8919d128d0a0a001ae773967d36-efea1b5e9d128d0a0a001ae71cf69f83-en-US">"EVM vs Power"</a><br/>See <a class="xref" href="8f3017cd7b9640ac.htm#ID_b04decc81024625d0a001ae77b7e8cea-6dc00a861024625d0a001ae7315595fd-en-US">"Error Vector Spectrum"</a><br/>See <a class="xref" href="743d1a4fa28a4fa1.htm#ID_1e9c73b81025308c0a001ae747a62dda-ed2dc5911025308c0a001ae76f0c67f5-en-US">"Gain Compression"</a><br/>See <a class="xref" href="65ed487eb89c4d97.htm#ID_5725742b8902c5a00a001ae701610424-8d2374b48902c5a00a001ae70856d831-en-US">"Gain Deviation vs Time"</a><br/>See <a class="xref" href="57890c73337c404d.htm#ID_5f845a5d5d41c1fb0a001ae726447cf9-7e65b73e5d41c1fb0a001ae75a68d30f-en-US">"Vcc vs Icc"</a><br/>See <a class="xref" href="52e60d7e3503428f.htm#ID_904b2fac1001c89e0a001ae77923d3f0-189283e11001c89e0a001ae71f2f6fb2-en-US">"Magnitude Capture"</a><br/>See <a class="xref" href="a2da599ffb3048fd.htm#ID_148e97921025939d0a001ae72f1c3064-a84afa971025939d0a001ae763ad0d65-en-US">"PAE vs Input Power / PAE vs Output Power"</a><br/>See <a class="xref" href="244b18a85e814984.htm#ID_bef9faa01025b9840a001ae77a5d3f52-778e1de11025b9840a001ae77fe85f40-en-US">"PAE vs Time"</a><br/>See <a class="xref" href="0e155a0388f141f0.htm#ID_782366898902f7ad0a001ae719e1b6b8-c4ddcf048902f7ad0a001ae731a2f74e-en-US">"Phase Deviation vs Time"</a><br/>See <a class="xref" href="3b5e6085e51c4b51.htm#ID_ef63b71a1023d5cb0a001ae717da889d-d6e9c5fa1023d5cb0a001ae70c3f07a7-en-US">"Power vs Time"</a><br/>See <a class="xref" href="1fb5bd9e587e4022.htm#ID_61fc90a41024b2050a001ae754f1301b-ce9bf7521024b2050a001ae7268d682e-en-US">"Raw EVM"</a><br/>See <a class="xref" href="c531737cb2d84337.htm#ID_4a95d09110242d620a001ae77421aabf-8d8145c910242d620a001ae74e511d29-en-US">"Spectrum FFT"</a><br/>See <a class="xref" href="18479d2beecd43a9.htm#ID_2af17e53102401310a001ae71d6c7313-deaa1e48102401310a001ae73af6f37c-en-US">"Time Domain"</a><br/>See <a class="xref" href="4ef293425e9340e0.htm#ID_b9456dedf2d6a7bb0a001ae779862fa7-e030854df2d6a7bb0a001ae758a2bb45-en-US">"Vcc vs Power / Icc vs Power"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

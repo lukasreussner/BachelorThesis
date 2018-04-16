@@ -1,0 +1,73 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Annex|Reference|I/Q Data File Format (iq-tar)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>I/Q Data Binary File</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e6ac4cf5c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;ID_53f6d72b8fd9e06c0a00201901c2e161-2e8d3b527ba899de0a00206a010acc15-en-US;ID_ea54cdec8fd9e06c0a002019015ab270-2e8d3b527ba899de0a00206a010acc15-en-US;ID_657461918fd9e06c0a0020190178ee53-2e8d3b527ba899de0a00206a010acc15-en-US;ID_e6ac4cf7c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;ID_c1466f4d8fc6d1dc0a002019010ed4c9-2e8d3b527ba899de0a00206a010acc15-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="d430212e73026.htm">Annex</a> &gt; <a class="chm-breadcrumb" href="e6033736b61947f8.htm">Reference</a> &gt; <a class="chm-breadcrumb" href="093e11648f9c46e1.htm">I/Q Data File Format (iq-tar)</a> &gt; <span class="chm-breadcrumb">I/Q Data Binary File</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor947">
+</a><a name="kanchor948">
+</a><a name="kanchor949">
+</a><div class="chm-chaptertitle">I/Q Data Binary File</div><p>The I/Q data is saved in binary format according to the format and data type specified in the XML file (see <span class="command">Format</span> element and <span class="command">DataType</span> element). To allow reading and writing of streamed I/Q data, all data is interleaved, i.e. complex values are interleaved pairs of I and Q values and multi-channel signals contain interleaved (complex) samples for channel 0, channel 1, channel 2 etc. If the <span class="command">NumberOfChannels</span> element is not defined, one channel is presumed.</p><div class="block"><div class="subtitle"><a name="ID_53f6d72b8fd9e06c0a00201901c2e161-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Example: Element order for real data (1 channel)</div></div><pre class="verbatim" xml:space="preserve">I[0],                         // Real sample 0
+I[1],                         // Real sample 1
+I[2],                         // Real sample 2
+...</pre><div class="block"><div class="subtitle"><a name="ID_ea54cdec8fd9e06c0a002019015ab270-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Example: Element order for complex cartesian data (1 channel)</div></div><pre class="verbatim" xml:space="preserve">I[0], Q[0],                   // Real and imaginary part of complex sample 0
+I[1], Q[1],                   // Real and imaginary part of complex sample 1
+I[2], Q[2],                   // Real and imaginary part of complex sample 2
+...</pre><div class="block"><div class="subtitle"><a name="ID_657461918fd9e06c0a0020190178ee53-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Example: Element order for complex polar data (1 channel)</div></div><pre class="verbatim" xml:space="preserve">Mag[0], Phi[0],               // Magnitude and phase part of complex sample 0
+Mag[1], Phi[1],               // Magnitude and phase part of complex sample 1
+Mag[2], Phi[2],               // Magnitude and phase part of complex sample 2
+...</pre><div class="block"><span class="bold"><a name="ID_e6ac4cf7c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Example: Element order for complex cartesian data (3 channels)</span><p>Complex data: I[channel no][time index], Q[channel no][time index]</p></div><pre class="verbatim" xml:space="preserve">I[0][0], Q[0][0],            // Channel 0, Complex sample 0
+I[1][0], Q[1][0],            // Channel 1, Complex sample 0
+I[2][0], Q[2][0],            // Channel 2, Complex sample 0
+
+I[0][1], Q[0][1],            // Channel 0, Complex sample 1
+I[1][1], Q[1][1],            // Channel 1, Complex sample 1
+I[2][1], Q[2][1],            // Channel 2, Complex sample 1
+
+I[0][2], Q[0][2],            // Channel 0, Complex sample 2
+I[1][2], Q[1][2],            // Channel 1, Complex sample 2
+I[2][2], Q[2][2],            // Channel 2, Complex sample 2
+...</pre><div class="block"><span class="bold"><a name="ID_c1466f4d8fc6d1dc0a002019010ed4c9-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Example: Element order for complex cartesian data (1 channel)</span><p>This example demonstrates how to store complex cartesian data in float32 format using MATLAB<sup>®</sup>.</p></div><pre class="verbatim" xml:space="preserve">% Save vector of complex cartesian I/Q data, i.e. iqiqiq...
+N = 100
+iq = randn(1,N)+1j*randn(1,N)
+fid = fopen('xyz.complex.float32','w');
+for k=1:length(iq)
+  fwrite(fid,single(real(iq(k))),'float32');
+  fwrite(fid,single(imag(iq(k))),'float32');
+end
+fclose(fid)</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

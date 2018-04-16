@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Configuration|Demodulation|AF Filter" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		High Pass
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodHighPassFilter">
+</meta>
+        <meta name="topic-id" value="677">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5955b74b225e33eb0a00206a00e17fea-68bcdd5e1c234fc90a001ae7538169ef-en-US;shiv_FSV_K7_0725-68bcdd5e1c234fc90a001ae7538169ef-en-US;ID_4c73d3862a6603ea0a00201900e611e6-68bcdd5e1c234fc90a001ae7538169ef-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="adce0676b09b40a7.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2441272cdb0a46f0.htm">Demodulation</a> &gt; <a class="chm-breadcrumb" href="8dbcd67854e44953.htm">AF Filter</a> &gt; <span class="chm-breadcrumb">High Pass</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor344">
+</a><a name="kanchor345">
+</a><a name="kanchor346">
+</a><div class="function_heading"><a name="ID_5955b74b225e33eb0a00206a00e17fea-68bcdd5e1c234fc90a001ae7538169ef-en-US">
+</a><span style="font-weight: bold">High Pass</span></div><p>Defines a high pass filter with the given limit to separate the DC component. The filters are indicated by the 3 dB cutoff frequency. The 50 Hz and 300 Hz filters are designed as 2nd-order Butterworth filter (12 dB/octave). The 20 Hz filter is designed as 3rd-order Butterworth filter (18 dB/octave).</p><p>The high pass filters are active in the following demodulation bandwidth range:</p><div class="block"><a name="shiv_FSV_K7_0725-68bcdd5e1c234fc90a001ae7538169ef-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow" valign="top"><td valign="top"><p>None</p></td><td valign="top"><p>No AF Filter used (default)</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p>20 Hz</p></td><td valign="top"><p>100 Hz <span style="font-family: arial; font-size: 10.5pt">≤</span> demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≤</span> 1.6 MHz</p></td></tr><tr class="oddrow" valign="top"><td valign="top"><p>50 Hz:</p></td><td valign="top"><p>200 Hz <span style="font-family: arial; font-size: 10.5pt">≤</span> demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≤</span> 3 MHz</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p>300 Hz:</p></td><td valign="top"><p>800 Hz <span style="font-family: arial; font-size: 10.5pt">≤</span> demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≤</span> 8 MHz</p></td></tr><tr class="oddrow" valign="top"><td valign="top"><p>Manual:</p></td><td valign="top"><p>A high pass filter with the manually defined frequency is used.</p></td></tr></tbody><tfoot>
+</tfoot></table></div><p><b><a name="ID_4c73d3862a6603ea0a00201900e611e6-68bcdd5e1c234fc90a001ae7538169ef-en-US">
+</a>Note:</b> If online demodulation output is active, the predefined (fixed) filters are not available. In this case, the frequency for the high pass filter must be defined manually (see also <a class="xref" href="beb2bf834a5f4dfd.htm#ID_437f7b679f0572a10a00206a004147e2-79d1c996a03c14ac0a00201901630d44-en-US">"Analog Demodulation Output Settings"</a>).<br/>If a filter was already configured when online demodulation output is activated, it is replaced by a manual filter that provides corresponding results, if possible.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="89f5f591340a4cd2.htm#ID_658cfacb453e52b20a00206a01255af8-32c065cc453e52b20a00206a00630ce5-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FILTer&lt;n&gt;:</nobr>​<nobr>HPASs[:</nobr>​<nobr>STATe]</nobr></a></p><p><a class="xref" href="804a13514f7e4cf6.htm#ID_4b2c499b4540206b0a00206a005bc993-8bee46e94540206b0a00206a01b805d5-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FILTer&lt;n&gt;:</nobr>​<nobr>HPASs:</nobr>​<nobr>FREQuency[:</nobr>​<nobr>ABSolute]</nobr></a></p><p><a class="xref" href="c42f3547729944ca.htm#ID_4b2c499b4540206b0a00206a005bc993-01ffa77202b574220a002019008b3189-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]FILTer&lt;n&gt;:</nobr>​<nobr>HPASs:</nobr>​<nobr>FREQuency:</nobr>​<nobr>MANual</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

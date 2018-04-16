@@ -1,0 +1,115 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Configuring I/Q Analyzer Measurements|Configuring the Data Input and Output|External Generator Control" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example for External Generator Control</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_77cc43c865a8cecb0a00201900b58e86-26c2a95e65a8cecb0a00201901a000cd-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="245b36a17e924f58.htm">Configuring I/Q Analyzer Measurements</a> &gt; <a class="chm-breadcrumb" href="72302c2a8af340cf.htm">Configuring the Data Input and Output</a> &gt; <a class="chm-breadcrumb" href="e3ea46ec7eba47a2.htm">External Generator Control</a> &gt; <span class="chm-breadcrumb">Programming Example for External Generator Control</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1044">
+</a><div class="chm-chaptertitle">Programming Example for External Generator Control</div><p>The following example demonstrates how to work with an external generator in a remote environment.</p><p>It assumes a signal generator of the type SMW06 is connected to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, including TTL synchronization, as described in <a class="xref" href="ff6879da7e6844c3.htm#shiv_4a_instrument_functions_08665-460fc0b33bf3b3540a0020190086cf8b-en-US">"External Generator Connections"</a>.</p><pre class="verbatim" xml:space="preserve">//--------------Preparing the instrument -----------
+
+//Reset the instrument
+*RST
+
+//Set the frequency span.
+SENS:FREQ:STAR 10HZ
+SENS:FREQ:STOP 1MHZ
+
+//--------------Configuring the interface -----------
+
+//Set the generator type to SMW06 with a frequency range of 100 kHz to 4GHz
+SYST:COMM:RDEV:GEN:TYPE 'SMW06'
+
+//Set the interface used to the GPIB address 28
+SYST:COMM:RDEV:GEN:INT GPIB
+SYST:COMM:GPIB:RDEV:GEN:ADDR 28
+
+//Activate the use of TTL synchronization to optimize measurement speed
+SYST:COMM:RDEV:GEN:LINK TTL
+
+//Activate the use of the external reference frequency at 10 MHz on the generator
+SOUR:EXT:ROSC EXT
+
+//--------------Configuring the calibration measurement -----------
+
+//Activate external generator control.
+SOUR:EXT:STAT ON
+//Set the generator output level to -10 dBm. 
+SOUR:EXT:POW -10DBM
+//Set the frequency coupling to automatic
+SOUR:EXT:FREQ:COUP:STAT ON
+
+//--------------Configuring the generator frequency range -----------
+
+//Define a series of frequencies (one for each sweep point) based on the current 
+//frequency at the RF input of the analyzer; the generator frequency is half the
+//frequency of the analyzer, with an offset of 100 kHz;
+// analyzer start:            10 Hz
+// analyzer stop:             1 MHz
+// analyzer span:             999.99 KHz
+// generator frequency start: 100.005 KHz
+// generator frequency stop:  600 KHz
+// generator span:            499.995 KHz
+
+SOUR:EXT:FREQ:FACT:NUM 1
+SOUR:EXT:FREQ:FACT:DEN 2
+SOUR:EXT:FREQ:OFFS 100KHZ
+
+//--------------Performing the calibration measurement -----------
+
+//Perform a transmission measurement with direct connection between the generator
+//and the analyzer and wait till the end
+SENS:CORR:METH TRAN
+SENS:CORR:COLL:ACQ THR; *WAI
+
+//--------------Retrieving the calibration trace results -----------
+
+//Retrieve the measured frequencies (10 Hz - 600 kHz)
+TRAC:DATA:X? TRACE1
+
+//Retrieve the measured power levels; = 0 between 10 Hz and 100 kHz (below 
+//generator minimum frequency); nominal -5dBm as of 100 kHz;
+TRAC:DATA? TRACE1
+
+//--------------Normalizing the calibration trace results -----------
+
+//Retrieve the normalized power levels (= power offsets from calibration results)
+//Should be 0 for all sweep points directly after calibration
+SENS:CORR:STAT ON
+TRAC:DATA? TRACE1
+
+//--------------Changing the display of the calibration results -----------
+//Shift the reference line so the -5 dB level is displayed in the center
+DISP:TRAC:Y:SCAL:RVAL -5DB
+DISP:TRAC:Y:SCAL:RPOS 50PCT
+
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

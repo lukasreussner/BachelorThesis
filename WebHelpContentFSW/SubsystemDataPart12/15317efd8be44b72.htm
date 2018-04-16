@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurements and Result Displays|Result Types in VSA" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Magnitude Absolute</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdCapBufMagAbs">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdMeasRefMagAbs">
+</meta>
+        <meta name="topic-id" value="37">
+</meta>
+        <meta name="topic-id" value="39">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_77226ae09767b49b0a00206a019f37a6-872c63c6410c614d0a00206a016aa6c2-en-US;ID_fafe65f8d7b9a60c0a710a92015607b7-872c63c6410c614d0a00206a016aa6c2-en-US;ID_fb79e05188f803bb0a00206a013dc1b2-872c63c6410c614d0a00206a016aa6c2-en-US;ID_b793e0f826e6b39d0a00206a01f747e2-872c63c6410c614d0a00206a016aa6c2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="430c648a605d4470.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="0b21c5a495ee4a29.htm">Result Types in VSA</a> &gt; <span class="chm-breadcrumb">Magnitude Absolute</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor99">
+</a><a name="kanchor100">
+</a><div class="chm-chaptertitle">Magnitude Absolute</div><a name="kanchor101">
+</a><p>Magnitude of the source signal in an individual capture buffer <em>range</em> (max. 256,000 samples).</p><p>If more than 256,000 samples are captured,  overlapping result ranges with a size of 256,000 samples each are  created. Only one range at a time can be displayed in the Magnitude Absolute result display. </p><p>To scroll through the samples in different ranges, use the "Sweep &gt; Select Result Rng" function or - directly after a sweep - turn the rotary knob. When you scroll in the diagram, the right edge of the current range or the selected result range is displayed in the center of the next range, if possible.</p><p>To display the entire capture buffer with all ranges in one diagram, use the <a class="xref" href="a98d3526e7b3451b.htm#ID_1c9607c164a211e2913ceec678f14989-872c63c6410c614d0a00206a016aa6c2-en-US">"Magnitude Overview Absolute"</a> result display.</p><p>Note that trace modes that calculate results for several sweeps (Average, MinHold, MaxHold) are applied to the individual ranges and thus may not provide useful results in this result display.</p><p>For more information on result ranges see <a class="xref" href="9adaf6b700e94674.htm#ID_a56f7a4f6786b45c0a00201901969e40-184c8906411153460a00206a01532735-en-US">"Capture Buffer Display"</a>.</p><p>In the Magnitude Absolute result display, the actual signal amplitude is displayed:</p><div class="block" id="ID_fafe65f8d7b9a60c0a710a92015607b7-872c63c6410c614d0a00206a016aa6c2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgafdc6dfd1ee4fb490a00206a0061d6f0_1_--_--_PNG96.png" alt="" title=""/></div></div><p>with t=n<span style="font-family: Arial Unicode MS; font-size: 10.5pt">·</span>T<sub>D</sub> and</p><p>T<sub>D</sub>=the duration of one sampling period at the defined sample rate defined by the display points per symbol parameter (see <a class="xref" href="441712004bf74f9b.htm#ID_4df69d1f0cdc6f870a00206a00c5fd56-3c55dba5410ce08e0a00206a010226ec-en-US">"Display Points/Sym"</a>)</p><div class="block"><div class="listintro">Available for source types:</div><ul class="list"><li value="1">Capture Buffer</li><li value="2">Meas &amp; Ref Signal<br/>(Displays the actual signal amplitude for the selected evaluation range)</li></ul></div><div class="block" id="ID_fb79e05188f803bb0a00206a013dc1b2-872c63c6410c614d0a00206a016aa6c2-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge632d525538da30c0a002019019fa756_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Result display "Magnitude Absolute" for capture buffer data</div></div><p>For signals with a user-defined frame structure (see <a class="xref" href="f9bac06cced642a0.htm#ID_29558a34758145270a7c00a001898de7-184c8906411153460a00206a01532735-en-US">"Multi-Modulation Analysis (R&amp;S FSW-K70M)"</a>), and based on the "Meas and Ref" signal, the individual subframes are indicated by vertical green lines.</p><div class="block"><div class="subtitle"><a name="ID_b793e0f826e6b39d0a00206a01f747e2-872c63c6410c614d0a00206a016aa6c2-en-US">
+</a>Remote commands:</div></div><p><span class="command">LAY:ADD? '1',BEL,CBUF</span></p><p>To define the required source type (see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a>)</p><p><span class="command">CALC:FORM MAGN</span></p><p>To define the result type (see <a class="xref" href="1521f543fefc41db.htm#ID_ff06f60045a7189f0a00206a01f4b460-91cc306f45a710ee0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>FORMat</nobr></a>)</p><p><span class="command">TRAC:DATA? TRACE1</span></p><p>To query the trace results (see <a class="xref" href="85cf7a9a1e8a4831.htm#ID_5a71ecfa45ba2f470a00206a01a04c30-4a7ea8b245ba23dd0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> and <a class="xref" href="78c2b9ba2c834146.htm#ID_e43b749d38c64e410a001ae7308b03c0-00d6486d389f6b7d0a001ae7386bb539-en-US">"Capture Buffer Results"</a>)</p><p>To query the start of the result range:</p><p><a class="xref" href="20ce7cf1bfbc4e04.htm#ID_fa9f404438836c860a001ae72f676dea-b3d976aa38836b5e0a001ae709e764d3-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>SEARch:</nobr>​<nobr>MBURst:</nobr>​<nobr>STARt[:</nobr>​<nobr>SYMBols]?</nobr></a></p><p><a class="xref" href="219244060f5340a4.htm#ID_fa9f404438836c860a001ae72f676dea-fff7d80c1888ce5f0a001ae703ff04b7-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>SEARch:</nobr>​<nobr>MBURst:</nobr>​<nobr>STARt:</nobr>​<nobr>SAMPles?</nobr></a></p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

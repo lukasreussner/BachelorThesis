@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Optimizing and Troubleshooting the Measurement</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_29b44739f055081a0a00206a008e4c16-a2dfa63cf055081a0a00206a00255455-en-US;ID_ab55c98c41ce11e1b1a3e24820807b80-a2dfa63cf055081a0a00206a00255455-en-US;ID_64503ae7f0c32f060a00206a00f5af0b-a2dfa63cf055081a0a00206a00255455-en-US;ID_c9d472fcf0c32f060a00206a003dd60b-a2dfa63cf055081a0a00206a00255455-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <span class="chm-breadcrumb">Optimizing and Troubleshooting the Measurement</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor622">
+</a><div class="chm-chaptertitle">Optimizing and Troubleshooting the Measurement</div><p>If the results do not meet your expectations, consider the following notes and tips to optimize the measurement.</p><div class="block"><div class="subtitle"><a name="ID_ab55c98c41ce11e1b1a3e24820807b80-a2dfa63cf055081a0a00206a00255455-en-US">
+</a>Determining the demodulation bandwidth</div></div><a name="kanchor623">
+</a><a name="kanchor624">
+</a><p>A frequent cause for measurement errors and false results is an <b>incorrectly defined demodulation bandwidth</b> (DBW).</p><p>If the DBW is too large, the actual signal takes up only a small part of the demodulated range. That means that any noise or additional signal parts may be included in the measured results, which are then false.</p><p>On the other hand, if the DBW is too small, part of the signal is cut off and thus not included in the calculation of the results.</p><p>An easy way to determine the required DBW is to display the RF spectrum of the input signal. If the entire signal is displayed there and takes up most of the diagram width, the DBW should be appropriate.</p><p>This procedure is demonstrated in the measurement example described in <a class="xref" href="afbe0b7a38164dba.htm#shiv_FSV_K73_0040-cb16e0f0eabd36cf0a00206a011bee14-en-US">"Measurement Example: Demodulating an FM Signal"</a>.</p><p>For further recommendations on finding the correct demodulation bandwidth see <a class="xref" href="4120386a05b54b38.htm#shiv_FSV_K7_0107-c0c25bc977ad403d0a00206a000e6bd0-en-US">"Demodulation Bandwidth"</a>.</p><div class="block"><div class="subtitle"><a name="ID_64503ae7f0c32f060a00206a00f5af0b-a2dfa63cf055081a0a00206a00255455-en-US">
+</a>Adjusting the displayed span</div></div><a name="kanchor625">
+</a><a name="kanchor626">
+</a><p>Be aware that the span of the RF Spectrum display is not automatically increased for a wider DBW, since it may be useful to display only a small range from the demodulated bandwidth. However, this means the RF spectrum may not show the entire demodulated bandwidth. In this case you must increase the span manually to show the entire signal.</p><div class="block"><div class="subtitle"><a name="ID_c9d472fcf0c32f060a00206a003dd60b-a2dfa63cf055081a0a00206a00255455-en-US">
+</a>Determining the SINAD and THD</div></div><a name="kanchor627">
+</a><a name="kanchor628">
+</a><a name="kanchor629">
+</a><a name="kanchor630">
+</a><p>The signal-to-noise-and-distortion ratio (SINAD) and the total harmonic distortion (THD) of the demodulated signal are a good indicator of the signal quality sent by the DUT. Both values are calculated inside the AF spectrum span and thus only if an AF spectrum window is displayed. If either value deviates strongly from the expected result, make sure the demodulation bandwidth is defined correctly (see <a class="xref" href="#ID_ab55c98c41ce11e1b1a3e24820807b80-a2dfa63cf055081a0a00206a00255455-en-US">"Determining the demodulation bandwidth"</a>).</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Annex|Predefined Measurement and Tx Filters" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Filters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_bc2df222a2fcba760a00206a000eeb87-1a3317aea2f40dec0a00206a019a82ca-en-US;ID_276e5c108ba948950a710a31002901a0-1a3317aea2f40dec0a00206a019a82ca-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="d1017492e81377.htm">Annex</a> &gt; <a class="chm-breadcrumb" href="01a0bcfe5c404d60.htm">Predefined Measurement and Tx Filters</a> &gt; <span class="chm-breadcrumb">Measurement Filters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1205">
+</a><a name="kanchor1206">
+</a><div class="chm-chaptertitle">Measurement Filters</div><p>The most frequently required measurement filters are predefined in the VSA application.</p><div class="block"><a name="ID_276e5c108ba948950a710a31002901a0-1a3317aea2f40dec0a00206a019a82ca-en-US">
+</a><a name="kanchor1207">
+</a><span class="table-caption">Overview of predefined measurement filters</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>EDGE NSR</p></td><td valign="top"><p>Measurement filter required for the "EDGE, Normal Symbol Rate" standard. (see 3GPP TS 45.005, chapter 4.6 Modulation Accuracy). The resulting system is NOT inter-symbol interference free.</p></td></tr><tr class="evenrow"><td valign="top"><p>EDGE HSR (Narrow Pulse)</p></td><td valign="top"><p>Measurement filter required for the "EDGE, High Symbol Rate, Narrow Pulse" standard.</p></td></tr><tr class="oddrow"><td valign="top"><p>EDGE HSR (Wide Pulse)</p></td><td valign="top"><p>Measurement filter required for the "EDGE, High Symbol Rate, Wide Pulse" standard.</p></td></tr><tr class="evenrow"><td valign="top"><p>Gauss</p></td><td valign="top"><p>Classic Gauss filter with an adjustable BT</p></td></tr><tr class="oddrow"><td valign="top"><p>Low ISI Meas Filter</p></td><td valign="top"><p>Measurement filter implemented to retain a low intersymbol interference. Best suited for eye diagrams or I/Q vector diagrams. Not necessarily suited for EVM evaluation due to amplification in the pass band.</p><p>(Not available for SOQPSK modulated signals. If selected, the used filter does not provide low-ISI results!)</p></td></tr><tr class="evenrow"><td valign="top"><p>Low Pass (Narrow)</p></td><td valign="top"><p>Pass band up to F<sub>symbol</sub>/2</p><p>Stop band starts at F<sub>symbol</sub> (-40dB)</p></td></tr><tr class="oddrow"><td valign="top"><p>Low Pass (Wide)</p></td><td valign="top"><p>Pass band up to F<sub>symbol</sub></p><p>Stop band starts at 1.5*F<sub>symbol</sub> (-40dB)</p></td></tr><tr class="evenrow"><td valign="top"><p>Rectangular</p></td><td valign="top"><p>Rectangular filter in the time domain with a length of 1 symbol period; integrate and dump effect</p></td></tr><tr class="oddrow"><td valign="top"><p>RRC</p></td><td valign="top"><p>Root Raised Cosine Filter. The roll-off parameter "Alpha" is set according to the Transmit filter if the "Auto (according to Transmit filter)" option is enabled (see <a class="xref" href="ce7e40db6b48475a.htm#ID_732a560107f6f2e60a710a31015d2461-98ce8ff6410963710a00206a00a7855c-en-US">"Using the Transmit Filter as a Measurement Filter (Auto)"</a>). Otherwise it must be set manually.</p><p>If the Transmit filter is also a Root Raised Cosine filter with the same roll-off parameter, the resulting system is inter-symbol interference free.</p></td></tr><tr class="evenrow"><td valign="top"><p>USER</p></td><td valign="top"><p>User-defined filter.</p><p>Define the filter using the <a class="xref" href="5c4bbc5a39e44877.htm#ID_dcd80f55d669fcb00a710a3101c55da3-98ce8ff6410963710a00206a00a7855c-en-US">"Load User Filter"</a> function or the <a class="xref" href="d1017492e68038.htm#ID_0e4f17f545b598fa0a00206a009aa75e-c97225af45b58e5b0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>MFILter:</nobr>​<nobr>USER</nobr></a> command.</p><p>For details see <a class="xref" href="85b5dd92f4a0488a.htm#ID_03e45dc646711d000a00206a01f94c70-d0ec2a1d410ee47b0a00206a013e80e3-en-US">"How to Select User-Defined Filters"</a>.</p></td></tr><tr class="oddrow"><td valign="top"><p>NONE</p></td><td valign="top"><p>No measurement filter is used.</p></td></tr></tbody></table></div><p>The frequency response of the available standard-specific measurement filters is shown in <a class="xref" href="37f0a1696fa24e4d.htm#ID_76c17d6d48bd12c60a00206a0096d06a-5a86f95489fa87f80a00206a0173ee7e-en-US">"Measurement Filter"</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Configuring VSA|Configuring Bursts and Patterns|Configuring Patterns" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]DDEMod:SEARch:SYNC:DATA</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e8845f5045b43fa50a00206a00ab4061-50a4a43945b438040a00206a014baccb-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="9dfa789013e942ca.htm">Configuring VSA</a> &gt; <a class="chm-breadcrumb" href="1063efce722d41c5.htm">Configuring Bursts and Patterns</a> &gt; <a class="chm-breadcrumb" href="7a4fa0080d784195.htm">Configuring Patterns</a> &gt; <span class="chm-breadcrumb">[SENSe:]DDEMod:SEARch:SYNC:DATA</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_e8845f5045b43fa50a00206a00ab4061-50a4a43945b438040a00206a014baccb-en-US">
+</a><span class="bold">[SENSe:]DDEMod:SEARch:SYNC:DATA </span>&lt;Data&gt;<br/></div><div class="rcdescription"><p>This command defines the sync sequence of a sync pattern. The pattern must have been selected before using <a class="xref" href="d1017492e66548.htm#ID_88a11daa45b460f80a00206a0144775a-dbbf48d145b458ba0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>SEARch:</nobr>​<nobr>SYNC:</nobr>​<nobr>NAME</nobr></a>.</p><p><b>Important:</b> The value range of a symbol depends on the degree of modulation,e.g. for an 8PSK modulation the value range is from 0 to 7. The degree of modulation belongs to the pattern and is set using the <span class="command">DDEM:SEAR:SYNC:NST</span> command (see <a class="xref" href="2803f45a00974585.htm#ID_9c02ec2c45b46bb60a00206a016f48f1-df7a6ca945b463780a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DDEMod:</nobr>​<nobr>SEARch:</nobr>​<nobr>SYNC:</nobr>​<nobr>NSTate</nobr></a>).</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Setting parameters: </span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Data&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>string</nobr><br/><p>Four values represent a symbol (hexadecimal format). The value range of a symbol depends on the degree of modulation.</p><p>With a degree of modulation of 4, all symbols have a value range of: 0000, 0001, 0002, 0003</p><p>With a degree of modulation of 8:</p><p>0000, 0001, 0002, 0003, 0004, 0005, 0006, 0007</p></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">DDEM:SEAR:SYNC:DATA '00010000FFFF'</span><br/><p>Defines the pattern data.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="3010c5462d0d4005.htm#ID_f7248af7155d5b0a0a00206a004d606f-cd97fd15ad6093a50a00206a01f17c35-en-US">"Measurement Example 3: User-Defined Pattern Search and Limit Check"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="22c6567ba662431f.htm#ID_120ea7c5a1163d070a710a310141bf9f-98ce8ff6410963710a00206a00a7855c-en-US">"Edit"</a><br/>See <a class="xref" href="bc9a7472b41a4373.htm#ID_fc143c42a1163bfd0a710a310138554d-98ce8ff6410963710a00206a00a7855c-en-US">"New"</a><br/>See <a class="xref" href="c559b6c17bb04012.htm#ID_2555ea21a12f01aa0a710a310029b854-98ce8ff6410963710a00206a00a7855c-en-US">"Symbols"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

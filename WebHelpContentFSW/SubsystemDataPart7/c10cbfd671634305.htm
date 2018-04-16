@@ -1,0 +1,51 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Configuring Amplifier Measurements|Sweep Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Averaging the I/Q data</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eETSkIdAverageCount">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdIQAvgEnable">
+</meta>
+        <meta name="topic-keyword" value="eETSkIdMovingAverage">
+</meta>
+        <meta name="topic-id" value="382">
+</meta>
+        <meta name="topic-id" value="384">
+</meta>
+        <meta name="topic-id" value="386">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b6674e58893e82320a001ae77dda3357-61d3b202893e82320a001ae70060d54e-en-US;ID_99221883272b22a30a001ae739946032-61d3b202893e82320a001ae70060d54e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/c10cbfd671634305.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="514ce2c6787d4307.htm">Configuring Amplifier Measurements</a> &gt; <a class="chm-breadcrumb" href="9cb539d566ca467d.htm">Sweep Configuration</a> &gt; <span class="chm-breadcrumb">Averaging the I/Q data</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_b6674e58893e82320a001ae77dda3357-61d3b202893e82320a001ae70060d54e-en-US">
+</a>Averaging the I/Q data</div><p>Averaging the I/Q data over several data captures can be a useful feature, for example to suppress noise.</p><div class="block"><div class="listintro-in-compact-list">Noise suppression is useful in various cases, for example:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">To improve the display of effects like non-linearities or the frequency response.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">To improve the quality of DPD calculation.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">To improve the quality of equalizer training.</li></ul></div><p>When you turn on averaging ("Enable I/Q Averaging"), you can define the number of single data captures the application uses to average the data ("Average Count"). The amount of data captured during a single data capture is defined by the <a class="xref" href="15390a709b4b47e0.htm#ID_8ca0200fd2e1b3850a001ae72bcb46a9-9390fdd5d2e1b3850a001ae72e8c17b5-en-US">capture length</a>.</p><p>By default, the average is reset when the number of single data captures defined by the average count is done.</p><div class="block"><span class="bold"><a name="ID_99221883272b22a30a001ae739946032-61d3b202893e82320a001ae70060d54e-en-US">
+</a>Example: </span><p>When you define an average count of 10, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW captures the signal 10 times and then calculates the average over those 10 captures. After that, it resets the results, captures the signal again 10 times and calculates the average etc.</p></div><p>A "Moving Average" on the other hand does not reset the results when the average count is through. Instead, it continues to average the data. The moving average setting only has an effect in <a class="xref" href="be548b01d4724f4c.htm#ID_d748d5b571b39b590a00206a015c44f5-e0b50daa71b5ad3f0a00206a002b01a4-en-US">continuous sweep mode</a>.</p><p>Note that the moving average is automatically disabled during direct DPD calculation.</p><p>I/Q averaging is only possible for synchronized parts of the captured signal, because it only makes sense if the same samples in the I/Q data stream are averaged. Therefore, make sure that the measurement is synchronized. Otherwise, the results would be invalid.</p>Remote command: <div class="rcclist_right"><p>State: <a class="xref" href="06738a75e6194629.htm#ID_14dc81238ce7161e0a001ae705784377-582bd9358ce715630a001ae750953149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>IQAVg[:</nobr>​<nobr>STATe]</nobr></a></p><p>Count: <a class="xref" href="220874217894472e.htm#ID_4d91e5508ce717470a001ae76d5638c0-dd3c63a78ce7168b0a001ae750953149-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>IQAVg:</nobr>​<nobr>COUNt</nobr></a></p><p>Moving average: <a class="xref" href="a4568653c0b44725.htm#ID_d3897232275954dc0a001ae713a0470e-0e1ead02275954110a001ae7535d0c59-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>IQAVg:</nobr>​<nobr>MAVerage[:</nobr>​<nobr>STATe]</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

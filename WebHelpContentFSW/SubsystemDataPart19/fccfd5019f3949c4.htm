@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Recognized vs. Analyzed PPDUs</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3b26bc8e7e0ed6520a710a3101c5a622-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_41c3a87de647c3650a001ae70275ef91-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Recognized vs. Analyzed PPDUs</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor244">
+</a><a name="kanchor245">
+</a><a name="kanchor246">
+</a><div class="chm-chaptertitle">Recognized vs. Analyzed PPDUs</div><p>A PPDU in a WLAN signal consists of the following parts:</p><p>(For IEEE 802.11n see also <a class="xref" href="9e89f4420acd4901.htm#ID_096db8e2a089647e0a00206a00ff6913-a152f5e2a64dafbf0a002019017fdb4d-en-US">Figure "Training fields (TF) in the preamble of PPDUs in  IEEE 802.11n standard"</a>)</p><div class="block"><ul class="list"><li value="1"><b>Preamble</b><br/>Information required to recognize the PPDU within the signal, for example training fields</li><li value="2"><b>Signal Field</b><br/>Information on the modulation used for transmission of the useful data</li><li value="3"><b>Payload</b><br/>The useful data</li></ul></div><p>During signal processing, PPDUs are recognized by their preamble symbols. The recognized PPDUs and the information on the modulation used for transmission of the useful data are shown in the "Signal Field" result display (see <a class="xref" href="ad9c6922df474d0c.htm#ID_a222705a846311e1b96ada088f942819-742b73889d5e5f610a001ae77d4ca6d8-en-US">"Signal Field"</a>).</p><p>Not all of the recognized PPDUs are analyzed. Some are dismissed because the PPDU parameters do not match the user-defined demodulation settings, which act as a <em>logical filter</em> (see also <a class="xref" href="244ca84f50394369.htm#ID_ccdebc03aa7d5a8c0a0020190135639d-a152f5e2a64dafbf0a002019017fdb4d-en-US">"Demodulation Parameters - Logical Filters"</a>). Others may be dismissed because they contain too many or too few payload symbols (as defined by the user), or due to other irregularities or inconsistency.</p><p>Dismissed PPDUs are indicated as such in the "Signal Field" result display (highlighted red, with a reason for dismissal).</p><p>PPDUs with detected inconsistencies are indicated by orange highlighting and a warning in the "Signal Field" result display, but are nevertheless analyzed and included in statistical and global evaluations.</p><p>The remaining correct PPDUs are highlighted green in the "Magnitude Capture" buffer and "Signal Field" result displays and analyzed according to the current user settings.</p><div class="block"><span class="bold"><a name="ID_41c3a87de647c3650a001ae70275ef91-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a>Example: </span><p>The evaluation range is configured to take the "Source of Payload Length" from the signal field. If the power period detected for a PPDU deviates from the PPDU length coded in the signal field, a warning is assigned to this PPDU. The decoded signal field length is used to analyze the PPDU. The decoded and measured PPDU length together with the appropriate information is shown in the "Signal Field" result display.</p></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

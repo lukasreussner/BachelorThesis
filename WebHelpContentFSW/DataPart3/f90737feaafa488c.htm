@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Troubleshooting" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Error Information</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e43383cecba46eb60a00206a00aa41c4-683739ddcba46eb60a00206a01c3c9f9-en-US;shiv_3_manual_operation_0280-683739ddcba46eb60a00206a01c3c9f9-en-US;ID_b73d4163679ebbd20a002019013ae2ce-683739ddcba46eb60a00206a01c3c9f9-en-US;ID_a065deedf03111e18bde926665b89763-683739ddcba46eb60a00206a01c3c9f9-en-US;shiv_3_manual_operation_0288-683739ddcba46eb60a00206a01c3c9f9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="b96a9b105eb7440f.htm">Getting Started</a> &gt; <a class="chm-breadcrumb" href="afcb8a1106ff4359.htm">Operating the Instrument</a> &gt; <a class="chm-breadcrumb" href="6215d6624ea24504.htm">Understanding the Display Information</a> &gt; <span class="chm-breadcrumb">Error Information</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Error Information</div><a name="kanchor232">
+</a><a name="kanchor233">
+</a><p>If errors or irregularities are detected, a keyword and an error message, if available, are displayed in the status bar.</p><div class="block" id="shiv_3_manual_operation_0280-683739ddcba46eb60a00206a01c3c9f9-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgdc33f1e2861b485d0a00206a00af07a8_2_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><p>Depending on the type of message, the status message is indicated in varying colors.</p><div class="block"><a name="ID_b73d4163679ebbd20a002019013ae2ce-683739ddcba46eb60a00206a01c3c9f9-en-US">
+</a><a name="kanchor234">
+</a><span class="table-caption">Status bar information - color coding</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Color</p></th><th valign="top"><p>Type</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Red</p></td><td valign="top"><p>Error</p></td><td valign="top"><p>An error occurred at the start or during a measurement, e.g. due to missing data or wrong settings, so that the measurement cannot be started or completed correctly.</p></td></tr><tr class="evenrow"><td valign="top"><p>Orange</p></td><td valign="top"><p>Warning</p></td><td valign="top"><p>An irregular situation occurred during measurement, e.g. the settings no longer match the displayed results, or the connection to an external device was interrupted temporarily.</p></td></tr><tr class="oddrow"><td valign="top"><p>Gray</p></td><td valign="top"><p>Information</p></td><td valign="top"><p>Information on the status of individual processing steps.</p></td></tr><tr class="evenrow"><td valign="top"><p>No color</p></td><td valign="top"><p>No errors</p></td><td valign="top"><p>No message displayed - normal operation.</p></td></tr><tr class="oddrow"><td valign="top"><p>Green</p></td><td valign="top"><p>Measurement successful</p></td><td valign="top"><p>Some applications visualize that the measurement was successful by showing a message.</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>If any error information is available for a channel, an exclamation mark is displayed next to the channel name (<img border="0" src="Resources/Images/img8689effd44366a6a0a00206a00e82f8d_1_--_--_PNG96.png" alt="" title="">
+</img>). This is particularly useful when the MultiView tab is displayed, as the status bar in the MultiView tab always displays the information for the currently selected measurement only.</p><p>Furthermore, a status bit is set in the <span class="command">STATus:QUEStionable:EXTended:INFO</span> register for the application concerned (see <a class="xref" href="d360e28991f54d84.htm#ID_3f694d22e932e8970a00206a0171f34a-cf9f3fd9673450c20a0020190100bbb7-en-US">"STATus:QUEStionable:EXTended:INFO Register"</a>). Messages of a specific type can be queried using the <span class="command">SYST:ERR:EXT?</span> command, see <a class="xref" href="fd8c19aab6464aad.htm#shiv_6b_remote_commands_basic_2653-3144295567489d150a002019009351da-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SYSTem:</nobr>​<nobr>ERRor:</nobr>​<nobr>EXTended?</nobr></a>.</p></td></tr></table></div></div><div class="block"><a name="shiv_3_manual_operation_0288-683739ddcba46eb60a00206a01c3c9f9-en-US">
+</a><span class="table-caption">List of keywords</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow" valign="top"><td valign="top"><p><b>DATA ERR</b></p></td><td valign="top"><p>For the optional Digital Baseband Interface only:</p><p>Error in digital I/Q input data</p><p>(See <a class="MCConceptLink" href="javascript:void(0);" onclick="FMCLinkControl( event, this, null ); return false;" onkeydown="this.MCKeydown = true;" MadCap:concepts="ID_d8daacf3caba19e10a710a310125871f-5e9fe65b9f08f6a20a00206a005ed478-en-US" MadCap:topics=""><img src="SkinSupport/ConceptLink.gif" style="border: none;margin-right: 5px;">
+</img>See Also</a>)</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p><b>FIFO OVLD</b></p></td><td valign="top"><p>For Digital Baseband Interface (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B17) only:</p><p>Input sample rate from connected instrument is too high</p><p>(See <a class="MCConceptLink" href="javascript:void(0);" onclick="FMCLinkControl( event, this, null ); return false;" onkeydown="this.MCKeydown = true;" MadCap:concepts="ID_d8daacf3caba19e10a710a310125871f-5e9fe65b9f08f6a20a00206a005ed478-en-US" MadCap:topics=""><img src="SkinSupport/ConceptLink.gif" style="border: none;margin-right: 5px;">
+</img>See Also</a>)</p></td></tr><tr class="oddrow" valign="top"><td valign="top"><p><b>IF OVLD</b></p></td><td valign="top"><a name="kanchor235">
+</a><a name="kanchor236">
+</a><a name="kanchor237">
+</a><p>Overload of the IF signal path in the A/D converter or in the digital IF.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Increase the reference level.</li></ul></div></td></tr><tr class="evenrow" valign="top"><td valign="top"><p><b>INPUT OVLD</b></p></td><td valign="top"><a name="kanchor238">
+</a><a name="kanchor239">
+</a><a name="kanchor240">
+</a><p>The signal level at the RF input connector exceeds the maximum.</p><p>The RF input is disconnected from the input mixer to protect the device. To re-enable measurement, decrease the level at the RF input connector and reconnect the RF input to the mixer input.</p><p>( See <a class="xref" href="54a2d17ac91941d4.htm#ID_9968e3b2d27bc7d60a001ae746963581-4b1a317214755d240a001ae71d4e703b-en-US">"RF Input Protection"</a>).</p></td></tr><tr class="oddrow" valign="top"><td valign="top"><p><b>LOUNL</b></p></td><td valign="top"><a name="kanchor241">
+</a><a name="kanchor242">
+</a><a name="kanchor243">
+</a><p>Error in the instrument's frequency processing hardware was detected.</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p><b>NO REF</b></p></td><td valign="top"><a name="kanchor244">
+</a><a name="kanchor245">
+</a><a name="kanchor246">
+</a><p>Instrument was set to an external reference but no signal was detected on the reference input.</p></td></tr><tr class="oddrow" valign="top"><td valign="top"><p><b>OVEN</b></p></td><td valign="top"><a name="kanchor247">
+</a><a name="kanchor248">
+</a><a name="kanchor249">
+</a><p>The optional OCXO reference frequency has not yet reached its operating temperature. The message usually disappears a few minutes after power has been switched on.</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p><b>OVLD</b></p></td><td valign="top"><a name="kanchor250">
+</a><p>Overload of the input signal path after the input mixer; (only when RF INPUT path is NOT used, e.g. for input from the optional Digital Baseband Interface or the optional Analog Baseband Interface).</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Reduce the input level.</li></ul></div></td></tr><tr class="oddrow" valign="top"><td valign="top"><p><b>PLL UNLOCK</b></p></td><td valign="top"><p>For the optional Digital Baseband Interface only:</p><p>Error in digital I/Q input data</p><p>(See <a class="MCConceptLink" href="javascript:void(0);" onclick="FMCLinkControl( event, this, null ); return false;" onkeydown="this.MCKeydown = true;" MadCap:concepts="ID_d8daacf3caba19e10a710a310125871f-5e9fe65b9f08f6a20a00206a005ed478-en-US" MadCap:topics=""><img src="SkinSupport/ConceptLink.gif" style="border: none;margin-right: 5px;">
+</img>See Also</a>)</p></td></tr><tr class="evenrow" valign="top"><td valign="top"><p><b>RF OVLD</b></p></td><td valign="top"><a name="kanchor251">
+</a><a name="kanchor252">
+</a><a name="kanchor253">
+</a><p>Overload of the input mixer or of the analog IF path.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Increase the RF attenuation (for RF input).</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Reduce the input level (for digital input)</li></ul></div></td></tr><tr class="oddrow" valign="top"><td valign="top"><p><b>UNCAL</b></p></td><td valign="top"><a name="kanchor254">
+</a><a name="kanchor255">
+</a><a name="kanchor256">
+</a><p>One of the following conditions applies:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Correction data has been switched off.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">No correction values are available, for example after a firmware update.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Record the correction data by performing a self alignment<br/>(For details refer to <a class="xref" href="90a23b9b72554cb3.htm#ID_718096b78fde8c9b0a00206a01e1f067-c99de3b2fe1ffc270a001ae76b837433-en-US">"Alignment Settings"</a>).</li></ul></div></td></tr><tr class="evenrow" valign="top"><td valign="top"><p><b>WRONG_FW</b></p></td><td valign="top"><a name="kanchor257">
+</a><a name="kanchor258">
+</a><p>The firmware version is out-of-date and does not support the currently installed hardware. Until the firmware version is updated, this error message is displayed and self-alignment fails.</p><p>(For details refer to <a class="xref" href="68207073c3084736.htm#ID_0be52a918fde8cab0a00206a001b4fac-93be3f81fe2e1dda0a001ae779cd5414-en-US">"Firmware Updates"</a>).</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

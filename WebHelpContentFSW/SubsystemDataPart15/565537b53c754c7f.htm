@@ -1,0 +1,115 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Remote Commands for CDMA2000 Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Examples for CDMA2000 BTS Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_db4a2ba76f5f67450a001ae7614e939f-22ea7b8e6f5f67450a001ae76dbddda1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="50c310d0c42e48e5.htm">Remote Commands for CDMA2000 Measurements</a> &gt; <span class="chm-breadcrumb">Programming Examples for CDMA2000 BTS Measurements</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1044">
+</a><a name="kanchor1045">
+</a><div class="chm-chaptertitle">Programming Examples for CDMA2000 BTS Measurements</div><p>The following programming example demonstrates how to perform Code Domain Analysis on a CDMA2000 signal in a remote environment. It assumes the network has been set up for remote control.</p><p>Note that some commands may not be necessary as they reflect the default instrument settings; however, they are included to demonstrate their use.</p><div class="verbatim"><pre class="verbatim_text">//--------------Preparing the instrument -----------
+//Reset the instrument
+*RST
+//Activate a CDMA2000 BTS measurement channel named "BTSMeasurement"
+INST:CRE:NEW BC2K,'BTSMeasurement'
+//Select the code domain analysis measurement
+CONF:CDP:BTS:MEAS CDP
+//Stop continuous sweep
+INIT:CONT OFF
+
+//---------------- Configuring the Measurement-----
+//Set the reference level to 0 dBm
+DISP:TRAC:Y:SCAL:RLEV 0
+//Set the center frequency to 878.49 MHz
+FREQ:CENT 878.49 MHz
+
+//---------- Trigger settings --------------------
+// Use these settings only if an external trigger is connected
+// to the TRIGGER INPUT connector of the analyzer.
+// Otherwise ignore these commands.
+// Define the use of an external trigger.
+TRIGger:SOURce EXT
+
+//------------ Signal Description -------------------
+//IF KNOWN, define the pseudo noise offset of the base station from the external
+//trigger of 2 (*64 chips) to accelerate calculation
+//SENS:CDP:PNOF 2
+
+//Capture data only from signal at antenna 1.
+SENS:CDP:ANT 1
+//Switch to multi-carrier signal detection and disable enhanced signal detection
+//algorithm to accelerate calculation
+CONF:CDP:BTS:MCAR ON
+CONF:CDP:BTS:MCAR:MALG OFF
+//Activate multicarrier RRC filter with rolloff 0.02 and cutoff at 1.25 MHz
+CONF:CDP:BTS:MCAR:FILT ON
+CONF:CDP:BTS:MCAR:FILT:TYPE RRC
+CONF:CDP:BTS:MCAR:FILT:ROFF 0.02
+CONF:CDP:BTS:MCAR:FILT:COFR 1.25MHZ
+
+//----------- Channel detection --------------------------
+//Configure an inactive threshold of -60.0 dB
+SENS:CDP:ICTR -60
+
+//---------- Configuring the result display ------------
+// Activate the following result displays:
+// 1: Code Domain Power (default, upper left)
+// 2: Result Summary (default, below CDP)
+// 3: Code Domain Error Power (next to CDP)
+// 4: Bitstream Table (next to Result Summary)
+LAYout:ADD:WINDow? '1',RIGH,PCD
+LAYout:ADD:WINDow? '2',RIGH,BITS
+
+//----------- Code domain settings ---------------------------
+//Use a base spreading factor of 128
+SENS:CDP:SFAC 128
+//Configure compensation for I/Q offset
+SENS:CDP:NORM ON
+//Calculate timing and phase offset
+SENS:CDP:TPM ON
+//Define relative code power results, referred to total power of the signal
+SENS:CDP:PDIS REL
+SENS:CDP:PREF TOT
+//Use bit-reverse sort order for code display
+SENS:CDP:ORD BITR
+
+//------------- Data acquisition -------------------------
+//Configure data capture for 3 PCGs, analyze set 0, code number 3
+SENS:CDP:IQL 3
+SENS:CDP:SET 0
+SENS:CDP:CODE 3
+
+//--------------Performing the Measurement-----
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and waits until the sweep has finished.
+INIT;*WAI
+
+//---------------Retrieving Results-------------
+//Retrieve the composite EVM
+CALC:MARK:FUNC:CDP:BTS:RES? MACC
+//Retrieve the channel power, relative to total power
+CALC:MARK:FUNC:CDP:BTS:RES? CDPR
+//Retrieve the total power
+CALC:MARK:FUNC:CDP:BTS:RES? PTOT
+//Retrieve the peak error vector magnitude in percent
+CALC:MARK:FUNC:CDP:BTS:RES? EVMP
+//Retrieve the trace data of the Code Domain Error Power display
+TRAC3:DATA? TRACE1</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="1xEV-DO Measurements (R&amp;S FSW-K84/-K85)|Measurement Basics|Channel Detection and Channel Types" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k84_k85.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>BTS Channel Types</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_44311bbefa7f4fe70a710a3100076975-67698f60f4ad5da30a00206a0051b8a0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">1xEV-DO Measurements (R&amp;S FSW-K84/-K85)</a> &gt; <a class="chm-breadcrumb" href="47b6236f95dd45f9.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="272a18ad674d46e8.htm">Channel Detection and Channel Types</a> &gt; <span class="chm-breadcrumb">BTS Channel Types</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor207">
+</a><a name="kanchor208">
+</a><a name="kanchor209">
+</a><a name="kanchor210">
+</a><a name="kanchor211">
+</a><a name="kanchor212">
+</a><a name="kanchor213">
+</a><a name="kanchor214">
+</a><a name="kanchor215">
+</a><div class="chm-chaptertitle">BTS Channel Types</div><p>The 1xEV-DO standard defines the BTS channel types. 1xEV-DO forward link signals contain 4 channel types which are sent exclusively at specific times (see also <a class="xref" href="b1f77edfa89647c8.htm#ID_6826be1b0d855e3f0a00206a00391134-67698f60f4ad5da30a00206a0051b8a0-en-US">Figure "Slot structure, chip distribution and preamble lengths in 1xEV-DO BTS application"</a>):</p><div class="block"><ul class="list"><li value="1"><b>PILOT</b>: The PILOT channel type comprises 96 chips and is located in the center of each half-slot. It must be available in the signal for the base station signal to be detected. In the PILOT channel type, only the 0.32 channel on the I branch is active. With spreading factor 32, the BPSK-I and, hypothetically, BPSK-Q modulation are used. Hypothetically because no signal should exist on the Q branch.</li><li value="2"><b>MAC</b>: The Medium Access Control channel type is 64 chips in front of and behind the PILOT. The MAC channel type contains the reverse activity (RA) channel and the MAC reverse power control (RPC) channels with which the power of the active terminals is controlled. The MAC indices described in the standard MAC can be transformed into Walsh codes very easily. The analysis for the MAC channel type is performed with spreading factor 64. BPSK-I and BPSK-Q modulation are used.</li><li value="3"><b>DATA</b>: The DATA channel type is located with a length of up to 400 chips at the beginning and end of each half slot. The useful data is transmitted in it. As shown in <a class="xref" href="b1f77edfa89647c8.htm#ID_6826be1b0d855e3f0a00206a00391134-67698f60f4ad5da30a00206a0051b8a0-en-US">Figure "Slot structure, chip distribution and preamble lengths in 1xEV-DO BTS application"</a>, there are packets that transmit their data distributed over 1, 2, 4, 8 or 16 slots, depending on the transmission rate. Initially, a PREAMBLE range is transmitted, being between 64 and 1024 chips long - followed by the data. If more than one slot is required for transmission, the other data of this data packet follows at intervals of four slots, then without another preamble. In the DATA channel type, QPSK, 8-PSK and 16-QAM modulation types are used. Analysis is performed with a spreading factor of 16.</li><li value="4"><b>PREAMBLE</b>: The first 64 to 1024 chips of the DATA channel type are replaced by the PREAMBLE channel type at the beginning of a data packet. Depending on the transmission speeds being used and whether the start of data of the packet is missed, preambles of different length can be in the signal. The application firmware detects the preambles automatically. If the PREAMBLE channel type is examined and no preamble is found in the signal, this is indicated by the message "PREAMBLE MISSING" (see <a class="xref" href="ab8677406a9145dc.htm#shiv_FSV_K73_3645-59988bac0e3b97b50a00206a00536010-en-US">"Error Messages"</a>. Spreading factor 32 is used for analysis of the PREAMBLE channel type as for the PILOT channel type. Again, only a BPSK-I modulated channel should occur, but with variable code number.</li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

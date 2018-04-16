@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Symbol Mapping" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Offset QPSK</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K70_0771-184c8906411153460a00206a01532735-en-US;shiv_FSV_K70_0774-184c8906411153460a00206a01532735-en-US;ID_a4efa86966dc6ae40a00206a00ff88ff-184c8906411153460a00206a01532735-en-US;shiv_FSV_K70_0790-184c8906411153460a00206a01532735-en-US;ID_68f1a0a2e1ce41040a00206a016440a7-184c8906411153460a00206a01532735-en-US;ID_f879c381a9ba11e7a3bead4b208904ef-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="325e2356f7644f86.htm">Symbol Mapping</a> &gt; <span class="chm-breadcrumb">Offset QPSK</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Offset QPSK</div><a name="kanchor230">
+</a><a name="kanchor231">
+</a><a name="kanchor232">
+</a><a name="kanchor233">
+</a><a name="kanchor234">
+</a><p>Offset QPSK differs from "normal" QPSK in the fact that the Q component is delayed by half a symbol period against the I component in the time domain. Hence, the symbol time instants of the I and the Q component do not coincide. The concept of Offset QPSK is illustrated in the diagrams below.</p><div class="block"><div class="subtitle"><a name="shiv_FSV_K70_0774-184c8906411153460a00206a01532735-en-US">
+</a>Derivation of OQPSK</div></div><a name="kanchor235">
+</a><div class="block"><a name="ID_a4efa86966dc6ae40a00206a00ff88ff-184c8906411153460a00206a01532735-en-US">
+</a><span class="table-caption">I/Q diagram and constellation diagram</span><table border="1"><colgroup><col width="198.45000000000002">
+</col><col width="198.45000000000002">
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>QPSK</p></th><th valign="top"><p>OQPSK (delayed Q component)</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img81e6929d66d7c0d50a00206a00c244c2_1_--_--_PNG96.png" alt="" title=""/></div></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/imgd5ed476e66d7e66d0a00206a008a43f3_1_--_--_PNG96.png" alt="" title=""/></div></td></tr><tr class="evenrow"><td valign="top"><p>PSK vector diagram with alpha =<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>0.35</p></td><td valign="top"><p>OQPSK vector diagram with alpha =<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>0.35</p></td></tr><tr class="oddrow"><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img3b26909f66d2d6420a00206a0030fc46_1_--_--_PNG96.png" alt="" title=""/></div></td><td valign="top"><div class="graphic"><img border="0" src="Resources/Images/img37ed125a66d2fab20a00206a01b16821_1_--_--_PNG96.png" alt="" title=""/></div></td></tr></tbody></table></div><p>Offset QPSK reduces the dynamic range of the modulated signal (compared to "normal" QPSK) and, therefore, the demands on amplifier linearity by avoiding zero crossings.</p><p>A distinction is made in the analyzer display:</p><p>In the Vector I/Q result display of the measurement (or reference) signal, the time delay is not compensated for. The display corresponds to the physical diagram shown in (<a class="xref" href="#ID_a4efa86966dc6ae40a00206a00ff88ff-184c8906411153460a00206a01532735-en-US">Table "I/Q diagram and constellation diagram"</a>)</p><p>In the Constellation I/Q result display of the measurement (or reference) signal, the time delay is compensated for. The display corresponds to the logical mapping as in <a class="xref" href="#ID_68f1a0a2e1ce41040a00206a016440a7-184c8906411153460a00206a01532735-en-US">Figure "Constellation diagram for OQPSK (GRAY) including the symbol mapping"</a>.</p><div class="block"><div class="subtitle"><a name="shiv_FSV_K70_0790-184c8906411153460a00206a01532735-en-US">
+</a>OQPSK</div></div><div class="block" id="ID_68f1a0a2e1ce41040a00206a016440a7-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7cbbaa8ee1c5229e0a00206a003466c1_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for OQPSK (GRAY) including the symbol mapping</div></div><div class="block" id="ID_f879c381a9ba11e7a3bead4b208904ef-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img5ac0a138dd519ba70a00206a0193f425_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for OQPSK (NATURAL, SMx) including the symbol mapping</div></div><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>OQPSK (NATURAL) is the OQPSK mapping used by supported R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>SMx signal generators when using PRBS algorithms. See <a class="xref" href="07f3cfd6d01e4ec3.htm#ID_2ceceb1ce73719030a7c00a0003ddfbe-184c8906411153460a00206a01532735-en-US">"Symbol mapping in accordance with the PRBS generator"</a>.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Applications, Measurement Channels, and Operating Modes|Running a Sequence of Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>The Sequencer Concept</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_03e60bb664de11e09401f603b2ce1392-0ca1c49df54edb3d0a001ae708dcc946-en-US;ID_30ea661964de11e09401f603b2ce1392-0ca1c49df54edb3d0a001ae708dcc946-en-US;ID_e6ce858a48d44e050a00206a00fb5495-0ca1c49df54edb3d0a001ae708dcc946-en-US;ID_92065b5a48d44e050a00206a0157769d-0ca1c49df54edb3d0a001ae708dcc946-en-US;ID_f1e0e96c48d44e050a00206a012c56b9-0ca1c49df54edb3d0a001ae708dcc946-en-US;ID_9b9a4e5948d44e050a00206a013ced58-0ca1c49df54edb3d0a001ae708dcc946-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="af72ee10fce347e5.htm">Applications, Measurement Channels, and Operating Modes</a> &gt; <a class="chm-breadcrumb" href="e4ab6cc1c2e2475f.htm">Running a Sequence of Measurements</a> &gt; <span class="chm-breadcrumb">The Sequencer Concept</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor401">
+</a><a name="kanchor402">
+</a><a name="kanchor403">
+</a><div class="chm-chaptertitle">The Sequencer Concept</div><p>The instrument can only activate one specific channel at any time. Thus, only one measurement can be performed at any time, namely the one in the currently active channel. However, in order to perform the configured measurements consecutively, a Sequencer function is provided, which changes the channel of the instrument as required. If activated, the measurements configured in the currently defined "Channel"s are performed one after the other in the order of the tabs.</p><p>For each individual measurement, the sweep count is considered. Thus, each measurement may consist of several sweeps. The currently active measurement is indicated by a <img border="0" src="Resources/Images/imga81c167602f751ad0a00206a01350629_1_--_--_PNG96.png" alt="" title="">
+</img> symbol in the tab label.</p><p>The result displays of the individual channels are updated in the tabs as the measurements are performed. Sequential operation itself is independent of the currently <span class="input">displayed</span> tab.</p><div class="block"><div class="subtitle"><a name="ID_30ea661964de11e09401f603b2ce1392-0ca1c49df54edb3d0a001ae708dcc946-en-US">
+</a>Sequencer modes</div></div><a name="kanchor404">
+</a><p>Three different Sequencer modes are available:</p><div class="block"><ul class="list"><li value="1"><b>Single Sequence</b><br/>Similar to single sweep mode; each measurement is performed once, until all measurements in all defined "Channel"s have been performed.</li><li value="2"><b>Continuous Sequence</b><br/>Similar to continuous sweep mode; the measurements in each defined "Channel" are performed one after the other, repeatedly, in the same order, until sequential operation is stopped. This is the default Sequencer mode.</li><li value="3"><b>Channel-defined Sequence</b><br/>First, a single sequence is performed. Then, only "Channel"s in continuous sweep mode are repeated continuously.</li></ul></div><div class="block"><span class="bold"><a name="ID_e6ce858a48d44e050a00206a00fb5495-0ca1c49df54edb3d0a001ae708dcc946-en-US">
+</a>Example: Sequencer procedure</span><a name="kanchor405">
+</a><p>Assume the following active channel definition:</p><div class="block" id="ID_92065b5a48d44e050a00206a0157769d-0ca1c49df54edb3d0a001ae708dcc946-en-US"><div class="graphic"><img border="0" src="Resources/Images/img03e59cc37322194c0a00206a01236fe7_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="block"><a name="ID_f1e0e96c48d44e050a00206a012c56b9-0ca1c49df54edb3d0a001ae708dcc946-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Tab name</p></th><th valign="top"><p>Application</p></th><th valign="top"><p>Sweep mode</p></th><th valign="top"><p>Sweep count</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Spectrum</p></td><td valign="top"><p>Spectrum</p></td><td valign="top"><p>Cont. Sweep</p></td><td valign="top"><p>5</p></td></tr><tr class="evenrow"><td valign="top"><p>Spectrum 2</p></td><td valign="top"><p>Spectrum</p></td><td valign="top"><p>Single Sweep</p></td><td valign="top"><p>6</p></td></tr><tr class="oddrow"><td valign="top"><p>Spectrum 3</p></td><td valign="top"><p>Spectrum</p></td><td valign="top"><p>Cont. Sweep</p></td><td valign="top"><p>2</p></td></tr><tr class="evenrow"><td valign="top"><p>IQ Analyzer</p></td><td valign="top"><p>IQ Analyzer</p></td><td valign="top"><p>Single Sweep</p></td><td valign="top"><p>7</p></td></tr></tbody></table></div><p>For <b>Single Sequence</b>, the following sweeps will be performed:</p><p>5x Spectrum, 6x Spectrum 2, 2 x Spectrum 3, 7x IQ Analyzer</p><p>For <b>Continuous Sequence</b>, the following sweeps will be performed:</p><p>5x Spectrum, 6x Spectrum 2, 2 x Spectrum 3, 7x IQ Analyzer,</p><p>5x Spectrum, 6x Spectrum 2, 2 x Spectrum 3, 7x IQ Analyzer,</p><p>...</p><p>For <b>Channel-defined Sequence</b>, the following sweeps will be performed:</p><p>5x Spectrum, 6x Spectrum 2, 2 x Spectrum 3, 7x IQ Analyzer,</p><p>5x Spectrum, 2 x Spectrum 3,</p><p>5x Spectrum, 2 x Spectrum 3,</p><p>...</p></div><div class="block"><div class="subtitle"><a name="ID_9b9a4e5948d44e050a00206a013ced58-0ca1c49df54edb3d0a001ae708dcc946-en-US">
+</a>RUN SINGLE/RUN CONT and Single Sweep/Sweep Continuous keys</div></div><a name="kanchor406">
+</a><a name="kanchor407">
+</a><p>While the Sequencer is active, the RUN SINGLE and RUN CONT keys control the Sequencer, not individual sweeps. RUN SINGLE starts the Sequencer in single mode, while RUN CONT starts the Sequencer in continuous mode.</p><p>The "Single Sweep" and "Continuous Sweep" <em>softkeys</em> control the sweep mode for the currently selected channel only; the sweep mode only has an effect the next time the Sequencer activates that channel, and only for a channel-defined sequence. In this case, a channel in single sweep mode is swept only once by the Sequencer. A channel in continuous sweep mode is swept repeatedly.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2017 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,83 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Basics</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_0c774969f554e1c20a00206a017b43c9-192230c5f554e1c20a00206a019f8074-en-US;ID_d6be4b63280185e20a00206a01dd58f1-192230c5f554e1c20a00206a019f8074-en-US;ID_fd6da2f2103411e18e06993eae0b40a4-192230c5f554e1c20a00206a019f8074-en-US;ID_876ffbf9280185e20a00206a00b191ac-192230c5f554e1c20a00206a019f8074-en-US;ID_0ca75773103511e18e06993eae0b40a4-192230c5f554e1c20a00206a019f8074-en-US;ID_159be132280185e20a00206a00fde64b-192230c5f554e1c20a00206a019f8074-en-US;ID_4e9fea80280185e20a00206a00a9e194-192230c5f554e1c20a00206a019f8074-en-US;ID_7f70817a280185e20a00206a018723be-192230c5f554e1c20a00206a019f8074-en-US;ID_d16d7470ac17a6480a00206a00af70f4-192230c5f554e1c20a00206a019f8074-en-US;ID_1753a5de280185e20a00206a003c7019-192230c5f554e1c20a00206a019f8074-en-US;ID_b1200c2e280185e20a00206a0078b8cd-192230c5f554e1c20a00206a019f8074-en-US;ID_8836dd8c280185f20a00206a00cc9606-192230c5f554e1c20a00206a019f8074-en-US;ID_0c4253a0280185f20a00206a00f8733b-192230c5f554e1c20a00206a019f8074-en-US;ID_974686c6280185f20a00206a018d4e23-192230c5f554e1c20a00206a019f8074-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <span class="chm-breadcrumb">Measurement Basics</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor136">
+</a><div class="chm-chaptertitle">Measurement Basics</div><p>Some background knowledge on basic terms and principles used in 3GPP FDD tests and measurements is provided here for a better understanding of the required configuration settings.</p><div class="block"><div class="subtitle"><a name="ID_d6be4b63280185e20a00206a01dd58f1-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Basic principle</div></div><p>The basic principle of 3GPP FDD (frequency division duplex) is that the communication between a base station and several mobile stations is performed in the same frequency band and in the same time slots. The separation of the data for the different mobile stations is achieved by using CDMA (Code Division Multiple Access). In this technique, channels are distinguished by using different orthogonal codes.</p><div class="block"><div class="subtitle"><a name="ID_fd6da2f2103411e18e06993eae0b40a4-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Scrambling codes</div></div><a name="kanchor137">
+</a><p>Each base station uses a unique scrambling code. The mobile station can only demodulate the base station signal if it knows which scrambling code was used by the base station.</p><p>Thus, in order to demodulate the data in the 3GPP FDD applications, you must either specify the scrambling code explicitly, or the application can perform an automatic search to detect the scrambling code itself.</p><div class="block"><div class="subtitle"><a name="ID_876ffbf9280185e20a00206a00b191ac-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Channels, codes and symbol rate</div></div><a name="kanchor138">
+</a><a name="kanchor139">
+</a><a name="kanchor140">
+</a><a name="kanchor141">
+</a><a name="kanchor142">
+</a><a name="kanchor143">
+</a><a name="kanchor144">
+</a><a name="kanchor145">
+</a><p>In signals according to the 3GPP FDD standard, the data is transmitted in channels. These channels are based on orthogonal codes and can have different data rates. The data rate depends on the used modulation type and the spreading factor of the channel.</p><div class="block"><div class="subtitle"><a name="ID_0ca75773103511e18e06993eae0b40a4-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Spreading factors</div></div><a name="kanchor146">
+</a><p><b>Spreading factors</b> determine whether the transmitted data is sent in short or long sequences. The spreading factor is re-assigned dynamically in certain time intervals according to the current demand of users and data to be transmitted. The higher the spreading factor, the lower the data rate; the lower the spreading factor, the higher the data rate.</p><p>The smallest available spreading factor is 4, the largest is 512. So we can say that the code domain consists of 512 basic codes. A channel with a lower spreading factor consists of several combined codes. That means a channel can be described by its number and its spreading factor.</p><p>The following table shows the relationship between the code class, the spreading factor, the number of codes per channel, and the symbol rate.</p><div class="block"><a name="ID_159be132280185e20a00206a00fde64b-192230c5f554e1c20a00206a019f8074-en-US">
+</a><a name="kanchor147">
+</a><a name="kanchor148">
+</a><a name="kanchor149">
+</a><a name="kanchor150">
+</a><a name="kanchor151">
+</a><a name="kanchor152">
+</a><a name="kanchor153">
+</a><span class="table-caption">Relationship between code class, spreading factor, codes per channel and symbol rate for 3GPP FDD signals</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Code class</p></th><th valign="top"><p>Spreading factor</p></th><th valign="top"><p>No. codes / channel</p></th><th valign="top"><p>Symbol rate</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>4</p></td><td valign="top"><p>128</p></td><td valign="top"><p>960 ksps</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>8</p></td><td valign="top"><p>64</p></td><td valign="top"><p>480 ksps</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>16</p></td><td valign="top"><p>32</p></td><td valign="top"><p>240 ksps</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>32</p></td><td valign="top"><p>16</p></td><td valign="top"><p>120 ksps</p></td></tr><tr class="oddrow"><td valign="top"><p>6</p></td><td valign="top"><p>64</p></td><td valign="top"><p>8</p></td><td valign="top"><p>60 ksps</p></td></tr><tr class="evenrow"><td valign="top"><p>7</p></td><td valign="top"><p>128</p></td><td valign="top"><p>4</p></td><td valign="top"><p>30 ksps</p></td></tr><tr class="oddrow"><td valign="top"><p>8</p></td><td valign="top"><p>256</p></td><td valign="top"><p>2</p></td><td valign="top"><p>15 ksps</p></td></tr><tr class="evenrow"><td valign="top"><p>9</p></td><td valign="top"><p>512</p></td><td valign="top"><p>1</p></td><td valign="top"><p>7.5 ksps</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>In the measurement settings and results, the spreading factor is often represented by the corresponding symbol rate (in kilo symbols per second, ksps). The power of a channel is always measured in relation to its symbol rate (or spreading factor).</p></td></tr></table></div></div><p>In the 3GPP FDD applications, the channel number consists of the used spreading factor and the channel's sequential number in the code domain, assuming the code domain is divided into equal divisions:</p><p>&lt;sequence number&gt;.&lt;spreading factor&gt;</p><div class="block"><span class="bold"><a name="ID_7f70817a280185e20a00206a018723be-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Example: </span><p>For a channel number of 5.32, for example, imagine a code domain of 512 codes with a scale of 16 codes per division. Each division represents a possible channel with spreading factor 32. Since channel numbering starts at 0, channel number 5 is the sixth division on the scale.</p></div><div class="block"><div class="subtitle"><a name="ID_d16d7470ac17a6480a00206a00af70f4-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Selected codes and channels</div></div><p>In the result displays that refer to channels, the currently selected channel is highlighted in the diagram. You select a channel by entering a channel number and spreading factor in the "Evaluation Range" settings. In the example above, if you select the channel number 5.32, the sixth division on the scale with 16 codes per division is highlighted.</p><p>For the display in the 3GPP FDD applications, the scale for code-based diagrams contains 512 divisions, one for each code. The selected channel in the example (5.32) would thus correspond to codes 80-96. (The division starts at 5*16=80 and is 16 codes wide.)</p><p>If no spreading factor is given for the channel number, the default factor 512 is assumed. Channel number 5 would thus refer to the sixth division on the scale, which is the sixth code in the code domain. If the code belongs to a detected channel, the entire channel is highlighted.</p><p>If the selected channel is not active, only the first code belonging to the corresponding division is highlighted. In the example, for the inactive channel number 5.32, the first code in the sixth division on the scale with 16 codes per division is highlighted. That corresponds to code number 80 with the scale based on 512 divisions.</p><div class="block"><div class="subtitle"><a name="ID_1753a5de280185e20a00206a003c7019-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Special channels - PCCPCH, SCH, CPICH, DPCH</div></div><a name="kanchor154">
+</a><a name="kanchor155">
+</a><a name="kanchor156">
+</a><a name="kanchor157">
+</a><a name="kanchor158">
+</a><p>In order to control the data transmission between the sender and the receiver, specific symbol must be included in the transmitted data, for example the scrambling code of the sender or the used spreading factor, as well as synchronization data for different channels. This data is included in special data channels defined by the 3GPP standard which use fixed codes in the code domain. Thus, they can be detected easily by the receiver.</p><p>The <b>P</b>rimary <b>C</b>ommon <b>C</b>ontrol <b>P</b>hysical <b>Ch</b>annel (PCCPCH) must always be contained in the signal. As the name implies, it is responsible for common control of the channels during transmission.</p><p>The <b>S</b>ynchronization <b>Ch</b>annel (SCH) is a time reference and responsible for synchronizing the individual channels.</p><p>Another important channel is the <b>C</b>ommon <b>Pi</b>lot <b>Ch</b>annel (CPICH), which continuously transmits the sender's scrambling code. This channel is used to identify the sender, but also as a reference in 3GPP FDD signal measurements.</p><p>The user data is contained in the <b>D</b>edicated <b>P</b>hysical <b>Ch</b>annel (DPCH).</p><p>More details on channel types are provided in <a class="xref" href="fe2bedc0e9a54ec7.htm#ID_44311bbefa7f4fe70a710a3100076975-192230c5f554e1c20a00206a019f8074-en-US">"BTS Channel Types"</a>.</p><div class="block"><div class="subtitle"><a name="ID_b1200c2e280185e20a00206a0078b8cd-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Chips, frames and slots</div></div><a name="kanchor159">
+</a><a name="kanchor160">
+</a><a name="kanchor161">
+</a><p>The user data is spread across the available bandwidth using the spreading factor before transmission. The spread bits are referred to as "chips".</p><p>A time span of 10 ms is also known as a "frame". A frame is a basic time unit in the transmission process. Each frame is divided into 15 time "slots". Various channel parameters are put in relation to frames or the individual slots in the 3GPP standard, as well as some measurement results for 3GPP FDD signals. A slot contains 2560 chips.</p><div class="block"><div class="subtitle"><a name="ID_8836dd8c280185f20a00206a00cc9606-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Channel slots versus CPICH slots</div></div><a name="kanchor162">
+</a><a name="kanchor163">
+</a><p>The time slots of the individual channels may not be absolutely synchronous. A time offset may occur, so that the slots in a data channel are slightly shifted in relation to the CPICH slots, for example. In the 3GPP FDD BTS application, the CPICH slot number is provided as a reference with the measurement settings in the channel bar. In the Result Summary, the actual slot number of the evaluated channel is indicated as the "Channel Slot No".</p><div class="block"><div class="subtitle"><a name="ID_0c4253a0280185f20a00206a00f8733b-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Pilot symbols</div></div><a name="kanchor164">
+</a><p>Some slots contain a fixed sequence of symbols, referred to as "pilot symbols". These pilot symbols allow the receiver to identify a particular channel, if the unique pilot symbols can be detected in the input signal.</p><div class="block"><div class="subtitle"><a name="ID_974686c6280185f20a00206a018d4e23-192230c5f554e1c20a00206a019f8074-en-US">
+</a>Power control</div></div><a name="kanchor165">
+</a><p>While the spreading factors are adjusted for each frame, i.e. every 10 ms, the power levels for transmission must be adapted to the current requirements (such as interference) much more dynamically. Thus, power control bits are transmitted in each slot, allowing for much higher change rates. As the CPICH channel continuously transmits the same data, the power level need not be adapted. Thus, the power control bits can lead to a timing offset between the CPICH slots and other channel slots.</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="a55d522b7ec84f3c.htm" class="chapter_title_toc">Channel Detection</a></li><li value="2"><a href="fe2bedc0e9a54ec7.htm" class="chapter_title_toc">BTS Channel Types</a></li><li value="3"><a href="8bbb1d08caab4279.htm" class="chapter_title_toc">UE Channel Types</a></li><li value="4"><a href="529d67b21e8d4d64.htm" class="chapter_title_toc">3GPP FDD BTS Test Models</a></li><li value="5"><a href="ed2d3a3c0f0c44b0.htm" class="chapter_title_toc">Setup for Base Station Tests</a></li><li value="6"><a href="15f7298b916e4e0f.htm" class="chapter_title_toc">3GPP FDD UE Test Models</a></li><li value="7"><a href="8e9b30cbfa844503.htm" class="chapter_title_toc">Setup for User Equipment Tests</a></li><li value="8"><a href="4446ffafe4eb4f19.htm" class="chapter_title_toc">Time Alignment Error Measurements</a></li><li value="9"><a href="04f73221e0124424.htm" class="chapter_title_toc">CDA Measurements in MSRA Operating Mode</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

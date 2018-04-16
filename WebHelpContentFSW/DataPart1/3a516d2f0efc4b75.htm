@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Bandwidth, Filter and Sweep Configuration|Bandwidth, Filter and Sweep Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Sweep Time
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdSweeptimeManual">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdSweeptimeAuto">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdSweeptimeManual">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdSweeptimeAuto">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdSweeptimeAuto">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdSweeptimeManual">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSweeptimeManual">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSweeptimeAuto">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdSweeptimeAuto">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdSweeptimeManual">
+</meta>
+        <meta name="topic-id" value="1754">
+</meta>
+        <meta name="topic-id" value="1755">
+</meta>
+        <meta name="topic-id" value="1756">
+</meta>
+        <meta name="topic-id" value="1757">
+</meta>
+        <meta name="topic-id" value="1758">
+</meta>
+        <meta name="topic-id" value="1759">
+</meta>
+        <meta name="topic-id" value="1760">
+</meta>
+        <meta name="topic-id" value="1761">
+</meta>
+        <meta name="topic-id" value="1762">
+</meta>
+        <meta name="topic-id" value="1763">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_13185b8f0eba7cb60a00206a01001c05-7d214b710eba7cb60a00206a002f9915-en-US;ID_e48ccd85126f11e4b7b2cc9bc541c0ee-7d214b710eba7cb60a00206a002f9915-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="409c8f6e27aa478c.htm">Bandwidth, Filter and Sweep Configuration</a> &gt; <a class="chm-breadcrumb" href="83c62bf2eec542d5.htm">Bandwidth, Filter and Sweep Settings</a> &gt; <span class="chm-breadcrumb">Sweep Time</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1773">
+</a><a name="kanchor1774">
+</a><a name="kanchor1775">
+</a><a name="kanchor1776">
+</a><a name="kanchor1777">
+</a><div class="function_heading"><a name="ID_13185b8f0eba7cb60a00206a01001c05-7d214b710eba7cb60a00206a002f9915-en-US">
+</a>Sweep Time</div><p>Defines the duration of a single sweep, during which the defined number of sweep points are measured. The "Sweep Time" can be defined automatically or manually.</p><p>The allowed "Sweep Time"s depend on the device model; refer to the data sheet.</p><p>For more information see <a class="xref" href="f47b20d357f6488b.htm#ID_bb4ebc977fa3148e0a00206a016445b6-fc6e2f34ebd4ca590a00206a01d1fc31-en-US">"How Long the Data is Measured: Sweep Time "</a>.</p><p><b><a name="ID_e48ccd85126f11e4b7b2cc9bc541c0ee-7d214b710eba7cb60a00206a002f9915-en-US">
+</a>Note:</b> The "Sweep Time" only indicates how long data is captured; the time required to process the captured data may be considerably longer, in particular for FFT mode. For FFT mode, an estimated duration is indicated behind the "Sweep Time" in the channel bar (for RF measurements only).<br/></p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto"</p></td><td class="function_col_right"><p>The "Sweep Time" is coupled to the span (not zero span), video bandwidth (VBW) and resolution bandwidth (RBW). If the span, resolution bandwidth or video bandwidth is changed, the "Sweep Time" is automatically adjusted.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Manual"</p></td><td class="function_col_right"><p>For manual mode, define the "Sweep Time". Allowed values depend on the ratio of span to RBW and RBW to VBW. For details refer to the data sheet. Numeric input is always rounded to the nearest possible "Sweep Time".</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="82e429ca2b284482.htm#ID_04b31dcf2e38bd010a00206a0146e5d3-96bcad1229fe5dc30a00206a00cb7004-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>TIME:</nobr>​<nobr>AUTO</nobr></a></p><p><a class="xref" href="b591a8f9fe9c4f48.htm#ID_7ca1f2a42e3a7e940a00206a01dfeab3-52f0715cddf01d6c0a00206a01b26546-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>TIME</nobr></a></p><p><a class="xref" href="99c62f044b9c4b92.htm#ID_7ca1f2a42e3a7e940a00206a01dfeab3-6269ddad6360ee170a001ae746dfcf68-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>DURation?</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

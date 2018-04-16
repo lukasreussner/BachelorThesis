@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Querying the Status Registers" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>STATus:QUEStionable:SYNC Register</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_5f6a5dd583e0d5900a00206a012e15f1-2b02f330354fb2da0a002019010d2411-en-US;ID_a081df5c83ebd6f50a710a31016cb627-2b02f330354fb2da0a002019010d2411-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="0cc6227cf87142ae.htm">Querying the Status Registers</a> &gt; <span class="chm-breadcrumb">STATus:QUEStionable:SYNC Register</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1195">
+</a><a name="kanchor1196">
+</a><a name="kanchor1197">
+</a><a name="kanchor1198">
+</a><div class="chm-chaptertitle">STATus:QUEStionable:SYNC Register</div><p>This register contains information about the state of the I/Q data acquisition.</p><p>This register is used by the optional Digital Baseband Interface.</p><p>The status of the <span class="command">STATus:QUESTionable:SYNC</span> register is indicated in bit 11 of the <span class="command">STATus:QUESTionable</span> register.</p><p>You can read out the state of the register with <a class="xref" href="509cec79f1e34d2c.htm#ID_c57bf580c36dad920a00206a009d1a82-22d833b572e225040a00206a00f99bbc-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>SYNC:</nobr>​<nobr>CONDition?</nobr></a> and <a class="xref" href="7061331afea54037.htm#ID_50882eadc370eccd0a00206a00c253c5-296f17bd72e27b320a00206a0116d18c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>STATus:</nobr>​<nobr>QUEStionable:</nobr>​<nobr>SYNC[:</nobr>​<nobr>EVENt]?</nobr></a>.</p><div class="block"><a name="ID_a081df5c83ebd6f50a710a31016cb627-2b02f330354fb2da0a002019010d2411-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit No.</p></th><th valign="top"><p>Meaning</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0-7</p></td><td valign="top"><p>not used</p></td></tr><tr class="evenrow"><td valign="top"><p>8</p></td><td valign="top"><p><b>I/Q data acquisition error</b></p><p>This bit is set if an error occurs during I/Q data acquisition because the input sample rates or number of samples between the signal source and the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW do not match.</p><p>See also <a class="xref" href="c53e527ec0fb4ebb.htm#ID_1741a9698eeb4c9f0a001ae779fa0301-ea5df50c8eec2fdc0a001ae717cdbdf8-en-US">"Error Messages"</a></p></td></tr><tr class="oddrow"><td valign="top"><p>9-14</p></td><td valign="top"><p>not used</p></td></tr><tr class="evenrow"><td valign="top"><p>15</p></td><td valign="top"><p>This bit is always set to 0.</p></td></tr></tbody></table></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="509cec79f1e34d2c.htm#ID_c57bf580c36dad920a00206a009d1a82-22d833b572e225040a00206a00f99bbc-en-US" class="title_toc">STATus:QUEStionable:SYNC:CONDition?</a><br/><a href="87bc5aed293d4a6d.htm#shiv_6a_remote_commands_7784-b51e79cd72e629040a00206a00d239a3-en-US" class="title_toc">STATus:QUEStionable:SYNC:ENABle</a><br/><a href="82a50cee86734caa.htm#shiv_6a_remote_commands_7794-5ee208a572e6950c0a00206a01f4b6ef-en-US" class="title_toc">STATus:QUEStionable:SYNC:NTRansition</a><br/><a href="357e7ef66ced4a6e.htm#shiv_6a_remote_commands_7804-b11483f372e6e6e50a00206a01e4eefc-en-US" class="title_toc">STATus:QUEStionable:SYNC:PTRansition</a><br/><a href="7061331afea54037.htm#ID_50882eadc370eccd0a00206a00c253c5-296f17bd72e27b320a00206a0116d18c-en-US" class="title_toc">STATus:QUEStionable:SYNC[:EVENt]?</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

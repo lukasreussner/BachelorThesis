@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|Remote Commands to Perform Measurements in MSRA Mode" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Commands Specific to MSRA Slave Applications</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_77dd93ca57972e900a00206a00dffd95-b807fae432e8ec370a00206a01eafe8b-en-US;ID_85a6a9538b994ad30a00206a00b7682e-b807fae432e8ec370a00206a01eafe8b-en-US;ID_dc8394ae8b8543f10a00206a016ff45e-b807fae432e8ec370a00206a01eafe8b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="8d95166c7a6548c9.htm">Remote Commands to Perform Measurements in MSRA Mode</a> &gt; <span class="chm-breadcrumb">Commands Specific to MSRA Slave Applications</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor464">
+</a><div class="chm-chaptertitle">Commands Specific to MSRA Slave Applications</div><p>Most commands for the MSRA slave applications are identical to those described for the individual slave applications. However, some specific commands are available for the MSRA slave applications only.</p><div class="block"><div class="subtitle"><a name="ID_85a6a9538b994ad30a00206a00b7682e-b807fae432e8ec370a00206a01eafe8b-en-US">
+</a>Configuring the analysis interval</div></div><a name="kanchor465">
+</a><a name="kanchor466">
+</a><a name="kanchor467">
+</a><p>The commands required to configure the slave application data extracts and analysis intervals vary depending on the slave application. See the corresponding application manuals for details.</p><p>For the I/Q Analyzer, the commands are the same as those used to define the actual data acquisition (see <a class="xref" href="a4207f6fd9b24a5a.htm#ID_d78c2623531421dc0a720a2b00d2e636-b807fae432e8ec370a00206a01eafe8b-en-US">"Configuring Data Acquisition"</a>. In MSRA slave application channels, these commands define the analysis interval. Be sure to select the correct measurement channel before executing these commands.</p><div class="block"><div class="listintro">Useful commands for configuring the analysis interval described elsewhere:</div><ul class="list"><li value="1"><a class="xref" href="47ab43e6490a4aaf.htm#shiv_6a_remote_commands_8210-61f10f7e57d9639c0a00206a005f1405-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>SRATe</nobr></a></li><li value="2"><a class="xref" href="ad2973b09c29453b.htm#ID_aae516bc83dfdda50a00206a019f0fad-ddbf693657d3a56a0a00206a0185fab1-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>BWIDth</nobr></a></li><li value="3"><a class="xref" href="3b9714e08d3f4cc4.htm#ID_35c3bc2a51a442c60a00206a01c7d365-6310d46b72b9804d0a00206a004b8a9c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>RLENgth</nobr></a></li><li value="4"><a class="xref" href="b591a8f9fe9c4f48.htm#ID_7ca1f2a42e3a7e940a00206a01dfeab3-52f0715cddf01d6c0a00206a01b26546-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>TIME</nobr></a></li></ul></div><div class="block"><div class="subtitle"><a name="ID_dc8394ae8b8543f10a00206a016ff45e-b807fae432e8ec370a00206a01eafe8b-en-US">
+</a>Remote commands exclusive to MSRA slave applications</div></div><p>The following commands are only available for MSRA slave application channels:</p>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="207b12e391054de0.htm#ID_283cd1002c0f29220a00201900b65eaa-2346a0dd2c0f29220a002019010104e8-en-US" class="title_toc">CALCulate&lt;n&gt;:IQ:MODE</a><br/><a href="8ef5a686cf054bb0.htm#ID_370a3edb573c3b150a00206a0102e06a-269db28a6829fb110a002019007dcaa4-en-US" class="title_toc">CALCulate&lt;n&gt;:MSRA:ALINe:SHOW</a><br/><a href="75f1e2f75b374c1e.htm#ID_370a3edb573c3b150a00206a0102e06a-831184a2682a612e0a00201900a978ec-en-US" class="title_toc">CALCulate&lt;n&gt;:MSRA:ALINe[:VALue]</a><br/><a href="759b72fa105e4e80.htm#ID_370a3edb573c3b150a00206a0102e06a-2dcf5ce1573c3b150a00206a01e9bdd7-en-US" class="title_toc">CALCulate&lt;n&gt;:MSRA:WINDow&lt;n&gt;:IVAL?</a><br/><a href="38976cbad66d4086.htm#ID_12648fa09f56982b0a00206a00bc6d42-6868475a5cbf2ddc0a00206a0132b776-en-US" class="title_toc">INITiate&lt;n&gt;:REFResh</a><br/><a href="370c239837b44d54.htm#ID_1afd5acf8b49e4420a00206a013e4ee6-1932ea008b49e4420a00206a01ef7778-en-US" class="title_toc">[SENSe:]MSRA:CAPTure:OFFSet</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,153 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example: Measuring an AQPSK Signal</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ef7a7961469e334e0a710a310023663b-527477ec469e74030a00201900c7509c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="3e7805cc034747fd.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Programming Example: Measuring an AQPSK Signal</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1014">
+</a><a name="kanchor1015">
+</a><div class="chm-chaptertitle">Programming Example: Measuring an AQPSK Signal</div><p>This example demonstrates how to configure a GSM measurement of an AQPSK modulated signal in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//------------ Preparing the application ------------
+// Preset the instrument
+*RST
+// Enter the GSM option K10
+INSTrument:SELect GSM
+// Switch to single sweep mode and stop sweep
+INITiate:CONTinuous OFF;:ABORt
+
+
+//---------- Frequency and Level ---------------------
+// Set center frequency to 935 MHz
+SENSe:FREQuency:CENTer 935 MHZ
+
+// Set Ref. Level to 10 dBm
+DISPlay:WINDow:TRACe:Y:SCALe:RLEVel:RF 10 DBM
+
+
+//----------- Slot 0 configuration ------------
+// Setup slot 0 for VAMOS AQPSK modulation
+// Activate slot
+CONFigure:MS:CHANnel:SLOT0:STATe ON
+// Normal burst
+CONFigure:MS:CHANnel:SLOT0:TYPE NB
+// AQPSK (VAMOS) modulation
+CONFigure:MS:CHANnel:SLOT0:MTYPe AQPSk
+// Subchannel Power Imbalance Ratio (SCPIR) = 4 dB
+CONFigure:MS:CHANnel:SLOT0:SCPir 4
+// Subchannel 1: User TSC
+CONFigure:MS:CHANnel:SLOT0:SUBChannel1:TSC USER
+CONFigure:MS:CHANnel:SLOT0:SUBChannel1:TSC?
+// -&gt; USER
+// Subchannel 1: Set User TSC bits
+CONFigure:MS:CHANnel:SLOT0:SUBChannel1:TSC:USER '10111101100110010000100001'
+// Subchannel 1: Query User TSC bits
+CONFigure:MS:CHANnel:SLOT0:SUBChannel1:TSC:USER?
+// -&gt; 10111101100110010000100001
+// Subchannel 2: User TSC
+CONFigure:MS:CHANnel:SLOT0:SUBChannel2:TSC USER
+CONFigure:MS:CHANnel:SLOT0:SUBChannel2:TSC?
+// -&gt; USER
+// Subchannel 2: Set User TSC bits
+CONFigure:MS:CHANnel:SLOT0:SUBChannel2:TSC:USER '11010111111101011001110100'
+// Subchannel 2: Query User TSC bits
+CONFigure:MS:CHANnel:SLOT0:SUBChannel2:TSC:USER?
+// -&gt; 11010111111101011001110100
+
+//----------- Slot 1 configuration ------------
+// Activate slot 1
+CONFigure:MS:CHANnel:SLOT1:STATe ON
+// Normal Burst
+CONFigure:MS:CHANnel:SLOT1:TYPE NB
+// AQPSK (VAMOS) modulation
+CONFigure:MS:CHANnel:SLOT1:MTYPe AQPSk
+// Subchannel 1: TSC 0 (Set 1)
+CONFigure:MS:CHANnel:SLOT1:SUBChannel1:TSC 0,1
+// Subchannel 1: Query TSC number and Set number
+CONFigure:MS:CHANnel:SLOT1:SUBChannel1:TSC?
+// -&gt; 0,1
+// Subchannel 1: Query TSC number
+CONFigure:MS:CHANnel:SLOT1:SUBChannel1:TSC? TSC
+// -&gt; 0
+// Subchannel 1: Query Set number
+CONFigure:MS:CHANnel:SLOT1:SUBChannel1:TSC? SET
+// -&gt; 1
+// Subchannel 2: TSC 0 (Set 1)
+CONFigure:MS:CHANnel:SLOT1:SUBChannel2:TSC 0,2
+// Subchannel 2: Query TSC number and Set number
+CONFigure:MS:CHANnel:SLOT1:SUBChannel2:TSC?
+// -&gt; 0,2
+// Subchannel 2: Query TSC number
+CONFigure:MS:CHANnel:SLOT1:SUBChannel2:TSC? TSC
+// -&gt; 0
+// Subchannel 2: Query Set number
+CONFigure:MS:CHANnel:SLOT1:SUBChannel2:TSC? SET
+// -&gt; 2
+
+//----------- Slot 2-7 configuration ------------
+CONFigure:MS:CHANnel:SLOT2:STATe OFF
+CONFigure:MS:CHANnel:SLOT3:STATe OFF
+CONFigure:MS:CHANnel:SLOT4:STATe OFF
+CONFigure:MS:CHANnel:SLOT5:STATe OFF
+CONFigure:MS:CHANnel:SLOT6:STATe OFF
+CONFigure:MS:CHANnel:SLOT7:STATe OFF
+
+
+//---------- Demodulation and Slot Scope------------
+// Configure slot 0 (slot to measure) for single-slot measurements,
+// (e.g. EVM, modulation spectrum).
+CONFigure:MS:CHANnel:MSL:MEASure 0
+// Configure slots 0-1 for multi-slot measurements
+// (e.g. PvT, transient spectrum).
+// Set First slot to measure = 0
+// Set No. of slots to measure =2
+CONFigure:MS:CHANnel:MSL:NOFS 2
+CONFigure:MS:CHANnel:MSL:OFFSet 0
+// Use 'sequence estimator' for the symbol decision
+CONFigure:MS:DEMod:DECision SEQuence
+
+
+//---------- Configuring Data Acquisition ---------------------
+// Define a statistic count of 10, i.e. 10 GSM frames are evaluated statistically.
+SENSe:SWEep:COUNt 10
+
+// Define a capture time for 10 (statistic count) + 2 (headroom) GSM frames
+// Capture Time = (10+2) frames * 4.615 ms/frame = 0.0554 s
+// Thus all 10 (statistic count) frames can be analyzed with a single capture.
+SENSe:SWEep:TIME 0.0554 s
+
+
+//--------------Performing the Measurement-----
+// Initiates a new measurement and waits until the sweep has finished.
+INITiate:IMMediate;*WAI
+
+
+//---------------Retrieving Results-------------
+// Query the maximum EVM value for slot 0 (slot to measure) in current GSM frame
+FETCh:BURSt:MACCuracy:EVM:PEAK:CURR?
+// -&gt; 0.62063819169998169
+// Query the maximum EVM value for slot 0 (slot to measure) in all 10 
+//(statistic count) GSM frames
+FETCh:BURSt:MACCuracy:EVM:PEAK:MAX?
+// -&gt; 0.76938760280609131
+// Query the averaged EVM RMS value for slot 1 (slot to measure) in all 10
+// (statistic count) GSM frames
+FETCh:BURSt:MACCuracy:EVM:RMS:AVERage?
+// -&gt; 0.19639170169830322
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

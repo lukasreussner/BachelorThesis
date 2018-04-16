@@ -1,0 +1,76 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Symbol Mapping" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Differential PSK</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K70_0733-184c8906411153460a00206a01532735-en-US;ID_58e28358e1d2d4550a00206a005fdf4f-184c8906411153460a00206a01532735-en-US;ID_55e20c44e63fb4f80a00206a00004936-184c8906411153460a00206a01532735-en-US;ID_7aeabdf0e1d2d4550a00206a003ddfa1-184c8906411153460a00206a01532735-en-US;ID_db60dd5fe63fb4f80a00206a0165a5bd-184c8906411153460a00206a01532735-en-US;ID_55e6d2fc149411dfa2c4c08d054bef07-184c8906411153460a00206a01532735-en-US;ID_f9b00ff2610911e08c5d9462511f9a3b-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="325e2356f7644f86.htm">Symbol Mapping</a> &gt; <span class="chm-breadcrumb">Differential PSK</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Differential PSK</div><a name="kanchor223">
+</a><a name="kanchor224">
+</a><a name="kanchor225">
+</a><p>With differential PSK, the information is represented in the phase shift between two consecutive decision points. The absolute position of the complex sample value at the decision point does not carry information.</p><p>In the physical constellation diagram, the constellation points at the symbol decision points obtained after ISI-free demodulation are shown (as with common PSK methods). This diagram corresponds to the display on the analyzer. The position of the constellation points is standard-specific. For example, some QPSK standards define the constellation points on the diagonals, while other standards define the coordinate axes.</p><p>In <a class="xref" href="#ID_55e20c44e63fb4f80a00206a00004936-184c8906411153460a00206a01532735-en-US">Table "DQPSK (INMARSAT)"</a>, the symbols are assigned to phase shifts. The QPSK (INMARSAT) mapping corresponds to simple QPSK with phase-differential coding.</p><p>Tables <a class="xref" href="#ID_db60dd5fe63fb4f80a00206a0165a5bd-184c8906411153460a00206a01532735-en-US">Table "D8PSK (NATURAL)"</a> and <a class="xref" href="#ID_55e6d2fc149411dfa2c4c08d054bef07-184c8906411153460a00206a01532735-en-US">Table "D8PSK (GRAY)"</a> show two types of differential 8PSK modulation.</p><p>Differential coding according to VDL is shown in <a class="xref" href="#ID_f9b00ff2610911e08c5d9462511f9a3b-184c8906411153460a00206a01532735-en-US">Table "D8PSK (VDL)"</a>. It can be used for modulation types with 3 bits/symbol, e.g. 8PSK.</p><p>Other types of modulation using differential coding method are described in <a class="xref" href="ae84833d1bb34ee5.htm#shiv_FSV_K70_0753-184c8906411153460a00206a01532735-en-US">"Rotating Differential PSK Modulation"</a>.</p><div class="block" id="ID_58e28358e1d2d4550a00206a005fdf4f-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img2e1fd397e1a01ad20a00206a01ee96a1_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for DQPSK (INMARSAT and NATURAL) including the symbol mapping</div></div><div class="block"><a name="ID_55e20c44e63fb4f80a00206a00004936-184c8906411153460a00206a01532735-en-US">
+</a><span class="table-caption">DQPSK (INMARSAT)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th colspan="5" valign="top"><p>Logical symbol mapping</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Modulation symbol (binary indication: MSB, LSB)</p></td><td valign="top"><p>00</p></td><td valign="top"><p>01</p></td><td valign="top"><p>10</p></td><td valign="top"><p>11</p></td></tr><tr class="evenrow"><td valign="top"><p>Phase shift</p></td><td valign="top"><p>0°</p></td><td valign="top"><p>-90°</p></td><td valign="top"><p>+90°</p></td><td valign="top"><p>180°</p></td></tr></tbody></table></div><div class="block" id="ID_7aeabdf0e1d2d4550a00206a003ddfa1-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgb3480d56e1a958e50a00206a00b24581_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Constellation diagram for D8PSK including the symbol mapping for APCO25, APCO25 Phase 2, GRAY, NATURAL and TETRA</div></div><div class="block"><a name="ID_db60dd5fe63fb4f80a00206a0165a5bd-184c8906411153460a00206a01532735-en-US">
+</a><span class="table-caption">D8PSK (NATURAL)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th colspan="9" valign="top"><p>Logical symbol mapping</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Modulation symbol (binary indication: MSB, LSB)</p></td><td valign="top"><p>000</p></td><td valign="top"><p>001</p></td><td valign="top"><p>010</p></td><td valign="top"><p>011</p></td><td valign="top"><p>100</p></td><td valign="top"><p>101</p></td><td valign="top"><p>110</p></td><td valign="top"><p>111</p></td></tr><tr class="evenrow"><td valign="top"><p>Phase shift</p></td><td valign="top"><p>0°</p></td><td valign="top"><p>45°</p></td><td valign="top"><p>90°</p></td><td valign="top"><p>135°</p></td><td valign="top"><p>180°</p></td><td valign="top"><p>225°</p></td><td valign="top"><p>270°</p></td><td valign="top"><p>315°</p></td></tr></tbody></table></div><div class="block"><a name="ID_55e6d2fc149411dfa2c4c08d054bef07-184c8906411153460a00206a01532735-en-US">
+</a><span class="table-caption">D8PSK (GRAY)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th colspan="9" valign="top"><p>Logical symbol mapping</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Modulation symbol (binary indication: MSB, LSB)</p></td><td valign="top"><p>000</p></td><td valign="top"><p>001</p></td><td valign="top"><p>010</p></td><td valign="top"><p>011</p></td><td valign="top"><p>100</p></td><td valign="top"><p>101</p></td><td valign="top"><p>110</p></td><td valign="top"><p>111</p></td></tr><tr class="evenrow"><td valign="top"><p>Phase shift</p></td><td valign="top"><p>0°</p></td><td valign="top"><p>45°</p></td><td valign="top"><p>135°</p></td><td valign="top"><p>90°</p></td><td valign="top"><p>270°</p></td><td valign="top"><p>315°</p></td><td valign="top"><p>225°</p></td><td valign="top"><p>180°</p></td></tr></tbody></table></div><div class="block"><a name="ID_f9b00ff2610911e08c5d9462511f9a3b-184c8906411153460a00206a01532735-en-US">
+</a><span class="table-caption">D8PSK (VDL)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th colspan="9" valign="top"><p>Logical symbol mapping</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Modulation symbol (binary indication: MSB, LSB)</p></td><td valign="top"><p>000</p></td><td valign="top"><p>001</p></td><td valign="top"><p>010</p></td><td valign="top"><p>011</p></td><td valign="top"><p>100</p></td><td valign="top"><p>101</p></td><td valign="top"><p>110</p></td><td valign="top"><p>111</p></td></tr><tr class="evenrow"><td valign="top"><p>Phase shift</p></td><td valign="top"><p>0°</p></td><td valign="top"><p>45°</p></td><td valign="top"><p>135°</p></td><td valign="top"><p>90°</p></td><td valign="top"><p>315°</p></td><td valign="top"><p>270°</p></td><td valign="top"><p>180°</p></td><td valign="top"><p>225°</p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

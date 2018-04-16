@@ -1,0 +1,84 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Configuration|Using the Uncertainty Calculator" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring Analyzer Characteristics</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_SAInputMatchSelection">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_SAInputMatch">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ExtPAInputMatchSelection">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ExtPAInputMatch">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_SANFUncert">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_SAGainUncert">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_SANF">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ExtPASelection">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ExtPANF">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_ExtPAGain">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdUncertaintyCalc_NetSANF">
+</meta>
+        <meta name="topic-id" value="225">
+</meta>
+        <meta name="topic-id" value="227">
+</meta>
+        <meta name="topic-id" value="229">
+</meta>
+        <meta name="topic-id" value="231">
+</meta>
+        <meta name="topic-id" value="233">
+</meta>
+        <meta name="topic-id" value="235">
+</meta>
+        <meta name="topic-id" value="237">
+</meta>
+        <meta name="topic-id" value="239">
+</meta>
+        <meta name="topic-id" value="241">
+</meta>
+        <meta name="topic-id" value="243">
+</meta>
+        <meta name="topic-id" value="245">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8843c2bf002f08c20a002019008cda4f-0fca6040001083b80a0020190143e16f-en-US;ID_9e4089ea0aba935d0a00201901e5e00d-0fca6040001083b80a0020190143e16f-en-US;ID_3c9cfb420aba935d0a002019011f68e2-0fca6040001083b80a0020190143e16f-en-US;ID_87b55ae10aba935d0a002019018e8372-0fca6040001083b80a0020190143e16f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="6f413a5358b94877.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="112d0d5ae3ab4748.htm">Using the Uncertainty Calculator</a> &gt; <span class="chm-breadcrumb">Configuring Analyzer Characteristics</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Configuring Analyzer Characteristics</div><p><b>Access</b>: [MEAS CONFIG] &gt; "Uncertainty Calculation"</p><p>For the analyzer characteristics, the application always uses the data specified in the datasheet of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW model you are using. Thus, it is not possible to change or adjust the analyzer characteristics in any way. The uncertainty calculation takes several analyzer characteristics into account. Of those, it shows the following as read only fields in the user interface.</p><div class="block"><ul class="list"><li value="1">Input match (VSWR and return loss)</li><li value="2">Gain uncertainty</li><li value="3">Noise figure uncertainty</li><li value="4">Noise figure of the analyzer</li></ul></div><p>However, if you are using an external preamplifier in the test setup, you have to specify its characteristics in order to get a valid uncertainty result. If you specify an external preamplifier, the application automatically calculates and updates the analyzer characteristics based on the characteristics of the preamplifier.</p><p>SCPI command:</p><p><a class="xref" href="1d3c437c1ba44629.htm#ID_f57880e909e048110a0020190058fbe6-154d563809e048110a0020190001c480-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>PREamp:</nobr>​<nobr>STATe</nobr></a></p><p>Refer to the datasheet of the preamplifier you are using for the values you have to enter.</p><p>If you are using a preamplifier, you have to define the following characteristics.</p><div class="block"><div class="subtitle"><a name="ID_9e4089ea0aba935d0a00201901e5e00d-0fca6040001083b80a0020190143e16f-en-US">
+</a>Preamplifier noise figure (PA NF)</div></div><p>Defines the noise figure of the preamplifier.</p><p>SCPI command:</p><p><a class="xref" href="d2184162e34407.htm#ID_1e68542609f190f60a0020190090c636-066beee509df8f210a0020190001fc8c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>PREamp:</nobr>​<nobr>NOISe</nobr></a></p><div class="block"><div class="subtitle"><a name="ID_3c9cfb420aba935d0a002019011f68e2-0fca6040001083b80a0020190143e16f-en-US">
+</a>Preamplifier Gain (PA Gain)</div></div><p>Defines the gain of the preamplifier.</p><p>SCPI command:</p><p><a class="xref" href="d2184162e34381.htm#ID_07569cc709dfeb990a00201901942e36-b6c1b31b09dfeb990a0020190165fde3-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>PREamp:</nobr>​<nobr>GAIN</nobr></a></p><div class="block"><div class="subtitle"><a name="ID_87b55ae10aba935d0a002019018e8372-0fca6040001083b80a0020190143e16f-en-US">
+</a>Net spectrum analyzer noise figure</div></div><p>Shows the noise figure of the analyzer.</p><p>If you are using an external preamplifier, the application calculates the noise figure of the analyzer including the noise figure of the preamplfier and shows the result here.</p><p>If you do not use an external preamplifier, this value is the same as the noise figure of the analyzer shown in the "SA NF" field.</p><p>SCPI commands:</p><p><a class="xref" href="d2184162e34474.htm#ID_4400eebec0344e9f0a00201901f6189f-8554cf9ec03421260a00201900521c2c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>SANalyzer:</nobr>​<nobr>GAIN:</nobr>​<nobr>UNCertainty?</nobr></a></p><p><a class="xref" href="d2184162e34492.htm#ID_4400eebec0344e9f0a00201901f6189f-1ed3ce97c0344e9f0a00201901ca7d10-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate:</nobr>​<nobr>UNCertainty:</nobr>​<nobr>SANalyzer:</nobr>​<nobr>NOISe:</nobr>​<nobr>UNCertainty?</nobr></a></p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

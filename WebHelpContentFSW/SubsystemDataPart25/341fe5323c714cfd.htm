@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="NB-IoT Downlink (R&amp;S FSW-K106)|Configuration|I/Q Measurements Configuration|Defining Signal Characteristics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_nbiot_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Defining physical settings for NB-IoT inband and guardband deployment</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdSignalDescriptionEUTRACenterFrequency_NBIOT_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSignalDescriptionEUTRAChannelBandwidth_NBIOT_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSignalDescriptionEUTRACRSSequenceInfo_NBIOT_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdSignalDescriptionEUTRAPRBIndex_NBIOT_DL">
+</meta>
+        <meta name="topic-id" value="426">
+</meta>
+        <meta name="topic-id" value="427">
+</meta>
+        <meta name="topic-id" value="428">
+</meta>
+        <meta name="topic-id" value="429">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_de9260cb78252b2e0a001ae7476889eb-2114278278252b2e0a001ae72036c7ed-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_nbiot_dl/Content/341fe5323c714cfd.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">NB-IoT Downlink (R&amp;S FSW-K106)</a> &gt; <a class="chm-breadcrumb" href="c4c7270aee074286.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="fb16db07694a41e3.htm">I/Q Measurements Configuration</a> &gt; <a class="chm-breadcrumb" href="04741e1bfb04431a.htm">Defining Signal Characteristics</a> &gt; <span class="chm-breadcrumb">Defining physical settings for NB-IoT inband and guardband deployment</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor93">
+</a><a name="kanchor94">
+</a><a name="kanchor95">
+</a><a name="kanchor96">
+</a><a name="kanchor97">
+</a><a name="kanchor98">
+</a><a name="kanchor99">
+</a><a name="kanchor100">
+</a><a name="kanchor101">
+</a><a name="kanchor102">
+</a><div class="function_heading"><a name="ID_de9260cb78252b2e0a001ae7476889eb-2114278278252b2e0a001ae72036c7ed-en-US">
+</a><span style="font-weight: bold">Defining physical settings for NB-IoT inband and guardband deployment</span></div><p>When you use the in band deployment, you have to specify the characteristics of the LTE (E-UTRA) channel that the NB-IoT channel is located in.</p><div class="block"><div class="listintro-in-compact-list">Define the following E-UTRA properties:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">"E-UTRA Center Frequency"<br/>Center frequency of the LTE channel.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">"E-UTRA Channel Bandwidth"<br/>Channel bandwidth of the LTE channel (3<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, 15<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz or 20<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz).<br/>Note that the 1.4<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz bandwidth is not supported for in band transmission of NB-IoT signals.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">"E-UTRA CRS Sequence Info" (inband deployment only)<br/>Cell-specific reference signal sequence. The sequence defines the assignment of resources between LTE and NB-IoT. These sequences are defined in 3GPP 36.213, chapter 16.8.</li><li style="margin-bottom:0; padding-bottom:0;" value="4">"E-UTRA PRB Index"<br/>For inband deployment, the physical resource block (PRB) index is derived from the E-UTRA CRS sequence info. It defines the location of the NB-IoT carriers in the E-UTRA signal.<br/>For guardband deployment, you have to select PRB indices that lie outside the E-UTRA carrier.</li></ul></div><div class="block"><div class="listintro-in-compact-list">In addition, the application shows various physical properties of the NB-IoT signal.</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">"NB-IoT Channel Bandwidth", which is currently always 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>kHz.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">"NB-IoT Center Frequency", which is calculated from the E-UTRA channel characteristics.</li><li style="margin-bottom:0; padding-bottom:0;" value="3">"FFT Size"</li><li style="margin-bottom:0; padding-bottom:0;" value="4">"Sample Rate"</li><li style="margin-bottom:0; padding-bottom:0;" value="5">"Occupied Bandwidth"</li><li style="margin-bottom:0; padding-bottom:0;" value="6">"Occupied Carriers"</li></ul></div>Remote command: <div class="rcclist_right"><p>E-UTRA center frequency: <a class="xref" href="061a133e74a04f08.htm#ID_7996880d7854e2b20a001ae73d5ad3b0-3e5343e87854e2b20a001ae715ffe748-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>EUTRa:</nobr>​<nobr>FREQuency</nobr></a></p><p>E-UTRA channel bandwidth: <a class="xref" href="feaddb7706774a2b.htm#ID_3840eb488da7533c0a0020190026df7c-3c8941468da751d50a00201901936165-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>DL[:</nobr>​<nobr>CC&lt;cc&gt;]:</nobr>​<nobr>BW</nobr></a></p><p>E-UTRA CRS sequence: <a class="xref" href="a932509d8a084018.htm#ID_cf09bc847859363d0a001ae751d75d23-3665645a7859363d0a001ae71223cecf-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>DL:</nobr>​<nobr>SINFo</nobr></a></p><p>E-UTRA PRB index: <a class="xref" href="9b1daa5f364a46f1.htm#ID_9335e22a78596a3e0a001ae7274be26a-1abff69778596a3e0a001ae766fdb14d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>LTE]:</nobr>​<nobr>DL:</nobr>​<nobr>PINDex</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

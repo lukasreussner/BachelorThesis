@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Remote Commands for Pulse Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a5c9fd5077cf84220a00206a01bd1a0c-eba6a4f96a29172a0a00206a01a1709f-en-US;ID_c7c0e07f841094ed0a710a3100abf658-eba6a4f96a29172a0a00206a01a1709f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <span class="chm-breadcrumb">Remote Commands for Pulse Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Remote Commands for Pulse Measurements</div><p>The following commands are required to perform measurements in the Pulse application in a remote environment. The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW must already be set up for remote operation in a network as described in the base unit manual.</p><p>(See <a class="xref" href="../../../Content/458e4aabc08242c2.htm">How to Set Up a Network and Remote Control</a>.)</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><a name="kanchor680">
+</a><p>Note that basic tasks that are also performed in the base unit in the same way are not described here.</p><p>In particular, this includes:</p><div class="block"><ul class="list"><li value="1">Managing Settings and Results, i.e. storing and loading settings and result data, see <a class="xref" href="../../../Content/0676e691243b42ba.htm">Managing Settings and Results</a></li><li value="2">Basic instrument configuration, e.g. checking the system configuration, customizing the screen layout, or configuring networks and remote operation, see <a class="xref" href="../../../Content/238ee539da9f4d16.htm">Configuring the R&amp;S FSW</a></li><li value="3">Using the common status registers, see <a class="xref" href="../../../Content/ff1bbe99079c4848.htm">Using the Status Register</a> (specific status registers for Pulse measurements are not used)</li></ul></div></td></tr></table></div></div><p>After a short introduction, the tasks specific to the Pulse application are described here:</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="1a92223f6e5a4d5b.htm" class="chapter_title_toc">Common Suffixes</a></li><li value="2"><a href="458cf603e4b745a5.htm" class="chapter_title_toc">Activating Pulse Measurements</a></li><li value="3"><a href="cdba971fc1ff443e.htm" class="chapter_title_toc">Signal Description</a></li><li value="4"><a href="6e636873909f40dc.htm" class="chapter_title_toc">Reference Signal Description</a></li><li value="5"><a href="3b9fee17b6c34dcb.htm" class="chapter_title_toc">Input/Output Settings</a></li><li value="6"><a href="ccf21d59139740d6.htm" class="chapter_title_toc">Frontend Configuration</a></li><li value="7"><a href="148d720962f64ab8.htm" class="chapter_title_toc">Triggering Measurements</a></li><li value="8"><a href="6d4cc93ab52d403b.htm" class="chapter_title_toc">Segmented Data Capturing</a></li><li value="9"><a href="7f20f0edced945cb.htm" class="chapter_title_toc">Data Acquisition</a></li><li value="10"><a href="b55491ba555c4be7.htm" class="chapter_title_toc">Pulse Detection</a></li><li value="11"><a href="54be762984de434e.htm" class="chapter_title_toc">Configuring the Pulse Measurement</a></li><li value="12"><a href="a18734bb91df4104.htm" class="chapter_title_toc">Configuring and Performing Sweeps</a></li><li value="13"><a href="c6eef1afd18541b5.htm" class="chapter_title_toc">Configuring the Results</a></li><li value="14"><a href="47d595db8f744f40.htm" class="chapter_title_toc">Configuring the Result Display</a></li><li value="15"><a href="5797fe1d0174407b.htm" class="chapter_title_toc">Configuring Standard Traces</a></li><li value="16"><a href="97ec6dc729384288.htm" class="chapter_title_toc">Working with Markers</a></li><li value="17"><a href="0d6146567b4b4bd7.htm" class="chapter_title_toc">Configuring an Analysis Interval and Line (MSRA mode only)</a></li><li value="18"><a href="e3fd8acec2e544cc.htm" class="chapter_title_toc">Configuring an Analysis Interval and Line (MSRT mode only)</a></li><li value="19"><a href="573fbd4ad7fe43bc.htm" class="chapter_title_toc">Retrieving Results</a></li><li value="20"><a href="a103c75e80cb4be7.htm" class="chapter_title_toc">Retrieving Marker Results</a></li><li value="21"><a href="8be057cb429d4e52.htm" class="chapter_title_toc">Programming Example: Pulse Measurement</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

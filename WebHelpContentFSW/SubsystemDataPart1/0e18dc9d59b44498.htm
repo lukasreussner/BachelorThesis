@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Capturing Data and Performing Sweeps</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_09fe1303531421ad0a720a2b00f50903-37c07c805703a7430a00206a00b14126-en-US;ID_1ba0d8d361508d660a710a3100888183-37c07c805703a7430a00206a00b14126-en-US;ID_c1bff61f676b11e1b17a87f56950c823-37c07c805703a7430a00206a00b14126-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <span class="chm-breadcrumb">Capturing Data and Performing Sweeps</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1108">
+</a><a name="kanchor1109">
+</a><a name="kanchor1110">
+</a><div class="chm-chaptertitle">Capturing Data and Performing Sweeps</div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_1ba0d8d361508d660a710a3100888183-37c07c805703a7430a00206a00b14126-en-US">
+</a>Different measurement procedures</div><a name="kanchor1111">
+</a><p>Two different procedures to capture I/Q data remotely are available:</p><div class="block"><ul class="list"><li value="1">Measurement and result query with one command (see <a class="xref" href="4f572b17c8504218.htm#shiv_6a_remote_commands_8012-e58d91ac57dd61630a00206a010977e6-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>DATA?</nobr></a>)<br/>This method causes the least delay between measurement and output of the result data, but it requires the control computer to wait actively for the response data.</li><li value="2">Setting up the instrument, starting the measurement via <span class="command">INIT</span> and querying the result list at the end of the measurement (see <a class="xref" href="6877bd36bc694263.htm#ID_c540f57d088531b80a710a92016b71b2-2eacf68957deb1fe0a00206a01170374-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>DATA:</nobr>​<nobr>MEMory?</nobr></a>)<br/>With this method, the control computer can be used for other activities during the measurement. However, the additional time needed for synchronization via service request must be taken into account.</li></ul></div></td></tr></table></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_c1bff61f676b11e1b17a87f56950c823-37c07c805703a7430a00206a00b14126-en-US">
+</a>MSRA/MSRT operating mode</div><a name="kanchor1112">
+</a><a name="kanchor1113">
+</a><p>Note that in MSRA/MSRT operating mode, capturing data is only possible for the MSRA Master channel. In I/Q Analyzer application channels, the sweep configuration commands define the <b>analysis interval</b>. Be sure to select the correct channel before using these commands.</p></td></tr></table></div></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="76f7b105d83940f7.htm#ID_200b6bdf2e6085de0a00206a01eb3264-72c9d11620b0412a0a00206a00ce8d97-en-US" class="title_toc">ABORt</a><br/><a href="bef0981724ce4335.htm#ID_2dfd45e42e5479060a00206a002fda0b-109cecc92a0442d90a00206a0005fd8a-en-US" class="title_toc">INITiate&lt;n&gt;:CONMeas</a><br/><a href="380afb37cb0f4960.htm#ID_9eb251022e54f3470a00206a00a5ac5d-2f2822882a047e3c0a00206a01cd19f9-en-US" class="title_toc">INITiate&lt;n&gt;:CONTinuous</a><br/><a href="1bed99d5b5ab4bd4.htm#ID_12648fa09f56982b0a00206a00bc6d42-76b5c4ec2a04a7110a00206a015229a7-en-US" class="title_toc">INITiate&lt;n&gt;[:IMMediate]</a><br/><a href="5c938c4362c04926.htm#ID_b6c6328e48d6046e0a00206a000f661f-bc9c60b048e4f2e40a00206a01417839-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:ABORt</a><br/><a href="1770dab869414c00.htm#ID_b6c6328e48d6046e0a00206a000f661f-0d99028d48e05e0e0a00206a01b7c652-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:IMMediate</a><br/><a href="cbc213560f5f486a.htm#ID_b6c6328e48d6046e0a00206a000f661f-d00a92dc48d6047d0a00206a007bd690-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:MODE</a><br/><a href="7af7fa8bc0ff4fbd.htm#ID_12648fa09f56982b0a00206a00bc6d42-995790ec5ccd3c470a00206a0149bac2-en-US" class="title_toc">INITiate&lt;n&gt;:SEQuencer:REFResh[:ALL]</a><br/><a href="e919c6fee0444a28.htm#ID_d6f5caa22dde9ffd0a00206a01a137be-99851b6729fdd1040a00206a0039c2fb-en-US" class="title_toc">[SENSe:]SWEep:COUNt</a><br/><a href="932528b38b0b4e89.htm#ID_d92c6e893b805d690a00206a00117752-74217b934fe182130a00201901375b0c-en-US" class="title_toc">[SENSe:]SWEep:COUNt:CURRent?</a><br/><a href="6e13d7544987492e.htm#ID_e0ff1a1b2e430e110a00206a014dca13-41eb792c29fe0cb60a00206a01b90eff-en-US" class="title_toc">[SENSe:]SWEep:POINts</a><br/><a href="b591a8f9fe9c4f48.htm#ID_7ca1f2a42e3a7e940a00206a01dfeab3-52f0715cddf01d6c0a00206a01b26546-en-US" class="title_toc">[SENSe:]SWEep:TIME</a><br/><a href="057de8165b46416d.htm#ID_cb2fce9f48d2e87b0a00206a00019770-5d351f7648d2e87b0a00206a00c27de8-en-US" class="title_toc">SYSTem:SEQuencer</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

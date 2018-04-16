@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classifier>
+  <parameterFile name="BetaClassificationFSW" created="2018-03-13 20:02:25" />
+  <trainParameters featureSelectionMethod="COND_MUTUAL_INFO" featureVectorSize="FVSAbsolute(25)" phraseMode="ON" indexType="TRAIN" svmAlgorithm="LibLinear" trainMethod="LINEAR_SVM_FULLY_AUTOMATIC" optimizationGoal="F_MEASURE" numberFolds="5" />
+  <caseBasedClassification mode="off" />
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="1.0033913" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:25 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="1.1498817" topic="8.0_REMOTE_COMMANDS">
+    <query boost="5.44668" type="HTermQuery" origin="automatic">
+      <term field="body">commands</term>
+    </query>
+    <query boost="1.3754638" type="HTermQuery" origin="automatic">
+      <term field="body">top</term>
+    </query>
+    <query boost="2.2114556" type="HTermQuery" origin="automatic">
+      <term field="body">parameters</term>
+    </query>
+    <query boost="5.4760737" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">usage</term>
+      <term field="body" position="1">â</term>
+    </query>
+    <query boost="1.1653144" type="HTermQuery" origin="automatic">
+      <term field="body">operation</term>
+    </query>
+    <query boost="6.7384696" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">â</term>
+      <term field="body" position="1">see</term>
+    </query>
+    <query boost="4.125432" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">â</term>
+      <term field="body" position="1">n</term>
+    </query>
+    <query boost="2.3801174" type="HTermQuery" origin="automatic">
+      <term field="body">register</term>
+    </query>
+    <query boost="1.1703063" type="HTermQuery" origin="automatic">
+      <term field="body">status</term>
+    </query>
+    <query boost="-0.9056113" type="HTermQuery" origin="automatic">
+      <term field="body">example</term>
+    </query>
+    <query boost="1.7796923" type="HTermQuery" origin="automatic">
+      <term field="body">performing</term>
+    </query>
+    <query boost="0.7327385" type="HTermQuery" origin="automatic">
+      <term field="body">measuring</term>
+    </query>
+  </query>
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="0.75254345" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:24 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="1.720728" topic="5.0_EXAMPLES_AND_HOWTOS">
+    <query boost="18.047863" type="HTermQuery" origin="automatic">
+      <term field="body">examples</term>
+    </query>
+    <query boost="6.4667435" type="HTermQuery" origin="automatic">
+      <term field="body">how</term>
+    </query>
+    <query boost="7.955925" type="HTermQuery" origin="automatic">
+      <term field="body">select</term>
+    </query>
+    <query boost="5.235801" type="HTermQuery" origin="automatic">
+      <term field="body">set</term>
+    </query>
+    <query boost="6.6010766" type="HTermQuery" origin="automatic">
+      <term field="body">config</term>
+    </query>
+    <query boost="5.0544915" type="HTermQuery" origin="automatic">
+      <term field="body">generator</term>
+    </query>
+    <query boost="4.116469" type="HTermQuery" origin="automatic">
+      <term field="body">level</term>
+    </query>
+    <query boost="5.5274143" type="HTermQuery" origin="automatic">
+      <term field="body">necessary</term>
+    </query>
+    <query boost="10.067124" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">key</term>
+      <term field="body" position="1">select</term>
+    </query>
+    <query boost="0.74167657" type="HTermQuery" origin="automatic">
+      <term field="body">trigger</term>
+    </query>
+    <query boost="1.728276" type="HTermQuery" origin="automatic">
+      <term field="body">trace</term>
+    </query>
+    <query boost="9.961823" type="HTermQuery" origin="automatic">
+      <term field="body">mhz</term>
+    </query>
+    <query boost="-3.9427652" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">measurements</term>
+      <term field="body" position="1">results</term>
+    </query>
+    <query boost="1.5810419" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">described</term>
+      <term field="body" position="1">how</term>
+    </query>
+    <query boost="-3.4704115" type="HTermQuery" origin="automatic">
+      <term field="body">signal</term>
+    </query>
+    <query boost="-4.3101664" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">sweep</term>
+      <term field="body" position="1">measurement</term>
+    </query>
+    <query boost="3.3799875" type="HTermQuery" origin="automatic">
+      <term field="body">results</term>
+    </query>
+    <query boost="2.607242" type="HTermQuery" origin="automatic">
+      <term field="body">span</term>
+    </query>
+    <query boost="5.115403" type="HTermQuery" origin="automatic">
+      <term field="body">digital</term>
+    </query>
+    <query boost="0.33598047" type="HTermQuery" origin="automatic">
+      <term field="body">frequency</term>
+    </query>
+    <query boost="1.179508" type="HTermQuery" origin="automatic">
+      <term field="body">work</term>
+    </query>
+    <query boost="-1.8044742" type="HTermQuery" origin="automatic">
+      <term field="body">measurements</term>
+    </query>
+    <query boost="3.7039907" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">how</term>
+      <term field="body" position="1">work</term>
+    </query>
+    <query boost="-6.970376" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">set</term>
+      <term field="body" position="1">up</term>
+    </query>
+    <query boost="0.20742011" type="HTermQuery" origin="automatic">
+      <term field="body">setup</term>
+    </query>
+  </query>
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="1.7838068" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:22 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="2.0652535" topic="1.0_MEASUREMENTS">
+    <query boost="8.412598" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">basic</term>
+      <term field="body" position="1">measurements</term>
+      <term field="body" position="2">basic</term>
+    </query>
+    <query boost="5.3741546" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">sequencer</term>
+      <term field="body" position="1">concept</term>
+    </query>
+    <query boost="6.1443334" type="HTermQuery" origin="automatic">
+      <term field="body">distribution</term>
+    </query>
+    <query boost="6.1989703" type="HTermQuery" origin="automatic">
+      <term field="body">keypad</term>
+    </query>
+    <query boost="4.845963" type="HTermQuery" origin="automatic">
+      <term field="body">slightly</term>
+    </query>
+    <query boost="0.6474475" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">imprint</term>
+      <term field="body" position="1">statement</term>
+    </query>
+    <query boost="2.9191525" type="HTermQuery" origin="automatic">
+      <term field="body">continuous</term>
+    </query>
+    <query boost="3.38175" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">measurements</term>
+      <term field="body" position="1">results</term>
+    </query>
+    <query boost="0.9330867" type="HTermQuery" origin="automatic">
+      <term field="body">until</term>
+    </query>
+    <query boost="0.92860293" type="HTermQuery" origin="automatic">
+      <term field="body">highlighted</term>
+    </query>
+    <query boost="0.53075874" type="HTermQuery" origin="automatic">
+      <term field="body">after</term>
+    </query>
+    <query boost="-0.14133589" type="HTermQuery" origin="automatic">
+      <term field="body">stopped</term>
+    </query>
+    <query boost="-0.30770275" type="HTermQuery" origin="automatic">
+      <term field="body">results</term>
+    </query>
+    <query boost="6.9665213" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">sequencer</term>
+      <term field="body" position="1">mode</term>
+    </query>
+    <query boost="1.2634554" type="HTermQuery" origin="automatic">
+      <term field="body">all</term>
+    </query>
+    <query boost="2.192665" type="HTermQuery" origin="automatic">
+      <term field="body">knob</term>
+    </query>
+    <query boost="2.5738819" type="HTermQuery" origin="automatic">
+      <term field="body">provided</term>
+    </query>
+    <query boost="1.1477249" type="HTermQuery" origin="automatic">
+      <term field="body">time</term>
+    </query>
+    <query boost="1.1950066" type="HTermQuery" origin="automatic">
+      <term field="body">signal</term>
+    </query>
+    <query boost="1.5784134" type="HTermQuery" origin="automatic">
+      <term field="body">again</term>
+    </query>
+    <query boost="-0.3084139" type="HTermQuery" origin="automatic">
+      <term field="body">input</term>
+    </query>
+    <query boost="0.84345776" type="HTermQuery" origin="automatic">
+      <term field="body">can</term>
+    </query>
+    <query boost="-0.84148175" type="HTermQuery" origin="automatic">
+      <term field="body">spectra</term>
+    </query>
+    <query boost="2.117812" type="HTermQuery" origin="automatic">
+      <term field="body">modulated</term>
+    </query>
+    <query boost="0.677708" type="HTermQuery" origin="automatic">
+      <term field="body">function</term>
+    </query>
+  </query>
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="1.3378551" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:22 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="1.4122474" topic="2.0_RESULTS_AND_ANALYSIS">
+    <query boost="4.0369096" type="HTermQuery" origin="automatic">
+      <term field="body">diagram</term>
+    </query>
+    <query boost="10.392629" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">getting</term>
+      <term field="body" position="1">started</term>
+      <term field="body" position="2">operating</term>
+    </query>
+    <query boost="18.920729" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">fsw-k18</term>
+      <term field="body" position="1">analysis</term>
+    </query>
+    <query boost="23.443556" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">results</term>
+      <term field="body" position="1">result</term>
+    </query>
+    <query boost="19.329508" type="HTermQuery" origin="automatic">
+      <term field="body">red</term>
+    </query>
+    <query boost="0.5593354" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">imprint</term>
+      <term field="body" position="1">statement</term>
+    </query>
+  </query>
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="1.3378551" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:23 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="1.6511567" topic="4.0_BASICS">
+    <query boost="12.389452" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">getting</term>
+      <term field="body" position="1">started</term>
+      <term field="body" position="2">operating</term>
+    </query>
+    <query boost="0.92339563" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">imprint</term>
+      <term field="body" position="1">statement</term>
+    </query>
+    <query boost="6.6596465" type="HTermQuery" origin="automatic">
+      <term field="body">basics</term>
+    </query>
+    <query boost="1.8574909" type="HTermQuery" origin="automatic">
+      <term field="body">getting</term>
+    </query>
+    <query boost="3.1136672" type="HTermQuery" origin="automatic">
+      <term field="body">r&amp;sâ</term>
+    </query>
+    <query boost="0.46616486" type="HTermQuery" origin="automatic">
+      <term field="body">instrument</term>
+    </query>
+    <query boost="0.082991734" type="HTermQuery" origin="automatic">
+      <term field="body">navigation</term>
+    </query>
+    <query boost="2.7584674" type="HTermQuery" origin="automatic">
+      <term field="body">window</term>
+    </query>
+    <query boost="1.8454771" type="HTermQuery" origin="automatic">
+      <term field="body">tab</term>
+    </query>
+    <query boost="10.015143" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">getting</term>
+      <term field="body" position="1">started</term>
+      <term field="body" position="2">trying</term>
+    </query>
+    <query boost="-0.2430515" type="HTermQuery" origin="automatic">
+      <term field="body">display</term>
+    </query>
+    <query boost="-0.54486024" type="HTermQuery" origin="automatic">
+      <term field="body">noise</term>
+    </query>
+    <query boost="0.12879601" type="HTermQuery" origin="automatic">
+      <term field="body">key</term>
+    </query>
+    <query boost="0.3202477" type="HTermQuery" origin="automatic">
+      <term field="body">does</term>
+    </query>
+    <query boost="1.6922138" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">phase</term>
+      <term field="body" position="1">noise</term>
+    </query>
+    <query boost="5.638568" type="HTermQuery" origin="automatic">
+      <term field="body">icon</term>
+    </query>
+    <query boost="2.5296617" type="HTermQuery" origin="automatic">
+      <term field="body">use</term>
+    </query>
+    <query boost="8.59821" type="HTermQuery" origin="automatic">
+      <term field="body">connecting</term>
+    </query>
+    <query boost="1.7830608" type="HTermQuery" origin="automatic">
+      <term field="body">them</term>
+    </query>
+    <query boost="0.3198747" type="HTermQuery" origin="automatic">
+      <term field="body">application</term>
+    </query>
+    <query boost="0.8334805" type="HTermQuery" origin="automatic">
+      <term field="body">operating</term>
+    </query>
+    <query boost="6.348443" type="HTermQuery" origin="automatic">
+      <term field="body">combination</term>
+    </query>
+    <query boost="0.84208775" type="HTermQuery" origin="automatic">
+      <term field="body">displayed</term>
+    </query>
+    <query boost="3.300285" type="HTermQuery" origin="automatic">
+      <term field="body">certain</term>
+    </query>
+    <query boost="5.938956" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">navigation</term>
+      <term field="body" position="1">phase</term>
+    </query>
+  </query>
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="1.7838068" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:24 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="1.7922314" topic="6.0_APPLICATIONS">
+    <query boost="4.583499" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">operating</term>
+      <term field="body" position="1">modes</term>
+    </query>
+    <query boost="2.5053577" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">available</term>
+      <term field="body" position="1">download</term>
+    </query>
+    <query boost="4.737447" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">available</term>
+      <term field="body" position="1">applications</term>
+    </query>
+    <query boost="6.0862637" type="HTermQuery" origin="automatic">
+      <term field="body">welcome</term>
+    </query>
+    <query boost="1.1198382" type="HTermQuery" origin="automatic">
+      <term field="body">contains</term>
+    </query>
+    <query boost="0.77256125" type="HTermQuery" origin="automatic">
+      <term field="body">find</term>
+    </query>
+    <query boost="-0.14974214" type="HTermQuery" origin="automatic">
+      <term field="body">instrument</term>
+    </query>
+    <query boost="1.3584212" type="HTermQuery" origin="automatic">
+      <term field="body">available</term>
+    </query>
+    <query boost="2.599154" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">instrument</term>
+      <term field="body" position="1">â</term>
+    </query>
+    <query boost="1.0478115" type="HTermQuery" origin="automatic">
+      <term field="body">created</term>
+    </query>
+    <query boost="2.1657379" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">application</term>
+      <term field="body" position="1">provides</term>
+    </query>
+    <query boost="1.0866828" type="HTermQuery" origin="automatic">
+      <term field="body">detailed</term>
+    </query>
+  </query>
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="1.7838068" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:25 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="1.7531701" topic="9.0_TROUBLESHOOTING">
+    <query boost="11.712993" type="HTermQuery" origin="automatic">
+      <term field="body">troubleshooting</term>
+    </query>
+    <query boost="9.436446" type="HTermQuery" origin="automatic">
+      <term field="body">fails</term>
+    </query>
+    <query boost="6.245812" type="HTermQuery" origin="automatic">
+      <term field="body">hints</term>
+    </query>
+    <query boost="8.940317" type="HTermQuery" origin="automatic">
+      <term field="body">record</term>
+    </query>
+    <query boost="2.5061908" type="HTermQuery" origin="automatic">
+      <term field="body">applies</term>
+    </query>
+  </query>
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="1.0033913" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:22 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="1.9360632" topic="3.0_CONFIGURATIONS">
+    <query boost="32.4276" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">front</term>
+      <term field="body" position="1">panel</term>
+      <term field="body" position="2">view</term>
+    </query>
+    <query boost="9.749569" type="HTermQuery" origin="automatic">
+      <term field="body">configuration</term>
+    </query>
+    <query boost="8.870222" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">imprint</term>
+      <term field="body" position="1">statement</term>
+    </query>
+    <query boost="17.522957" type="HTermQuery" origin="automatic">
+      <term field="body">impact</term>
+    </query>
+    <query boost="23.82304" type="HTermQuery" origin="automatic">
+      <term field="body">preparing</term>
+    </query>
+    <query boost="3.3723497" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">â</term>
+      <term field="body" position="1">â</term>
+    </query>
+  </query>
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="1.0" threshold="0.5" origin="a priori probability" date="3/13/18 8:02:25 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="3.4028235E38" topic="TRASH" />
+  <query type="HyperplaneQuery" version="4" analyzer="StandardAnalyzer" steepness="0.75254345" threshold="0.5" origin="liblinear_svm" date="3/13/18 8:02:24 PM CET" similarity="hyperplaneSimilarity" activationFunction="SigmoidActivationFunction" bias="1.4674256" topic="7.0_DATA_MANAGEMENT">
+    <query boost="19.970478" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">common</term>
+      <term field="body" position="1">measurement</term>
+      <term field="body" position="2">settings</term>
+      <term field="body" position="3">data</term>
+    </query>
+    <query boost="25.22966" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">data</term>
+      <term field="body" position="1">management</term>
+    </query>
+    <query boost="15.533285" type="HTermQuery" origin="automatic">
+      <term field="body">storage</term>
+    </query>
+    <query boost="5.691629" type="HPhraseQuery" origin="automatic">
+      <term field="body" position="0">power</term>
+      <term field="body" position="1">sensors</term>
+    </query>
+    <query boost="4.6593895" type="HTermQuery" origin="automatic">
+      <term field="body">data</term>
+    </query>
+    <query boost="3.4935226" type="HTermQuery" origin="automatic">
+      <term field="body">input</term>
+    </query>
+  </query>
+</classifier>

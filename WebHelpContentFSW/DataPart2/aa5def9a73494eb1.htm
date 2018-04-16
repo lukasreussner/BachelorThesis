@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|SCPI Command Structure|Syntax for Device-Specific Commands" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Numeric Suffixes</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9326c8d069e9c5fa0a001ae7730ef84e-73f249836105f78d0a00206a00818609-en-US;ID_6efa9c446210d5af0a00206a019b4b48-73f249836105f78d0a00206a00818609-en-US;ID_d9ab93266210d5af0a00206a01c16053-73f249836105f78d0a00206a00818609-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="6aed0083cd0e4cbd.htm">SCPI Command Structure</a> &gt; <a class="chm-breadcrumb" href="273202dade6b4762.htm">Syntax for Device-Specific Commands</a> &gt; <span class="chm-breadcrumb">Numeric Suffixes</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2698">
+</a><div class="chm-chaptertitle">Numeric Suffixes</div><p>If a command can be applied to multiple instances of an object, e.g. specific channels or sources, the required instances can be specified by a suffix added to the command. Numeric suffixes are indicated by angular brackets (&lt;1...4&gt;, &lt;n&gt;, &lt;i&gt;) and are replaced by a single value in the command. Entries without a suffix are interpreted as having the suffix 1.</p><div class="block"><span class="bold"><a name="ID_6efa9c446210d5af0a00206a019b4b48-73f249836105f78d0a00206a00818609-en-US">
+</a>Example: </span><p>Definition: <span class="command">HCOPy:PAGE:DIMensions:QUADrant[&lt;N&gt;]</span></p><p>Command: <span class="command">HCOP:PAGE:DIM:QUAD2</span></p><p>This command refers to the quadrant 2.</p></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_d9ab93266210d5af0a00206a01c16053-73f249836105f78d0a00206a00818609-en-US">
+</a>Different numbering in remote control</div><p>For remote control, the suffix may differ from the number of the corresponding selection used in manual operation. SCPI prescribes that suffix counting starts with 1. Suffix 1 is the default state and used when no specific suffix is specified.</p><p>Some standards define a fixed numbering, starting with 0. If the numbering differs in manual operation and remote control, it is indicated for the corresponding command.</p></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

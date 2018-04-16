@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Remote Commands for 3GPP FDD Measurements|Configuring Code Domain Analysis and Time Alignment Error Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Channel Detection</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1c02b2f3e5f263dc0a00206a00fe3aa4-ba18bde8278cfe600a001ae70a466663-en-US;ID_0697a9e0e4c5e16c0a00206a01e8fb87-ba18bde8278cfe600a001ae70a466663-en-US;ID_5c32c55bb1db11e0be5eb3f316136a86-ba18bde8278cfe600a001ae70a466663-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="1dcfbceef19f4e89.htm">Remote Commands for 3GPP FDD Measurements</a> &gt; <a class="chm-breadcrumb" href="277aa63e44a84197.htm">Configuring Code Domain Analysis and Time Alignment Error Measurements</a> &gt; <span class="chm-breadcrumb">Channel Detection</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor736">
+</a><div class="chm-chaptertitle">Channel Detection</div><p>The channel detection settings determine which channels are found in the input signal. The commands for working with channel tables are described here.</p><p>When the channel type is required as a parameter by a remote command or provided as a result for a remote query, the following abbreviations and assignments to a numeric value are used:</p><div class="block"><a name="ID_0697a9e0e4c5e16c0a00206a01e8fb87-ba18bde8278cfe600a001ae70a466663-en-US">
+</a><a name="kanchor737">
+</a><span class="table-caption">BTS channel types and their assignment to a numeric parameter value</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Param.</p></th><th valign="top"><p>Channel type</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>DPCH</p></td><td valign="top"><p><b>D</b>edicated <b>P</b>hysical <b>Ch</b>annel of a standard frame</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>PICH</p></td><td valign="top"><p><b>P</b>aging <b>I</b>ndication <b>Ch</b>annel</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>CPICH</p></td><td valign="top"><p><b>C</b>ommon <b>Pi</b>lot <b>Ch</b>annel</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>PSCH</p></td><td valign="top"><p><b>P</b>rimary <b>S</b>ynchronization <b>Ch</b>annel</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>SSCH</p></td><td valign="top"><p><b>S</b>econdary <b>S</b>ynchronization <b>Ch</b>annel</p></td></tr><tr class="evenrow"><td valign="top"><p>5</p></td><td valign="top"><p>PCCPCH</p></td><td valign="top"><p><b>P</b>rimary <b>C</b>ommon <b>C</b>ontrol <b>P</b>hysical <b>Ch</b>annel</p></td></tr><tr class="oddrow"><td valign="top"><p>6</p></td><td valign="top"><p>SCCPCH</p></td><td valign="top"><p><b>S</b>econdary <b>C</b>ommon <b>C</b>ontrol <b>P</b>hysical <b>Ch</b>annel</p></td></tr><tr class="evenrow"><td valign="top"><p>7</p></td><td valign="top"><p>HS_SCCH</p></td><td valign="top"><p>HSDPA: <b>H</b>igh <b>S</b>peed <b>S</b>hared <b>C</b>ontrol <b>Ch</b>annel</p></td></tr><tr class="oddrow"><td valign="top"><p>8</p></td><td valign="top"><p>HS_PDSCH</p></td><td valign="top"><p>HSDPA: <b>H</b>igh <b>S</b>peed <b>P</b>hysical <b>D</b>ownlink <b>S</b>hared <b>Ch</b>annel</p></td></tr><tr class="evenrow"><td valign="top"><p>9</p></td><td valign="top"><p>CHAN</p></td><td valign="top"><p>Channel without any pilot symbols (QPSK modulated)</p></td></tr><tr class="oddrow"><td valign="top"><p>10</p></td><td valign="top"><p>CPRSD</p></td><td valign="top"><p>Dedicated Physical Channel in <b>c</b>om<b>pr</b>e<b>s</b>se<b>d</b> mode</p></td></tr><tr class="evenrow"><td valign="top"><p>11</p></td><td valign="top"><p>CPR-TPC</p></td><td valign="top"><p>Dedicated Physical Channel in <b>c</b>om<b>pr</b>essed mode</p><p><b>TPC</b> symbols are sent in the first slot of the gap.</p></td></tr><tr class="oddrow"><td valign="top"><p>12</p></td><td valign="top"><p>CPR-SF/2</p></td><td valign="top"><p>Dedicated Physical Channel in <b>c</b>om<b>pr</b>essed mode using</p><p>half spreading factor (<b>SF/2</b>).</p></td></tr><tr class="evenrow"><td valign="top"><p>13</p></td><td valign="top"><p>CPR-SF/2-TPC</p></td><td valign="top"><p>Dedicated Physical Channel in <b>c</b>om<b>pr</b>essed mode using</p><p>half spreading factor (<b>SF/2</b>).</p><p><b>TPC</b> symbols are sent in the first slot of the gap.</p></td></tr><tr class="oddrow"><td valign="top"><p>14</p></td><td valign="top"><p>EHICH-ERGCH</p></td><td valign="top"><p>HSUPA: <b>E</b>nhanced <b>H</b>ARQ Hybrid Acknowledgement <b>I</b>ndicator <b>Ch</b>annel</p><p>HSUPA: <b>E</b>nhanced <b>R</b>elative <b>G</b>rant <b>Ch</b>annel</p></td></tr><tr class="evenrow"><td valign="top"><p>15</p></td><td valign="top"><p>EAGCH</p></td><td valign="top"><p>E-AGCH: <b>E</b>nhanced <b>A</b>bsolute <b>G</b>rant <b>Ch</b>annel</p></td></tr><tr class="oddrow"><td valign="top"><p>16</p></td><td valign="top"><p>SCPICH</p></td><td valign="top"><p><b>S</b>econdary <b>C</b>ommon <b>Pi</b>lot <b>Ch</b>annel</p></td></tr></tbody></table></div><div class="block"><a name="ID_5c32c55bb1db11e0be5eb3f316136a86-ba18bde8278cfe600a001ae70a466663-en-US">
+</a><a name="kanchor738">
+</a><span class="table-caption">UE channel types and their assignment to a numeric parameter value</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Param.</p></th><th valign="top"><p>Channel type</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>DPDCH</p></td><td valign="top"><p>Dedicated Physical Data Channel</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>DPCCH</p></td><td valign="top"><p>Dedicated Physical Control Channel</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>HS-DPCCH</p></td><td valign="top"><p>High-Speed Dedicated Physical Control Channel</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>E-DPCCH</p></td><td valign="top"><p>Enhanced Dedicated Physical Control Channel</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>E_DPDCH</p></td><td valign="top"><p>Enhanced Dedicated Physical Data Channel</p></td></tr></tbody></table></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="7e7de905e493492f.htm" class="chapter_title_toc">General Channel Detection</a></li><li value="2"><a href="446faed743b84abc.htm" class="chapter_title_toc">Managing Channel Tables</a></li><li value="3"><a href="b2be982299e64852.htm" class="chapter_title_toc">Configuring Channel Tables</a></li><li value="4"><a href="e38524eb75ad448d.htm" class="chapter_title_toc">Configuring Channel Details (BTS Measurements)</a></li><li value="5"><a href="a9476bd0617149c4.htm" class="chapter_title_toc">Configuring Channel Details (UE Measurements)</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

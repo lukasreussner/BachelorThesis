@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="NB-IoT Downlink (R&amp;S FSW-K106)|Measurements and Result Displays|I/Q Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_nbiot_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Capture Buffer</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eLTESkIdSmartGridCaptureBuffer_NBIOT_DL">
+</meta>
+        <meta name="topic-keyword" value="eLTESkId_PVT_CaptureBuffer_DL_NBIOT">
+</meta>
+        <meta name="topic-id" value="317">
+</meta>
+        <meta name="topic-id" value="318">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9a44e61f02675dfa0a00206a0169fca8-797431cc27f741c20a00206a0067369e-en-US;ID_03807da07a3338a60a7101ac01e45014-797431cc27f741c20a00206a0067369e-en-US;ID_fba4882044e6a6aa0a710a92018b981a-797431cc27f741c20a00206a0067369e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_nbiot_dl/Content/b00e744d0607496f.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">NB-IoT Downlink (R&amp;S FSW-K106)</a> &gt; <a class="chm-breadcrumb" href="a51e000ab7e84b5e.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="614ddb1357754423.htm">I/Q Measurements</a> &gt; <span class="chm-breadcrumb">Capture Buffer</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor19">
+</a><a name="kanchor20">
+</a><a name="kanchor21">
+</a><div class="function_heading"><a name="ID_9a44e61f02675dfa0a00206a0169fca8-797431cc27f741c20a00206a0067369e-en-US">
+</a><span style="font-weight: bold">Capture Buffer</span></div><p>The Capture Buffer result display shows the complete range of captured data for the last data capture. The x-axis represents time. The maximum value of the x-axis is equal to the <a class="xref" href="222844866b0348c1.htm#ID_119715bf5d27a8610a00206a002d0536-840b9624e1745db20a00206a01be69e2-en-US">Capture Time</a>. The y-axis represents the amplitude of the captured I/Q data in dBm (for RF input).</p><div class="block" id="ID_03807da07a3338a60a7101ac01e45014-797431cc27f741c20a00206a0067369e-en-US"><div class="graphic"><img border="0" src="Resources/Images/img3bbfdb2d49640ff10a001ae73f2c3def_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Capture buffer without zoom</div></div><div class="block"><div class="listintro-in-compact-list">A colored bar at the bottom of the diagram represents the frame that is currently analyzed. Different colors indicate the OFDM symbol type.</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><img border="0" src="Resources/Images/img6b8d98c742a8c67a0a00206a00e1c7f8_1_--_--_PNG96.png" alt="" title="">
+</img><br/>Indicates the data stream.</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><img border="0" src="Resources/Images/img35fa7f5c42a9144b0a00206a00a51258_1_--_--_PNG96.png" alt="" title="">
+</img><br/>Indicates the reference signal and data.</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><img border="0" src="Resources/Images/imgaf09945142a8a6ec0a00206a01a5e7c4_1_--_--_PNG96.png" alt="" title="">
+</img><br/>Indicates the NPSS and data.</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><img border="0" src="Resources/Images/img2e17423a42a8eb670a00206a00cbbc34_1_--_--_PNG96.png" alt="" title="">
+</img><br/>Indicates the NSSS and data.</li></ul></div><p>A green vertical line at the beginning of the green bar in the capture buffer represents the subframe start. The diagram also contains the "Start Offset" value. This value is the time difference between the subframe start and capture buffer start.</p><p>When you zoom into the diagram, you will see that the bar is interrupted at certain positions. Each small bar indicates the useful parts of the OFDM symbol.</p><div class="block" id="ID_fba4882044e6a6aa0a710a92018b981a-797431cc27f741c20a00206a0067369e-en-US"><div class="graphic"><img border="0" src="Resources/Images/img01e284b449668e320a001ae7295663a4_1_--_--_PNG96Small.png" alt="" title="">
+</img></div><div class="caption_figure">Capture buffer after a zoom has been applied</div></div>Remote command: <div class="rcclist_right"><p>Selecting the result display: <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD ? '1',LEFT,CBUF</a></p><p>Querying results:</p><p><a class="xref" href="3f2d338c804f4dfb.htm#ID_978a92296aea50090a00206a00b28023-14cdb541ede253a70a001ae706bcf8d5-en-US">TRACe:DATA?</a></p><p><a class="xref" href="85e284f9a0444745.htm#ID_8a84c19553d651a60a001ae71c36692e-52c7d77453d650ea0a001ae739ccb36c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]:</nobr>​<nobr>X?</nobr></a></p><p>Querying the subframe start offset: <a class="xref" href="6bb7f6c9f76a4600.htm#ID_2b45b92fe2a096130a00206a01492dfa-91b43363e2a096130a00206a00bf5101-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>FETCh[:</nobr>​<nobr>CC&lt;cc&gt;]:</nobr>​<nobr>SUMMary:</nobr>​<nobr>TFRame?</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

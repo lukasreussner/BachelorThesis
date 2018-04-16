@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>3GPP FDD UE Test Models</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0439-192230c5f554e1c20a00206a019f8074-en-US;shiv_FSV_K73_0442-192230c5f554e1c20a00206a019f8074-en-US;shiv_FSV_K73_0458-192230c5f554e1c20a00206a019f8074-en-US;shiv_FSV_K73_0499-192230c5f554e1c20a00206a019f8074-en-US;shiv_FSV_K73_0535-192230c5f554e1c20a00206a019f8074-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="e58af4d1542b4c87.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">3GPP FDD UE Test Models</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor216">
+</a><div class="chm-chaptertitle">3GPP FDD UE Test Models</div><p>The possible channel configurations for the mobile station signal are limited by 3GPP. Only two different configurations for data channels DPDCH are permissible according to the specification. In addition to these two channel configurations, the HS-DPCCH channel can be transmitted to operate the mobile station in HSDPA mode. Thus, the 3GPP FDD UE application checks for these channel configurations only during the automatic channel search. Therefore, channels whose parameters do not correspond to one of these configurations are not automatically detected as active channels.</p><p>The two possible channel configurations are summarized below:</p><div class="block"><a name="shiv_FSV_K73_0442-192230c5f554e1c20a00206a019f8074-en-US">
+</a><span class="table-caption">Channel configuration 1: DPCCH and 1 DPDCH</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Channel type</p></th><th valign="top"><p>Number of channels</p></th><th valign="top"><p>Symbol rate</p></th><th valign="top"><p>Spreading code(s)</p></th><th valign="top"><p>Mapping</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>DPCCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>15 ksps</p></td><td valign="top"><p>0</p></td><td valign="top"><p>Q</p></td></tr><tr class="evenrow"><td valign="top"><p>DPDCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>15 ksps – 960 ksps</p></td><td valign="top"><p>[spreading-factor/4]</p></td><td valign="top"><p>I</p></td></tr></tbody></table></div><div class="block"><a name="shiv_FSV_K73_0458-192230c5f554e1c20a00206a019f8074-en-US">
+</a><span class="table-caption">Channel configuration 2: DPCCH and up to 6 DPDCH</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Channel type</p></th><th valign="top"><p>Number of channels</p></th><th valign="top"><p>Symbol rate</p></th><th valign="top"><p>Spreading code(s)</p></th><th valign="top"><p>Mapping</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>DPCCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>15 ksps</p></td><td valign="top"><p>0</p></td><td valign="top"><p>Q</p></td></tr><tr class="evenrow"><td valign="top"><p>DPDCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>960 ksps</p></td><td valign="top"><p>1</p></td><td valign="top"><p>I</p></td></tr><tr class="oddrow"><td valign="top"><p>DPDCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>960 ksps</p></td><td valign="top"><p>1</p></td><td valign="top"><p>Q</p></td></tr><tr class="evenrow"><td valign="top"><p>DPDCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>960 ksps</p></td><td valign="top"><p>3</p></td><td valign="top"><p>I</p></td></tr><tr class="oddrow"><td valign="top"><p>DPDCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>960 ksps</p></td><td valign="top"><p>3</p></td><td valign="top"><p>Q</p></td></tr><tr class="evenrow"><td valign="top"><p>DPDCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>960 ksps</p></td><td valign="top"><p>2</p></td><td valign="top"><p>I</p></td></tr><tr class="oddrow"><td valign="top"><p>DPDCH</p></td><td valign="top"><p>1</p></td><td valign="top"><p>960 ksps</p></td><td valign="top"><p>2</p></td><td valign="top"><p>Q</p></td></tr></tbody></table></div><div class="block"><a name="shiv_FSV_K73_0499-192230c5f554e1c20a00206a019f8074-en-US">
+</a><span class="table-caption">Channel configuration 3: DPCCH, up to 6 DPDCH and 1 HS-DPCCH The channel configuration is as above in table 4-2. On HS-DPCCH is added to each channel table.</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Number of DPDCH</p></th><th valign="top"><p>Symbol rate all DPDCH</p></th><th valign="top"><p>Symbol rate HS-DPCCH</p></th><th valign="top"><p>Spreading code HS-DPCCH</p></th><th valign="top"><p>Mapping (HS-DPCCH)</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1</p></td><td valign="top"><p>15 – 960 ksps</p></td><td valign="top"><p>15 ksps</p></td><td valign="top"><p>64</p></td><td valign="top"><p>Q</p></td></tr><tr class="evenrow"><td valign="top"><p>2</p></td><td valign="top"><p>1920 ksps</p></td><td valign="top"><p>15 ksps</p></td><td valign="top"><p>1</p></td><td valign="top"><p>I</p></td></tr><tr class="oddrow"><td valign="top"><p>3</p></td><td valign="top"><p>2880 ksps</p></td><td valign="top"><p>15 ksps</p></td><td valign="top"><p>32</p></td><td valign="top"><p>Q</p></td></tr><tr class="evenrow"><td valign="top"><p>4</p></td><td valign="top"><p>3840 ksps</p></td><td valign="top"><p>15 ksps</p></td><td valign="top"><p>1</p></td><td valign="top"><p>I</p></td></tr><tr class="oddrow"><td valign="top"><p>5</p></td><td valign="top"><p>4800 ksps</p></td><td valign="top"><p>15 ksps</p></td><td valign="top"><p>32</p></td><td valign="top"><p>Q</p></td></tr><tr class="evenrow"><td valign="top"><p>6</p></td><td valign="top"><p>5760 ksps</p></td><td valign="top"><p>15 ksps</p></td><td valign="top"><p>1</p></td><td valign="top"><p>I</p></td></tr></tbody></table></div><div class="block"><a name="shiv_FSV_K73_0535-192230c5f554e1c20a00206a019f8074-en-US">
+</a><span class="table-caption">Channelization code of HS-DPCCH</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Nmax-dpdch (as defined in subclause 4.2.1)</p></th><th valign="top"><p>Channelization code C<sub>ch</sub></p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>1</p></td><td valign="top"><p>C<sub>ch,256,64</sub></p></td></tr><tr class="evenrow"><td valign="top"><p>2,4,6</p></td><td valign="top"><p>C<sub>ch,256,1</sub></p></td></tr><tr class="oddrow"><td valign="top"><p>3,5</p></td><td valign="top"><p>C<sub>ch,256,32</sub></p></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

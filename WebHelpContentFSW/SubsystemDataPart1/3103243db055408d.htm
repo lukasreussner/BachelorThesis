@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Processing Data from the Digital Baseband Interface" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Digital Output</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_2423a2bacaba19930a710a310075323c-31ad054966d75de70a001ae76423fc6c-en-US;ID_090cbac00ba7d7920a00201901a66ab2-31ad054966d75de70a001ae76423fc6c-en-US;ID_4825e3859daaba7f0a710a3101a7c3ef-31ad054966d75de70a001ae76423fc6c-en-US;ID_0129165bc1ba511a0a00206a006a2eb7-31ad054966d75de70a001ae76423fc6c-en-US;ID_96a8feec66c7edd00a001ae738632092-31ad054966d75de70a001ae76423fc6c-en-US;ID_dbce9b369dca98e50a00206a019a6604-31ad054966d75de70a001ae76423fc6c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="a7c1297b45c64a58.htm"> Processing Data from the Digital Baseband Interface </a> &gt; <span class="chm-breadcrumb">Digital Output</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor89">
+</a><a name="kanchor90">
+</a><a name="kanchor91">
+</a><div class="chm-chaptertitle">Digital Output</div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The digital input and output cannot be used simultaneously.</p><p>The only data source that can be used for digital baseband output is RF input.</p><p>It is recommended that you use the R&amp;S<sup><span style="font-family: Arial Unicode MS; font-size: 10.5pt">®</span></sup>SMU-Z6 (1415.0201.02) cable to connect other devices to the Digital Baseband Interface of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_4825e3859daaba7f0a710a3101a7c3ef-31ad054966d75de70a001ae76423fc6c-en-US">
+</a>Processing digital output</div></div><a name="kanchor92">
+</a><p>Digital output is processed almost identically to RF input in I/Q mode (see <a class="xref" href="471eea7681f04dd8.htm#ID_8ceba96dc35354e80a00206a0143d53b-598b128689ae8d810a001ae730be37a4-en-US">"Processing Analog I/Q Data from RF Input"</a>).</p><p>I/Q data is sampled blockwise, according to the   defined sample rate, and stored in the I/Q memory.  From the memory, the I/Q data is processed in the I/Q Analyzer mode. Simultaneously, the data is written to the R&amp;S Digital Baseband Interface continuously. Using this interface, the I/Q data can be processed in an external instrument as an alternative to internal processing in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><div class="block" id="ID_0129165bc1ba511a0a00206a006a2eb7-31ad054966d75de70a001ae76423fc6c-en-US"><div class="graphic"><img border="0" src="Resources/Images/img52a53658baaf888d0a0020190143689b_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Signal path using the digital output</div></div><div class="block"><div class="subtitle"><a name="ID_96a8feec66c7edd00a001ae738632092-31ad054966d75de70a001ae76423fc6c-en-US">
+</a>Sample rate</div></div><a name="kanchor93">
+</a><p>The <b>sample rate</b> at the digital output corresponds to the sample rate defined by the user and which is used as the basis for analysis. The current sample rate is displayed in the Digital I/Q "Output" dialog box (read-only) when the digital output is enabled (see <a class="xref" href="befb0747f7f94984.htm#ID_a85cba229eebf4050a00206a01e6d996-63428ef49f100dd90a00206a000318d6-en-US">"Output Settings Information"</a>). A maximum sample rate of 200 MHz is allowed for digital output.</p><p>For digital output, the full scale level corresponds to the defined reference level (without the reference level offset and transducer).</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_dbce9b369dca98e50a00206a019a6604-31ad054966d75de70a001ae76423fc6c-en-US">
+</a>Digital I/Q output and R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW-B512 options</div><p>Digital I/Q output is also available with the bandwidth extension options R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B512. In this case, for output sample rates between 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz and 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz, the -B512 hardware provides the digital output.</p><div class="block"><div class="listintro">Note that for technical reasons, under the following conditions, the continuous data stream from the -B512 hardware is interrupted briefly each time a new measurement (single sweep or new sweep start in continuous sweep mode) is started:</div><ul class="list"><li value="1">One of the bandwidth extension options R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B512 is installed</li><li value="2">Digital output is activated</li><li value="3">A trigger is activated</li><li value="4">An output sample rate greater than 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz is used</li></ul></div></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

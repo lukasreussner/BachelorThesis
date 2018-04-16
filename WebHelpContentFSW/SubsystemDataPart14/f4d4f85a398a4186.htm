@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Remote Commands for TD-SCDMA Measurements|Programming Examples (TD-SCDMA BTS)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 7: Checking the Power vs Time</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_96cb4cad0bc3b8910a002019002a2ee6-35a87e936b755a000a00201900eda720-en-US;ID_ecf3d93ee22011e18bcfe0f8dd93d6c7-35a87e936b755a000a00201900eda720-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="7b571c192e99473d.htm">Remote Commands for TD-SCDMA Measurements</a> &gt; <a class="chm-breadcrumb" href="f9566776f1f04efd.htm">Programming Examples (TD-SCDMA BTS)</a> &gt; <span class="chm-breadcrumb">Measurement 7: Checking the Power vs Time</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor702">
+</a><a name="kanchor703">
+</a><div class="chm-chaptertitle">Measurement 7: Checking the Power vs Time</div><p>This example demonstrates how to check the signal power in the time domain against a transmission power mask defined by the TD-SCDMA specification in a remote environment (for details see <a class="xref" href="e5996cc616124e61.htm#ID_44c4bb19d6c2e9de0a710a3101605524-a17c8fff6b754c540a0020190052c5dc-en-US">"Power vs Time"</a>).</p><div class="verbatim"><pre class="verbatim_text">//------- Preparing the instrument ------------
+//Reset the instrument
+*RST
+//Activate a TD-SCDMA BTS measurement channel named "BTSMeasurement"
+INST:CRE:NEW BTDS,'BTSMeasurement'
+//Set the center frequency to 2.1175 GHz
+FREQ:CENT 2.1175 GHz
+//Select the power vs time measurement
+CONF:CDP:MEAS PVT
+
+//--------Configuring the measurement ----------------
+//Set the switching point to 2 to analyze downlink data in slots 3 to 7
+CONF:CDP:PVT:SPO 2
+//Set the number of subframes to average to 50.
+CONF:CDP:PVT:SFR 50
+//Automatically set the reference level and trigger to frame values according
+//to measured levels and time.
+SENS:POW:ACH:AUTO:LTIM
+//Add a second measurement window for the list evaluation
+LAY:ADD '1',BEL,LEV 
+
+//----------Performing the measurement -----------------
+//Stops continuous sweep
+INIT:CONT OFF
+//Start a new measurement with 10 sweeps and wait for the end
+INIT;*WAI
+
+//-------------Retrieving results --------------------------
+//Query the result of the limit check for the 50 subframes against the
+//transmission power mask
+CALC:LIM:FAIL?
+//Retrieve the calculated peak power value of the 50 subframes
+//CALC:MARK:FUNC:POW:RES? PPOW
+//Result: -1.02 [dB]
+//Retrieve the trace data of the power vs time measurement
+TRAC:DATA? TRACE1
+//Result: -1.201362252,-1.173495054,-1.187217355,-1.186594367,-1.171583891,
+//-1.188250422,-1.204138160,-1.181404829,-1.186317205,-1.197872400, [...]
+</pre></div><div class="block"><a name="ID_ecf3d93ee22011e18bcfe0f8dd93d6c7-35a87e936b755a000a00201900eda720-en-US">
+</a><span class="table-caption">Trace results for power vs time measurement</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Subframe</p></th><th valign="top"><p>Power level</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>-1.201362252</p></td><td valign="top"><p>-1.173495054</p></td></tr><tr class="evenrow"><td valign="top"><p>-1.187217355</p></td><td valign="top"><p>-1.186594367</p></td></tr><tr class="oddrow"><td valign="top"><p>-1.171583891</p></td><td valign="top"><p>-1.188250422</p></td></tr><tr class="evenrow"><td valign="top"><p>...</p></td><td valign="top"><p>...</p></td></tr></tbody></table></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

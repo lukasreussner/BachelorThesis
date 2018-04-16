@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Network and Remote Operation|Remote Control Basics|Remote Control Interfaces and Protocols|GPIB Interface (IEC 625/IEEE 418 Bus Interface)|GPIB Interface Messages" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Universal Commands</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_331d192ec312fed60a00206a00b870b9-37e56ac8c3140e040a00206a01999204-en-US;ID_95af0877848f5a340a710a31002c1b13-37e56ac8c3140e040a00206a01999204-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="f877943803274912.htm">Network and Remote Operation</a> &gt; <a class="chm-breadcrumb" href="3483d15d86f943cb.htm">Remote Control Basics</a> &gt; <a class="chm-breadcrumb" href="b6c17eb98ccb482e.htm">Remote Control Interfaces and Protocols</a> &gt; <a class="chm-breadcrumb" href="1e9bacb61c6c4fdc.htm">GPIB Interface (IEC 625/IEEE 418 Bus Interface)</a> &gt; <a class="chm-breadcrumb" href="94fc95c69b034e88.htm">GPIB Interface Messages</a> &gt; <span class="chm-breadcrumb">Universal Commands</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Universal Commands</div><a name="kanchor2659">
+</a><p>Universal commands are encoded in the range 10 through 1F hex. They affect all instruments connected to the bus and do not require addressing.</p><a name="kanchor2660">
+</a><a name="kanchor2661">
+</a><a name="kanchor2662">
+</a><a name="kanchor2663">
+</a><a name="kanchor2664">
+</a><a name="kanchor2665">
+</a><div class="block"><a name="ID_95af0877848f5a340a710a31002c1b13-37e56ac8c3140e040a00206a01999204-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Command</p></th><th valign="top"><p>Effect on the instrument</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>DCL (Device Clear)</p></td><td valign="top"><p>Aborts the processing of the commands just received and sets the command processing software to a defined initial state. Does not change the instrument settings.</p></td></tr><tr class="evenrow"><td valign="top"><p>IFC (Interface Clear) *)</p></td><td valign="top"><p>Resets the interfaces to the default setting.</p></td></tr><tr class="oddrow"><td valign="top"><p>LLO (Local Lockout)</p></td><td valign="top"><p>The "Local" softkey is disabled. Manual operation is no longer available until <span class="command">GTL</span> is executed.</p></td></tr><tr class="evenrow"><td valign="top"><p>SPE (Serial Poll Enable)</p></td><td valign="top"><p>Ready for serial poll.</p></td></tr><tr class="oddrow"><td valign="top"><p>SPD (Serial Poll Disable)</p></td><td valign="top"><p>End of serial poll.</p></td></tr><tr class="evenrow"><td valign="top"><p>PPU (Parallel Poll Unconfigure)</p></td><td valign="top"><p>End of the parallel-poll state.</p></td></tr><tr class="oddrow"><td colspan="2" valign="top"><p>*) IFC is not a real universal command, it is sent via a separate line; however, it also affects all instruments connected to the bus and does not require addressing</p></td></tr></tbody></table></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurements and Result Displays|WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)|Evaluation Methods for WLAN IQ Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>PLCP Header (IEEE 802.11b, g (DSSS)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWlanSkId_Signal_Field">
+</meta>
+        <meta name="topic-id" value="34">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_69e6c9a7e29211e0ada5b4bd577c509e-742b73889d5e5f610a001ae77d4ca6d8-en-US;ID_182b8bebd86946f00a001ae70ab59874-742b73889d5e5f610a001ae77d4ca6d8-en-US;ID_69f03f8ee29211e0ada5b4bd577c509e-742b73889d5e5f610a001ae77d4ca6d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3bafe63f00094742.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="57cd9bda6ba64547.htm">WLAN I/Q Measurement (Modulation Accuracy, Flatness and Tolerance)</a> &gt; <a class="chm-breadcrumb" href="072780b9f8404988.htm">Evaluation Methods for WLAN IQ Measurements</a> &gt; <span class="chm-breadcrumb">PLCP Header (IEEE 802.11b, g (DSSS)</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor136">
+</a><div class="function_heading"><a name="ID_69e6c9a7e29211e0ada5b4bd577c509e-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a><span style="font-weight: bold">PLCP Header (IEEE 802.11b, g (DSSS)</span></div><p>This result display shows the decoded data from the PLCP header of the PPDU.</p><p>This result display is <b>only</b> available for single-carrier measurements (<b>IEEE 802.11b, g (DSSS)</b>); for other standards, use <a class="xref" href="ad9c6922df474d0c.htm#ID_a222705a846311e1b96ada088f942819-742b73889d5e5f610a001ae77d4ca6d8-en-US">"Signal Field"</a> instead.</p><p>The following information is provided:</p><p><b><a name="ID_182b8bebd86946f00a001ae70ab59874-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a>Note:</b> The signal field information is provided as a decoded bit sequence and, where appropriate, also in human-readable form beneath the bit sequence for each PPDU.<br/></p><div class="block"><a name="ID_69f03f8ee29211e0ada5b4bd577c509e-742b73889d5e5f610a001ae77d4ca6d8-en-US">
+</a><span class="table-caption">Demodulation results in PLCP Header result display (IEEE 802.11b, g (DSSS))</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Result</p></th><th valign="top"><p>Description</p></th><th valign="top"><p>Example</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>PPDU</p></td><td valign="top"><p>Number of the decoded PPDU</p><p>A colored block indicates that the PPDU was successfully decoded.</p></td><td valign="top"><p>PPDU 1</p></td></tr><tr class="evenrow"><td valign="top"><p>Signal</p></td><td valign="top"><p>Information in "signal" field</p><p>The decoded data rate is shown below.</p></td><td valign="top"><p>01101110</p><p>11 MBits/s</p></td></tr><tr class="oddrow"><td valign="top"><p>Service</p></td><td valign="top"><p>Information in "service" field</p><p>&lt;Symbol clock state&gt; /&lt;Modulation format&gt; / &lt;Length extension bit state&gt;</p><p>where:</p><p>&lt;Symbol clock state&gt;: Locked / - -</p><p>&lt;Modulation format&gt;: see <a class="xref" href="244ca84f50394369.htm#ID_e45cf0c8856611e1a221e7ee371f3cea-a152f5e2a64dafbf0a002019017fdb4d-en-US">Table "Supported modulation formats, PPDU formats and channel bandwidths depending on standard"</a></p><p>&lt;Length extension bit state&gt;: 1 (set) / - - (not set)</p></td><td valign="top"><p>00100000</p><p>Lock/CCK/- -</p></td></tr><tr class="evenrow"><td valign="top"><p>PSDU Length</p></td><td valign="top"><p>Information in "length" field</p><p>Time required to transmit the PSDU</p></td><td valign="top"><p>0000000001111000</p><p>120 <span style="font-family: arial; font-size: 10.5pt">µ</span>s</p></td></tr><tr class="oddrow"><td valign="top"><p>CRC</p></td><td valign="top"><p>Information in "CRC" field</p><p>Result of cyclic redundancy code check: "OK" or "Failed"</p></td><td valign="top"><p>1110100111001110</p><p>OK</p></td></tr></tbody></table></div>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, SFI</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p><p>Or:</p><p><a class="xref" href="210734ae96c449a8.htm#ID_e6ce78412f5422b20a00206a00105e8c-d55d23d72f541aa30a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>BURSt:</nobr>​<nobr>STATistics:</nobr>​<nobr>SFIeld[:</nobr>​<nobr>IMMediate]</nobr></a></p><p>Querying results:</p><p><a class="xref" href="eb9e0051944d4569.htm#ID_7026e2c92f5d928b0a00206a01d4e7a2-eceb4ba32f5d89c10a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe[:</nobr>​<nobr>DATA]</nobr></a>, see <a class="xref" href="6e41001018964942.htm#ID_92298d5e44a913790a00206a00116e40-e740bb56c9316de40a002019016c0552-en-US">"Signal Field"</a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

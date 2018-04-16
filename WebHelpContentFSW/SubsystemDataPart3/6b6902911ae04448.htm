@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Remote Commands for Analog Demodulation Measurements|Configuring the Measurement" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Configuring Data Acquisition</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_12cef3513fd036000a710a310069929e-b84c573177c1270b0a00206a0169ef92-en-US;ID_d6acc8dd5427b8c20a00206a00cdfb83-b84c573177c1270b0a00206a0169ef92-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="4777278d10bc498a.htm">Remote Commands for Analog Demodulation Measurements</a> &gt; <a class="chm-breadcrumb" href="981d9d678f1c4fa3.htm">Configuring the Measurement</a> &gt; <span class="chm-breadcrumb">Configuring Data Acquisition</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor718">
+</a><div class="chm-chaptertitle">Configuring Data Acquisition</div><p>The following remote commands are required to configure which data is to be acquired and then demodulated in a remote environment.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_d6acc8dd5427b8c20a00206a00cdfb83-b84c573177c1270b0a00206a0169ef92-en-US">
+</a>MSRA/MSRT operating mode</div><a name="kanchor719">
+</a><a name="kanchor720">
+</a><a name="kanchor721">
+</a><a name="kanchor722">
+</a><p>In MSRA/MSRT operating mode, only the MSRA/MSRT Master channel actually captures data from the input signal. The data acquisition commands for the Analog Demodulation application in MSRA/MSRT mode define the analysis interval.</p><p>For details on the MSRA operating mode see <a class="xref" href="../../fsw_msra_help/Content/e12562f574b74ff8.htm">Applications and Operating Modes</a>. For details on the MSRT operating mode see <a class="xref" href="../../fsw_real_help/Content/cf8b125396e04a14.htm">Applications and Operating Modes</a>.</p></td></tr></table></div></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="98e33a5ca1674fd0.htm#ID_86c101ac40e8dc000a00206a010c2fcf-1684e83f40e8dc000a00206a015cbefe-en-US" class="title_toc">[SENSe:]ADEMod&lt;n&gt;:MTIMe</a><br/><a href="a01652ae622f4efc.htm#ID_2bfb992a412916700a00206a0142a8ad-1cede97a412916700a00206a0028df40-en-US" class="title_toc">[SENSe:]ADEMod&lt;n&gt;:RLENgth?</a><br/><a href="4409081e14964a55.htm#ID_2befe6c5412a5cd90a00206a003605f8-16fb8502412a5cd90a00206a017b9561-en-US" class="title_toc">[SENSe:]ADEMod&lt;n&gt;:SET</a><br/><a href="7f1b1e0a3d5a487b.htm#ID_183f7b24bfe0d8420a001ae74a83b790-b84c573177c1270b0a00206a0169ef92-en-US" class="title_toc">[SENSe:]ADEMod&lt;n&gt;:SPECtrum:BANDwidth[:RESolution]</a><br/><a href="7f1b1e0a3d5a487b.htm#ID_c6e421b944b97c990a00206a0159d388-344c066b44b97c990a00206a007a8a00-en-US" class="title_toc">[SENSe:]ADEMod&lt;n&gt;:SPECtrum:BWIDth[:RESolution]</a><br/><a href="5cfab50e11434f3a.htm#ID_cba4fd19413988390a00206a00473f24-e0191b6b413988490a00206a018e38c5-en-US" class="title_toc">[SENSe:]ADEMod&lt;n&gt;:SRATe?</a><br/><a href="6a8e36ce327944d6.htm#ID_d8dd61cdbfe0d8420a001ae779c39c08-b84c573177c1270b0a00206a0169ef92-en-US" class="title_toc">[SENSe:]BANDwidth:DEMod</a><br/><a href="6a8e36ce327944d6.htm#shiv_FSV_K7_2999-97fa3f1a4071a48b0a00206a000a286c-en-US" class="title_toc">[SENSe:]BWIDth:DEMod</a><br/><a href="c340e75462644621.htm#ID_5338fed4bfe0d8420a001ae77133f223-b84c573177c1270b0a00206a0169ef92-en-US" class="title_toc">[SENSe:]BANDwidth:DEMod:TYPE</a><br/><a href="c340e75462644621.htm#ID_5d0ec51c4075d6cf0a00206a00fb94c3-3fa5fff64075d6cf0a00206a015efd4e-en-US" class="title_toc">[SENSe:]BWIDth:DEMod:TYPE</a><br/><a href="f39957285d0248bd.htm#ID_1e98be49c3f26d490a00206a0040b6fb-32cbcfddc3f26d490a00206a014c2289-en-US" class="title_toc">[SENSe:]BANDwidth[:RESolution]</a><br/><a href="e919c6fee0444a28.htm#ID_d6f5caa22dde9ffd0a00206a01a137be-99851b6729fdd1040a00206a0039c2fb-en-US" class="title_toc">[SENSe:]SWEep:COUNt</a><br/><a href="6e13d7544987492e.htm#ID_e0ff1a1b2e430e110a00206a014dca13-41eb792c29fe0cb60a00206a01b90eff-en-US" class="title_toc">[SENSe:]SWEep:POINts</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

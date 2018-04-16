@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Remote Commands for Analog Demodulation Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_40fa7c152873813d0a00206a0146f849-b84c573177c1270b0a00206a0169ef92-en-US;ID_be41588b9d5c79340a710a3101ce66ba-b84c573177c1270b0a00206a0169ef92-en-US;ID_5d808ff93ff399f90a710a3100e22deb-b84c573177c1270b0a00206a0169ef92-en-US;ID_eec7a2664a88562a0a00206a0158cfc7-b84c573177c1270b0a00206a0169ef92-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <span class="chm-breadcrumb">Remote Commands for Analog Demodulation Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Remote Commands for Analog Demodulation Measurements</div><p>The commands required to perform measurements in the Analog Demodulation application in a remote environment are described here.</p><p>It is assumed that the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW has already been set up for remote control in a network as described in <a class="xref" href="../../../Content/458e4aabc08242c2.htm">How to Set Up a Network and Remote Control</a>.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>A programming example at the end of the remote commands description demonstrates the most important commands in a typical application scenario, see <a class="xref" href="8f52dee8931b43ba.htm#ID_b3bef695eb380f0f0a00206a006e7f1e-2f8681ebeb380f0f0a00206a005ba262-en-US">"Programming Example"</a>.</p></td></tr></table></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_be41588b9d5c79340a710a3101ce66ba-b84c573177c1270b0a00206a0169ef92-en-US">
+</a>Status registers</div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K7 option uses the status registers of the base unit (except for the <span class="command">STATus:QUEStionable:ACPLimit</span> register).</p><p>(See <a class="xref" href="../../../Content/abd8c6112e0c47e5.htm">Status Reporting System</a>.)</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_5d808ff93ff399f90a710a3100e22deb-b84c573177c1270b0a00206a0169ef92-en-US">
+</a>General R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW Remote Commands</div></div><div class="block"><div class="listintro">The application-independent remote commands for general tasks on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW are also available for Analog Demodulation measurements and are described in the base unit section. In particular, this comprises the following functionality:</div><ul class="list"><li value="1"><a class="xref" href="../../../Content/0676e691243b42ba.htm">Managing Settings and Results</a></li><li value="2"><a class="xref" href="../../../Content/238ee539da9f4d16.htm">Configuring the R&amp;S FSW</a></li><li value="3"><a class="xref" href="../../../Content/ff1bbe99079c4848.htm">Using the Status Register</a></li></ul></div><div class="block"><div class="subtitle"><a name="ID_eec7a2664a88562a0a00206a0158cfc7-b84c573177c1270b0a00206a0169ef92-en-US">
+</a>Channel-specific commands</div></div><p>Apart from a few general commands on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, most commands refer to the currently active channel. Thus, always remember to activate an Analog Demodulation channel before starting a remote program for an Analog Demodulation measurement.</p>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="11ec3a293ab24051.htm" class="chapter_title_toc">Introduction</a></li><li value="2"><a href="1a92223f6e5a4d5b.htm" class="chapter_title_toc">Common Suffixes</a></li><li value="3"><a href="51c5dd5fd4874584.htm" class="chapter_title_toc">Activating Analog Demodulation Measurements</a></li><li value="4"><a href="981d9d678f1c4fa3.htm" class="chapter_title_toc">Configuring the Measurement</a></li><li value="5"><a href="4d3b0b633b2441b1.htm" class="chapter_title_toc">Capturing Data and Performing Sweeps</a></li><li value="6"><a href="8da433bd0e6d4fd7.htm" class="chapter_title_toc">Configuring the Result Display</a></li><li value="7"><a href="9d032f2a9bbb42e3.htm" class="chapter_title_toc">Retrieving Results</a></li><li value="8"><a href="8f581e18cfca42dc.htm" class="chapter_title_toc">Analyzing Results</a></li><li value="9"><a href="84805a3a1a31468b.htm" class="chapter_title_toc">Importing and Exporting I/Q Data and Results</a></li><li value="10"><a href="ad1e67448cb4437a.htm" class="chapter_title_toc">Deprecated Commands</a></li><li value="11"><a href="8f52dee8931b43ba.htm" class="chapter_title_toc">Programming Example</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

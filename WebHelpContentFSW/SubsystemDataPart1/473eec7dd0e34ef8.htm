@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Configuration|Data Input and Output Settings|Input Source Settings|External Generator Control Settings|Source Calibration Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Save as Trd Factor
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTrackingSourceCalSaveAsTdf">
+</meta>
+        <meta name="topic-id" value="433">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_241f2299396011e2bb98af1736719789-c00cf4553be48ed90a00201900ba981e-en-US;ID_42cf06b7477cecd00a00201901e4dc43-c00cf4553be48ed90a00201900ba981e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c29ac284be8f4c1b.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="208b979a57b8495d.htm">Data Input and Output Settings</a> &gt; <a class="chm-breadcrumb" href="2a84fad068b747b6.htm">Input Source Settings</a> &gt; <a class="chm-breadcrumb" href="1c17a71c05b4434e.htm">External Generator Control Settings</a> &gt; <a class="chm-breadcrumb" href="c5ebfa67566f420a.htm">Source Calibration Functions</a> &gt; <span class="chm-breadcrumb">Save as Trd Factor</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor500">
+</a><a name="kanchor501">
+</a><a name="kanchor502">
+</a><div class="function_heading"><a name="ID_241f2299396011e2bb98af1736719789-c00cf4553be48ed90a00201900ba981e-en-US">
+</a><span style="font-weight: bold">Save as Trd Factor</span></div><p>Uses the normalized measurement data to generate a transducer factor. The trace data is converted to a transducer with unit dB and stored in a file with the specified name and the suffix <span class="filename">.trd</span> under "<span class="filename">C:\Program Files (x86)\Rohde-Schwarz\FSW\&lt;version&gt;\trd</span>". The frequency points are allocated in equidistant steps between start and stop frequency. The generated transducer factor can be further adapted using the "Transducer" softkey in the [SETUP] menu.</p><p>For more information on transducers, see <a class="xref" href="../../../Content/116a6dfa127742b4.htm">Basics on Transducer Factors</a>.</p><p>This function is only available if <a class="xref" href="6875ada70cdf47e6.htm#ID_fc0070c437bd11e29fe1a4927e7834ad-c00cf4553be48ed90a00201900ba981e-en-US">"Source Calibration Normalize"</a> is switched on.</p><p><b><a name="ID_42cf06b7477cecd00a00201901e4dc43-c00cf4553be48ed90a00201900ba981e-en-US">
+</a>Note:</b> Note that the <em>normalized</em> measurement data is used, not the <em>reference</em> trace! Thus, if you store the normalized trace directly after calibration, without changing any settings, the transducer factor will be 0<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB for the entire span (by definition of the normalized trace).<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="916257ce0a7f40d7.htm#shiv_6b_remote_commands_basic_1911-6dfd368d3cc025ab0a00201900faabf8-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CORRection:</nobr>​<nobr>TRANsducer:</nobr>​<nobr>GENerate</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

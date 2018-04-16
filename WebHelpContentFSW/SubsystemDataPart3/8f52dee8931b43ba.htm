@@ -1,0 +1,120 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Remote Commands for Analog Demodulation Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Programming Example</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b3bef695eb380f0f0a00206a006e7f1e-2f8681ebeb380f0f0a00206a005ba262-en-US;shiv_2_measurement_examples_0541-2f8681ebeb380f0f0a00206a005ba262-en-US;shiv_2_measurement_examples_0542-2f8681ebeb380f0f0a00206a005ba262-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="4777278d10bc498a.htm">Remote Commands for Analog Demodulation Measurements</a> &gt; <span class="chm-breadcrumb">Programming Example</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor835">
+</a><div class="chm-chaptertitle">Programming Example</div><p>In this example we will configure and perform an analog demodulation measurement to demonstrate the remote control commands.</p><div class="block"><div class="subtitle"><a name="shiv_2_measurement_examples_0541-2f8681ebeb380f0f0a00206a005ba262-en-US">
+</a>Signal generator settings (e.g. R&amp;S SMW):</div></div><div class="block"><a name="shiv_2_measurement_examples_0542-2f8681ebeb380f0f0a00206a005ba262-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>Frequency:</p></td><td valign="top"><p>500 MHz</p></td></tr><tr class="evenrow"><td valign="top"><p>Level:</p></td><td valign="top"><p>-10 dBm</p></td></tr><tr class="oddrow"><td valign="top"><p>Modulation:</p></td><td valign="top"><p>FM</p></td></tr><tr class="evenrow"><td valign="top"><p>Modulation frequency:</p></td><td valign="top"><p>10 kHz</p></td></tr><tr class="oddrow"><td valign="top"><p>Frequency deviation:</p></td><td valign="top"><p>50 kHz</p></td></tr></tbody></table></div><pre class="verbatim" xml:space="preserve">//-----------Preparing the measurement ------------
+//Reset the instrument
+*RST
+</pre><pre class="verbatim" xml:space="preserve">//Set the center frequency to 500 MHz
+FREQ:CENT 500 MHz
+//Set the reference level to 0 dBm
+DISP:TRAC:Y:SCAL:RLEV 0
+
+
+//---------- Activating an Analog Demod measurement channel -----------
+//Activate an Analog Demodulation measurement channel named "FMDemodulation"
+INST:CRE:NEW ADEM,'FMDemodulation'
+
+
+//--------- Configuring data acquisition ------------------
+//Set the measurement time to 1 ms (=10 periods)
+ADEM:MTIM 1ms
+//Optimize the scaling of the y-axis for the current measurement (continuously)
+SENS:ADJ:SCAL:Y:AUTO ON
+//Set the demodulation bandwidth to 400 kHz
+BAND:DEM 400 kHz
+//Trigger when magnitude of I/Q data reaches -50dBm
+TRIG:SOUR IQP
+TRIG:LEV:IQP -50
+
+
+//----------- Configuring the result display --------------------
+
+//Add an FM Spectrum result display below FM Time Domain
+LAY:ADD:WIND? '1',BEL,'XTIM:FM:AFSP'
+//Define two traces in the FM Spectrum: 1: Clear/write, 2: average
+ADEM:FM:AFSP WRIT,AVER,OFF,OFF,OFF,OFF
+//Set analog demodulator to execute 30 sweeps with 32000 samples each
+//at a sample rate of 8 MHz; use IQ trigger, trigger on positive slope
+//with a pretrigger offset of 500 samples
+ADEM:SET 8MHz,32000,IQP,POS,-500,30
+
+
+//--------------Performing the Measurement-----
+
+//Stop continuous sweep
+INIT:CONT OFF
+
+//Start a new measurement with 30 sweeps and wait for the end
+INIT;*WAI
+
+
+//---------------Retrieving Results-------------
+//Query the carrier power
+CALC:MARK:FUNC:ADEM:CARR?
+//Result: -10.37 [dBm]
+
+//Query the signal-to-noise-and-distortion ratio from the FM Spectrum
+CALC2:MARK:FUNC:ADEM:SIN:RES?
+//Result: 65.026 [dB]
+
+//Query the total harmonic distortion of the demodulated signal 
+//from the FM Spectrum
+CALC2:MARK:FUNC:ADEM:THD:RES?
+//Result: -66.413 [dB]
+
+//Query the FM carrier offset (=frequency error) for the most recent
+//measurement (trace 1)
+CALC:MARK:FUNC:ADEM:FERR?
+//Result: 649.07 [Hz]
+
+//Query FM carrier offset averaged over 30 measurements
+ADEM:FM:OFFS? AVER
+//Result: 600 [Hz]
+
+//Retrieve the trace data of the most recent measurement (trace 1)
+TRAC:DATA? TRACE1
+//Result: -1.201362252,-1.173495054,-1.187217355,-1.186594367,-1.171583891,
+//-1.188250422,-1.204138160,-1.181404829,-1.186317205,-1.197872400, [...]
+
+//Retrieve the averaged trace data for all 30 measurements (trace 2)
+TRAC:DATA? TRACE2//Result: -1.201362252,-1.173495054,-1.187217355,-1.186594367,-1.171583891,
+//-1.188250422,-1.204138160,-1.181404829,-1.186317205,-1.197872400, [...]
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Amplifier Measurements (R&amp;S FSW-K18)|Performing Amplifier Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k18.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Raw EVM</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_61fc90a41024b2050a001ae754f1301b-ce9bf7521024b2050a001ae7268d682e-en-US;ID_941b8bde63983cec0a001ae717d0f9ac-ce9bf7521024b2050a001ae7268d682e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k18/Content/1fb5bd9e587e4022.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Amplifier Measurements (R&amp;S FSW-K18)</a> &gt; <a class="chm-breadcrumb" href="8689c951b7b94bef.htm">Performing Amplifier Measurements</a> &gt; <span class="chm-breadcrumb">Raw EVM</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor58">
+</a><a name="kanchor59">
+</a><div class="function_heading"><a name="ID_61fc90a41024b2050a001ae754f1301b-ce9bf7521024b2050a001ae7268d682e-en-US">
+</a>Raw EVM</div><p>The Raw EVM result display shows the error vector magnitude of the signal over time.</p><p>The EVM is a measure of the modulation accuracy. It compares two signals and shows the distance of the measured constellation points and the ideal constellation points.</p><p>In the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K18, you can compare the measured signal against the reference signal and against the modeled signal.</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Measured signal against reference signal<br/>Trace 1 compares the measured signal and the reference signal.<br/>To get useful results, the calculated linear gain is compensated to match both signals.<br/>Depending on the DUT, noise and nonlinear effects may have been added to the measurement signal. These effects are visualized by this trace.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Measured signal against modeled signal<br/>Trace 2 compares the measured signal and the modeled signal.<br/>The EVM between the measured and modeled signal indicates the quality of the DUT modeling. If the model matches the DUT behavior, the modeling error is zero (or is merely influenced by noise).<br/>This result display shows changes in the model and its parameters and thus allows you to optimize the modeling.<br/>When system modeling has been turned off, this trace is not displayed.</li></ul></div><p>Note that the raw EVM is calculated for each sample that has been recorded. Thus, the raw EVM might differ from EVM values that are calculated according to a specific mobile communication standard that apply special rules to calculate the EVM, for example LTE.</p><div class="block" id="ID_941b8bde63983cec0a001ae717d0f9ac-ce9bf7521024b2050a001ae7268d682e-en-US"><div class="graphic"><img border="0" src="Resources/Images/img24b64bbc639603150a001ae7294d1b57_2_--_--_PNG96Small.png" alt="" title=""/></div></div>Remote command: <div class="rcclist_right"><p>Selection: <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">LAY:ADD REVM</a></p><p>Result query: <a class="xref" href="24ac3b48142146eb.htm#ID_49734d02f582e0e00a001ae7405fdea2-1f2d33dff582deec0a001ae77dfe1998-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;t&gt;[:</nobr>​<nobr>DATA]?</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

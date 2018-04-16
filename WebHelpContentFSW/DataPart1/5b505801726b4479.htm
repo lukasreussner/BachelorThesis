@@ -1,0 +1,25 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Emulating Other Instruments' Commands|Reference: GPIB Commands of Emulated HP Models" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Special Features of the Syntax Parsing Algorithms for 8566A and 8568A Models</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_6b_remote_commands_basic_4424-e3d34c73a00164da0a00206a01899a59-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9905538076f04781.htm">Emulating Other Instruments' Commands</a> &gt; <a class="chm-breadcrumb" href="d25b76b4562e4429.htm">Reference: GPIB Commands of Emulated HP Models</a> &gt; <span class="chm-breadcrumb">Special Features of the Syntax Parsing Algorithms for 8566A and 8568A Models</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Special Features of the Syntax Parsing Algorithms for 8566A and 8568A Models</div><p>The command syntax is very different for models A and B. Different names are assigned to identical instrument functions, and the command structure likewise differs considerably between models A and models B.</p><p>The command structure for models A is as follows:</p><p><span class="command">&lt;command&gt;::= &lt;command code&gt;[&lt;SPC&gt;][&lt;data&gt;|&lt;step&gt;][&lt;SPC&gt;][&lt;delimiter&gt;][&lt;command code&gt;]…&lt;delimiter&gt;</span></p><p><span class="command">&lt;data&gt;::= &lt;Value&gt;[&lt;SPC&gt;][&lt;units code&gt;][&lt;SPC&gt;][&lt;delimiter&gt;][&lt;SPC&gt;][&lt;data&gt;]…</span></p><p><span class="command">&lt;step&gt;::= UP|DN</span></p><p>where</p><p><span class="command">&lt;command code&gt;</span> = see Table "Supported Commands"</p><p><span class="command">&lt;Value&gt;</span> = integer or floating-point numerical value</p><p><span class="command">&lt;units code&gt;</span> = DM | -DM | DB | HZ | KZ | MZ | GZ | MV | UV | SC | MS | US</p><p><span class="command">&lt;delimiter&gt;</span> = &lt;CR&gt; | &lt;LF&gt; | &lt;,&gt; | &lt;;&gt; | &lt;ETX&gt;</p><p><span class="command">&lt;SPC&gt;</span> = 32<sub>10</sub></p><p><span class="command">&lt;ETX&gt;</span> = 3<sub>10</sub></p><p>Command sections given in [ ] are optional.</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW GPIB hardware differs from that used in the HP analyzers. Therefore, the following constraint exists:</p><p><span class="command">&lt;LF&gt;| &lt;EOI&gt;</span> are still used as delimiters since the GPIB hardware is able to identify them. The other delimiters are identified and evaluated during syntax analysis.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

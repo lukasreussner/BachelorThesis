@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Measurements and Result Displays|Code Domain Analysis|Evaluation Methods for Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Power vs PCG</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eC2kSkIdSmartGridPowervsPCG">
+</meta>
+        <meta name="topic-id" value="37">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_fd18fbedb6f10f740a00206a019eea75-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_2bf14c67091611e188d2e42315358694-19ac4e2868392f9f0a00206a00098ad6-en-US;ID_618d34bc091611e188d2e42315358694-19ac4e2868392f9f0a00206a00098ad6-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="21ffee03ea97435e.htm">Measurements and Result Displays</a> &gt; <a class="chm-breadcrumb" href="d0293aa9fc8844a2.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="9340017befff44d3.htm">Evaluation Methods for Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Power vs PCG</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor124">
+</a><a name="kanchor125">
+</a><a name="kanchor126">
+</a><a name="kanchor127">
+</a><div class="function_heading"><a name="ID_fd18fbedb6f10f740a00206a019eea75-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a><span style="font-weight: bold">Power vs PCG</span></div><p>In this result display, the power of the selected channel is averaged for each measured PCG and referred to the pilot power of the PCG. Therefore the unit of the y-axis is dB (relative to the Pilot Channel). The result display consists of the number of the PCGs in the measurement and the power value of each one.</p><p>For measurements in which antenna diversity is inactive (OFF) or set to "Antenna 1", the F-PICH channel is used as reference. The F-TDPICH channel is used for measurements in which antenna diversity is set to "Antenna 2".</p><p><b><a name="ID_2bf14c67091611e188d2e42315358694-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a>Note:</b> For signals with enabled power control, use the default reference power setting. For details, refer to <a class="xref" href="d4e31006.htm#ID_ba72c437f97305960a00206a00407b4c-5c727572f97305960a00206a015efa4e-en-US">"Power Reference"</a>.<br/></p><p>The measurement evaluates one code channel over the entire period of observation. The selected PCG is highlighted red.</p><p><b>MS application</b>: the power is calculated only for the selected branch (I or Q).</p><p><b><a name="ID_618d34bc091611e188d2e42315358694-19ac4e2868392f9f0a00206a00098ad6-en-US">
+</a>Note:</b> To detect the start of a power control group correctly, the external trigger must be used for power-regulated signals.<br/></p>Remote command: <div class="rcclist_right"><p><span class="command">LAY:ADD? '1',RIGH, PSLot</span>, see <a class="xref" href="63c5f2f5458d4c6b.htm#ID_4db883cc7a587a490a00206a00d319cc-9d5587197a587a490a00206a01e66981-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>LAYout:</nobr>​<nobr>ADD[:</nobr>​<nobr>WINDow]?</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

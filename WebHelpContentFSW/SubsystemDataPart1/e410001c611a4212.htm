@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Remote Commands to Perform Measurements with I/Q Data|Retrieving Results|Retrieving Captured I/Q Data" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>TRACe:IQ:DATA:FORMat</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_6a_remote_commands_8077-8e1a5ccb57ddb4450a00206a00ba1dc2-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="c32546d219284b93.htm">Remote Commands to Perform Measurements with I/Q Data</a> &gt; <a class="chm-breadcrumb" href="d5c736d2b3544a19.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="3f539567c7c94930.htm">Retrieving Captured I/Q Data</a> &gt; <span class="chm-breadcrumb">TRACe:IQ:DATA:FORMat</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_6a_remote_commands_8077-8e1a5ccb57ddb4450a00206a00ba1dc2-en-US">
+</a><span class="bold">TRACe:IQ:DATA:FORMat </span>&lt;Format&gt;<br/></div><div class="rcdescription"><p>This command selects the order of the I/Q data.</p><p>For details see <a class="xref" href="c4b245497b2d4ab6.htm#ID_89442dc37709f4830a00206a000823e3-57f63a0a7709f4830a00206a006c29d8-en-US">"Reference: Format Description for I/Q Data Files"</a>.</p><p>For traces captured using the optional 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B2000/B5000), only "IQPair" format is available.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;Format&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>COMPatible |</nobr> <nobr> IQBLock |</nobr> <nobr> IQPair</nobr><br/><span class="bold">COMPatible<br/></span><p>I and Q values are separated and collected in blocks: A block (512k) of I values is followed by a block (512k) of Q values, followed by a block of I values, followed by a block of Q values etc.</p><p>(I,I,I,I,Q,Q,Q,Q,I,I,I,I,Q,Q,Q,Q...)</p><span class="bold">IQBLock<br/></span><p>First all I-values are listed, then the Q-values</p><p>(I,I,I,I,I,I,...Q,Q,Q,Q,Q,Q)</p><p>This option is not available for input from SnP files (see <a class="xref" href="../../../Content/95352d1489074fd7.htm">Compensating for Frequency Response Using Touchstone files (R&amp;S FSW-K544)</a>).</p><span class="bold">IQPair<br/></span><p>One pair of I/Q values after the other is listed</p><p>(I,Q,I,Q,I,Q...).</p><p>This option is the default for input from SnP files (see <a class="xref" href="../../../Content/95352d1489074fd7.htm">Compensating for Frequency Response Using Touchstone files (R&amp;S FSW-K544)</a>).</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">IQBL</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="d5cd2b58929947da.htm#ID_4efb858b3e1294bf0a00206a01260b58-21cb0fb51d5a73bf0a00201901376412-en-US">"I/Q Analysis with Graphical Evaluation"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="36452d4e6acc4224.htm#ID_e93414ec1d5cbe380a710a3101304162-21cb0fb51d5a73bf0a00201901376412-en-US">"Data Acquisition via the Optional Digital Baseband Interface"</a>.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="76eb21dfcb904669.htm#ID_23a4977032fd11e2895089ab14b83382-21cb0fb51d5a73bf0a00201901376412-en-US">"Data Acquisition via the Optional Analog Baseband Interface"</a>.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

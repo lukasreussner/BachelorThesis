@@ -1,0 +1,61 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Marker Usage|Marker (Measurement) Functions" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Phase Noise Measurement Marker</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMarkerPNoiseMeas">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMarkerPhaseNoise">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdPhaseNoiseConfig">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodPhaseNoiseUsingNoiseConfig">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdMarkerPhaseNoise">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdMarkerPhaseNoise">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdMarkerPhaseNoise">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdMarkerPhaseNoise">
+</meta>
+        <meta name="topic-id" value="2496">
+</meta>
+        <meta name="topic-id" value="2497">
+</meta>
+        <meta name="topic-id" value="2498">
+</meta>
+        <meta name="topic-id" value="2499">
+</meta>
+        <meta name="topic-id" value="2500">
+</meta>
+        <meta name="topic-id" value="2501">
+</meta>
+        <meta name="topic-id" value="2502">
+</meta>
+        <meta name="topic-id" value="2503">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d7d9342e2b8229940a00206a017a40bf-81e774932b8229940a00206a0130c69d-en-US;ID_1007cf1e3e8e11e09f5a94b975f4fe73-81e774932b8229940a00206a0130c69d-en-US;ID_4b60f985726fd6c80a001ae72b7c524b-81e774932b8229940a00206a0130c69d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="40f2068ca727484b.htm">Marker Usage</a> &gt; <a class="chm-breadcrumb" href="f6177c1e3ac2436e.htm">Marker (Measurement) Functions</a> &gt; <span class="chm-breadcrumb">Phase Noise Measurement Marker</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2029">
+</a><a name="kanchor2030">
+</a><div class="chm-chaptertitle">Phase Noise Measurement Marker</div><p><b>Access</b>: "Overview" &gt; "Analysis" &gt; "Marker Functions" &gt; "Phase Noise" &gt; "Phase Noise Config"</p><p><b>Or</b>: MKR FUNC &gt; "Select Marker Function" &gt; "Phase Noise" &gt; "Phase Noise Config"</p><p>For each of the 16 markers phase noise measurement can be activated.</p><p>Phase noise is unintentional modulation of a carrier; it creates frequencies next to the carrier frequency. A phase noise measurement consists of noise density measurements at defined offsets from the carrier; the results are given in relation to the carrier level (dBc). The phase noise marker function measures the noise power at the delta markers referred to 1 Hz bandwidth. Marker 1 is used as the reference for the phase noise measurement. By default, the current frequency and level of marker 1 are used as the fixed reference marker. However, a peak search can be started to use the current signal peak as the reference point, or a reference point can be defined manually.</p><p>Since the reference point is fixed, the reference level or the center frequency can be set so that the carrier is outside the displayed frequency range after phase noise measurement is started. Or a notch filter can be switched on to suppress the carrier.</p><p>Alternatively, the reference point can be determined automatically by a peak search after each sweep. This function can be used to track a drifting source during a phase noise measurement. The delta marker 2, which shows the phase noise measurement result, keeps the delta frequency value. Therefore the phase noise measurement leads to reliable results in a certain offset although the source is drifting. Only if the marker 2 reaches the border of the span, the delta marker value is adjusted to be within the span. In these cases, select a larger span.</p><p>The result of the phase noise measurement is the difference in level between the reference point and the noise power density. It is indicated as the function result of the phase noise marker in the marker table.</p><p>The sample detector is automatically used and the video bandwidth set to 0.1 times the resolution bandwidth (RBW). The two settings are taken into account in the correction values used for the noise power measurement. To obtain stable results, two pixels on the right and the left of the delta marker position are taken for the measurement. </p><p>The procedure for determining the noise power is identical to the method used for the noise power measurement (see <a class="xref" href="536c336b54414009.htm#ID_b39db8872b816c8c0a00206a019b6b55-4c122c252b816c8c0a00206a00a3afd0-en-US">"Measuring Noise Density (Noise Meas Marker)"</a>).</p><p>The individual marker settings correspond to those defined in the "Marker" dialog box. Any settings to the marker state or type changed in the "Marker Function" dialog box are also changed in the "Marker" dialog box and vice versa.</p><div class="block" id="ID_1007cf1e3e8e11e09f5a94b975f4fe73-81e774932b8229940a00206a0130c69d-en-US"><div class="graphic"><img border="0" src="Resources/Images/img19a667ed4d184bb90a00206a0044f71c_1_--_--_PNG96Small.png" alt="" title="">
+</img></div></div><div class="block"><div class="subtitle"><a name="ID_4b60f985726fd6c80a001ae72b7c524b-81e774932b8229940a00206a0130c69d-en-US">
+</a>Remote commands:</div></div><p><a class="xref" href="f7b391c4cb87416c.htm#ID_d0cd946f29c5147c0a00206a007533ff-c8eba1edf00e759f0a001ae74c65dc14-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>PNOise[:</nobr>​<nobr>STATe]</nobr></a></p><p><a class="xref" href="9c0c682c6f034db2.htm#ID_646a899f29c34de80a00206a01fba1cd-1bdfe12af00e74470a001ae72a66ce26-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>PNOise:</nobr>​<nobr>RESult?</nobr></a></p><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="5da628c6eb9546de.htm#ID_5fa844b5fb7113080a00206a00e503b5-efae436efb7113080a00206a015669c3-en-US" class="title_toc">Marker X / Delta X</a></div><div class="function_block"><font face="Arial">└</font> <a href="7680eb14ed0e493c.htm#ID_1007cf223e8e11e09f5a94b975f4fe73-81e774932b8229940a00206a0130c69d-en-US" class="title_toc">Phase Noise Measurement State</a></div><div class="function_block"><font face="Arial">└</font> <a href="8482d54b398d4c2a.htm#ID_207ab0d848553c680a00206a01ec3c0c-81e774932b8229940a00206a0130c69d-en-US" class="title_toc">Defining Reference Point</a></div><div class="function_block"><font face="Arial">└</font> <a href="a41a16534cdd44dd.htm#ID_bb12768b4dbea14f0a710a3101b34d17-81e774932b8229940a00206a0130c69d-en-US" class="title_toc">Switching All Phase Noise Measurements Off</a></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Bitstream</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K93_6649-e740bb56c9316de40a002019016c0552-en-US;ID_feed7596139fd25a0a0020190047a4e9-e740bb56c9316de40a002019016c0552-en-US;ID_18d87624139fd25a0a00201901bb08c3-e740bb56c9316de40a002019016c0552-en-US;ID_7148c617139fd25a0a002019002db095-e740bb56c9316de40a002019016c0552-en-US;ID_28731b74139fd25a0a00201901bcc338-e740bb56c9316de40a002019016c0552-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="baf3eb2df3e54482.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="7bb31ec5fc5f43ff.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Bitstream</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor955">
+</a><a name="kanchor956">
+</a><div class="chm-chaptertitle">Bitstream</div><p>Data is returned depending on the selected standard for which the measurement was executed (see <a class="xref" href="a28b7568f79a481f.htm#ID_1dc73fda2f524c3f0a00206a0107fb76-149356cd2f5244010a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>STANdard</nobr></a>):</p><div class="block"><div class="subtitle"><a name="ID_feed7596139fd25a0a0020190047a4e9-e740bb56c9316de40a002019016c0552-en-US">
+</a>IEEE 802.11a, ac, g (OFDM), j, n, p standard (OFDM physical layers)</div></div><p>For a given OFDM symbol and a given subcarrier, the bitstream result is derived from the corresponding complex constellation point according to <em>Std IEEE802.11-2012 "Figure 18-10—BPSK, QPSK, 16-QAM, and 64-QAM constellation bit encoding"</em>. The bit pattern (binary representation) is converted to its equivalent integer value as the final measurement result. The number of values returned for each analyzed OFDM symbol corresponds to the number of data subcarriers plus the number of pilot subcarriers (N<sub>SD</sub>+N<sub>SP</sub>) in remote mode.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>As opposed to the graphical Bitstream results, the DC and NULL carriers are not available in remote mode.</p></td></tr></table></div></div><div class="block"><a name="ID_7148c617139fd25a0a002019002db095-e740bb56c9316de40a002019016c0552-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Standard</p></th><th valign="top"><p>CBW in MHz</p></th><th valign="top"><p>N<sub>SD</sub></p><p>(Number of data subcarriers)</p></th><th valign="top"><p>N<sub>SP</sub></p><p>(Number of pilot subcarriers)</p></th><th valign="top"><p>N<sub>ST</sub></p><p>(Total number of subcarriers: N<sub>SD</sub>+N<sub>SP</sub>)</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>IEEE 802.11 a, p</p></td><td valign="top"><p>5</p></td><td valign="top"><p>48</p></td><td valign="top"><p>4</p></td><td valign="top"><p><b>52</b></p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11 a, j, p</p></td><td valign="top"><p>10</p></td><td valign="top"><p>48</p></td><td valign="top"><p>4</p></td><td valign="top"><p><b>52</b></p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11 a, j, p</p></td><td valign="top"><p>20</p></td><td valign="top"><p>48</p></td><td valign="top"><p>4</p></td><td valign="top"><p><b>52</b></p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11n</p></td><td valign="top"><p>20</p></td><td valign="top"><p>52</p></td><td valign="top"><p>4</p></td><td valign="top"><p><b>56</b></p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11n</p></td><td valign="top"><p>40</p></td><td valign="top"><p>108</p></td><td valign="top"><p>6</p></td><td valign="top"><p><b>114</b></p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11ac</p></td><td valign="top"><p>20</p></td><td valign="top"><p>52</p></td><td valign="top"><p>4</p></td><td valign="top"><p><b>56</b></p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11ac</p></td><td valign="top"><p>40</p></td><td valign="top"><p>108</p></td><td valign="top"><p>6</p></td><td valign="top"><p><b>114</b></p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11ac</p></td><td valign="top"><p>80</p></td><td valign="top"><p>234</p></td><td valign="top"><p>8</p></td><td valign="top"><p><b>242</b></p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11ac</p></td><td valign="top"><p>160</p></td><td valign="top"><p>468</p></td><td valign="top"><p>16</p></td><td valign="top"><p><b>484</b></p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_28731b74139fd25a0a00201901bcc338-e740bb56c9316de40a002019016c0552-en-US">
+</a>IEEE 802.11b and g (DSSS) standard (DSSS physical layers)</div></div><p>For the IEEE 802.11b and g (DSSS) standard, the data is returned in PPDU order. Each PPDU is represented as a series of bytes. For each PPDU, the first 9 or 18 bytes represent the PLCP preamble for short and long PPDU types, respectively. The next 6 bytes represent the PLCP header. The remaining bytes represent the PSDU. Data is returned in ASCII printable hexadecimal character format.</p><p>TRACE1 is used for these measurement results.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

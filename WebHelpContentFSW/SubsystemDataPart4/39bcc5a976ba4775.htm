@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Configuration|Modulation Accuracy Measurement Configuration|Demodulation|Demodulation Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>I/Q Correlation Threshold</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eGSMSkIdDemodIQCorrThreshold">
+</meta>
+        <meta name="topic-id" value="599">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7c612a0bf19979a50a710a31017866ce-6de3276a7d447f250a0020190132413b-en-US;ID_5d0fb9fbf71d55d00a710a31010c8c4e-6de3276a7d447f250a0020190132413b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="1a64fe887be64f22.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="e90423ae33184d9a.htm">Modulation Accuracy Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="e3879097f05c495b.htm">Demodulation</a> &gt; <a class="chm-breadcrumb" href="87c80a22dedd49fa.htm">Demodulation Settings</a> &gt; <span class="chm-breadcrumb">I/Q Correlation Threshold</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor588">
+</a><a name="kanchor589">
+</a><a name="kanchor590">
+</a><div class="function_heading"><a name="ID_7c612a0bf19979a50a710a31017866ce-6de3276a7d447f250a0020190132413b-en-US">
+</a><span style="font-weight: bold">I/Q Correlation Threshold</span></div><p>This threshold determines whether a burst is accepted if <a class="xref" href="208ac7d7f8564905.htm#ID_37d28a1bdb25fd0c0a00206a003a3ad2-6de3276a7d447f250a0020190132413b-en-US">"Measure only on Sync"</a> is activated. If the correlation value between the ideal I/Q signal of the given TSC and the measured TSC is below the I/Q correlation threshold, then the application reports "Sync not found" in the status bar. Additionally, such bursts are ignored if "Measure only on Sync" is activated.</p><p><b><a name="ID_5d0fb9fbf71d55d00a710a31010c8c4e-6de3276a7d447f250a0020190132413b-en-US">
+</a>Note:</b> If the R&amp;S FSW GSM application is configured to measure GMSK normal bursts, a threshold below 97% will also accept 8PSK normal bursts (with the same TSC) for analysis. In this case, activate <a class="xref" href="208ac7d7f8564905.htm#ID_37d28a1bdb25fd0c0a00206a003a3ad2-6de3276a7d447f250a0020190132413b-en-US">"Measure only on Sync"</a> and set the "I/Q Correlation Threshold" to 97%. This will exclude the 8PSK normal bursts from the analysis.<br/></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="d36e51984.htm#ID_2c24697bf09c1dce0a00206a0134c4aa-a1df10767dd547ff0a00201901f6b3df-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure[:</nobr>​<nobr>MS]:</nobr>​<nobr>SYNC:</nobr>​<nobr>IQCThreshold</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

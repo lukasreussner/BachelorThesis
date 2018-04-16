@@ -1,0 +1,61 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="LTE Downlink (R&amp;S FSW-K10x)|Configuration|Configuring I/Q Measurements|Defining Level Characteristics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_lte_dl.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Impedance
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eRECSkIdAmplitudeImpedance">
+</meta>
+        <meta name="topic-id" value="12996">
+</meta>
+        <meta name="topic-id" value="12997">
+</meta>
+        <meta name="topic-id" value="12998">
+</meta>
+        <meta name="topic-id" value="12999">
+</meta>
+        <meta name="topic-id" value="13000">
+</meta>
+        <meta name="topic-id" value="13001">
+</meta>
+        <meta name="topic-id" value="13002">
+</meta>
+        <meta name="topic-id" value="13003">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d844b5a72301285f0a00206a00d10652-cf6f802e2301285f0a00206a00f62740-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_lte_dl/Content/120d0f56be654d02.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">LTE Downlink (R&amp;S FSW-K10x)</a> &gt; <a class="chm-breadcrumb" href="815a65ace54b46f5.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="b9dea6be44534e0a.htm">Configuring I/Q Measurements</a> &gt; <a class="chm-breadcrumb" href="8716422cc56e4c36.htm">Defining Level Characteristics</a> &gt; <span class="chm-breadcrumb">Impedance</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor168">
+</a><div class="function_heading"><a name="ID_d844b5a72301285f0a00206a00d10652-cf6f802e2301285f0a00206a00f62740-en-US">
+</a>Impedance</div><p>For some measurements, the reference impedance for the measured levels of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW can be set to 50<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> or 75<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>.</p><p>Select 75 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> if the 50 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> input impedance is transformed to a higher impedance using a 75 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> adapter of the RAZ type. (That corresponds to 25<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> in series to the input impedance of the instrument.) The correction value in this case is 1.76 dB = 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>log (75<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>/50<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>).</p><p>This value also affects the unit conversion.</p><p>This function is not available for input from the optional Digital Baseband Interface or from the optional Analog Baseband Interface . For analog baseband input, an impedance of 50<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> is always used.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="ba32d48bac624442.htm#ID_cdbbfa9d2e8c813b0a00206a00e1f869-1cb93079c4576e3e0a00206a0084fd2b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut:</nobr>​<nobr>IMPedance</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

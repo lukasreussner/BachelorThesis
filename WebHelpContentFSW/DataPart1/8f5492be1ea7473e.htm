@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Bandwidth, Filter and Sweep Configuration|Impact of the Bandwidth, Filter and Sweep Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Separating Signals by Selecting an Appropriate Resolution Bandwidth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e623114a7fa3148e0a00206a009509d3-fc6e2f34ebd4ca590a00206a01d1fc31-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="409c8f6e27aa478c.htm">Bandwidth, Filter and Sweep Configuration</a> &gt; <a class="chm-breadcrumb" href="4282aff75bcb4b68.htm">Impact of the Bandwidth, Filter and Sweep Settings</a> &gt; <span class="chm-breadcrumb">Separating Signals by Selecting an Appropriate Resolution Bandwidth</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1731">
+</a><a name="kanchor1732">
+</a><a name="kanchor1733">
+</a><a name="kanchor1734">
+</a><a name="kanchor1735">
+</a><div class="chm-chaptertitle">Separating Signals by Selecting an Appropriate Resolution Bandwidth</div><p>The resolution bandwidth defines the 3 dB bandwidth of the resolution filter to be used. An RF sinusoidal signal is displayed according to the passband characteristic of the resolution filter (RBW), i.e. the signal display reflects the shape of the filter.</p><p>A basic feature of a signal analyzer is being able to separate the spectral components of a mixture of signals. The resolution at which the individual components can be separated is determined by the resolution bandwidth. Selecting a resolution bandwidth that is too large may make it impossible to distinguish between spectral components, i.e. they are displayed as a single component. Smaller resolution bandwidths, however, increase the required "Sweep Time".</p><p>Two signals with the same amplitude can be resolved if the resolution bandwidth is smaller than or equal to the frequency spacing of the signal. If the resolution bandwidth is equal to the frequency spacing, the spectrum display screen shows a level drop of 3 dB precisely in the center of the two signals. Decreasing the resolution bandwidth makes the level drop larger, which thus makes the individual signals clearer.</p><p>The highest sensitivity is obtained at the smallest bandwidth (1 Hz). If the bandwidth is increased, the reduction in sensitivity is proportional to the change in bandwidth. Increasing the bandwidth by a factor of 3 increases the displayed noise by approx. 5 dB (4.77 dB precisely). If the bandwidth is increased by a factor of 10, the displayed noise increases by a factor of 10, i.e. 10 dB.</p><p>If there are large level differences between signals, the resolution is determined by selectivity as well as by the resolution bandwidth that has been selected. The measure of selectivity used for signal analyzers is the ratio of the 60 dB bandwidth to the 3 dB bandwidth (= shape factor).</p><p>For the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, the shape factor for bandwidths is &lt; 5, i.e. the 60 dB bandwidth of the 30 kHz filter is &lt;150 kHz.</p><p>The higher spectral resolution with smaller bandwidths is won by longer "Sweep Time"s for the same span. The "Sweep Time" has to allow the resolution filters to settle during a sweep at all signal levels and frequencies to be displayed.</p><p>If the RBW is too large, signal parts that are very far away (e.g. from a different signal) are considered in the measurement and distort the results. The noise increases.</p><p>If the RBW is too small, parts of the signal are lost. As the displayed signal always reflects the shape of the filter, select a bandwidth large enough so the displayed signal reflects the entire shape of the filter.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

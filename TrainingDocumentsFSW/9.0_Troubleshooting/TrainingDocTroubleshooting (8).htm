@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Troubleshooting" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Troubleshooting Remote Operation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_42dbbcf96ea2bfc80a001ae7368b876d-631625d28ee9ab200a001ae7341dc313-en-US;ID_3ec83180b8e68a0a0a710a3100b65838-631625d28ee9ab200a001ae7341dc313-en-US;ID_e8a7def8b8e689100a710a310172a756-631625d28ee9ab200a001ae7341dc313-en-US;ID_b9a6c323b8e688f10a710a310116bb8b-631625d28ee9ab200a001ae7341dc313-en-US;ID_d350adc63f5811e58a419dee085c0dec-631625d28ee9ab200a001ae7341dc313-en-US;ID_eb8f7206b8e6877a0a710a3101f95fd7-631625d28ee9ab200a001ae7341dc313-en-US;ID_2223bdb1179f0a900a001ae71a447028-631625d28ee9ab200a001ae7341dc313-en-US;ID_3ec16d31b8e6872c0a710a3101ad2c91-631625d28ee9ab200a001ae7341dc313-en-US;ID_9bc12292da588e7a0a001ae75adae17a-631625d28ee9ab200a001ae7341dc313-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="9d910e570dd84690.htm">Troubleshooting</a> &gt; <span class="chm-breadcrumb">Troubleshooting Remote Operation</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Troubleshooting Remote Operation</div><p>If problems arise during measurement in remote operation, try the following methods to solve them.</p><div class="block"><div class="subtitle"><a name="ID_3ec83180b8e68a0a0a710a3100b65838-631625d28ee9ab200a001ae7341dc313-en-US">
+</a>Incompleted sequential commands - blocked remote channels</div></div><a name="kanchor3331">
+</a><a name="kanchor3332">
+</a><a name="kanchor3333">
+</a><a name="kanchor3334">
+</a><a name="kanchor3335">
+</a><p>If a sequential command cannot be completed, for example because a triggered sweep never receives a trigger, the remote control program will never finish and the remote channel to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is blocked for further commands. In this case, you must interrupt processing on the remote channel in order to abort the measurement.</p><div class="block"><a name="ID_e8a7def8b8e689100a710a310172a756-631625d28ee9ab200a001ae7341dc313-en-US">
+</a><div class="procedure_title">To regain control over a blocked remote channel</div><p>Usually, if you wait a minute for the VISA connection to detect the lost connection and clear the control channel by itself, you can then re-establish the connection again. If this fails, try the following:</p><div><ol class="procedure"><li id="ID_b9a6c323b8e688f10a710a310116bb8b-631625d28ee9ab200a001ae7341dc313-en-US" value="1"><p>Press "Local" on the front panel of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to return to manual operation (if not disabled). Then re-establish the connection.</p></li><li id="ID_d350adc63f5811e58a419dee085c0dec-631625d28ee9ab200a001ae7341dc313-en-US" value="2"><p>Send a "Device Clear" command from the control instrument to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to clear all currently active remote channels. Depending on the used interface and protocol, send the following commands:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><b>Visa</b>: <span class="command">viClear()</span></li><li style="margin-bottom:0; padding-bottom:0;" value="2"><b>GPIB</b>: <span class="command">ibclr()</span></li><li style="margin-bottom:0; padding-bottom:0;" value="3"><b>RSIB</b>: <span class="command">RSDLLibclr()</span></li></ul></div><p>The remote channel currently processing the incompleted command is then ready to receive further commands again.</p></li><li id="ID_eb8f7206b8e6877a0a710a3101f95fd7-631625d28ee9ab200a001ae7341dc313-en-US" value="3"><p>On the remote channel performing the measurement, send the SCPI command <span class="command">ABORt</span> to abort the current measurement and reset the trigger system.</p></li><li id="ID_2223bdb1179f0a900a001ae71a447028-631625d28ee9ab200a001ae7341dc313-en-US" value="4"><p>If the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW still does not react to the remote commands, switch it off and back on.</p></li></ol></div></div><div class="block"><div class="subtitle"><a name="ID_3ec16d31b8e6872c0a710a3101ad2c91-631625d28ee9ab200a001ae7341dc313-en-US">
+</a>Ignored commands</div></div><p>When a remote command attempts to define incompatible settings, the command is ignored and the instrument status remains unchanged, i.e. other settings are not automatically adapted. Therefore, control programs should always define an initial instrument status (e.g. using the *RST command) and then implement the required settings.</p><div class="block"><div class="subtitle"><a name="ID_9bc12292da588e7a0a001ae75adae17a-631625d28ee9ab200a001ae7341dc313-en-US">
+</a>Detecting false commands</div></div><a name="kanchor3336">
+</a><a name="kanchor3337">
+</a><p>If a remote program does not provide the expected results and you are using a GPIB connection, you can log the commands and any errors that may occur. To activate the SCPI error log function, in the "Network + Remote" dialog box, in the "GPIB" tab, select"I/O Logging".</p><p>All remote control commands received by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW are recorded in the following log file:</p><p><span class="command">C:\Program Files (x86)\Rohde-Schwarz\FSW\&lt;version&gt;\ScpiLogging\ScpiLog.txt</span></p><p>Logging the commands may be extremely useful for debug purposes, e.g. in order to find misspelled keywords in control programs. However, remember to turn off the logging function after debugging to avoid unnecessary access to the hard drive and use of storage space.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

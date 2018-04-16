@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Receiving Data Input and Providing Data Output|Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Restrictions</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1d4be4e84a3798c80a001ae760951d6b-3e7f60c551b212130a001ae729483b02-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="37c6eb1792704dd0.htm">Receiving Data Input and Providing Data Output</a> &gt; <a class="chm-breadcrumb" href="688f35c556f04d25.htm">Basics on the 2 GHz / 5 GHz Bandwidth Extensions (R&amp;S FSW-B2000/B5000 Options)</a> &gt; <span class="chm-breadcrumb">Restrictions</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor284">
+</a><a name="kanchor285">
+</a><a name="kanchor286">
+</a><a name="kanchor287">
+</a><a name="kanchor288">
+</a><div class="chm-chaptertitle">Restrictions</div><div class="block"><div class="listintro">If one of the 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz / 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz bandwidth extensions (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSWB2000/B5000) is active, the following restrictions apply:</div><ul class="list"><li value="1">Manual operation on the oscilloscope, or remote operation other than by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW controlling the option, is not possible.</li><li value="2">MSRA mode is not available.</li><li value="3">The center frequency must lie between 5.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz and the maximum frequency supported by the instrument model.</li><li value="4">The record length may be restricted by the number of samples provided by the oscilloscope (see its data sheet).</li><li value="5">Common IF, "2ND IF" (via the IF OUT 2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz/ IF OUT 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz connector), and video output are not available.</li><li value="6">IF power and external are the only supported trigger sources. For the external trigger, a drop-out time cannot be defined.</li><li value="7">When querying the trace data remotely, the I/Q data can only be transferred in interleaved format (I,Q,I,Q...), see <a class="xref" href="e410001c611a4212.htm#shiv_6a_remote_commands_8077-8e1a5ccb57ddb4450a00206a00ba1dc2-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe:</nobr>​<nobr>IQ:</nobr>​<nobr>DATA:</nobr>​<nobr>FORMat</nobr></a>).</li><li value="8">The I/Q data cannot be stored using the <a class="xref" href="295075cd0b2f40de.htm#ID_613361ccd2bcb8540a00206a0037ac46-ca4603981110d2cd0a00206a0183b15f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]:</nobr>​<nobr>MEMory?</nobr></a> remote command.</li><li value="9">Y-axis scaling on the oscilloscope is limited to a minimum of 5mV per division.</li><li value="10">Special B2000 conversion loss tables for external mixers (<span class="filename">.b2g</span> files) cannot be edited within the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW firmware. Common conversion loss tables (<span class="filename">.acl</span> files) cannot be used with the B2000 option. (See also <a class="xref" href="6a89d510d3e24796.htm#ID_34e6f9ceb04211e4881cadb71356f136-3e7f60c551b212130a001ae729483b02-en-US">"External Mixers and B2000/B5000"</a>)</li><li value="11">External mixers cannot be used together with the B5000 option.</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

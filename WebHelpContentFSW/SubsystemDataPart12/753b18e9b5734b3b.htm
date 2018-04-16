@@ -1,0 +1,64 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Sample Rate, Symbol Rate and I/Q Bandwidth" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Sample Rates and  Bandwidths for Digital I/Q Data</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_50cf23fdaede25e90a00206a012e28b3-c731609eaede25e90a00206a017235b7-en-US;ID_1c930536aec519450a00206a014d2248-c731609eaede25e90a00206a017235b7-en-US;ID_ca2517df9e88cbca0a710a31004814f9-c731609eaede25e90a00206a017235b7-en-US;ID_7f1037cd7c7934bc0a710a3101266ab0-c731609eaede25e90a00206a017235b7-en-US;ID_6f65c2bceda482770a00201900348430-c731609eaede25e90a00206a017235b7-en-US;ID_b872f36148c321a60a00206a001fb6cb-c731609eaede25e90a00206a017235b7-en-US;ID_36e9dc52cb4eec280a710a3100f03cb9-c731609eaede25e90a00206a017235b7-en-US;ID_d246783e48c321a60a00206a015ecbe3-c731609eaede25e90a00206a017235b7-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="a653b9be9dd94c76.htm">Sample Rate, Symbol Rate and I/Q Bandwidth</a> &gt; <span class="chm-breadcrumb">Sample Rates and Bandwidths for Digital I/Q Data</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor195">
+</a><a name="kanchor196">
+</a><a name="kanchor197">
+</a><a name="kanchor198">
+</a><div class="chm-chaptertitle">Sample Rates and Bandwidths for Digital I/Q Data</div><div class="block"><div class="subtitle"><a name="ID_1c930536aec519450a00206a014d2248-c731609eaede25e90a00206a017235b7-en-US">
+</a>Definitions</div></div><a name="kanchor199">
+</a><a name="kanchor200">
+</a><a name="kanchor201">
+</a><a name="kanchor202">
+</a><a name="kanchor203">
+</a><a name="kanchor204">
+</a><a name="kanchor205">
+</a><div class="block"><div class="block"><ul class="list"><li value="1"><b>Clock rate</b>: the rate at which data is physically transmitted between the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and the connected device; both instruments must be able to process data at this rate; the clock rate of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW at the output connector is 142.9<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz; using the Digital I/Q enhanced mode, a data transfer rate of up to 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Msps is possible</li><li value="2"><b>Input sample rate (ISR)</b>: the sample rate of the useful data provided by the connected instrument to the digital input</li><li value="3">(User, Output) <b>Sample rate (SR)</b>: the sample rate that is defined by the user (e.g. in the "Data Aquisition" dialog box in the "I/Q Analyzer" application) and which is used as the basis for analysis or sent to the digital output</li><li value="4"><b>Usable I/Q (Analysis) bandwidth</b>: the bandwidth range in which the signal remains unchanged by the digital decimation filter and thus remains undistorted; this range can be used for accurate analysis by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW</li></ul></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_ca2517df9e88cbca0a710a31004814f9-c731609eaede25e90a00206a017235b7-en-US">
+</a>Slow I/Q measurements</div><a name="kanchor206">
+</a><p>When captured data is transferred and further processed with a slower rate than the rate with which the signal was sampled, this is referred to as a <em>Slow I/Q measurement</em>.</p><p>For example, assume an analog signal is sampled by an oscilloscope with a sample rate of 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz. This data is stored in a memory temporarily and then transferred to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW via the Digital I/Q Interface with a sample rate of 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Msps. Then the input sample rate on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW must be set to 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz so the signal is displayed correctly.</p></td></tr></table></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_7f1037cd7c7934bc0a710a3101266ab0-c731609eaede25e90a00206a017235b7-en-US">
+</a>Digital I/Q enhanced mode</div><a name="kanchor207">
+</a><a name="kanchor208">
+</a><p>An enhanced mode for processing data from the Digital Baseband Interface is available. This enhanced mode enables data transfer via the Digital I/Q interface with a data rate of up to 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Msps (160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz bandwidth, compared to the previous 100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Msps/ 80<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz bandwidth).</p><div class="block"><div class="listintro">The Digital I/Q enhanced mode is automatically used if the following prerequisites are fulfilled:</div><ul class="list"><li value="1"><b>Digital Input:</b> The connected device must support data transfer rates up to 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Msps.</li><li value="2"><b>Digital Output:</b><table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW must supply the required bandwidth, i.e. a bandwidth extension option greater than 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz must be installed and active.</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The connected device must support data transfer rates up to 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Msps.</td></tr></table></li></ul></div></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_6f65c2bceda482770a00201900348430-c731609eaede25e90a00206a017235b7-en-US">
+</a>Restrictions for digital in- and output</div></div><p>The following table describes the restrictions for digital in- and output:</p><div class="block"><a name="ID_b872f36148c321a60a00206a001fb6cb-c731609eaede25e90a00206a017235b7-en-US">
+</a><a name="kanchor209">
+</a><a name="kanchor210">
+</a><span class="table-caption">Restrictions for digital in- and output</span><table border="1"><colgroup><col width="99.792">
+</col><col width="108.01350000000001">
+</col><col width="173.565">
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Minimum</p></th><th valign="top"><p>Maximum</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Record length</p></td><td valign="top"><p>2 complex samples</p></td><td valign="top"><p>200*1000*1000 complex samples</p></td></tr><tr class="evenrow"><td valign="top"><p>Input sample rate (ISR)</p></td><td valign="top"><p>100 Hz</p></td><td valign="top"><p>10 GHz</p></td></tr><tr class="oddrow"><td valign="top"><p>Sample Rate (SR) - Digital input</p></td><td valign="top"><p>Max(100 Hz; ISR/8388608)</p></td><td valign="top"><p>Min(10 GHz; 2*ISR)</p></td></tr><tr class="evenrow"><td valign="top"><p>Sample Rate (SR) - Digital output</p></td><td valign="top"><p>100 Hz</p></td><td valign="top"><p>200 MHz</p></td></tr><tr class="oddrow"><td valign="top"><p>Usable I/Q bandwidth</p><p>(Digital input and filter active)</p></td><td colspan="2" valign="top"><p>Min(0.8*SR; 0.8*ISR)</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_36e9dc52cb4eec280a710a3100f03cb9-c731609eaede25e90a00206a017235b7-en-US">
+</a>Bandwidths</div></div><a name="kanchor211">
+</a><a name="kanchor212">
+</a><p>Depending on the sample rate, the following bandwidths are available:</p><div class="block" id="ID_d246783e48c321a60a00206a015ecbe3-c731609eaede25e90a00206a017235b7-en-US"><div class="graphic"><img border="0" src="Resources/Images/img74188a07baf1d7bf0a0020190141c973_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Bandwidths depending on sample rate for active digital input</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring and Performing Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measuring the Carrier-to-Noise Ratio</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_40fa7c152873813d0a00206a0146f849-cce83a0fddaee0500a00206a01f64c7b-en-US;ID_5e0825bc04cf3d640a00206a01a15aba-cce83a0fddaee0500a00206a01f64c7b-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="5fe0b146330d4f6b.htm">Configuring and Performing Measurements</a> &gt; <span class="chm-breadcrumb">Measuring the Carrier-to-Noise Ratio</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2992">
+</a><a name="kanchor2993">
+</a><a name="kanchor2994">
+</a><div class="chm-chaptertitle">Measuring the Carrier-to-Noise Ratio</div><p>The following commands are necessary to perform carrier-to-noise measurements.</p><div class="block"><ul class="list"><li value="1"><span class="command">CALC:MARK:FUNC:POW:SEL CN | CN0</span>, see <a class="xref" href="6e507c379d974b9d.htm#ID_a425f4309a7d33b60a00206a01428753-17656b8267826b580a00206a000b1a2b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>POWer:</nobr>​<nobr>SELect</nobr></a></li><li value="2"><a class="xref" href="a3834900ed9948fe.htm#shiv_6a_remote_commands_2975-38c8359a6783a5ea0a00206a0023a1bf-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>POWer[:</nobr>​<nobr>STATe]</nobr></a></li><li value="3"><a class="xref" href="e2d029272f82414b.htm#ID_f4359f7c9662a7a20a00206a013e0917-62f18da6211acfec0a00206a011e51c9-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>POWer&lt;sb&gt;:</nobr>​<nobr>RESult?</nobr></a></li><li value="4"><a class="xref" href="603aec3ade5b41be.htm#ID_a30b578e2de339f10a00206a0001e1af-21a2331a20ff79010a00206a003a5ed6-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>ACHannel:</nobr>​<nobr>BANDwidth[:</nobr>​<nobr>CHANnel&lt;ch&gt;]</nobr></a></li><li value="5"><a class="xref" href="5ace828493154e42.htm#ID_a738638b2de143540a00206a01765aa6-85edd2072103d6100a00206a0151e5f2-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]POWer:</nobr>​<nobr>ACHannel:</nobr>​<nobr>PRESet</nobr></a></li></ul></div><div class="block"><div class="subtitle"><a name="ID_5e0825bc04cf3d640a00206a01a15aba-cce83a0fddaee0500a00206a01f64c7b-en-US">
+</a>Programming example: Measuring the carrier-to-noise ratio</div></div><a name="kanchor2995">
+</a><p>This programming example demonstrates how to perform a Carrier-to-noise measurement in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//----------Preparing the measurement------------
+*RST
+//Reset the instrument
+FREQ:CENT 800MHz
+//Sets the center frequency to the carrier frequency of 800 MHz.
+CALC:MARK:FUNC:POW:SEL CN
+//Activates carrier-to-noise ratio measurement.
+POW:ACH:PRES CN
+//Optimizes the instrument settings according to the channel bandwidth.
+POW:ACH:PRES:RLEV
+//Determines the ideal reference level for the measurement.
+
+//--------------Performing the Measurement-----
+INIT:CONT OFF
+//Selects single sweep mode.
+INIT;*WAI
+//Initiates a new measurement and waits until the sweep has finished.
+
+// Now turn off the carrier signal and repeat the measurement:
+INIT;*WAI
+//Initiates a new measurement and waits until the sweep has finished.
+
+//---------------Retrieving Results-------------
+CALC:MARK:FUNC:POW:RES? CN
+//Returns the carrier-to-noise ratio.</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

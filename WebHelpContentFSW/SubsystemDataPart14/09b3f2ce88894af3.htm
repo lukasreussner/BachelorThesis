@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Channels and Codes</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_1109b13544248e300a00201901ebe7bf-817e14ba6b7549660a0020190123ea90-en-US;ID_94d844d644248e300a00201900bbe4fa-817e14ba6b7549660a0020190123ea90-en-US;ID_192195e5484dc4a10a710a3100d3d906-817e14ba6b7549660a0020190123ea90-en-US;ID_586599f544248e300a00201901624777-817e14ba6b7549660a0020190123ea90-en-US;ID_65c0fe5244248e300a00201900a0fc53-817e14ba6b7549660a0020190123ea90-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="416ea19448144801.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Channels and Codes</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor140">
+</a><a name="kanchor141">
+</a><a name="kanchor142">
+</a><a name="kanchor143">
+</a><a name="kanchor144">
+</a><div class="chm-chaptertitle">Channels and Codes</div><p>Within each time slot, up to 16 code channels can be transmitted. Each channel is spread over one to 16 codes (also referred to as <em>channelization codes</em>), depending on the code class of the channel. The code class specifies the spreading factor of the channel and thus the number of possible channels per slot.</p><div class="block"><a name="ID_94d844d644248e300a00201900bbe4fa-817e14ba6b7549660a0020190123ea90-en-US">
+</a><span class="table-caption">Relationship between code class, channels and spreading factor</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Code class</p></th><th valign="top"><p>Spreading factor = No. channels per slot</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>0</p></td><td valign="top"><p>1</p></td></tr><tr class="evenrow"><td valign="top"><p>1</p></td><td valign="top"><p>2</p></td></tr><tr class="oddrow"><td valign="top"><p>2</p></td><td valign="top"><p>4</p></td></tr><tr class="evenrow"><td valign="top"><p>3</p></td><td valign="top"><p>8</p></td></tr><tr class="oddrow"><td valign="top"><p>4</p></td><td valign="top"><p>16</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_192195e5484dc4a10a710a3100d3d906-817e14ba6b7549660a0020190123ea90-en-US">
+</a>Chips</div></div><a name="kanchor145">
+</a><a name="kanchor146">
+</a><p>The user data is spread to code channels across the available bandwidth using the spreading factor before transmission. The spread bits are referred to as <em>chips</em>. Each slot consists of 864 chips. The chips are transferred at a rate of 1.28 Megachips per second (Mcps).</p><div class="block"><div class="subtitle"><a name="ID_586599f544248e300a00201901624777-817e14ba6b7549660a0020190123ea90-en-US">
+</a>Active and inactive codes/slots</div></div><a name="kanchor147">
+</a><a name="kanchor148">
+</a><a name="kanchor149">
+</a><a name="kanchor150">
+</a><a name="kanchor151">
+</a><p>During code domain analysis, the power in the selected slot in the captured subframes is measured to detect active channels. If the total power in the slot does not exceed a threshold, the slot is considered to be inactive. Otherwise, the slot is analyzed to detect channels.</p><p>To do so, the data in the slot is unscrambled according to the defined scrambling code and carrier (= center) frequency. Then, all possible spreading sequences are applied to the unscrambled data, defining the individual channels. Each despread channel whose power exceeds the channel threshold is considered to be active. The reference signal is then generated according to the active channels only.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><a name="kanchor152">
+</a><p>If the power threshold for inactive channels is not set correctly, power from supposedly inactive channels contributes to the peak code domain error, leading to false results.</p><p>To determine the correct threshold, the Code Domain Power evaluation is a useful instrument (see <a class="xref" href="38a746aa1fee4780.htm#ID_39016a45b68b8f510a00206a00e8598c-a17c8fff6b754c540a0020190052c5dc-en-US">"Code Domain Power"</a>).</p></td></tr></table></div></div><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="311fc64ba4e44dbc.htm" class="chapter_title_toc">Special Channels</a></li><li value="2"><a href="03410476c82a4182.htm" class="chapter_title_toc">Channel Characteristics</a></li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

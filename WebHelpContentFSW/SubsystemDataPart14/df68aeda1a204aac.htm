@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Configuration|Code Domain Analysis|Synchronization" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Sync To</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eBTDSSkIdSyncTo">
+</meta>
+        <meta name="topic-id" value="710">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_26db920f347b67060a710a920042cbda-26abbb7c6b7540ab0a0020190197bb5d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="be29444a851946eb.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="1db9d5b397df4679.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="bad03c2ed37449ab.htm">Synchronization</a> &gt; <span class="chm-breadcrumb">Sync To</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor366">
+</a><div class="function_heading"><a name="ID_26db920f347b67060a710a920042cbda-26abbb7c6b7540ab0a0020190197bb5d-en-US">
+</a><span style="font-weight: bold">Sync To</span></div><p>Defines the phase reference. For a successful synchronization, the selected slot must contain at least one data channel with sufficient power.</p><p>(Not available for Power vs Time measurements.)</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"P-CCPCH"</p></td><td class="function_col_right"><p><b>(BTS application only)</b></p><p>By default, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW TD-SCDMA BTS application determines the phase reference for all downlink data slots from the downlink pilot channel (P-CCPCH) in slot 0. For some measurements like beamforming or repeater measurements, it might be necessary to apply different phase offsets to each time slot. In these timeslots, using the P-CCPCH as phase reference leads to rotated constellation diagrams and poor EVM results.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Code Channel"</p></td><td class="function_col_right"><p><b>(UE application only)</b></p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW TD-SCDMA UE determines the phase reference from the channel of the selected slot. This is useful when synchronization fails in poor SNR environments.</p><p>For channel synchronization, at least one of the channels must be QPSK or 8PSK modulated.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Midamble"</p></td><td class="function_col_right"><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW TD-SCDMA application determines the phase reference from the midamble of the selected slot. With this method, the data slots can be phase rotated to each other and a degradation of the EVM results can be avoided.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="65eb475929fa4eae.htm#ID_0cf91d5d7d9e58300a00206a005b6b7e-77dcbce5be24a0b80a00201900987e11-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CDPower:</nobr>​<nobr>STSLot</nobr></a></p><p><b>UE application:</b><a class="xref" href="d36e42292.htm#ID_a0979cfdb8b711deac29997d0e330b4f-6c252116fbed59070a0020190198efde-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CDPower:</nobr>​<nobr>STSLot:</nobr>​<nobr>MODE</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

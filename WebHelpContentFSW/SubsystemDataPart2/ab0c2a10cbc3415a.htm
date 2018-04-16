@@ -1,0 +1,116 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Annex|I/Q Data File Format (iq-tar)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>I/Q Parameter XML File Specification</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_e6a2b0a6c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;ID_e6a2b0a7c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;ID_e6a2b0abc7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;ID_e6a2b0acc7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;ID_e6a9dbe7c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;ID_e6a9dbeac7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;ID_e6ac4cf4c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="d480404e79185.htm">Annex</a> &gt; <a class="chm-breadcrumb" href="093e11648f9c46e1.htm">I/Q Data File Format (iq-tar)</a> &gt; <span class="chm-breadcrumb">I/Q Parameter XML File Specification</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1005">
+</a><a name="kanchor1006">
+</a><a name="kanchor1007">
+</a><div class="chm-chaptertitle">I/Q Parameter XML File Specification</div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The content of the I/Q parameter XML file must comply with the XML schema <span class="filename">RsIqTar.xsd</span> available at: <a href="http://www.rohde-schwarz.com/file/RsIqTar.xsd" class="link" target="_new">http://www.rohde-schwarz.com/file/RsIqTar.xsd</a>.</p><p>In particular, the order of the XML elements must be respected, i.e. iq-tar uses an "ordered XML schema". For your own implementation of the iq-tar file format make sure to validate your XML file against the given schema.</p><p>The following example shows an I/Q parameter XML file. The XML elements and attributes are explained in the following sections.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_e6a2b0abc7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Sample I/Q parameter XML file: xyz.xml</div></div><pre class="verbatim" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" 
+href="open_IqTar_xml_file_in_web_browser.xslt"?&gt;
+&lt;RS_IQ_TAR_FileFormat fileFormatVersion="1" 
+xsi:noNamespaceSchemaLocation="RsIqTar.xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;Name&gt;R&amp;S FSW&lt;/Name&gt;
+  &lt;Comment&gt;Here is a comment&lt;/Comment&gt;
+  &lt;DateTime&gt;2011-01-24T14:02:49&lt;/DateTime&gt;
+  &lt;Samples&gt;68751&lt;/Samples&gt;
+  &lt;Clock unit="Hz"&gt;6.5e+006&lt;/Clock&gt;
+  &lt;Format&gt;complex&lt;/Format&gt;
+  &lt;DataType&gt;float32&lt;/DataType&gt;
+  &lt;ScalingFactor unit="V"&gt;1&lt;/ScalingFactor&gt;
+  &lt;NumberOfChannels&gt;1&lt;/NumberOfChannels&gt;
+&lt;DataFilename&gt;xyz.complex.float32&lt;/DataFilename&gt;
+&lt;UserData&gt;
+  &lt;UserDefinedElement&gt;Example&lt;/UserDefinedElement&gt;
+&lt;/UserData&gt;
+  &lt;PreviewData&gt;...&lt;/PreviewData&gt;
+&lt;/RS_IQ_TAR_FileFormat&gt;
+</pre><div class="block"><a name="ID_e6a2b0acc7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Element</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>RS_IQ_TAR_FileFormat</p></td><td valign="top"><p>The root element of the XML file. It must contain the attribute <span class="command">fileFormatVersion</span> that contains the number of the file format definition. Currently, <span class="command">fileFormatVersion</span> "2" is used.</p></td></tr><tr class="evenrow"><td valign="top"><p>Name</p></td><td valign="top"><p>Optional: describes the device or application that created the file.</p></td></tr><tr class="oddrow"><td valign="top"><p>Comment</p></td><td valign="top"><p>Optional: contains text that further describes the contents of the file.</p></td></tr><tr class="evenrow"><td valign="top"><p>DateTime</p></td><td valign="top"><p>Contains the date and time of the creation of the file. Its type is <span class="command">xs:dateTime</span> (see <span class="filename">RsIqTar.xsd</span>).</p></td></tr><tr class="oddrow"><td valign="top"><p>Samples</p></td><td valign="top"><p>Contains the number of samples of the I/Q data. For multi-channel signals all channels have the same number of samples. One sample can be:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">A complex number represented as a pair of I and Q values</li><li style="margin-bottom:0; padding-bottom:0;" value="2">A complex number represented as a pair of magnitude and phase values</li><li style="margin-bottom:0; padding-bottom:0;" value="3">A real number represented as a single real value</li></ul></div><p>See also <span class="command">Format</span> element.</p></td></tr><tr class="evenrow"><td valign="top"><p>Clock</p></td><td valign="top"><p>Contains the clock frequency in Hz, i.e. the sample rate of the I/Q data. A signal generator typically outputs the I/Q data at a rate that equals the clock frequency. If the I/Q data was captured with a signal analyzer, the signal analyzer used the clock frequency as the sample rate. The attribute <span class="command">unit</span> must be set to "Hz".</p></td></tr><tr class="oddrow"><td valign="top"><p>Format</p></td><td valign="top"><p>Specifies how the binary data is saved in the I/Q data binary file (see <span class="command">DataFilename</span> element). Every sample must be in the same format. The format can be one of the following:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><span class="command">complex</span>: Complex number in cartesian format, i.e. I and Q values interleaved. I and Q are unitless</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><span class="command">real</span>: Real number (unitless)</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><span class="command">polar</span>: Complex number in polar format, i.e. magnitude (unitless) and phase (rad) values interleaved. Requires <span class="command">DataType</span> = <span class="command">float32</span> or <span class="command">float64</span></li></ul></div></td></tr><tr class="evenrow"><td valign="top"><p>DataType</p></td><td valign="top"><p>Specifies the binary format used for samples in the I/Q data binary file (see <span class="command">DataFilename</span> element and <a class="xref" href="29a0dbebb001474c.htm#ID_e6ac4cf5c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">"I/Q Data Binary File"</a>). The following data types are allowed:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><span class="command">int8</span>: 8 bit signed integer data</li><li style="margin-bottom:0; padding-bottom:0;" value="2"><span class="command">int16</span>: 16 bit signed integer data</li><li style="margin-bottom:0; padding-bottom:0;" value="3"><span class="command">int32</span>: 32 bit signed integer data</li><li style="margin-bottom:0; padding-bottom:0;" value="4"><span class="command">float32</span>: 32 bit floating point data (IEEE 754)</li><li style="margin-bottom:0; padding-bottom:0;" value="5"><span class="command">float64</span>: 64 bit floating point data (IEEE 754)</li></ul></div></td></tr><tr class="oddrow"><td valign="top"><p>ScalingFactor</p></td><td valign="top"><p>Optional: describes how the binary data can be transformed into values in the unit Volt. The binary I/Q data itself has no unit. To get an I/Q sample in the unit Volt the saved samples have to be multiplied by the value of the <span class="command">ScalingFactor</span>. For polar data only the magnitude value has to be multiplied. For multi-channel signals the <span class="command">ScalingFactor</span> must be applied to all channels.</p><p>The attribute <span class="command">unit</span> must be set to "<span class="command">V</span>".</p><p>The <span class="command">ScalingFactor</span> must be &gt; 0. If the <span class="command">ScalingFactor</span> element is not defined, a value of 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>V is assumed.</p></td></tr><tr class="evenrow"><td valign="top"><p>NumberOfChannels</p></td><td valign="top"><p>Optional: specifies the number of channels, e.g. of a MIMO signal, contained in the I/Q data binary file. For multi-channels, the I/Q samples of the channels are expected to be interleaved within the I/Q data file (see <a class="xref" href="29a0dbebb001474c.htm#ID_e6ac4cf5c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">"I/Q Data Binary File"</a>). If the <span class="command">NumberOfChannels</span> element is not defined, one channel is assumed.</p></td></tr><tr class="oddrow"><td valign="top"><p>DataFilename</p></td><td valign="top"><p>Contains the filename of the I/Q data binary file that is part of the iq-tar file.</p><p>It is recommended that the filename uses the following convention:</p><div class="block"><div class="listintro-in-compact-list">&lt;xyz&gt;.&lt;Format&gt;.&lt;Channels&gt;ch.&lt;Type&gt;</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">&lt;xyz&gt; = a valid Windows file name</li><li style="margin-bottom:0; padding-bottom:0;" value="2">&lt;Format&gt; = complex, polar or real (see <span class="command">Format</span> element)</li><li style="margin-bottom:0; padding-bottom:0;" value="3">&lt;Channels&gt; = Number of channels (see <span class="command">NumberOfChannels</span> element)</li><li style="margin-bottom:0; padding-bottom:0;" value="4">&lt;Type&gt; = float32, float64, int8, int16, int32 or int64 (see <span class="command">DataType</span> element)</li></ul></div><div class="block"><div class="listintro-in-compact-list">Examples:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">xyz.complex.1ch.float32</li><li style="margin-bottom:0; padding-bottom:0;" value="2">xyz.polar.1ch.float64</li><li style="margin-bottom:0; padding-bottom:0;" value="3">xyz.real.1ch.int16</li><li style="margin-bottom:0; padding-bottom:0;" value="4">xyz.complex.16ch.int8</li></ul></div></td></tr><tr class="evenrow"><td valign="top"><p>UserData</p></td><td valign="top"><p>Optional: contains user, application or device-specific XML data which is not part of the iq-tar specification. This element can be used to store additional information, e.g. the hardware configuration. User data must be valid XML content.</p></td></tr><tr class="oddrow"><td valign="top"><p>PreviewData</p></td><td valign="top"><p>Optional: contains further XML elements that provide a preview of the I/Q data. The preview data is determined by the routine that saves an iq-tar file (e.g. R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW). For the definition of this element refer to the <span class="filename">RsIqTar.xsd</span> schema. Note that the preview can be only displayed by current web browsers that have JavaScript enabled and if the XSLT stylesheet <span class="filename">open_IqTar_xml_file_in_web_browser.xslt</span> is available.</p></td></tr></tbody></table></div><div class="block"><span class="bold"><a name="ID_e6a9dbe7c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Example: ScalingFactor</span><p>Data stored as <span class="command">int16</span> and a desired full scale voltage of 1 V</p><p><span class="command">ScalingFactor</span> = 1 V / maximum int16 value = 1 V / 2<sup>15</sup> = 3.0517578125e-5 V</p><div class="block"><a name="ID_e6a9dbeac7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Scaling Factor</p></th><th valign="top"><p>Numerical value</p></th><th valign="top"><p>Numerical value x ScalingFactor</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Minimum (negative) int16 value</p></td><td valign="top"><p>- 2<sup>15</sup> = - 32768</p></td><td valign="top"><p>-1 V</p></td></tr><tr class="evenrow"><td valign="top"><p>Maximum (positive) int16 value</p></td><td valign="top"><p>2<sup>15</sup>-1= 32767</p></td><td valign="top"><p>0.999969482421875 V</p></td></tr></tbody></table></div></div><div class="block"><div class="subtitle"><a name="ID_e6ac4cf4c7e311e0bed3960edcd8aa91-2e8d3b527ba899de0a00206a010acc15-en-US">
+</a>Example: PreviewData in XML</div></div><pre class="verbatim" xml:space="preserve">&lt;PreviewData&gt;
+    &lt;ArrayOfChannel length="1"&gt;
+      &lt;Channel&gt;
+        &lt;PowerVsTime&gt;
+          &lt;Min&gt;
+            &lt;ArrayOfFloat length="256"&gt;
+              &lt;float&gt;-134&lt;/float&gt;
+              &lt;float&gt;-142&lt;/float&gt;
+              ...
+              &lt;float&gt;-140&lt;/float&gt;
+            &lt;/ArrayOfFloat&gt;
+          &lt;/Min&gt;
+          &lt;Max&gt;
+            &lt;ArrayOfFloat length="256"&gt;
+              &lt;float&gt;-70&lt;/float&gt;
+              &lt;float&gt;-71&lt;/float&gt;
+              ...
+              &lt;float&gt;-69&lt;/float&gt;
+            &lt;/ArrayOfFloat&gt;
+          &lt;/Max&gt;
+        &lt;/PowerVsTime&gt;
+        &lt;Spectrum&gt;
+          &lt;Min&gt;
+            &lt;ArrayOfFloat length="256"&gt;
+              &lt;float&gt;-133&lt;/float&gt;
+              &lt;float&gt;-111&lt;/float&gt;
+              ...
+              &lt;float&gt;-111&lt;/float&gt;
+            &lt;/ArrayOfFloat&gt;
+          &lt;/Min&gt;
+          &lt;Max&gt;
+            &lt;ArrayOfFloat length="256"&gt;
+              &lt;float&gt;-67&lt;/float&gt;
+              &lt;float&gt;-69&lt;/float&gt;
+              ...
+              &lt;float&gt;-70&lt;/float&gt;
+              &lt;float&gt;-69&lt;/float&gt;
+            &lt;/ArrayOfFloat&gt;
+          &lt;/Max&gt;
+        &lt;/Spectrum&gt;
+        &lt;IQ&gt;
+          &lt;Histogram width="64" height="64"&gt;0123456789...0&lt;/Histogram&gt;
+        &lt;/IQ&gt;
+      &lt;/Channel&gt;
+    &lt;/ArrayOfChannel&gt;
+  &lt;/PreviewData&gt;</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

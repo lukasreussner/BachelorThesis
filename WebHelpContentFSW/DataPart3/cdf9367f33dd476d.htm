@@ -1,0 +1,79 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Analyzing Measurements (Basics)|Configuring Display and Limit Lines|Defining Limit Checks|Programming Example: Using Limit Lines" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Example: Configuring Limit Lines</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a4985bbad35711e28c55fa87ba57cc71-425d23d33d3170070a00201901870244-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="a93e89bc500742a4.htm">Analyzing Measurements (Basics)</a> &gt; <a class="chm-breadcrumb" href="fabe0363fd96477f.htm">Configuring Display and Limit Lines</a> &gt; <a class="chm-breadcrumb" href="3420c23676244c14.htm">Defining Limit Checks</a> &gt; <a class="chm-breadcrumb" href="002a9d8730ff497d.htm">Programming Example: Using Limit Lines</a> &gt; <span class="chm-breadcrumb">Example: Configuring Limit Lines</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor3261">
+</a><a name="kanchor3262">
+</a><div class="chm-chaptertitle">Example: Configuring Limit Lines</div><p>This example demonstrates how to configure 2 limit lines - an upper and a lower limit - for a measurement in a remote environment.</p><div class="verbatim"><pre class="verbatim_text">//------------- Configuing the limit lines ---------------------
+CALC:LIM1:NAME 'FM1'
+//Names limit line 1 'FM1'.
+
+CALC:LIM1:CONT:MODE ABS
+//Selects absolute scaling for the horizontal axis.
+CALC:LIM1:CONT 1 MHz,50MHz,100 MHz,150MHz,200MHz
+//Defines 5 horizontal definition points for limit line 1.
+CALC:LIM1:UPP:MODE ABS
+//Selects an absolute vertical scale for limit line 1.
+CALC:LIM1:UNIT DBM
+//Selects the unit dBm for limit line 1.
+CALC:LIM1:UPP -10,-5,0,-5,-10
+//Defines 5 definition points for limit line 1.
+
+CALC:LIM1:UPP:MARG 5dB
+//Defines an area of 5 dB around limit line 1 where limit check violations 
+//are still tolerated.
+
+CALC:LIM1:UPP:SHIF -10DB
+//Shifts the limit line 1 by -10 dB.
+CALC:LIM1:UPP:OFFS -3dB
+//Defines an additional -3 dB offset for limit line 1.
+
+CALC:LIM3:NAME 'FM3'
+//Names limit line 3 'FM3'.
+
+CALC:LIM3:LOW:MODE REL
+//Selects a relative vertical scale for limit line 3.
+CALC:LIM3:UNIT DB
+
+CALC:LIM3:CONT 1 MHz,50MHz,100 MHz,150MHz,200MHz
+//Defines 5 horizontal definition points for limit line 3.
+CALC:LIM3:LOW -90,-60,-40,-60,-90
+//Defines 5 definition points relative to the reference level for limit line 3.
+
+CALC:LIM3:LOW:SHIF 2
+//Shifts the limit line 3 by 2dB.
+CALC:LIM3:LOW:OFFS 3
+//Defines an additional 3 dB offset for limit line 3.
+
+CALC:LIM3:LOW:THR -200DBM
+//Defines a power threshold of -200dBm that must be exceeded for limit to be checked 
+
+CALC:LIM3:LOW:MARG 5dB
+//Defines an area of 5dB around limit line 3 where limit check violations 
+//are still tolerated.
+
+//-------------- Storing the limit lines -----------------------
+MMEM:SEL:CHAN:LIN:ALL ON
+MMEM:STOR:TYPE CHAN
+MMEM:STOR:STAT 1,'LimitLines_FM1_FM3'
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

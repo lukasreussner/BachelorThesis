@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Overview of the Demodulation Process" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>I/Q Pattern Search</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K70_1004-184c8906411153460a00206a01532735-en-US;ID_320e46c7c9607c660a710a3101ff9729-184c8906411153460a00206a01532735-en-US;ID_a7b8a3a0c9607be90a710a3100ae6f18-184c8906411153460a00206a01532735-en-US;ID_8e5f37dd27c911e18e51fd65539fbdcc-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="a9433bb736a54dfb.htm">Overview of the Demodulation Process</a> &gt; <span class="chm-breadcrumb">I/Q Pattern Search</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">I/Q Pattern Search</div><a name="kanchor273">
+</a><a name="kanchor274">
+</a><p>The I/Q pattern search is performed only if it is switched on. Otherwise, this stage is skipped. The main benefit of the I/Q pattern search is that it enables an alignment of the result range to the pattern. Furthermore, this stage can function as a filter, so only bursts with the correct pattern are demodulated. Switch the burst search and I/Q pattern search on, and set the parameter "Meas Only If Pattern Symbols Correct" to true (see <a class="xref" href="d72940e40570.htm#ID_24c6087856c336b00a00206a002054a4-90a8a4c556c336b00a00206a00951271-en-US">"Meas only if Pattern Symbols Correct"</a>).</p><p>During the I/Q pattern search stage, the capture buffer is searched for an I/Q pattern by trying different time and frequency hypotheses. The I/Q pattern is generated internally, based on the specified symbol number of the pattern and the signal description (i.e. modulation scheme and transmit filter). The I/Q pattern search can also be referred to as the pattern waveform search. An I/Q pattern is considered detected if the correlation metric, i.e. the correlation value between the ideal I/Q pattern and capture buffer, exceeds a specified "I/Q Correlation Threshold" (see <a class="xref" href="fb115d7847044494.htm#ID_ae3bcc4ba1543e2b0a00206a00eed00e-98ce8ff6410963710a00206a00a7855c-en-US">"I/Q Correlation Threshold"</a>.)</p><p>If the burst search is switched on, the I/Q pattern search only searches the I/Q pattern in bursts previously detected by the burst search. Furthermore, it only finds the first I/Q pattern within each burst. If the burst search is switched off, the I/Q pattern search searches for the I/Q pattern in the entire capture buffer.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The first detected pattern in the capture buffer for the current pattern search settings is indicated by a green line in the preview area of the "Pattern Search" configuration dialog box (see <a class="xref" href="88c2d16d5cdd4cb5.htm#ID_f1b4df11472f3d180a00206a00ed20c6-98ce8ff6410963710a00206a00a7855c-en-US">"Pattern Search"</a>).</p><div class="block" id="ID_a7b8a3a0c9607be90a710a3100ae6f18-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img417c4bc7c9255a5d0a002019008064d5_1_--_--_PNG96Small.png" alt="" title=""/></div></div></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_8e5f37dd27c911e18e51fd65539fbdcc-184c8906411153460a00206a01532735-en-US">
+</a>Predefined Patterns</div></div><p>Common standards usually have predefined pattern lists with standard-specific patterns. You select the patterns required for the current measurement from this list. You can also add patterns that are already available in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW or newly created patterns to the list.</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>Various predefined standards and patterns are provided by the R&amp;S FSW VSA application (see <a class="xref" href="c16f1710082a4fbf.htm#ID_7137af644f21211f0a00206a00263e00-502d268689f7d2610a00206a00c8c18a-en-US">"Predefined Standards and Settings"</a>).</p><p>If you assume that a signal has a pattern, but do not know it in advance, you can determine it using the <a class="xref" href="cdb5906152eb4ecd.htm#ID_73ba34809767b4aa0a00206a0133c88b-872c63c6410c614d0a00206a016aa6c2-en-US">"Symbol Table"</a>. Measure the signal and check for a pattern in the symbol table. Then you can copy the symbols from the symbol table to the pattern definition for subsequent measurements (see <a class="xref" href="0c98a6ba574a4019.htm#ID_2648a260e1fe98d20a71003a010f6810-98ce8ff6410963710a00206a00a7855c-en-US">"Import Symbols"</a>).</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

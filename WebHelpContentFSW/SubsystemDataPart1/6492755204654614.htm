@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Basics on FFT" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frequency Resolution of FFT Results - RBW</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_894c455f83fe15740a002019016aac89-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_9ffd8270bedc11e291b6ba5fdc9a2d0c-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_71f414ceb244613b0a00201901b2a804-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_12a7ebcab244613b0a0020190018405c-03e72dbd6b54d8ef0a001ae70832b793-en-US;ID_b78d494783fe15740a00201900656575-03e72dbd6b54d8ef0a001ae70832b793-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="80556469d0ef4efb.htm">Basics on FFT</a> &gt; <span class="chm-breadcrumb">Frequency Resolution of FFT Results - RBW</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Frequency Resolution of FFT Results - RBW</div><a name="kanchor301">
+</a><a name="kanchor302">
+</a><p>The <b>resolution bandwidth</b> defines the minimum frequency separation at which the individual components of a spectrum can be distinguished. Small values result in high precision, as the distance between two distinguishable frequencies is small. Higher values decrease the precision, but increase measurement speed.</p><p>The RBW is determined by the following equation:</p><div class="block" id="ID_9ffd8270bedc11e291b6ba5fdc9a2d0c-03e72dbd6b54d8ef0a001ae70832b793-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge0a79df8b173671d0a00201901049c39_1_--_--_PNG96.png" alt="" title=""/></div><div class="caption">Definition of RBW</div></div><p>(Note: The normalized bandwidth is a fixed value that takes the noise bandwidth of the window function into consideration.)</p><p>The maximum RBW is restricted by the  <a class="xref" href="db385fb203ca425d.htm#ID_77c43431858393170a00206a01d5c858-defe0982858393170a00206a005420ea-en-US">"Analysis Bandwidth"</a>, or by the following equation, whichever is higher:</p><div class="block" id="ID_71f414ceb244613b0a00201901b2a804-03e72dbd6b54d8ef0a001ae70832b793-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgaab9660db211383a0a002019014333d0_1_--_--_PNG96.png" alt="" title=""/></div></div><p>If a higher spectral resolution is required, the number of samples must be increased by using a higher sample rate or longer record length.</p><p>The minimum achievable RBW depends on the sample rate and record length, according to the following equation:</p><div class="block" id="ID_12a7ebcab244613b0a0020190018405c-03e72dbd6b54d8ef0a001ae70832b793-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8fab461bb21139d10a00201901a4ae5f_1_--_--_PNG96.png" alt="" title=""/></div></div><p>To simplify operation, some parameters are coupled and automatically calculated, such as record length and RBW.</p><div class="block"><div class="subtitle"><a name="ID_b78d494783fe15740a00201900656575-03e72dbd6b54d8ef0a001ae70832b793-en-US">
+</a>RBW mode</div></div><p>Depending on the selected RBW mode, the resolution bandwidth is either determined automatically or can be defined manually.</p><p><b>Auto mode</b>:</p><p>This is the default mode in the I/Q Analyzer. The RBW is determined automatically depending on the <a class="xref" href="6481f4cbfc684f95.htm#ID_45c7daac858267d70a00206a003589e3-2b45a259858267d70a00206a00efaecf-en-US">"Sample Rate"</a> and <a class="xref" href="48ee9268e4334f6c.htm#ID_a8659b40842f47b60a00201901ba76ee-7e69703b81df97470a001ae76be34558-en-US">"Window Length"</a>, where the window length corresponds to the <a class="xref" href="76aaaf0ae5034118.htm#ID_c59eef7485860df60a00206a017c94c2-fe92235c85860df60a00206a000a7866-en-US">"Record Length"</a>, or a maximum of 4096.</p><p>If the record length is larger than the window length, multiple windows are combined; the FFT length is 4096.</p><p>A Flatop window function is used.</p><p><b>Manual mode</b>:</p><p>The RBW is user-definable.</p><p>The <a class="xref" href="48ee9268e4334f6c.htm#ID_a8659b40842f47b60a00201901ba76ee-7e69703b81df97470a001ae76be34558-en-US">"Window Length"</a> is adapted to comply with <a class="xref" href="#ID_9ffd8270bedc11e291b6ba5fdc9a2d0c-03e72dbd6b54d8ef0a001ae70832b793-en-US">Equation "Definition of RBW"</a>. Since only window lengths with integer values can be employed, the <a class="xref" href="6481f4cbfc684f95.htm#ID_45c7daac858267d70a00206a003589e3-2b45a259858267d70a00206a00efaecf-en-US">"Sample Rate"</a> is adapted, if necessary, to obtain an integer window length value.</p><p>If the record length is larger than the window length, multiple windows are combined; the FFT length is 4096.</p><p>A Flatop window function is used.</p><p><b>Advanced FFT mode</b></p><p>The RBW is determined by the <a class="xref" href="8ccd942a9e964df8.htm#ID_099f178d7f488c400a00201900f9f0ef-d35ce46381e54c910a001ae70704711a-en-US">advanced FFT parameters</a>, depending on the selected <a class="xref" href="d177345ee1114908.htm#ID_350432fa8dca14820a002019007696de-03e72dbd6b54d8ef0a001ae70832b793-en-US">"FFT Calculation Methods"</a> method.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

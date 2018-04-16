@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Configuring the R&amp;S FSW|Compensating for Frequency Response Using Touchstone files (R&amp;S FSW-K544)|Remote Commands for Touchstone files" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]CORRection:FRESponse:BASeband:USER:SLISt&lt;sli&gt;:STATe</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ef633987dc3e7f9e0a001ae733455e72-634ed648dc3e7ea40a001ae77666186d-en-US;ID_89d4bfe9dc3e96330a001ae74f12d3eb-598461e9dc3e95770a001ae77666186d-en-US;ID_4fbc6934dc3eadb30a001ae747ec68e4-28fa8234dc3ead160a001ae77666186d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="238ee539da9f4d16.htm">Configuring the R&amp;S FSW</a> &gt; <a class="chm-breadcrumb" href="95352d1489074fd7.htm">Compensating for Frequency Response Using Touchstone files (R&amp;S FSW-K544)</a> &gt; <a class="chm-breadcrumb" href="f38d484415c04d06.htm">Remote Commands for Touchstone files</a> &gt; <span class="chm-breadcrumb">[SENSe:]CORRection:FRESponse:BASeband:USER:SLISt&lt;sli&gt;:STATe</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr" style="margin-bottom : 0pt;"><span class="bold">[SENSe:]CORRection:FRESponse:BASeband:USER:SLISt&lt;sli&gt;:STATe </span>&lt;State&gt;<br/></div><div class="rc_syntax_descr" style="margin-bottom : 0pt;"><span class="bold">[SENSe:]CORRection:FRESponse:INPut&lt;ip&gt;:USER:SLISt&lt;sli&gt;:STATe </span>&lt;State&gt;<br/></div><div class="rc_syntax_descr"><a name="ID_4fbc6934dc3eadb30a001ae747ec68e4-28fa8234dc3ead160a001ae77666186d-en-US">
+</a><span class="bold">[SENSe:]CORRection:FRESponse:USER:SLISt&lt;sli&gt;:STATe </span>&lt;State&gt;<br/></div><div class="rcdescription"><p>Activates or deactivates the loaded file for the current configuration. Only active files are included in filter calculation.</p><p>For queries with no input type specified, the currently active input type is queried.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;sli&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p>Index in Touchstone file list</p><p>Use <a class="xref" href="2ea831007bef4724.htm#ID_6abe8f32dc3ea90f0a001ae72adc0f21-4a8e2d0fdc3ea8540a001ae77666186d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CORRection:</nobr>​<nobr>FRESponse:</nobr>​<nobr>USER:</nobr>​<nobr>SLISt&lt;sli&gt;:</nobr>​<nobr>SIZE?</nobr></a> to determine the maximum index number.</p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;State&gt;<br/></td><td class="rc_col_content_left" colspan="2"><nobr>ON |</nobr> <nobr> OFF |</nobr> <nobr> 0 |</nobr> <nobr> 1</nobr><br/><span class="bold">OFF | 0<br/></span><p>Activates the file.</p><span class="bold">ON | 1<br/></span><p>Deactivates the file.</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">1</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;">
+</img></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">SENS:CORR:FRES:USER:SLIS2:STAT ON</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="cc2996235df54b62.htm#ID_bb429d88918999970a001ae72e3f8b49-6cf7b0a549587bc20a001ae75f09ae4d-en-US">"Active"</a></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

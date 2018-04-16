@@ -1,0 +1,57 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Configuration|Signal Capture|Sweep Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Statistic Count</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdSweepStatisticsCountConfig">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdSweepStatisticsCount">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdSweepStatisticsCountAutoMan">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdSweepStatisticsCountDescription">
+</meta>
+        <meta name="topic-id" value="840">
+</meta>
+        <meta name="topic-id" value="842">
+</meta>
+        <meta name="topic-id" value="844">
+</meta>
+        <meta name="topic-id" value="846">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_865a487b1ad251f40a00206a006b211a-1b52cf8d305ca53f0a001ae741d10909-en-US;ID_fe9d842c5663c1960a720a2b00b079fd-1b52cf8d305ca53f0a001ae741d10909-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1df8557b8c6a4078.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2cf0bd75bd144da7.htm">Signal Capture</a> &gt; <a class="chm-breadcrumb" href="0243902d65c14068.htm">Sweep Settings</a> &gt; <span class="chm-breadcrumb">Statistic Count</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor687">
+</a><a name="kanchor688">
+</a><div class="function_heading"><a name="ID_865a487b1ad251f40a00206a006b211a-1b52cf8d305ca53f0a001ae741d10909-en-US">
+</a><span style="font-weight: bold">Statistic Count</span></div><p>Defines the number of measurements to be considered for statistical evaluations. The behavior depends on the active sweep mode.</p><p>Activate "Description" to display a visualization of the behavior of the current settings.</p><p><b><a name="ID_fe9d842c5663c1960a720a2b00b079fd-1b52cf8d305ca53f0a001ae741d10909-en-US">
+</a>Note:</b> If the "Statistic Count" is set to <span class="input">1</span>, trace averaging is not performed; Max Hold and Min Hold, however, remain active, unlike in the Spectrum application.<br/></p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto"</p></td><td class="function_col_right"><p>In single sweep mode: captures the I/Q data once and evaluates it</p><p>In continuous sweep mode: captures I/Q data continuously; for each evaluation, the average is calculated over the last 10 capture sets (moving average)</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Manual"</p></td><td class="function_col_right"><p>In single sweep mode: captures I/Q data until the defined number of evaluations have been performed</p><p>In continuous sweep mode: captures I/Q data continuously; if trace averaging is selected, the average is calculated over the defined number of capture sets (moving average);</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="cd80b415022c4c49.htm#ID_d690bbe245b6418e0a00206a0133a893-7ddb3b2145b6375c0a00206a014baccb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>COUNt[:</nobr>​<nobr>VALue]</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

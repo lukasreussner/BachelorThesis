@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement|Channel Power Basics|Recommended Common Measurement Parameters" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frequency Span</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6d3fba3cd53f92580a00206a00b7ea83-afab76cfd7349b540a00206a00bfaa09-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <a class="chm-breadcrumb" href="f37bb1a995864cd8.htm">Channel Power Basics</a> &gt; <a class="chm-breadcrumb" href="c6117526a2f74c9f.htm">Recommended Common Measurement Parameters</a> &gt; <span class="chm-breadcrumb">Frequency Span</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor478">
+</a><a name="kanchor479">
+</a><a name="kanchor480">
+</a><div class="chm-chaptertitle">Frequency Span</div><p>The frequency span must cover at least the channels to be measured plus a measurement margin of approximately 10 %.</p><p>If the frequency span is large in comparison to the channel bandwidth (or the adjacent-channel bandwidths) being analyzed, only a few points on the trace are available per channel. The calculated waveform for the used channel filter is less accurate, which has a negative effect on the measurement accuracy. It is therefore strongly recommended that you consider the described formulas when you select the frequency span.</p><p>The frequency span for the defined channel settings can be optimized. Use the "Adjust Settings" function in the "Ch Power" menu or the "General Settings" tab of the "ACLR Setup" dialog box (see <a class="xref" href="b237c36818f941b1.htm#ID_dbeddaa15ba50bf50a00206a01fbfec9-df226f4d0cf817fd0a00201901038448-en-US">"Optimized Settings (Adjust Settings)"</a>). You can set the frequency span manually in the "Frequency" configuration dialog box.</p><p>(See <a class="xref" href="afc6a0336b1a4bbd.htm#ID_28552d010050785c0a710a310136e69d-cc9dbb0eff1de7270a00206a011fdcd8-en-US">"How To Define the Frequency Range"</a>.)</p><p>For channel power measurements the "Adjust Settings" function sets the frequency span as follows:</p><p>"(No. of transmission channels – 1) x transmission channel spacing + 2 x transmission channel bandwidth + measurement margin"</p><p>For adjacent-channel power measurements, the "Adjust Settings" function sets the frequency span as a function of the following parameters:</p><div class="block"><ul class="list"><li value="1">Number of transmission channels</li><li value="2">Transmission channel spacing</li><li value="3">Adjacent-channel spacing</li><li value="4">Bandwidth of one of adjacent-channels ADJ, ALT1 or ALT2, whichever is furthest away from the transmission channels</li></ul></div><p>"(No. of transmission channels – 1) * (transmission channel spacing + 2) * (adjacent-channel spacing + adjacent-channel bandwidth) + measurement margin"</p><p>The measurement margin is approximately 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>% of the value obtained by adding the channel spacing and the channel bandwidth.</p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

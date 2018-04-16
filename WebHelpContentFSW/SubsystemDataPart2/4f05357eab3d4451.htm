@@ -1,0 +1,60 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Pulse Detection</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_088c3aa78996713f0a710a3101b0595c-77f58b7b6bc89ad60a00206a008ec9e8-en-US;ID_a7a4ada089b45fc60a00206a00c48782-77f58b7b6bc89ad60a00206a008ec9e8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="6bca5f79d2e8456b.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Pulse Detection</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor216">
+</a><a name="kanchor217">
+</a><a name="kanchor218">
+</a><a name="kanchor219">
+</a><a name="kanchor220">
+</a><a name="kanchor221">
+</a><a name="kanchor222">
+</a><a name="kanchor223">
+</a><a name="kanchor224">
+</a><a name="kanchor225">
+</a><a name="kanchor226">
+</a><a name="kanchor227">
+</a><a name="kanchor228">
+</a><a name="kanchor229">
+</a><a name="kanchor230">
+</a><div class="chm-chaptertitle">Pulse Detection</div><p>A pulsed input signal is a signal whose carrier power is modulated by two states: ON and OFF. Basically, a pulse is detected when the input signal power exceeds a threshold, then subsequently falls below that threshold, or vice versa. Pulses that rise to and then remain at a peak (positive) power level for a certain duration, and then fall again are referred to as <b>positive</b> pulses, whereas the opposite - falling to and remaining at a minimum (negative) power level, then rising - is referred to as a <b>negative</b> pulse. The "<b>ON</b>" power level is referred to as the <b>top</b> or <b>100% level</b>, whereas the "<b>OFF</b>" level is referred to as the <b>base</b> or <b>0% level</b>.</p><div class="block" id="ID_a7a4ada089b45fc60a00206a00c48782-77f58b7b6bc89ad60a00206a008ec9e8-en-US"><div class="graphic"><img border="0" src="Resources/Images/img2b83c6fd89b1b6d00a00206a00a12e41_1_--_--_PNG96.png" alt="" title=""/></div></div><p>A <b>hysteresis</b> can refine the detection process and avoid falsely interpreting unstable signals as additional pulses. Optionally, detection can be restricted to a maximum number of pulses per capture process.</p><a name="kanchor231">
+</a><p>If the top power level is not constant, this is called an amplitude <b>droop</b>. Since the top level is an important reference for several pulse parameters, a droop should be taken into consideration where possible. If a signal is known to have a droop, the reference level is calculated separately for the rising and falling edges, rather than as an average or median value over the ON time.</p><a name="kanchor232">
+</a><a name="kanchor233">
+</a><a name="kanchor234">
+</a><a name="kanchor235">
+</a><a name="kanchor236">
+</a><a name="kanchor237">
+</a><a name="kanchor238">
+</a><p>The time it takes the signal power to rise from the base level to the top is called the <b>rise time</b>.</p><p>The duration the signal power remains at the top level is considered the <b>ON time</b>, which also defines the <b>pulse width</b>.</p><p>The time it takes the signal power to fall from the top to the base level is called the <b>fall time</b>.</p><p>The duration the signal power remains at the base level is called the <b>OFF time</b>.</p><p>The <b>pulse repetition interval</b> (also known as <b>pulse period</b>) is defined as the duration of one complete cycle consisting of:</p><div class="block"><ul class="list"><li value="1">The rise time</li><li value="2">The ON time</li><li value="3">The fall time</li><li value="4">The OFF time</li></ul></div><p>To avoid taking noise, ripples, or other signal instabilities into consideration, threshold values are defined for calculation of these characteristic values rather than using the absolute peak or minimum power values.</p><p>More precise definitions and an illustration of how these values are calculated are provided in <a class="xref" href="dac1f46298f040a5.htm#ID_5be83d7f708cbae60a00206a007b39ab-78a038206a778ca80a00206a00edc705-en-US">"Pulse Parameters"</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

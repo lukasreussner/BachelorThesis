@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Evaluation Range" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Excluding Subcarriers from MER Calculation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDocsisSkIdEvaluationRange_MERExclState_Off">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdEvaluationRange_MERExclState_Auto">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdEvaluationRange_MERExclState_User">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdEvaluationRange_MERExclNumOfAutoExclSubcarriers">
+</meta>
+        <meta name="topic-keyword" value="eDocsisSkIdEvaluationRange_MERExclUserTable">
+</meta>
+        <meta name="topic-id" value="808">
+</meta>
+        <meta name="topic-id" value="809">
+</meta>
+        <meta name="topic-id" value="810">
+</meta>
+        <meta name="topic-id" value="811">
+</meta>
+        <meta name="topic-id" value="812">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8472071aab94cd980a001ae77f08ab7e-f2ebd9c6ddad6fb70a001ae77c050122-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="fb926ee1c67e4b98.htm">Evaluation Range</a> &gt; <span class="chm-breadcrumb">Excluding Subcarriers from MER Calculation</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_8472071aab94cd980a001ae77f08ab7e-f2ebd9c6ddad6fb70a001ae77c050122-en-US">
+</a>Excluding Subcarriers from MER Calculation</div><p>Up to five specific subcarriers can be excluded from modulation error ratio (MER) calculation.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Off"</p></td><td class="function_col_right"><p>(Default:) All subcarriers are included in MER calculation.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Auto"</p></td><td class="function_col_right"><p>The specified "Number of Excluded sc" with the worst MER are automatically excluded from MER calculation. Up to five subcarriers can be eliminated automatically.</p><p>Note: if you enter a value in "Number of Excluded sc", the setting is automatically set to "Auto".</p></td></tr><tr><td class="function_col_left" valign="top"><p>"User Defined"</p></td><td class="function_col_right"><p>Up to five subcarriers defined in the set are excluded.</p><p>Note: if you enter a value in the set of excluded subcarriers, the setting is automatically changed to "User Defined".</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="c8ffce2fa7444ba2.htm#ID_5ef6b1ebdd81ae490a001ae707cbed85-258c977aaf84710f0a001ae71e0dbc37-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>MEXC:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="a829f3807eba4d95.htm#ID_5ef6b1ebdd81ae490a001ae707cbed85-67f2ac0daf7ed7480a001ae71ac0cb30-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>MEXC:</nobr>​<nobr>SUBCarrier:</nobr>​<nobr>COUNt</nobr></a></p></div><div style="clear:left;"> </div><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="7f81abf6c1a640dc.htm#ID_e7384adb457e11e58a378449cdccb2f7-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Subcarrier Set</a><div class="function_block"><font face="Arial">└</font> <a href="fb3566edd32c48a6.htm#ID_e7390e32457e11e58a378449cdccb2f7-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Add</a></div><div class="function_block"><font face="Arial">└</font> <a href="28e06a2fc8044938.htm#ID_e7395c54457e11e58a378449cdccb2f7-f2ebd9c6ddad6fb70a001ae77c050122-en-US" class="title_toc">Remove</a></div><div class="function_block"><font face="Arial">└</font> <a href="8d370def54bc47d1.htm#ID_bbfa1e927af053890a00206a009e89e5-7ad0d3b5e89b3b300a001ae75e17c9ac-en-US" class="title_toc">OK</a></div><div class="function_block"><font face="Arial">└</font> <a href="7f67c6d3302640b5.htm#ID_bb2f88007af053890a00206a008671ff-7e66e413e89c2e0c0a001ae76e318409-en-US" class="title_toc">Cancel</a></div></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

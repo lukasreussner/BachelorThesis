@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Retrieving Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Retrieving Trace Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_40682203ffc9ca9b0a00206a00a9bed1-44a9c84ca2a69d120a001ae742bd715e-en-US;ID_c9934acc0978106b0a71003a00144d32-44a9c84ca2a69d120a001ae742bd715e-en-US;ID_296b904ea213defc0a00201901e356e2-44a9c84ca2a69d120a001ae742bd715e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="baf3eb2df3e54482.htm">Retrieving Results</a> &gt; <span class="chm-breadcrumb">Retrieving Trace Results</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor936">
+</a><a name="kanchor937">
+</a><a name="kanchor938">
+</a><div class="chm-chaptertitle">Retrieving Trace Results</div><p>The following commands describe how to retrieve the trace data from the WLAN IQ measurement (Modulation Accuracy, Flatness and Tolerance). Note that for these measurements, only 1 trace per window can be configured.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_c9934acc0978106b0a71003a00144d32-44a9c84ca2a69d120a001ae742bd715e-en-US">
+</a>MIMO results in subwindows</div><p>For MIMO measurements, the results for each data stream are displayed in a separate tab. In addition, an overview tab is provided in which all data streams are displayed at once, in individual subwindows. To query the trace data for a specific data stream, you must select the subwindow first (see <a class="xref" href="edfdd28caaa24dc8.htm#ID_3b7c44624077e2040a001ae766fdd6aa-2baee7824077e2040a001ae7231867b9-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">DISPlay[:WINDow&lt;n&gt;][:SUBWindow&lt;w&gt;]:SELect</a>).</p></td></tr></table></div></div><div class="block"><div class="listintro">Useful commands for retrieving trace results described elsewhere:</div><ul class="list"><li value="1">The traces for frequency sweep measurements are identical to those in the Spectrum application.</li><li value="2"><a class="xref" href="108d7f917aa843c5.htm#ID_9f0d74eacae11aad0a001ae76123752d-af50d931cae119f20a001ae71b489a5a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]BURSt:</nobr>​<nobr>SELect</nobr></a></li></ul></div><div class="block"><div class="subtitle"><a name="ID_296b904ea213defc0a00201901e356e2-44a9c84ca2a69d120a001ae742bd715e-en-US">
+</a>Remote commands exclusive to retrieving trace results:</div></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="d3ee329626c14eda.htm#ID_574fa7e9cae017170a001ae7637fcdcb-612b89aacae015910a001ae71b489a5a-en-US" class="title_toc">DISPlay[:WINDow&lt;n&gt;]:FLAGs</a><br/><a href="c9cf34a38c724856.htm#ID_bd36634e7115e30a0a00206a007ce077-ad068e202055e5090a00206a00318951-en-US" class="title_toc">FORMat[:DATA]</a><br/><a href="1fa645234bc2496f.htm#ID_96a729b02f5ac18c0a00206a01d04388-28af809f7f14355d0a00201901c866a5-en-US" class="title_toc">[SENSe:]BURSt:COUNt:SELect:STATe</a><br/><a href="eb9e0051944d4569.htm#ID_7026e2c92f5d928b0a00206a01d4e7a2-eceb4ba32f5d89c10a00206a00636f5b-en-US" class="title_toc">TRACe[:DATA]</a><br/><a href="484fbabf3fd94fa7.htm#ID_e8210fef5d1d98cd0a00206a006e8d54-647ff810541810a10a00206a009ffe61-en-US" class="title_toc">TRACe&lt;n&gt;[:DATA]:X?</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

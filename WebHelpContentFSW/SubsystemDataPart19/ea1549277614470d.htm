@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Configuring the Result Display|Configuring the AM/AM Result Display" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:X[:SCALe]:AUTO:MODE</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_aae6f917dd82134c0a001ae71458ac74-7ce841406e9f32770a001ae70042a415-en-US;ID_aae6f917dd82134c0a001ae71458ac74-3342ad83dd8211580a001ae75c84d48a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="7a01e1efbcc84a77.htm">Configuring the Result Display</a> &gt; <a class="chm-breadcrumb" href="284645312b5a4659.htm">Configuring the AM/AM Result Display</a> &gt; <span class="chm-breadcrumb">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:X[:SCALe]:AUTO:MODE</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr" style="margin-bottom : 0pt;"><span class="bold">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:X[:SCALe]:AUTO:MODE </span>&lt;AutoMode&gt;<br/></div><div class="rc_syntax_descr"><a name="ID_aae6f917dd82134c0a001ae71458ac74-3342ad83dd8211580a001ae75c84d48a-en-US">
+</a><span class="bold">DISPlay[:WINDow&lt;n&gt;]:TRACe&lt;t&gt;:Y[:SCALe]:AUTO:MODE </span>&lt;AutoMode&gt;<br/></div><div class="rcdescription"><p>This command determines which algorithm is used to determine whether the x-axis or y-axis requires automatic rescaling.</p><p>This command is currently only supported for Amplitude Modulation measurements.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Window</a></p></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;t&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/><p><a class="xref" href="1a92223f6e5a4d5b.htm#ID_a238a6b20a9088250a00206a005c16fe-ef915127394c65fa0a001ae72cfd782d-en-US">Trace</a></p></td></tr><tr valign="top"><td class="rc_col_intro" colspan="3"><span class="bold">Parameters:</span></td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;AutoMode&gt;<br/></td><td class="rc_col_content_left" colspan="2"><span class="bold">HYSTeresis<br/></span><p>If the minimum and/or maximum values of the current measurement exceed a specific value range (hysteresis interval), the axis is rescaled. The hysteresis interval is defined as a percentage of the currently displayed value range on the x-axis or y-axis. An upper hysteresis interval is defined for the maximum value, a lower hysteresis interval is defined for the minimum value.</p><span class="bold">MEMory<br/></span><p>If the minimum and/or maximum values of the current measurement exceed the minimum and/or maximum of the &lt;x&gt; previous results, the axis is rescaled.</p><p>The minimum and maximum value of each measurement are added to the memory. After &lt;x&gt; measurements, the oldest results in the memory are overwritten by each new measurement.</p><p>The number of results in the memory to be considered is configurable (see <a class="xref" href="0b72c354683a4d19.htm#ID_4db3ceaedd8227130a001ae703cddafa-c2fbb1f8dd82258c0a001ae75c84d48a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>AUTO:</nobr>​<nobr>MEMory:</nobr>​<nobr>DEPTh</nobr></a>).</p><table class="inner_rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_content_left_100"><span>*RST:</span></td><td class="rc_col_content_right">HYSTeresis</td></tr></table></td></tr><tr><td colspan="3" class="rc_col_intro_sep"><img src="Resources/workspace/img/transparent_4x15.gif" style="width: 4; height: 15;"/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">DISP:WIND2:TRAC:Y:AUTO:MODE MEM</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="bee6f51adb884ed6.htm#ID_cd1e3fb93540576f0a001ae725fdb3b2-7d7b046072fd0b980a001ae775c0d3e3-en-US">"Auto Mode"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

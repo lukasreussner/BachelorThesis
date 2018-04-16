@@ -1,0 +1,63 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Export Functions|Table Export Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Export table to ASCII File
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eTaSkIdTableExportToAsciiFile">
+</meta>
+        <meta name="topic-keyword" value="ePMSkIdTraceAsciiFileExport">
+</meta>
+        <meta name="topic-keyword" value="ePMSkIdTableAsciiFileExport">
+</meta>
+        <meta name="topic-keyword" value="eWigigSkIdTableAsciiFileExport">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdTableAsciiFileExport">
+</meta>
+        <meta name="topic-id" value="1455">
+</meta>
+        <meta name="topic-id" value="1457">
+</meta>
+        <meta name="topic-id" value="1459">
+</meta>
+        <meta name="topic-id" value="1461">
+</meta>
+        <meta name="topic-id" value="1463">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f79bd77f7bc660060a00206a00a2e778-f918c044c0798b8e0a00201900b07228-en-US;ID_929fcd48643560f00a710a31010e711f-f918c044c0798b8e0a00201900b07228-en-US;ID_d58ea103c4af4eb00a710ade01504325-f918c044c0798b8e0a00201900b07228-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="78e9308e6e834581.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="7e09212f1a5848ff.htm">Export Functions</a> &gt; <span class="chm-breadcrumb">Export table to ASCII File</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor665">
+</a><div class="function_heading"><a name="ID_f79bd77f7bc660060a00206a00a2e778-f918c044c0798b8e0a00201900b07228-en-US">
+</a><span style="font-weight: bold">Export table to ASCII File</span></div><p>Opens a file selection dialog box and saves the selected result table in ASCII format (<b><span class="filename">.DAT</span></b>) to the specified file and directory.</p><p>For details on the file format, see <a class="xref" href="fb46a32a8dfc4b73.htm#ID_21729b5c288afcdb0a00206a01c35c96-a559cd6fc07357cc0a00201901cb2b09-en-US">"Reference: ASCII File Export Format"</a>.</p><p><b><a name="ID_929fcd48643560f00a710a31010e711f-f918c044c0798b8e0a00201900b07228-en-US">
+</a>Note:</b> To store the measurement results for <b>all</b> traces and tables in <b>all</b> windows, use the <a class="xref" href="6342953f458e4244.htm#ID_f79bd77f7bc660060a00206a00a2e778-bf0e5e837bc660060a00206a010a8e2c-en-US">"Export Trace to ASCII File"</a> command in the "Save/Recall" &gt; "Export" menu.<br/>(See also <a class="xref" href="8678274a65304849.htm#ID_622d5009286a143a0a00206a0193fa35-5a1e393f286a143a0a00206a000fdd92-en-US">"Trace / Data Export Configuration"</a>.)<br/></p><p><b><a name="ID_d58ea103c4af4eb00a710ade01504325-f918c044c0798b8e0a00201900b07228-en-US">
+</a>Note:</b> Secure user mode. <div class="block"><p>In secure user mode, settings that are stored on the instrument are stored to volatile memory, which is restricted to 256<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MB. Thus, a "memory limit reached" error can occur although the hard disk indicates that storage space is still available.</p><p>To store data permanently, select an external storage location such as a USB memory device.</p><p>For details, see <a class="xref" href="../../../Content/d07bb3f7ad6e4543.htm">Protecting Data Using the Secure User Mode</a>.</p></div></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="7e4676b8af924fff.htm#ID_9d145c2695f7202b0a00206a01f853f5-b7e0f1dac07b54b90a002019004c060d-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>MMEMory:</nobr>​<nobr>STORe&lt;n&gt;:</nobr>​<nobr>TABLe</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

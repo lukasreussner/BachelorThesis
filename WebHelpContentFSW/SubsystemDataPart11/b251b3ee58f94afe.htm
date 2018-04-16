@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Transient Analysis (R&amp;S FSW-K60)|Remote Commands to Perform Transient Analysis|Capturing Data and Performing Sweeps" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k60.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>INITiate&lt;n&gt;:SYNC</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_68c5b56a725e865b0a001ae7632c4599-f295bc18725e84960a001ae7211c9327-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Transient Analysis (R&amp;S FSW-K60)</a> &gt; <a class="chm-breadcrumb" href="b3c74aa8fd9f42ae.htm">Remote Commands to Perform Transient Analysis</a> &gt; <a class="chm-breadcrumb" href="e946ed1516d44b6b.htm">Capturing Data and Performing Sweeps</a> &gt; <span class="chm-breadcrumb">INITiate&lt;n&gt;:SYNC</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="ID_68c5b56a725e865b0a001ae7632c4599-f295bc18725e84960a001ae7211c9327-en-US">
+</a><span class="bold">INITiate&lt;n&gt;:SYNC</span><br/></div><div class="rcdescription"><p>This remote control command requests the R&amp;S FSW Transient Analysis application option to wait until any auto-refresh operation is finished. However, it does not initiate a refresh itself.</p><p>An auto-refresh is performed automatically after a configuration parameter is changed that requires the results (and displays) to be re-calculated. Note that hardware changes require a new sweep to be performed, not just an auto-refresh.</p><p>This command can be issued at any time but makes sense only in single sweep mode.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Suffix: </span></td><td class="rc_col_content_left" colspan="2">
+</td></tr><tr valign="top"><td class="rc_col_intro_150">&lt;n&gt;<br/></td><td class="rc_col_content_left" colspan="2">1..n<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><span class="commandline">INIT:IMM;*WAI</span><br/><p>R&amp;S FSW Transient Analysis application performs a sweep and program is synchronized (waits) on completion of the sweep.</p><span class="commandline">CALC:AR:FREQ:BAND 10 MHZ</span><br/><p>R&amp;S FSW Transient Analysis application starts re-calculating results with a new analysis region bandwidth, but program does not wait until completion of the new calculation, it continues immediately</p><span class="commandline">INIT:SYNC</span><br/><p>The program now waits until any pending auto-refresh calculations are finished before continuing.</p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Event<br/></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,66 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Configuration|Configuring Inputs and Outputs of the R&amp;S FSW|External Generator|Measurement Configuration" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Frequency Coupling</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eNoiseSkIdTrackingOffset1">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdTrackingNumerator">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdTrackingDenominator">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdTrackingOffset2">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdTrackingResultFreqStart">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdTrackingResultFreqStop">
+</meta>
+        <meta name="topic-keyword" value="eNoiseSkIdTrackingFrequencyCoupling">
+</meta>
+        <meta name="topic-id" value="491">
+</meta>
+        <meta name="topic-id" value="493">
+</meta>
+        <meta name="topic-id" value="495">
+</meta>
+        <meta name="topic-id" value="497">
+</meta>
+        <meta name="topic-id" value="499">
+</meta>
+        <meta name="topic-id" value="501">
+</meta>
+        <meta name="topic-id" value="503">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_17182b0e3ef838cc0a710b9a01e586c0-65d95af9fe3583a40a002019013ce19f-en-US;ID_0f629aa13dc794470a001ae70d0a3ad7-65d95af9fe3583a40a002019013ce19f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="6f413a5358b94877.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="7fd1b5e262154b49.htm">Configuring Inputs and Outputs of the R&amp;S FSW</a> &gt; <a class="chm-breadcrumb" href="fbc06254374e40f4.htm">External Generator</a> &gt; <a class="chm-breadcrumb" href="cd075ae295054e8c.htm">Measurement Configuration</a> &gt; <span class="chm-breadcrumb">Frequency Coupling</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_17182b0e3ef838cc0a710b9a01e586c0-65d95af9fe3583a40a002019013ce19f-en-US">
+</a><span style="font-weight: bold">Frequency Coupling</span></div><p>Defines frequency correction characteristics.</p><p>The generator frequency is calculated as follows.</p><div class="block" id="ID_0f629aa13dc794470a001ae70d0a3ad7-65d95af9fe3583a40a002019013ce19f-en-US"><div class="graphic"><img border="0" src="Resources/Images/img423e33cb3db05a4b0a001ae7631fc177_1_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><div class="listintro-in-compact-list">With:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">f<sub>Generator</sub>= generator frequency</li><li style="margin-bottom:0; padding-bottom:0;" value="2">f<sub>LO</sub>= frequency of the analyzer's LO</li><li style="margin-bottom:0; padding-bottom:0;" value="3">f<sub>offset&lt;1&gt;</sub>= offset frequency of the analyzer</li><li style="margin-bottom:0; padding-bottom:0;" value="4">f<sub>offset&lt;2&gt;</sub>= offset frequency of other components</li></ul></div><p>Use the factors and offsets to compensate one or more components in the test setup which change the frequency between the generator and the DUT. Make sure, however, that the result does not exceed the frequency range of the generator.</p><p>The application calculates the resulting start and stop frequency based on the values you apply and displays them below the equation.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="195ec9103abb49a8.htm#ID_67de62c143e19ab70a002019013c42bf-550d1e680278e8060a002019005a2ace-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SOURce:</nobr>​<nobr>EXTernal:</nobr>​<nobr>FREQuency[:</nobr>​<nobr>FACTor]:</nobr>​<nobr>DENominator</nobr></a></p><p><a class="xref" href="195ec9103abb49a8.htm#ID_e96b348043e19ab70a00201900660551-550d1e680278e8060a002019005a2ace-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SOURce:</nobr>​<nobr>EXTernal:</nobr>​<nobr>FREQuency[:</nobr>​<nobr>FACTor]:</nobr>​<nobr>NUMerator</nobr></a></p><p><a class="xref" href="195ec9103abb49a8.htm#ID_e6f2a0563f49ace90a00201900c07e91-073769883f49ace90a00201901b580c0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>SOURce:</nobr>​<nobr>EXTernal:</nobr>​<nobr>FREQuency:</nobr>​<nobr>OFFSet&lt;offset&gt;</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

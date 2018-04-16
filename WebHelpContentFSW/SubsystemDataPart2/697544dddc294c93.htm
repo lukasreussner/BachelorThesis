@@ -1,0 +1,109 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Configuration|Frontend Settings|Amplitude Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Using Electronic Attenuation
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeElAttenAutoManual">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeElAttenValue">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeElAttenState">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudeElAttenState">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudeElAttenValue">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudeElAttenState">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudeElAttenValue">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudeElAttenState">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudeElAttenValue">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdAmpElAttenState">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdAmpElAttenValue">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdAmpElAttenAutoManual">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAmplitudeElAttenState">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAmplitudeElAttenValue">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudeElAttenState">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudeElAttenValue">
+</meta>
+        <meta name="topic-id" value="428">
+</meta>
+        <meta name="topic-id" value="430">
+</meta>
+        <meta name="topic-id" value="432">
+</meta>
+        <meta name="topic-id" value="434">
+</meta>
+        <meta name="topic-id" value="436">
+</meta>
+        <meta name="topic-id" value="438">
+</meta>
+        <meta name="topic-id" value="440">
+</meta>
+        <meta name="topic-id" value="442">
+</meta>
+        <meta name="topic-id" value="444">
+</meta>
+        <meta name="topic-id" value="446">
+</meta>
+        <meta name="topic-id" value="448">
+</meta>
+        <meta name="topic-id" value="450">
+</meta>
+        <meta name="topic-id" value="452">
+</meta>
+        <meta name="topic-id" value="454">
+</meta>
+        <meta name="topic-id" value="456">
+</meta>
+        <meta name="topic-id" value="458">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_11513a1805bca7150a00206a00834847-322e1bfd05bca7150a00206a00fe59b0-en-US;shiv_4a_instrument_functions_00874-322e1bfd05bca7150a00206a00fe59b0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="097edb5d42b1424f.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="fe182348f6a340ee.htm">Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="6ab5839522294249.htm">Amplitude Settings</a> &gt; <span class="chm-breadcrumb">Using Electronic Attenuation</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor380">
+</a><a name="kanchor381">
+</a><a name="kanchor382">
+</a><a name="kanchor383">
+</a><div class="function_heading"><a name="ID_11513a1805bca7150a00206a00834847-322e1bfd05bca7150a00206a00fe59b0-en-US">
+</a><span style="font-weight: bold">Using Electronic Attenuation</span></div><p>If the (optional) Electronic Attenuation hardware is installed on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, you can also activate an electronic attenuator.</p><p>In "Auto" mode, the settings are defined automatically; in "Manual" mode, you can define the mechanical and electronic attenuation separately.</p><p><b><a name="shiv_4a_instrument_functions_00874-322e1bfd05bca7150a00206a00fe59b0-en-US">
+</a>Note:</b> Electronic attenuation is not available for stop frequencies (or center frequencies in zero span) above 15<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz.<br/>In "Auto" mode, RF attenuation is provided by the electronic attenuator as much as possible to reduce the amount of mechanical switching required. Mechanical attenuation may provide a better signal-to-noise ratio, however.<br/>When you switch off electronic attenuation, the RF attenuation is automatically set to the same mode (auto/manual) as the electronic attenuation was set to. Thus, the RF attenuation can be set to automatic mode, and the full attenuation is provided by the mechanical attenuator, if possible.<br/></p><p>The electronic attenuation can be varied in 1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB steps. If the electronic attenuation is on, the mechanical attenuation can be varied in 5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB steps. Other entries are rounded to the next lower integer value.</p><p>For the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW85, the mechanical attenuation can be varied only in 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB steps.</p><p>If the defined reference level cannot be set for the given attenuation, the reference level is adjusted accordingly and the warning "limit reached" is displayed in the status bar.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="d4b2034e70fe43e3.htm#ID_5ea020cfd3ec3ba70a001ae75290aed7-e449a8d9d3ec3a9d0a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>EATT:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="7f7249d2ec80472e.htm#ID_e5682c20d3ec39e20a001ae72faf9d34-d2600359d3ec38d80a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>EATT:</nobr>​<nobr>AUTO</nobr></a></p><p><a class="xref" href="579d474066ef4064.htm#ID_4a019641d3ec382c0a001ae72ecba470-1033034ad3ec37510a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>EATT</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

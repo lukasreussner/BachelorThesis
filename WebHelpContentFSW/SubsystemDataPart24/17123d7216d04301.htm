@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="MSRA Mode|Configuration|Input Source Settings|Radio Frequency Input" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_msra_help.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		YIG-Preselector
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeYIGFilterState">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudeYIGFilterState">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudeYIGFilterState">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudeYIGFilterState">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdRadioFrequencyYIGPreselector">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAmplitudeYIGFilterState">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudeYIGFilterState">
+</meta>
+        <meta name="topic-id" value="143">
+</meta>
+        <meta name="topic-id" value="145">
+</meta>
+        <meta name="topic-id" value="147">
+</meta>
+        <meta name="topic-id" value="149">
+</meta>
+        <meta name="topic-id" value="151">
+</meta>
+        <meta name="topic-id" value="153">
+</meta>
+        <meta name="topic-id" value="155">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_c2dbf37ed9ec45dd0a00206a00b3776f-f6b9a26d2307bd7b0a00206a016af4ef-en-US;ID_f65b623cbb8c62c50a710a3101cab5eb-f6b9a26d2307bd7b0a00206a016af4ef-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">MSRA Mode</a> &gt; <a class="chm-breadcrumb" href="1329729954df41f9.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2a84fad068b747b6.htm">Input Source Settings</a> &gt; <a class="chm-breadcrumb" href="54a2d17ac91941d4.htm">Radio Frequency Input</a> &gt; <span class="chm-breadcrumb">YIG-Preselector</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor145">
+</a><div class="function_heading"><a name="ID_c2dbf37ed9ec45dd0a00206a00b3776f-f6b9a26d2307bd7b0a00206a016af4ef-en-US">
+</a><span style="font-weight: bold">YIG-Preselector</span></div><p>Activates or deactivates the YIG-preselector, if available on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p><p>An internal YIG-preselector at the input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW ensures that image frequencies are rejected. However, this is only possible for a restricted bandwidth. To use the maximum bandwidth for signal analysis you can deactivate the YIG-preselector at the input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, which can lead to image-frequency display.</p><p>Note that the YIG-preselector is active only on frequencies greater than 8<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz. Therefore, switching the YIG-preselector on or off has no effect if the frequency is below that value.</p><p>In order to make use of the optional 90<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>GHz frequency extension (R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B90G), the YIG-preselector must be deactivated.</p><p><b><a name="ID_f65b623cbb8c62c50a710a3101cab5eb-f6b9a26d2307bd7b0a00206a016af4ef-en-US">
+</a>Note:</b> <div class="block"><div class="listintro-in-compact-list">For the following measurements, the YIG-Preselector is off by default (if available).</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">I/Q Analyzer (and thus in all slave applications in MSRA operating mode)</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Multi-Carrier Group Delay</li><li style="margin-bottom:0; padding-bottom:0;" value="3">GSM</li><li style="margin-bottom:0; padding-bottom:0;" value="4">VSA</li></ul></div></p>Remote command: <div class="rcclist_right"><p><a class="xref" href="f2b44e7fffca4497.htm#ID_da96bb29d3ec68360a001ae70c9a13c8-f55ce8c4d3ec676b0a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>FILTer:</nobr>​<nobr>YIG[:</nobr>​<nobr>STATe]</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

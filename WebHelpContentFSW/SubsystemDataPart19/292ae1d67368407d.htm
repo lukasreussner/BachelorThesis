@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Remote Commands for WLAN 802.11 Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Constellation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K93_6545-e740bb56c9316de40a002019016c0552-en-US;ID_587daa2a147bd0870a710a3101b7368b-e740bb56c9316de40a002019016c0552-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="865c9a178f0c450f.htm">Remote Commands for WLAN 802.11 Measurements</a> &gt; <a class="chm-breadcrumb" href="baf3eb2df3e54482.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="7bb31ec5fc5f43ff.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Constellation</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor959">
+</a><a name="kanchor960">
+</a><div class="chm-chaptertitle">Constellation</div><p>This measurement represents the complex constellation points as I and Q data. See for example IEEE Std. 802.11-2012 'Fig. 18-10 BPSK, QPSK, 16-QAM and 64-QAM constellation bit encoding'. Each I and Q point is returned in floating point format.</p><p>Data is returned as a repeating array of interleaved I and Q data in groups of selected carriers per OFDM-Symbol, until all the I and Q data for the analyzed OFDM-Symbols is exhausted.</p><p>The following carrier selections are possible:</p><div class="block"><ul class="list"><li value="1">"All Carriers": <span class="command">CONFigure:BURSt:CONStellation:CARRier:SELect ALL</span><br/>N<sub>ST</sub> pairs of I and Q data per OFDM-Symbol<br/>OFDM-Symbol 1: (I<sub>1,1</sub>, Q<sub>1,1</sub>), (I<sub>1,2</sub>,Q<sub>1,2</sub>), …,( I<sub>1,Nst</sub>, Q<sub>1,Nst</sub>)<br/>OFDM-Symbol 2: (I<sub>2,1</sub>, Q<sub>2,1</sub>), (I<sub>2,2</sub>,Q<sub>2,2</sub>),…,( I<sub>2,Nst</sub>, Q<sub>2,Nst</sub>)<br/>…<br/>OFDM-Symbol N:<br/>(I<sub>N,1</sub>, Q<sub>N,1</sub>), (I<sub>N,2</sub>,Q<sub>N,2</sub>),…,( I<sub>N,Nst</sub>, Q<sub>N,Nst</sub>)</li><li value="2">"Pilots Only": <span class="command">CONFigure:BURSt:CONStellation:CARRier:SELect PILOTS</span><br/>N<sub>SP</sub> pairs of I and Q data per OFDM-Symbol in the natural number order.<br/>OFDM-Symbol 1: (I<sub>1,1</sub>, Q<sub>1,1</sub>), (I<sub>1,2</sub>,Q<sub>1,2</sub>), …,( I<sub>1,Nsp</sub>, Q<sub>1,Nsp</sub>)<br/>OFDM-Symbol 2: (I<sub>2,1</sub>, Q<sub>2,1</sub>), (I<sub>2,2</sub>,Q<sub>2,2</sub>),…,( I<sub>2,Nsp</sub>, Q<sub>2,Nsp</sub>)<br/>…<br/>OFDM-Symbol N:<br/>(I<sub>N,1</sub>, Q<sub>N,1</sub>), (I<sub>N,2</sub>,Q<sub>N,2</sub>),…,( I<sub>N,Nsp</sub>, Q<sub>N,Nsp</sub>)</li><li value="3">Single carrier:<br/>1 pair of I and Q data per OFDM-Symbol for the selected carrier<br/><span class="command">CONFigure:BURSt:CONStellation:CARRier:SELect k</span><br/>With  
+<div class="block" id="ID_587daa2a147bd0870a710a3101b7368b-e740bb56c9316de40a002019016c0552-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgedf6730c14669ec70a00201900662f1e_1_--_--_PNG96.png" alt="" title=""/></div></div><br/>OFDM-Symbol 1: (I<sub>1,1</sub>, Q<sub>1,1</sub>)<br/>OFDM-Symbol 2: (I<sub>2,1</sub>, Q<sub>2,1</sub>)<br/>…<br/>OFDM-Symbol N: (I<sub>N,1</sub>, Q<sub>N,1</sub>)</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

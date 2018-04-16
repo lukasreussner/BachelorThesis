@@ -1,0 +1,118 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Analysis|Trace Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Average Mode
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTraceAverageMode">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTraceAverageModeLin">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTraceAverageModeLog">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdTraceAverageModePower">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTraceAverageModeLin">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTraceAverageModeLog">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTraceAverageModePower">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTraceAverageModeLin">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTraceAverageModeLog">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTraceAverageModePower">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTraceAverageModeLin">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTraceAverageModeLog">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTraceAverageModePower">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdTraceAverageModeLin">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdTraceAverageModeLog">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdTraceAverageModePower">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTraceAverageModeLin">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTraceAverageModeLog">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTraceAverageModePower">
+</meta>
+        <meta name="topic-id" value="964">
+</meta>
+        <meta name="topic-id" value="966">
+</meta>
+        <meta name="topic-id" value="968">
+</meta>
+        <meta name="topic-id" value="970">
+</meta>
+        <meta name="topic-id" value="972">
+</meta>
+        <meta name="topic-id" value="974">
+</meta>
+        <meta name="topic-id" value="976">
+</meta>
+        <meta name="topic-id" value="978">
+</meta>
+        <meta name="topic-id" value="980">
+</meta>
+        <meta name="topic-id" value="982">
+</meta>
+        <meta name="topic-id" value="984">
+</meta>
+        <meta name="topic-id" value="986">
+</meta>
+        <meta name="topic-id" value="988">
+</meta>
+        <meta name="topic-id" value="990">
+</meta>
+        <meta name="topic-id" value="992">
+</meta>
+        <meta name="topic-id" value="994">
+</meta>
+        <meta name="topic-id" value="996">
+</meta>
+        <meta name="topic-id" value="998">
+</meta>
+        <meta name="topic-id" value="1000">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8be3fc075b963d700a00206a00f8b186-214043995b963d700a00206a014f0626-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="422a06cbc46241ee.htm">Analysis</a> &gt; <a class="chm-breadcrumb" href="18e2809c4d044926.htm">Trace Settings</a> &gt; <span class="chm-breadcrumb">Average Mode</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor436">
+</a><a name="kanchor437">
+</a><div class="function_heading"><a name="ID_8be3fc075b963d700a00206a00f8b186-214043995b963d700a00206a014f0626-en-US">
+</a><span style="font-weight: bold">Average Mode</span></div><p>Defines the mode with which the trace is averaged over several sweeps.</p><p>This setting is generally applicable if trace mode "Average" is selected. For FFT sweeps, the setting also affects the VBW (regardless of whether or not the trace is averaged).</p><p>(See also <a class="xref" href="../../../Content/61762afa6ce14d04.htm">Video Bandwidth (VBW)</a>).</p><p>How many sweeps are averaged is defined by the <a class="xref" href="afabd0152d864498.htm#ID_d9c9d4d0fb64b4660a00206a014da549-8ed94eacfb64b4660a00206a009e616b-en-US">"Average Count"</a>.</p><p>For details see <a class="xref" href="../../../Content/2d73d8ade18e45c8.htm">How Trace Data is Averaged - the Averaging Mode</a>.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Linear"</p></td><td class="function_col_right"><p>The power level values are converted into linear units prior to averaging. After the averaging, the data is converted back into its original unit.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Logarithmic"</p></td><td class="function_col_right"><p>For logarithmic scaling, the values are averaged in dBm. For linear scaling, the behavior is the same as with linear averaging.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Power"</p></td><td class="function_col_right"><p>Activates linear power averaging.</p><p>The power level values are converted into unit Watt prior to averaging. After the averaging, the data is converted back into its original unit.</p><p>Use this mode to average power values in Volts or Amperes correctly.</p><p>In particular, for small VBW values (smaller than the RBW), use power averaging mode for correct power measurements in FFT sweep mode.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="49b86ff46e054b52.htm#ID_36bc40232ddd22a60a00206a006e06f8-d5cc6a51062bc2ec0a00206a0172f869-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]AVERage&lt;n&gt;:</nobr>​<nobr>TYPE</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

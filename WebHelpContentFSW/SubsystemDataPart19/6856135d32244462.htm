@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Configuration|WLAN I/Q Measurement Configuration|Evaluation Range|Evaluation Range Settings for IEEE IEEE 802.11a, ac, ax, g (OFDM), j, n, p" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Analysis Interval Offset/Analysis Interval Length</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWLANSkIdEvalutionRange_AnalysisIntervalStartSymbols">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdEvalutionRange_AnalysisIntervalLength">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdEvalutionRange_AnalysisIntervalLengthSymbols">
+</meta>
+        <meta name="topic-id" value="702">
+</meta>
+        <meta name="topic-id" value="704">
+</meta>
+        <meta name="topic-id" value="706">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_cfdc610c6297d1690a71003a019540b8-d8e006d37c4158750a00201901359a7d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3a844e7770fd4a7a.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2e3336f147004a28.htm">WLAN I/Q Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="edc01faceebc4f7f.htm">Evaluation Range</a> &gt; <a class="chm-breadcrumb" href="d759e7de0bdd4f10.htm">Evaluation Range Settings for IEEE IEEE 802.11a, ac, ax, g (OFDM), j, n, p</a> &gt; <span class="chm-breadcrumb">Analysis Interval Offset/Analysis Interval Length</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_cfdc610c6297d1690a71003a019540b8-d8e006d37c4158750a00201901359a7d-en-US">
+</a><span style="font-weight: bold">Analysis Interval Offset</span>/<span style="font-weight: bold">Analysis Interval Length</span></div><p>The analysis interval defines the symbol range that is actually evaluated by the individual result display. By default it is defined as the length of the detected PPDU, possibly restricted by the minimum or maximum number of data symbols. However, it can be restricted further.</p><p>The "Analysis Interval Offset" specifies the number of data symbols from the start of each PPDU that are to be skipped before symbols take part in analysis.</p><p>If "Analysis Interval Length" is enabled, then the number of PPDU data symbols after the "Analysis Interval Offset" which are to be analyzed can be specified.</p><p>If "Analysis Interval Length" is disabled, then all PPDU data symbols after the "Analysis Interval Offset" are evaluated.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="026d4a9dc4ea47a2.htm#ID_29b6b2a8cae105be0a001ae751c8c682-d0df58d5cae104c40a001ae71b489a5a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>BANalyze:</nobr>​<nobr>SYMBols:</nobr>​<nobr>OFFSet</nobr></a></p><p><a class="xref" href="bd74724a1187470a.htm#ID_7e8b8359cae1088d0a001ae7208785fb-9d10e24662b05bc90a001ae77e312da5-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>BANalyze:</nobr>​<nobr>SYMBols:</nobr>​<nobr>LENGth:</nobr>​<nobr>STATe</nobr></a></p><p><a class="xref" href="1a89b67280ff4331.htm#ID_0d6df62ccae107250a001ae737e09aab-8e7e744fcae1065a0a001ae71b489a5a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]DEMod:</nobr>​<nobr>FORMat:</nobr>​<nobr>BANalyze:</nobr>​<nobr>SYMBols:</nobr>​<nobr>LENGth</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

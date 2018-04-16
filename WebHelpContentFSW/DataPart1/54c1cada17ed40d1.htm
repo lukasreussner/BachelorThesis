@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Data Management|Import/Export Functions|Export" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		I/Q Export
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eVsaSkIdIqExport">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdIqExportDlg">
+</meta>
+        <meta name="topic-keyword" value="ePMSkIdIqTarFileExport">
+</meta>
+        <meta name="topic-keyword" value="eWigigSkIdIqTarFileExport">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdIqTarFileExport">
+</meta>
+        <meta name="topic-id" value="3160">
+</meta>
+        <meta name="topic-id" value="3161">
+</meta>
+        <meta name="topic-id" value="3162">
+</meta>
+        <meta name="topic-id" value="3163">
+</meta>
+        <meta name="topic-id" value="3164">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a7bd0bab7bc9c6600a00206a01d95b28-60cb2e797bc9c6600a00206a00efdb8a-en-US;ID_4a3ee252d2cb51540a71003a017ee84e-60cb2e797bc9c6600a00206a00efdb8a-en-US;ID_3b588d8d5727e1fa0a71003a011716a2-60cb2e797bc9c6600a00206a00efdb8a-en-US;ID_d58ea103c4af4eb00a710ade01504325-60cb2e797bc9c6600a00206a00efdb8a-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="eeac49b666d249c9.htm">Data Management</a> &gt; <a class="chm-breadcrumb" href="6b52c69b442e466b.htm">Import/Export Functions</a> &gt; <a class="chm-breadcrumb" href="b9c675311b3a4a2a.htm">Export</a> &gt; <span class="chm-breadcrumb">I/Q Export</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2387">
+</a><a name="kanchor2388">
+</a><a name="kanchor2389">
+</a><div class="function_heading"><a name="ID_a7bd0bab7bc9c6600a00206a01d95b28-60cb2e797bc9c6600a00206a00efdb8a-en-US">
+</a>I/Q Export</div><p>Opens a file selection dialog box to define an export file name to which the I/Q data is stored. This function is only available in single sweep mode.</p><p>It is not available in the Spectrum application, only in applications that process I/Q data, such as the I/Q Analyzer or optional applications.</p><p>For details, see <a class="MCConceptLink" href="javascript:void(0);" onclick="FMCLinkControl( event, this, null ); return false;" onkeydown="this.MCKeydown = true;" MadCap:concepts="ID_7da4bfb4a3ef29fd0a00206a005fe6fe-f7571c26a3ef29fd0a00206a003653d7-en-US" MadCap:topics=""><img src="SkinSupport/ConceptLink.gif" style="border: none;margin-right: 5px;">
+</img>See Also</a>.</p><p><b><a name="ID_4a3ee252d2cb51540a71003a017ee84e-60cb2e797bc9c6600a00206a00efdb8a-en-US">
+</a>Note:</b> Storing large amounts of I/Q data (several Gigabytes) can exceed the available (internal) storage space on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. In this case, it can be necessary to use an external storage medium.<br/></p><p><b><a name="ID_3b588d8d5727e1fa0a71003a011716a2-60cb2e797bc9c6600a00206a00efdb8a-en-US">
+</a>Note:</b> I/Q data cannot be imported in MSRT mode; however, you can use the I/Q Analyzer or (optional) Transient Analysis applications, for example, to import and analyze the exported I/Q data in Signal and Spectrum Analyzer mode later.<br/></p><p><b><a name="ID_d58ea103c4af4eb00a710ade01504325-60cb2e797bc9c6600a00206a00efdb8a-en-US">
+</a>Note:</b> Secure user mode. <div class="block"><p>In secure user mode, settings that are stored on the instrument are stored to volatile memory, which is restricted to 256<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MB. Thus, a "memory limit reached" error can occur although the hard disk indicates that storage space is still available.</p><p>To store data permanently, select an external storage location such as a USB memory device.</p><p>For details, see <a class="xref" href="d07bb3f7ad6e4543.htm#ID_665ca18af1b675db0a001ae769e5d3c1-4ec571caf1b675eb0a001ae76fb15a37-en-US">"Protecting Data Using the Secure User Mode"</a>.</p></div></p><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

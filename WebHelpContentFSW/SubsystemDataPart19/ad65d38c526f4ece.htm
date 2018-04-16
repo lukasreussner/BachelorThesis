@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics|Triggered Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Trigger Synchronization Using the Master's Trigger Output</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_3c1919a1584932d30a710ade00ab104e-29df81aa552fd45e0a00201901b30639-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="f2de56076f9341b5.htm">Triggered Measurements</a> &gt; <span class="chm-breadcrumb">Trigger Synchronization Using the Master's Trigger Output</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor263">
+</a><div class="chm-chaptertitle">Trigger Synchronization Using the Master's Trigger Output</div><p>For MIMO measurements in which the data from the multiple antennas is captured simultaneously by multiple analyzers (see <a class="xref" href="c04e310d634e4031.htm#ID_b6f95da3ffa411e0857cc7e6db4d7db5-831aa3c4132388510a001ae740425ea1-en-US">"Simultaneous Signal Capture Setup"</a>, the data streams to be analyzed must be synchronized in time. One possibility to ensure that all analyzers start capturing I/Q data at the same time is using the master's trigger output functionality.</p><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW has variable input/output connectors for trigger signals. If you set the master's [Trigger 2 Input/output] connector to "Device Triggered" output, and connect it to the slaves' trigger input connectors, the master R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW sends its trigger event signal to any connected slaves. The slaves are automatically configured to use the trigger source "External" . The master itself can be configured to use any of the following trigger sources:</p><div class="block"><ul class="list"><li value="1">External</li><li value="2">I/Q Power</li><li value="3">IF Power</li><li value="4">RF Power</li><li value="5">Power Sensor</li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

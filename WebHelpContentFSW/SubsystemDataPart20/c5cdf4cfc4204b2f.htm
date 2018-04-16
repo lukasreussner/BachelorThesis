@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="802.11ad measurements application (R&amp;S FSW-K95)|Measurements and Result Displays" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k95.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>SEM Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWigigSkIdSpectrumEmissionMask">
+</meta>
+        <meta name="topic-id" value="44">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_7d2441af598d917a0a00206a0098009c-9570455f90f60e500a001ae77dcf32e8-en-US;ID_d84ff0507dcf04260a710a3101b0c258-9570455f90f60e500a001ae77dcf32e8-en-US;ID_33caacc9e0874b0c0a001ae76cbb9f13-9570455f90f60e500a001ae77dcf32e8-en-US;ID_fcd9d97ee0874b0c0a001ae711c8d02a-9570455f90f60e500a001ae77dcf32e8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">802.11ad measurements application (R&amp;S FSW-K95)</a> &gt; <a class="chm-breadcrumb" href="dafccad0656d463d.htm">Measurements and Result Displays</a> &gt; <span class="chm-breadcrumb">SEM Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor72">
+</a><a name="kanchor73">
+</a><div class="chm-chaptertitle">SEM Measurements</div><p><b>Access</b>: "Overview" &gt; "Select Measurement" &gt; "SEM"</p><p><b>Or:</b> [MEAS] &gt; "Select Measurement" &gt; "SEM"</p><p>In addition to the default IEEE 802.11ad Modulation Accuracy measurement, which captures I/Q data from the RF Input of the FSW with a bandwidth up to 2 GHz, the R&amp;S FSW 802.11ad application also provides an SEM measurement. The SEM measurement sweeps over the desired frequency range using a filter with a smaller measurement bandwidth. The advantage of using a smaller bandwidth is an increased signal-to-noise-ratio</p><p>The SEM measurement provided by the R&amp;S FSW 802.11ad application is identical to the corresponding measurements in the base unit, but it is pre-configured according to the requirements of the IEEE 802.11ad standard.</p><p>If you require any other frequency sweep measurements, use the Spectrum application.</p><p>For details on frequency sweep measurements see <a class="xref" href="../../../Content/e411382c530e4663.htm">Measurements and Results</a>.</p><p>The Spectrum Emission Mask (SEM) measurement determines the power of the IEEE 802.11ad signal in defined offsets from the carrier and compares the power values with a spectral mask specified by the IEEE 802.11ad specifications. The limits depend on the selected bandclass. Thus, the performance of the DUT can be tested and the emissions and their distance to the limit be identified.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>The IEEE 802.11ad standard does not distinguish between spurious and spectral emissions.</p></td></tr></table></div></div><div class="block"><div class="subtitle"><a name="ID_33caacc9e0874b0c0a001ae76cbb9f13-9570455f90f60e500a001ae77dcf32e8-en-US">
+</a>Remote commands:</div></div><p><a class="xref" href="92ff3a54ae5942a7.htm#ID_46e346933a92d4f50a001ae77d3bcade-45a9464c3a92d2450a001ae714fcd4dc-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>MODE</nobr></a></p><p>Querying results:</p><p><a class="xref" href="16bcdb7dbe9f4d0e.htm#ID_fe90788e2f5f845f0a00206a0108126d-bea0e73de75cfa510a00206a01274fdd-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>LIMit&lt;li&gt;:</nobr>​<nobr>FAIL?</nobr></a></p><p><span class="command">TRAC:DATA? LIST</span>, see <a class="xref" href="ec7f81a0a3a24c35.htm#ID_592bc6b33a91e9b70a001ae70d971a33-fcf1f0c43a91e7940a001ae714fcd4dc-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]?</nobr></a></p><div class="block"><div class="subtitle"><a name="ID_fcd9d97ee0874b0c0a001ae711c8d02a-9570455f90f60e500a001ae77dcf32e8-en-US">
+</a>Evaluation methods</div></div><p>The evaluation methods for SEM measurements in the R&amp;S FSW 802.11ad application are identical to those in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW base unit (Spectrum application).</p>
+						<div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="cb534e3c2f064e64.htm#ID_47a42259277a3d4d0a00206a00778bf3-1d4296fc277a3d5c0a00206a00850b11-en-US" class="title_toc">Diagram</a></div><div class="function_block"><font face="Arial">└</font> <a href="4da88c647b744d80.htm#ID_7c3be2f4277c87790a00206a00e9c770-f53f31a9277c87790a00206a0024b496-en-US" class="title_toc">Result Summary</a></div><div class="function_block"><font face="Arial">└</font> <a href="678761838dc6456f.htm#ID_70982493277b0d7d0a00206a00128c5c-e2e91594277b0d7d0a00206a01bd1515-en-US" class="title_toc">Marker Table</a></div><div class="function_block"><font face="Arial">└</font> <a href="bae17c284d864c1a.htm#ID_36fde4fa277bec340a00206a00df01f7-4309d07a277bec340a00206a00fa2481-en-US" class="title_toc">Marker Peak List</a></div></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

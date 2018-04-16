@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|How to Perform Vector Signal Analysis|How to Perform Customized VSA Measurements|How to Work With Known Data Files" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>How to Load Known Data Files</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_cbf632211c4c4dea0a00206a00290b58-d0ec2a1d410ee47b0a00206a013e80e3-en-US;ID_ba9c70d121705c800a00206a00ea5390-d0ec2a1d410ee47b0a00206a013e80e3-en-US;ID_b28bebdd21705c800a00206a00144acd-d0ec2a1d410ee47b0a00206a013e80e3-en-US;ID_f45179c121705c800a00206a01019dd3-d0ec2a1d410ee47b0a00206a013e80e3-en-US;ID_6c03469b21705c800a00206a0151295e-d0ec2a1d410ee47b0a00206a013e80e3-en-US;ID_c095e15c70d9d0a40a7c00a000235e30-d0ec2a1d410ee47b0a00206a013e80e3-en-US;ID_cf61700321705c800a00206a0100181d-d0ec2a1d410ee47b0a00206a013e80e3-en-US;ID_5821cb3721705c800a00206a01d6cbe4-d0ec2a1d410ee47b0a00206a013e80e3-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="f9b957046a844eae.htm">How to Perform Vector Signal Analysis</a> &gt; <a class="chm-breadcrumb" href="d234a6ba7a60436d.htm">How to Perform Customized VSA Measurements</a> &gt; <a class="chm-breadcrumb" href="ba709fbefc6b4a2b.htm">How to Work With Known Data Files</a> &gt; <span class="chm-breadcrumb">How to Load Known Data Files</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">How to Load Known Data Files</div><p>Known Data files are loaded in the "Modulation &amp; Signal Description" settings.</p><div class="block"><a name="ID_ba9c70d121705c800a00206a00ea5390-d0ec2a1d410ee47b0a00206a013e80e3-en-US">
+</a><div class="procedure_title">To load an existing Known Data file</div><div><ol class="procedure"><li id="ID_b28bebdd21705c800a00206a00144acd-d0ec2a1d410ee47b0a00206a013e80e3-en-US" value="1"><p>In the "Overview", select "Signal Description".</p></li><li id="ID_f45179c121705c800a00206a01019dd3-d0ec2a1d410ee47b0a00206a013e80e3-en-US" value="2"><p>Switch to the "Known Data" tab.</p></li><li id="ID_6c03469b21705c800a00206a0151295e-d0ec2a1d410ee47b0a00206a013e80e3-en-US" value="3"><p>Activate the usage of a Known Data file by enabling the "Known Data" option.</p></li><li id="ID_c095e15c70d9d0a40a7c00a000235e30-d0ec2a1d410ee47b0a00206a013e80e3-en-US" value="4"><p>Select the "Source": "XML file".</p><p>This enables the "Load Data File" function.</p></li><li id="ID_cf61700321705c800a00206a0100181d-d0ec2a1d410ee47b0a00206a013e80e3-en-US" value="5"><p>Select the "Load Data File" button.</p><p>A file selection dialog box is displayed.</p></li><li id="ID_5821cb3721705c800a00206a01d6cbe4-d0ec2a1d410ee47b0a00206a013e80e3-en-US" value="6"><p>Select the xml file which contains the possible data sequences of the input signal. The file must comply with the syntax described in <a class="xref" href="c0916122957b42c2.htm#ID_3e40bebc89b8fb310a00206a01f5a96e-9150d46489b8fb310a00206a01468940-en-US">"Known Data File Syntax Description"</a>.</p><p>The header information of the xml file is displayed in the dialog box.</p><p>Once a Known Data file has been loaded, the Bit Error Rate result display becomes available.</p><p>If the "Fine Synchronization" setting in the "Demodulation" dialog box is set to "Auto" mode, the known data is also used for synchronization. Otherwise it can be selected manually. Defining a maximum symbol error rate for the known data in reference to the analyzed data avoids using a falsely selected or unsuitable file for synchronization (see also <a class="xref" href="8c537119453d4d08.htm#ID_a15f656a2101f7630a710a310029052b-98ce8ff6410963710a00206a00a7855c-en-US">"If SER <span style="font-family: Arial Unicode MS; font-size: 10.5pt">≤</span>"</a>.</p></li></ol></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

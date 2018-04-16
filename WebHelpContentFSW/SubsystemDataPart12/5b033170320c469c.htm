@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Filters and Bandwidths during Signal Processing" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Customized Filters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6aaf9460ca1c6b3b0a00206a00187836-184c8906411153460a00206a01532735-en-US;ID_d0b2e2f9d6b590940a00206a00c2ce64-184c8906411153460a00206a01532735-en-US;ID_35ec27cc627518400a00206a014fad95-184c8906411153460a00206a01532735-en-US;ID_c3a5b19b6697f5c40a00206a0012c8a2-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="9dda88eec1c14dc7.htm">Filters and Bandwidths during Signal Processing</a> &gt; <span class="chm-breadcrumb">Customized Filters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor167">
+</a><div class="chm-chaptertitle">Customized Filters</div><p>The analytical filter types RC (raised cosine), RRC (root-raised cosine), GAUSSIAN, and the most important standard-specific filters, are already integrated in the R&amp;S FSW VSA application. In addition, it is possible to use user-defined measurement and transmit filters. Customized filters are useful for the following purposes:</p><div class="block"><ul class="list"><li value="1">Developing new networks and modulation methods for which no filters are defined yet</li><li value="2">Measuring transmitter characteristics with slightly modified (e.g. shortened) transmitter filters</li></ul></div><a name="kanchor168">
+</a><a name="kanchor169">
+</a><p>An external program ("FILTWIZ") is offered to convert user-defined filters. This program generates filter files (<span class="filename">*.vaf</span>) which can be transferred to the analyzer with a USB device, for example. The program can be downloaded together with a detailed description as a precompiled MATLAB® file (MATLAB pcode) on the Internet, at <a href="http://www.rohde-schwarz.com" class="link" target="_new">http://www.rohde-schwarz.com</a> (search term "FILTWIZ").</p><div class="block" id="ID_d0b2e2f9d6b590940a00206a00c2ce64-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img4bf47ae4d6b395a10a00206a00938a49_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">FILTWIZ - filter tool for VSA</div></div><p>It is possible to load customized transmit filters and customized measurement filters. If you select a customized transmit filter, the internal receive filter coefficients are calculated automatically right away.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>Unlike the R&amp;S FSW VSA application, the R&amp;S FSQ-K70 required you to transfer a user-defined receive filter, as well.</p></td></tr></table></div></div><p>If you upload a customized transmit filter and leave the measurement filter set to "automatic", the internally calculated receive filter is used as a measurement filter. Note that this filter is not necessarily suitable for your specific signal. The filter is optimized such that the intersymbol interference is low. Hence, you probably see a clear eye diagram and a Vector I/Q diagram with a recognizable constellation. However, a filter that has low intersymbol interference can lead to noise enhancement, which is commonly undesirable for a measurement filter.</p><div class="block"><div class="listintro">To avoid noise enhancement, it is recommended that you do one of the following:</div><ul class="list"><li value="1">Design your own measurement filter and upload it as a user filter.</li><li value="2">Select a suitable measurement filter from the list.</li></ul></div><div class="block"><div class="subtitle"><a name="ID_c3a5b19b6697f5c40a00206a0012c8a2-184c8906411153460a00206a01532735-en-US">
+</a>Transferring filter files to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW</div></div><p>You can transfer the (<span class="filename">.vaf</span>) filter files to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW using a USB memory device.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

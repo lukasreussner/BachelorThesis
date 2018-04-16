@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)|Configuration|Code Domain Analysis|Trigger Settings|Trigger Source|Trigger Source" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k76_k77.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Digital I/Q
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTriggerSourceDigitalIq">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdIqTriggerSourceDigitalIq">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdTriggerSourceDigitalIq">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdTriggerSourceDigitalIq">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdTriggerSourceDigitalIq">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdTriggerSourceDigitalIq">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdAnalogDemodTriggerSourceDigitalIq">
+</meta>
+        <meta name="topic-id" value="532">
+</meta>
+        <meta name="topic-id" value="533">
+</meta>
+        <meta name="topic-id" value="534">
+</meta>
+        <meta name="topic-id" value="535">
+</meta>
+        <meta name="topic-id" value="536">
+</meta>
+        <meta name="topic-id" value="537">
+</meta>
+        <meta name="topic-id" value="538">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_128217377973f1c70a00206a00d73dcc-cf71869ff78ed9ed0a00206a00c08bb0-en-US;ID_c6d86b72ed9a733a0a710a3101f64e1c-cf71869ff78ed9ed0a00206a00c08bb0-en-US;ID_644fee701730c50c0a710a3101901dc7-cf71869ff78ed9ed0a00206a00c08bb0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">TD-SCDMA Measurements (R&amp;S FSW-K76/-K77)</a> &gt; <a class="chm-breadcrumb" href="be29444a851946eb.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="1db9d5b397df4679.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="6f550990e5b74859.htm">Trigger Settings</a> &gt; <a class="chm-breadcrumb" href="a49308c682644364.htm">Trigger Source</a> &gt; <a class="chm-breadcrumb" href="b80acb08b5c243bc.htm">Trigger Source</a> &gt; <span class="chm-breadcrumb">Digital I/Q</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor313">
+</a><a name="kanchor314">
+</a><a name="kanchor315">
+</a><div class="function_heading"><a name="ID_128217377973f1c70a00206a00d73dcc-cf71869ff78ed9ed0a00206a00c08bb0-en-US">
+</a>Digital I/Q</div><p>For applications that process I/Q data, such as the I/Q Analyzer or optional applications, and only if the optional Digital Baseband Interface is available:</p><p>Defines triggering of the measurement directly via the LVDS connector. In the selection list you must specify which general purpose bit (GP0 to GP5) will provide the trigger data.</p><p><b><a name="ID_c6d86b72ed9a733a0a710a3101f64e1c-cf71869ff78ed9ed0a00206a00c08bb0-en-US">
+</a>Note:</b><a name="kanchor316">
+</a><a name="kanchor317">
+</a>If the Digital I/Q enhanced mode is used, i.e. the connected device supports transfer rates up to 200 Msps, only the general purpose bits GP0 and GP1 are available as a Digital I/Q trigger source.<br/></p><p>The following table describes the assignment of the general purpose bits to the LVDS connector pins.</p><p>(For details on the LVDS connector, see <a class="xref" href="../../fsw_iqanalyzer/Content/94c9354520804c5b.htm">Description of the LVDS Connector</a>)</p><div class="block"><a name="ID_644fee701730c50c0a710a3101901dc7-cf71869ff78ed9ed0a00206a00c08bb0-en-US">
+</a><span class="table-caption">Assignment of general purpose bits to LVDS connector pins</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Bit</p></th><th valign="top"><p>LVDS pin</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>GP0</p></td><td valign="top"><p>SDATA4_P - Trigger1</p></td></tr><tr class="evenrow"><td valign="top"><p>GP1</p></td><td valign="top"><p>SDATA4_P - Trigger2</p></td></tr><tr class="oddrow"><td valign="top"><p>GP2 <sup>*)</sup></p></td><td valign="top"><p>SDATA0_P - Reserve1</p></td></tr><tr class="evenrow"><td valign="top"><p>GP3 <sup>*)</sup></p></td><td valign="top"><p>SDATA4_P - Reserve2</p></td></tr><tr class="oddrow"><td valign="top"><p>GP4 <sup>*)</sup></p></td><td valign="top"><p>SDATA0_P - Marker1</p></td></tr><tr class="evenrow"><td valign="top"><p>GP5 <sup>*)</sup></p></td><td valign="top"><p>SDATA4_P - Marker2</p></td></tr></tbody><tfoot><tr class="oddrow"><th class="tfoot" colspan="2" valign="top"><p><sup>*)</sup>: not available for Digital I/Q enhanced mode</p></th></tr></tfoot></table></div>Remote command: <div class="rcclist_right"><p><span class="command">TRIG:SOUR GP0</span>, see <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SOURce</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

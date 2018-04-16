@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="1xEV-DO Measurements (R&amp;S FSW-K84/-K85)|Configuration|Code Domain Analysis|Synchronization (MS Application Only)" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k84_k85.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Sync To</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDoSkIdSynchPilot">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSynchAuxiliaryPilot">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSynchChannelPower">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdSynchAuto">
+</meta>
+        <meta name="topic-id" value="740">
+</meta>
+        <meta name="topic-id" value="741">
+</meta>
+        <meta name="topic-id" value="742">
+</meta>
+        <meta name="topic-id" value="743">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_123054d5cdfa7a980a710a31007e4f51-5b8e2584f4adc5740a00206a0029a476-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">1xEV-DO Measurements (R&amp;S FSW-K84/-K85)</a> &gt; <a class="chm-breadcrumb" href="d73da9f4c44b45e9.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="b326121bcb25492a.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="03d5184e765a4a59.htm">Synchronization (MS Application Only)</a> &gt; <span class="chm-breadcrumb">Sync To</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor472">
+</a><a name="kanchor473">
+</a><a name="kanchor474">
+</a><a name="kanchor475">
+</a><a name="kanchor476">
+</a><a name="kanchor477">
+</a><a name="kanchor478">
+</a><div class="function_heading"><a name="ID_123054d5cdfa7a980a710a31007e4f51-5b8e2584f4adc5740a00206a0029a476-en-US">
+</a><span style="font-weight: bold">Sync To</span></div><p>Defines the synchronization mode for frame synchronization (detection of the first chip of the frame). Two methods use the known sequence of a pilot channel (Pilot or Auxiliary Pilot); a third does not require a pilot channel.</p><p>For details, see <a class="xref" href="b7b78b052ec74e0d.htm#ID_aa5f61e2f8f097060a00206a01fec76b-67698f60f4ad5da30a00206a0051b8a0-en-US">"Synchronization (MS application only)"</a>.</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Auto"</p></td><td class="function_col_right"><p>The following modes are tried sequentially until synchronization was successful. If none of the methods was successful, a failed synchronization is reported.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Pilot"</p></td><td class="function_col_right"><p>Uses the correlation characteristic of the known pilot channel.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Auxiliary Pilot"</p></td><td class="function_col_right"><p>Similar to synchronization on pilot, but with the different known sequence (= spreading code) of the auxiliary pilot channel. This mode is useful if the signal does not contain a pilot channel.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Channel Power"</p></td><td class="function_col_right"><p>Analyzes the power of any specified channel.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="d36e46243.htm#ID_ca1771b1cdfa47de0a00206a009a3df5-5fa09dc51c298d840a00206a007223d4-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]CDP:</nobr>​<nobr>SMODe</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

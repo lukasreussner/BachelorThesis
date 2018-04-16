@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Remote Commands to Perform GSM Measurements|Retrieving Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Transient Spectrum Results</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_9414be23e5f3eede0a002019019351e7-c4dd8d2a2c4d1c830a001ae72a459a13-en-US;ID_e962251fba0d11e18369ac3ecf1be297-c4dd8d2a2c4d1c830a001ae72a459a13-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="ce897600552f43dd.htm">Remote Commands to Perform GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="abc2974de9f84382.htm">Retrieving Results</a> &gt; <span class="chm-breadcrumb">Transient Spectrum Results</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor981">
+</a><a name="kanchor982">
+</a><div class="chm-chaptertitle">Transient Spectrum Results</div><p>The following commands are required to query the results of the "Modulation Spectrum Table" evaluation. For details on the individual results see <a class="xref" href="97dd78ed0eae43ca.htm#ID_07d2a4b4a57411e190e9ba0173fac731-43ed4de0e9ba3d950a00201900481861-en-US">"Modulation Spectrum Table"</a>.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_e962251fba0d11e18369ac3ecf1be297-c4dd8d2a2c4d1c830a001ae72a459a13-en-US">
+</a>READ vs FETCh commands</div><p>Note that two commands are provided which are almost identical.</p><p>The <span class="command">READ</span> command starts the measurement and reads out the result. When the measurement is started the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW GSM application is automatically set to single sweep mode.</p><p>Further results of the measurement can then be queried without performing a new measurement via the <span class="command">FETCh:BURSt</span> command.</p></td></tr></table></div></div><div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="61082e07021f402b.htm#ID_09ca882ca10009c60a00206a00268684-7121f787eac87ea90a00201900345e1c-en-US" class="title_toc">FETCh:SPECtrum:SWITching[:ALL]?</a><br/><a href="61082e07021f402b.htm#ID_c99e51c6bc979b100a00206a00fa4dc8-9c99a74103e9717c0a00201901212ec4-en-US" class="title_toc">READ:SPECtrum:SWITching[:ALL]?</a><br/><a href="2ad451d3744443cf.htm#ID_1228fc39f318a0770a00206a013639b8-3e197bffeac87dbf0a0020190149b1d4-en-US" class="title_toc">FETCh:SPECtrum:SWITching:REFerence?</a><br/><a href="2ad451d3744443cf.htm#ID_0917be714c1b75790a00206a0111a31f-072c47ec03e6f2420a00201900822946-en-US" class="title_toc">READ:SPECtrum:SWITching:REFerence[:IMMediate]?</a><br/><a href="ab47e683c00e4d12.htm#ID_9b7d07529968ba9c0a00206a0119a9fb-e656c5d9235a8bcb0a002019000904d8-en-US" class="title_toc">READ:SPECtrum:SWITching:REFerence:GATing?</a><br/></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

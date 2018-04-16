@@ -1,0 +1,81 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurements and Result Display|Code Domain Analysis" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Domain Parameters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_b8017c09a6f811e0bd7d9ca521cdb013-14df114092791b800a00206a01fa83d8-en-US;ID_5dc307effe23c0f40a710a31017f4804-14df114092791b800a00206a01fa83d8-en-US;ID_ad7565c1a79611e0a71e98eb04341759-14df114092791b800a00206a01fa83d8-en-US;ID_ad7565c3a79611e0a71e98eb04341759-14df114092791b800a00206a01fa83d8-en-US;ID_b80b197aa6f811e0bd7d9ca521cdb013-14df114092791b800a00206a01fa83d8-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="a6ba98e833a74468.htm">Measurements and Result Display</a> &gt; <a class="chm-breadcrumb" href="6c18bcecabcf4624.htm">Code Domain Analysis</a> &gt; <span class="chm-breadcrumb">Code Domain Parameters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor32">
+</a><a name="kanchor33">
+</a><div class="chm-chaptertitle">Code Domain Parameters</div><p>Two different types of measurement results are determined and displayed in the Result Summary: global results and channel results (for the selected channel).</p><div class="block"><div class="tip"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/tipps_small_10mm.gif" width="38" height="38" class="tip_img"/></td><td><p>The number of the CPICH slot at which the measurement is performed is indicated globally for the measurement in the channel bar.</p><p>The spreading code of the selected channel is indicated with the channel number in the channel bar and above the channel-specific results in the Result Summary.</p></td></tr></table></div></div><p>In the Channel Table, the analysis results for all active channels are displayed.</p><div class="block"><a name="ID_5dc307effe23c0f40a710a31017f4804-14df114092791b800a00206a01fa83d8-en-US">
+</a><a name="kanchor34">
+</a><a name="kanchor35">
+</a><a name="kanchor36">
+</a><a name="kanchor37">
+</a><a name="kanchor38">
+</a><a name="kanchor39">
+</a><a name="kanchor40">
+</a><a name="kanchor41">
+</a><a name="kanchor42">
+</a><a name="kanchor43">
+</a><a name="kanchor44">
+</a><a name="kanchor45">
+</a><a name="kanchor46">
+</a><a name="kanchor47">
+</a><a name="kanchor48">
+</a><a name="kanchor49">
+</a><span class="table-caption">General code domain power results for a specific frame and slot</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Parameter</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>Total Power:</p></td><td valign="top"><p>The total signal power (average power of total evaluated slot).</p></td></tr><tr class="evenrow"><td valign="top"><p>Carrier Freq Error:</p></td><td valign="top"><p>The frequency error relative to the center frequency of the analyzer. The absolute frequency error is the sum of the analyzer and DUT frequency error. The specified value is averaged for one (CPICH) slot. See also the note on <a class="xref" href="#ID_ad7565c1a79611e0a71e98eb04341759-14df114092791b800a00206a01fa83d8-en-US">"Carrier Frequency Error"</a>.</p></td></tr><tr class="oddrow"><td valign="top"><p>Chip Rate Error:</p></td><td valign="top"><p>The chip rate error in the frame to analyze in ppm. As a result of a high chip rate error, symbol errors arise and the CDP measurement is possibly not synchronized to the 3GPP FDD BTS signal. The result is valid even if synchronization of the analyzer and signal failed.</p></td></tr><tr class="evenrow"><td valign="top"><p>Trigger to Frame:</p></td><td valign="top"><p>The time difference between the beginning of the recorded signal section to the start of the analyzed frame. In case of triggered data collection, this difference is identical with the time difference of frame trigger (+ trigger offset) – frame start. If synchronization of the analyzer and input signal fails, the value of "Trigger to Frame" is not significant.</p></td></tr><tr class="oddrow"><td valign="top"><p>IQ Offset:</p></td><td valign="top"><p>DC offset of the signal in the selected slot in %</p></td></tr><tr class="evenrow"><td valign="top"><p>IQ Imbalance:</p></td><td valign="top"><p>I/Q imbalance of signals in the selected slot in %</p></td></tr><tr class="oddrow"><td valign="top"><p>Avg Power Inact Chan</p></td><td valign="top"><p>Average power of the inactive channels</p></td></tr><tr class="evenrow"><td valign="top"><p>Composite EVM:</p></td><td valign="top"><p>The composite EVM is the difference between the test signal and the ideal reference signal in the selected slot in %.</p><p>See also <a class="xref" href="dadf0359e136426e.htm#ID_dc804f65b6f10f840a00206a00d67bef-14df114092791b800a00206a01fa83d8-en-US">"Composite EVM"</a></p></td></tr><tr class="oddrow"><td valign="top"><p>Pk CDE (15 ksps):</p></td><td valign="top"><p>The Peak Code Domain Error projects the difference between the test signal and the ideal reference signal onto the selected spreading factor in the selected slot (see <a class="xref" href="34fdf749a55f4777.htm#ID_52dd3e2eb6f10f840a00206a003ae45d-14df114092791b800a00206a01fa83d8-en-US">"Peak Code Domain Error"</a>). The spreading factor onto which projection is performed can be derived from the symbol rate indicated in brackets.</p></td></tr><tr class="evenrow"><td valign="top"><p>RHO</p></td><td valign="top"><p>Quality parameter RHO for each slot.</p></td></tr><tr class="oddrow"><td valign="top"><p>No of Active Chan:</p></td><td valign="top"><p>The number of active channels detected in the signal in the selected slot. Both the detected data channels and the control channels are considered active channels.</p></td></tr><tr class="evenrow"><td valign="top"><p>Avg. RCDE</p></td><td valign="top"><p>Average Relative Code Domain Error over all channels detected with 64 QAM (UE: 4PAM) modulation in the selected frame.</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_ad7565c1a79611e0a71e98eb04341759-14df114092791b800a00206a01fa83d8-en-US">
+</a>Carrier Frequency Error</div><a name="kanchor50">
+</a><p>The maximum frequency error that can be compensated is specified in <a class="xref" href="#ID_ad7565c3a79611e0a71e98eb04341759-14df114092791b800a00206a01fa83d8-en-US">Table "Maximum frequency error that can be compensated"</a> as a function of the synchronization mode. Transmitter and receiver should be synchronized as far as possible.</p></td></tr></table></div></div><div class="block"><a name="ID_ad7565c3a79611e0a71e98eb04341759-14df114092791b800a00206a01fa83d8-en-US">
+</a><span class="table-caption">Maximum frequency error that can be compensated</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>SYNC mode</p></th><th valign="top"><p>ANTENNA DIV</p></th><th valign="top"><p>Max. Freq. Offset</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>CPICH</p></td><td valign="top"><p>X</p></td><td valign="top"><p>5.0 kHz</p></td></tr><tr class="evenrow"><td valign="top"><p>SCH</p></td><td valign="top"><p>OFF</p></td><td valign="top"><p>1.6 kHz</p></td></tr><tr class="oddrow"><td valign="top"><p>SCH</p></td><td valign="top"><p>ANT 1</p></td><td valign="top"><p>330 Hz</p></td></tr><tr class="evenrow"><td valign="top"><p>SCH</p></td><td valign="top"><p>ANT 2</p></td><td valign="top"><p>330 Hz</p></td></tr></tbody></table></div><div class="block"><a name="ID_b80b197aa6f811e0bd7d9ca521cdb013-14df114092791b800a00206a01fa83d8-en-US">
+</a><a name="kanchor51">
+</a><a name="kanchor52">
+</a><a name="kanchor53">
+</a><a name="kanchor54">
+</a><a name="kanchor55">
+</a><a name="kanchor56">
+</a><a name="kanchor57">
+</a><a name="kanchor58">
+</a><a name="kanchor59">
+</a><a name="kanchor60">
+</a><a name="kanchor61">
+</a><a name="kanchor62">
+</a><a name="kanchor63">
+</a><a name="kanchor64">
+</a><span class="table-caption">Channel-specific code domain power results</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>Symbol Rate:</p></td><td valign="top"><p>Symbol rate at which the channel is transmitted</p></td></tr><tr class="evenrow"><td valign="top"><p>Channel Slot No:</p></td><td valign="top"><p><b>(BTS measurements only):</b></p><p>Channel slot number; determined by combining the value of the selected CPICH and the channel's timing offset</p></td></tr><tr class="oddrow"><td valign="top"><p>Channel Mapping</p></td><td valign="top"><p><b>(UE measurements only):</b></p><p>Branch onto which the channel is mapped (I or Q, specified by the standard)</p></td></tr><tr class="evenrow"><td valign="top"><p>Chan Power Abs:</p></td><td valign="top"><p>Channel power, absolute</p></td></tr><tr class="oddrow"><td valign="top"><p>Chan Power Rel:</p></td><td valign="top"><p>Channel power, relative (referenced to CPICH or total signal power)</p></td></tr><tr class="evenrow"><td valign="top"><p>Timing Offset:</p></td><td valign="top"><p>Offset between the start of the first slot in the channel and the start of the analyzed 3GPP FDD BTS frame</p></td></tr><tr class="oddrow"><td valign="top"><p>RCDE</p></td><td valign="top"><p>Relative Code Domain Error for the complete frame of the selected channel</p></td></tr><tr class="evenrow"><td valign="top"><p>Symbol EVM:</p></td><td valign="top"><p>Peak and average of the results of the error vector magnitude evaluation</p></td></tr><tr class="oddrow"><td valign="top"><p>No of Pilot Bits:</p></td><td valign="top"><p>Number of pilot bits of the selected channel</p></td></tr><tr class="evenrow"><td valign="top"><p>Modulation Type:</p></td><td valign="top"><p>BTS measurements:</p><p>Modulation type of an HSDPA channel. High speed physical data channels can be modulated with QPSK, 16 QAM or 64 QAM modulation.</p><div class="block"><div class="listintro-in-compact-list">UE measurements: the modulation type of the selected channel. Valid entries are:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">BPSK I for channels on I-branch</li><li style="margin-bottom:0; padding-bottom:0;" value="2">BPSK Q for channels on Q-branch</li><li style="margin-bottom:0; padding-bottom:0;" value="3">NONE for inactive channels</li></ul></div></td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

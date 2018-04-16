@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Remote Control Commands for Noise Figure Measurements" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Deprecated Remote Commands for Noise Figure Measurements</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_2d12242063d786470a00206a0183b3f2-59d3c23d63d786470a00206a019aeb2f-en-US;ID_6177dc7264defda20a00206a01147e99-59d3c23d63d786470a00206a019aeb2f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="8df071f8ae8c45f0.htm">Remote Control Commands for Noise Figure Measurements</a> &gt; <span class="chm-breadcrumb">Deprecated Remote Commands for Noise Figure Measurements</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Deprecated Remote Commands for Noise Figure Measurements</div><p>Following is a list of deprecated remote commands. The remote commands are still supported to maintain compatibility to previous versions of noise figure measurements (like the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSV-K30), but it is strongly recommended to use the command system in the way it is meant to be used in the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-K30.</p><div class="block"><a name="ID_6177dc7264defda20a00206a01147e99-59d3c23d63d786470a00206a019aeb2f-en-US">
+</a><table border="1"><colgroup><col width="127.575">
+</col><col width="127.575">
+</col><col width="170.10000000000002">
+</col></colgroup><thead><tr class="oddrow"><th align="left" valign="top"><p>Legacy command</p></th><th align="left" valign="top"><p>Replaced by</p></th><th align="left" valign="top"><p>Comment</p></th></tr></thead><tbody><tr class="oddrow"><td align="left" valign="top"><p><span class="command">CALCulate:LIMit:TRACe</span></p></td><td align="left" valign="top"><p><span class="command">CALCulate:LIMit:TYPE</span></p></td><td align="left" valign="top"><p>Parameters <span class="command">NFIGure</span>, <span class="command">TEFFective</span> and <span class="command">GAIN</span> were supported to assign a limit line to a result and thus the trace because trace and result type were fix. <span class="command">CALCulate:LIMit:TRACe</span> now assigns the limit line to a trace (1 to 4).</p></td></tr><tr class="evenrow"><td align="left" valign="top"><p><span class="command">CALCulate:MARKer:TRACe</span></p><p><span class="command">CALCulate:DELTamarker:TRACe</span></p></td><td align="left" valign="top"> </td><td align="left" valign="top"><p>The parameters <span class="command">NOISe</span>, <span class="command">GAIN</span>, <span class="command">NMEM1-3</span> and <span class="command">GMEM1-3</span> have been replaced by <span class="command">1 | 2 | 3 | 4</span> because no distinction is made between memory and live trace.</p></td></tr><tr class="oddrow"><td align="left" valign="top"><p><span class="command">CONFigure:ARRay:MEMory</span></p></td><td align="left" valign="top"><p><span class="command">TRACe:COPY</span></p></td><td align="left" valign="top"><p>No more distinction between memory and live traces.</p></td></tr><tr class="evenrow"><td align="left" valign="top"><p><span class="command">CONFigure:SINGle</span></p></td><td align="left" valign="top"><p><span class="command">CONFigure:FREQuency:SINGle</span></p></td><td align="left" valign="top"> </td></tr><tr class="oddrow"><td align="left" valign="top"><p><span class="command">DISPlay:ARRay:MEMory:STATe</span></p><p><span class="command">DISPlay:CURRent:DATA:STATe</span></p></td><td align="left" valign="top"><p><span class="command">DISPlay:WINDow:TRACe:STATe</span></p></td><td align="left" valign="top"><p>No more distinction between memory and live traces.</p></td></tr><tr class="evenrow"><td align="left" valign="top"><p><span class="command">DISPlay:DATA:TRACe</span></p></td><td align="left" valign="top"><p><span class="command">LAYout</span> system</p></td><td align="left" valign="top"> </td></tr><tr class="oddrow"><td align="left" valign="top"><p><span class="command">DISPlay:FORMat</span></p></td><td align="left" valign="top"><p>---</p></td><td align="left" valign="top"><p>Functionality not supported any more.</p></td></tr><tr class="evenrow"><td align="left" valign="top"><p><span class="command">DISPlay:WINDow:TABLe</span></p></td><td align="left" valign="top"><p><span class="command">LAYout:WINDow:REPLace</span> / <span class="command">LAYout:REPLace:WINDow</span></p></td><td align="left" valign="top"> </td></tr><tr class="oddrow"><td align="left" valign="top"><p><span class="command">FETCh:</span> command system</p></td><td align="left" valign="top"><p><span class="command">TRACE:DATA</span></p></td><td align="left" valign="top"> </td></tr><tr class="evenrow"><td align="left" valign="top"><p><span class="command">SENSe:SWEep:POINts</span></p></td><td align="left" valign="top"><p><span class="command">SENSe:FREQuency:POINts</span></p></td><td align="left" valign="top"> </td></tr><tr class="oddrow"><td align="left" valign="top"><p><span class="command">SENSe:FREQuency:CW:FIXed</span></p></td><td align="left" valign="top"><p><span class="command">SENSe:FREQuency:SINGle</span></p></td><td align="left" valign="top"> </td></tr><tr class="evenrow"><td align="left" valign="top"><p><span class="command">SENSe:FREQuency:LIST:DATA</span></p></td><td align="left" valign="top"><p><span class="command">SENSe:FREQuency:TABLe:DATA</span></p></td><td align="left" valign="top"><p>Frequency table only requires RF frequencies on R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW.</p></td></tr><tr class="oddrow"><td align="left" valign="top"><p><span class="command">SENSe:CONFigure:MODE:SYSTem:LOSCillator</span></p></td><td align="left" valign="top"><p><span class="command">SENSe:CONFigure:MODE:SYSTem:LO</span></p></td><td align="left" valign="top"> </td></tr><tr class="evenrow"><td align="left" valign="top"><p><span class="command">SENSe:CONFigure:MODE:SYSTem:LOSCillator:FREQuency</span></p></td><td align="left" valign="top"><p><span class="command">SENSe:CONFigure:MODE:SYSTem:LO:FREQuency</span></p></td><td align="left" valign="top"> </td></tr></tbody></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Remote Commands|Programming Examples|Service Request" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Reading Error Messages</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_7_remote_examples_0045-1fedfcaa9ff911690a00206a019f27ff-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="ab583b0701e24ad1.htm">Remote Commands</a> &gt; <a class="chm-breadcrumb" href="9cd40c31930e4200.htm">Programming Examples</a> &gt; <a class="chm-breadcrumb" href="08bab3c56ea044fc.htm">Service Request</a> &gt; <span class="chm-breadcrumb">Reading Error Messages</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Reading Error Messages</div><div class="verbatim"><pre class="verbatim_text">REM -------- Subroutine for reading the error queue -----------------------
+Public SUB ErrorQueueHandler()
+ERROR$ = SPACE$(100) 'Make space for error variable
+CALL InstrWrite (analyzer, "SYSTEM:ERROR?")
+CALL InstrRead(analyzer, ERROR$)
+Debug.Print "Error Description:"; ERROR$
+END SUB
+REM ***********************************************************************</pre></div><div class="verbatim"><pre class="verbatim_text">REM -------- Subroutine for reading the error queue -----------------------
+Sub ErrorQueueHandler()
+    Dim result As String
+    Dim hasErr As Boolean = True
+    Do
+        mbSession.Write("SYST:ERR?")
+        result = mbSession.ReadString()
+        Dim parts As String() = result.Split(",")
+        If parts(0) = 0 Then
+            hasErr = False
+            Console.WriteLine(result)
+        Else
+            Console.WriteLine(result)
+        End If
+    Loop While hasErr
+End Sub
+</pre></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

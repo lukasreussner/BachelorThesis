@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Configuration|WLAN I/Q Measurement Configuration|Signal Capture (Data Acquisition)|MIMO Capture Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>MIMO Antenna Signal Capture Setup</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWLANSkIdMIMOCap_Simultaneous">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdMIMOCap_OSPSwitchBox">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdMIMOCap_SequentialManual">
+</meta>
+        <meta name="topic-id" value="581">
+</meta>
+        <meta name="topic-id" value="583">
+</meta>
+        <meta name="topic-id" value="585">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_dac5fb823f26a41b0a710a31010f67d1-d8e006d37c4158750a00201901359a7d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="3a844e7770fd4a7a.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="2e3336f147004a28.htm">WLAN I/Q Measurement Configuration</a> &gt; <a class="chm-breadcrumb" href="60babf977c264ddc.htm">Signal Capture (Data Acquisition)</a> &gt; <a class="chm-breadcrumb" href="11a7c139d5424d12.htm">MIMO Capture Settings</a> &gt; <span class="chm-breadcrumb">MIMO Antenna Signal Capture Setup</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor452">
+</a><a name="kanchor453">
+</a><div class="function_heading"><a name="ID_dac5fb823f26a41b0a710a31010f67d1-d8e006d37c4158750a00201901359a7d-en-US">
+</a><span style="font-weight: bold">MIMO Antenna Signal Capture Setup</span></div><p>Defines the MIMO method used by the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW(s) to capture data from multiple Tx antennas sent by one device under test (DUT).</p><table class="function_table" border="0"><tr><td class="function_col_left" valign="top"><p>"Simultaneous"</p></td><td class="function_col_right"><p>Simultaneous normal MIMO operation</p><p>The number of Tx antennas set in <a class="xref" href="524a5e72c7df4843.htm#ID_598c4e1a9f2c12380a710a31006c8b7b-d8e006d37c4158750a00201901359a7d-en-US">"DUT MIMO Configuration"</a> defines the number of analyzers required for this measurement setup.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Sequential using OSP switch"</p></td><td class="function_col_right"><p>Sequential using open switch platform</p><p>A single analyzer and the Rohde &amp; Schwarz OSP Switch Platform (with at least one fitted R&amp;S®OSP-B101 option) is required to measure the number of DUT Tx Antennas as defined in <a class="xref" href="524a5e72c7df4843.htm#ID_598c4e1a9f2c12380a710a31006c8b7b-d8e006d37c4158750a00201901359a7d-en-US">"DUT MIMO Configuration"</a>.</p></td></tr><tr><td class="function_col_left" valign="top"><p>"Sequential manual"</p></td><td class="function_col_right"><p>Sequential using manual operation</p><p>A single analyzer is required to measure the number of DUT Tx Antennas as defined in <a class="xref" href="524a5e72c7df4843.htm#ID_598c4e1a9f2c12380a710a31006c8b7b-d8e006d37c4158750a00201901359a7d-en-US">"DUT MIMO Configuration"</a>. Data capturing is performed manually via the analyzer's user interface.</p></td></tr></table>Remote command: <div class="rcclist_right"><p><a class="xref" href="d1483823e48569.htm#ID_993c1cea2f5262950a00206a0073e217-9719edc32f5259eb0a00206a00636f5b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>WLAN:</nobr>​<nobr>MIMO:</nobr>​<nobr>CAPTure:</nobr>​<nobr>TYPE</nobr></a></p></div><div style="clear:left;"> </div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

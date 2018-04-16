@@ -1,0 +1,51 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Demodulation Parameters - Logical Filters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_ccdebc03aa7d5a8c0a0020190135639d-a152f5e2a64dafbf0a002019017fdb4d-en-US;ID_e45cf0c8856611e1a221e7ee371f3cea-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Demodulation Parameters - Logical Filters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor247">
+</a><a name="kanchor248">
+</a><a name="kanchor249">
+</a><a name="kanchor250">
+</a><div class="chm-chaptertitle">Demodulation Parameters - Logical Filters</div><a name="kanchor251">
+</a><a name="kanchor252">
+</a><p>The demodulation settings define which PPDUs are to be analyzed, thus they define a <em>logical filter</em>. They can either be defined using specific values or according to the first measured PPDU.</p><p>Which of the WLAN demodulation parameter values are supported depends on the selected digital standard, some are also interdependant.</p><div class="block"><a name="ID_e45cf0c8856611e1a221e7ee371f3cea-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a><a name="kanchor253">
+</a><span class="table-caption">Supported modulation formats, PPDU formats and channel bandwidths depending on standard</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Standard</p></th><th valign="top"><p>Modulation formats</p></th><th valign="top"><p>PPDU formats</p></th><th valign="top"><p>Channel bandwidths</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>IEEE 802.11a, g (OFDM), j, p</p></td><td valign="top"><p>BPSK (6<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps &amp; 9<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>QPSK (12<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps &amp; 18<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>16QAM (24<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps &amp; 36<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>64QAM (48<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps &amp; 54<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p></td><td valign="top"><p>Non-HT</p><p>Short PPDU</p><p>Long PPDU</p></td><td valign="top"><p>5 MHz, 10 MHz, 20<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup></p></td></tr><tr class="evenrow"><td valign="top"><p>IEEE 802.11ac</p></td><td valign="top"><p>16QAM</p><p>64QAM</p><p>256QAM</p><p>1024QAM</p></td><td valign="top"><p>VHT</p></td><td valign="top"><p>20<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup>, 40<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup>, 80<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup>, 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup></p></td></tr><tr class="oddrow"><td valign="top"><p>IEEE 802.11b, g (DSSS)</p></td><td valign="top"><p>DBPSK
+(1<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>DQPSK
+(2<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>CCK (5.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps &amp; 11<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>PBCC (5.5<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps &amp; 11<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p></td><td valign="top"><p>Short PPDU</p><p>Long PPDU</p></td><td valign="top"><p>22<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz</p></td></tr><tr class="evenrow"><td rowspan="2" valign="top"><p>IEEE 802.11n</p></td><td valign="top"><p><b>SISO:</b></p><p>BPSK (6.5, 7.2, 13.5 &amp; 15<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>QPSK (13, 14.4, 19.5, 21.7, 27, 30, 40,5 &amp; 45<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>16QAM (26, 28.9, 39, 43.3, 54, 60, 81 &amp; 90<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p><p>64QAM (52, 57.8, 58.5, 65, 72.2, 108, 121.5, 135, 120, 135 &amp; 150<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Mbps)</p></td><td rowspan="2" valign="top"><p>HT-MF (Mixed format)</p><p>HT-GF (Greenfield format)</p></td><td rowspan="2" valign="top"><p>20 MHz<sup>*)</sup>, 40<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup></p></td></tr><tr class="oddrow"><td valign="top"><p><b>MIMO:</b></p><p>depends on the MCS index</p></td></tr><tr class="evenrow"><td rowspan="2" valign="top"><p>IEEE 802.11ax</p></td><td rowspan="2" valign="top"><p>BPSK, QPSK, 16QAM, 64QAM, 256QAM, 1024QAM</p></td><td valign="top"><p>HE SU</p><p>HE MU</p><p>HE Trigger-based</p></td><td valign="top"><p>20 MHz<sup>*)</sup>, 40<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup>, 80<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup>, 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz<sup>*)</sup></p></td></tr><tr class="oddrow"><td valign="top"><p>HE Ext Range SU</p></td><td valign="top"><p>20 MHz<sup>*)</sup></p></td></tr></tbody><tfoot><tr class="oddrow"><th class="tfoot" colspan="4" valign="top"><p><sup>*)</sup>: requires R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW bandwidth extension option, see <a class="xref" href="ff6b1e95dc884c8e.htm#ID_83ba003dc18363970a00206a0025f35a-8e04a654c18363970a00206a018bc2d1-en-US">"Sample Rate and Maximum Usable I/Q Bandwidth for RF Input"</a></p></th></tr></tfoot></table></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

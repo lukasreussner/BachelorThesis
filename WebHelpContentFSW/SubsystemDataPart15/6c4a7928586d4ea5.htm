@@ -1,0 +1,60 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Measurement Basics|Channel Detection and Channel Types" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>BTS Channel Types</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_44311bbefa7f4fe70a710a3100076975-b7f661756d7580e80a00206a010113c9-en-US;ID_d7618e42fa331d850a710a31015e0d38-b7f661756d7580e80a00206a010113c9-en-US;ID_090deeecae1111e08109862fcfe3ecf6-b7f661756d7580e80a00206a010113c9-en-US;ID_73142a79fa7f4c4e0a710a3100637448-b7f661756d7580e80a00206a010113c9-en-US;ID_cb84d8eda18387aa0a00206a0112b59f-b7f661756d7580e80a00206a010113c9-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="2555a026cc2a4d0c.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="ac63e917acc146b1.htm">Channel Detection and Channel Types</a> &gt; <span class="chm-breadcrumb">BTS Channel Types</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor244">
+</a><div class="chm-chaptertitle">BTS Channel Types</div><p>The CDMA2000 standard defines various BTS channel types. Some special channels are mandatory and must be contained in the signal, as they have control or synchronization functions. Thus, these channels always occupy a specific channel number and use a specific symbol rate by which they can be identified.</p><div class="block"><div class="subtitle"><a name="ID_d7618e42fa331d850a710a31015e0d38-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Special channels</div></div><a name="kanchor245">
+</a><a name="kanchor246">
+</a><a name="kanchor247">
+</a><a name="kanchor248">
+</a><a name="kanchor249">
+</a><a name="kanchor250">
+</a><a name="kanchor251">
+</a><a name="kanchor252">
+</a><a name="kanchor253">
+</a><a name="kanchor254">
+</a><a name="kanchor255">
+</a><a name="kanchor256">
+</a><a name="kanchor257">
+</a><p>The CDMA2000 BTS application expects at least the Pilot Channel (F-PICH) or the Transmit Diversity Pilot CHannel (F-TDPICH) for the Code Domain Power measurements.</p><p>The following channels are detected automatically during automatic channel detection:</p><div class="block"><a name="ID_090deeecae1111e08109862fcfe3ecf6-b7f661756d7580e80a00206a010113c9-en-US">
+</a><a name="kanchor258">
+</a><a name="kanchor259">
+</a><span class="table-caption">Common CDMA2000 BTS channels and their usage</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Channel type</p></th><th valign="top"><p>Ch.no. / SF</p></th><th valign="top"><p>Modulation</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>F-PICH</p></td><td valign="top"><p>0.64</p></td><td valign="top"><p>BPSK</p></td><td valign="top"><p>Pilot channel</p></td></tr><tr class="evenrow"><td valign="top"><p>F-PCH</p></td><td valign="top"><p>1.64</p></td><td valign="top"><p>BPSK</p></td><td valign="top"><p>Paging channel</p></td></tr><tr class="oddrow"><td valign="top"><p>F-TDPICH</p></td><td valign="top"><p>16.128</p></td><td valign="top"><p>BPSK</p></td><td valign="top"><p>Transmit Diversity Pilot CHannel</p></td></tr><tr class="evenrow"><td valign="top"><p>F-SYNC </p></td><td valign="top"><p>32.64</p></td><td valign="top"><p>BPSK</p></td><td valign="top"><p>Synchronization channel</p></td></tr><tr class="oddrow"><td valign="top"><p>F-CHAN</p></td><td valign="top"> </td><td valign="top"><p>BPSK (RC 1+2)</p><p>QPSK (RC 3-5)</p></td><td valign="top"><p>Active data channel</p></td></tr><tr class="evenrow"><td valign="top"><p>INACTIVE </p></td><td valign="top"> </td><td valign="top"><p>-</p></td><td valign="top"><p>Inactive channel</p></td></tr><tr class="oddrow"><td valign="top"><p>F-PDCCH</p></td><td valign="top"> </td><td valign="top"><p>QPSK</p></td><td valign="top"><p>Packet Data Control CHannel</p></td></tr><tr class="evenrow"><td valign="top"><p>F-PDCH</p></td><td valign="top"><p>0.32</p></td><td valign="top"><p>QPSK, 8PSK, or 16-QAM</p></td><td valign="top"><p>Packet Data CHannel</p></td></tr></tbody></table></div><p>In addition, the following channel types can be defined in a predefined channel table for the CDMA2000 BTS application.</p><div class="block"><a name="ID_73142a79fa7f4c4e0a710a3100637448-b7f661756d7580e80a00206a010113c9-en-US">
+</a><a name="kanchor260">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Channel type</p></th><th valign="top"><p>Ch.no. / SF</p></th><th valign="top"><p>Description</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>F-APICH</p></td><td valign="top"><p>BPSK</p></td><td valign="top"><p>Auxiliary Pilot CHannel</p></td></tr><tr class="evenrow"><td valign="top"><p>F-ATDPICH</p></td><td valign="top"><p>BPSK</p></td><td valign="top"><p>Auxiliary Transmit Diversity Pilot CHannel</p></td></tr><tr class="oddrow"><td valign="top"><p>F-BCH</p></td><td valign="top"><p>QPSK</p></td><td valign="top"><p>Broadcast CHannel</p></td></tr><tr class="evenrow"><td valign="top"><p>F-CACH</p></td><td valign="top"><p>QPSK</p></td><td valign="top"><p>Common Assignment Channel</p></td></tr><tr class="oddrow"><td valign="top"><p>F-CCCH</p></td><td valign="top"><p>QPSK</p></td><td valign="top"><p>Common Control CHannel</p></td></tr><tr class="evenrow"><td valign="top"><p>F-CPCCH</p></td><td valign="top"><p>QPSK</p></td><td valign="top"><p>Common Power Control CHannel</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_cb84d8eda18387aa0a00206a0112b59f-b7f661756d7580e80a00206a010113c9-en-US">
+</a>Channel table definition for transmit diversity</div><a name="kanchor261">
+</a><a name="kanchor262">
+</a><a name="kanchor263">
+</a><a name="kanchor264">
+</a><a name="kanchor265">
+</a><a name="kanchor266">
+</a><p>In a measurement scenario with two antennas (transmit diversity), the following conditions apply to the channel table definition:</p><div class="block"><ul class="list"><li value="1"><b>Antenna 1</b> is used for transmission:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The pilot channel <b>F-PICH must</b> be included.</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The pilot channel of antenna 2 <b>F-TDPICH must not</b> be included.</td></tr></table></li><li value="2"><b>Antenna 2</b> is used for transmission:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The pilot channel of antenna 2 <b>F-TDPICH must</b> be included.</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The pilot channel <b>F-PICH must not</b> be included.</td></tr></table></li><li value="3"><b>Both antennas</b> are used for transmission:<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The pilot channel <b>F-PICH must</b> be included.</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">The pilot channel of antenna 2 <b>F-TDPICH must</b> be included.</td></tr></table></li></ul></div></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

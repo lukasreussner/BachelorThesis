@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Pulse Measurements (R&amp;S FSW-K6/6S)|Annex" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k6.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Effects of Large Gauss Filters</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_87eff3d4d61a7eff0a00206a008cf098-140c04f4d61a7eff0a00206a010794ab-en-US;ID_3af5a437d6e93a730a00206a0009652a-140c04f4d61a7eff0a00206a010794ab-en-US;ID_0a66cef4d6e93a730a00206a00c56889-140c04f4d61a7eff0a00206a010794ab-en-US;ID_4ede1f06d6e93a730a00206a00522afa-140c04f4d61a7eff0a00206a010794ab-en-US;ID_31514de0d6e93a730a00206a00aa046f-140c04f4d61a7eff0a00206a010794ab-en-US;ID_50c626d7d6e93a730a00206a0067ca41-140c04f4d61a7eff0a00206a010794ab-en-US;ID_86f9f2edd6e93a730a00206a000fa5ed-140c04f4d61a7eff0a00206a010794ab-en-US;ID_b76a9f96ec0c18e30a001ae72883f0ed-140c04f4d61a7eff0a00206a010794ab-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Pulse Measurements (R&amp;S FSW-K6/6S)</a> &gt; <a class="chm-breadcrumb" href="d480404e79185.htm">Annex</a> &gt; <span class="chm-breadcrumb">Effects of Large Gauss Filters</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1000">
+</a><a name="kanchor1001">
+</a><div class="chm-chaptertitle">Effects of Large Gauss Filters</div><p>As an alternative to the nearly rectangular "flat" measurement filters, the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW also provides Gaussian filters. Gaussian filters have an optimized settling behavior, which avoids overshoot distortions in time domain data.</p><p>However, for Gaussian filters whose -3dB bandwidth is large compared to the maximum I/Q bandwidth, the ideal Gaussian filter shape would exceed the maximum I/Q bandwidth at its outer edges. Thus, the actual filter only follows the ideal Gaussian filter shape in the inner range of the set I/Q bandwidth. At a certain frequency offset it must deviate from the ideal Gauss filter and drop off faster.</p><div class="block"><div class="subtitle"><a name="ID_3af5a437d6e93a730a00206a0009652a-140c04f4d61a7eff0a00206a010794ab-en-US">
+</a>Gaussian filters with large -3dB bandwidths (&lt;10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz)</div></div><p>For <b>filter bandwidths of up to 10 MHz</b> a sufficiently high attenuation occurs before the edge of the I/Q bandwidth range is reached (max. 80 MHz without the active bandwidth extension options R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320/-B512/). These filters are truly Gaussian shaped.</p><p>Without the bandwidth extension options R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320/-B512/ being active, filters with <b>-3dB bandwidths larger than 10 MHz</b> can follow the ideal filter shape only in the range from approximately <b>-25 MHz to +25 MHz</b>.</p><div class="block" id="ID_0a66cef4d6e93a730a00206a00c56889-140c04f4d61a7eff0a00206a010794ab-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga8e32954d6e435830a00206a001eae9d_2_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><a name="ID_4ede1f06d6e93a730a00206a00522afa-140c04f4d61a7eff0a00206a010794ab-en-US">
+</a><span class="table-caption">Gauss filters with large -3<span style="font-family: Arial Unicode MS"> </span>dB bandwidths</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>-3 dB BW</p></th><th valign="top"><p>Max. freq. with Gaussian shape</p></th><th valign="top"><p>Attenuation at max. freq.</p></th><th valign="top"><p>Attenuation at I/Q range edge (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">±</span>40 MHz)</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>40 MHz</p></td><td valign="top"><p>+/-24 MHz</p></td><td valign="top"><p>4 dB</p></td><td valign="top"><p>&gt; 60 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>28 MHz</p></td><td valign="top"><p>+/-22 MHz</p></td><td valign="top"><p>7 dB</p></td><td valign="top"><p>&gt; 65 dB</p></td></tr><tr class="oddrow"><td valign="top"><p>18 MHz</p></td><td valign="top"><p>+/-28 MHz</p></td><td valign="top"><p>29 dB</p></td><td valign="top"><p>&gt; 100 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>10 MHz</p></td><td valign="top"><p>+/-25 MHz</p></td><td valign="top"><p>75 dB</p></td><td valign="top"><p>&gt; 100 dB</p></td></tr></tbody></table></div><div class="block"><div class="subtitle"><a name="ID_31514de0d6e93a730a00206a00aa046f-140c04f4d61a7eff0a00206a010794ab-en-US">
+</a>Gauss filters with larger -3dB bandwidths (with active R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320/-B512/)</div></div><p>With the bandwidth extension option <b>R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B160/-B320/-B512/ being active</b>, all Gauss filters can follow the ideal filter shape in the range from <b>approximately -80 MHz to +80 MHz</b>. Thus, the deviation from the Gauss filter only has an effect for <b>filter bandwidths &gt; 40 MHz</b>.</p><div class="block" id="ID_50c626d7d6e93a730a00206a0067ca41-140c04f4d61a7eff0a00206a010794ab-en-US"><div class="graphic"><img border="0" src="Resources/Images/imga256347bd6e463e50a00206a0051f4a7_2_--_--_PNG96.png" alt="" title=""/></div></div><div class="block"><a name="ID_86f9f2edd6e93a730a00206a000fa5ed-140c04f4d61a7eff0a00206a010794ab-en-US">
+</a><span class="table-caption">Gauss filters with large bandwidths (with R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW-B160)</span><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>-3 dB BW</p></th><th valign="top"><p>Max. freq. with Gaussian shape</p></th><th valign="top"><p>Attenuation at max. freq.</p></th><th valign="top"><p>Attenuation at I/Q range edge (<span style="font-family: Arial Unicode MS; font-size: 10.5pt">±</span>100 MHz)</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>160 MHz</p></td><td valign="top"><p>+/-80 MHz</p></td><td valign="top"><p>3 dB</p></td><td valign="top"><p>&gt; 83 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>100 MHz</p></td><td valign="top"><p>+/-80 MHz</p></td><td valign="top"><p>8 dB</p></td><td valign="top"><p>&gt; 88 dB</p></td></tr><tr class="oddrow"><td valign="top"><p>80 MHz</p></td><td valign="top"><p>+/-80 MHz</p></td><td valign="top"><p>12 dB</p></td><td valign="top"><p>&gt; 92 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>50 MHz</p></td><td valign="top"><p>+/-80 MHz</p></td><td valign="top"><p>31 dB</p></td><td valign="top"><p>&gt; 100 dB</p></td></tr><tr class="oddrow"><td valign="top"><p>40 MHz</p></td><td valign="top"><p>+/-80 MHz</p></td><td valign="top"><p>48 dB</p></td><td valign="top"><p>&gt; 100 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>28 MHz</p></td><td valign="top"><p>+/-80 MHz</p></td><td valign="top"><p>98 dB</p></td><td valign="top"><p>&gt; 100 dB</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_b76a9f96ec0c18e30a001ae72883f0ed-140c04f4d61a7eff0a00206a010794ab-en-US">
+</a>Segmented capture, Gauss filters, and R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW-B320</div><p>Gauss filters with a 3<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>dB bandwidth of 50<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz and above use more than 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz of I/Q bandwidth if a R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B320 option is installed. During segmented capture operation, these filters are limited to 160 MHz of I/Q bandwidth, which results in increased system rise time (up to an additional 3<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>ns) compared to the non-segmented measurement with R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B320.</p></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

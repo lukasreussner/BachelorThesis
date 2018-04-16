@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Remote Control Commands for Noise Figure Measurements|Working with Limit Lines" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Defining Horizontal Data Points</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4bd67485d55ec8f80a00206a0150e28b-cadf08f9d4f23a250a00206a0057d58d-en-US;ID_4fa8604fd55ec8f80a00206a00f1da60-cadf08f9d4f23a250a00206a0057d58d-en-US;ID_7d073291d55ec8f80a00206a0127f989-cadf08f9d4f23a250a00206a0057d58d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="8df071f8ae8c45f0.htm">Remote Control Commands for Noise Figure Measurements</a> &gt; <a class="chm-breadcrumb" href="aaefa85323974b5f.htm">Working with Limit Lines</a> &gt; <span class="chm-breadcrumb">Defining Horizontal Data Points</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Defining Horizontal Data Points</div><p>Note that the number of data points on the horizontal axis should be the same as the number of data points on the vertical axis. Otherwise the limit line may take on an unintended shape.</p><div class="block"><span class="bold"><a name="ID_4fa8604fd55ec8f80a00206a00f1da60-cadf08f9d4f23a250a00206a0057d58d-en-US">
+</a>Example: Number of vertical data points &lt; number of horizontal data points</span><p><span class="command">CALC:LIM:CONT 100MHZ,200MHZ,300MHZ,400MHZ,500MHZ</span></p><p><span class="command">CALC:LIM:UPP 0,5,0</span></p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt">⇒</span> the application dumps 400 and 500<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p></div><div class="block"><span class="bold"><a name="ID_7d073291d55ec8f80a00206a0127f989-cadf08f9d4f23a250a00206a0057d58d-en-US">
+</a>Example: Number of vertical data points &gt; number of horizontal data points</span><p><span class="command">CALC:LIM:CONT 100MHZ,200MHZ,300MHZ,400MHZ,500MHZ</span></p><p><span class="command">CALC:LIM:UPP 0,5,0,5,0,5,0</span></p><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt">⇒</span> the application adds new horizontal data points (500.00000100<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz and 500.00000200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz).</p></div>
+						<div class="chapter_toc"><div class="rc_toc_title">List of Commands</div><a href="6841369ccfb641df.htm#ID_2756d743721e21ae0a00206a01b8efa9-45e74152e71c6f3b0a00206a0040c0cd-en-US" class="title_toc">CALCulate&lt;n&gt;:LIMit&lt;li&gt;:CONTrol[:DATA]</a><br/><a href="4b856bfec2724600.htm#ID_672206694b4afa9d0a00206a00f1adf4-ad01ce472b22280e0a00206a0005b0ec-en-US" class="title_toc">CALCulate&lt;n&gt;:LIMit&lt;li&gt;:CONTrol:SHIFt</a><br/></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

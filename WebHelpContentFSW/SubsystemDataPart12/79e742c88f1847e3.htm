@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Troubleshooting the Measurement|Frequently Asked Questions|Issues with Numeric Results" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Problem: The EVM trace looks okay, but the EVM in the result summary is significantly different</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_aa8770f45e1186340a00206a01e70880-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;ID_92d98a5d5e1186340a00206a01c11691-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;ID_412232c25e1186340a00206a01b0aa4a-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;ID_160b904c5e1186340a00206a01a8d9fb-ed7dc184c0b6eb110a001ae7212dc0bc-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="1c0026aadac1410a.htm">Troubleshooting the Measurement</a> &gt; <a class="chm-breadcrumb" href="d012716047bc4546.htm">Frequently Asked Questions</a> &gt; <a class="chm-breadcrumb" href="30b4cd43d59c445b.htm">Issues with Numeric Results</a> &gt; <span class="chm-breadcrumb">Problem: The EVM trace looks okay, but the EVM in the result summary is significantly different</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="function_heading"><a name="ID_aa8770f45e1186340a00206a01e70880-ed7dc184c0b6eb110a001ae7212dc0bc-en-US">
+</a>Problem: The EVM trace looks okay, but the EVM in the result summary is significantly different</div><div class="block"><div class="listintro-in-compact-list">Solution:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Make sure that the position of the "Evaluation Lines" is reasonable. The Result Summary only evaluates sample instants that are within the evaluation lines. Hence, in the case the "Result Range" covers the burst ramps, it is important to adjust the "Evaluation Range" appropriately.<div class="block" id="ID_92d98a5d5e1186340a00206a01c11691-ed7dc184c0b6eb110a001ae7212dc0bc-en-US"><div class="graphic"><img border="0" src="Resources/Images/imgf1ff53af5e07e82f0a00206a00d2ed56_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Problem: EVM in result summary does not correspond with trace display</div></div><div class="block" id="ID_412232c25e1186340a00206a01b0aa4a-ed7dc184c0b6eb110a001ae7212dc0bc-en-US"><div class="graphic"><img border="0" src="Resources/Images/img0c7a74345e0803670a00206a0130fb73_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Solution: Result Summary with correct evaluation range setting</div></div></li><li style="margin-bottom:0; padding-bottom:0;" value="2">Make sure that the same samples are evaluated. By default, the EVM trace displays all sample instants, e.g. if the sample rate is 4, the EVM trace shows 4 samples per symbol. The Result Summary does not automatically evaluate all sample instants. E.g. for a PSK modulation, by default only symbol instants contribute to the EVM result.<div class="block" id="ID_160b904c5e1186340a00206a01a8d9fb-ed7dc184c0b6eb110a001ae7212dc0bc-en-US"><div class="graphic"><img border="0" src="Resources/Images/img6fcdc6475e0722db0a00206a01255941_1_--_--_PNG96Small.png" alt="" title=""/></div></div></li></ul></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

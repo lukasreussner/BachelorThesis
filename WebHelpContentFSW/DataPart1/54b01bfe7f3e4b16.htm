@@ -1,0 +1,64 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Measurements and Results|Channel Power and Adjacent-Channel Power (ACLR) Measurement|MSR ACLR Configuration|General MSR ACLR Measurement Settings|Standard" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		User Standards
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerUserStdMenu">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerUserStdManage">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerUserStdManageDrive">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerUserStdManagePath">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerUserStdManageName">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerUserStdManageSave">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerUserStdManageDelete">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdMeasChannelPowerUserStdManageConfirm">
+</meta>
+        <meta name="topic-id" value="232">
+</meta>
+        <meta name="topic-id" value="233">
+</meta>
+        <meta name="topic-id" value="234">
+</meta>
+        <meta name="topic-id" value="235">
+</meta>
+        <meta name="topic-id" value="236">
+</meta>
+        <meta name="topic-id" value="237">
+</meta>
+        <meta name="topic-id" value="238">
+</meta>
+        <meta name="topic-id" value="239">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_cac3dba0096b11e2917b8d710b70ccda-4a41789b0cf313ad0a00201900c2f268-en-US;ID_cac3dba6096b11e2917b8d710b70ccda-4a41789b0cf313ad0a00201900c2f268-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="e411382c530e4663.htm">Measurements and Results</a> &gt; <a class="chm-breadcrumb" href="8b0a7666c619479a.htm">Channel Power and Adjacent-Channel Power (ACLR) Measurement</a> &gt; <a class="chm-breadcrumb" href="983910f48b5c4015.htm">Channel Power Configuration</a> &gt; <a class="chm-breadcrumb" href="afdc7529544e49ae.htm">General CP/ACLR Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="4afc0989c7244e3a.htm">Standard</a> &gt; <span class="chm-breadcrumb">User Standards</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor512">
+</a><a name="kanchor513">
+</a><a name="kanchor514">
+</a><div class="function_heading"><a name="ID_cac3dba0096b11e2917b8d710b70ccda-4a41789b0cf313ad0a00201900c2f268-en-US">
+</a>User Standards</div><p><b>Access</b>: "CP / ACLR Config" &gt; "General Settings" tab &gt; "Manage User Standards"</p><p>In addition to the predefined standards, you can save your own standards with your specific measurement settings in an XML file so you can use them again later. User-defined standards are stored on the instrument in the <span class="filename">C:\Program Files (x86)\Rohde-Schwarz\FSW\&lt;version&gt;\acp_std</span> directory.</p><p>A sample file is provided for an MSR ACLR measurement (<span class="filename">MSR_ACLRExample.xml</span>). It sets up the measurement for the MSR signal generator waveform described in the file <span class="filename">C:\R_S\INSTR\USER\waveform\MSRA_GSM_WCDMA_LTE_GSM.wv</span>.</p><p>Note that ACLR user standards are not supported for Fast ACLR and multicarrier ACLR measurements.</p><p><b><a name="ID_cac3dba6096b11e2917b8d710b70ccda-4a41789b0cf313ad0a00201900c2f268-en-US">
+</a>Note:</b> User standards created on an analyzer of the R&amp;S FSP family are compatible to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. User standards created on an R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, however, are not necessarily compatible to the analyzers of the R&amp;S FSP family and may not work there.<br/></p><div class="block"><div class="listintro-in-compact-list">The following parameter definitions are saved in a user-defined standard:</div><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Number of adjacent channels</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Channel bandwidth of transmission (Tx), adjacent (Adj) and alternate (Alt) channels</li><li style="margin-bottom:0; padding-bottom:0;" value="3">Channel spacings</li><li style="margin-bottom:0; padding-bottom:0;" value="4">Weighting filters</li><li style="margin-bottom:0; padding-bottom:0;" value="5">Resolution bandwidth</li><li style="margin-bottom:0; padding-bottom:0;" value="6">Video bandwidth</li><li style="margin-bottom:0; padding-bottom:0;" value="7">Detector</li><li style="margin-bottom:0; padding-bottom:0;" value="8">ACLR limits and their state</li><li style="margin-bottom:0; padding-bottom:0;" value="9">"Sweep Time" and "Sweep Time" coupling</li><li style="margin-bottom:0; padding-bottom:0;" value="10">Trace and power mode</li><li style="margin-bottom:0; padding-bottom:0;" value="11">(MSR only: sub block and gap channel definition)</li></ul></div><p>Save the current measurement settings as a user-defined standard, load a stored measurement configuration, or delete an existing configuration file.</p><p>For details see <a class="xref" href="9baf46a223a546dc.htm#ID_49b03299d565c87d0a710a3100c4750f-afab76cfd7349b540a00206a00bfaa09-en-US">"How to Manage User-Defined Configurations"</a>.</p>Remote command: <div class="rcclist_right"><p>To query all available standards:</p><p><a class="xref" href="902c4579becc45b7.htm#ID_62da8635aeb513340a00206a0048db94-a4e737d96782c6870a00206a01392249-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>POWer:</nobr>​<nobr>STANdard:</nobr>​<nobr>CATalog?</nobr></a></p><p>To load a standard:</p><p><a class="xref" href="447b16daf70342d1.htm#shiv_6a_remote_commands_3005-7effd1b667820ef00a00206a0094e7ff-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>POWer:</nobr>​<nobr>PRESet</nobr></a></p><p>To save a standard:</p><p><a class="xref" href="28345e5823354ce1.htm#ID_c10e01bdaec1a2eb0a00206a009f2d78-991d922e678363430a00206a004df8b7-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>POWer:</nobr>​<nobr>STANdard:</nobr>​<nobr>SAVE</nobr></a></p><p>To delete a standard:</p><p><a class="xref" href="77713635fb6d419d.htm#ID_c4b86eceaebc8aec0a00206a01475f49-7ccabc8867830a370a00206a0193c3a4-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CALCulate&lt;n&gt;:</nobr>​<nobr>MARKer&lt;m&gt;:</nobr>​<nobr>FUNCtion:</nobr>​<nobr>POWer:</nobr>​<nobr>STANdard:</nobr>​<nobr>DELete</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

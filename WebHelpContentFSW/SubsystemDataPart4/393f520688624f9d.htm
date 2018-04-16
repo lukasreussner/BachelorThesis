@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="GSM application (R&amp;S FSW-K10)|Basics on GSM Measurements|Definition of the Symbol Period" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k10.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>8PSK, 16QAM, 32QAM, AQPSK Modulation (Normal Symbol Rate)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a86ada9cc1f42b150a710a310122ab39-b1f487377d4432d90a002019013b147f-en-US;ID_9c025475c15af78b0a00206a01344bf3-b1f487377d4432d90a002019013b147f-en-US;ID_df18f29bc1f42af50a710a31000a54d6-b1f487377d4432d90a002019013b147f-en-US;ID_585bc4dac1f42af50a710a31010e6505-b1f487377d4432d90a002019013b147f-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">GSM application (R&amp;S FSW-K10)</a> &gt; <a class="chm-breadcrumb" href="639d9fcc151e43b9.htm">Basics on GSM Measurements</a> &gt; <a class="chm-breadcrumb" href="bfbf0ef5eaed40de.htm">Definition of the Symbol Period</a> &gt; <span class="chm-breadcrumb">8PSK, 16QAM, 32QAM, AQPSK Modulation (Normal Symbol Rate)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor238">
+</a><a name="kanchor239">
+</a><a name="kanchor240">
+</a><a name="kanchor241">
+</a><a name="kanchor242">
+</a><a name="kanchor243">
+</a><a name="kanchor244">
+</a><a name="kanchor245">
+</a><a name="kanchor246">
+</a><div class="chm-chaptertitle">8PSK, 16QAM, 32QAM, AQPSK Modulation (Normal Symbol Rate)</div><p>The EDGE transmit pulse is defined in the standard document "3GPP TS 45.004" as a linearized GMSK pulse, as illustrated at the top of <a class="xref" href="#ID_df18f29bc1f42af50a710a31000a54d6-b1f487377d4432d90a002019013b147f-en-US">Figure "EDGE transmit pulse (top) and the first transmitted symbol (bottom)"</a>. Note that according to the definition in the standard, the center of the pulse occurs at 2.5 T, where T is the normal symbol period (NSP). The baseband signal due to a sequence of symbols {<img border="0" src="Resources/Images/img146925fdc1ed81c50a00206a01b0321f_1_--_--_PNG96.png" alt="" title="">
+</img>} is defined in the standard as:</p><div class="block" id="ID_9c025475c15af78b0a00206a01344bf3-b1f487377d4432d90a002019013b147f-en-US"><div class="graphic"><img border="0" src="Resources/Images/img2540aa034eab70fd0a00201900a31d65_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption">Baseband signal due to a sequence of symbols</div></div><p>where:</p><p><b>c<sub>0</sub>(t)</b>: the transmit pulse</p><p>Note that the standard 3GPP TS 45.004 specifies in chapter "3.5 Pulse shaping" for normal burst 8PSK, 16QAM and 32QAM:</p><p>"<em>The time reference t' = 0 is the start of the active part of the burst as shown in figure 3. This is also the start of the symbol period of symbol number 0 (containing the first tail bit) as defined in 3GPP TS 45.002.</em>"</p><p>For normal burst AQPSK, the standard 3GPP TS 45.004 specifies in chapter "6.5 Pulse shaping":</p><p>"<em>The time reference t' = 0 is the start of the active part of the burst as shown in figure 6. This is also the start of the symbol period of symbol number 0 (containing the first tail bit) as defined in 3GPP TS 45.002.</em>"</p><p>The transmitted pulse for the first tail symbol is illustrated in the lower part of <a class="xref" href="#ID_df18f29bc1f42af50a710a31000a54d6-b1f487377d4432d90a002019013b147f-en-US">Figure "EDGE transmit pulse (top) and the first transmitted symbol (bottom)"</a>, where it can be seen that the "decision instant" corresponding to the center of the transmit pulse occurs in the center of the first symbol period, i.e. at t'=0.5T.</p><div class="block" id="ID_df18f29bc1f42af50a710a31000a54d6-b1f487377d4432d90a002019013b147f-en-US"><div class="graphic"><img border="0" src="Resources/Images/img30864a5dc1a234310a00206a0180e57f_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">EDGE transmit pulse (top) and the first transmitted symbol (bottom)</div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>The description above also applies to the 16QAM and 32QAM modulations defined for EDGE Evolution, using the "normal" symbol rate.</p></td></tr></table></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

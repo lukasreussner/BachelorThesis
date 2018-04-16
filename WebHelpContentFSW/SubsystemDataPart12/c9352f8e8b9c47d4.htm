@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Measurement Basics|Signal Model, Estimation and Modulation Errors|PSK, QAM and MSK Modulation" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Estimation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_a0230e96d7e0e40f0a00206a00fc891a-184c8906411153460a00206a01532735-en-US;ID_b1aa2ac02f3203b00a00206a00a943d9-184c8906411153460a00206a01532735-en-US;ID_51b277c6d786bf860a00206a0096676d-184c8906411153460a00206a01532735-en-US;ID_73ef54425dee7e4e0a00206a00145a4a-184c8906411153460a00206a01532735-en-US;ID_477997295e62d8a40a001ae7349e8b6a-184c8906411153460a00206a01532735-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="ffbc9c5560604231.htm">Measurement Basics</a> &gt; <a class="chm-breadcrumb" href="a261ad0bf05c48c0.htm">Signal Model, Estimation and Modulation Errors</a> &gt; <a class="chm-breadcrumb" href="4d0f8ed856a84814.htm">PSK, QAM and MSK Modulation</a> &gt; <span class="chm-breadcrumb">Estimation</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor292">
+</a><a name="kanchor293">
+</a><a name="kanchor294">
+</a><a name="kanchor295">
+</a><div class="chm-chaptertitle">Estimation</div><p>The R&amp;S FSW VSA application includes two synchronization stages. The first stage has already been described in the context of the "Demodulation &amp; Symbol Decisions" block (see <a class="xref" href="c560cc22848342a0.htm#ID_21d7ce15d7d348950a00206a0071f0de-184c8906411153460a00206a01532735-en-US">"Demodulation and Symbol Decisions"</a>).</p><p>The second stage is realized within the "Synchronization" block. Here, the measurement signal is matched to the reference signal by minimizing the mean square of the error vector magnitude. This is done by selecting the optimum parameter vector <img border="0" src="Resources/Images/img57d0c0dad7e87db60a00206a0083b716_1_--_--_PNG96.png" alt="" title=""/>:</p><div class="block" id="ID_b1aa2ac02f3203b00a00206a00a943d9-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7899dcd32f316c040a00206a00bb5d84_1_--_--_PNG96.png" alt="" title=""/></div></div><p>The minimization takes place at the sample instants specified by the <a class="xref" href="0a552613c9684c67.htm#ID_83ba2ac6819f13120a00206a002792b9-98ce8ff6410963710a00206a00a7855c-en-US">"Estimation Points/Sym"</a> parameter, i.e.</p><div class="block" id="ID_51b277c6d786bf860a00206a0096676d-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img7134031dd78611840a00206a018e281e_1_--_--_PNG96.png" alt="" title=""/></div></div><p>With T<sub>E</sub>: the sampling period used for estimation</p><p>Then, the measurement signal is corrected with the determined parameter vector. Note that with a subset of the parameters, you can enable or disable correction (see <a class="xref" href="e7df23f27848458b.htm#ID_ae3adf13472f3d180a00206a01b6f462-98ce8ff6410963710a00206a00a7855c-en-US">"Demodulation - Compensation and Equalizer"</a>).</p><div class="block"><div class="subtitle"><a name="ID_73ef54425dee7e4e0a00206a00145a4a-184c8906411153460a00206a01532735-en-US">
+</a>Estimation ranges</div></div><a name="kanchor296">
+</a><p>The "estimation ranges" are determined internally according to the signal description:</p><div class="block"><ul class="list"><li value="1">For continuous signals, the estimation range corresponds to the entire result range, since it can then be assumed that the signal consists of valid modulated symbols at all time instants.</li><li value="2">For bursted signals, the estimation range corresponds to the overlapping area of the detected burst and the "Result Range". Furthermore, the Run-In/Run-Out ranges (see <a class="xref" href="f99d87147e364cfc.htm#ID_4ebc491b55d4160f0a720a2b0184de18-98ce8ff6410963710a00206a00a7855c-en-US">"Burst Settings"</a>) are explicitly excluded from the estimation range.</li></ul></div><p>In rare cases, the signal is specified as a "burst signal", but is so highly distorted that the burst search cannot detect a burst. In this case, the estimation range corresponds to the pattern. If an offset of the pattern relative to the burst start is specified, this range is also part of the estimation range.</p><div class="block" id="ID_477997295e62d8a40a001ae7349e8b6a-184c8906411153460a00206a01532735-en-US"><div class="graphic"><img border="0" src="Resources/Images/img0c0d3f055e61c12a0a001ae75a28195b_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Estimation range for a bursted signal with a pattern offset</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

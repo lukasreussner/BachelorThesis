@@ -1,0 +1,61 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Input, Output, and Frontend Settings|Amplitude Settings|Input Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Impedance
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eLTESkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdAmplitudeInputImpedance">
+</meta>
+        <meta name="topic-keyword" value="eRECSkIdAmplitudeImpedance">
+</meta>
+        <meta name="topic-id" value="486">
+</meta>
+        <meta name="topic-id" value="487">
+</meta>
+        <meta name="topic-id" value="488">
+</meta>
+        <meta name="topic-id" value="489">
+</meta>
+        <meta name="topic-id" value="490">
+</meta>
+        <meta name="topic-id" value="491">
+</meta>
+        <meta name="topic-id" value="492">
+</meta>
+        <meta name="topic-id" value="493">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d844b5a72301285f0a00206a00d10652-cf6f802e2301285f0a00206a00f62740-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="aede1128a4d04b47.htm">Input, Output, and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="f92041db9d21481c.htm">Amplitude Settings</a> &gt; <a class="chm-breadcrumb" href="0010256e5e734c36.htm">Input Settings</a> &gt; <span class="chm-breadcrumb">Impedance</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor204">
+</a><div class="function_heading"><a name="ID_d844b5a72301285f0a00206a00d10652-cf6f802e2301285f0a00206a00f62740-en-US">
+</a>Impedance</div><p>For some measurements, the reference impedance for the measured levels of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW can be set to 50<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> or 75<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>.</p><p>Select 75 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> if the 50 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> input impedance is transformed to a higher impedance using a 75 <span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> adapter of the RAZ type. (That corresponds to 25<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span> in series to the input impedance of the instrument.) The correction value in this case is 1.76 dB = 10<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>log (75<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>/50<span style="font-family: Arial Unicode MS; font-size: 10.5pt">Ω</span>).</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="c3a070bd19534621.htm#ID_00e764d1d3ec3cef0a001ae76ad70806-c76a660fd3ec3c140a001ae71c1b5b2f-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INPut&lt;ip&gt;:</nobr>​<nobr>IMPedance</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

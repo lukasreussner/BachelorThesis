@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Noise Figure Measurements (R&amp;S FSW-K30)|Remote Control Commands for Noise Figure Measurements|Configuring the Analyzer" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k30.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>[SENSe:]CONFigure:CORRection</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K30_1365-83233199a4d88fa20a00206a016f28ef-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Noise Figure Measurements (R&amp;S FSW-K30)</a> &gt; <a class="chm-breadcrumb" href="8df071f8ae8c45f0.htm">Remote Control Commands for Noise Figure Measurements</a> &gt; <a class="chm-breadcrumb" href="1e20233eb29d4de6.htm">Configuring the Analyzer</a> &gt; <span class="chm-breadcrumb">[SENSe:]CONFigure:CORRection</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="block"><div class="rc_block_without_border"><div class="rc_syntax_descr"><a name="shiv_FSV_K30_1365-83233199a4d88fa20a00206a016f28ef-en-US">
+</a><span class="bold">[SENSe:]CONFigure:CORRection</span><br/></div><div class="rcdescription"><p>This command configures the software to perform calibration measurements.</p><p>Using <a class="xref" href="1bed99d5b5ab4bd4.htm#ID_12648fa09f56982b0a00206a00bc6d42-76b5c4ec2a04a7110a00206a015229a7-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>INITiate&lt;n&gt;[:</nobr>​<nobr>IMMediate]</nobr></a> then initiates a calibration instead of the actual measurement, until you deliberately select one of the normal measurements again with one of the following commands.</p><div class="block"><ul class="list"><li value="1"><a class="xref" href="86e5d07832b64e8a.htm#ID_645ad9231acc11df95bd9b86b2cdde8d-ff636c65a4dfb11f0a00206a01b4111a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">[SENSe:]CONFigure:FREQuency:CONTinuous</a></li><li value="2"><a class="xref" href="81d9e901734c4ea9.htm#ID_645ad9231acc11df95bd9b86b2cdde8d-4d04eb51a502b01e0a00206a007c2d7b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">[SENSe:]CONFigure:FREQuency:SINGle</a></li><li value="3"><a class="xref" href="c533ff21f08643b9.htm#ID_645ad9231acc11df95bd9b86b2cdde8d-73f8260fa50461670a00206a006357fb-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">[SENSe:]CONFigure:LIST:CONTinuous</a></li><li value="4"><a class="xref" href="d418c1e1fd604b07.htm#ID_645ad9231acc11df95bd9b86b2cdde8d-9da6fa2da5049be00a00206a00a3326e-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">[SENSe:]CONFigure:LIST:SINGLe</a></li></ul></div><p>Note that calibration data is used only when the second stage correction mode has been turned on with <a class="xref" href="9a1893fe45084136.htm#shiv_FSV_K30_1848-64f3abdba5fb10e10a00206a0018fcbc-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;">[SENSe:]CORRection[:STATe]</a>.</p></div><table class="rc_table" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>//Turn on second stage correction</p><span class="commandline">CORR ON</span><br/><p>//Configure application to run calibration measurement</p><span class="commandline">CONF:CORR</span><br/><p>//Initiate calibration with synchronization to end of measurement</p><span class="commandline">INIT;*OPC</span><br/><p>//Return to normal measurement (single sweep list mode)</p><span class="commandline">CONF:LIST:SING</span><br/><p>//Initiate a calibrated measurement with synchronization to end of measurement</p><span class="commandline">INIT;*OPC</span><br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Example: </span></td><td class="rc_col_content_left" colspan="2"><p>See <a class="xref" href="1f9270e82c6a4a13.htm#ID_666581651ab2bd580a001ae70c355cce-66abef3c1ab2bd580a001ae7505a5477-en-US">"Programming Example: Measuring a Noise Figure"</a></p></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Usage: </span></td><td class="rc_col_content_left" colspan="2">Event<br/></td></tr><tr valign="top"><td class="rc_col_intro_150"><span class="bold">Manual operation: </span></td><td class="rc_col_content_left" colspan="2">See <a class="xref" href="5464b33ab7024079.htm#ID_4dc3f701fc42c6f70a710a92005a2045-3272b8d9fb94e2c40a00206a01b10d3a-en-US">"2nd Stage Correction"</a><br/>See <a class="xref" href="9e6396e8f2f542cb.htm#ID_d18b4b5a167943970a710a920175b87e-36a4c1151673f20d0a00206a0075dc31-en-US">"Calibrate"</a></td></tr></table></div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

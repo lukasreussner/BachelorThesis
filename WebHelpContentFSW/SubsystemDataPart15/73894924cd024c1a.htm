@@ -1,0 +1,93 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Remote Commands for CDMA2000 Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;|Code Domain Power" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Example: Retrieving the Code Domain Power (MS mode)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_dd9cfb20a6ac9b490a710a31017343c7-b629ba11a66108160a00206a00094b6d-en-US;ID_8d828beba6ac9acc0a710a31003d8738-b629ba11a66108160a00206a00094b6d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="50c310d0c42e48e5.htm">Remote Commands for CDMA2000 Measurements</a> &gt; <a class="chm-breadcrumb" href="8b60b2cf2d954990.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="9e9c2748812e496b.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <a class="chm-breadcrumb" href="2b9a6f556edf490c.htm">Code Domain Power</a> &gt; <span class="chm-breadcrumb">Measurement Example: Retrieving the Code Domain Power (MS mode)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Measurement Example: Retrieving the Code Domain Power (MS mode)</div><p>The example shows the results of the query for 2 channels with the following configuration:</p><div class="block"><a name="ID_8d828beba6ac9acc0a710a31003d8738-b629ba11a66108160a00206a00094b6d-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col><col>
+</col><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Chan. type</p></th><th valign="top"><p>Ch.no./SF</p></th><th valign="top"><p>Code class</p></th><th valign="top"><p>Mapping</p></th><th valign="top"><p>Power</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>PICH</p></td><td valign="top"><p>0.32</p></td><td valign="top"><p>5</p></td><td valign="top"><p>I</p></td><td valign="top"><p>-7.0 dB</p></td></tr><tr class="evenrow"><td valign="top"><p>CCCH</p></td><td valign="top"><p>2.8</p></td><td valign="top"><p>3</p></td><td valign="top"><p>Q</p></td><td valign="top"><p>-10:0 dB</p></td></tr></tbody></table></div><div class="verbatim"><pre class="verbatim_text">INST:SEL MC2K 
+//Activate cdma2000 MS, default is CDP relative in window 1 and
+//Result Summary in window 2
+//Mapping set to I
+INIT:CONT OFF 
+//Select single sweep
+CDDP:MAPP Q 
+//Select Q branch
+CDP:ORD HAD 
+//Set order to Hadamard
+INIT;*WAI 
+//Start measurement with synchronization
+TRAC? TRACE1 
+//Read out CDP relative/Hadamard/Q
+//Result:
+//5, 0,-52.3,3,      5, 1,-53.3,0, 
+//5, 2,-16.1,1,      5, 3,-55.3,0, 
+//         ....      5, 9,-58.2,0, 
+//5,10,-16.0,1,      5,11,-53.4,0, 
+//         ....      5,17,-49.0,0, 
+//5,18,-15.8,1,      5,19,-53.3,0,
+//         ....      5,25,-51.0,0,
+//5,26,-16.1,1,      5,27,-54.7,0
+         ....      5,31,-51.7,0
+//Code 0 is quasi-inactive since PICH is set to I
+//Channel 2.8 is distributed between the active codes
+//2.32, 10.32, 18.32 and 26.32
+//each with one quarter of the power: -10dB - 6dB = -16.0dB
+CDP:ORD BITR 
+//Set order to BitReverse
+TRAC? TRACE1 
+//Read out CDP relative/BitReverse/Q
+//Sorting is changed according to BitReverse.
+//Result:
+//5, 0,-52.3,3,      5,16,-57.3,0 
+//5, 8,-56.3.0,      ....
+//3, 2,-10.0,1,      5, 6,-55.3,0, 
+         ....      5,31,-51.7,0 
+//Code 0 is quasi-inactive since PICH is set to I
+//Channel 2.8 can now be read out directly with its total power
+CDP:OVER ON 
+//Activate Overview mode
+//CDP relative on window 1 I branch
+//CDP relative on window 2 Q branch
+TRAC? TRACE1 
+//Read out CDP relative of I branch
+//Result:
+//5, 0, -7.0,1,      5,16,-52.3,0 
+//5, 8,-57.1.0,      ....
+//5, 2,-49.0,3,      5,18,-49.0,3, 
+//5,10,-49.0,3,      5,26,-49.0,3 
+//5, 6,-55.3,0,      5, 6,-53.4,0,
+         ....      5,31,-51.7,0
+//PICH is active
+//Codes of channel 2.8 are quasi-inactive
+TRAC? TRACE2 
+//Read out CDP relative of Q branch
+//Result:
+//5, 0,-52.3,3,      6,16,-57.3,0
+//5, 8,-56.3.0,      ....
+//3, 2,-10.0,1,      6, 3,-55.3,0,
+         ....      5,31,-51.7,0
+</pre></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

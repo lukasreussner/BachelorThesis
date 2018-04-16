@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="DOCSIS measurements (R&amp;S FSW-K192/-K193)|Configuration|DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)|Result Configuration|Display Settings|Display Settings for Result Summary and Signal Content Detailed Tables" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k192.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Normalize CM Sample Clock Error Result (upstream only)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eDocsisSkIdSampleClockError_Normalization">
+</meta>
+        <meta name="topic-id" value="838">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_8d6985dc357811e78537ebf10bd64a61-f2ebd9c6ddad6fb70a001ae77c050122-en-US;ID_47d0aac2fc484e730a001ae706d53b8e-f2ebd9c6ddad6fb70a001ae77c050122-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">DOCSIS measurements (R&amp;S FSW-K192/-K193)</a> &gt; <a class="chm-breadcrumb" href="5b4f252914094929.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="dba292509b3b40cc.htm">DOCSIS 3.1 I/Q Measurement (Modulation Accuracy)</a> &gt; <a class="chm-breadcrumb" href="b4f87dbb278b4001.htm">Result Configuration</a> &gt; <a class="chm-breadcrumb" href="6fab84d7abb44bd7.htm">Display Settings</a> &gt; <a class="chm-breadcrumb" href="d1d21bfd64ef4dcb.htm">Display Settings for Result Summary and Signal Content Detailed Tables</a> &gt; <span class="chm-breadcrumb">Normalize CM Sample Clock Error Result (upstream only)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="function_heading"><a name="ID_8d6985dc357811e78537ebf10bd64a61-f2ebd9c6ddad6fb70a001ae77c050122-en-US">
+</a><span style="font-weight: bold">Normalize CM Sample Clock Error Result</span> (upstream only)</div><p>If enabled, the sample clock error (<span class="command">CERR</span>) of the cable modem is normalized with reference to the sample clock value of the CMTS.</p><p>You must provide the reference value of the CMTS (see <a class="xref" href="db66cc25631d45be.htm#ID_2b8e43d6f25552ab0a001ae72b029352-f2ebd9c6ddad6fb70a001ae77c050122-en-US">"CMTS Reference Sample Clock (Error) (upstream only)"</a>) using one of the following methods:</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1">Provide the actual sample clock value (in MHz) used by the CMTS.<br/>The sample clock error of the CM is then determined using this reference value, rather than the 102.4<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz specified by the DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 standard.</li><li style="margin-bottom:0; padding-bottom:0;" value="2">Provide the known error of the CMTS sample clock in ppm.<br/><em>CERR (CMTS) = &lt;Actual_sample_clock_value&gt; - 102.4 MHz</em><br/>In this case, the error of the CMTS sample clock is deducted from the determined error of the CM.<br/><em>CERR (CM)<sub>norm</sub> = CERR (CM) - CERR (CMTS)</em></li></ul></div><p>The Result Summary indicates "Sample Clock Error Normalized".</p><p><b><a name="ID_47d0aac2fc484e730a001ae706d53b8e-f2ebd9c6ddad6fb70a001ae77c050122-en-US">
+</a>Note:</b> Currently, if normalization is enabled, the center frequency error result is not available.<br/></p><p>If disabled, the calculated sample clock error is determined with reference to the 102.4<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz specified by the DOCSIS<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>3.1 standard.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="b712332ec84346f8.htm#ID_6bf5e772fbfaa2a30a001ae75b8f02ff-a8beaf16fbfaa1b90a001ae76ad8fe4b-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>CONFigure:</nobr>​<nobr>US:</nobr>​<nobr>NORMalize:</nobr>​<nobr>CM:</nobr>​<nobr>CERRor:</nobr>​<nobr>STATe</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

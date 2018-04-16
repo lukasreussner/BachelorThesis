@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Analog Demodulation (R&amp;S FSW-K7)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k7.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Demodulation Bandwidth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K7_0107-c0c25bc977ad403d0a00206a000e6bd0-en-US;shiv_FSV_K7_0119-c0c25bc977ad403d0a00206a000e6bd0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Analog Demodulation (R&amp;S FSW-K7)</a> &gt; <a class="chm-breadcrumb" href="66df3de24cf348b2.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Demodulation Bandwidth</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Demodulation Bandwidth</div><a name="kanchor53">
+</a><a name="kanchor54">
+</a><a name="kanchor55">
+</a><a name="kanchor56">
+</a><a name="kanchor57">
+</a><p>The demodulation bandwidth determines the span of the signal that is demodulated. It is not the 3 dB bandwidth of the filter but the useful bandwidth which is distortion-free with regard to phase and amplitude.</p><p>Therefore the following formulas apply:</p><div class="block"><ul class="list"><li value="1">AM: demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≥</span> 2 x modulation frequency</li><li value="2">FM: demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≥</span> 2 x (frequency deviation + modulation frequency)</li><li value="3">PM: demodulation bandwidth <span style="font-family: arial; font-size: 10.5pt">≥</span> 2 x modulation frequency x (1 + phase deviation)</li></ul></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><a name="kanchor58">
+</a><a name="kanchor59">
+</a><p>If the center frequency of the analyzer is not set exactly to the signal frequency, the demodulation bandwidth must be increased by the carrier offset, in addition to the requirement described above. This also applies if FM or PM AC coupling has been selected.</p></td></tr></table></div></div><a name="kanchor60">
+</a><a name="kanchor61">
+</a><p>In general, the demodulation bandwidth should be as narrow as possible to improve the S/N ratio. The residual FM caused by noise floor and phase noise increases dramatically with the bandwidth, especially with FM.</p><p>For help on determining the adequate demodulation bandwidth see <a class="xref" href="586f9b2867ea4b9c.htm#ID_ab55c98c41ce11e1b1a3e24820807b80-a2dfa63cf055081a0a00206a00255455-en-US">"Determining the demodulation bandwidth"</a>.</p><p>A practical example is described in <a class="xref" href="afbe0b7a38164dba.htm#shiv_FSV_K73_0040-cb16e0f0eabd36cf0a00206a011bee14-en-US">"Measurement Example: Demodulating an FM Signal"</a>.</p>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

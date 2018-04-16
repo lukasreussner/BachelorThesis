@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="3G FDD Measurements (R&amp;S FSW-K72/K73)|Measurement Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k72_k73.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement 3: Measuring the Relative Code Domain Power</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K73_0167-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_9d5d83c63d785ee50a00206a00b97563-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_6d91f7bcb36b11e0bd55855fca7cc839-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_bd0048193d785ee50a00206a01c9d2a6-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_b3b29e15a26b13f10a00206a0001e769-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_dd01c0ffd20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_dd01c101d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_dd01c103d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_dd0347a5d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_dd0347a7d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_dd0347a9d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_dd0347abd20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_dd0347add20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_7603571a0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_7603571b0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_7603571d0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_7603571f0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_760357210ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_5b777ae9a26b14010a00206a019192c1-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_03c9384d4bc0c17d0a00206a0081004c-a91350ca3d56b27a0a00206a00d23b50-en-US;ID_4cfb07594ce4697d0a00206a00940530-a91350ca3d56b27a0a00206a00d23b50-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">3G FDD Measurements (R&amp;S FSW-K72/K73)</a> &gt; <a class="chm-breadcrumb" href="20152d16c0ce4865.htm">Measurement Examples</a> &gt; <span class="chm-breadcrumb">Measurement 3: Measuring the Relative Code Domain Power</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor646">
+</a><a name="kanchor647">
+</a><div class="chm-chaptertitle">Measurement 3: Measuring the Relative Code Domain Power</div><p>A code domain power measurement on one of the channel configurations is shown in the following. Basic parameters of CDP analysis are changed to demonstrate the effects of values that are not adapted to the input signal.</p><div class="block"><a name="ID_9d5d83c63d785ee50a00206a00b97563-a91350ca3d56b27a0a00206a00d23b50-en-US">
+</a><div class="procedure_title">Test setup</div><div><ol class="procedure"><li id="ID_6d91f7bcb36b11e0bd55855fca7cc839-a91350ca3d56b27a0a00206a00d23b50-en-US" value="1"><p>Connect the RF output of the R&amp;S SMW200A to the RF input of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW (coaxial cable with N connectors).</p></li><li id="ID_bd0048193d785ee50a00206a01c9d2a6-a91350ca3d56b27a0a00206a00d23b50-en-US" value="2"><p>Connect the reference input ([REF INPUT]) on the rear panel of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW to the reference output (REF) on the rear panel of R&amp;S SMW200A (coaxial cable with BNC connectors).</p></li></ol></div></div><div class="block"><a name="ID_b3b29e15a26b13f10a00206a0001e769-a91350ca3d56b27a0a00206a00d23b50-en-US">
+</a><div class="procedure_title">Settings on the R&amp;S SMW200A</div><div><ol class="procedure"><li id="ID_dd01c0ffd20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US" value="1"><p>PRESET</p></li><li id="ID_dd01c101d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US" value="2"><p>"FREQ" = <span class="input">2.1175 GHz</span></p></li><li id="ID_dd01c103d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US" value="3"><p>"LEVEL"= <span class="input">0 dBm</span></p></li><li id="ID_dd0347a5d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US" value="4"><p>"BASEBAND A &gt; CDMA Standards &gt; 3GPP FDD"</p></li><li id="ID_dd0347a7d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US" value="5"><p>"General" tab: "LINK DIRECTION &gt; DOWN/FORWARD"</p></li><li id="ID_dd0347a9d20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US" value="6"><p>"Base station" tab: "TEST MODELS &gt; Test_Model_1_16_channels"</p></li><li id="ID_dd0347abd20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US" value="7"><p>"Base station" tab: "Select Base station &gt; BS 1 &gt; ON"</p></li><li id="ID_dd0347add20011e4a766b43bc4c489ed-a91350ca3d56b27a0a00206a00d23b50-en-US" value="8"><p>"General" tab: "3GPP FDD &gt; STATE &gt; ON"</p></li></ol></div></div><div class="block"><a name="ID_7603571a0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US">
+</a><div class="procedure_title">Settings on the R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW</div><div><ol class="procedure"><li id="ID_7603571b0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="1"><p>PRESET</p></li><li id="ID_7603571d0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="2"><p>"MODE &gt; 3GPP FDD BTS"</p></li><li id="ID_7603571f0ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="3"><p>"AMPT &gt; Reference level"= <span class="input">10 dBm</span></p></li><li id="ID_760357210ec211e1abeeb949ca2a0dcc-a91350ca3d56b27a0a00206a00d23b50-en-US" value="4"><p>"FREQ &gt; Center frequency" = <span class="input">2.1175 GHz</span></p></li><li id="ID_5b777ae9a26b14010a00206a019192c1-a91350ca3d56b27a0a00206a00d23b50-en-US" value="5"><p>"AMPT &gt; Scale Config &gt; Auto Scale Once"</p></li></ol></div></div><div class="block"><div class="subtitle"><a name="ID_03c9384d4bc0c17d0a00206a0081004c-a91350ca3d56b27a0a00206a00d23b50-en-US">
+</a>Result</div></div><p>Window 1 shows the code domain power of the signal, on the Q branch.</p><p>Window 2 shows the result summary, i.e. the numeric results of the CDP measurement.</p><div class="block" id="ID_4cfb07594ce4697d0a00206a00940530-a91350ca3d56b27a0a00206a00d23b50-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8cf644254cd832e10a00206a00e5bede_1_--_--_PNG96Small.png" alt="" title=""/></div><div class="caption_figure">Measurement Example 3: Measuring the Relative Code Domain Power</div></div>
+						<div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="6b5f0f7f7f274cd3.htm" class="chapter_title_toc">Synchronizing the Reference Frequencies</a></li><li value="2"><a href="5d38ef688e354d4b.htm" class="chapter_title_toc">Behavior with Deviating Center Frequency</a></li><li value="3"><a href="7dbaeb85f7e441a5.htm" class="chapter_title_toc">Behavior with Incorrect Scrambling Code</a></li></ul></div>
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

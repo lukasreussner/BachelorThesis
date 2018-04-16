@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Analysis and Display Functions|Trace Configuration|Standard Traces|Basics on Setting up Traces" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>How Many Traces are Averaged - Sweep Count + Sweep Mode</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f657deb86689f9980a00206a01716125-b8fabff2e4f00abb0a001ae757edebd0-en-US;ID_66ecb3adef71862d0a710a3101fa37d2-b8fabff2e4f00abb0a001ae757edebd0-en-US;ID_da585df16689f9980a00206a01b9e8ce-b8fabff2e4f00abb0a001ae757edebd0-en-US;ID_598114382ddda0ee0a710a3100cb1594-b8fabff2e4f00abb0a001ae757edebd0-en-US;ID_6f8bd8572e3747f10a00206a0048d34c-b8fabff2e4f00abb0a001ae757edebd0-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="92331bd8057347c8.htm">Common Analysis and Display Functions</a> &gt; <a class="chm-breadcrumb" href="449dc0ce4ad74ae0.htm">Trace Configuration</a> &gt; <a class="chm-breadcrumb" href="d5a936460e4d4bf6.htm">Standard Traces</a> &gt; <a class="chm-breadcrumb" href="6c4dadf0708945cd.htm">Basics on Setting up Traces</a> &gt; <span class="chm-breadcrumb">How Many Traces are Averaged - Sweep Count + Sweep Mode</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor2193">
+</a><a name="kanchor2194">
+</a><a name="kanchor2195">
+</a><a name="kanchor2196">
+</a><a name="kanchor2197">
+</a><div class="chm-chaptertitle">How Many Traces are Averaged - Sweep Count + Sweep Mode</div><p>In "Average" trace mode, the sweep count and sweep mode determine how many traces are averaged. The more traces are averaged, the smoother the trace is likely to become.</p><p>The algorithm for averaging traces depends on the sweep mode and sweep count.</p><div class="block"><ul class="list"><li value="1"><b>sweep count = 0</b> (default)<table border="0" cellpadding="0" cellspacing="0" class="list2"><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">In <b>"Continuous"</b> sweep mode, a continuous average is calculated for 10 sweeps, according to the following formula:<div class="block" id="ID_66ecb3adef71862d0a710a3101fa37d2-b8fabff2e4f00abb0a001ae757edebd0-en-US"><div class="graphic"><img border="0" src="Resources/Images/img8b43a9be2dd5300a0a00206a00769a90_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Equation 1</div></div><br/>Due to the weighting between the current trace and the average trace, past values have practically no influence on the displayed trace after about ten sweeps. With this setting, signal noise is effectively reduced without need for restarting the averaging process after a change of the signal.</td></tr><tr><td valign="baseline" style="padding-top:3px; ; width: 13pt; border:0px solid #FFFFFF;"><span style="font-family: Arial Unicode MS; line-height: 8pt">–</span></td><td valign="top" style="padding-top:3px; ; border:0px solid #FFFFFF;">In <b>"Single"</b> sweep mode, the current trace is averaged with the previously stored averaged trace. No averaging is carried out for the first sweep but the measured value is stored in the trace memory. The next time a sweep is performed, the trace average is calculated according to the following formula:<div class="block" id="ID_da585df16689f9980a00206a01b9e8ce-b8fabff2e4f00abb0a001ae757edebd0-en-US"><div class="graphic"><img border="0" src="Resources/Images/img516c1bb0663be6500a00206a011f9bb0_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><br/>The averaged trace is then stored in the trace memory.</td></tr></table></li><li value="2"><b>sweep count = 1</b><br/>The currently measured trace is displayed and stored in the trace memory. No averaging is performed.</li><li value="3"><b>sweep count &gt; 1</b><br/>For both <b>"Single"</b> sweep mode and <b>"Continuous"</b> sweep mode, averaging takes place over the selected number of sweeps. In this case the displayed trace is determined during averaging according to the following formula:<div class="block" id="ID_598114382ddda0ee0a710a3100cb1594-b8fabff2e4f00abb0a001ae757edebd0-en-US"><div class="graphic"><img border="0" src="Resources/Images/img76955c952dd54b050a00206a01c9aa21_1_--_--_PNG96.png" alt="" title="">
+</img></div><div class="caption_figure">Equation 2</div></div><br/>Where n is the number of the current sweep (n = 2 ... Sweep Count).<br/>No averaging is carried out for the first sweep but the measured value is stored in the trace memory. With increasing n, the displayed trace is increasingly smoothed since there are more individual sweeps for averaging.<br/>After the selected number of sweeps, the average trace is saved in the trace memory. Until this number of sweeps is reached, a preliminary average is displayed. When the averaging length defined by the "Sweep Count" is attained, averaging is continued in continuous sweep mode or for "Continue Single Sweep" according to the following formula:<div class="block" id="ID_6f8bd8572e3747f10a00206a0048d34c-b8fabff2e4f00abb0a001ae757edebd0-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge5b638332dd56a060a00206a00436814_1_--_--_PNG96.png" alt="" title="">
+</img></div></div><br/>Where N is the sweep count</li></ul></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

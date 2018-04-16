@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="WLAN application (R&amp;S FSW-K91)|Measurement Basics" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k91.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Signal Processing for Multicarrier Measurements (IEEE 802.11a, g (OFDM), j, p)</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="shiv_FSV_K91n_0078-a152f5e2a64dafbf0a002019017fdb4d-en-US;shiv_FSV_K91n_0088-a152f5e2a64dafbf0a002019017fdb4d-en-US;shiv_FSV_K91n_0089-a152f5e2a64dafbf0a002019017fdb4d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">WLAN application (R&amp;S FSW-K91)</a> &gt; <a class="chm-breadcrumb" href="f528bd9e34654c0e.htm">Measurement Basics</a> &gt; <span class="chm-breadcrumb">Signal Processing for Multicarrier Measurements (IEEE 802.11a, g (OFDM), j, p)</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><div class="chm-chaptertitle">Signal Processing for Multicarrier Measurements (IEEE 802.11a, g (OFDM), j, p)</div><a name="kanchor191">
+</a><p>This description gives a rough view of the signal processing when using the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW WLAN application with the IEEE 802.11a, g (OFDM), j, p standards. Details are disregarded in order to provide a concept overview.</p><div class="block"><div class="subtitle"><a name="shiv_FSV_K91n_0088-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a>Abbreviations</div></div><a name="kanchor192">
+</a><div class="block"><a name="shiv_FSV_K91n_0089-a152f5e2a64dafbf0a002019017fdb4d-en-US">
+</a><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><tbody><tr class="oddrow"><td valign="top"><p>a<sub>l,k</sub></p></td><td valign="top"><p>Symbol at symbol l of subcarrier k</p></td></tr><tr class="evenrow"><td valign="top"><p>EVM<sub>k</sub></p></td><td valign="top"><p>Error vector magnitude of subcarrier k</p></td></tr><tr class="oddrow"><td valign="top"><p>EVM</p></td><td valign="top"><p>Error vector magnitude of current packet</p></td></tr><tr class="evenrow"><td valign="top"><p>g</p></td><td valign="top"><p>Signal gain</p></td></tr><tr class="oddrow"><td valign="top"><p><span style="font-family: Arial Unicode MS; font-size: 10.5pt">Δ</span>f</p></td><td valign="top"><p>Frequency deviation between Tx and Rx</p></td></tr><tr class="evenrow"><td valign="top"><p>l</p></td><td valign="top"><p>Symbol index l = {1 ... nof_Symbols}</p></td></tr><tr class="oddrow"><td valign="top"><p>nof_symbols</p></td><td valign="top"><p>Number of symbols of payload</p></td></tr><tr class="evenrow"><td valign="top"><p>H<sub>k</sub></p></td><td valign="top"><p>Channel transfer function of subcarrier k</p></td></tr><tr class="oddrow"><td valign="top"><p>k</p></td><td valign="top"><p>Channel index k = {–31 ... 32}</p></td></tr><tr class="evenrow"><td valign="top"><p>K<sub>mod</sub></p></td><td valign="top"><p>Modulation-dependent normalization factor</p></td></tr><tr class="oddrow"><td valign="top"><p><span style="font-family: arial; font-size: 10.5pt">ξ</span></p></td><td valign="top"><p>Relative clock error of reference oscillator</p></td></tr><tr class="evenrow"><td valign="top"><p>r<sub>l,k</sub></p></td><td valign="top"><p>Subcarrier of symbol l</p></td></tr></tbody></table></div><div class="chapter_toc"><div class="chapter_toc_title">Contents</div><ul><li value="1"><a href="c6285a2d93fc49b1.htm" class="chapter_title_toc">Block Diagram for Multicarrier Measurements</a></li><li value="2"><a href="f95ed77781b14081.htm" class="chapter_title_toc">Literature on the IEEE 802.11a Standard</a></li></ul></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2017 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

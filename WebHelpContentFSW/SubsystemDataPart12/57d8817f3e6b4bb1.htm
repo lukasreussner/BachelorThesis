@@ -1,0 +1,148 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Example 2: GSM EDGE  Burst Measurement Based on a  Digital Standard</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_fe88df8014be6c1c0a00206a0016d93e-cd97fd15ad6093a50a00206a01f17c35-en-US;ID_ce081e72198415080a00206a003362aa-cd97fd15ad6093a50a00206a01f17c35-en-US;ID_411d5fe9155d5b0a0a00206a01d2a98d-cd97fd15ad6093a50a00206a01f17c35-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="586d3cb66ef64841.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Measurement Example 2: GSM EDGE Burst Measurement Based on a Digital Standard</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<a name="kanchor1197">
+</a><a name="kanchor1198">
+</a><a name="kanchor1199">
+</a><a name="kanchor1200">
+</a><div class="chm-chaptertitle">Measurement Example 2: GSM EDGE Burst Measurement Based on a Digital Standard</div><p>The following example describes a scenario similar to the one for manual operation described in</p><p><a class="xref" href="011612b9941d4e61.htm#ID_c00cde30a5ace2a20a00206a0177d151-7c60cc67410fd4a60a00206a01c84e65-en-US">"Measurement Example 2: Burst GSM EDGE Signals"</a></p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><p>Note that although this example uses the settings from a predefined digital standard, the configuration is changed to demonstrate the possibilities of the VSA application. A measurement that is performed strictly according to the standard requires much fewer programming efforts.</p></td></tr></table></div></div><p>The rising and falling edges of a GSM burst are analyzed using the following result range settings:</p><div class="block" id="ID_411d5fe9155d5b0a0a00206a01d2a98d-cd97fd15ad6093a50a00206a01f17c35-en-US"><div class="graphic"><img border="0" src="Resources/Images/imge23352b01542a68b0a00206a0166e50a_1_--_--_PNG96Small.png" alt="" title=""/></div></div><pre class="verbatim" xml:space="preserve">//-----------Configuring the measurement ------------
+
+//Reset the instrument
+*RST
+//Set the center frequency.
+FREQ:CENT 1GHz
+//Set the reference level
+DISP:TRAC:Y:RLEV 4dBm
+//Create new measurement channel for vector signal analysis named "VSA"
+INST:CRE:NEW DDEM,'VSA'</pre><pre class="verbatim" xml:space="preserve">
+//-------Loading the required digital standard -----------------
+
+//Loads the GSM EDGE_8PSK standard file and the settings defined there
+DDEM:PRES 'EDGE_NB'
+
+//------Changing data acquisition settings --------------------
+
+DDEM:RLEN 10000 sym
+
+//-------- Defining the result range ---------------
+//Define the result length as 200 symbols.
+DDEMod:TIME 200
+//Define the burst as the reference for the result range
+CALC:TRAC:ADJ BURS
+//Align the result range to the left edge of the burst
+CALC:TRAC:ADJ:ALIG LEFT
+//Define an offset of 10 symbols from the burst start
+CALC:TRAC:ADJ:ALIG:OFFS -10
+//Define the symbol number 10 as the result range start
+DISP:TRAC:X:VOFF 10
+
+//----------Defining the evaluation range ---------
+
+//Evaluation range starts at symbol 13 and ends at symbol 155
+CALC:ELIN:STAT ON
+CALC:ELIN1 13
+CALC:ELIN2 155
+
+//--------- Changing the result display ---------
+
+//Close symbol table display (window 4)
+LAY:WIND4:REM
+//Add a second trace in max hold mode to EVM vs Time display (window 1)
+DISPlay:WINDow1:TRACe2:MODE MAXH
+//Create new window to the right of capture buffer (window 3) with
+//measurement signal as data type
+LAY:ADD? '3',RIGH,MEAS
+//Result: '4'
+//Set result type for window 4 to magnitude
+CALC4:FORM MAGN
+//Add a second trace in clear/write mode for the reference signal
+DISPlay:WINDow4:TRACe2:MODE WRIT
+CALC4:TRAC2 REF
+
+//-------- Activating limit checks for modulation accuracy ---------
+
+//Activate limit checks for all values in the Result Summary
+CALC:LIM:MACC:STAT ON
+
+//--------------Performing the measurement -----
+
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and wait until the 10 sweeps have finished.
+INIT;*WAI
+
+//----- Retrieving Results ------
+
+//Query the value and check the limit for the EVM RMS value in the 
+//result summary for the current evaluation range
+CALC2:MARK:FUNC:DDEM:STAT:EVM? AVG
+CALC:LIM:MACC:EVM:RCUR?
+
+//Query the value and check the limit for the largest error vector magnitude
+//in the measurement.
+CALC2:MARK:FUNC:DDEM:STAT:EVM? PAVG
+CALC:LIM:MACC:EVM:PPE?
+
+//Query the value and check the limit for the mean carrier frequency offset
+//in the result summary for the current evaluation range
+CALC2:MARK:FUNC:DDEM:STAT:CFER? AVG
+CALC:LIM:MACC:CFER:MEAN?
+</pre><pre class="verbatim" xml:space="preserve">//------- Storing trace data to a file ---------------
+
+//Include a header in the trace export file
+FORM:DEXP:HEAD ON
+//Export the trace data, not raw I/Q data
+FORM:DEXP:MODE TRAC
+//Query the first value of the x-axis for the current result range 
+//(x-values are not exported with trace data)
+DISP:WIND1:TRAC2:X:STAR?
+
+//Save the measurement signal values (trace 1 in window 4) to an ascii file.
+MMEM:STOR4:TRAC 1,'Measurement signal'
+//Save the reference signal values (trace 2 in window 4) to an ascii file.
+MMEM:STOR4:TRAC 2,'Reference signal'
+//Save the result summary values (window 2)  for the current result range
+//to an ascii file.
+MMEM:STOR2:TRAC 1,'Result Summary'
+</pre><pre class="verbatim" xml:space="preserve">//-------- Retrieving results for further result ranges --------&gt;
+
+//Query the number of result ranges (current is last)
+DDEM:SEAR:MBUR:CALC?
+//Use variable &lt;x&gt; to determine number of previous result range
+//DDEM:SEAR:MBUR:CALC &lt;x&gt;
+//Move to next result range and repeat section "retrieving results" for
+//range-specific results
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

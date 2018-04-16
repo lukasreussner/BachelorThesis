@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Trigger and Gate Configuration|Triggering|Trigger Settings|Trigger Source" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Power Sensor
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdTriggerSourcePowerSensor">
+</meta>
+        <meta name="topic-keyword" value="eSaSkIdIqTriggerSourcePowerSensor">
+</meta>
+        <meta name="topic-id" value="1955">
+</meta>
+        <meta name="topic-id" value="1956">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_4a32a0f2a300cd140a00206a01aa847d-431ccb51582454da0a00206a017ebe21-en-US;ID_82f34120a85bc07c0a00206a001bb311-431ccb51582454da0a00206a017ebe21-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="17dd587d33cf488f.htm">Trigger and Gate Configuration</a> &gt; <a class="chm-breadcrumb" href="909a428670bd4bdd.htm">Triggering</a> &gt; <a class="chm-breadcrumb" href="724624c0821c4492.htm">Trigger Settings</a> &gt; <a class="chm-breadcrumb" href="1604ead4768b4e89.htm">Trigger Source</a> &gt; <span class="chm-breadcrumb">Power Sensor</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1851">
+</a><a name="kanchor1852">
+</a><a name="kanchor1853">
+</a><div class="function_heading"><a name="ID_4a32a0f2a300cd140a00206a01aa847d-431ccb51582454da0a00206a017ebe21-en-US">
+</a>Power Sensor</div><p>Uses an external power sensor as a trigger source. This option is only available if a power sensor is connected and configured.</p><p>(See <a class="xref" href="dff1ce55f8174d60.htm#ID_68916730f28f11e1a6e1e5b328ace09b-7d21f7e97720ef940a002019019c479d-en-US">"How to Work With a Power Sensor"</a>.)</p><p>If a power sensor is selected as the trigger mode, the following softkeys are not available; these settings are configured in the "Power Sensor Config" dialog box (see<a class="xref" href="e91ffb3dfab24043.htm#ID_1340627720dcebe40a00206a007f2e1b-cd1aa92320dcebe40a00206a01abefe4-en-US">"Power Sensor Settings"</a> ).</p><div class="block"><ul class="list"><li style="margin-bottom:0; padding-bottom:0;" value="1"><a class="xref" href="a2ff8b48063448f2.htm#ID_df69de2c0fec7fc80a00206a01e2f576-a634afb00fec7fc80a00206a0161254e-en-US">"Trigger Level (Repetition Interval)"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="2"><a class="xref" href="907eb6d6fa4f4bac.htm#ID_d00257381002a0c50a00206a01a7dd5b-6309b8b51002a0c50a00206a01b599ce-en-US">"Slope"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="3"><a class="xref" href="7c442cef14694c70.htm#ID_8f1a37ae798a2ff80a00206a0135a4b1-accf42a20ff28f840a00206a01d7df01-en-US">"Hysteresis"</a></li><li style="margin-bottom:0; padding-bottom:0;" value="4"><a class="xref" href="43c56a0417994325.htm#ID_91ca47ca798abeba0a00206a01c30d21-7a9601c00ff53a5f0a00206a01a7becf-en-US">"Trigger Holdoff"</a></li></ul></div><p><b><a name="ID_82f34120a85bc07c0a00206a001bb311-431ccb51582454da0a00206a017ebe21-en-US">
+</a>Note:</b> For Rohde<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>&amp;<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>Schwarz power sensors, the "Gate Mode" <span class="input">Lvl</span> is not supported. The signal sent by these sensors merely reflects the instant the level is first exceeded, rather than a time period. However, only time periods can be used for gating in level mode. Thus, the trigger impulse from the sensors is not long enough for a fully gated measurement; the measurement cannot be completed.<br/></p>Remote command: <div class="rcclist_right"><p><span class="command">TRIG:SOUR PSE</span>, see <a class="xref" href="c2be5ee21f19443a.htm#ID_b540f8062e57504e0a00206a017eecc3-abd5d2e1300841ce0a00206a003e53d0-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRIGger[:</nobr>​<nobr>SEQuence]:</nobr>​<nobr>SOURce</nobr></a></p><p><span class="command">SWE:EGAT:SOUR PSE</span> for gated triggering, see <a class="xref" href="c4f36c0156a743e7.htm#ID_798eb5e22e45c7fd0a00206a007c95a3-f64f8b19e2c7c3f10a00206a0199715c-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>[SENSe:</nobr>​<nobr>]SWEep:</nobr>​<nobr>EGATe:</nobr>​<nobr>SOURce</nobr></a></p></div><div style="clear:left;"> </div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

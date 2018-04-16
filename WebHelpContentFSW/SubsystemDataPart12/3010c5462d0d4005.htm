@@ -1,0 +1,127 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="VSA (R&amp;S FSW-K70)|Remote Commands for VSA|Programming Examples" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k70.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Measurement Example 3: User-Defined Pattern Search and Limit Check</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_f7248af7155d5b0a0a00206a004d606f-cd97fd15ad6093a50a00206a01f17c35-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">VSA (R&amp;S FSW-K70)</a> &gt; <a class="chm-breadcrumb" href="dbcddd9647ad4bec.htm">Remote Commands for VSA</a> &gt; <a class="chm-breadcrumb" href="586d3cb66ef64841.htm">Programming Examples</a> &gt; <span class="chm-breadcrumb">Measurement Example 3: User-Defined Pattern Search and Limit Check</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Measurement Example 3: User-Defined Pattern Search and Limit Check</div><p>In this example a user-defined pattern is used to detect bursts and the calculated measurement results are checked against defined limits. The configuration settings are stored as a user-defined standard.</p><pre class="verbatim" xml:space="preserve">//-----------Configuring the measurement ------------
+
+//Reset the instrument
+*RST
+//Set the center frequency.
+FREQ:CENT 1GHz
+//Set the reference level
+DISP:TRAC:Y:RLEV 4dBm
+//Create new measurement channel for vector signal analysis named "VSA"
+INST:CRE:NEW DDEM,'VSA'</pre><pre class="verbatim" xml:space="preserve">//-------Loading the required digital standard -----------------
+//Load the GSM EDGE_8PSK standard file and the settings defined there
+DDEM:PRES 'EDGE_NB'
+
+//----------------- Creating a pattern ------------------
+//Create new pattern
+DDEM:SEAR:SYNC:NAME 'EDGE_TSC0_1stSymbolWrong'
+DDEM:SEAR:SYNC:NST 8
+DDEM:SEAR:SYNC:DATA '00060007000100070007000100070001000100010007000700070007
+000100070007000700010007000700010007000100010001'
+DDEM:SEAR:SYNC:COMM 'Customized pattern'
+DDEM:SEAR:SYNC:TEXT 'manipulated pattern that matches the EDGE_TSC0 pattern except
+//for the first symbol (correct: 7, manipulated 6)'
+//Add new pattern to current standard
+DDEM:SEAR:SYNC:PATT:ADD 'EDGE_TSC0_1stSymbolWrong'
+//Select new pattern
+DDEM:SEAR:SYNC:SEL 'EDGE_TSC0_1stSymbolWrong'
+
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement 
+INIT;*WAI
+
+//--- Configuring the expected input signal manually (for demonstration purposes)---
+//Configure an 8PSK EDGE GSM input signal manually
+//Set the modulation
+DDEM:FORM PSK
+DDEMod:PSK:NST 8
+DDEM:PSK:FORM N3P
+DDEM:MAPP 'EDGE'
+
+//Set the symbol rate
+DDEM:SRAT 270833.333
+//Set Result Length
+DDEMod:TIME 148
+//Set Transmit Filter
+DDEMod:TFILter:NAME 'GMSK_LINEARIZED'
+//Define input signal as burst signal with Burst Length 148 and 3 symbols run-in/out
+DDEM:SIGN BURS
+DDEM:SEAR:BURS:LENG:MAX 148
+DDEM:SEAR:BURS:SKIP:RIS 3
+DDEM:SEAR:BURS:SKIP:FALL 3
+DDEM:SEAR:BURS:LENG:MIN 142
+//Define that the input signal has a pattern
+DDEM:SIGN:PATT ON
+//Query the names of all defined patterns assigned to the current standard
+DDEM:SEAR:SYNC:CAT? CURR
+//Select a pattern
+DDEM:SEAR:SYNC:SEL 'EDGE_TSC0_1stSymbolWrong'
+//Ignore the first 58 symbols of the signal before comparing pattern
+DDEM:STAN:SYNC:OFFS 58
+DDEM:STAN:SYNC:OFFS:STAT ON
+//Define the pattern waveform as the reference for the result range
+DDEM:SEAR:SYNC:STAT ON
+//Align the result range to the center of the pattern
+CALC:TRAC:ADJ PATT
+CALC:TRAC:ADJ:ALIG CENT
+//Define values on x-Axis
+DISPlay:WINDow:TRACe:X:SCALe:VOFFset 3
+//Evaluation range starts at symbol 3 and ends at symbol 144.75
+CALC:ELIN:STAT ON
+CALC:ELIN1 3
+CALC:ELIN2 144.75
+
+
+//------ Storing the new settings as a user-defined standard -------------
+
+DDEM:STAN:SAVE 'C:\TEMP\CustomizedBurstMeas'
+
+//--------------Performing the measurement -----
+
+//Select single sweep mode.
+INIT:CONT OFF
+//Initiate a new measurement and wait until it has finished.
+INIT;*WAI
+
+//----- Retrieving Results ------
+//Query the trace results of the capture buffer display.
+TRAC3:DATA? TRACE1
+//Query the results of the result summary.
+TRAC2:DATA? TRACE1
+</pre>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

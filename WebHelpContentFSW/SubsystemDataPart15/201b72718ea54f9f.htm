@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="cdma2000 Measurements (R&amp;S FSW-K82/-K83)|Remote Commands for CDMA2000 Measurements|Retrieving Results|Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k82_k83.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Code Domain Error Power</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_d8cd65ccead2617f0a710a3100b4bc93-b629ba11a66108160a00206a00094b6d-en-US;ID_a146efa74e0603ee0a00206a01441c9d-b629ba11a66108160a00206a00094b6d-en-US;ID_2ede026ba6ac9bb60a710a3101179714-b629ba11a66108160a00206a00094b6d-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">cdma2000 Measurements (R&amp;S FSW-K82/-K83)</a> &gt; <a class="chm-breadcrumb" href="50c310d0c42e48e5.htm">Remote Commands for CDMA2000 Measurements</a> &gt; <a class="chm-breadcrumb" href="8b60b2cf2d954990.htm">Retrieving Results</a> &gt; <a class="chm-breadcrumb" href="9e9c2748812e496b.htm">Measurement Results for TRACe&lt;n&gt;[:DATA]? TRACE&lt;n&gt;</a> &gt; <span class="chm-breadcrumb">Code Domain Error Power</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1000">
+</a><div class="chm-chaptertitle">Code Domain Error Power</div><p>The command returns four values for each channel:</p><p>&lt;code class&gt;, &lt;code number&gt;, &lt;error power&gt;, &lt;power ID&gt;</p><p>The Hadamard or BitReverse order is important for sorting the channels, but not for the number of values.</p><p>With Hadamard, the individual codes are output in ascending order.</p><p>With BitReverse, codes which belong to a particular channel are adjacent to each other.</p><p>Since an error power is output for Code Domain Error Power, consolidation of the power values is not appropriate. The number of codes that are output therefore generally corresponds to the base spreading factor.</p><div class="block"><a name="ID_a146efa74e0603ee0a00206a01441c9d-b629ba11a66108160a00206a00094b6d-en-US">
+</a><table border="1"><colgroup><col width="65.205">
+</col><col>
+</col><col width="83.916">
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Value</p></th><th valign="top"><p>Description</p></th><th valign="top"><p>Range/ Unit</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>&lt;code class&gt;</p></td><td valign="top"><p>code class of the channel (see <a class="xref" href="5fa20ee3b69a40c1.htm#ID_eb2017d8b1549a760a00206a01eda349-b7f661756d7580e80a00206a010113c9-en-US">"Channels, Codes and Symbols"</a>)</p></td><td valign="top"><p>{2...7} (BTS)</p><p>{1..6} (MS)</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;code number&gt;</p></td><td valign="top"><p>code number within the channel</p></td><td valign="top"><p>{0..127} (BTS)</p><p>{0..63}(MS)</p></td></tr><tr class="oddrow"><td valign="top"><p>&lt;signal level&gt;</p></td><td valign="top"><p>error power</p></td><td valign="top"><p>{-<span style="font-family: Arial Unicode MS; font-size: 10.5pt">∞</span>...<span style="font-family: Arial Unicode MS; font-size: 10.5pt">∞</span>}dB</p></td></tr><tr class="evenrow"><td valign="top"><p>&lt;power ID&gt;</p></td><td valign="top"><p>type of power detection:</p><p>0 - inactive channel</p><p>1 - power of own antenna</p><p>2 - alias power of own antenna</p><p>3 - alias power of other antenna</p><p>4 - alias power of own and other antenna</p></td><td valign="top"> </td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>To avoid alias power, set the base spreading factor correctly.</p></td></tr></table></div></div><p>For details on these parameters see <a class="xref" href="90c3e2390dc94e8d.htm#shiv_FSV_K82_3723-8b3868781bef79aa0a00206a016b59c2-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>TRACe&lt;n&gt;[:</nobr>​<nobr>DATA]?</nobr></a>.</p><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

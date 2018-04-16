@@ -1,0 +1,64 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="1xEV-DO Measurements (R&amp;S FSW-K84/-K85)|Configuration|Code Domain Analysis|Data Input and Output Settings|Output Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k84_k85.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Noise Source Control</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eGsSkIdNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eWLANSkIdNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdNoiseSource">
+</meta>
+        <meta name="topic-keyword" value="eSsaSkId_OutputConfig_NoiseSource">
+</meta>
+        <meta name="topic-id" value="242">
+</meta>
+        <meta name="topic-id" value="243">
+</meta>
+        <meta name="topic-id" value="244">
+</meta>
+        <meta name="topic-id" value="245">
+</meta>
+        <meta name="topic-id" value="246">
+</meta>
+        <meta name="topic-id" value="247">
+</meta>
+        <meta name="topic-id" value="248">
+</meta>
+        <meta name="topic-id" value="249">
+</meta>
+        <meta name="topic-id" value="250">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_6d60e788233459480a00206a0074b4da-030a00a9233459480a00206a000d808e-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">1xEV-DO Measurements (R&amp;S FSW-K84/-K85)</a> &gt; <a class="chm-breadcrumb" href="d73da9f4c44b45e9.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="b326121bcb25492a.htm">Code Domain Analysis</a> &gt; <a class="chm-breadcrumb" href="25084f45f52d4aa5.htm">Data Input and Output Settings</a> &gt; <a class="chm-breadcrumb" href="6ac935994e714905.htm">Output Settings</a> &gt; <span class="chm-breadcrumb">Noise Source Control</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor353">
+</a><a name="kanchor354">
+</a><div class="function_heading"><a name="ID_6d60e788233459480a00206a0074b4da-030a00a9233459480a00206a000d808e-en-US">
+</a>Noise Source Control</div><p>The R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW provides a connector (NOISE SOURCE CONTROL) with a 28<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>V voltage supply for an external noise source. By switching the supply voltage for an external noise source on or off in the firmware, you can activate or deactivate the device as required.</p><p>External noise sources are useful when you are measuring power levels that fall below the noise floor of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW itself, for example when measuring the noise level of an amplifier.</p><p>In this case, you can first connect an external noise source (whose noise power level is known in advance) to the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW and measure the total noise power. From this value you can determine the noise power of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW. Then when you measure the power level of the actual DUT, you can deduct the known noise level from the total power to obtain the power level of the DUT.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="c6b3ae2d40374765.htm#ID_09bf519e32a905030a00206a01a52d90-bdaca891ddc6bf1e0a00206a0173e78e-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DIAGnostic:</nobr>​<nobr>SERVice:</nobr>​<nobr>NSOurce</nobr></a></p></div><div style="clear:left;"> </div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

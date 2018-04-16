@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="I/Q Analyzer|Basics on I/Q Data Acquisition and Processing|Processing Analog I/Q Data from RF Input|Sample Rate and Maximum Usable I/Q Bandwidth for RF Input" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_iqanalyzer.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>Relationship Between Sample Rate, Record Length and Usable I/Q Bandwidth</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_23e8ad2c89d2fe5d0a710ade01df022f-8e04a654c18363970a00206a018bc2d1-en-US;ID_767bc9a7a3329b760a0020190121778c-8e04a654c18363970a00206a018bc2d1-en-US;ID_541d3875bc9b11e2a7eaa6769e47a845-8e04a654c18363970a00206a018bc2d1-en-US;ID_3477fe78c51ca51a0a00201900067f68-8e04a654c18363970a00206a018bc2d1-en-US;ID_3b50d62b8df78a280a710a3100d17e60-8e04a654c18363970a00206a018bc2d1-en-US;ID_1fc3ce22832afc900a00206a01410d75-8e04a654c18363970a00206a018bc2d1-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">I/Q Analyzer</a> &gt; <a class="chm-breadcrumb" href="582358e5ab524125.htm">Basics on I/Q Data Acquisition and Processing</a> &gt; <a class="chm-breadcrumb" href="471eea7681f04dd8.htm">Processing Analog I/Q Data from RF Input</a> &gt; <a class="chm-breadcrumb" href="ff6b1e95dc884c8e.htm">Sample Rate and Maximum Usable I/Q Bandwidth for RF Input</a> &gt; <span class="chm-breadcrumb">Relationship Between Sample Rate, Record Length and Usable I/Q Bandwidth</span></span></div><div id="mainbody"><div style="width: 95%" xml:space="preserve">
+						<a name="top">
+							
+						</a>
+						
+						
+						<div class="chm-chaptertitle">Relationship Between Sample Rate, Record Length and Usable I/Q Bandwidth</div><a name="kanchor75">
+</a><a name="kanchor76">
+</a><a name="kanchor77">
+</a><a name="kanchor78">
+</a><p>Up to the maximum bandwidth, the following rule applies:</p><p><span class="input">Usable I/Q bandwidth = 0.8 * Output sample rate</span></p><p>Regarding the record length, the following rule applies:</p><p><span class="input">Record length = Measurement time * sample rate</span></p><div class="block"><div class="subtitle"><a name="ID_767bc9a7a3329b760a0020190121778c-8e04a654c18363970a00206a018bc2d1-en-US">
+</a>Maximum record length for RF input</div></div><p>The maximum record length, that is, the maximum number of samples that can be captured, depends on the sample rate.</p><p>(For activated option B320 or U320 see <a class="xref" href="947610d9d1e04f01.htm#ID_8051202ebc9711e2a7eaa6769e47a845-8e04a654c18363970a00206a018bc2d1-en-US">Table "Maximum record length with activated I/Q bandwidth extension option B320 or U320"</a>.)</p><p>(For activated option -B512 see <a class="xref" href="a18be6753f5a41c6.htm#ID_8f5d80393a2411e395f1f246b1625ba5-8e04a654c18363970a00206a018bc2d1-en-US">Table "Maximum record length with activated I/Q bandwidth extension option R&amp;S FSW-B512"</a>.)</p><p>(For activated option B1200 see <a class="xref" href="d5922cff1960400f.htm#ID_b4d7c51096c211e6bb03f3617cf4a98b-8e04a654c18363970a00206a018bc2d1-en-US">Table "Maximum record length with activated I/Q bandwidth extension option R&amp;S FSW-B1200"</a>.)</p><p>(For activated option B2001 see <a class="xref" href="3c3ac254edd7467e.htm#ID_2254d91d19f411e7ac16a6c73754e44c-8e04a654c18363970a00206a018bc2d1-en-US">"R&amp;S FSW with Activated I/Q Bandwidth Extension Option B2001"</a>.)</p><p>(For activated option B2000 see <a class="xref" href="8f2dd01a88a44df0.htm#ID_370cd394748411e49c3f87078ff32cd2-3f52a620e0853ba30a001ae7297a89af-en-US">"R&amp;S FSW with Activated I/Q Bandwidth Extension Option B2000"</a>.)</p><p>(For activated option B5000 see <a class="xref" href="97295a69bcc04662.htm#ID_370cd394748411e49c3f87078ff32cd2-87e6db7719b26bc40a001ae722833643-en-US">"R&amp;S FSW with Activated I/Q Bandwidth Extension Option B5000"</a>.)</p><p>The memory extension option R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B106 is not available together with the -B512, B1200, B2001 or B2000/B5000 options.</p><div class="block"><a name="ID_541d3875bc9b11e2a7eaa6769e47a845-8e04a654c18363970a00206a018bc2d1-en-US">
+</a><span class="table-caption">Maximum record length (without I/Q bandwidth extension options R&amp;S<span style="font-family: Arial Unicode MS"> </span>FSW-B160/-B320/-B512/-B1200/-B2001)</span><table border="1"><colgroup><col>
+</col><col>
+</col></colgroup><thead><tr class="oddrow"><th valign="top"><p>Sample rate</p></th><th valign="top"><p>Maximum record length</p></th></tr></thead><tbody><tr class="oddrow"><td valign="top"><p>100 Hz to 200 MHz</p></td><td valign="top"><p>440 Msamples</p><p>With R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B106 option: 1320 Msamples</p></td></tr><tr class="evenrow"><td valign="top"><p>200 MHz to 10 GHz</p><p>(upsampling)</p><p>MSRA master:</p><p>200 MHz to 600 MHz</p></td><td valign="top"><p>220 Msamples</p><p>With R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW-B106 option: 660 Msamples</p></td></tr></tbody></table></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_3477fe78c51ca51a0a00201900067f68-8e04a654c18363970a00206a018bc2d1-en-US">
+</a>MSRA operating mode</div><p>In MSRA operating mode, the MSRA Master is restricted to a sample rate of 600<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz.</p></td></tr></table></div></div><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img"/></td><td><div class="note_title"><a name="ID_3b50d62b8df78a280a710a3100d17e60-8e04a654c18363970a00206a018bc2d1-en-US">
+</a>Digital Baseband output</div><p>If Digital Baseband output is active (see <a class="xref" href="89daf30723be47cd.htm#ID_7498594a98a3f6510a00206a01bbe5d2-3960bc519ef862450a00206a009036da-en-US">"Digital Baseband Output"</a>), the sample rate is restricted to 200<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz (max. 160<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>MHz usable I/Q bandwidth).</p></td></tr></table></div></div><p>The <a class="xref" href="#ID_1fc3ce22832afc900a00206a01410d75-8e04a654c18363970a00206a018bc2d1-en-US">Figure "Relationship between maximum usable I/Q bandwidth and output sample rate with and without bandwidth extensions"</a> shows the maximum usable I/Q bandwidths depending on the output sample rates.</p><div class="block" id="ID_1fc3ce22832afc900a00206a01410d75-8e04a654c18363970a00206a018bc2d1-en-US"><div class="graphic"><img border="0" src="Resources/Images/img5141b75a796d364e0a00206a00d52767_3_--_--_PNG96.png" alt="" title=""/></div><div class="caption_figure">Relationship between maximum usable I/Q bandwidth and output sample rate with and without bandwidth extensions</div></div>
+						
+						<div class="chm-go-to-top">
+							<span>
+								<a class="chm-go-to-top" href="#top">Top</a>
+							</span>
+						</div>
+					</div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)|Configuration|Input, Output and Frontend Settings|Amplitude Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="fsw_k15.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>
+		Reference Level
+	</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <meta name="topic-keyword" value="eSaSkIdAmplitudeRefLevel">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdRFLevelFSPB">
+</meta>
+        <meta name="topic-keyword" value="eWCDMASkIdAmplitudeRefLevel">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdRFLevelFSPB">
+</meta>
+        <meta name="topic-keyword" value="eDoSkIdRFLevelFSPB">
+</meta>
+        <meta name="topic-keyword" value="eVsaSkIdAmpRefLevel">
+</meta>
+        <meta name="topic-keyword" value="eMcgdSkIdAmplitudeRefLevel">
+</meta>
+        <meta name="topic-keyword" value="eBTDSSkIdRFLevelFSPB">
+</meta>
+        <meta name="topic-keyword" value="eC2kSkIdAmplitudeRefLevel">
+</meta>
+        <meta name="topic-keyword" value="eAvionicsSkIdAmplitudeRefLevel">
+</meta>
+        <meta name="topic-id" value="233">
+</meta>
+        <meta name="topic-id" value="234">
+</meta>
+        <meta name="topic-id" value="235">
+</meta>
+        <meta name="topic-id" value="236">
+</meta>
+        <meta name="topic-id" value="237">
+</meta>
+        <meta name="topic-id" value="238">
+</meta>
+        <meta name="topic-id" value="239">
+</meta>
+        <meta name="topic-id" value="240">
+</meta>
+        <meta name="topic-id" value="241">
+</meta>
+        <meta name="topic-id" value="242">
+</meta>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_809bde6205305f050a00206a011056b0-ae4a67e705305f050a00206a01ab427c-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><p><img src="../Data/SkinHTML Help Window/RS_Logo.png" /></p><p class="MCWebHelpFramesetLink" style="display: none;margin-left: 12px"><a href="../../../FSW_HTML_UserManuals_en_CSH.htm#Topic=Subsystems/fsw_k15/Content/6a4e851d0383450a.htm|OpenType=Javascript" style="">Open topic with navigation</a></p><div id="nsr"><span><a class="chm-breadcrumb" href="helpmerge-hooknode.htm">Avionics (VOR/ILS) Measurements application (R&amp;S FSW-15)</a> &gt; <a class="chm-breadcrumb" href="ae9af9987e764ade.htm">Configuration</a> &gt; <a class="chm-breadcrumb" href="ada8a233e87844a7.htm">Input, Output and Frontend Settings</a> &gt; <a class="chm-breadcrumb" href="b01991afdead4c41.htm">Amplitude Settings</a> &gt; <span class="chm-breadcrumb">Reference Level</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor69">
+</a><a name="kanchor70">
+</a><a name="kanchor71">
+</a><a name="kanchor72">
+</a><a name="kanchor73">
+</a><a name="kanchor74">
+</a><div class="function_heading"><a name="ID_809bde6205305f050a00206a011056b0-ae4a67e705305f050a00206a01ab427c-en-US">
+</a>Reference Level</div><p>Defines the expected maximum input signal level. Signal levels above this value may not be measured correctly, which is indicated by the "IF Overload" status display.</p><p>The reference level can also be used to scale power diagrams; the reference level is then used as the maximum on the y-axis.</p><p>Since the hardware of the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW is adapted according to this value, it is recommended that you set the reference level close above the expected maximum signal level. Thus you ensure an optimum measurement (no compression, good signal-to-noise ratio).</p><p>Note that the internally used reference level value does not consider any reference level offset (see <a class="xref" href="aa2bbda7bb3a42d8.htm#ID_216cdcf206c927ab0a00206a001ac4e6-ae4a67e705305f050a00206a01ab427c-en-US">"Shifting the Display (Offset)"</a>. It is important to know the actual power level the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW must handle.</p><p>For details, see <a class="xref" href="../../../Content/b1e5f8c47c084326.htm">Reference Level</a>.</p>Remote command: <div class="rcclist_right"><p><a class="xref" href="754e07854e5b45ce.htm#ID_90193f202dd1e0fd0a00206a00cb4bbe-f1315535e2dfd3f10a00206a016dd87a-en-US" style="font-family: &#34;Courier New&#34;, Courier, monospace;"><nobr>DISPlay[:</nobr>​<nobr>WINDow&lt;n&gt;]:</nobr>​<nobr>TRACe&lt;t&gt;:</nobr>​<nobr>Y[:</nobr>​<nobr>SCALe]:</nobr>​<nobr>RLEVel</nobr></a></p></div><div style="clear:left;"> </div><div class="chapter_toc"><div class="function_block"><font face="Arial">└</font> <a href="aa2bbda7bb3a42d8.htm#ID_216cdcf206c927ab0a00206a001ac4e6-ae4a67e705305f050a00206a01ab427c-en-US" class="title_toc">Shifting the Display (Offset)</a></div></div><p>&#160;</p><hr width="100%" size="0" align="center" /><table style="border-style: none;"><col style="width: 50%;" /><col style="width: 50%;" /><tbody><tr><td style="color: #808080; font-size: 8pt; border-style: none; padding: 4pt"><a href="https://www.rohde-schwarz.com/imprint" style="color: #808080;text-decoration: underline;">Imprint</a> | <a href="https://www.rohde-schwarz.com/statement-of-privacy" style="color: #808080;text-decoration: underline;">Statement of Privacy</a> | <a href="https://www.rohde-schwarz.com/terms-and-conditions" style="color: #808080;text-decoration: underline;">Terms &amp; Conditions</a></td><td style="text-align: right;color: #808080;font-size: 8pt; border-style: none; padding: 4pt">&#169; 2018 ROHDE &amp; SCHWARZ</td></tr></tbody></table></div><p>&#160;</p><p>&#160;</p><p>&#160;</p><p>&#160;</p></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>

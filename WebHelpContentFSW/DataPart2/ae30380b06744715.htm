@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Common Measurement Settings|Amplitude and Vertical Axis Configuration|Impact of the Vertical Axis Settings" MadCap:InPreviewMode="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="WebHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="FSW_HTML_UserManuals_en.xml" MadCap:SearchType="Stem">
+<!-- saved from url=(0014)about:internet -->
+<head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+</meta>
+        <link href="Resources/workspace/css/madcap_mod.css" rel="stylesheet" type="text/css">
+</link><title>RF Attenuation</title>
+        <style>
+					@import url(Resources/workspace/css/html_help.css);
+				</style>
+        <link disabled="disabled" href="Resources/workspace/css/html_help.css" rel="stylesheet" type="text/css">
+</link>
+        <MadCap:concept term="ID_da7fc83e04af57a70a710a3101417588-c2d7d23770206f820a001ae7775355fe-en-US;ID_16c37aa3096eb4a70a710a3100c77e26-c2d7d23770206f820a001ae7775355fe-en-US;ID_14309779095ba7880a710a3101b3e1c9-c2d7d23770206f820a001ae7775355fe-en-US;">
+</MadCap:concept>
+        <script src="Resources/workspace/jscript/nsr.js">/* <![CDATA[ */
+        /* ]]> */</script>
+        <script src="SkinSupport/MadCapAll.js" type="text/javascript">/* <![CDATA[ */
+        /* ]]> */</script>
+    <script src="Resources/workspace/jscript/shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script><script src="Resources/workspace/jscript/dy-shortcut.js" type="text/javascript">/* <![CDATA[ */
+/* ]]> */</script></head><body><div id="nsr"><span><a class="chm-breadcrumb" href="39534ffa0ed94138.htm">Common Measurement Settings</a> &gt; <a class="chm-breadcrumb" href="5329fa6e3413480e.htm">Amplitude and Vertical Axis Configuration</a> &gt; <a class="chm-breadcrumb" href="297182b9336c4dee.htm">Impact of the Vertical Axis Settings</a> &gt; <span class="chm-breadcrumb">RF Attenuation</span></span></div><div id="mainbody"><div style="width: 95%"><a name="top">
+</a><a name="kanchor1674">
+</a><a name="kanchor1675">
+</a><a name="kanchor1676">
+</a><a name="kanchor1677">
+</a><div class="chm-chaptertitle">RF Attenuation</div><p>The attenuation is meant to protect the input mixer from high RF input levels. The level at the input mixer is determined by the set RF attenuation according to the formula:</p><p>"level<sub>mixer</sub> = level<sub>input</sub> – RF attenuation"</p><p>The maximum mixer level allowed is 0 dBm.</p><p>Mixer levels above this value may lead to incorrect measurement results, which is indicated by the "RF Overload" status display. Furthermore, higher input levels may damage the instrument. Therefore, the required RF attenuation is determined automatically according to the reference level by default.</p><p>High attenuation levels also avoid intermodulation. On the other hand, attenuation must be compensated for by re-amplifying the signal levels after the mixer. Thus, high attenuation values cause the inherent noise (i.e the noise floor) to rise and the sensitivity of the analyzer decreases.</p><p>The sensitivity of a signal analyzer is directly influenced by the selected RF attenuation. The highest sensitivity is obtained at an RF attenuation of 0 dB. Each additional 10 dB step reduces the sensitivity by 10 dB, i.e. the displayed noise is increased by 10 dB. To measure a signal with an improved signal-to-noise ratio, decrease the RF attenuation.</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><p>For ideal sinusoidal signals, the displayed signal level is independent of the RF attenuation.</p></td></tr></table></div></div><p>Depending on the type of measurement you must find a compromise between a low noise floor and high intermodulation levels, and protecting the instrument from high input levels. You achieve this best by letting the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW determine the optimum level automatically (see <a class="xref" href="6cb1be71f92845df.htm#ID_289a932d05bbf2e80a00206a01d32d09-6fd5af6405bbf2e80a00206a0131ca9b-en-US">"Attenuation Mode / Value"</a>).</p><div class="block"><div class="note"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="46" align="left" valign="top"><img src="Resources/workspace/img/info_small_10mm.gif" width="38" height="38" class="note_img">
+</img></td><td><div class="note_title"><a name="ID_14309779095ba7880a710a3101b3e1c9-c2d7d23770206f820a001ae7775355fe-en-US">
+</a>Electronic attenuation</div><p>If the optional electronic attenuation hardware is installed on the R&amp;S<span style="font-family: Arial Unicode MS; font-size: 10.5pt"> </span>FSW, you can also activate an electronic attenuator. For details, see <a class="xref" href="697544dddc294c93.htm#ID_11513a1805bca7150a00206a00834847-322e1bfd05bca7150a00206a00fe59b0-en-US">"Using Electronic Attenuation"</a>.</p></td></tr></table></div></div><div class="chm-go-to-top"><span><a class="chm-go-to-top" href="#top">Top</a></span></div></div></div><script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">/* <![CDATA[ */
+/* ]]> */</script></body></html>
